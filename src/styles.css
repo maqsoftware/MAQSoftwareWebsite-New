@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  /* MAQ Software brand palette — "Editorial Red" (v3)
+     Inspired by Databricks / Hitachi Solutions / Insight: a single brand
+     red on a calm, cool-neutral system. No accent color, no warm sand,
+     no near-black-pure-black. Red carries the brand; neutrals carry the
+     content. */
+
+  /* Brand */
+  --maq-red: #c8102e;          /* MAQ logo red (slightly bolder than v2) */
+  --maq-red-dark: #9b0c24;     /* hover / pressed */
+  --maq-red-pale: #fde7ea;     /* soft wash for borders / hover tints */
+  --maq-red-50: #fff5f6;       /* pale-red surface (sparingly) */
+
+  /* Surfaces */
+  --maq-white: #ffffff;
+  --maq-off-white: #f7f8fa;    /* cool light gray section bg */
+  --maq-surface-cream: #f7f8fa;/* alias — replaces former warm sand */
+  --maq-surface-soft: #f0f2f5; /* slightly deeper neutral block */
+
+  /* Ink ladder (5 distinct steps) */
+  --maq-black: #0f172a;        /* H1 / H2 — slate 900 */
+  --maq-ink: #1f2937;          /* H3 / strong body */
+  --maq-gray-700: #475467;     /* body copy */
+  --maq-gray-600: #0f172a;     /* footer bg alias */
+  --maq-gray-500: #667085;     /* muted / labels */
+  --maq-text-muted: #667085;
+
+  /* Chrome */
+  --maq-gray-50: #f7f8fa;
+  --maq-gray-100: #eef0f3;
+  --maq-border: #e4e7ec;       /* cool neutral border */
+  --maq-border-strong: #cdd2da;
+  --maq-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.06);
+  --maq-shadow-md: 0 4px 8px rgba(15, 23, 42, 0.05), 0 12px 32px rgba(15, 23, 42, 0.08);
+  --maq-radius-md: 8px;
+
+  /* Aliases — keep legacy component code working */
+  --maq-navy: var(--maq-black);
+  --maq-blue: var(--maq-red);
+  --maq-blue-light: var(--maq-red);
+  --maq-blue-pale: var(--maq-red-pale);
+  --maq-teal: var(--maq-red);
+  --maq-surface-blush: var(--maq-red-50);
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--maq-gray-700);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Global heading rhythm — prevents Fluent's body line-height: 1 from
+   collapsing multi-line H1s onto themselves. */
+h1, h2, h3, h4, h5, h6 {
+  display: block;
+  line-height: 1.18;
+  color: var(--maq-black);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+h1 { line-height: 1.1; letter-spacing: -0.02em; }
+h2 { line-height: 1.15; letter-spacing: -0.015em; }
+p  { display: block; line-height: 1.6; margin: 0; }
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}

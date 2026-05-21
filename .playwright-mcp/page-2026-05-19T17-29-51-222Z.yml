@@ -1,0 +1,132 @@
+- generic [active] [ref=e1]:
+  - banner
+  - generic [ref=e4]:
+    - generic [ref=e7]:
+      - heading "Delivering AI-powered solutions to accelerate your Fabric migration" [level=1] [ref=e8]:
+        - text: Delivering
+        - strong [ref=e9]: AI-powered
+        - text: solutions to
+        - text: accelerate your
+        - strong [ref=e10]: Fabric migration
+      - paragraph [ref=e11]: Unlock the full potential of your data with our specialized expertise.
+    - generic [ref=e13]:
+      - heading "Services we provide" [level=1] [ref=e15]
+      - generic [ref=e16]:
+        - link "Go to agentic AI & machine learning service page" [ref=e17] [cursor=pointer]:
+          - /url: /services/artificial-intelligence-and-machine-learning
+          - paragraph [ref=e20]: Agentic AI & machine learning
+          - paragraph [ref=e21]: Harness the power of artificial intelligence and machine learning to automate processes and uncover hidden patterns.
+          - paragraph [ref=e22]:
+            - text: Learn more
+            - generic [ref=e23]: ">"
+        - link "Go to Data & analytics service page" [ref=e24] [cursor=pointer]:
+          - /url: /services/data-and-analytics
+          - paragraph [ref=e27]: Data & analytics
+          - paragraph [ref=e28]: Drive growth through data-driven insights and powerful analytics.
+          - paragraph [ref=e29]:
+            - text: Learn more
+            - generic [ref=e30]: ">"
+        - link "Go to Reporting & visualization service page" [ref=e31] [cursor=pointer]:
+          - /url: /services/reporting-and-visualization
+          - paragraph [ref=e34]: Reporting & visualization
+          - paragraph [ref=e35]: Visualize your data with intuitive reports and dashboards that provide clarity and insight at a glance.
+          - paragraph [ref=e36]:
+            - text: Learn more
+            - generic [ref=e37]: ">"
+        - link "Go to Application modernization service page" [ref=e38] [cursor=pointer]:
+          - /url: /services/application-modernization
+          - paragraph [ref=e41]: Application modernization
+          - paragraph [ref=e42]: Update legacy systems with modern, scalable applications that enhance performance and user experience.
+          - paragraph [ref=e43]:
+            - text: Learn more
+            - generic [ref=e44]: ">"
+        - link "Go to Cloud service page" [ref=e45] [cursor=pointer]:
+          - /url: /services/cloud
+          - paragraph [ref=e48]: Cloud optimization
+          - paragraph [ref=e49]: Adopt technologies for flexible, scalable, and cost-effective IT solutions that grow with your business.
+          - paragraph [ref=e50]:
+            - text: Learn more
+            - generic [ref=e51]: ">"
+        - link "Go to Security service page" [ref=e52] [cursor=pointer]:
+          - /url: /services/security
+          - paragraph [ref=e55]: Security
+          - paragraph [ref=e56]: Fortify your business with advanced security solutions that protect data, systems, and users from evolving threats.
+          - paragraph [ref=e57]:
+            - text: Learn more
+            - generic [ref=e58]: ">"
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - heading "Explore our products" [level=1] [ref=e62]
+        - paragraph [ref=e63]: Solutions designed to improve and streamline your operations
+      - generic [ref=e64]:
+        - link "Go to AI-DataLens page" [ref=e65] [cursor=pointer]:
+          - /url: /products/AI-DataLens
+          - paragraph [ref=e68]: AI-DataLens
+          - paragraph [ref=e69]: Unlock data-driven insights with AI-powered conversational analytics.
+          - paragraph [ref=e70]:
+            - text: Learn more
+            - generic [ref=e71]: ">"
+        - link "Go to EmbedFAST page" [ref=e72] [cursor=pointer]:
+          - /url: /products/embedFAST
+          - paragraph [ref=e75]: EmbedFAST
+          - paragraph [ref=e76]: Effortlessly embed Power BI into your apps without the complexity of writing your own code.
+          - paragraph [ref=e77]:
+            - text: Learn more
+            - generic [ref=e78]: ">"
+        - link "Go to CertyFAST page" [ref=e79] [cursor=pointer]:
+          - /url: /products/certyFAST
+          - paragraph [ref=e82]: CertyFAST
+          - paragraph [ref=e83]: Streamline Power BI model development with automated error detection, documentation, and DAX measure formatting.
+          - paragraph [ref=e84]:
+            - text: Learn more
+            - generic [ref=e85]: ">"
+        - link "Go to LoadFAST page" [ref=e86] [cursor=pointer]:
+          - /url: /products/loadFAST
+          - paragraph [ref=e89]: LoadFAST
+          - paragraph [ref=e90]: Identify performance bottlenecks in your Power BI reports and optimize the capacity setup for your infrastructure.
+          - paragraph [ref=e91]:
+            - text: Learn more
+            - generic [ref=e92]: ">"
+        - link "Go to MigrateFAST page" [ref=e93] [cursor=pointer]:
+          - /url: /products/migrateFAST
+          - paragraph [ref=e96]: MigrateFAST
+          - paragraph [ref=e97]: Simplify data and reporting platform migration to Microsoft Fabric with AI-powered tools for faster and easier transitions.
+          - paragraph [ref=e98]:
+            - text: Learn more
+            - generic [ref=e99]: ">"
+    - generic [ref=e103]:
+      - heading "Case Studies" [level=1] [ref=e104]
+      - paragraph [ref=e105]: Learn how we’ve helped our clients achieve their goals
+    - generic [ref=e113]:
+      - generic [ref=e114]:
+        - heading "Become a part of our community" [level=1] [ref=e115]
+        - paragraph [ref=e116]: Register for our upcoming webinars and view our newsletters
+      - generic [ref=e117]:
+        - link "Go to Power BI visual guides" [ref=e118] [cursor=pointer]:
+          - /url: /Marketplace-Offers/Power-BI-custom-visuals
+          - generic [ref=e119]:
+            - img "Image of a computer and a coffee mug"
+          - paragraph [ref=e120]: Power BI visual guides
+          - paragraph [ref=e121]: Explore our Power BI custom visuals, designed to elevate your data storytelling and decision-making.
+          - paragraph [ref=e122]:
+            - text: View our visual guides
+            - generic [ref=e123]: ">"
+        - link "Go to webinars page" [ref=e124] [cursor=pointer]:
+          - /url: https://events.microsoft.com/en-us/allevents/?view=list&search=MAQ%20Software&clientTimeZone=1&format=Digital
+          - generic [ref=e125]:
+            - img "Image of a computer and a coffee mug"
+          - paragraph [ref=e126]: Webinars
+          - paragraph [ref=e127]: Join our experts for in-depth sessions on the latest innovations in data and analytics.
+          - paragraph [ref=e128]:
+            - text: Register here
+            - generic [ref=e129]: ">"
+        - link "Go to best practice guides" [ref=e130] [cursor=pointer]:
+          - /url: /community/best-practices
+          - generic [ref=e131]:
+            - img "Image of a computer and a coffee mug"
+          - paragraph [ref=e132]: Best practice guides
+          - paragraph [ref=e133]: Learn about the latest in the industry with our best practice guide blogs.
+          - paragraph [ref=e134]:
+            - text: Read our best practice guides
+            - generic [ref=e135]: ">"
+    - contentinfo
