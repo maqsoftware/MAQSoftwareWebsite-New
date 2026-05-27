@@ -16,6 +16,7 @@ import { ProductLoadFAST } from "./pages/ProductLoadFAST";
 import { ProductMigrateFAST } from "./pages/ProductMigrateFAST";
 import { ComponentLab } from "./pages/ComponentLab";
 import { ServiceAgenticAI } from "./pages/ServiceAgenticAI";
+import { ServiceBusinessApps } from "./pages/ServiceBusinessApps";
 
 const useStyles = makeStyles({
   root: {
@@ -34,6 +35,7 @@ export function App() {
         <Route path="/" element={<Home />} />
         <Route path="/industries/retail" element={<IndustryRetail />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
+        <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
         <Route path="/products" element={<ProductsHome />} />
         <Route
           path="/products/fabric-admin-agent"
