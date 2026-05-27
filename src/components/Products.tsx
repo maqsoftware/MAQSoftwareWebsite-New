@@ -107,8 +107,8 @@ const products: Product[] = [
   {
     initials: "FA",
     name: "Fabric Admin Agent",
-    tagline: "Fabric governance",
-    desc: "Autonomous agent that monitors capacities, workspaces, and item health across Microsoft Fabric — flags risks before users see them.",
+    tagline: "Fabric capacity AI",
+    desc: "AI-powered capacity management for Microsoft Fabric admins. Detects anomalies and spikes in real time, forecasts demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost.",
     tags: ["Fabric", "AI Agent"],
   },
   {

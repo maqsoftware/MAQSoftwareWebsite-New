@@ -179,11 +179,11 @@ export const products: Product[] = [
     slug: "fabric-admin-agent",
     initials: "FA",
     name: "Fabric Admin Agent",
-    tagline: "Fabric governance",
+    tagline: "Fabric capacity AI",
     shortDesc:
-      "Autonomous agent that monitors capacities, workspaces, and item health across Microsoft Fabric — flags risks before users see them.",
+      "AI-powered capacity management for Microsoft Fabric admins. Detects anomalies and spikes in real time, forecasts demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost.",
     longDesc:
-      "Fabric Admin Agent watches your Microsoft Fabric tenant continuously. It correlates capacity throttling, refresh failures, orphaned items, and permission drift into a single risk feed — and proposes remediations your platform team can apply in one click.",
+      "Fabric Admin Agent gives Microsoft Fabric administrators an AI copilot for capacity. It detects anomalies and usage spikes in real time, forecasts upcoming demand, and recommends concrete actions to reduce throttling, eliminate idle waste, and right-size spend — so platform teams stay ahead of capacity issues instead of firefighting them.",
     heroIcon: <Settings24Regular />,
     image: illustration("gauge"),
     tags: ["Fabric", "AI Agent", "Governance"],

@@ -473,17 +473,17 @@ export function ProductFabricAdminAgent() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Fabric governance</span>
+            <span className={s.eyebrow}>Fabric capacity AI</span>
             <h1 className={s.h1}>
-              Govern Microsoft Fabric Autonomously with the Fabric Admin Agent
+              AI-powered capacity management for Microsoft Fabric
             </h1>
             <p className={s.heroSub}>
-              Microsoft Fabric estates grow fast — capacities throttle,
-              refreshes fail silently, workspaces sprawl, permissions drift.
-              Fabric Admin Agent watches your tenant 24/7, correlates risks
-              into a single feed, and proposes one-click remediations. Your
-              platform team prevents Friday-afternoon outages before users
-              notice them.
+              Fabric Admin Agent gives Microsoft Fabric administrators an
+              AI copilot for capacity. It detects anomalies and usage spikes
+              in real time, forecasts upcoming demand, and recommends
+              actions to reduce throttling, eliminate waste, and optimize
+              cost — so platform teams stay ahead of capacity issues instead
+              of firefighting them.
             </p>
             <div className={s.btns}>
               <Button
