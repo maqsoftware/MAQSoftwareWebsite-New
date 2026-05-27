@@ -285,7 +285,7 @@ This section is the **source of truth for all rendered text** on the home page. 
 
 | Name | Description |
 |---|---|
-| `AI solutions & agentic automation` | Production GenAI agents, copilots, and ML systems built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting. |
+| `AI solutions & agentic automation` | Production GenAI agents and copilots built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting. |
 | `Data engineering & analytics` | Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses and real-time analytics that power Copilot, AI agents, and enterprise decision-making. |
 | `Reporting & business intelligence` | Microsoft Power BI Partner of the Year (2021). We build, modernize, and migrate BI stacks — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, MicroStrategy — into real-time Power BI on Microsoft Fabric. |
 | `Business apps & process automation` | Low-code and pro-code apps on Microsoft Power Platform and Dynamics 365 — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations. |
