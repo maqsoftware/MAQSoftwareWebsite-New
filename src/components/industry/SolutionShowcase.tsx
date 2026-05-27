@@ -119,9 +119,10 @@ interface SolutionShowcaseProps {
   eyebrow?: string;
   title: string;
   agents: Agent[];
+  industryLabel?: string;
 }
 
-export function SolutionShowcase({ sectionId, eyebrow = "Agentic AI", title, agents }: SolutionShowcaseProps) {
+export function SolutionShowcase({ sectionId, eyebrow = "Agentic AI", title, agents, industryLabel = "Retail" }: SolutionShowcaseProps) {
   const s = useStyles();
   const [active, setActive] = useState(0);
   const sel = agents[active];
@@ -142,7 +143,7 @@ export function SolutionShowcase({ sectionId, eyebrow = "Agentic AI", title, age
               className={s.knowMore}
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Retail"
+                sel.name + " - " + industryLabel + " - MAQ Software"
               )}`}
             >
               Know More

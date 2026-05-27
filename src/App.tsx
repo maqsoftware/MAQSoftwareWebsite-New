@@ -19,6 +19,7 @@ import { ComponentLab } from "./pages/ComponentLab";
 import { ServiceAgenticAI } from "./pages/ServiceAgenticAI";
 import { ServiceBusinessApps } from "./pages/ServiceBusinessApps";
 import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
+import { IndustryTechnology } from "./pages/IndustryTechnology";
 
 const useStyles = makeStyles({
   root: {
@@ -37,6 +38,7 @@ export function App() {
         <Route path="/" element={<Home />} />
         <Route path="/industries/retail" element={<IndustryRetail />} />
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
+        <Route path="/industries/technology" element={<IndustryTechnology />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
         <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
         <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
