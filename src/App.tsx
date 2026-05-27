@@ -17,8 +17,7 @@ import { ProductLoadFAST } from "./pages/ProductLoadFAST";
 import { ProductMigrateFAST } from "./pages/ProductMigrateFAST";
 import { ComponentLab } from "./pages/ComponentLab";
 import { ServiceAgenticAI } from "./pages/ServiceAgenticAI";
-import { ServiceBusinessApps } from "./pages/ServiceBusinessApps";
-import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
+import { ServiceCloud } from "./pages/ServiceCloud";
 
 const useStyles = makeStyles({
   root: {
@@ -38,8 +37,7 @@ export function App() {
         <Route path="/industries/retail" element={<IndustryRetail />} />
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
-        <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
-        <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
+        <Route path="/services/cloud" element={<ServiceCloud />} />
         <Route path="/products" element={<ProductsHome />} />
         <Route
           path="/products/fabric-admin-agent"
