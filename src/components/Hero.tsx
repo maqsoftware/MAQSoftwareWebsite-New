@@ -172,26 +172,6 @@ export function Hero() {
               View case studies
             </Button>
           </div>
-          <div className={s.stats}>
-            <div>
-              <div className={s.statNum}>
-                1,800<span className={s.statBlue}>+</span>
-              </div>
-              <div className={s.statLbl}>Engineers globally</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                26<span className={s.statBlue}> yrs</span>
-              </div>
-              <div className={s.statLbl}>Microsoft preferred supplier</div>
-            </div>
-            <div>
-              <div className={s.statNum}>
-                12<span className={s.statBlue}>×</span>
-              </div>
-              <div className={s.statLbl}>Inc. 5000 honoree</div>
-            </div>
-          </div>
         </div>
 
         <div className={s.visual} aria-label="Live Power BI dashboard preview">
