@@ -80,7 +80,7 @@ const industries: NavItem[] = [
 const services: NavItem[] = [
   { label: "AI solutions & agentic automation", href: "/services/agentic-ai" },
   { label: "Data engineering & analytics" },
-  { label: "Reporting & business intelligence" },
+  { label: "Reporting & business intelligence", href: "/services/reporting-bi" },
   { label: "Business apps & process automation" },
   { label: "Cloud infrastructure & modernization" },
   { label: "Security & compliance" },
