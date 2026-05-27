@@ -80,46 +80,35 @@ const useStyles = makeStyles({
   },
 });
 
-interface Case {
+export interface IndustryCase {
   tag: string;
   title: string;
   teaser: string;
   href: string;
 }
 
-const cases: Case[] = [
-  {
-    tag: "Grocery",
-    title: "Transforming grocery retail analytics with Microsoft Fabric",
-    teaser:
-      "Modernize grocery analytics on Fabric for sharper category, basket and supply-chain insights.",
-    href: "https://blog.maqsoftware.com/2025/07/transforming-analytics-with-microsoft.html",
-  },
-  {
-    tag: "Specialty retail",
-    title: "Transforming supply chain analytics with Power BI on Snowflake",
-    teaser:
-      "Replatform a specialty retailer's supply chain analytics on Snowflake + Power BI.",
-    href: "https://blog.maqsoftware.com/2025/03/transforming-supply-chain-analytics.html",
-  },
-  {
-    tag: "Mass retail",
-    title:
-      "Enabling real-time visibility: Direct Store Delivery with Microsoft Fabric",
-    teaser:
-      "Deliver real-time DSD visibility on Fabric so field operations can act on live route and stock data.",
-    href: "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
-  },
-];
+interface IndustryCaseStudiesProps {
+  eyebrow: string;
+  title: string;
+  cases: IndustryCase[];
+  seeAllLabel?: string;
+  seeAllHref?: string;
+}
 
-export function IndustryCaseStudies() {
+export function IndustryCaseStudies({
+  eyebrow,
+  title,
+  cases,
+  seeAllLabel = "See all case studies",
+  seeAllHref = "https://maqsoftware.com/case-studies",
+}: IndustryCaseStudiesProps) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Retail case studies</span>
-          <h2 className={s.title}>How retailers move faster with MAQ Software</h2>
+          <span className={s.eyebrow}>{eyebrow}</span>
+          <h2 className={s.title}>{title}</h2>
         </div>
         <div className={s.grid}>
           {cases.map((c) => (
@@ -145,11 +134,11 @@ export function IndustryCaseStudies() {
         <div className={s.seeAll}>
           <a
             className={s.seeAllLink}
-            href="https://maqsoftware.com/case-studies"
+            href={seeAllHref}
             target="_blank"
             rel="noreferrer"
           >
-            See all retail case studies <ArrowRight20Regular fontSize={14} />
+            {seeAllLabel} <ArrowRight20Regular fontSize={14} />
           </a>
         </div>
       </div>
