@@ -111,7 +111,7 @@ In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `
   5. **Insights** — scrolls to `#case-studies`
   6. **About Us** — plain button (no anchor yet)
   7. **Contact Us** — `<MegaMenu label="Contact Us" items={contact}>`
-- Right cluster: search icon, "Sign in" (subtle), **"Request a demo"** primary Fluent `Button` that scrolls to `#contact`.
+- Right cluster: **"Request a demo"** primary Fluent `Button` that scrolls to `#contact`.
 - All nav items use a shared `navBtn` Griffel class: white text, transparent bg, transparent-white hover. No borders.
 
 **Mega-menu data (must stay exact):**
@@ -241,7 +241,6 @@ This section is the **source of truth for all rendered text** on the home page. 
   - `About Us` (no-op)
   - `Contact Us` (mega-menu) — items: `Talk to sales`, `Customer success`, `Partner with us`, `Careers`
 - **Right cluster:**
-  - Search icon (aria-label `Search`)
   - Primary button: `Request a demo` → `#contact`
 
 ### 8.3 Hero

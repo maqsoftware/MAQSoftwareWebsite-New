@@ -9,7 +9,6 @@ import {
 } from "@fluentui/react-components";
 import {
   ChevronDown20Regular,
-  Search20Regular,
 } from "@fluentui/react-icons";
 import { Link, useNavigate } from "react-router-dom";
 import { products } from "../data/products";
@@ -166,7 +165,6 @@ export function Header() {
       </div>
 
       <div className={s.right}>
-        <Button appearance="subtle" className={s.navBtn} icon={<Search20Regular />} aria-label="Search" />
         <Button
           appearance="primary"
           onClick={() =>
