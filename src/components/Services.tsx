@@ -85,7 +85,7 @@ const services: Svc[] = [
   {
     icon: <Bot24Regular />,
     name: "AI solutions & agentic automation",
-    desc: "Production GenAI agents and copilots built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting.",
+    desc: "Production GenAI agents and industry-specific solution accelerators built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value business workflows.",
   },
   {
     icon: <DataPie24Regular />,
