@@ -61,25 +61,18 @@ const useStyles = makeStyles({
     },
   },
   tag: { alignSelf: "flex-start", marginBottom: "16px" },
-  num: {
-    fontSize: "32px",
-    fontWeight: 700,
-    color: "var(--maq-blue)",
-    lineHeight: 1,
-    marginBottom: "12px",
-    letterSpacing: "-0.02em",
-  },
   title2: {
-    fontSize: "16px",
-    fontWeight: 600,
+    fontSize: "18px",
+    fontWeight: 700,
     color: "var(--maq-navy)",
-    marginBottom: "8px",
-    lineHeight: 1.4,
+    marginBottom: "10px",
+    lineHeight: 1.35,
+    letterSpacing: "-0.01em",
   },
   teaser: {
-    fontSize: "13px",
+    fontSize: "13.5px",
     color: "var(--maq-text-muted)",
-    lineHeight: 1.55,
+    lineHeight: 1.6,
     flex: 1,
     marginBottom: "16px",
   },
@@ -95,7 +88,6 @@ const useStyles = makeStyles({
 
 interface Case {
   industry: string;
-  metric: string;
   title: string;
   teaser: string;
   href: string;
@@ -104,30 +96,27 @@ interface Case {
 
 const cases: Case[] = [
   {
-    industry: "Retail",
-    metric: "2026",
-    title: "Reshaping retail with agentic AI solutions",
+    industry: "Agentic AI",
+    title: "Reshaping industries with agentic AI solutions",
     teaser:
-      "Agentic AI deployed across pricing, merchandising, and store operations — unlocking faster decisions and resilient supply chains for a global retailer.",
-    href: "https://blog.maqsoftware.com/2026/02/reshaping-retail-with-agentic-ai.html",
+      "Agentic AI in production across retail, financial services, healthcare and manufacturing — a reference pattern for any regulated, multi-system enterprise.",
+    href: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
     color: "danger",
   },
   {
-    industry: "Technology",
-    metric: "2026",
-    title: "Accelerating software development with agentic AI solutions",
+    industry: "Snowflake + Fabric",
+    title: "Optimizing data management by integrating Snowflake and Microsoft Fabric",
     teaser:
-      "Agentic AI woven through the SDLC to accelerate coding, review, and release — lifting developer throughput across an ISV's engineering org.",
-    href: "https://blog.maqsoftware.com/2026/02/accelerating-software-development-with.html",
+      "Bridging Snowflake and Microsoft Fabric to streamline data movement, governance, and cost — without rewriting existing pipelines or rebuilding semantic models.",
+    href: "https://blog.maqsoftware.com/2025/03/optimizing-data-management-by.html",
     color: "informative",
   },
   {
-    industry: "Reporting & BI",
-    metric: "2026",
-    title: "Delivering accurate business intelligence insights with a Fabric data agent",
+    industry: "Fabric migration",
+    title: "Modernizing retail business intelligence with Microsoft Fabric and Power BI",
     teaser:
-      "A Microsoft Fabric data agent answers business questions with citation-backed accuracy, replacing brittle hand-built dashboards.",
-    href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
+      "Re-platforming a global retailer's reporting estate onto Microsoft Fabric and Power BI with a unified semantic model and faster refresh.",
+    href: "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
     color: "brand",
   },
 ];
@@ -143,8 +132,9 @@ export function CaseStudies() {
             What clients achieve with MAQ Software
           </h2>
           <p className={s.sub}>
-            Outcomes from real engagements — across retail, technology, and
-            reporting &amp; BI.
+            Outcomes from real engagements — agentic AI, multi-platform data
+            engineering on Microsoft, Snowflake and Databricks, and migrations
+            to Microsoft Fabric &amp; Power BI.
           </p>
         </div>
         <div className={s.grid}>
@@ -164,7 +154,6 @@ export function CaseStudies() {
               >
                 {c.industry}
               </Badge>
-              <div className={s.num}>{c.metric}</div>
               <div className={s.title2}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <Link className={s.more} appearance="subtle">
