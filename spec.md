@@ -81,16 +81,15 @@ Sourced from the live https://maqsoftware.com (computed styles), **not** from an
 
 Render order is fixed:
 
-1. `<Announcement />`
-2. `<Header />`
-3. `<main>` containing:
+1. `<Header />`
+2. `<main>` containing:
    1. `<Hero />` — anchor: top of page
    2. `<TrustBanner />`
    3. `<Services id="services" />`
    4. `<Products id="products" />`
    5. `<CaseStudies id="case-studies" />`
    6. `<CTA id="contact" />`
-4. `<Footer />`
+3. `<Footer />`
 
 In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `#contact`. Industries currently is a mega-menu (no anchor jump).
 
@@ -98,11 +97,8 @@ In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `
 
 ## 4. Section specs
 
-### 4.1 Announcement (`Announcement.tsx`)
-- Thin top bar above the header.
-- Background: `--maq-black` (navy era → now black).
-- Text: white. Link color: `#ff8e92` (red-tinted on dark).
-- Dismissible is **not** required.
+### 4.1 Announcement (`Announcement.tsx`) — **REMOVED from Home**
+- Component file still exists in `src/components/` but is not rendered. Reserved for future campaign use.
 
 ### 4.2 Header / nav (`Header.tsx`) — sticky
 - Sticky to top, full-width, background `--maq-black`, text white.
@@ -144,8 +140,8 @@ const contact = [
 - Light background; no hero image required (typography-led).
 
 ### 4.4 TrustBanner (`TrustBanner.tsx`)
-- Single-line strip below hero: "Trusted by…" + a row of grayscale logos / textual marks.
-- Background: `--maq-off-white`.
+- Single-line strip below hero: "Trusted credentials:" + a row of credential chips.
+- Background: `--maq-neutral-bg-1` (white). Tight vertical padding (12px) to keep page scroll short.
 
 ### 4.5 Services (`Services.tsx`) — `id="services"`
 - Grid of service cards. The six services mirror maqsoftware.com:
@@ -254,10 +250,7 @@ This section is the **source of truth for all rendered text** on the home page. 
 - **Subhead:** `As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree, MAQ Software brings 25 years of enterprise delivery to every engagement. Whether you're modernizing a legacy BI stack, migrating to the cloud, or scaling AI across your organization — our 1,800+ engineers deliver outcomes, not just recommendations.`
 - **Primary CTA:** `Request a demo` (calendar icon) → `#contact`
 - **Secondary CTA:** `View case studies` (arrow icon, right) → `#case-studies`
-- **Stats row (3):**
-  - `1,800+` — `Engineers globally`
-  - `25 yrs` — `Microsoft preferred supplier`
-  - `12×` — `Inc. 5000 honoree`
+- **Stats row:** **REMOVED** (no longer rendered; numbers retained in subhead prose only).
 - **Visual card (right):**
   - Title: `Power BI on Microsoft Fabric` + green `● Live` badge
   - Metric 1: label `Revenue YTD`, value `$42.8M`, delta `↑ +18% vs last year`
