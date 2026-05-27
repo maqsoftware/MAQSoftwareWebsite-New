@@ -1,7 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header";
-import { Announcement } from "./components/Announcement";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
 import { Home } from "./pages/Home";
@@ -37,7 +36,6 @@ export function App() {
   const s = useStyles();
   return (
     <div className={s.root}>
-      <Announcement />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

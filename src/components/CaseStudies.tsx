@@ -7,9 +7,9 @@ import {
 import { ArrowRight20Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "80px 32px", backgroundColor: "var(--maq-off-white)" },
+  section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { textAlign: "center", marginBottom: "48px" },
+  head: { textAlign: "center", marginBottom: "32px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,

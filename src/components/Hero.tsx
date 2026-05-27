@@ -14,7 +14,7 @@ import {
 const useStyles = makeStyles({
   wrap: {
     backgroundColor: "var(--maq-off-white)",
-    padding: "72px 32px",
+    padding: "48px 32px",
   },
   grid: {
     maxWidth: "1240px",

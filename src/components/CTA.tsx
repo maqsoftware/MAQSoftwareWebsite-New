@@ -5,7 +5,7 @@ import {
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "80px 32px", backgroundColor: "#fff" },
+  section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: {
     maxWidth: "1100px",
     margin: "0 auto",

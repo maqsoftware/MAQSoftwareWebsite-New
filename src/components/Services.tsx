@@ -11,9 +11,9 @@ import {
 import type { FC, ReactNode } from "react";
 
 const useStyles = makeStyles({
-  section: { padding: "80px 32px", backgroundColor: tokens.colorNeutralBackground1 },
+  section: { padding: "48px 32px", backgroundColor: tokens.colorNeutralBackground1 },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { textAlign: "center", marginBottom: "48px" },
+  head: { textAlign: "center", marginBottom: "32px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
