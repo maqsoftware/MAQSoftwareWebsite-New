@@ -185,10 +185,10 @@ export function ServiceCloudCapabilities() {
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
-          <h2 className={s.title}>Our cloud optimization capabilities</h2>
+          <h2 className={s.title}>Our cloud infrastructure &amp; modernization capabilities</h2>
           <p className={s.sub}>
-            Four capability pillars that deliver scalable, secure, and cost-effective cloud
-            solutions.
+            Four capability pillars that replatform on-premises workloads to Azure with
+            FinOps discipline — scalable, secure, and cost-controlled.
           </p>
         </div>
         <div className={s.panel}>

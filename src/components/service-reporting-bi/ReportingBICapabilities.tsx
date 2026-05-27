@@ -155,8 +155,8 @@ const capabilities: Capability[] = [
     tagline: "Modernize legacy reporting estates",
     icon: <ArrowSwap24Regular />,
     description:
-      "AI-assisted migration of legacy BI platforms — Tableau, Qlik, MicroStrategy, SSRS — to Power BI and Microsoft Fabric. We rebuild semantic models, RLS, and pixel-perfect layouts with our MigrateFAST accelerator.",
-    tags: ["MigrateFAST", "Tableau", "Qlik", "MicroStrategy", "Fabric"],
+      "AI-assisted migration of legacy BI estates — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, and MicroStrategy — to Power BI and Microsoft Fabric. We rebuild semantic models, RLS, and pixel-perfect layouts with our MigrateFAST accelerator.",
+    tags: ["MigrateFAST", "Tableau", "SAP BO", "Qlik", "Cognos", "MicroStrategy"],
   },
   {
     name: "Power BI embedding",

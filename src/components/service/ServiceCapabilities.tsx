@@ -161,12 +161,12 @@ interface CapabilityInternal {
 
 const defaultCapabilities: CapabilityInternal[] = [
   {
-    name: "Agentic AI",
-    tagline: "Innovate with agentic AI",
+    name: "Foundry agents",
+    tagline: "Production agents on Microsoft Foundry",
     icon: <Bot24Regular />,
     description:
-      "Explore new possibilities with agentic AI. We help you harness advanced LLM models to create innovative solutions, from content generation to automated design and beyond. Multi-agent orchestration on Azure OpenAI with full observability, governance, and human-in-the-loop controls.",
-    tags: ["Azure OpenAI", "Multi-agent", "RAG", "Governance"],
+      "Design, build, and operate GenAI agents on Microsoft Foundry and the Microsoft Agent Framework. Multi-agent orchestration with grounded RAG, plugin actions, full observability, governance, and human-in-the-loop controls — ready for production on day one.",
+    tags: ["Microsoft Foundry", "Agent Framework", "Multi-agent", "RAG"],
   },
   {
     name: "Advanced analytics",
@@ -185,19 +185,19 @@ const defaultCapabilities: CapabilityInternal[] = [
     tags: ["Copilot Studio", "Power Automate", "M365 Copilot", "Custom agents"],
   },
   {
-    name: "MLOps",
-    tagline: "Production-grade model lifecycle",
+    name: "AgentOps & evaluation",
+    tagline: "Production-grade agent lifecycle",
     icon: <BranchFork24Regular />,
     description:
-      "End-to-end MLOps so models stay accurate, compliant, and cost-controlled in production — CI/CD, drift detection, evaluation harnesses, and responsible AI guardrails.",
-    tags: ["Azure ML", "MLflow", "Eval harness", "Responsible AI"],
+      "End-to-end AgentOps so agents stay accurate, safe, and cost-controlled in production — CI/CD, drift detection, Foundry continuous evaluation, and responsible AI guardrails wired into every release.",
+    tags: ["Foundry evals", "Continuous Evaluation", "AgentOps", "Responsible AI"],
   },
 ];
 
 export function ServiceCapabilities({
   sectionId = "ai-capabilities",
-  title = "Our agentic AI and machine learning capabilities",
-  subhead = "Four capability pillars that turn raw data and LLM power into governed, production-grade business automation.",
+  title = "Our agentic AI capabilities",
+  subhead = "Four capability pillars that turn Microsoft Foundry and the Agent Framework into governed, production-grade business automation.",
   capabilities = defaultCapabilities,
   footerLabel = "See agentic AI case studies",
   footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",

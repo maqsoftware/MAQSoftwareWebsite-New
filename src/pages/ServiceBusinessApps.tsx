@@ -686,7 +686,7 @@ export function ServiceBusinessApps() {
                         target="_blank"
                         rel="noreferrer"
                     >
-                        See application modernization case studies <ArrowRight16Regular />
+                        See business apps &amp; process automation case studies <ArrowRight16Regular />
                     </a>
                 </div>
             </section>

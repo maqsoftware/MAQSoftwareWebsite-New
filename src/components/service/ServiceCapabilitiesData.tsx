@@ -144,10 +144,10 @@ const capabilities: Capability[] = [
     tags: ["Strategy", "Governance", "Roadmap"],
   },
   {
-    name: "Data modernization using Microsoft Fabric",
-    tagline: "Modernize data platforms with Fabric",
-    description: "Modernize platforms and consolidate data estates onto Microsoft Fabric for integrated warehousing and analytics.",
-    tags: ["Microsoft Fabric", "Modernization"],
+    name: "Lakehouse modernization on Fabric, Snowflake, and Databricks",
+    tagline: "Medallion lakehouses on your platform of choice",
+    description: "Modernize data estates with governed medallion lakehouses on Microsoft Fabric, Snowflake, or Databricks — unified storage, semantic models, and a single source of truth ready for Copilot and AI agents.",
+    tags: ["Microsoft Fabric", "Snowflake", "Databricks", "Lakehouse"],
   },
   {
     name: "Real-time Intelligence using Microsoft Fabric",

@@ -137,12 +137,12 @@ const capabilities: Capability[] = [
     tags: ["Azure Firewall", "NSG", "Private Link", "Zero Trust"],
   },
   {
-    name: "Data protection and encryption",
-    tagline: "Safeguard data at rest and in transit",
+    name: "Data protection & AI governance",
+    tagline: "Safeguard data and govern AI usage end to end",
     icon: <LockClosed24Regular />,
     description:
-      "Classify, label, and encrypt sensitive data with Microsoft Purview and Azure Key Vault. Enforce DLP policies across M365, endpoints, and cloud storage to meet regulatory obligations (GDPR, HIPAA, SOC 2).",
-    tags: ["Microsoft Purview", "Azure Key Vault", "DLP", "Encryption"],
+      "Classify, label, and encrypt sensitive data with Microsoft Purview and Azure Key Vault — and extend governance to GenAI with Purview AI Hub, monitoring prompt content, sensitivity, and DLP across Copilot and custom agents to meet GDPR, HIPAA, and SOC 2 obligations.",
+    tags: ["Microsoft Purview", "Purview AI Hub", "Azure Key Vault", "DLP"],
   },
   {
     name: "Incident management and recovery",
@@ -242,7 +242,7 @@ export function ServiceSecurityCompliance() {
       <TrustBanner />
       <ServiceCapabilities
         sectionId="security-capabilities"
-        title="Our security capabilities"
+        title="Our security & compliance capabilities"
         subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
         capabilities={capabilities}
         footerLabel="See security case studies"

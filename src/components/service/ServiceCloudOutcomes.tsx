@@ -73,8 +73,8 @@ interface Outcome {
 const outcomes: Outcome[] = [
   {
     icon: <CurrencyDollarEuro24Regular />,
-    title: "Cost efficiency",
-    desc: "Reduce IT costs with scalable cloud solutions that provide the flexibility and efficiency your business needs.",
+    title: "Lower run cost",
+    desc: "Cut cloud spend with FinOps discipline — 30–40% lower run cost on average across enterprise workloads we modernize on Azure.",
   },
   {
     icon: <Shield24Regular />,
