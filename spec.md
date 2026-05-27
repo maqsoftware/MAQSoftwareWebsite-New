@@ -138,6 +138,7 @@ const contact = [
 - Headline references MAQ's positioning around Microsoft Fabric, agentic AI, data analytics.
 - Primary CTA scrolls to `#contact`. Secondary CTA scrolls to `#services` or `#case-studies`.
 - Light background; no hero image required (typography-led).
+- **Spacing:** section padding `32px 32px`; eyebrow→h1 `12px`; h1→subhead `12px`; subhead→CTA buttons `32px` (deliberate breathing room before CTAs).
 
 ### 4.4 TrustBanner (`TrustBanner.tsx`)
 - Single-line strip below hero: "Trusted credentials:" + a row of credential chips.
