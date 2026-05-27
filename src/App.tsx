@@ -6,6 +6,7 @@ import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
 import { Home } from "./pages/Home";
 import { IndustryRetail } from "./pages/IndustryRetail";
+import { IndustryFinancialServices } from "./pages/IndustryFinancialServices";
 import { ProductsHome } from "./pages/ProductsHome";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ProductFabricAdminAgent } from "./pages/ProductFabricAdminAgent";
@@ -18,6 +19,7 @@ import { ComponentLab } from "./pages/ComponentLab";
 import { ServiceAgenticAI } from "./pages/ServiceAgenticAI";
 import { ServiceBusinessApps } from "./pages/ServiceBusinessApps";
 import { ServiceSecurityCompliance } from "./pages/ServiceSecurityCompliance";
+import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 
 const useStyles = makeStyles({
   root: {
@@ -35,9 +37,11 @@ export function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/industries/retail" element={<IndustryRetail />} />
+        <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
         <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
         <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
+        <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
         <Route path="/products" element={<ProductsHome />} />
         <Route
           path="/products/fabric-admin-agent"

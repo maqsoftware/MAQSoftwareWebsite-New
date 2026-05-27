@@ -1,15 +1,10 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import {
-  ArrowTrendingLines24Regular,
-  Clock24Regular,
-  Chat24Regular,
-  BuildingShop24Regular,
-} from "@fluentui/react-icons";
+import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
+  section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { marginBottom: "20px" },
   eyebrow: {
@@ -25,10 +20,13 @@ const useStyles = makeStyles({
     fontSize: "30px",
     fontWeight: 700,
     color: "var(--maq-black)",
-    margin: 0,
+    margin: "0 0 6px",
     letterSpacing: "-0.01em",
   },
+  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "780px" },
+
   panel: {
+    marginTop: "20px",
     background: "#fff",
     border: `1px solid ${tokens.colorNeutralStroke2}`,
     borderRadius: "14px",
@@ -61,7 +59,17 @@ const useStyles = makeStyles({
     fontSize: "14px",
     color: "var(--maq-gray-600)",
     lineHeight: 1.65,
-    marginBottom: "20px",
+    marginBottom: "16px",
+  },
+  tagRow: { display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "20px" },
+  tag: {
+    fontSize: "11px",
+    fontWeight: 600,
+    color: "var(--maq-red)",
+    background: "var(--maq-red-pale)",
+    padding: "4px 8px",
+    borderRadius: "4px",
+    letterSpacing: "0.02em",
   },
   knowMore: {
     border: `1px solid var(--maq-red)`,
@@ -105,67 +113,125 @@ const useStyles = makeStyles({
   railText: { display: "flex", flexDirection: "column", gap: "2px" },
   railName: { fontSize: "14px", fontWeight: 700, color: "var(--maq-black)" },
   railTagline: { fontSize: "12px", color: "var(--maq-gray-600)" },
+
+  footerLink: {
+    marginTop: "20px",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "6px",
+    fontSize: "14px",
+    fontWeight: 600,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    ":hover": { textDecoration: "underline" },
+  },
 });
 
-export interface Agent {
+interface Capability {
   name: string;
   tagline: string;
   description: string;
-  icon: ReactNode;
+  icon?: ReactNode;
+  tags: string[];
 }
 
-interface SolutionShowcaseProps {
-  sectionId: string;
-  eyebrow?: string;
-  title: string;
-  agents: Agent[];
-}
+const capabilities: Capability[] = [
+  {
+    name: "Data & analytics strategy",
+    tagline: "Craft a winning data strategy",
+    description:
+      "Develop a comprehensive data strategy that aligns with your business goals. Our experts help you identify key data sources, establish governance frameworks, and create a roadmap for data-driven success.",
+    tags: ["Strategy", "Governance", "Roadmap"],
+  },
+  {
+    name: "Data modernization using Microsoft Fabric",
+    tagline: "Modernize data platforms with Fabric",
+    description: "Modernize platforms and consolidate data estates onto Microsoft Fabric for integrated warehousing and analytics.",
+    tags: ["Microsoft Fabric", "Modernization"],
+  },
+  {
+    name: "Real-time Intelligence using Microsoft Fabric",
+    tagline: "Make decisions in the moment",
+    description: "Build streaming and event-driven architectures on Fabric to deliver real-time insights and actions.",
+    tags: ["Real-time", "Streaming", "Fabric"],
+  },
+  {
+    name: "Data migration",
+    tagline: "Lift & shift with intelligence",
+    description: "Migrate legacy ETL and warehouses to modern cloud platforms with automated tooling and validation.",
+    tags: ["Migration", "ETL", "Lift-and-shift"],
+  },
+  {
+    name: "Platform optimization",
+    tagline: "Cost and performance tuning",
+    description: "Optimize platform costs, query performance, and operational reliability for large-scale analytics.",
+    tags: ["Optimization", "Cost", "Performance"],
+  },
+];
 
-export function SolutionShowcase({ sectionId, eyebrow = "Agentic AI", title, agents }: SolutionShowcaseProps) {
+export function ServiceCapabilitiesData() {
   const s = useStyles();
   const [active, setActive] = useState(0);
-  const sel = agents[active];
+  const sel = capabilities[active];
   return (
-    <section className={s.section} id={sectionId}>
+    <section className={s.section} id="data-analytics-capabilities">
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>{eyebrow}</span>
-          <h2 className={s.title}>{title}</h2>
+          <span className={s.eyebrow}>Our expertise</span>
+          <h2 className={s.title}>Our data & analytics capabilities</h2>
+          <p className={s.sub}>
+            Capabilities that turn data into reliable, scalable analytics and real-time decisioning.
+          </p>
         </div>
         <div className={s.panel}>
           <div>
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
+            <div className={s.tagRow}>
+              {sel.tags.map((t) => (
+                <span key={t} className={s.tag}>
+                  {t}
+                </span>
+              ))}
+            </div>
             <Button
               appearance="outline"
               className={s.knowMore}
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Retail"
+                sel.name + " - Data & Analytics"
               )}`}
             >
-              Know More
+              Know more
             </Button>
           </div>
           <div className={s.rail}>
-            {agents.map((a, i) => (
+            {capabilities.map((c, i) => (
               <button
-                key={a.name}
+                key={c.name}
                 type="button"
                 aria-current={i === active}
                 onClick={() => setActive(i)}
                 className={`${s.railBtn} ${i === active ? s.railBtnActive : ""}`}
               >
-                <span className={s.railIcon}>{a.icon}</span>
+                <span className={s.railIcon}>{c.icon}</span>
                 <span className={s.railText}>
-                  <span className={s.railName}>{a.name}</span>
-                  <span className={s.railTagline}>{a.tagline}</span>
+                  <span className={s.railName}>{c.name}</span>
+                  <span className={s.railTagline}>{c.tagline}</span>
                 </span>
               </button>
             ))}
           </div>
         </div>
+        <a
+          className={s.footerLink}
+          href="https://maqsoftware.com/case-studies.html?filter=data-and-analytics"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Data &amp; analytics case studies <ArrowRight16Regular />
+        </a>
       </div>
     </section>
   );
