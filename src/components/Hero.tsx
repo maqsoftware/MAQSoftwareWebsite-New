@@ -56,7 +56,7 @@ const useStyles = makeStyles({
     fontSize: "17px",
     lineHeight: 1.6,
     color: "var(--maq-text-muted)",
-    marginBottom: "20px",
+    marginBottom: "32px",
     maxWidth: "580px",
   },
   btns: { display: "flex", gap: "12px", marginBottom: "0", flexWrap: "wrap" },
