@@ -71,7 +71,7 @@ interface NavItem {
 const industries: NavItem[] = [
   { label: "Retail & consumer goods", href: "/industries/retail" },
   { label: "Financial services", href: "/industries/financial-services" },
-  { label: "Healthcare & life sciences" },
+  { label: "Healthcare & life sciences", href: "/industries/healthcare-life-sciences" },
   { label: "Manufacturing" },
   { label: "Technology" },
   { label: "Public sector" },
