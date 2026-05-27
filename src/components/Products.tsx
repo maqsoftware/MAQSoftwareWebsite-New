@@ -136,14 +136,14 @@ const products: Product[] = [
     initials: "LF",
     name: "LoadFAST",
     tagline: "Power BI load testing",
-    desc: "Web-based load-testing for Power BI on Microsoft Fabric — simulate real user actions to right-size capacity, prevent slowdowns, and cut over-provisioning.",
+    desc: "Web-based load-testing for Power BI on Microsoft Fabric — simulates real-time user traffic to right-size capacity, prevent slowdowns, and cut over-provisioning.",
     tags: ["Power BI", "Performance"],
   },
   {
     initials: "CF",
     name: "CertyFAST",
     tagline: "Power BI quality control",
-    desc: "Automated Power BI quality control — error detection, DAX measure formatting, lineage, and documentation so analysts ship best-practice, certified reports faster.",
+    desc: "Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.",
     tags: ["Governance", "Power BI"],
   },
 ];

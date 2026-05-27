@@ -46,7 +46,7 @@
 | Track user interactions | See how real-time user actions like slicing and filtering impact report load time. |
 | Automate accuracy | Benefit from precise capacity insights with automated processes, eliminating human error. |
 | Analyze system performance | Uncover actionable insights from data on application performance, resource allocation, CPU usage, and capacity to optimize reporting decisions. |
-| Simulate real usage | Modify user distribution across reports, RLS access, and more in order to replicate your real-world use case. |
+| Simulate real-time user traffic | Modify user distribution across reports, RLS access, and more in order to replicate your real-world use case. |
 
 ### 3.3 3-step workflow
 

@@ -13,7 +13,7 @@ const benefits = [
   { icon: <CursorClick24Regular />, title: "Track user interactions", desc: "See how real-time user actions like slicing and filtering impact report load time." },
   { icon: <Bot24Regular />, title: "Automate accuracy", desc: "Benefit from precise capacity insights with automated processes, eliminating human error." },
   { icon: <ChartMultiple24Regular />, title: "Analyze system performance", desc: "Uncover actionable insights from data on application performance, resource allocation, CPU usage, and capacity." },
-  { icon: <People24Regular />, title: "Simulate real usage", desc: "Modify user distribution across reports, RLS access, and more to replicate your real-world use case." },
+  { icon: <People24Regular />, title: "Simulate real-time user traffic", desc: "Modify user distribution across reports, RLS access, and more to replicate your real-world use case." },
 ];
 
 const steps = [

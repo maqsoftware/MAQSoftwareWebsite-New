@@ -144,7 +144,7 @@ Tableau, SAP BusinessObjects (Web Intelligence + universes), Crystal Reports, Ql
 
 | `embedfast` | EmbedFAST | embed | 10× faster ship · 40+ SaaS products · 99.95% SLO |
 | `ai-datalens` | AI-DataLens | chat | 85% faster answers · 30+ tenants · 100% RLS preserved |
-| `loadfast` | LoadFAST | ingest | 50+ concurrent users (Free) · right-sized F-SKU capacity · real user actions simulated |
+| `loadfast` | LoadFAST | ingest | 50+ concurrent users (Free) · right-sized F-SKU capacity · real-time user traffic simulated |
 | `certyfast` | CertyFAST | shield | 3× certification · 500+ reports/mo · 0 bottlenecks |
 
 ---
