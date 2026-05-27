@@ -115,7 +115,7 @@ const products: Product[] = [
     initials: "MF",
     name: "MigrateFAST",
     tagline: "Migration accelerator",
-    desc: "AI-assisted migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
+    desc: "AI-powered migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
     tags: ["Azure", "Fabric", "AppSource"],
   },
   {

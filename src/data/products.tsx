@@ -211,7 +211,7 @@ export const products: Product[] = [
     name: "MigrateFAST",
     tagline: "Migration accelerator",
     shortDesc:
-      "AI-assisted migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
+      "AI-powered migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
     longDesc:
       "MigrateFAST is an AI-assisted migration factory for enterprises moving off legacy BI and data-prep stacks. It parses your existing estate — Tableau workbooks, SAP BusinessObjects universes and Web Intelligence reports, Crystal Reports, Qlik apps, Alteryx workflows, and Informatica mappings — and generates equivalent Power BI semantic models, Microsoft Fabric pipelines, and Fabric Warehouse objects with traceable lineage and side-by-side validation.",
     heroIcon: <ArrowSwap24Regular />,
