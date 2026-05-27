@@ -84,7 +84,7 @@ const services: NavItem[] = [
   { label: "Business apps & process automation", href: "/services/business-apps" },
   { label: "Cloud infrastructure & modernization", href: "/services/cloud" },
   { label: "Security & compliance", href: "/services/security-compliance" },
-  { label: "Workplace transformation & productivity" },
+  { label: "Workplace transformation & productivity", href: "/services/workplace-transformation" },
 ];
 
 const productNav: NavItem[] = [
