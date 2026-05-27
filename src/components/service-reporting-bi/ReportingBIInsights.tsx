@@ -1,18 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
-export interface InsightItem {
-  title: string;
-  teaser: string;
-  href: string;
-}
-
-export interface ServiceInsightsProps {
-  title?: string;
-  subhead?: string;
-  insights?: InsightItem[];
-}
-
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -80,38 +68,38 @@ const useStyles = makeStyles({
   },
 });
 
-const defaultInsights = [
+const insights = [
   {
-    title: "Empowering businesses with AI: Frameworks that deliver results",
+    title: "Microsoft Fabric features for real-time analytics",
     teaser:
-      "A field-tested framework for shipping AI initiatives that produce measurable business outcomes.",
-    href: "https://blog.maqsoftware.com/2024/08/empowering-businesses-with-ai.html",
+      "A practical walk-through of the Microsoft Fabric features that make real-time analytics shippable in production.",
+    href: "https://blog.maqsoftware.com/2024/05/microsoft-fabric-features-for-real-time.html",
   },
   {
-    title: "Building a secure Copilot: Addressing key security challenges",
-    teaser: "Patterns, guardrails, and identity controls for shipping a secure enterprise Copilot.",
-    href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
+    title: "Embracing the future of data management with Microsoft Fabric: A setup guide",
+    teaser:
+      "A setup guide for adopting Microsoft Fabric end-to-end, from workspace topology to semantic model governance.",
+    href: "https://blog.maqsoftware.com/2023/11/embracing-future-of-data-management.html",
   },
   {
-    title: "Designing UI for Copilot: Key principles and practices",
-    teaser: "UI principles that make Copilot interactions feel trustworthy, fast, and on-brand.",
-    href: "https://blog.maqsoftware.com/2024/08/designing-ui-for-copilot-key-principles.html",
+    title: "Optimize your Power BI reports and usage with LoadFAST",
+    teaser:
+      "How LoadFAST finds and ranks the highest-impact DAX, model, and capacity fixes in a Power BI estate.",
+    href: "https://blog.maqsoftware.com/2024/03/transform-your-power-bi.html",
   },
 ];
 
-export function ServiceInsights({
-  title = "Our agentic AI and machine learning insights",
-  subhead = "See our research that goes into optimizing our agentic AI and machine learning service.",
-  insights = defaultInsights,
-}: ServiceInsightsProps = {}) {
+export function ReportingBIInsights() {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Insights</span>
-          <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          <h2 className={s.title}>Our reporting &amp; business intelligence insights</h2>
+          <p className={s.sub}>
+            See our research that goes into optimizing our reporting &amp; business intelligence service.
+          </p>
         </div>
         <div className={s.grid}>
           {insights.map((i) => (

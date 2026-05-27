@@ -2,21 +2,6 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
-export interface ProductItem {
-  name: string;
-  initials: string;
-  tagline: string;
-  desc: string;
-  href: string;
-  external?: boolean;
-}
-
-export interface ServiceProductsProps {
-  title?: string;
-  subhead?: string;
-  products?: ProductItem[];
-}
-
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -115,73 +100,58 @@ interface Product {
   tagline: string;
   desc: string;
   href: string;
-  external?: boolean;
 }
 
-const defaultProducts: Product[] = [
+const products: Product[] = [
   {
-    name: "AI-DataLens",
-    initials: "AI",
-    tagline: "Conversational analytics",
-    desc: "Talk to your Power BI estate in natural language with row-level security preserved. Citation-backed answers in seconds.",
-    href: "/products/ai-datalens",
+    name: "EmbedFAST",
+    initials: "EF",
+    tagline: "Power BI embedding accelerator",
+    desc: "Multi-tenant Power BI Embedded with row-level security, deployment automation, and a no-code admin console.",
+    href: "/products/embedfast",
   },
   {
-    name: "MigrateFAST",
-    initials: "MF",
-    tagline: "AI-assisted migration",
-    desc: "AI-powered migration of legacy DW / ETL / BI to Azure and Microsoft Fabric — up to 70% faster delivery.",
-    href: "/products/migratefast",
+    name: "LoadFAST",
+    initials: "LF",
+    tagline: "Report performance optimization",
+    desc: "Diagnose slow reports and refresh failures. Prioritized DAX, model, and capacity remediations with measured uplift.",
+    href: "/products/loadfast",
   },
   {
-    name: "Text Analytics Engine",
-    initials: "TA",
-    tagline: "Document intelligence",
-    desc: "Azure Marketplace text analytics application: classification, summarization, entity extraction and topic modeling at scale.",
-    href: "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.text_analytics_application_dev?tab=Overview",
-    external: true,
+    name: "CertyFAST",
+    initials: "CF",
+    tagline: "Power BI quality & certification",
+    desc: "Automated Power BI quality, accessibility, and best-practice certification before reports reach production.",
+    href: "/products/certyfast",
   },
 ];
 
-export function ServiceProducts({
-  title = "Agentic AI & machine learning products",
-  subhead = "Solutions designed to improve and streamline your operations.",
-  products = defaultProducts,
-}: ServiceProductsProps = {}) {
+export function ReportingBIProducts() {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
-          <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          <h2 className={s.title}>Reporting &amp; business intelligence products</h2>
+          <p className={s.sub}>Solutions designed to improve and streamline your Power BI estate.</p>
         </div>
         <div className={s.grid}>
-          {products.map((p) => {
-            const inner = (
-              <>
-                <div className={s.logoRow}>
-                  <div className={s.logo} aria-hidden="true">{p.initials}</div>
-                  <div className={s.name}>{p.name}</div>
+          {products.map((p) => (
+            <Link key={p.name} to={p.href} className={s.card}>
+              <div className={s.logoRow}>
+                <div className={s.logo} aria-hidden="true">
+                  {p.initials}
                 </div>
-                <span className={s.tagline}>{p.tagline}</span>
-                <p className={s.desc}>{p.desc}</p>
-                <span className={s.link}>
-                  Learn more <ArrowRight16Regular />
-                </span>
-              </>
-            );
-            return p.external ? (
-              <a key={p.name} href={p.href} target="_blank" rel="noreferrer" className={s.card}>
-                {inner}
-              </a>
-            ) : (
-              <Link key={p.name} to={p.href} className={s.card}>
-                {inner}
-              </Link>
-            );
-          })}
+                <div className={s.name}>{p.name}</div>
+              </div>
+              <span className={s.tagline}>{p.tagline}</span>
+              <p className={s.desc}>{p.desc}</p>
+              <span className={s.link}>
+                Learn more <ArrowRight16Regular />
+              </span>
+            </Link>
+          ))}
         </div>
         <Link className={s.footerLink} to="/products">
           See all products <ArrowRight16Regular />

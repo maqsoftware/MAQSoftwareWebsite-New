@@ -1,20 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
-export interface CaseStudyItem {
-  tag: string;
-  title: string;
-  teaser: string;
-  href: string;
-}
-
-export interface ServiceCaseStudiesProps {
-  title?: string;
-  studies?: CaseStudyItem[];
-  footerLabel?: string;
-  footerHref?: string;
-}
-
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -104,50 +90,45 @@ interface Study {
   href: string;
 }
 
-const defaultStudies: Study[] = [
+const studies: Study[] = [
   {
-    tag: "Developer productivity",
-    title: "Modernizing the software development lifecycle with GitHub Copilot",
+    tag: "Energy & utilities",
+    title: "ADX Implementation in the Energy and Utilities Industry",
     teaser:
-      "Embedding GitHub Copilot across the SDLC with adoption playbooks, governance, and outcome telemetry.",
-    href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
+      "Modernizing data infrastructure with real-time analytics on cloud platforms.",
+    href: "https://blog.maqsoftware.com/2023/06/adx-implementation-for-energy-and.html",
   },
   {
-    tag: "Customer service",
-    title: "Scaling AI for every customer and every developer with MAQ Software",
+    tag: "Data modernization",
+    title: "Modernize Data Systems by Migrating to the Cloud",
     teaser:
-      "A reference architecture and delivery model for scaling agentic AI to every customer and every developer in the enterprise.",
-    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
+      "End-to-end cloud migration strategy delivering cost savings and operational improvements.",
+    href: "https://blog.maqsoftware.com/2020/09/modernize-data-cloud-migration.html",
   },
   {
-    tag: "Cross-industry",
-    title: "Reshaping industries with agentic AI solutions",
+    tag: "Real estate",
+    title: "ADX Implementation in the Real Estate Industry",
     teaser:
-      "How agentic AI is reshaping retail, financial services, healthcare and manufacturing workflows in production.",
-    href: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
+      "Cloud-native analytics enabling fast-paced business intelligence for real estate operations.",
+    href: "https://blog.maqsoftware.com/2022/11/adx-implementation-real-estate.html",
   },
   {
-    tag: "Self-service BI",
-    title: "Empowering self-service using Custom Copilot agent with Power BI Embedded",
+    tag: "Analytics & BI",
+    title: "Enabling Fast-Paced BI and Analytics",
     teaser:
-      "A custom Copilot agent over Power BI Embedded that lets users ask data questions in plain English.",
-    href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html",
+      "Accelerating BI delivery with cloud data warehouse and analytics best practices.",
+    href: "https://blog.maqsoftware.com/2020/11/azure-fast-paced-bi-analytics.html",
   },
 ];
 
-export function ServiceCaseStudies({
-  title = "How clients are putting agentic AI to work",
-  studies = defaultStudies,
-  footerLabel = "See all AI case studies",
-  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
-}: ServiceCaseStudiesProps = {}) {
+export function ServiceCloudCaseStudies() {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Related case studies</span>
-          <h2 className={s.title}>{title}</h2>
+          <h2 className={s.title}>How clients are accelerating cloud transformation</h2>
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
@@ -163,11 +144,11 @@ export function ServiceCaseStudies({
         </div>
         <a
           className={s.footerLink}
-          href={footerHref}
+          href="/case-studies.html?filter=cloud-optimization"
           target="_blank"
           rel="noreferrer"
         >
-          {footerLabel} <ArrowRight16Regular />
+          See all cloud case studies <ArrowRight16Regular />
         </a>
       </div>
     </section>

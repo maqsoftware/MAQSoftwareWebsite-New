@@ -2,30 +2,12 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import {
-  Bot24Regular,
-  ChartMultiple24Regular,
-  Sparkle24Regular,
-  BranchFork24Regular,
+  CloudArrowUp24Regular,
+  ShieldLock24Regular,
+  Cube24Regular,
+  Server24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
-
-export interface Capability {
-  name: string;
-  tagline: string;
-  description: string;
-  icon: ReactNode;
-  tags: string[];
-}
-
-export interface ServiceCapabilitiesProps {
-  sectionId?: string;
-  title?: string;
-  subhead?: string;
-  capabilities?: Capability[];
-  footerLabel?: string;
-  footerHref?: string;
-  mailSubjectSuffix?: string;
-}
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -151,7 +133,7 @@ const useStyles = makeStyles({
   },
 });
 
-interface CapabilityInternal {
+interface Capability {
   name: string;
   tagline: string;
   description: string;
@@ -159,60 +141,55 @@ interface CapabilityInternal {
   tags: string[];
 }
 
-const defaultCapabilities: CapabilityInternal[] = [
+const capabilities: Capability[] = [
   {
-    name: "Agentic AI",
-    tagline: "Innovate with agentic AI",
-    icon: <Bot24Regular />,
+    name: "Migration & modernization",
+    tagline: "Transform with cloud migration",
+    icon: <CloudArrowUp24Regular />,
     description:
-      "Explore new possibilities with agentic AI. We help you harness advanced LLM models to create innovative solutions, from content generation to automated design and beyond. Multi-agent orchestration on Azure OpenAI with full observability, governance, and human-in-the-loop controls.",
-    tags: ["Azure OpenAI", "Multi-agent", "RAG", "Governance"],
+      "Migrate your workloads to the cloud with ease. We handle every step, from planning to execution, ensuring your systems are modernized and optimized for the cloud environment. End-to-end cloud migration with minimal downtime and risk.",
+    tags: ["Azure Migration", "Workload optimization", "Data modernization", "Zero-downtime"],
   },
   {
-    name: "Advanced analytics",
-    tagline: "Decisions backed by predictive models",
-    icon: <ChartMultiple24Regular />,
+    name: "Cloud security",
+    tagline: "Protect at every layer",
+    icon: <ShieldLock24Regular />,
     description:
-      "Move from descriptive dashboards to predictive and prescriptive insight. We design feature stores, forecasting models, and recommendation engines tuned to your data and operating reality.",
-    tags: ["Forecasting", "Recommendation", "Feature stores", "Azure ML"],
+      "Ensure robust cloud security with defense-in-depth strategies covering identity, network, data, and compliance. We help you implement security controls, manage access policies, and meet regulatory requirements across your cloud environment.",
+    tags: ["IAM", "Network security", "Data encryption", "Compliance"],
   },
   {
-    name: "Intelligent automation",
-    tagline: "Automate the busywork, not the judgment",
-    icon: <Sparkle24Regular />,
+    name: "Cloud native applications",
+    tagline: "Build apps for the cloud",
+    icon: <Cube24Regular />,
     description:
-      "Embed AI inside the workflows your teams already live in — Power Platform, Microsoft 365 Copilot, custom apps — so repetitive work disappears and people focus on decisions.",
-    tags: ["Copilot Studio", "Power Automate", "M365 Copilot", "Custom agents"],
+      "Design and deploy cloud-native applications using containerization, microservices, and serverless architectures. We help you build scalable, resilient applications that leverage the full potential of cloud infrastructure.",
+    tags: ["Kubernetes", "Docker", "Microservices", "Serverless"],
   },
   {
-    name: "MLOps",
-    tagline: "Production-grade model lifecycle",
-    icon: <BranchFork24Regular />,
+    name: "Infrastructure services",
+    tagline: "Manage cloud operations",
+    icon: <Server24Regular />,
     description:
-      "End-to-end MLOps so models stay accurate, compliant, and cost-controlled in production — CI/CD, drift detection, evaluation harnesses, and responsible AI guardrails.",
-    tags: ["Azure ML", "MLflow", "Eval harness", "Responsible AI"],
+      "Optimize your cloud infrastructure with cost management, performance tuning, and operational best practices. We design and manage cloud platforms that scale with your business while controlling costs and ensuring high availability.",
+    tags: ["IaC", "Cost optimization", "Performance", "HA/DR"],
   },
 ];
 
-export function ServiceCapabilities({
-  sectionId = "ai-capabilities",
-  title = "Our agentic AI and machine learning capabilities",
-  subhead = "Four capability pillars that turn raw data and LLM power into governed, production-grade business automation.",
-  capabilities = defaultCapabilities,
-  footerLabel = "See agentic AI case studies",
-  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
-  mailSubjectSuffix = "Agentic AI & ML",
-}: ServiceCapabilitiesProps = {}) {
+export function ServiceCloudCapabilities() {
   const s = useStyles();
   const [active, setActive] = useState(0);
   const sel = capabilities[active];
   return (
-    <section className={s.section} id={sectionId}>
+    <section className={s.section} id="cloud-capabilities">
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
-          <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          <h2 className={s.title}>Our cloud optimization capabilities</h2>
+          <p className={s.sub}>
+            Four capability pillars that deliver scalable, secure, and cost-effective cloud
+            solutions.
+          </p>
         </div>
         <div className={s.panel}>
           <div>
@@ -231,7 +208,7 @@ export function ServiceCapabilities({
               className={s.knowMore}
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - " + mailSubjectSuffix
+                sel.name + " - Cloud Optimization"
               )}`}
             >
               Know more
@@ -257,11 +234,11 @@ export function ServiceCapabilities({
         </div>
         <a
           className={s.footerLink}
-          href={footerHref}
+          href="/case-studies.html?filter=cloud-optimization"
           target="_blank"
           rel="noreferrer"
         >
-          {footerLabel} <ArrowRight16Regular />
+          See cloud case studies <ArrowRight16Regular />
         </a>
       </div>
     </section>

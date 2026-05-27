@@ -1,14 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 
-export interface TestimonialItem {
-  body: string;
-  cite: string;
-}
-
-export interface ServiceTestimonialsProps {
-  quotes?: TestimonialItem[];
-}
-
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -70,20 +61,18 @@ const useStyles = makeStyles({
   },
 });
 
-const defaultQuotes = [
+const quotes = [
   {
-    body: "MAQ Software helped us productionize an Azure OpenAI agent that now resolves the top 40% of support tickets without human handoff — with full audit trail and policy guardrails.",
-    cite: "Director, Customer Operations — Enterprise SaaS",
+    body: "MAQ Software managed our complete Azure migration project, reducing infrastructure costs by 35% while improving performance. The team's expertise in cloud optimization and change management was invaluable.",
+    cite: "CTO — Global financial services firm",
   },
   {
-    body: "From discovery to a deployed MLOps pipeline on Azure in eight weeks. Our forecast accuracy improved by double digits and the team is finally shipping models on a predictable cadence.",
-    cite: "Head of Data Science — Global manufacturer",
+    body: "Their cloud security review identified critical compliance gaps and delivered a zero-trust architecture implementation. We now meet regulatory requirements with confidence and visibility across all cloud resources.",
+    cite: "Chief Information Security Officer — Enterprise healthcare provider",
   },
 ];
 
-export function ServiceTestimonials({
-  quotes = defaultQuotes,
-}: ServiceTestimonialsProps = {}) {
+export function ServiceCloudTestimonials() {
   const s = useStyles();
   return (
     <section className={s.section}>

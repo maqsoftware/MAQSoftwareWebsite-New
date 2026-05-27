@@ -1,18 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
-export interface InsightItem {
-  title: string;
-  teaser: string;
-  href: string;
-}
-
-export interface ServiceInsightsProps {
-  title?: string;
-  subhead?: string;
-  insights?: InsightItem[];
-}
-
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -80,38 +68,36 @@ const useStyles = makeStyles({
   },
 });
 
-const defaultInsights = [
+const insights = [
   {
-    title: "Empowering businesses with AI: Frameworks that deliver results",
+    title: "Optimize your DevOps strategies with our 9 essential best practices",
+    teaser: "Essential DevOps practices for efficient cloud deployment and operations.",
+    href: "/insights/azure-dev-ops-best-practices-guide.html",
+  },
+  {
+    title: "Strengthen your cloud security and protect your assets with 19 security best practices",
+    teaser: "Comprehensive security best practices for protecting your cloud infrastructure and data.",
+    href: "/insights/azure-security-best-practices.html",
+  },
+  {
+    title: "This guide covers the 7 best practices you need to secure Dataverse",
     teaser:
-      "A field-tested framework for shipping AI initiatives that produce measurable business outcomes.",
-    href: "https://blog.maqsoftware.com/2024/08/empowering-businesses-with-ai.html",
-  },
-  {
-    title: "Building a secure Copilot: Addressing key security challenges",
-    teaser: "Patterns, guardrails, and identity controls for shipping a secure enterprise Copilot.",
-    href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
-  },
-  {
-    title: "Designing UI for Copilot: Key principles and practices",
-    teaser: "UI principles that make Copilot interactions feel trustworthy, fast, and on-brand.",
-    href: "https://blog.maqsoftware.com/2024/08/designing-ui-for-copilot-key-principles.html",
+      "Essential security controls for protecting data in Microsoft Dataverse cloud environment.",
+    href: "/insights/dataverse-security-best-practices.html",
   },
 ];
 
-export function ServiceInsights({
-  title = "Our agentic AI and machine learning insights",
-  subhead = "See our research that goes into optimizing our agentic AI and machine learning service.",
-  insights = defaultInsights,
-}: ServiceInsightsProps = {}) {
+export function ServiceCloudInsights() {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Insights</span>
-          <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          <h2 className={s.title}>Our cloud optimization insights</h2>
+          <p className={s.sub}>
+            See our research that goes into refining our cloud optimization service.
+          </p>
         </div>
         <div className={s.grid}>
           {insights.map((i) => (

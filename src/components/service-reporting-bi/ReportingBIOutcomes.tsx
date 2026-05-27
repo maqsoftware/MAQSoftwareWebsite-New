@@ -1,22 +1,10 @@
 import type { ReactNode } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import {
-  Lightbulb24Regular,
-  Settings24Regular,
-  Rocket24Regular,
+  Eye24Regular,
+  Timer24Regular,
+  People24Regular,
 } from "@fluentui/react-icons";
-
-export interface OutcomeItem {
-  icon: ReactNode;
-  title: string;
-  desc: string;
-}
-
-export interface ServiceOutcomesProps {
-  title?: string;
-  subhead?: string;
-  outcomes?: OutcomeItem[];
-}
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -82,37 +70,35 @@ interface Outcome {
   desc: string;
 }
 
-const defaultOutcomes: Outcome[] = [
+const outcomes: Outcome[] = [
   {
-    icon: <Lightbulb24Regular />,
-    title: "Enhanced decision-making",
-    desc: "Use AI-driven insights to make smarter, data-backed decisions that propel your business forward.",
+    icon: <Eye24Regular />,
+    title: "Data clarity",
+    desc: "Achieve clear, actionable insights with powerful visualizations that simplify complex data for better understanding.",
   },
   {
-    icon: <Settings24Regular />,
-    title: "Automated efficiency",
-    desc: "Automate repetitive tasks with intelligent systems, freeing up resources for more strategic initiatives.",
+    icon: <Timer24Regular />,
+    title: "Faster decision-making",
+    desc: "Enable quicker decision-making by providing stakeholders with real-time, easy-to-understand data visualizations.",
   },
   {
-    icon: <Rocket24Regular />,
-    title: "Innovation acceleration",
-    desc: "Accelerate your innovation cycles by integrating cutting-edge AI and ML technologies into your business processes.",
+    icon: <People24Regular />,
+    title: "Improved data accessibility",
+    desc: "Ensure that critical insights are easily accessible to everyone in your organization, fostering a data-driven culture.",
   },
 ];
 
-export function ServiceOutcomes({
-  title = "Your business outcomes",
-  subhead = "What organizations gain when agentic AI is delivered with engineering discipline.",
-  outcomes = defaultOutcomes,
-}: ServiceOutcomesProps = {}) {
+export function ReportingBIOutcomes() {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Business outcomes</span>
-          <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          <h2 className={s.title}>Your business outcomes</h2>
+          <p className={s.sub}>
+            What organizations gain when reporting is delivered with engineering discipline.
+          </p>
         </div>
         <div className={s.grid}>
           {outcomes.map((o) => (

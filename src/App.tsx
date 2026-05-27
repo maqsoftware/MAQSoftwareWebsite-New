@@ -17,7 +17,10 @@ import { ProductLoadFAST } from "./pages/ProductLoadFAST";
 import { ProductMigrateFAST } from "./pages/ProductMigrateFAST";
 import { ComponentLab } from "./pages/ComponentLab";
 import { ServiceAgenticAI } from "./pages/ServiceAgenticAI";
+import { ServiceCloud } from "./pages/ServiceCloud";
+import { ServiceReportingBI } from "./pages/ServiceReportingBI";
 import { ServiceBusinessApps } from "./pages/ServiceBusinessApps";
+import { ServiceSecurityCompliance } from "./pages/ServiceSecurityCompliance";
 import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 import { IndustryTechnology } from "./pages/IndustryTechnology";
 
@@ -40,7 +43,10 @@ export function App() {
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
         <Route path="/industries/technology" element={<IndustryTechnology />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
+        <Route path="/services/cloud" element={<ServiceCloud />} />
+        <Route path="/services/reporting-bi" element={<ServiceReportingBI />} />
         <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
+        <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
         <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
         <Route path="/products" element={<ProductsHome />} />
         <Route

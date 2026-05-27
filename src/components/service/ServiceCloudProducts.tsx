@@ -2,21 +2,6 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
-export interface ProductItem {
-  name: string;
-  initials: string;
-  tagline: string;
-  desc: string;
-  href: string;
-  external?: boolean;
-}
-
-export interface ServiceProductsProps {
-  title?: string;
-  subhead?: string;
-  products?: ProductItem[];
-}
-
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -118,51 +103,48 @@ interface Product {
   external?: boolean;
 }
 
-const defaultProducts: Product[] = [
-  {
-    name: "AI-DataLens",
-    initials: "AI",
-    tagline: "Conversational analytics",
-    desc: "Talk to your Power BI estate in natural language with row-level security preserved. Citation-backed answers in seconds.",
-    href: "/products/ai-datalens",
-  },
+const products: Product[] = [
   {
     name: "MigrateFAST",
     initials: "MF",
-    tagline: "AI-assisted migration",
+    tagline: "AI-assisted cloud migration",
     desc: "AI-powered migration of legacy DW / ETL / BI to Azure and Microsoft Fabric — up to 70% faster delivery.",
     href: "/products/migratefast",
   },
   {
-    name: "Text Analytics Engine",
-    initials: "TA",
-    tagline: "Document intelligence",
-    desc: "Azure Marketplace text analytics application: classification, summarization, entity extraction and topic modeling at scale.",
-    href: "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.text_analytics_application_dev?tab=Overview",
-    external: true,
+    name: "LoadFAST",
+    initials: "LF",
+    tagline: "High-performance data loading",
+    desc: "Accelerate data ingestion into cloud data warehouses with optimized ETL performance.",
+    href: "/products/loadfast",
+  },
+  {
+    name: "EmbedFAST",
+    initials: "EF",
+    tagline: "Embedded analytics at scale",
+    desc: "Deploy secure, multi-tenant analytics in your cloud applications with role-based security.",
+    href: "/products/embedfast",
   },
 ];
 
-export function ServiceProducts({
-  title = "Agentic AI & machine learning products",
-  subhead = "Solutions designed to improve and streamline your operations.",
-  products = defaultProducts,
-}: ServiceProductsProps = {}) {
+export function ServiceCloudProducts() {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
-          <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          <h2 className={s.title}>Cloud optimization products</h2>
+          <p className={s.sub}>Solutions designed to accelerate and streamline your cloud journey.</p>
         </div>
         <div className={s.grid}>
           {products.map((p) => {
             const inner = (
               <>
                 <div className={s.logoRow}>
-                  <div className={s.logo} aria-hidden="true">{p.initials}</div>
+                  <div className={s.logo} aria-hidden="true">
+                    {p.initials}
+                  </div>
                   <div className={s.name}>{p.name}</div>
                 </div>
                 <span className={s.tagline}>{p.tagline}</span>

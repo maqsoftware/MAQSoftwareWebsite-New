@@ -2,30 +2,12 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import {
-  Bot24Regular,
   ChartMultiple24Regular,
-  Sparkle24Regular,
-  BranchFork24Regular,
+  ArrowSwap24Regular,
+  Window24Regular,
+  Gauge24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
-
-export interface Capability {
-  name: string;
-  tagline: string;
-  description: string;
-  icon: ReactNode;
-  tags: string[];
-}
-
-export interface ServiceCapabilitiesProps {
-  sectionId?: string;
-  title?: string;
-  subhead?: string;
-  capabilities?: Capability[];
-  footerLabel?: string;
-  footerHref?: string;
-  mailSubjectSuffix?: string;
-}
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -151,7 +133,7 @@ const useStyles = makeStyles({
   },
 });
 
-interface CapabilityInternal {
+interface Capability {
   name: string;
   tagline: string;
   description: string;
@@ -159,60 +141,55 @@ interface CapabilityInternal {
   tags: string[];
 }
 
-const defaultCapabilities: CapabilityInternal[] = [
+const capabilities: Capability[] = [
   {
-    name: "Agentic AI",
-    tagline: "Innovate with agentic AI",
-    icon: <Bot24Regular />,
-    description:
-      "Explore new possibilities with agentic AI. We help you harness advanced LLM models to create innovative solutions, from content generation to automated design and beyond. Multi-agent orchestration on Azure OpenAI with full observability, governance, and human-in-the-loop controls.",
-    tags: ["Azure OpenAI", "Multi-agent", "RAG", "Governance"],
-  },
-  {
-    name: "Advanced analytics",
-    tagline: "Decisions backed by predictive models",
+    name: "Data visualization",
+    tagline: "Bring data to life",
     icon: <ChartMultiple24Regular />,
     description:
-      "Move from descriptive dashboards to predictive and prescriptive insight. We design feature stores, forecasting models, and recommendation engines tuned to your data and operating reality.",
-    tags: ["Forecasting", "Recommendation", "Feature stores", "Azure ML"],
+      "Transform raw data into compelling visuals. Our data visualization services help you communicate complex insights clearly, making data accessible and actionable for all stakeholders — across Power BI, custom visuals, and Fabric semantic models.",
+    tags: ["Power BI", "Custom visuals", "Fabric semantic models", "Storytelling"],
   },
   {
-    name: "Intelligent automation",
-    tagline: "Automate the busywork, not the judgment",
-    icon: <Sparkle24Regular />,
+    name: "Migration to Power BI",
+    tagline: "Modernize legacy reporting estates",
+    icon: <ArrowSwap24Regular />,
     description:
-      "Embed AI inside the workflows your teams already live in — Power Platform, Microsoft 365 Copilot, custom apps — so repetitive work disappears and people focus on decisions.",
-    tags: ["Copilot Studio", "Power Automate", "M365 Copilot", "Custom agents"],
+      "AI-assisted migration of legacy BI platforms — Tableau, Qlik, MicroStrategy, SSRS — to Power BI and Microsoft Fabric. We rebuild semantic models, RLS, and pixel-perfect layouts with our MigrateFAST accelerator.",
+    tags: ["MigrateFAST", "Tableau", "Qlik", "MicroStrategy", "Fabric"],
   },
   {
-    name: "MLOps",
-    tagline: "Production-grade model lifecycle",
-    icon: <BranchFork24Regular />,
+    name: "Power BI embedding",
+    tagline: "Reporting inside the apps your users live in",
+    icon: <Window24Regular />,
     description:
-      "End-to-end MLOps so models stay accurate, compliant, and cost-controlled in production — CI/CD, drift detection, evaluation harnesses, and responsible AI guardrails.",
-    tags: ["Azure ML", "MLflow", "Eval harness", "Responsible AI"],
+      "Embed governed Power BI reports inside your SaaS product, customer portal, or internal app with row-level security, tenant isolation, and a one-click deployment path via EmbedFAST.",
+    tags: ["EmbedFAST", "Power BI Embedded", "Multi-tenant", "RLS"],
+  },
+  {
+    name: "Performance optimization",
+    tagline: "Faster refreshes, lower capacity cost",
+    icon: <Gauge24Regular />,
+    description:
+      "Diagnose and fix slow reports, refresh failures, and capacity overruns. Our LoadFAST and CertyFAST tools surface DAX, model, and capacity bottlenecks with prioritized remediations.",
+    tags: ["LoadFAST", "CertyFAST", "DAX tuning", "Capacity optimization"],
   },
 ];
 
-export function ServiceCapabilities({
-  sectionId = "ai-capabilities",
-  title = "Our agentic AI and machine learning capabilities",
-  subhead = "Four capability pillars that turn raw data and LLM power into governed, production-grade business automation.",
-  capabilities = defaultCapabilities,
-  footerLabel = "See agentic AI case studies",
-  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
-  mailSubjectSuffix = "Agentic AI & ML",
-}: ServiceCapabilitiesProps = {}) {
+export function ReportingBICapabilities() {
   const s = useStyles();
   const [active, setActive] = useState(0);
   const sel = capabilities[active];
   return (
-    <section className={s.section} id={sectionId}>
+    <section className={s.section} id="bi-capabilities">
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
-          <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          <h2 className={s.title}>Our reporting &amp; business intelligence capabilities</h2>
+          <p className={s.sub}>
+            Four capability pillars that turn raw data into governed, high-performance Power BI and
+            Microsoft Fabric reporting.
+          </p>
         </div>
         <div className={s.panel}>
           <div>
@@ -231,7 +208,7 @@ export function ServiceCapabilities({
               className={s.knowMore}
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - " + mailSubjectSuffix
+                sel.name + " - Reporting & BI"
               )}`}
             >
               Know more
@@ -257,11 +234,11 @@ export function ServiceCapabilities({
         </div>
         <a
           className={s.footerLink}
-          href={footerHref}
+          href="https://maqsoftware.com/case-studies.html?filter=reporting-and-visualization"
           target="_blank"
           rel="noreferrer"
         >
-          {footerLabel} <ArrowRight16Regular />
+          See reporting &amp; visualization case studies <ArrowRight16Regular />
         </a>
       </div>
     </section>

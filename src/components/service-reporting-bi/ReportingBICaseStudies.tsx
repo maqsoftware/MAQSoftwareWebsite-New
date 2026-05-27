@@ -1,20 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
-export interface CaseStudyItem {
-  tag: string;
-  title: string;
-  teaser: string;
-  href: string;
-}
-
-export interface ServiceCaseStudiesProps {
-  title?: string;
-  studies?: CaseStudyItem[];
-  footerLabel?: string;
-  footerHref?: string;
-}
-
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -104,50 +90,45 @@ interface Study {
   href: string;
 }
 
-const defaultStudies: Study[] = [
+const studies: Study[] = [
   {
-    tag: "Developer productivity",
-    title: "Modernizing the software development lifecycle with GitHub Copilot",
+    tag: "Fabric data agent",
+    title: "Delivering accurate business intelligence insights with a Fabric data agent",
     teaser:
-      "Embedding GitHub Copilot across the SDLC with adoption playbooks, governance, and outcome telemetry.",
-    href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
+      "A Microsoft Fabric data agent that answers business questions with citation-backed accuracy, replacing brittle hand-built dashboards.",
+    href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
   },
   {
-    tag: "Customer service",
-    title: "Scaling AI for every customer and every developer with MAQ Software",
+    tag: "Retail",
+    title: "Modernizing retail business intelligence with Microsoft Fabric and Power BI",
     teaser:
-      "A reference architecture and delivery model for scaling agentic AI to every customer and every developer in the enterprise.",
-    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
+      "Re-platforming a global retailer's reporting estate onto Microsoft Fabric and Power BI with a unified semantic model.",
+    href: "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
   },
   {
-    tag: "Cross-industry",
-    title: "Reshaping industries with agentic AI solutions",
+    tag: "Migration",
+    title: "Transitioning legacy reports from Qlik to Power BI",
     teaser:
-      "How agentic AI is reshaping retail, financial services, healthcare and manufacturing workflows in production.",
-    href: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
+      "AI-assisted Qlik to Power BI migration rebuilding semantic models, RLS, and pixel-perfect layouts on Fabric.",
+    href: "https://blog.maqsoftware.com/2025/06/transitioning-legacy-reports-from-qlik.html",
   },
   {
-    tag: "Self-service BI",
-    title: "Empowering self-service using Custom Copilot agent with Power BI Embedded",
+    tag: "Real-time",
+    title: "Real-time reporting for an organic supermarket chain",
     teaser:
-      "A custom Copilot agent over Power BI Embedded that lets users ask data questions in plain English.",
-    href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html",
+      "Real-time Power BI reporting on store, inventory, and freshness KPIs for an organic supermarket chain.",
+    href: "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
   },
 ];
 
-export function ServiceCaseStudies({
-  title = "How clients are putting agentic AI to work",
-  studies = defaultStudies,
-  footerLabel = "See all AI case studies",
-  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
-}: ServiceCaseStudiesProps = {}) {
+export function ReportingBICaseStudies() {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Related case studies</span>
-          <h2 className={s.title}>{title}</h2>
+          <h2 className={s.title}>How clients are modernizing reporting &amp; BI</h2>
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
@@ -163,11 +144,11 @@ export function ServiceCaseStudies({
         </div>
         <a
           className={s.footerLink}
-          href={footerHref}
+          href="https://maqsoftware.com/case-studies.html?filter=reporting-and-visualization"
           target="_blank"
           rel="noreferrer"
         >
-          {footerLabel} <ArrowRight16Regular />
+          See all reporting &amp; BI case studies <ArrowRight16Regular />
         </a>
       </div>
     </section>
