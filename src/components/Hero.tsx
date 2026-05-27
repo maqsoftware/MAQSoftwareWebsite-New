@@ -14,14 +14,14 @@ import {
 const useStyles = makeStyles({
   wrap: {
     backgroundColor: "var(--maq-off-white)",
-    padding: "48px 32px",
+    padding: "32px 32px",
   },
   grid: {
     maxWidth: "1240px",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.1fr 1fr",
-    gap: "56px",
+    gap: "32px",
     alignItems: "center",
     "@media (max-width: 960px)": {
       gridTemplateColumns: "1fr",
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     fontWeight: 600,
     padding: "6px 12px",
     borderRadius: "20px",
-    marginBottom: "20px",
+    marginBottom: "12px",
   },
   h1: {
     fontSize: "52px",
@@ -45,7 +45,7 @@ const useStyles = makeStyles({
     fontWeight: 700,
     color: "var(--maq-navy)",
     letterSpacing: "-0.02em",
-    margin: "0 0 20px",
+    margin: "0 0 12px",
   },
   em: {
     color: "var(--maq-blue)",
@@ -56,10 +56,10 @@ const useStyles = makeStyles({
     fontSize: "17px",
     lineHeight: 1.6,
     color: "var(--maq-text-muted)",
-    marginBottom: "32px",
+    marginBottom: "20px",
     maxWidth: "580px",
   },
-  btns: { display: "flex", gap: "12px", marginBottom: "40px", flexWrap: "wrap" },
+  btns: { display: "flex", gap: "12px", marginBottom: "0", flexWrap: "wrap" },
   stats: {
     display: "flex",
     gap: "48px",

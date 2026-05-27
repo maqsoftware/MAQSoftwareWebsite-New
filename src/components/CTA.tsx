@@ -5,14 +5,14 @@ import {
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "#fff" },
+  section: { padding: "32px 32px", backgroundColor: "#fff" },
   inner: {
     maxWidth: "1100px",
     margin: "0 auto",
     background: "var(--maq-surface-cream)",
     border: "1px solid var(--maq-red-pale)",
     borderRadius: "20px",
-    padding: "56px 48px",
+    padding: "32px 32px",
     color: "var(--maq-ink)",
     textAlign: "center",
     boxShadow: "0 10px 30px rgba(186, 20, 26, 0.06)",
@@ -23,22 +23,22 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     letterSpacing: "0.08em",
     textTransform: "uppercase",
-    marginBottom: "16px",
+    marginBottom: "8px",
     display: "block",
   },
   title: {
-    fontSize: "36px",
+    fontSize: "32px",
     fontWeight: 700,
     color: "var(--maq-black)",
-    margin: "0 0 16px",
+    margin: "0 0 8px",
     letterSpacing: "-0.02em",
   },
   sub: {
     fontSize: "16px",
     color: "var(--maq-gray-700)",
-    marginBottom: "32px",
+    marginBottom: "20px",
     maxWidth: "640px",
-    margin: "0 auto 32px",
+    margin: "0 auto 20px",
     display: "block",
   },
   btns: {
@@ -48,7 +48,7 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
   },
   email: {
-    marginTop: "20px",
+    marginTop: "12px",
     fontSize: "13px",
     color: "var(--maq-gray-700)",
   },
