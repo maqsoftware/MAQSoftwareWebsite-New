@@ -105,13 +105,6 @@ interface Product {
 
 const products: Product[] = [
   {
-    initials: "AI",
-    name: "AI-DataLens",
-    tagline: "Conversational analytics",
-    desc: "Talk to your Power BI data in natural language. Built on Azure OpenAI with full row-level security and audit logs preserved.",
-    tags: ["GenAI", "Power BI"],
-  },
-  {
     initials: "FA",
     name: "Fabric Admin Agent",
     tagline: "Fabric governance",
@@ -122,29 +115,36 @@ const products: Product[] = [
     initials: "MF",
     name: "MigrateFAST",
     tagline: "Migration accelerator",
-    desc: "AI-assisted migration of legacy DW, ETL, and BI workloads (Teradata, Informatica, Tableau, Cognos) to Azure & Fabric — up to 70% faster.",
+    desc: "AI-assisted migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
     tags: ["Azure", "Fabric", "AppSource"],
   },
   {
     initials: "EF",
     name: "EmbedFAST",
     tagline: "Power BI embedding",
-    desc: "Drop-in framework for embedding Power BI into SaaS apps with multi-tenant security, theming, and usage telemetry out of the box.",
+    desc: "Seamlessly embed Power BI into your applications with role-based access, unlimited tenant/workspace onboarding, and tailored features — without heavy integration or licensing overhead.",
     tags: ["Power BI", "SaaS"],
   },
   {
-    initials: "CF",
-    name: "CertyFAST",
-    tagline: "Report certification",
-    desc: "Automates report certification, lineage, and quality checks so analysts ship trusted Power BI content faster.",
-    tags: ["Governance", "Power BI"],
+    initials: "AI",
+    name: "AI-DataLens",
+    tagline: "Conversational analytics",
+    desc: "Interact with enterprise datasets in natural language. No SQL or DAX — ask questions and get instant answers, with row-level security and audit preserved.",
+    tags: ["GenAI", "Power BI"],
   },
   {
     initials: "LF",
     name: "LoadFAST",
-    tagline: "Data ingestion",
-    desc: "Config-driven ingestion framework for Medallion architectures — onboard new sources in days, not sprints.",
-    tags: ["Data engineering"],
+    tagline: "Power BI load testing",
+    desc: "Web-based load-testing for Power BI on Microsoft Fabric — simulate real user actions to right-size capacity, prevent slowdowns, and cut over-provisioning.",
+    tags: ["Power BI", "Performance"],
+  },
+  {
+    initials: "CF",
+    name: "CertyFAST",
+    tagline: "Power BI quality control",
+    desc: "Automated Power BI quality control — error detection, DAX measure formatting, lineage, and documentation so analysts ship best-practice, certified reports faster.",
+    tags: ["Governance", "Power BI"],
   },
 ];
 

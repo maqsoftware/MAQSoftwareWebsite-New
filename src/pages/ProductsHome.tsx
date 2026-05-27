@@ -176,9 +176,9 @@ const useStyles = makeStyles({
 
 const aggregateStats = [
   { value: "120+", label: "Enterprise migrations delivered" },
-  { value: "200+", label: "Sources ingested in production" },
   { value: "500+", label: "Reports certified per month" },
   { value: "40+", label: "SaaS products embedded" },
+  { value: "30+", label: "Enterprise AI-DataLens tenants" },
 ];
 
 export function ProductsHome() {

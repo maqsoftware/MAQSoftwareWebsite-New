@@ -176,36 +176,6 @@ function illustration(motif: "chat" | "gauge" | "swap" | "embed" | "shield" | "i
 
 export const products: Product[] = [
   {
-    slug: "ai-datalens",
-    initials: "AI",
-    name: "AI-DataLens",
-    tagline: "Conversational analytics",
-    shortDesc:
-      "Talk to your Power BI data in natural language. Built on Azure OpenAI with full row-level security and audit logs preserved.",
-    longDesc:
-      "AI-DataLens turns Power BI semantic models into a chat interface. Business users ask questions in plain English; the agent returns governed, citation-backed answers — respecting every row-level security rule, workspace permission, and audit policy you already have in place.",
-    heroIcon: <Bot24Regular />,
-    image: illustration("chat"),
-    tags: ["GenAI", "Power BI", "Azure OpenAI"],
-    features: [
-      { title: "Natural language over Power BI", desc: "Ask questions across any certified semantic model — no DAX, no report-hopping." },
-      { title: "Row-level security preserved", desc: "Every answer respects RLS, OLS, and workspace permissions out of the box." },
-      { title: "Citations and lineage", desc: "Each response links back to the measure, table, and report it came from." },
-      { title: "Audit-ready", desc: "Full prompt + response logging into your Microsoft Purview tenant." },
-    ],
-    useCases: [
-      { industry: "Retail", scenario: "Merchants ask basket and shrink questions during weekly reviews." },
-      { industry: "Financial services", scenario: "Analysts query portfolio exposure without writing DAX." },
-      { industry: "Healthcare", scenario: "Operations leaders ask census and staffing questions from their phone." },
-    ],
-    platforms: ["Microsoft Fabric", "Power BI", "Azure OpenAI"],
-    impact: [
-      { value: "85%", label: "Faster time to answer vs. report search" },
-      { value: "30+", label: "Enterprise tenants deployed" },
-      { value: "100%", label: "RLS & audit policies preserved" },
-    ],
-  },
-  {
     slug: "fabric-admin-agent",
     initials: "FA",
     name: "Fabric Admin Agent",
@@ -241,7 +211,7 @@ export const products: Product[] = [
     name: "MigrateFAST",
     tagline: "Migration accelerator",
     shortDesc:
-      "AI-assisted migration of legacy BI and ETL estates — Tableau, SAP BusinessObjects, Crystal Reports, Qlik, Alteryx, Informatica — to Power BI and Microsoft Fabric, up to 70% faster.",
+      "AI-assisted migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
     longDesc:
       "MigrateFAST is an AI-assisted migration factory for enterprises moving off legacy BI and data-prep stacks. It parses your existing estate — Tableau workbooks, SAP BusinessObjects universes and Web Intelligence reports, Crystal Reports, Qlik apps, Alteryx workflows, and Informatica mappings — and generates equivalent Power BI semantic models, Microsoft Fabric pipelines, and Fabric Warehouse objects with traceable lineage and side-by-side validation.",
     heroIcon: <ArrowSwap24Regular />,
@@ -272,7 +242,7 @@ export const products: Product[] = [
     name: "EmbedFAST",
     tagline: "Power BI embedding",
     shortDesc:
-      "Drop-in framework for embedding Power BI into SaaS apps with multi-tenant security, theming, and usage telemetry out of the box.",
+      "Seamlessly embed Power BI into your applications with role-based access, unlimited tenant/workspace onboarding, and tailored features — without heavy integration or licensing overhead.",
     longDesc:
       "EmbedFAST is a production-grade framework for embedding Power BI into SaaS products. It handles tenant isolation, token lifecycle, theming, and usage telemetry — so your engineering team focuses on product, not on plumbing.",
     heroIcon: <Code24Regular />,
@@ -296,12 +266,71 @@ export const products: Product[] = [
     ],
   },
   {
+    slug: "ai-datalens",
+    initials: "AI",
+    name: "AI-DataLens",
+    tagline: "Conversational analytics",
+    shortDesc:
+      "Interact with enterprise datasets in natural language. No SQL or DAX — ask questions and get instant answers, with row-level security and audit preserved.",
+    longDesc:
+      "AI-DataLens turns Power BI semantic models into a chat interface. Business users ask questions in plain English; the agent returns governed, citation-backed answers — respecting every row-level security rule, workspace permission, and audit policy you already have in place.",
+    heroIcon: <Bot24Regular />,
+    image: illustration("chat"),
+    tags: ["GenAI", "Power BI", "Azure OpenAI"],
+    features: [
+      { title: "Natural language over Power BI", desc: "Ask questions across any certified semantic model — no DAX, no report-hopping." },
+      { title: "Row-level security preserved", desc: "Every answer respects RLS, OLS, and workspace permissions out of the box." },
+      { title: "Citations and lineage", desc: "Each response links back to the measure, table, and report it came from." },
+      { title: "Audit-ready", desc: "Full prompt + response logging into your Microsoft Purview tenant." },
+    ],
+    useCases: [
+      { industry: "Retail", scenario: "Merchants ask basket and shrink questions during weekly reviews." },
+      { industry: "Financial services", scenario: "Analysts query portfolio exposure without writing DAX." },
+      { industry: "Healthcare", scenario: "Operations leaders ask census and staffing questions from their phone." },
+    ],
+    platforms: ["Microsoft Fabric", "Power BI", "Azure OpenAI"],
+    impact: [
+      { value: "85%", label: "Faster time to answer vs. report search" },
+      { value: "30+", label: "Enterprise tenants deployed" },
+      { value: "100%", label: "RLS & audit policies preserved" },
+    ],
+  },
+  {
+    slug: "loadfast",
+    initials: "LF",
+    name: "LoadFAST",
+    tagline: "Power BI load testing",
+    shortDesc:
+      "Web-based load-testing for Power BI on Microsoft Fabric — simulate real user actions to right-size capacity, prevent slowdowns, and cut over-provisioning.",
+    longDesc:
+      "LoadFAST is a web application that load-tests Power BI environments on Microsoft Fabric. Build collections of reports and pages, simulate concurrent users and real interactions (slicers, filters, RLS), and get capacity-sizing insights — so you avoid both throttling and over-provisioning.",
+    heroIcon: <CloudArrowUp24Regular />,
+    image: illustration("ingest"),
+    tags: ["Power BI", "Fabric", "Performance"],
+    features: [
+      { title: "Optimize capacity", desc: "Identify the ideal capacity setup across multiple reports — no under- or over-provisioning." },
+      { title: "Simulate real usage", desc: "Model user distribution, slicers, filters, and RLS to replicate real-world workloads." },
+      { title: "Track user interactions", desc: "See how real-time actions like slicing and filtering impact report load time." },
+      { title: "Automated accuracy", desc: "Precise capacity insights from automated runs — eliminate human error." },
+    ],
+    useCases: [
+      { industry: "Enterprise BI", scenario: "Right-size F-SKU capacity before a major report rollout." },
+      { industry: "Platform teams", scenario: "Prevent Friday-afternoon capacity throttling for high-traffic dashboards." },
+    ],
+    platforms: ["Power BI", "Microsoft Fabric", "Azure"],
+    impact: [
+      { value: "50+", label: "Concurrent users on the Free plan" },
+      { value: "F-SKU", label: "Right-sized Fabric capacity with confidence" },
+      { value: "Real", label: "User actions simulated — not synthetic load" },
+    ],
+  },
+  {
     slug: "certyfast",
     initials: "CF",
     name: "CertyFAST",
-    tagline: "Report certification",
+    tagline: "Power BI quality control",
     shortDesc:
-      "Automates report certification, lineage, and quality checks so analysts ship trusted Power BI content faster.",
+      "Automated Power BI quality control — error detection, DAX measure formatting, lineage, and documentation so analysts ship best-practice, certified reports faster.",
     longDesc:
       "CertyFAST runs your Power BI certification gate as code. Every promoted report passes through automated lineage, performance, accessibility, and data-quality checks — so your certified badge actually means something.",
     heroIcon: <ShieldCheckmark24Regular />,
@@ -322,35 +351,6 @@ export const products: Product[] = [
       { value: "3×", label: "Faster certification turnaround" },
       { value: "500+", label: "Reports certified per month" },
       { value: "0", label: "Manual review bottlenecks" },
-    ],
-  },
-  {
-    slug: "loadfast",
-    initials: "LF",
-    name: "LoadFAST",
-    tagline: "Data ingestion",
-    shortDesc:
-      "Config-driven ingestion framework for Medallion architectures — onboard new sources in days, not sprints.",
-    longDesc:
-      "LoadFAST is a metadata-driven ingestion framework for Microsoft Fabric and Azure data platforms. Declare your source once in YAML and LoadFAST generates Bronze, Silver, and Gold layers with retries, schema drift handling, and observability built in.",
-    heroIcon: <CloudArrowUp24Regular />,
-    image: illustration("ingest"),
-    tags: ["Data engineering", "Fabric", "Medallion"],
-    features: [
-      { title: "Config-driven", desc: "Onboard sources in YAML — no per-source notebook copy-paste." },
-      { title: "Medallion-native", desc: "Bronze / Silver / Gold conventions baked in." },
-      { title: "Schema drift handling", desc: "Detect, log, and route new columns without breaking downstream loads." },
-      { title: "Observability included", desc: "Run logs, lineage, and SLA dashboards on day one." },
-    ],
-    useCases: [
-      { industry: "Data platform teams", scenario: "Standardize ingestion across 100+ sources." },
-      { industry: "Lakehouse migrations", scenario: "Replace bespoke ADF pipelines with declarative configs." },
-    ],
-    platforms: ["Microsoft Fabric", "Azure Data Factory", "Databricks"],
-    impact: [
-      { value: "5 days", label: "Average source onboarding time" },
-      { value: "200+", label: "Sources ingested in production" },
-      { value: "80%", label: "Less hand-written pipeline code" },
     ],
   },
 ];

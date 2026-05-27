@@ -107,12 +107,12 @@ assets, CSP-friendly, cache-trivial) while still rendering as a real
 
 | Product | Motif | Visual story |
 |---|---|---|
-| `ai-datalens` | `chat` | Q/A bubbles ending in a red "Ask" send button |
 | `fabric-admin-agent` | `gauge` | 98% health donut + utilization bars |
 | `migratefast` | `swap` | LEGACY card → red exchange icon → FABRIC card |
 | `embedfast` | `embed` | Tabbed dashboard with bar chart + donut |
+| `ai-datalens` | `chat` | Q/A bubbles ending in a red "Ask" send button |
+| `loadfast` | `ingest` | Capacity gauge + concurrent-user load story *(note: SVG still uses the medallion-ingest motif — visual refresh tracked as design debt)* |
 | `certyfast` | `shield` | Shield + checkmark + CERTIFIED stamp panel |
-| `loadfast` | `ingest` | 3 sources → LoadFAST → Bronze/Silver/Gold medallion |
 
 ### 3c. Impact authoring rules
 
@@ -136,7 +136,6 @@ is one *headline metric* + one *outcome label*.
 
 | Slug | Name | Motif | Headline impact (3 of) |
 |---|---|---|---|
-| `ai-datalens` | AI-DataLens | chat | 85% faster answers · 30+ tenants · 100% RLS preserved |
 | `fabric-admin-agent` | Fabric Admin Agent | gauge | 60% fewer incidents · 24/7 coverage · 5 min MTTD |
 | `migratefast` | MigrateFAST | swap | 120+ migrations · 70% faster · $4M+ license retired |
 
@@ -144,8 +143,9 @@ is one *headline metric* + one *outcome label*.
 Tableau, SAP BusinessObjects (Web Intelligence + universes), Crystal Reports, Qlik (Sense + QlikView), Alteryx, Informatica PowerCenter. **Target:** Power BI + Microsoft Fabric (Fabric Data Factory pipelines, Fabric Warehouse, Power BI semantic models). Any new connector added to the toolchain must be reflected here AND in the `MigrateFAST` entry's `shortDesc`, `longDesc`, `features`, and `tags`.
 
 | `embedfast` | EmbedFAST | embed | 10× faster ship · 40+ SaaS products · 99.95% SLO |
+| `ai-datalens` | AI-DataLens | chat | 85% faster answers · 30+ tenants · 100% RLS preserved |
+| `loadfast` | LoadFAST | ingest | 50+ concurrent users (Free) · right-sized F-SKU capacity · real user actions simulated |
 | `certyfast` | CertyFAST | shield | 3× certification · 500+ reports/mo · 0 bottlenecks |
-| `loadfast` | LoadFAST | ingest | 5 days onboarding · 200+ sources · 80% less code |
 
 ---
 
@@ -163,9 +163,9 @@ Tableau, SAP BusinessObjects (Web Intelligence + universes), Crystal Reports, Ql
 - Card: cream bg, `1px solid var(--maq-red-pale)`, radius 12px, centered.
 - Static aggregate metrics (NOT per-product):
   - `120+ Enterprise migrations delivered`
-  - `200+ Sources ingested in production`
   - `500+ Reports certified per month`
   - `40+ SaaS products embedded`
+  - `30+ Enterprise AI-DataLens tenants`
 
 ### 5.3 Card grid
 - 3 columns ≥960px, 2 columns ≥640px, 1 column below.
