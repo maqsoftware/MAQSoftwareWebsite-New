@@ -570,15 +570,15 @@ export function ServiceWorkplaceTransformation() {
                 <div className={s.heroGrid}>
                     <div>
                         <span className={s.eyebrow}>
-                            Workplace Transformation &amp; Productivity
+                            Workplace transformation &amp; productivity
                         </span>
                         <h1 className={s.h1}>
-                            Empower every employee with a modern digital workplace
+                            Microsoft 365 and Copilot rollouts that drive real adoption
                         </h1>
                         <p className={s.heroSub}>
-                            Boost collaboration and productivity by deploying Microsoft 365,
-                            SharePoint, Teams, Viva, and Microsoft Copilot — backed by structured
-                            adoption programs that drive measurable usage.
+                            We deploy Microsoft 365, Teams, SharePoint, Viva, and Microsoft
+                            Copilot — paired with structured adoption programs and change
+                            management that turn rollouts into measurable usage, not shelfware.
                         </p>
                         <div className={s.btns}>
                             <Button

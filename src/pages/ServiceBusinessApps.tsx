@@ -541,12 +541,12 @@ export function ServiceBusinessApps() {
             <section className={s.hero}>
                 <div className={s.heroGrid}>
                     <div>
-                        <span className={s.eyebrow}>Business Apps &amp; Process Automation</span>
-                        <h1 className={s.h1}>Modernize your applications for future success</h1>
+                        <span className={s.eyebrow}>Business apps &amp; process automation</span>
+                        <h1 className={s.h1}>AI-native business apps on Microsoft Power Platform</h1>
                         <p className={s.heroSub}>
-                            Improve performance and user experience by updating legacy systems with our
-                            scalable, modern application solutions built on Microsoft Power Platform,
-                            Dynamics 365, and Azure.
+                            Low-code and pro-code apps built on Power Apps, Dynamics 365, and
+                            Microsoft 365 — paired with Copilot Studio agents and Power Automate
+                            flows that retire manual handoffs and embed AI into everyday operations.
                         </p>
                         <div className={s.btns}>
                             <Button

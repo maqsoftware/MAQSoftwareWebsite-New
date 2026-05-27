@@ -99,11 +99,12 @@ export function ServiceCloudHero() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Cloud Optimization</span>
-          <h1 className={s.h1}>Scale with confidence in the cloud</h1>
+          <span className={s.eyebrow}>Cloud infrastructure &amp; modernization</span>
+          <h1 className={s.h1}>Modernize from on-premises to cloud-native on Azure</h1>
           <p className={s.sub}>
-            Adopt flexible and cost-effective cloud solutions that grow with your business. Ensure
-            scalability, efficiency, and security.
+            MAQ Software replatforms on-premises workloads to Azure — from lift-and-shift
+            through full cloud-native re-architecture — with FinOps discipline that delivers
+            30–40% lower run cost on average across enterprise workloads.
           </p>
           <div className={s.btns}>
             <Button

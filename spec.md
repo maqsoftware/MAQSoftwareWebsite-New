@@ -286,9 +286,9 @@ This section is the **source of truth for all rendered text** on the home page. 
 | Name | Description |
 |---|---|
 | `AI solutions & agentic automation` | Production GenAI agents, copilots, and ML systems built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting. |
-| `Data engineering & analytics` | Medallion architectures, governed lakehouses, and high-throughput pipelines on Microsoft Fabric, Snowflake, and Databricks — built for scale and trust. |
+| `Data engineering & analytics` | Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses and real-time analytics that power Copilot, AI agents, and enterprise decision-making. |
 | `Reporting & business intelligence` | Microsoft Power BI Partner of the Year (2021). We build, modernize, and migrate BI stacks — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, MicroStrategy — into real-time Power BI on Microsoft Fabric. |
-| `Business apps & process automation` | Custom apps on .NET, React, and Power Platform — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations. |
+| `Business apps & process automation` | Low-code and pro-code apps on Microsoft Power Platform and Dynamics 365 — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations. |
 | `Cloud infrastructure & modernization` | Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture — delivering 30–40% lower run cost on average across enterprise workloads. |
 | `Security & compliance` | ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape. |
 | `Workplace transformation & productivity` | Microsoft 365, Teams, SharePoint, and Copilot rollouts that drive adoption — not just deployment. Change management included. |

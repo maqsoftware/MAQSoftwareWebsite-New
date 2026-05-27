@@ -105,9 +105,9 @@ const useStyles = makeStyles({
 });
 
 export function ServiceHero({
-  eyebrow = "Agentic AI & Machine Learning",
-  heading = "Automate and innovate with agentic AI & machine learning",
-  subhead = "Uncover hidden patterns and automate processes with our agentic AI and machine learning solutions, tailored for your business needs.",
+  eyebrow = "AI solutions & agentic automation",
+  heading = "Build production-ready AI agents on Microsoft Foundry",
+  subhead = "MAQ Software designs, builds, and operates GenAI agents and copilots on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting, with full governance, evaluation, and human-in-the-loop controls.",
   ctaMailSubject = "Agentic%20AI%20%26%20ML%20-%20MAQ%20Software",
   scrollTargetId = "ai-capabilities",
   visual,

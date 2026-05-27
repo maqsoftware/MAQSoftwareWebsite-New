@@ -232,9 +232,9 @@ export function ServiceSecurityCompliance() {
   return (
     <>
       <ServiceHero
-        eyebrow="Security & Compliance"
-        heading="Secure your business, protect your data"
-        subhead="Implement robust security measures with our expert solutions to safeguard your data, systems, and users from all threats."
+        eyebrow="Security & compliance"
+        heading="Zero Trust security and AI governance, end to end"
+        subhead="ISO 27001 / 27701 / 27018 certified delivery. We implement Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape and Microsoft security stack."
         ctaMailSubject="Security%20%26%20Compliance%20-%20MAQ%20Software"
         scrollTargetId="security-capabilities"
         visual={<SecurityVisual />}

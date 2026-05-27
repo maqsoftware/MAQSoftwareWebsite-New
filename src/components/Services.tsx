@@ -90,7 +90,7 @@ const services: Svc[] = [
   {
     icon: <DataPie24Regular />,
     name: "Data engineering & analytics",
-    desc: "Medallion architectures, governed lakehouses, and high-throughput pipelines on Microsoft Fabric, Snowflake, and Databricks — built for scale and trust.",
+    desc: "Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses and real-time analytics that power Copilot, AI agents, and enterprise decision-making.",
   },
   {
     icon: <ChartMultiple24Regular />,
@@ -100,7 +100,7 @@ const services: Svc[] = [
   {
     icon: <AppFolder24Regular />,
     name: "Business apps & process automation",
-    desc: "Custom apps on .NET, React, and Power Platform — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations.",
+    desc: "Low-code and pro-code apps on Microsoft Power Platform and Dynamics 365 — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations.",
   },
   {
     icon: <Cloud24Regular />,

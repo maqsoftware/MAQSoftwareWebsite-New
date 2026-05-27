@@ -102,11 +102,12 @@ export function ReportingBIHero() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Reporting &amp; Business Intelligence</span>
-          <h1 className={s.h1}>See the full picture with powerful visualizations</h1>
+          <span className={s.eyebrow}>Reporting &amp; business intelligence</span>
+          <h1 className={s.h1}>From legacy BI to real-time Power BI on Microsoft Fabric</h1>
           <p className={s.sub}>
-            Transform complex data into intuitive, actionable insights with our custom reporting and
-            visualization solutions — built on Microsoft Fabric, Power BI, and modern semantic models.
+            We build, modernize, and migrate enterprise BI — moving Tableau, SAP BO, SAP Crystal,
+            Qlik, Cognos, and MicroStrategy estates to Power BI on Microsoft Fabric, with semantic
+            models, custom visuals, and a storytelling layer your business actually uses.
           </p>
           <div className={s.btns}>
             <Button

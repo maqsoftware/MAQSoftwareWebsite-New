@@ -94,11 +94,12 @@ export function ServiceHeroData() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Data &amp; analytics</span>
-          <h1 className={s.h1}>Drive success with data-driven insights</h1>
+          <span className={s.eyebrow}>Data engineering &amp; analytics</span>
+          <h1 className={s.h1}>Medallion lakehouses, built for scale and trust</h1>
           <p className={s.sub}>
-            Use our analytics solutions to transform your data into strategic insights
-            that fuel business growth and innovation.
+            Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed
+            lakehouses, semantic models, and real-time analytics that power Copilot, AI
+            agents, and decision-making across the enterprise.
           </p>
           <div className={s.btns}>
             <Button
