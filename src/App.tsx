@@ -8,6 +8,7 @@ import { Home } from "./pages/Home";
 import { IndustryRetail } from "./pages/IndustryRetail";
 import { IndustryFinancialServices } from "./pages/IndustryFinancialServices";
 import { IndustryHealthcareLifeSciences } from "./pages/IndustryHealthcareLifeSciences";
+import { IndustryTechnology } from "./pages/IndustryTechnology";
 import { ProductsHome } from "./pages/ProductsHome";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ProductFabricAdminAgent } from "./pages/ProductFabricAdminAgent";
@@ -43,6 +44,7 @@ export function App() {
         <Route path="/industries/retail" element={<IndustryRetail />} />
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
         <Route path="/industries/healthcare-life-sciences" element={<IndustryHealthcareLifeSciences />} />
+        <Route path="/industries/technology" element={<IndustryTechnology />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
         <Route path="/services/cloud" element={<ServiceCloud />} />
         <Route path="/services/reporting-bi" element={<ServiceReportingBI />} />
