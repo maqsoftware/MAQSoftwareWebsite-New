@@ -70,7 +70,7 @@ interface NavItem {
 
 const industries: NavItem[] = [
   { label: "Retail & consumer goods", href: "/industries/retail" },
-  { label: "Financial services" },
+  { label: "Financial services", href: "/industries/financial-services" },
   { label: "Healthcare & life sciences" },
   { label: "Manufacturing" },
   { label: "Technology" },
@@ -79,9 +79,9 @@ const industries: NavItem[] = [
 
 const services: NavItem[] = [
   { label: "AI solutions & agentic automation", href: "/services/agentic-ai" },
-  { label: "Data engineering & analytics" },
+  { label: "Data engineering & analytics", href: "/services/data-and-analytics" },
   { label: "Reporting & business intelligence", href: "/services/reporting-bi" },
-  { label: "Business apps & process automation" },
+  { label: "Business apps & process automation", href: "/services/business-apps" },
   { label: "Cloud infrastructure & modernization" },
   { label: "Security & compliance" },
   { label: "Workplace transformation & productivity" },

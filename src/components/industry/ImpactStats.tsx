@@ -62,56 +62,29 @@ const useStyles = makeStyles({
   link: { color: "var(--maq-red)", textDecoration: "none" },
 });
 
-interface Stat {
+export interface ImpactStat {
   metric: string;
   label: string;
   sourceLabel: string;
   sourceHref: string;
 }
 
-const stats: Stat[] = [
-  {
-    metric: "8×",
-    label: "Faster Power BI refresh for a top-3 US retailer",
-    sourceLabel: "Microsoft Fabric BI modernization",
-    sourceHref:
-      "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
-  },
-  {
-    metric: "Real-time",
-    label: "Direct Store Delivery visibility on Microsoft Fabric",
-    sourceLabel: "Real-time DSD case study",
-    sourceHref:
-      "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
-  },
-  {
-    metric: "< 1 min",
-    label: "Live KPIs replacing nightly batches at an organic supermarket chain",
-    sourceLabel: "Organic supermarket case study",
-    sourceHref:
-      "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
-  },
-  {
-    metric: "Personalized",
-    label: "Loyalty program lift across millions of members",
-    sourceLabel: "Loyalty program case study",
-    sourceHref:
-      "https://blog.maqsoftware.com/2024/02/empowering-retail-growth-with-optimized.html",
-  },
-];
+interface ImpactStatsProps {
+  eyebrow?: string;
+  title: string;
+  sub: string;
+  stats: ImpactStat[];
+}
 
-export function ImpactStats() {
+export function ImpactStats({ eyebrow = "Proven outcomes", title, sub, stats }: ImpactStatsProps) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Proven outcomes</span>
-          <h2 className={s.title}>Real impact for retail leaders</h2>
-          <p className={s.sub}>
-            Numbers from MAQ Software engagements with global retailers and CPG
-            brands.
-          </p>
+          <span className={s.eyebrow}>{eyebrow}</span>
+          <h2 className={s.title}>{title}</h2>
+          <p className={s.sub}>{sub}</p>
         </div>
         <div className={s.grid}>
           {stats.map((st) => (
