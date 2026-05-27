@@ -52,10 +52,10 @@ section padding `48–56px`, h2 `28–30px`, body `14px`, multi-column layouts.
 - **Padding:** `48px 32px`.
 
 **Copy (literal):**
-- **Eyebrow:** `FABRIC GOVERNANCE`
-- **H1:** `Govern Microsoft Fabric Autonomously with the Fabric Admin Agent`
+- **Eyebrow:** `FABRIC CAPACITY AI`
+- **H1:** `AI-powered capacity management for Microsoft Fabric`
 - **Subhead:**
-  > Microsoft Fabric estates grow fast — capacities throttle, refreshes fail silently, workspaces sprawl, permissions drift. Fabric Admin Agent watches your tenant 24/7, correlates risks into a single feed, and proposes one-click remediations. Your platform team prevents Friday-afternoon outages before users notice them.
+  > Fabric Admin Agent gives Microsoft Fabric administrators an AI copilot for capacity. It detects anomalies and usage spikes in real time, forecasts upcoming demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost — so platform teams stay ahead of capacity issues instead of firefighting them.
 - **Primary CTA:** `Request a walkthrough` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Fabric%20Admin%20Agent%20-%20Walkthrough`
 - **Secondary CTA:** `See capabilities` → scroll to `#fabric-admin-features`
 

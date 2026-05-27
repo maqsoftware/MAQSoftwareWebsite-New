@@ -136,7 +136,7 @@ is one *headline metric* + one *outcome label*.
 
 | Slug | Name | Motif | Headline impact (3 of) |
 |---|---|---|---|
-| `fabric-admin-agent` | Fabric Admin Agent | gauge | 60% fewer incidents · 24/7 coverage · 5 min MTTD |
+| `fabric-admin-agent` | Fabric Admin Agent | gauge | 60% fewer incidents · real-time anomaly detection · demand forecasting |
 | `migratefast` | MigrateFAST | swap | 120+ migrations · 70% faster · $4M+ license retired |
 
 **MigrateFAST — source coverage (authoritative list):**
