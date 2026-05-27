@@ -1,6 +1,20 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
+export interface CaseStudyItem {
+  tag: string;
+  title: string;
+  teaser: string;
+  href: string;
+}
+
+export interface ServiceCaseStudiesProps {
+  title?: string;
+  studies?: CaseStudyItem[];
+  footerLabel?: string;
+  footerHref?: string;
+}
+
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -90,7 +104,7 @@ interface Study {
   href: string;
 }
 
-const studies: Study[] = [
+const defaultStudies: Study[] = [
   {
     tag: "Developer productivity",
     title: "Modernizing the software development lifecycle with GitHub Copilot",
@@ -121,14 +135,19 @@ const studies: Study[] = [
   },
 ];
 
-export function ServiceCaseStudies() {
+export function ServiceCaseStudies({
+  title = "How clients are putting agentic AI to work",
+  studies = defaultStudies,
+  footerLabel = "See all AI case studies",
+  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
+}: ServiceCaseStudiesProps = {}) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Related case studies</span>
-          <h2 className={s.title}>How clients are putting agentic AI to work</h2>
+          <h2 className={s.title}>{title}</h2>
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
@@ -144,11 +163,11 @@ export function ServiceCaseStudies() {
         </div>
         <a
           className={s.footerLink}
-          href="https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning"
+          href={footerHref}
           target="_blank"
           rel="noreferrer"
         >
-          See all AI case studies <ArrowRight16Regular />
+          {footerLabel} <ArrowRight16Regular />
         </a>
       </div>
     </section>

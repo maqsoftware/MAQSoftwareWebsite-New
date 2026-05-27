@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Mail24Regular,
@@ -6,6 +7,15 @@ import {
   ChartMultiple20Filled,
   Sparkle20Filled,
 } from "@fluentui/react-icons";
+
+export interface ServiceHeroProps {
+  eyebrow?: string;
+  heading?: string;
+  subhead?: string;
+  ctaMailSubject?: string;
+  scrollTargetId?: string;
+  visual?: ReactNode;
+}
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -94,27 +104,29 @@ const useStyles = makeStyles({
   autoRow: { display: "flex", justifyContent: "space-between", fontSize: "12px", color: "var(--maq-ink)", marginTop: "4px" },
 });
 
-export function ServiceHero() {
+export function ServiceHero({
+  eyebrow = "Agentic AI & Machine Learning",
+  heading = "Automate and innovate with agentic AI & machine learning",
+  subhead = "Uncover hidden patterns and automate processes with our agentic AI and machine learning solutions, tailored for your business needs.",
+  ctaMailSubject = "Agentic%20AI%20%26%20ML%20-%20MAQ%20Software",
+  scrollTargetId = "ai-capabilities",
+  visual,
+}: ServiceHeroProps = {}) {
   const s = useStyles();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Agentic AI &amp; Machine Learning</span>
-          <h1 className={s.h1}>
-            Automate and innovate with agentic AI &amp; machine learning
-          </h1>
-          <p className={s.sub}>
-            Uncover hidden patterns and automate processes with our agentic AI
-            and machine learning solutions, tailored for your business needs.
-          </p>
+          <span className={s.eyebrow}>{eyebrow}</span>
+          <h1 className={s.h1}>{heading}</h1>
+          <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
             <Button
               appearance="primary"
               size="large"
               icon={<Mail24Regular />}
               as="a"
-              href="mailto:customersuccess@maqsoftware.com?subject=Agentic%20AI%20%26%20ML%20-%20MAQ%20Software"
+              href={`mailto:customersuccess@maqsoftware.com?subject=${ctaMailSubject}`}
             >
               Contact us
             </Button>
@@ -125,7 +137,7 @@ export function ServiceHero() {
               iconPosition="after"
               onClick={() =>
                 document
-                  .getElementById("ai-capabilities")
+                  .getElementById(scrollTargetId)
                   ?.scrollIntoView({ behavior: "smooth" })
               }
             >
@@ -134,55 +146,57 @@ export function ServiceHero() {
           </div>
         </div>
 
-        <div className={s.visual} aria-hidden="true">
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Bot20Filled /> Agent activity
-            </div>
-            <div className={s.pulseRow}>
-              <span className={s.dot} />
-              <span className={s.dot} />
-              <span className={s.dotMuted} />
-              <span className={s.pulseLabel}>3 agents online · 142 tasks/min</span>
-            </div>
-          </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <ChartMultiple20Filled /> Model performance
-            </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Accuracy</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "92%" }} />
+        {visual ?? (
+          <div className={s.visual} aria-hidden="true">
+            <div className={s.tile}>
+              <div className={s.tileTitle}>
+                <Bot20Filled /> Agent activity
+              </div>
+              <div className={s.pulseRow}>
+                <span className={s.dot} />
+                <span className={s.dot} />
+                <span className={s.dotMuted} />
+                <span className={s.pulseLabel}>3 agents online · 142 tasks/min</span>
               </div>
             </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Precision</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "88%" }} />
+            <div className={s.tile}>
+              <div className={s.tileTitle}>
+                <ChartMultiple20Filled /> Model performance
+              </div>
+              <div className={s.perfRow}>
+                <span className={s.perfLabel}>Accuracy</span>
+                <div className={s.perfTrack}>
+                  <div className={s.perfFill} style={{ width: "92%" }} />
+                </div>
+              </div>
+              <div className={s.perfRow}>
+                <span className={s.perfLabel}>Precision</span>
+                <div className={s.perfTrack}>
+                  <div className={s.perfFill} style={{ width: "88%" }} />
+                </div>
+              </div>
+              <div className={s.perfRow}>
+                <span className={s.perfLabel}>Recall</span>
+                <div className={s.perfTrack}>
+                  <div className={s.perfFill} style={{ width: "81%" }} />
+                </div>
               </div>
             </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Recall</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "81%" }} />
+            <div className={s.tile}>
+              <div className={s.tileTitle}>
+                <Sparkle20Filled /> Today&apos;s automations
+              </div>
+              <div className={s.autoRow}>
+                <span>Invoices auto-classified</span>
+                <span>1,284</span>
+              </div>
+              <div className={s.autoRow}>
+                <span>Support tickets summarized</span>
+                <span>312</span>
               </div>
             </div>
           </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Sparkle20Filled /> Today&apos;s automations
-            </div>
-            <div className={s.autoRow}>
-              <span>Invoices auto-classified</span>
-              <span>1,284</span>
-            </div>
-            <div className={s.autoRow}>
-              <span>Support tickets summarized</span>
-              <span>312</span>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

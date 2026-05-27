@@ -1,6 +1,18 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
+export interface InsightItem {
+  title: string;
+  teaser: string;
+  href: string;
+}
+
+export interface ServiceInsightsProps {
+  title?: string;
+  subhead?: string;
+  insights?: InsightItem[];
+}
+
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -68,7 +80,7 @@ const useStyles = makeStyles({
   },
 });
 
-const insights = [
+const defaultInsights = [
   {
     title: "Empowering businesses with AI: Frameworks that deliver results",
     teaser:
@@ -87,17 +99,19 @@ const insights = [
   },
 ];
 
-export function ServiceInsights() {
+export function ServiceInsights({
+  title = "Our agentic AI and machine learning insights",
+  subhead = "See our research that goes into optimizing our agentic AI and machine learning service.",
+  insights = defaultInsights,
+}: ServiceInsightsProps = {}) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Insights</span>
-          <h2 className={s.title}>Our agentic AI and machine learning insights</h2>
-          <p className={s.sub}>
-            See our research that goes into optimizing our agentic AI and machine learning service.
-          </p>
+          <h2 className={s.title}>{title}</h2>
+          <p className={s.sub}>{subhead}</p>
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
