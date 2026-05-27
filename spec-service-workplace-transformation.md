@@ -65,10 +65,10 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 
 **Copy *(inferred — review with sales):***
 
-- **Eyebrow:** `WORKPLACE TRANSFORMATION & PRODUCTIVITY`
-- **H1:** `Empower every employee with a modern digital workplace`
+- **Eyebrow:** `Workplace transformation & productivity`
+- **H1:** `Microsoft 365 and Copilot rollouts that drive real adoption`
 - **Subhead:**
-  > Boost collaboration and productivity by deploying Microsoft 365, SharePoint, Teams, Viva, and Microsoft Copilot — backed by structured adoption programs that drive measurable usage.
+  > We deploy Microsoft 365, Teams, SharePoint, Viva, and Microsoft Copilot — paired with structured adoption programs and change management that turn rollouts into measurable usage, not shelfware.
 - **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Workplace%20Transformation%20%26%20Productivity%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore capabilities` → scroll to `#workplace-capabilities`
 

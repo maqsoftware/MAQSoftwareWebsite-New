@@ -52,10 +52,10 @@ oversized hero. Match aesthetic and component reuse from Agentic AI service page
 - **Padding:** `48px 32px`.
 
 **Copy (verbatim from source):**
-- **Eyebrow:** `CLOUD OPTIMIZATION`
-- **H1:** `Scale with confidence in the cloud`
+- **Eyebrow:** `Cloud infrastructure & modernization`
+- **H1:** `Modernize from on-premises to cloud-native on Azure`
 - **Subhead:**
-  > Adopt flexible and cost-effective cloud solutions that grow with your business. Ensure scalability, efficiency, and security.
+  > MAQ Software replatforms on-premises workloads to Azure — from lift-and-shift through full cloud-native re-architecture — with FinOps discipline that delivers 30–40% lower run cost on average across enterprise workloads.
 - **Primary CTA:** `Get started` → `/contact`
 - **Secondary CTA:** `Explore capabilities` → scroll to `#cloud-capabilities`
 

@@ -53,10 +53,10 @@ oversized hero.
 - **Padding:** `48px 32px`.
 
 **Copy (verbatim from source):**
-- **Eyebrow:** `AGENTIC AI & MACHINE LEARNING`
-- **H1:** `Automate and innovate with agentic AI & machine learning`
+- **Eyebrow:** `AI solutions & agentic automation`
+- **H1:** `Build production-ready AI agents on Microsoft Foundry`
 - **Subhead:**
-  > Uncover hidden patterns and automate processes with our agentic AI and machine learning solutions, tailored for your business needs.
+  > MAQ Software designs, builds, and operates GenAI agents and copilots on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting, with full governance, evaluation, and human-in-the-loop controls.
 - **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Agentic%20AI%20%26%20ML%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore capabilities` → scroll to `#ai-capabilities`
 

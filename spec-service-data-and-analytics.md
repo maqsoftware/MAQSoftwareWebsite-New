@@ -49,8 +49,9 @@ This page describes the Data & Analytics service surface and maps content from t
 - **Padding:** `48px 32px`.
 
 **Copy (verbatim from source):**
-- **H1:** `Drive success with data-driven insights`
-- **Subhead:** `Use our analytics solutions to transform your data into strategic insights that fuel business growth and innovation.`
+- **Eyebrow:** `Data engineering & analytics`
+- **H1:** `Medallion lakehouses, built for scale and trust`
+- **Subhead:** `Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses, semantic models, and real-time analytics that power Copilot, AI agents, and decision-making across the enterprise.`
 - **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Data%20%26%20Analytics%20-%20MAQ%20Software`
 - **Secondary CTA:** `Get started` → `https://maqsoftware.com/contact` (preserve live CTAs as secondary where appropriate)
 
