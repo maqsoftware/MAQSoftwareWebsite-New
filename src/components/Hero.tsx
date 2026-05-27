@@ -58,7 +58,7 @@ const useStyles = makeStyles({
     marginBottom: "40px",
     maxWidth: "580px",
   },
-  btns: { display: "flex", gap: "12px", marginBottom: "0", flexWrap: "wrap" },
+  btns: { display: "flex", gap: "12px", marginTop: "40px", marginBottom: "0", flexWrap: "wrap" },
   stats: {
     display: "flex",
     gap: "48px",
