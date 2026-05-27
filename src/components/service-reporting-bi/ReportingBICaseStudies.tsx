@@ -23,8 +23,9 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
+    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   card: {
@@ -99,7 +100,7 @@ const studies: Study[] = [
     href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
   },
   {
-    tag: "Retail",
+    tag: "Retail BI",
     title: "Modernizing retail business intelligence with Microsoft Fabric and Power BI",
     teaser:
       "Re-platforming a global retailer's reporting estate onto Microsoft Fabric and Power BI with a unified semantic model.",
@@ -111,13 +112,6 @@ const studies: Study[] = [
     teaser:
       "AI-assisted Qlik to Power BI migration rebuilding semantic models, RLS, and pixel-perfect layouts on Fabric.",
     href: "https://blog.maqsoftware.com/2025/06/transitioning-legacy-reports-from-qlik.html",
-  },
-  {
-    tag: "Real-time",
-    title: "Real-time reporting for an organic supermarket chain",
-    teaser:
-      "Real-time Power BI reporting on store, inventory, and freshness KPIs for an organic supermarket chain.",
-    href: "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
   },
 ];
 

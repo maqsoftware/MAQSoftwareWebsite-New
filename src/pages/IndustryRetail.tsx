@@ -151,21 +151,21 @@ const retailAgents = [
 
 const retailCases = [
   {
-    tag: "Grocery",
+    tag: "Agentic AI",
+    title: "Reshaping retail with agentic AI solutions",
+    teaser:
+      "Agentic AI deployed across pricing, merchandising, and store operations \u2014 unlocking faster decisions and resilient supply chains for a global retailer.",
+    href: "https://blog.maqsoftware.com/2026/02/reshaping-retail-with-agentic-ai.html",
+  },
+  {
+    tag: "Grocery \u00b7 Fabric",
     title: "Transforming grocery retail analytics with Microsoft Fabric",
     teaser:
       "Modernize grocery analytics on Fabric for sharper category, basket and supply-chain insights.",
     href: "https://blog.maqsoftware.com/2025/07/transforming-analytics-with-microsoft.html",
   },
   {
-    tag: "Specialty retail",
-    title: "Transforming supply chain analytics with Power BI on Snowflake",
-    teaser:
-      "Replatform a specialty retailer's supply chain analytics on Snowflake + Power BI.",
-    href: "https://blog.maqsoftware.com/2025/03/transforming-supply-chain-analytics.html",
-  },
-  {
-    tag: "Mass retail",
+    tag: "Direct Store Delivery",
     title: "Enabling real-time visibility: Direct Store Delivery with Microsoft Fabric",
     teaser:
       "Deliver real-time DSD visibility on Fabric so field operations can act on live route and stock data.",

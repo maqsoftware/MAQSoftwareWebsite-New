@@ -212,11 +212,11 @@ const hlsAgents = [
 
 const hlsCases = [
   {
-    tag: "Cross-industry agentic AI",
-    title: "Reshaping industries with agentic AI solutions",
+    tag: "AI frameworks",
+    title: "Empowering businesses with AI: Frameworks that deliver results",
     teaser:
-      "How agentic AI is reshaping retail, financial services, healthcare and manufacturing workflows in production — a reference pattern for any regulated, multi-system enterprise.",
-    href: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
+      "Field-tested AI frameworks — from knowledge bots to content generation — directly applicable to clinical and life-sciences workflows that demand measurable outcomes.",
+    href: "https://blog.maqsoftware.com/2024/08/empowering-businesses-with-ai.html",
   },
   {
     tag: "Secure Copilot",
@@ -226,7 +226,7 @@ const hlsCases = [
     href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
   },
   {
-    tag: "AI adoption",
+    tag: "AI Center of Excellence",
     title: "Transforming AI interest into adoption by establishing an AI Center of Excellence",
     teaser:
       "A proven CoE blueprint for moving pilot interest into enterprise-wide adoption — particularly relevant for health systems and life-sciences orgs scaling AI safely.",

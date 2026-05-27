@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
 
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.embedfastpowerbi?tab=PlansAndPrice";
 
@@ -83,7 +83,11 @@ export function ProductEmbedFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><CaseStudiesPlaceholder heading="Embedding success stories" /></section>
+      <section className={s.sectionAlt}><ProductCaseStudies heading="Embedding success stories" studies={[
+        { tag: "Power BI Embedded", title: "Delivering embedded Power BI reporting with EmbedFAST", teaser: "An ISV embeds Power BI into its SaaS product using the EmbedFAST accelerator — shipping multi-tenant analytics months faster.", href: "https://blog.maqsoftware.com/2025/07/delivering-embedded-power-bi-reporting.html" },
+        { tag: "Self-service BI", title: "Empowering self-service using Custom Copilot agent with Power BI Embedded", teaser: "A custom Copilot agent over Power BI Embedded letting users ask data questions in plain English — reducing report request backlog.", href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html" },
+        { tag: "Retail BI", title: "Modernizing retail business intelligence with Microsoft Fabric and Power BI", teaser: "Re-platforming a global retailer's reporting estate onto Microsoft Fabric and Power BI with a unified, embeddable semantic model.", href: "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html" },
+      ]} /></section>
 
       <section className={s.section} id="embedfast-pricing">
         <div className={s.inner}>

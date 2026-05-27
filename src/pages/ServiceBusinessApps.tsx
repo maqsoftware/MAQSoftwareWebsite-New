@@ -274,8 +274,9 @@ const useStyles = makeStyles({
     // Case studies
     caseGrid: {
         display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
+        gridTemplateColumns: "repeat(3, 1fr)",
         gap: "16px",
+        "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
         "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
     },
     caseCard: {
@@ -484,13 +485,6 @@ const caseStudies: CaseStudy[] = [
         teaser:
             "A custom dynamic checklist control inside Dynamics 365 that guides users through complex multi-step processes without leaving the record.",
         href: "https://blog.maqsoftware.com/2020/10/dynamic-checklist-dynamics-365.html",
-    },
-    {
-        tag: "Data quality",
-        title: "Data Validation Framework Reduces Support Tickets",
-        teaser:
-            "A reusable data validation framework that prevents bad records at the source — measurably cutting downstream support tickets.",
-        href: "https://blog.maqsoftware.com/2019/06/case-study-data-validation-framework.html",
     },
 ];
 
@@ -719,8 +713,6 @@ export function ServiceBusinessApps() {
                     </div>
                 </div>
             </section>
-
-            {/* PRODUCTS — placeholder, hidden until sales confirms the lineup */}
 
             {/* CASE STUDIES */}
             <section className={s.sectionAlt}>

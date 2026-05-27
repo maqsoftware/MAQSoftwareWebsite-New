@@ -393,22 +393,22 @@ const features = [
 
 const cases = [
   {
-    tag: "Enterprise IT",
-    title: "Modernizing retail BI with Microsoft Fabric and Power BI",
-    teaser: "A top-3 US retailer migrated to Fabric for 8× faster Power BI refresh and a governed lakehouse.",
-    href: "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
+    tag: "Microsoft Fabric \u00b7 OneLake",
+    title: "Unifying disconnected data systems using Microsoft Fabric and OneLake",
+    teaser: "Siloed enterprise data unified on OneLake for a single governed surface \u2014 monitored end-to-end by an admin agent layer.",
+    href: "https://blog.maqsoftware.com/2026/01/unifying-disconnected-data-systems.html",
   },
   {
-    tag: "Platform engineering",
-    title: "Enabling real-time visibility on Microsoft Fabric",
-    teaser: "Direct Store Delivery moved to Fabric with autonomous monitoring of capacities and pipelines.",
-    href: "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
+    tag: "Fabric migration \u00b7 OSOT",
+    title: "Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT)",
+    teaser: "Consolidating fragmented data estates onto Microsoft Fabric with proactive capacity and workspace governance.",
+    href: "https://blog.maqsoftware.com/2025/07/migrating-to-microsoft-fabric-to-unlock.html",
   },
   {
-    tag: "Data governance",
-    title: "Transforming analytics with Microsoft Fabric",
-    teaser: "A grocery retailer's analytics estate moved to Fabric with end-to-end lineage and capacity governance.",
-    href: "https://blog.maqsoftware.com/2025/07/transforming-analytics-with-microsoft.html",
+    tag: "Fabric ISV \u00b7 CI/CD",
+    title: "Microsoft Fabric ISV Solutions: Implementing CI/CD",
+    teaser: "Repeatable CI/CD patterns for Fabric ISV solutions \u2014 with admin-grade controls baked into the deployment lifecycle.",
+    href: "https://blog.maqsoftware.com/2025/05/microsoft-fabric-isv-solutions.html",
   },
 ];
 

@@ -37,8 +37,9 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
+    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   card: {
@@ -106,32 +107,25 @@ interface Study {
 
 const defaultStudies: Study[] = [
   {
-    tag: "Developer productivity",
-    title: "Modernizing the software development lifecycle with GitHub Copilot",
+    tag: "AI adoption",
+    title: "Transforming AI interest into adoption by establishing an AI Center of Excellence",
     teaser:
-      "Embedding GitHub Copilot across the SDLC with adoption playbooks, governance, and outcome telemetry.",
-    href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
+      "A proven CoE blueprint that moves enterprise AI from pilot interest to repeatable, governed production adoption.",
+    href: "https://blog.maqsoftware.com/2026/02/transforming-ai-interest-into-adoption.html",
   },
   {
-    tag: "Customer service",
-    title: "Scaling AI for every customer and every developer with MAQ Software",
-    teaser:
-      "A reference architecture and delivery model for scaling agentic AI to every customer and every developer in the enterprise.",
-    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
-  },
-  {
-    tag: "Cross-industry",
+    tag: "Agentic AI",
     title: "Reshaping industries with agentic AI solutions",
     teaser:
       "How agentic AI is reshaping retail, financial services, healthcare and manufacturing workflows in production.",
     href: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
   },
   {
-    tag: "Self-service BI",
-    title: "Empowering self-service using Custom Copilot agent with Power BI Embedded",
+    tag: "Scaling AI",
+    title: "Scaling AI for every customer and every developer with MAQ Software",
     teaser:
-      "A custom Copilot agent over Power BI Embedded that lets users ask data questions in plain English.",
-    href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html",
+      "A reference architecture and delivery model for scaling agentic AI to every customer and every developer in the enterprise.",
+    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
   },
 ];
 

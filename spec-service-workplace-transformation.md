@@ -41,12 +41,11 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 4. `<TrustBanner />` *(shared)*
 5. Capabilities section       — §3.2  (4 capability pillars, tabbed list+detail)
 6. Outcomes section           — §3.3  (3 business-outcome cards)
-7. Products section           — §3.4  (3 product cards)
-8. Case studies section       — §3.5  (4 related case studies)
-9. Insights section           — §3.6  (3 blog insights)
-10. Testimonials section      — §3.7  (placeholder until signed quotes available)
-11. `<CTA />` *(shared)*
-12. `<Footer />` *(shared, rendered by `App.tsx`)*
+7. Case studies section       — §3.4  (4 related case studies)
+8. Insights section           — §3.5  (3 blog insights)
+9. Testimonials section      — §3.6  (placeholder until signed quotes available)
+10. `<CTA />` *(shared)*
+11. `<Footer />` *(shared, rendered by `App.tsx`)*
 
 > **Global rule:** when a Testimonials section is rendered on this page, it must
 > appear immediately before `<CTA />` (last content section). Eyebrow must be
@@ -116,24 +115,7 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 | `PeopleTeam24Regular` | `Unified employee experience` | Consolidate disconnected tools into a single Microsoft 365 surface — reducing context switches and improving satisfaction scores. |
 | `ArrowTrendingLines24Regular` | `Measurable productivity gains` | Track real outcomes with Copilot usage analytics and Viva Insights — translating tool adoption into hours saved per employee per week. |
 
-### 3.4 Products — "Workplace transformation products"
-
-- **Eyebrow:** `OUR PRODUCTS`
-- **Title:** `Workplace transformation products`
-- **Subhead:** `Solutions designed to accelerate and govern your Microsoft 365 deployment.`
-- **Layout:** 3-column grid (2-col below 960, 1-col below 640).
-
-**Cards *(product selection inferred — review with sales):***
-
-| Product | Logo initials | Tagline | Description | Link |
-|---|---|---|---|---|
-| `AI-DataLens` | `AI` | Conversational analytics | Talk to your Power BI estate in natural language with row-level security preserved. Citation-backed answers in seconds. | `/products/ai-datalens` (internal) |
-| `EmbedFAST` | `EF` | Embed Power BI everywhere | Embed Power BI reports securely into SharePoint, Teams tabs, and custom portals — enabling self-service analytics inside the tools employees already use. | `/products/embedfast` (internal) |
-| `Fabric Admin Agent` | `FA` | Governance & administration | Automate Microsoft Fabric tenant administration, policy enforcement, and compliance monitoring with a Copilot-powered agent. | `/products/fabric-admin-agent` (internal) |
-
-- **Footer link below grid:** `See all products →` → `/products`.
-
-### 3.5 Case studies — "Related case studies"
+### 3.4 Case studies — "Related case studies"
 
 - **Eyebrow:** `RELATED CASE STUDIES`
 - **Title:** `How clients are transforming their digital workplace`
@@ -149,7 +131,7 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 
 - **Footer link below grid:** `See all case studies →` → `https://maqsoftware.com/case-studies`.
 
-### 3.6 Insights — "Our workplace transformation insights"
+### 3.5 Insights — "Our workplace transformation insights"
 
 - **Eyebrow:** `INSIGHTS`
 - **Title:** `Our workplace transformation insights`
@@ -163,7 +145,7 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 | `Modernizing the software development lifecycle with GitHub Copilot` | How a global organization embedded GitHub Copilot across development, testing, and deployment to transform engineering productivity. | https://blog.maqsoftware.com/2025/11/modernizing-software-development.html |
 | `Building a secure Copilot: Addressing key security challenges` | Patterns, guardrails, and identity controls for shipping a secure enterprise Copilot deployment that maintains data governance. | https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html |
 
-### 3.7 Testimonials — *(hidden in current build)*
+### 3.6 Testimonials — *(hidden in current build)*
 
 **Status:** not rendered. Only a placeholder JSX comment (`{/* TESTIMONIALS —
 placeholder, hidden until signed quotes are available. */}`) marks the slot
@@ -186,11 +168,11 @@ for this service. When ready:
 | `MAQ Software's Copilot adoption program got us to 80% weekly active usage in under 45 days — our previous rollout stalled at 20% for six months.` | `VP of Digital Workplace — Global technology company` |
 | `The SharePoint intranet they delivered replaced five disconnected tools. Our employee satisfaction score jumped 18 points in one quarter.` | `Director of IT — Enterprise retail` |
 
-### 3.8 CTA (shared)
+### 3.7 CTA (shared)
 
 Reuses shared `<CTA />` component. No service-specific override required for v1.
 
-### 3.9 Footer
+### 3.8 Footer
 
 Shared `<Footer />`. No changes.
 

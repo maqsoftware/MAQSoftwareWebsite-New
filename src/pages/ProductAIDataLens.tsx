@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
 
 const benefits = [
   { title: "Informed decisions", desc: "Move beyond guesswork — leverage data-backed insights to make informed decisions that reduce risk and accelerate growth." },
@@ -92,7 +92,11 @@ export function ProductAIDataLens() {
         </div>
       </section>
 
-      <section className={s.section}><CaseStudiesPlaceholder heading="Real-world AI-DataLens wins" /></section>
+      <section className={s.section}><ProductCaseStudies heading="Real-world AI-DataLens wins" studies={[
+        { tag: "Self-service BI", title: "Empowering self-service using Custom Copilot agent with Power BI Embedded", teaser: "A custom Copilot agent over Power BI Embedded letting business users ask data questions in plain English — reducing report request backlog.", href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html" },
+        { tag: "Fabric data agent", title: "Delivering accurate business intelligence insights with a Fabric data agent", teaser: "A Microsoft Fabric data agent answering business questions with citation-backed accuracy, replacing brittle hand-built dashboards.", href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html" },
+        { tag: "Information retrieval", title: "Streamlining information retrieval with AI Copilots", teaser: "Enterprise AI Copilots that ground answers in organizational content — dramatically improving knowledge worker productivity.", href: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html" },
+      ]} /></section>
 
       <section className={s.sectionAlt}>
         <div className={s.inner}>

@@ -30,12 +30,11 @@ This page describes the Data & Analytics service surface and maps content from t
 4. `<TrustBanner />` *(shared)*
 5. `<ServiceCapabilities />`      — §3.2  (capability pillars)
 6. `<ServiceOutcomes />`          — §3.3  (3 business-outcome cards)
-7. `<ServiceProducts />`          — §3.4  (product cards: EmbedFAST, LoadFAST, CertyFAST)
-8. `<ServiceCaseStudies />`       — §3.5  (4 related case studies)
-9. `<ServiceInsights />`          — §3.6  (3 blog insights)
-10. `<ServiceTestimonials />`     — §3.7  (if present)
-11. `<CTA />` *(shared)*
-12. `<Footer />` *(shared)*
+7. `<ServiceCaseStudies />`       — §3.4  (4 related case studies)
+8. `<ServiceInsights />`          — §3.5  (3 blog insights)
+9. `<ServiceTestimonials />`     — §3.6  (if present)
+10. `<CTA />` *(shared)*
+11. `<Footer />` *(shared)*
 
 > **Global rule:** `<Testimonials />` is mandatory on every page and must always render immediately before `<CTA />` (last content section). Eyebrow must be `TESTIMONIALS`; H2 must be `What our clients have to say`.
 
@@ -92,24 +91,7 @@ This page describes the Data & Analytics service surface and maps content from t
 | `Boundless scalability` | Scale your data operations effortlessly, ensuring your analytics capabilities grow alongside your business demands. |
 | `Increase in efficiency` | Streamline processes and reduce manual efforts, resulting in increased productivity and faster time-to-insight. |
 
-### 3.4 ServiceProducts — "Data & analytics products"
-
-- **Eyebrow:** `OUR PRODUCTS`
-- **Title:** `Data & analytics products`
-- **Subhead:** `Solutions designed to improve and streamline your operations.`
-- **Layout:** 3-column grid (2-col below 960, 1-col below 640).
-
-**Cards (verbatim links from source):**
-
-| Product | Logo initials | Tagline | Link |
-|---|---|---|---|
-| `EmbedFAST` | `EF` | (marketplace/embed solution) | `https://maqsoftware.com/products/embedFAST` |
-| `LoadFAST` | `LF` | (data ingestion & optimization) | `https://maqsoftware.com/products/loadFAST` |
-| `CertyFAST` | `CF` | (governance / certification) | `https://maqsoftware.com/products/certyFAST` |
-
-- **Footer link below grid:** `See all products →` → `/products`.
-
-### 3.5 ServiceCaseStudies — "Related case studies"
+### 3.4 ServiceCaseStudies — "Related case studies"
 
 - **Eyebrow:** `RELATED CASE STUDIES`
 - **Title:** `How clients are putting data & analytics to work`
@@ -125,7 +107,7 @@ This page describes the Data & Analytics service surface and maps content from t
 
 - **Footer link below grid:** `See all data & analytics case studies →` → `https://maqsoftware.com/case-studies.html?filter=data-and-analytics`.
 
-### 3.6 ServiceInsights — "Our data & analytics insights"
+### 3.5 ServiceInsights — "Our data & analytics insights"
 
 - **Eyebrow:** `INSIGHTS`
 - **Title:** `Our data & analytics insights`
@@ -139,7 +121,7 @@ This page describes the Data & Analytics service surface and maps content from t
 | `Embracing the Future of Data Management with Microsoft Fabric: A Setup Guide` | https://blog.maqsoftware.com/2023/11/embracing-future-of-data-management.html |
 | `Optimize your Power BI Reports and Usage with LoadFAST` | https://blog.maqsoftware.com/2024/03/transform-your-power-bi.html |
 
-### 3.7 ServiceTestimonials — "What our clients have to say"
+### 3.6 ServiceTestimonials — "What our clients have to say"
 
 - **Eyebrow:** `TESTIMONIALS` (exact text)
 - **Title:** `What our clients have to say` (exact text — site-wide rule)
@@ -148,11 +130,11 @@ This page describes the Data & Analytics service surface and maps content from t
 - **Position:** always second-to-last section, immediately before `<CTA />`.
 - **Notes:** The source page does not include explicit testimonial quote blocks in the visible content returned. Add placeholder quotes only if marketing provides them; otherwise render the testimonials section using the global rule but keep it empty/hidden until copy is supplied.
 
-### 3.8 CTA (shared)
+### 3.7 CTA (shared)
 
 Reuses shared `<CTA />` component. Primary CTA should use `mailto:customersuccess@maqsoftware.com` per brand rules.
 
-### 3.9 Footer
+### 3.8 Footer
 
 Shared `<Footer />`. No changes.
 

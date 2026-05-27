@@ -46,12 +46,11 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 4. `<TrustBanner />` *(shared)*
 5. Capabilities section       — §3.2  (4 capability pillars, tabbed list+detail)
 6. Outcomes section           — §3.3  (3 business-outcome cards)
-7. Products section *[hidden — placeholder comment only; see §3.4]*
-8. Case studies section       — §3.5  (4 related case studies)
-9. Insights section           — §3.6  (3 blog insights)
-10. Testimonials section *[hidden — placeholder comment only; see §3.7]*
-11. `<CTA />` *(shared)*
-12. `<Footer />` *(shared, rendered by `App.tsx`)*
+7. Case studies section       — §3.4  (4 related case studies)
+8. Insights section           — §3.5  (3 blog insights)
+9. Testimonials section *[hidden — placeholder comment only; see §3.6]*
+10. `<CTA />` *(shared)*
+11. `<Footer />` *(shared, rendered by `App.tsx`)*
 
 > **Global rule (carried over from `spec-service-agentic-ai.md`):** when a
 > Testimonials section is rendered on this page in the future, it must appear
@@ -126,19 +125,7 @@ Reproduces the 4-capability pillar section from source.
 | `ArrowTrendingLines24Regular` | `Increased agility` | Improve your ability to adapt to market changes quickly with flexible, scalable application architectures. |
 | `PersonHeart24Regular` | `Improved user experience` | Deliver superior user experiences through modernized, intuitive applications that drive customer satisfaction. |
 
-### 3.4 Products — *(hidden in current build)*
-
-**Status:** not rendered. Only a placeholder JSX comment (`{/* PRODUCTS —
-placeholder, hidden until sales confirms the lineup */}`) marks the slot
-between Outcomes and Case Studies in `src/pages/ServiceBusinessApps.tsx`.
-
-The source page has no Products section. Sales has not yet confirmed which
-MAQ products should appear here, so the section is omitted from the live page
-for now. When sales delivers the lineup, add a Products section block in the
-JSX at the placeholder comment location, mirroring the 3-card grid layout from
-`/services/agentic-ai`.
-
-### 3.5 Case studies — "Related case studies"
+### 3.4 Case studies — "Related case studies"
 
 - **Eyebrow:** `RELATED CASE STUDIES`
 - **Title:** `How clients are modernizing their business apps`
@@ -154,7 +141,7 @@ JSX at the placeholder comment location, mirroring the 3-card grid layout from
 
 - **Footer link below grid:** `See all application modernization case studies →` → `https://maqsoftware.com/case-studies.html?filter=application-modernization`.
 
-### 3.6 Insights — "Our business apps and process automation insights"
+### 3.5 Insights — "Our business apps and process automation insights"
 
 - **Eyebrow:** `INSIGHTS`
 - **Title:** `Our business apps and process automation insights`
@@ -168,7 +155,7 @@ JSX at the placeholder comment location, mirroring the 3-card grid layout from
 | `Explore Best Practices for Creating Enterprise-Wide Knowledge Bots` | Patterns for building enterprise knowledge bots that ground answers in your own content and stay maintainable at scale. | https://maqsoftware.com/insights/knowledge-bot-best-practices.html |
 | `Microsoft Fabric: Empowering all personas` | How a single Fabric platform serves data engineers, analysts, scientists, and business users with the right tools for each. | https://blog.maqsoftware.com/2023/09/microsoft-fabric-empowering.html |
 
-### 3.7 Testimonials — *(hidden in current build)*
+### 3.6 Testimonials — *(hidden in current build)*
 
 **Status:** not rendered. Only a placeholder JSX comment (`{/* TESTIMONIALS —
 placeholder, hidden until signed quotes are available. */}`) marks the slot
@@ -184,11 +171,11 @@ signed-off quotes for this service. When ready:
 - **Position:** second-to-last section, immediately before `<CTA />`.
 - Mirror the markup from the agentic-AI page's testimonials block.
 
-### 3.8 CTA (shared)
+### 3.7 CTA (shared)
 
 Reuses shared `<CTA />` component. No service-specific override required for v1.
 
-### 3.9 Footer
+### 3.8 Footer
 
 Shared `<Footer />`. No changes.
 

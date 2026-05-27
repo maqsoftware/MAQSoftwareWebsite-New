@@ -33,12 +33,11 @@ oversized hero. Match aesthetic and component reuse from Agentic AI service page
 4. `<TrustBanner />` *(shared)*
 5. `<ServiceCapabilities />`      — §3.2  (4 capability pillars, tabbed list+detail)
 6. `<ServiceOutcomes />`          — §3.3  (3 business-outcome cards)
-7. `<ServiceProducts />`          — §3.4  (3 product cards: MigrateFAST, LoadFAST, EmbedFAST)
-8. `<ServiceCaseStudies />`       — §3.5  (4 related case studies)
-9. `<ServiceInsights />`          — §3.6  (3 blog insights)
-10. `<ServiceTestimonials />`     — §3.7  (2 client quotes)
-11. `<CTA />` *(shared)*
-12. `<Footer />` *(shared)*
+7. `<ServiceCaseStudies />`       — §3.4  (4 related case studies)
+8. `<ServiceInsights />`          — §3.5  (3 blog insights)
+9. `<ServiceTestimonials />`     — §3.6  (2 client quotes)
+10. `<CTA />` *(shared)*
+11. `<Footer />` *(shared)*
 
 > **Global rule:** `<Testimonials />` is mandatory on every page and must always render immediately before `<CTA />` (last content section). Eyebrow must be `TESTIMONIALS`; H2 must be `What our clients have to say`.
 
@@ -104,26 +103,7 @@ Reproduces the 4-capability pillar section from source.
 | `Shield24Regular` | `Enhanced security` | Protect your business with robust cloud security measures that safeguard data and ensure compliance. |
 | `Beaker24Regular` | `Operational resilience` | Build a resilient infrastructure that can adapt to disruptions, ensuring continuous business operations. |
 
-### 3.4 ServiceProducts — "Cloud optimization products"
-
-Reproduces source product references: 3 product cards highlighting MAQ solutions for cloud.
-
-- **Eyebrow:** `OUR PRODUCTS`
-- **Title:** `Cloud optimization products`
-- **Subhead:** `Solutions designed to accelerate and streamline your cloud journey.`
-- **Layout:** 3-column grid (2-col below 960, 1-col below 640).
-
-**Cards:**
-
-| Product | Logo initials | Tagline | Description | Link |
-|---|---|---|---|---|
-| `MigrateFAST` | `MF` | AI-assisted cloud migration | AI-powered migration of legacy DW / ETL / BI to Azure and Microsoft Fabric — up to 70% faster delivery. | `/products/migratefast` (internal) |
-| `LoadFAST` | `LF` | High-performance data loading | Accelerate data ingestion into cloud data warehouses with optimized ETL performance. | `/products/loadfast` (internal) |
-| `EmbedFAST` | `EF` | Embedded analytics at scale | Deploy secure, multi-tenant analytics in your cloud applications with role-based security. | `/products/embedfast` (internal) |
-
-- **Footer link below grid:** `See all products →` → `/products`.
-
-### 3.5 ServiceCaseStudies — "Related case studies"
+### 3.4 ServiceCaseStudies — "Related case studies"
 
 - **Eyebrow:** `RELATED CASE STUDIES`
 - **Title:** `How clients are accelerating cloud transformation`
@@ -139,7 +119,7 @@ Reproduces source product references: 3 product cards highlighting MAQ solutions
 
 - **Footer link below grid:** `See all cloud case studies →` → `/case-studies.html?filter=cloud-optimization`.
 
-### 3.6 ServiceInsights — "Our cloud optimization insights"
+### 3.5 ServiceInsights — "Our cloud optimization insights"
 
 - **Eyebrow:** `INSIGHTS`
 - **Title:** `Our cloud optimization insights`
@@ -155,7 +135,7 @@ Reproduces source product references: 3 product cards highlighting MAQ solutions
 
 - **Footer link below grid:** `See all cloud insights →` → search or tag-based link TBD.
 
-### 3.7 ServiceTestimonials — "What our clients have to say"
+### 3.6 ServiceTestimonials — "What our clients have to say"
 
 - **Eyebrow:** `TESTIMONIALS` (exact text)
 - **Title:** `What our clients have to say` (exact text — site-wide rule)
@@ -169,11 +149,11 @@ Reproduces source product references: 3 product cards highlighting MAQ solutions
 | `MAQ Software managed our complete Azure migration project, reducing infrastructure costs by 35% while improving performance. The team's expertise in cloud optimization and change management was invaluable.` | `CTO — Global financial services firm` |
 | `Their cloud security review identified critical compliance gaps and delivered a zero-trust architecture implementation. We now meet regulatory requirements with confidence and visibility across all cloud resources.` | `Chief Information Security Officer — Enterprise healthcare provider` |
 
-### 3.8 CTA (shared)
+### 3.7 CTA (shared)
 
 Reuses shared `<CTA />` component. No service-specific override required for v1.
 
-### 3.9 Footer
+### 3.8 Footer
 
 Shared `<Footer />`. No changes.
 

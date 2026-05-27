@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
 
 const benefits = [
   { title: "Large-scale migration", desc: "Enables large-scale migration of reports from Tableau to Power BI." },
@@ -111,7 +111,11 @@ export function ProductMigrateFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><CaseStudiesPlaceholder heading="Migration success stories" /></section>
+      <section className={s.sectionAlt}><ProductCaseStudies heading="Migration success stories" studies={[
+        { tag: "SQL migration", title: "Modernizing reporting platforms through AI-driven SQL Migration", teaser: "AI-assisted SQL conversion accelerates legacy reporting platform migration while preserving security and compliance.", href: "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html" },
+        { tag: "Qlik → Power BI", title: "Transitioning legacy reports from Qlik to Power BI", teaser: "AI-assisted Qlik to Power BI migration rebuilding semantic models, RLS, and pixel-perfect layouts on Fabric.", href: "https://blog.maqsoftware.com/2025/06/transitioning-legacy-reports-from-qlik.html" },
+        { tag: "Fabric migration", title: "Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT)", teaser: "Consolidating fragmented data estates onto Microsoft Fabric to unlock a single governed source of truth across the enterprise.", href: "https://blog.maqsoftware.com/2025/07/migrating-to-microsoft-fabric-to-unlock.html" },
+      ]} /></section>
 
       <section className={s.section}>
         <div className={s.inner}>

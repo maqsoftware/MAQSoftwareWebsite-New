@@ -34,12 +34,11 @@ layouts, h2 `28–30px`, body `14px`. No oversized hero.
 4. `<TrustBanner />` *(shared)*
 5. `<ServiceCapabilities />`      — §3.2  (4 capability pillars, tabbed list+detail)
 6. `<ServiceOutcomes />`          — §3.3  (3 business-outcome cards)
-7. `<ServiceProducts />`          — §3.4  (3 product cards: EmbedFAST, LoadFAST, CertyFAST)
-8. `<ServiceCaseStudies />`       — §3.5  (4 related case studies)
-9. `<ServiceInsights />`          — §3.6  (3 blog insights)
-10. `<ServiceTestimonials />`     — §3.7  (2 client quotes)
-11. `<CTA />` *(shared)*
-12. `<Footer />` *(shared)*
+7. `<ServiceCaseStudies />`       — §3.4  (4 related case studies)
+8. `<ServiceInsights />`          — §3.5  (3 blog insights)
+9. `<ServiceTestimonials />`     — §3.6  (2 client quotes)
+10. `<CTA />` *(shared)*
+11. `<Footer />` *(shared)*
 
 > **Global rule:** `<Testimonials />` is mandatory on every page and must always render immediately before `<CTA />` (last content section). Eyebrow must be `TESTIMONIALS`; H2 must be `What our clients have to say`.
 
@@ -105,28 +104,7 @@ Reproduces the 4-capability pillar section from source.
 | `Timer24Regular` | `Faster decision-making` | Enable quicker decision-making by providing stakeholders with real-time, easy-to-understand data visualizations. |
 | `People24Regular` | `Improved data accessibility` | Ensure that critical insights are easily accessible to everyone in your organization, fostering a data-driven culture. |
 
-### 3.4 ServiceProducts — "Reporting & business intelligence products"
-
-Reproduces source: 3 product cards (CertyFAST swapped in over MigrateFAST since
-MigrateFAST already anchors §3.2 capability #2 and is the headline product on
-`/services/data-and-analytics`).
-
-- **Eyebrow:** `OUR PRODUCTS`
-- **Title:** `Reporting & business intelligence products`
-- **Subhead:** `Solutions designed to improve and streamline your Power BI estate.`
-- **Layout:** 3-column grid (2-col below 960, 1-col below 640).
-
-**Cards:**
-
-| Product | Logo initials | Tagline | Description | Link |
-|---|---|---|---|---|
-| `EmbedFAST` | `EF` | Power BI embedding accelerator | Multi-tenant Power BI Embedded with row-level security, deployment automation, and a no-code admin console. | `/products/embedfast` (internal) |
-| `LoadFAST` | `LF` | Report performance optimization | Diagnose slow reports and refresh failures. Prioritized DAX, model, and capacity remediations with measured uplift. | `/products/loadfast` (internal) |
-| `CertyFAST` | `CF` | Power BI quality & certification | Automated Power BI quality, accessibility, and best-practice certification before reports reach production. | `/products/certyfast` (internal) |
-
-- **Footer link below grid:** `See all products →` → `/products`.
-
-### 3.5 ServiceCaseStudies — "Related case studies"
+### 3.4 ServiceCaseStudies — "Related case studies"
 
 - **Eyebrow:** `RELATED CASE STUDIES`
 - **Title:** `How clients are modernizing reporting & BI`
@@ -142,7 +120,7 @@ MigrateFAST already anchors §3.2 capability #2 and is the headline product on
 
 - **Footer link below grid:** `See all reporting & BI case studies →` → `https://maqsoftware.com/case-studies.html?filter=reporting-and-visualization`.
 
-### 3.6 ServiceInsights — "Our reporting & business intelligence insights"
+### 3.5 ServiceInsights — "Our reporting & business intelligence insights"
 
 - **Eyebrow:** `INSIGHTS`
 - **Title:** `Our reporting & business intelligence insights`
@@ -156,7 +134,7 @@ MigrateFAST already anchors §3.2 capability #2 and is the headline product on
 | `Embracing the future of data management with Microsoft Fabric: A setup guide` | A setup guide for adopting Microsoft Fabric end-to-end, from workspace topology to semantic model governance. | https://blog.maqsoftware.com/2023/11/embracing-future-of-data-management.html |
 | `Optimize your Power BI reports and usage with LoadFAST` | How `LoadFAST` finds and ranks the highest-impact DAX, model, and capacity fixes in a Power BI estate. | https://blog.maqsoftware.com/2024/03/transform-your-power-bi.html |
 
-### 3.7 ServiceTestimonials — "What our clients have to say"
+### 3.6 ServiceTestimonials — "What our clients have to say"
 
 - **Eyebrow:** `TESTIMONIALS` (exact text)
 - **Title:** `What our clients have to say` (exact text — site-wide rule)
@@ -170,11 +148,11 @@ MigrateFAST already anchors §3.2 capability #2 and is the headline product on
 | `MAQ Software replatformed our reporting estate onto Microsoft Fabric and Power BI in a quarter. Refresh times dropped, executives finally trust the numbers, and we retired a six-figure legacy BI license.` | `Director, Enterprise BI — Global retailer` |
 | `Their Qlik-to-Power BI migration kept every report pixel-accurate and shaved 60% off the original effort estimate. The MigrateFAST tooling and the team behind it are the real deal.` | `Head of Analytics — Financial services` |
 
-### 3.8 CTA (shared)
+### 3.7 CTA (shared)
 
 Reuses shared `<CTA />` component. No service-specific override required for v1.
 
-### 3.9 Footer
+### 3.8 Footer
 
 Shared `<Footer />`. No changes.
 

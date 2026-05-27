@@ -23,8 +23,9 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
+    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   card: {
@@ -92,32 +93,25 @@ interface Study {
 
 const studies: Study[] = [
   {
-    tag: "Energy & utilities",
-    title: "ADX Implementation in the Energy and Utilities Industry",
+    tag: "Microsoft Fabric",
+    title: "Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT)",
     teaser:
-      "Modernizing data infrastructure with real-time analytics on cloud platforms.",
-    href: "https://blog.maqsoftware.com/2023/06/adx-implementation-for-energy-and.html",
+      "Consolidating fragmented data estates onto Microsoft Fabric to unlock a single, governed source of truth across the enterprise.",
+    href: "https://blog.maqsoftware.com/2025/07/migrating-to-microsoft-fabric-to-unlock.html",
   },
   {
-    tag: "Data modernization",
-    title: "Modernize Data Systems by Migrating to the Cloud",
+    tag: "Snowflake · Fabric",
+    title: "Optimizing data management by integrating Snowflake and Microsoft Fabric",
     teaser:
-      "End-to-end cloud migration strategy delivering cost savings and operational improvements.",
-    href: "https://blog.maqsoftware.com/2020/09/modernize-data-cloud-migration.html",
+      "Bridging Snowflake and Microsoft Fabric to streamline data movement, governance, and cost — without rewriting existing pipelines.",
+    href: "https://blog.maqsoftware.com/2025/03/optimizing-data-management-by.html",
   },
   {
-    tag: "Real estate",
-    title: "ADX Implementation in the Real Estate Industry",
+    tag: "SQL migration",
+    title: "Modernizing reporting platforms through AI-driven SQL Migration",
     teaser:
-      "Cloud-native analytics enabling fast-paced business intelligence for real estate operations.",
-    href: "https://blog.maqsoftware.com/2022/11/adx-implementation-real-estate.html",
-  },
-  {
-    tag: "Analytics & BI",
-    title: "Enabling Fast-Paced BI and Analytics",
-    teaser:
-      "Accelerating BI delivery with cloud data warehouse and analytics best practices.",
-    href: "https://blog.maqsoftware.com/2020/11/azure-fast-paced-bi-analytics.html",
+      "AI-assisted SQL conversion accelerates legacy reporting platform migration while preserving security and compliance.",
+    href: "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html",
   },
 ];
 

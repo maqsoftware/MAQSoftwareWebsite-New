@@ -190,11 +190,11 @@ const technologyCases = [
     href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
   },
   {
-    tag: "Power BI Embedded",
-    title: "Delivering embedded Power BI reporting with EmbedFAST",
+    tag: "AI scaling",
+    title: "Scaling AI for every customer and every developer with MAQ Software",
     teaser:
-      "ISV embeds Power BI into SaaS product using EmbedFAST accelerator.",
-    href: "https://blog.maqsoftware.com/2025/07/delivering-embedded-power-bi-reporting.html",
+      "A reference architecture and delivery model for scaling agentic AI and Copilot adoption to every developer in the enterprise.",
+    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
   },
 ];
 

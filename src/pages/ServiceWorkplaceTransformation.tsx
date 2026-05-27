@@ -325,8 +325,9 @@ const useStyles = makeStyles({
     // Case studies
     caseGrid: {
         display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
+        gridTemplateColumns: "repeat(3, 1fr)",
         gap: "16px",
+        "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
         "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
     },
     caseCard: {
@@ -495,38 +496,6 @@ const outcomes: Outcome[] = [
     },
 ];
 
-interface Product {
-    initials: string;
-    name: string;
-    tagline: string;
-    desc: string;
-    href: string;
-}
-
-const productCards: Product[] = [
-    {
-        initials: "AI",
-        name: "AI-DataLens",
-        tagline: "Conversational analytics",
-        desc: "Talk to your Power BI estate in natural language with row-level security preserved. Citation-backed answers in seconds.",
-        href: "/products/ai-datalens",
-    },
-    {
-        initials: "EF",
-        name: "EmbedFAST",
-        tagline: "Embed Power BI everywhere",
-        desc: "Embed Power BI reports securely into SharePoint, Teams tabs, and custom portals — enabling self-service analytics inside the tools employees already use.",
-        href: "/products/embedfast",
-    },
-    {
-        initials: "FA",
-        name: "Fabric Admin Agent",
-        tagline: "Governance & administration",
-        desc: "Automate Microsoft Fabric tenant administration, policy enforcement, and compliance monitoring with a Copilot-powered agent.",
-        href: "/products/fabric-admin-agent",
-    },
-];
-
 interface CaseStudy {
     tag: string;
     title: string;
@@ -551,17 +520,10 @@ const caseStudies: CaseStudy[] = [
     },
     {
         tag: "Knowledge management",
-        title: "Explore Best Practices for Creating Enterprise-Wide Knowledge Bots",
+        title: "Streamlining information retrieval with AI Copilots",
         teaser:
-            "Patterns for building enterprise knowledge bots that ground answers in organizational content — improving information retrieval productivity.",
-        href: "https://maqsoftware.com/insights/knowledge-bot-best-practices.html",
-    },
-    {
-        tag: "Self-service BI",
-        title: "Empowering self-service using Custom Copilot agent with Power BI Embedded",
-        teaser:
-            "A custom Copilot agent over Power BI Embedded that lets users ask data questions in plain English — reducing report request backlog.",
-        href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html",
+            "Enterprise AI Copilots that ground answers in organizational content — dramatically improving information retrieval productivity for knowledge workers.",
+        href: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html",
     },
 ];
 
@@ -773,40 +735,6 @@ export function ServiceWorkplaceTransformation() {
                             </div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* PRODUCTS */}
-            <section className={s.section}>
-                <div className={s.inner}>
-                    <div className={s.head}>
-                        <span className={s.secEyebrow}>Our products</span>
-                        <h2 className={s.titleSm}>Workplace transformation products</h2>
-                        <p className={s.secSub}>
-                            Solutions designed to accelerate and govern your Microsoft 365
-                            deployment.
-                        </p>
-                    </div>
-                    <div className={s.productsGrid}>
-                        {productCards.map((p) => (
-                            <a
-                                key={p.name}
-                                className={s.productCard}
-                                href={`/#${p.href}`}
-                            >
-                                <div className={s.prodLogo}>{p.initials}</div>
-                                <h3 className={s.prodName}>{p.name}</h3>
-                                <p className={s.prodTagline}>{p.tagline}</p>
-                                <p className={s.prodDesc}>{p.desc}</p>
-                                <span className={s.caseRead}>
-                                    Learn more <ArrowRight16Regular />
-                                </span>
-                            </a>
-                        ))}
-                    </div>
-                    <a className={s.footerLink} href="/#/products">
-                        See all products <ArrowRight16Regular />
-                    </a>
                 </div>
             </section>
 

@@ -15,14 +15,12 @@ import { ServiceHero } from "../components/service/ServiceHero";
 import { TrustBanner } from "../components/TrustBanner";
 import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
 import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
-import { ServiceProducts } from "../components/service/ServiceProducts";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
 import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
 import { CTA } from "../components/CTA";
 import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
-import type { ProductItem } from "../components/service/ServiceProducts";
 import type { CaseStudyItem } from "../components/service/ServiceCaseStudies";
 import type { InsightItem } from "../components/service/ServiceInsights";
 import type { TestimonialItem } from "../components/service/ServiceTestimonials";
@@ -174,37 +172,20 @@ const outcomes: OutcomeItem[] = [
   },
 ];
 
-const products: ProductItem[] = [
-  {
-    name: "Fabric Admin Agent",
-    initials: "FA",
-    tagline: "Governance & administration",
-    desc: "Automate Microsoft Fabric tenant administration, policy enforcement, and compliance monitoring with a Copilot-powered agent.",
-    href: "/products/fabric-admin-agent",
-  },
-  {
-    name: "CertyFAST",
-    initials: "CF",
-    tagline: "Automated certification testing",
-    desc: "Validate Power BI reports against accessibility, performance, and governance rules before deployment — catch compliance gaps in CI/CD.",
-    href: "/products/certyfast",
-  },
-  {
-    name: "LoadFAST",
-    initials: "LF",
-    tagline: "Performance & reliability testing",
-    desc: "Load-test Power BI capacity to ensure reports perform under peak demand — reduce outage risk before it reaches end users.",
-    href: "/products/loadfast",
-  },
-];
-
 const caseStudies: CaseStudyItem[] = [
   {
-    tag: "Data modernization",
-    title: "Modernizing reporting platforms through AI-driven SQL Migration",
+    tag: "Secure Copilot",
+    title: "Building a secure Copilot: Addressing key security challenges",
     teaser:
-      "Migrating legacy reporting platforms with AI-assisted SQL conversion while maintaining security and compliance standards.",
-    href: "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html",
+      "Reference design for shipping enterprise Copilots safely — patterns, guardrails, and identity controls for production deployment.",
+    href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
+  },
+  {
+    tag: "Cybersecurity",
+    title: "Strengthening cybersecurity with Managed Identity and RBAC",
+    teaser:
+      "Eliminating credential sprawl with Azure Managed Identity and enforcing least-privilege access using RBAC across the cloud estate.",
+    href: "https://blog.maqsoftware.com/2024/08/strengthening-cybersecurity.html",
   },
   {
     tag: "Data governance",
@@ -212,20 +193,6 @@ const caseStudies: CaseStudyItem[] = [
     teaser:
       "Establishing centralized data governance and access controls across distributed systems for improved compliance posture.",
     href: "https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html",
-  },
-  {
-    tag: "Financial services",
-    title: "Enhancing fintech analytics to provide millions of borrowers with better loan options",
-    teaser:
-      "Securing and optimizing analytics infrastructure for a fintech serving millions of borrowers with sensitive financial data.",
-    href: "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
-  },
-  {
-    tag: "Policy & compliance",
-    title: "Software Company Monitors Global Affairs via Cloud-Based Policy Portal",
-    teaser:
-      "A cloud-based policy portal enabling a global software company to monitor geopolitical affairs with secure, role-based access controls.",
-    href: "https://blog.maqsoftware.com/2018/07/case-study-software-company-monitors.html",
   },
 ];
 
@@ -286,11 +253,6 @@ export function ServiceSecurityCompliance() {
         title="Your business outcomes"
         subhead="What organizations gain when security and compliance are delivered with engineering discipline."
         outcomes={outcomes}
-      />
-      <ServiceProducts
-        title="Security & compliance products"
-        subhead="Solutions designed to strengthen and automate your security posture."
-        products={products}
       />
       <ServiceCaseStudies
         title="How clients are strengthening their security posture"

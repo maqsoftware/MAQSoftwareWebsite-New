@@ -34,12 +34,11 @@ oversized hero.
 4. `<TrustBanner />` *(shared)*
 5. `<ServiceCapabilities />`      — §3.2  (4 capability pillars, tabbed list+detail)
 6. `<ServiceOutcomes />`          — §3.3  (3 business-outcome cards)
-7. `<ServiceProducts />`          — §3.4  (3 product cards: AI-DataLens, MigrateFAST, Text Analytics Engine)
-8. `<ServiceCaseStudies />`       — §3.5  (4 related case studies)
-9. `<ServiceInsights />`          — §3.6  (3 blog insights)
-10. `<ServiceTestimonials />`     — §3.7  (2 client quotes)
-11. `<CTA />` *(shared)*
-12. `<Footer />` *(shared)*
+7. `<ServiceCaseStudies />`       — §3.4  (4 related case studies)
+8. `<ServiceInsights />`          — §3.5  (3 blog insights)
+9. `<ServiceTestimonials />`     — §3.6  (2 client quotes)
+10. `<CTA />` *(shared)*
+11. `<Footer />` *(shared)*
 
 > **Global rule:** `<Testimonials />` is mandatory on every page and must always render immediately before `<CTA />` (last content section). Eyebrow must be `TESTIMONIALS`; H2 must be `What our clients have to say`.
 
@@ -105,26 +104,7 @@ Reproduces the 4-capability pillar section from source.
 | `Settings24Regular` | `Automated efficiency` | Automate repetitive tasks with intelligent systems, freeing up resources for more strategic initiatives. |
 | `Rocket24Regular` | `Innovation acceleration` | Accelerate your innovation cycles by integrating cutting-edge AI and ML technologies into your business processes. |
 
-### 3.4 ServiceProducts — "Agentic AI & machine learning products"
-
-Reproduces source: 3 product cards.
-
-- **Eyebrow:** `OUR PRODUCTS`
-- **Title:** `Agentic AI & machine learning products`
-- **Subhead:** `Solutions designed to improve and streamline your operations.`
-- **Layout:** 3-column grid (2-col below 960, 1-col below 640).
-
-**Cards:**
-
-| Product | Logo initials | Tagline | Description | Link |
-|---|---|---|---|---|
-| `AI-DataLens` | `AI` | Conversational analytics | Talk to your Power BI estate in natural language with row-level security preserved. Citation-backed answers in seconds. | `/products/ai-datalens` (internal) |
-| `MigrateFAST` | `MF` | AI-assisted migration | AI-powered migration of legacy DW / ETL / BI to Azure and Microsoft Fabric — up to 70% faster delivery. | `/products/migratefast` (internal) |
-| `Text Analytics Engine` | `TA` | Document intelligence | Azure Marketplace text analytics application: classification, summarization, entity extraction and topic modeling at scale. | https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.text_analytics_application_dev?tab=Overview |
-
-- **Footer link below grid:** `See all products →` → `/products`.
-
-### 3.5 ServiceCaseStudies — "Related case studies"
+### 3.4 ServiceCaseStudies — "Related case studies"
 
 - **Eyebrow:** `RELATED CASE STUDIES`
 - **Title:** `How clients are putting agentic AI to work`
@@ -140,7 +120,7 @@ Reproduces source: 3 product cards.
 
 - **Footer link below grid:** `See all AI case studies →` → `https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning`.
 
-### 3.6 ServiceInsights — "Our agentic AI and machine learning insights"
+### 3.5 ServiceInsights — "Our agentic AI and machine learning insights"
 
 - **Eyebrow:** `INSIGHTS`
 - **Title:** `Our agentic AI and machine learning insights`
@@ -154,7 +134,7 @@ Reproduces source: 3 product cards.
 | `Building a secure Copilot: Addressing key security challenges` | Patterns, guardrails, and identity controls for shipping a secure enterprise Copilot. | https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html |
 | `Designing UI for Copilot: Key principles and practices` | UI principles that make Copilot interactions feel trustworthy, fast, and on-brand. | https://blog.maqsoftware.com/2024/08/designing-ui-for-copilot-key-principles.html |
 
-### 3.7 ServiceTestimonials — "What our clients have to say"
+### 3.6 ServiceTestimonials — "What our clients have to say"
 
 - **Eyebrow:** `TESTIMONIALS` (exact text)
 - **Title:** `What our clients have to say` (exact text — site-wide rule)
@@ -168,11 +148,11 @@ Reproduces source: 3 product cards.
 | `MAQ Software helped us productionize an Azure OpenAI agent that now resolves the top 40% of support tickets without human handoff — with full audit trail and policy guardrails.` | `Director, Customer Operations — Enterprise SaaS` |
 | `From discovery to a deployed MLOps pipeline on Azure in eight weeks. Our forecast accuracy improved by double digits and the team is finally shipping models on a predictable cadence.` | `Head of Data Science — Global manufacturer` |
 
-### 3.8 CTA (shared)
+### 3.7 CTA (shared)
 
 Reuses shared `<CTA />` component. No service-specific override required for v1.
 
-### 3.9 Footer
+### 3.8 Footer
 
 Shared `<Footer />`. No changes.
 

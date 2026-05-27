@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular, Server24Regular, Group24Regular, CursorClick24Regular, Bot24Regular, ChartMultiple24Regular, People24Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
 
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview";
 const APPSOURCE_PLANS = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=PlansAndPrice";
@@ -97,7 +97,11 @@ export function ProductLoadFAST() {
         </div>
       </section>
 
-      <section className={s.section}><CaseStudiesPlaceholder heading="LoadFAST success stories" /></section>
+      <section className={s.section}><ProductCaseStudies heading="LoadFAST success stories" studies={[
+        { tag: "Real-time streaming", title: "Increasing efficiency by switching from batch processing to real-time streaming", teaser: "Replacing overnight batch with real-time streaming pipelines — the LoadFAST sweet spot for high-volume ingestion.", href: "https://blog.maqsoftware.com/2024/07/increasing-efficiency-by-switching-from.html" },
+        { tag: "Snowflake · Iceberg", title: "Optimizing data refresh by integrating Snowflake Iceberg tables with Microsoft Fabric", teaser: "Snowflake Iceberg tables integrated with Microsoft Fabric to dramatically reduce data refresh latency and storage cost.", href: "https://blog.maqsoftware.com/2025/08/optimizing-data-refresh-by-integrating.html" },
+        { tag: "Databricks", title: "Unlocking advanced analytics with Databricks", teaser: "Building an advanced analytics platform on Databricks supporting ML, streaming, and large-scale data engineering workloads.", href: "https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html" },
+      ]} /></section>
 
       <section className={s.sectionAlt}>
         <div className={s.inner}>

@@ -30,12 +30,11 @@ oversized hero.
 4. `<TrustBanner />` *(shared)*
 5. `<ServiceCapabilities />`      — §3.2  (4 capability pillars, tabbed list+detail)
 6. `<ServiceOutcomes />`          — §3.3  (3 business-outcome cards)
-7. `<ServiceProducts />`          — §3.4  (3 product cards)
-8. `<ServiceCaseStudies />`       — §3.5  (4 related case studies)
-9. `<ServiceInsights />`          — §3.6  (3 blog insights)
-10. `<ServiceTestimonials />`     — §3.7  (2 client quotes)
-11. `<CTA />` *(shared)*
-12. `<Footer />` *(shared)*
+7. `<ServiceCaseStudies />`       — §3.4  (4 related case studies)
+8. `<ServiceInsights />`          — §3.5  (3 blog insights)
+9. `<ServiceTestimonials />`     — §3.6  (2 client quotes)
+10. `<CTA />` *(shared)*
+11. `<Footer />` *(shared)*
 
 > **Global rule:** `<ServiceTestimonials />` is mandatory on every page and must always render immediately before `<CTA />` (last content section). Eyebrow must be `TESTIMONIALS`; H2 must be `What our clients have to say`.
 
@@ -101,24 +100,7 @@ Reproduces the 4-capability pillar section from source.
 | `LockClosed24Regular` | `Data integrity` | Ensure the confidentiality and integrity of your data. Safeguard your most valuable assets. |
 | `ArrowSync24Regular` | `Operational continuity` | Maintain business continuity with robust security measures that protect against disruptions and ensure ongoing operations, even in the face of cyber-attacks. |
 
-### 3.4 ServiceProducts — "Security & compliance products"
-
-- **Eyebrow:** `OUR PRODUCTS`
-- **Title:** `Security & compliance products`
-- **Subhead:** `Solutions designed to strengthen and automate your security posture.`
-- **Layout:** 3-column grid (2-col below 960, 1-col below 640).
-
-**Cards:**
-
-| Product | Logo initials | Tagline | Description | Link |
-|---|---|---|---|---|
-| `Fabric Admin Agent` | `FA` | Governance & administration | Automate Microsoft Fabric tenant administration, policy enforcement, and compliance monitoring with a Copilot-powered agent. | `/products/fabric-admin-agent` (internal) |
-| `CertyFAST` | `CF` | Automated certification testing | Validate Power BI reports against accessibility, performance, and governance rules before deployment — catch compliance gaps in CI/CD. | `/products/certyfast` (internal) |
-| `LoadFAST` | `LF` | Performance & reliability testing | Load-test Power BI capacity to ensure reports perform under peak demand — reduce outage risk before it reaches end users. | `/products/loadfast` (internal) |
-
-- **Footer link below grid:** `See all products →` → `/products`.
-
-### 3.5 ServiceCaseStudies — "Related case studies"
+### 3.4 ServiceCaseStudies — "Related case studies"
 
 - **Eyebrow:** `RELATED CASE STUDIES`
 - **Title:** `How clients are strengthening their security posture`
@@ -134,7 +116,7 @@ Reproduces the 4-capability pillar section from source.
 
 - **Footer link below grid:** `See all security case studies →` → `https://maqsoftware.com/case-studies.html?filter=security`.
 
-### 3.6 ServiceInsights — "Our security insights"
+### 3.5 ServiceInsights — "Our security insights"
 
 - **Eyebrow:** `INSIGHTS`
 - **Title:** `Our security insights`
@@ -148,7 +130,7 @@ Reproduces the 4-capability pillar section from source.
 | `Building a secure Copilot: Addressing key security challenges` | Patterns, guardrails, and identity controls for shipping a secure enterprise Copilot. | https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html |
 | `Strengthening cybersecurity with Managed Identity and RBAC` | Eliminate credential sprawl with Azure Managed Identity and enforce least-privilege access with RBAC. | https://blog.maqsoftware.com/2024/08/strengthening-cybersecurity.html |
 
-### 3.7 ServiceTestimonials — "What our clients have to say"
+### 3.6 ServiceTestimonials — "What our clients have to say"
 
 - **Eyebrow:** `TESTIMONIALS` (exact text)
 - **Title:** `What our clients have to say` (exact text — site-wide rule)
@@ -162,11 +144,11 @@ Reproduces the 4-capability pillar section from source.
 | `MAQ Software implemented a zero-trust architecture across our Azure tenant in under six weeks — our compliance audit passed with zero findings for the first time.` | `CISO — Enterprise financial services` |
 | `Their Sentinel deployment and custom detection rules cut our mean time to detect from days to minutes. The team operates like an extension of our own security org.` | `VP of IT Security — Global retailer` |
 
-### 3.8 CTA (shared)
+### 3.7 CTA (shared)
 
 Reuses shared `<CTA />` component. No service-specific override required for v1.
 
-### 3.9 Footer
+### 3.8 Footer
 
 Shared `<Footer />`. No changes.
 

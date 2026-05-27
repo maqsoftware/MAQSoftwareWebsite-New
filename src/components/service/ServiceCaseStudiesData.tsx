@@ -23,8 +23,9 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
+    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   card: {
@@ -92,24 +93,25 @@ interface Study {
 
 const studies: Study[] = [
   {
-    tag: "Event information",
-    title: "Enhancing event information access with Copilot technology",
-    href: "https://blog.maqsoftware.com/2024/08/streamlining-event-information-access.html",
+    tag: "Microsoft Fabric · OneLake",
+    title: "Unifying disconnected data systems using Microsoft Fabric and OneLake",
+    teaser:
+      "Siloed enterprise data unified on OneLake for a single governed surface powering analytics, reporting and AI.",
+    href: "https://blog.maqsoftware.com/2026/01/unifying-disconnected-data-systems.html",
   },
   {
-    tag: "Real-time streaming",
-    title: "Increasing efficiency by switching from batch processing to real-time streaming",
-    href: "https://blog.maqsoftware.com/2024/07/increasing-efficiency-by-switching-from.html",
+    tag: "Snowflake · Iceberg",
+    title: "Optimizing data refresh by integrating Snowflake iceberg tables with Microsoft Fabric",
+    teaser:
+      "Snowflake Iceberg tables integrated with Microsoft Fabric to dramatically reduce data refresh latency and storage cost.",
+    href: "https://blog.maqsoftware.com/2025/08/optimizing-data-refresh-by-integrating.html",
   },
   {
-    tag: "Information retrieval",
-    title: "Streamlining information retrieval with AI Copilots",
-    href: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html",
-  },
-  {
-    tag: "Task management",
-    title: "Optimizing task management with smart recommendations",
-    href: "https://blog.maqsoftware.com/2024/06/optimizing-task-management-with-smart.html",
+    tag: "Databricks",
+    title: "Unlocking advanced analytics with Databricks",
+    teaser:
+      "Building an advanced analytics platform on Databricks to support ML, streaming, and large-scale data engineering workloads.",
+    href: "https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html",
   },
 ];
 

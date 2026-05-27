@@ -52,6 +52,8 @@ const useStyles = makeStyles({
     cursor: "pointer",
     display: "flex",
     flexDirection: "column",
+    textDecoration: "none",
+    color: "inherit",
     ":hover": {
       border: `1px solid var(--maq-blue)`,
       boxShadow: "var(--maq-shadow-sm)",
@@ -60,7 +62,7 @@ const useStyles = makeStyles({
   },
   tag: { alignSelf: "flex-start", marginBottom: "16px" },
   num: {
-    fontSize: "40px",
+    fontSize: "32px",
     fontWeight: 700,
     color: "var(--maq-blue)",
     lineHeight: 1,
@@ -68,7 +70,7 @@ const useStyles = makeStyles({
     letterSpacing: "-0.02em",
   },
   title2: {
-    fontSize: "15px",
+    fontSize: "16px",
     fontWeight: 600,
     color: "var(--maq-navy)",
     marginBottom: "8px",
@@ -96,49 +98,37 @@ interface Case {
   metric: string;
   title: string;
   teaser: string;
+  href: string;
   color: "brand" | "success" | "warning" | "danger" | "informative";
 }
 
 const cases: Case[] = [
   {
     industry: "Retail",
-    metric: "8×",
-    title: "Faster report refresh for a top-3 US retailer",
+    metric: "2026",
+    title: "Reshaping retail with agentic AI solutions",
     teaser:
-      "200+ legacy SSRS reports migrated to Microsoft Fabric in 8 weeks. Refresh time dropped from 3.2s to 0.4s, unifying 12 regional BUs on OneLake.",
-    color: "brand",
-  },
-  {
-    industry: "Financial services",
-    metric: "60%",
-    title: "Less contract review time at a Fortune 100 insurer",
-    teaser:
-      "Azure OpenAI agent reviews contracts clause-by-clause with a full audit trail — cutting cycle time from weeks to days.",
-    color: "informative",
+      "Agentic AI deployed across pricing, merchandising, and store operations — unlocking faster decisions and resilient supply chains for a global retailer.",
+    href: "https://blog.maqsoftware.com/2026/02/reshaping-retail-with-agentic-ai.html",
+    color: "danger",
   },
   {
     industry: "Technology",
-    metric: "$3.4M",
-    title: "Annual savings via Azure-native migration",
+    metric: "2026",
+    title: "Accelerating software development with agentic AI solutions",
     teaser:
-      "On-prem analytics workloads moved to a Medallion architecture with zero production downtime — and 4× faster queries.",
-    color: "success",
+      "Agentic AI woven through the SDLC to accelerate coding, review, and release — lifting developer throughput across an ISV's engineering org.",
+    href: "https://blog.maqsoftware.com/2026/02/accelerating-software-development-with.html",
+    color: "informative",
   },
   {
-    industry: "Financial services — Fintech",
-    metric: "Millions",
-    title: "Enhanced fintech analytics for better loan options",
+    industry: "Reporting & BI",
+    metric: "2026",
+    title: "Delivering accurate business intelligence insights with a Fabric data agent",
     teaser:
-      "Real-time lending analytics platform helping millions of borrowers find the right loan, faster.",
-    color: "warning",
-  },
-  {
-    industry: "Retail — Grocery",
-    metric: "Real-time",
-    title: "Real-time reporting for an organic supermarket chain",
-    teaser:
-      "Replaced overnight batch jobs with streaming pipelines, giving store managers live KPIs every minute.",
-    color: "danger",
+      "A Microsoft Fabric data agent answers business questions with citation-backed accuracy, replacing brittle hand-built dashboards.",
+    href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
+    color: "brand",
   },
 ];
 
@@ -153,13 +143,19 @@ export function CaseStudies() {
             What clients achieve with MAQ Software
           </h2>
           <p className={s.sub}>
-            Outcomes from real engagements — across retail, financial services,
-            healthcare, and technology.
+            Outcomes from real engagements — across retail, technology, and
+            reporting &amp; BI.
           </p>
         </div>
         <div className={s.grid}>
           {cases.map((c) => (
-            <article key={c.title} className={s.card}>
+            <a
+              key={c.title}
+              className={s.card}
+              href={c.href}
+              target="_blank"
+              rel="noreferrer"
+            >
               <Badge
                 appearance="tint"
                 color={c.color}
@@ -174,7 +170,7 @@ export function CaseStudies() {
               <Link className={s.more} appearance="subtle">
                 Read full story <ArrowRight20Regular fontSize={14} />
               </Link>
-            </article>
+            </a>
           ))}
         </div>
       </div>
