@@ -52,7 +52,7 @@ section padding `48–56px`, h2 `28–30px`, body `14px`, multi-column layouts.
 - **Padding:** `48px 32px`.
 
 **Copy (literal):**
-- **Eyebrow:** `FABRIC CAPACITY AI`
+- **Eyebrow:** `FABRIC WORKLOAD`
 - **H1:** `AI-powered capacity management for Microsoft Fabric`
 - **Subhead:**
   > Fabric Admin Agent gives Microsoft Fabric administrators an AI copilot for capacity. It detects anomalies and usage spikes in real time, forecasts upcoming demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost — so platform teams stay ahead of capacity issues instead of firefighting them.

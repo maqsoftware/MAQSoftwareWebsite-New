@@ -179,14 +179,14 @@ export const products: Product[] = [
     slug: "fabric-admin-agent",
     initials: "FA",
     name: "Fabric Admin Agent",
-    tagline: "Fabric capacity AI",
+    tagline: "Fabric Workload",
     shortDesc:
       "AI-powered capacity management for Microsoft Fabric admins. Detects anomalies and spikes in real time, forecasts demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost.",
     longDesc:
       "Fabric Admin Agent gives Microsoft Fabric administrators an AI copilot for capacity. It detects anomalies and usage spikes in real time, forecasts upcoming demand, and recommends concrete actions to reduce throttling, eliminate idle waste, and right-size spend — so platform teams stay ahead of capacity issues instead of firefighting them.",
     heroIcon: <Settings24Regular />,
     image: illustration("gauge"),
-    tags: ["Fabric", "AI Agent", "Governance"],
+    tags: ["Fabric Workload"],
     features: [
       { title: "24/7 health monitoring", desc: "Capacity utilization, refresh SLAs, and item failures tracked across every workspace." },
       { title: "Proactive risk alerts", desc: "Surface issues before business users hit broken reports or throttled queries." },
@@ -216,7 +216,7 @@ export const products: Product[] = [
       "MigrateFAST is an AI-assisted migration factory for enterprises moving off legacy BI and data-prep stacks. It parses your existing estate — Tableau workbooks, SAP BusinessObjects universes and Web Intelligence reports, Crystal Reports, Qlik apps, Alteryx workflows, and Informatica mappings — and generates equivalent Power BI semantic models, Microsoft Fabric pipelines, and Fabric Warehouse objects with traceable lineage and side-by-side validation.",
     heroIcon: <ArrowSwap24Regular />,
     image: illustration("swap"),
-    tags: ["Power BI", "Fabric", "Tableau", "SAP BO", "Qlik"],
+    tags: ["Fabric", "Power BI", "AI Powered"],
     features: [
       { title: "Multi-source coverage", desc: "Tableau, SAP BusinessObjects (Web Intelligence, Crystal), Qlik Sense / QlikView, Alteryx, and Informatica PowerCenter parsed by a single toolchain." },
       { title: "AI-assisted code conversion", desc: "70%+ of legacy SQL, ETL flows, and report definitions converted automatically with human-in-the-loop QA." },
@@ -247,7 +247,7 @@ export const products: Product[] = [
       "EmbedFAST is a production-grade framework for embedding Power BI into SaaS products. It handles tenant isolation, token lifecycle, theming, and usage telemetry — so your engineering team focuses on product, not on plumbing.",
     heroIcon: <Code24Regular />,
     image: illustration("embed"),
-    tags: ["Power BI", "SaaS", "Embedded analytics"],
+    tags: ["Power BI", "SaaS"],
     features: [
       { title: "Multi-tenant security", desc: "RLS, OLS, and workspace partitioning patterns proven across enterprise SaaS deployments." },
       { title: "Token management", desc: "Automated embed-token rotation and capacity assignment." },
@@ -276,7 +276,7 @@ export const products: Product[] = [
       "AI-DataLens turns Power BI semantic models into a chat interface. Business users ask questions in plain English; the agent returns governed, citation-backed answers — respecting every row-level security rule, workspace permission, and audit policy you already have in place.",
     heroIcon: <Bot24Regular />,
     image: illustration("chat"),
-    tags: ["GenAI", "Power BI", "Azure OpenAI"],
+    tags: ["Gen AI", "Power BI", "Conversational AI"],
     features: [
       { title: "Natural language over Power BI", desc: "Ask questions across any certified semantic model — no DAX, no report-hopping." },
       { title: "Row-level security preserved", desc: "Every answer respects RLS, OLS, and workspace permissions out of the box." },
@@ -306,7 +306,7 @@ export const products: Product[] = [
       "LoadFAST is a web application that load-tests Power BI environments on Microsoft Fabric. Build collections of reports and pages, simulate concurrent users and real interactions (slicers, filters, RLS), and get capacity-sizing insights — so you avoid both throttling and over-provisioning.",
     heroIcon: <CloudArrowUp24Regular />,
     image: illustration("ingest"),
-    tags: ["Power BI", "Fabric", "Performance"],
+    tags: ["Power BI", "Performance"],
     features: [
       { title: "Optimize capacity", desc: "Identify the ideal capacity setup across multiple reports — no under- or over-provisioning." },
       { title: "Simulate real-time user traffic", desc: "Model concurrent users, slicers, filters, and RLS to replicate real-world workloads on your capacity." },
@@ -335,7 +335,7 @@ export const products: Product[] = [
       "CertyFAST runs your Power BI certification gate as code. Every promoted report passes through automated lineage, performance, accessibility, and data-quality checks — so your certified badge actually means something.",
     heroIcon: <ShieldCheckmark24Regular />,
     image: illustration("shield"),
-    tags: ["Governance", "Power BI", "Quality"],
+    tags: ["Power BI", "Quality", "Governance"],
     features: [
       { title: "Automated certification gates", desc: "Lineage, perf, accessibility, and DQ checks run on every promotion." },
       { title: "Lineage at scale", desc: "Trace any visual back to its measure, table, source — and back again." },

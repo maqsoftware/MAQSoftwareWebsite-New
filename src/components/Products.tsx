@@ -107,16 +107,16 @@ const products: Product[] = [
   {
     initials: "FA",
     name: "Fabric Admin Agent",
-    tagline: "Fabric capacity AI",
+    tagline: "Fabric Workload",
     desc: "AI-powered capacity management for Microsoft Fabric admins. Detects anomalies and spikes in real time, forecasts demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost.",
-    tags: ["Fabric", "AI Agent"],
+    tags: ["Fabric Workload"],
   },
   {
     initials: "MF",
     name: "MigrateFAST",
     tagline: "Migration accelerator",
     desc: "AI-powered migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
-    tags: ["Azure", "Fabric", "AppSource"],
+    tags: ["Fabric", "Power BI", "AI Powered"],
   },
   {
     initials: "EF",
@@ -130,7 +130,7 @@ const products: Product[] = [
     name: "AI-DataLens",
     tagline: "Conversational analytics",
     desc: "Interact with enterprise datasets in natural language. No SQL or DAX — ask questions and get instant answers, with row-level security and audit preserved.",
-    tags: ["GenAI", "Power BI"],
+    tags: ["Gen AI", "Power BI", "Conversational AI"],
   },
   {
     initials: "LF",
@@ -144,7 +144,7 @@ const products: Product[] = [
     name: "CertyFAST",
     tagline: "Power BI quality control",
     desc: "Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.",
-    tags: ["Governance", "Power BI"],
+    tags: ["Power BI", "Quality", "Governance"],
   },
 ];
 

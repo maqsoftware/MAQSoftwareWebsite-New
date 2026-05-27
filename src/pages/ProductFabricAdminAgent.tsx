@@ -473,7 +473,7 @@ export function ProductFabricAdminAgent() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Fabric capacity AI</span>
+            <span className={s.eyebrow}>Fabric Workload</span>
             <h1 className={s.h1}>
               AI-powered capacity management for Microsoft Fabric
             </h1>
