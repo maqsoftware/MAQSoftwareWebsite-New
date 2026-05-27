@@ -138,7 +138,6 @@ const contact = [
 - Headline references MAQ's positioning around Microsoft Fabric, agentic AI, data analytics.
 - Primary CTA scrolls to `#contact`. Secondary CTA scrolls to `#services` or `#case-studies`.
 - Light background; no hero image required (typography-led).
-- **Spacing:** section padding `32px 32px`; eyebrow→h1 `12px`; h1→subhead `12px`; subhead→CTA buttons `32px` (deliberate breathing room before CTAs).
 
 ### 4.4 TrustBanner (`TrustBanner.tsx`)
 - Single-line strip below hero: "Trusted credentials:" + a row of credential chips.
@@ -246,7 +245,7 @@ This section is the **source of truth for all rendered text** on the home page. 
   - Primary button: `Request a demo` → `#contact`
 
 ### 8.3 Hero
-- **Eyebrow** (with star icon): `Microsoft Fabric Featured Partner · Top 25 Global Microsoft Partner`
+- **Eyebrow:** **REMOVED** (was `Microsoft Fabric Featured Partner · Top 25 Global Microsoft Partner` with star icon).
 - **H1:** `Turn data into decisions ` + `faster` (red) + ` with AI-powered analytics`
 - **Subhead:** `As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree, MAQ Software brings 25 years of enterprise delivery to every engagement. Whether you're modernizing a legacy BI stack, migrating to the cloud, or scaling AI across your organization — our 1,800+ engineers deliver outcomes, not just recommendations.`
 - **Primary CTA:** `Request a demo` (calendar icon) → `#contact`

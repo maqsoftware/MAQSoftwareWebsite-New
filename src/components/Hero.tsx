@@ -8,7 +8,6 @@ import {
 import {
   CalendarLtr20Regular,
   ArrowRight20Regular,
-  StarFilled,
 } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
@@ -56,7 +55,7 @@ const useStyles = makeStyles({
     fontSize: "17px",
     lineHeight: 1.6,
     color: "var(--maq-text-muted)",
-    marginBottom: "32px",
+    marginBottom: "40px",
     maxWidth: "580px",
   },
   btns: { display: "flex", gap: "12px", marginBottom: "0", flexWrap: "wrap" },
@@ -130,10 +129,6 @@ export function Hero() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>
-            <StarFilled fontSize={14} /> Microsoft Fabric Featured Partner ·
-            Top 25 Global Microsoft Partner
-          </span>
           <h1 className={s.h1}>
             Turn data into decisions <em className={s.em}>faster</em> with
             AI-powered analytics
