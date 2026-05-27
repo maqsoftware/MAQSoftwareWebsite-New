@@ -2,6 +2,21 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
+export interface ProductItem {
+  name: string;
+  initials: string;
+  tagline: string;
+  desc: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface ServiceProductsProps {
+  title?: string;
+  subhead?: string;
+  products?: ProductItem[];
+}
+
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -103,7 +118,7 @@ interface Product {
   external?: boolean;
 }
 
-const products: Product[] = [
+const defaultProducts: Product[] = [
   {
     name: "AI-DataLens",
     initials: "AI",
@@ -128,15 +143,19 @@ const products: Product[] = [
   },
 ];
 
-export function ServiceProducts() {
+export function ServiceProducts({
+  title = "Agentic AI & machine learning products",
+  subhead = "Solutions designed to improve and streamline your operations.",
+  products = defaultProducts,
+}: ServiceProductsProps = {}) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
-          <h2 className={s.title}>Agentic AI &amp; machine learning products</h2>
-          <p className={s.sub}>Solutions designed to improve and streamline your operations.</p>
+          <h2 className={s.title}>{title}</h2>
+          <p className={s.sub}>{subhead}</p>
         </div>
         <div className={s.grid}>
           {products.map((p) => {

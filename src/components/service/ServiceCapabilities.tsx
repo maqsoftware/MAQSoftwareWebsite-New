@@ -9,6 +9,24 @@ import {
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
 
+export interface Capability {
+  name: string;
+  tagline: string;
+  description: string;
+  icon: ReactNode;
+  tags: string[];
+}
+
+export interface ServiceCapabilitiesProps {
+  sectionId?: string;
+  title?: string;
+  subhead?: string;
+  capabilities?: Capability[];
+  footerLabel?: string;
+  footerHref?: string;
+  mailSubjectSuffix?: string;
+}
+
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -133,7 +151,7 @@ const useStyles = makeStyles({
   },
 });
 
-interface Capability {
+interface CapabilityInternal {
   name: string;
   tagline: string;
   description: string;
@@ -141,7 +159,7 @@ interface Capability {
   tags: string[];
 }
 
-const capabilities: Capability[] = [
+const defaultCapabilities: CapabilityInternal[] = [
   {
     name: "Agentic AI",
     tagline: "Innovate with agentic AI",
@@ -176,20 +194,25 @@ const capabilities: Capability[] = [
   },
 ];
 
-export function ServiceCapabilities() {
+export function ServiceCapabilities({
+  sectionId = "ai-capabilities",
+  title = "Our agentic AI and machine learning capabilities",
+  subhead = "Four capability pillars that turn raw data and LLM power into governed, production-grade business automation.",
+  capabilities = defaultCapabilities,
+  footerLabel = "See agentic AI case studies",
+  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
+  mailSubjectSuffix = "Agentic AI & ML",
+}: ServiceCapabilitiesProps = {}) {
   const s = useStyles();
   const [active, setActive] = useState(0);
   const sel = capabilities[active];
   return (
-    <section className={s.section} id="ai-capabilities">
+    <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
-          <h2 className={s.title}>Our agentic AI and machine learning capabilities</h2>
-          <p className={s.sub}>
-            Four capability pillars that turn raw data and LLM power into
-            governed, production-grade business automation.
-          </p>
+          <h2 className={s.title}>{title}</h2>
+          <p className={s.sub}>{subhead}</p>
         </div>
         <div className={s.panel}>
           <div>
@@ -208,7 +231,7 @@ export function ServiceCapabilities() {
               className={s.knowMore}
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Agentic AI & ML"
+                sel.name + " - " + mailSubjectSuffix
               )}`}
             >
               Know more
@@ -234,11 +257,11 @@ export function ServiceCapabilities() {
         </div>
         <a
           className={s.footerLink}
-          href="https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning"
+          href={footerHref}
           target="_blank"
           rel="noreferrer"
         >
-          See agentic AI case studies <ArrowRight16Regular />
+          {footerLabel} <ArrowRight16Regular />
         </a>
       </div>
     </section>

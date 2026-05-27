@@ -6,6 +6,18 @@ import {
   Rocket24Regular,
 } from "@fluentui/react-icons";
 
+export interface OutcomeItem {
+  icon: ReactNode;
+  title: string;
+  desc: string;
+}
+
+export interface ServiceOutcomesProps {
+  title?: string;
+  subhead?: string;
+  outcomes?: OutcomeItem[];
+}
+
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
@@ -70,7 +82,7 @@ interface Outcome {
   desc: string;
 }
 
-const outcomes: Outcome[] = [
+const defaultOutcomes: Outcome[] = [
   {
     icon: <Lightbulb24Regular />,
     title: "Enhanced decision-making",
@@ -88,17 +100,19 @@ const outcomes: Outcome[] = [
   },
 ];
 
-export function ServiceOutcomes() {
+export function ServiceOutcomes({
+  title = "Your business outcomes",
+  subhead = "What organizations gain when agentic AI is delivered with engineering discipline.",
+  outcomes = defaultOutcomes,
+}: ServiceOutcomesProps = {}) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Business outcomes</span>
-          <h2 className={s.title}>Your business outcomes</h2>
-          <p className={s.sub}>
-            What organizations gain when agentic AI is delivered with engineering discipline.
-          </p>
+          <h2 className={s.title}>{title}</h2>
+          <p className={s.sub}>{subhead}</p>
         </div>
         <div className={s.grid}>
           {outcomes.map((o) => (

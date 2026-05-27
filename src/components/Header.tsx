@@ -83,7 +83,7 @@ const services: NavItem[] = [
   { label: "Reporting & business intelligence", href: "/services/reporting-bi" },
   { label: "Business apps & process automation", href: "/services/business-apps" },
   { label: "Cloud infrastructure & modernization" },
-  { label: "Security & compliance" },
+  { label: "Security & compliance", href: "/services/security-compliance" },
   { label: "Workplace transformation & productivity" },
 ];
 

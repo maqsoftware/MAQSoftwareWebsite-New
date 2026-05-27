@@ -19,6 +19,7 @@ import { ComponentLab } from "./pages/ComponentLab";
 import { ServiceAgenticAI } from "./pages/ServiceAgenticAI";
 import { ServiceReportingBI } from "./pages/ServiceReportingBI";
 import { ServiceBusinessApps } from "./pages/ServiceBusinessApps";
+import { ServiceSecurityCompliance } from "./pages/ServiceSecurityCompliance";
 import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 
 const useStyles = makeStyles({
@@ -41,6 +42,7 @@ export function App() {
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
         <Route path="/services/reporting-bi" element={<ServiceReportingBI />} />
         <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
+        <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
         <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
         <Route path="/products" element={<ProductsHome />} />
         <Route
