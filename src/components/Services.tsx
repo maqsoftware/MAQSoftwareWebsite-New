@@ -85,32 +85,32 @@ const services: Svc[] = [
   {
     icon: <Bot24Regular />,
     name: "AI solutions & agentic automation",
-    desc: "Production GenAI agents, copilots, and ML systems on Azure OpenAI and Databricks — automating high-value workflows from contract review to demand forecasting.",
+    desc: "Production GenAI agents, copilots, and ML systems built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting.",
   },
   {
     icon: <DataPie24Regular />,
     name: "Data engineering & analytics",
-    desc: "Medallion architectures, governed lakehouses, and high-throughput pipelines on Microsoft Fabric, Synapse, Snowflake, and Databricks — built for scale and trust.",
+    desc: "Medallion architectures, governed lakehouses, and high-throughput pipelines on Microsoft Fabric, Snowflake, and Databricks — built for scale and trust.",
   },
   {
     icon: <ChartMultiple24Regular />,
     name: "Reporting & business intelligence",
-    desc: "Microsoft Power BI Partner of the Year. We modernize legacy BI stacks (SSRS, Tableau, Cognos) into real-time Power BI on Fabric — up to 8× faster refresh.",
+    desc: "Microsoft Power BI Partner of the Year (2021). We build, modernize, and migrate BI stacks — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, MicroStrategy — into real-time Power BI on Microsoft Fabric.",
   },
   {
     icon: <AppFolder24Regular />,
     name: "Business apps & process automation",
-    desc: "Custom apps on .NET, React, and Power Platform that streamline operations — paired with Power Automate flows that retire manual handoffs across teams.",
+    desc: "Custom apps on .NET, React, and Power Platform — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations.",
   },
   {
     icon: <Cloud24Regular />,
     name: "Cloud infrastructure & modernization",
-    desc: "Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture with zero downtime — and 30–40% lower run cost on average.",
+    desc: "Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture — delivering 30–40% lower run cost on average across enterprise workloads.",
   },
   {
     icon: <ShieldCheckmark24Regular />,
     name: "Security & compliance",
-    desc: "ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview implementations aligned to your regulatory landscape.",
+    desc: "ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape.",
   },
   {
     icon: <PeopleTeam24Regular />,

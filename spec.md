@@ -285,12 +285,12 @@ This section is the **source of truth for all rendered text** on the home page. 
 
 | Name | Description |
 |---|---|
-| `AI solutions & agentic automation` | Production GenAI agents, copilots, and ML systems on Azure OpenAI and Databricks — automating high-value workflows from contract review to demand forecasting. |
-| `Data engineering & analytics` | Medallion architectures, governed lakehouses, and high-throughput pipelines on Microsoft Fabric, Synapse, Snowflake, and Databricks — built for scale and trust. |
-| `Reporting & business intelligence` | Microsoft Power BI Partner of the Year. We modernize legacy BI stacks (SSRS, Tableau, Cognos) into real-time Power BI on Fabric — up to 8× faster refresh. |
-| `Business apps & process automation` | Custom apps on .NET, React, and Power Platform that streamline operations — paired with Power Automate flows that retire manual handoffs across teams. |
-| `Cloud infrastructure & modernization` | Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture with zero downtime — and 30–40% lower run cost on average. |
-| `Security & compliance` | ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview implementations aligned to your regulatory landscape. |
+| `AI solutions & agentic automation` | Production GenAI agents, copilots, and ML systems built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting. |
+| `Data engineering & analytics` | Medallion architectures, governed lakehouses, and high-throughput pipelines on Microsoft Fabric, Snowflake, and Databricks — built for scale and trust. |
+| `Reporting & business intelligence` | Microsoft Power BI Partner of the Year (2021). We build, modernize, and migrate BI stacks — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, MicroStrategy — into real-time Power BI on Microsoft Fabric. |
+| `Business apps & process automation` | Custom apps on .NET, React, and Power Platform — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations. |
+| `Cloud infrastructure & modernization` | Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture — delivering 30–40% lower run cost on average across enterprise workloads. |
+| `Security & compliance` | ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape. |
 | `Workplace transformation & productivity` | Microsoft 365, Teams, SharePoint, and Copilot rollouts that drive adoption — not just deployment. Change management included. |
 
 > Note: section §4.5 currently lists six service categories matching maqsoftware.com; the rendered card list is seven (adds Workplace transformation). Reconcile to whichever the spec dictates — current implementation = seven.
