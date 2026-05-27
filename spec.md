@@ -246,7 +246,7 @@ This section is the **source of truth for all rendered text** on the home page. 
 ### 8.3 Hero
 - **Eyebrow:** **REMOVED** (was `Microsoft Fabric Featured Partner · Top 25 Global Microsoft Partner` with star icon).
 - **H1:** `Turn data into decisions ` + `faster` (red) + ` with AI-powered analytics`
-- **Subhead:** `As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree, MAQ Software brings 25 years of enterprise delivery to every engagement. Whether you're modernizing a legacy BI stack, migrating to the cloud, or scaling AI across your organization — our 1,800+ engineers deliver outcomes, not just recommendations.`
+- **Subhead:** `A Microsoft Fabric Featured Partner with deep engineering across Snowflake and Databricks — we modernize legacy BI, migrate workloads to the cloud, and ship production GenAI agents on Microsoft Foundry. One partner across the full data and AI stack, with industry-specific accelerators that move you from pilot to production in weeks.`
 - **Primary CTA:** `Request a demo` (calendar icon) → `#contact`
 - **Secondary CTA:** `View case studies` (arrow icon, right) → `#case-studies`
 - **Stats row:** **REMOVED** (no longer rendered; numbers retained in subhead prose only).

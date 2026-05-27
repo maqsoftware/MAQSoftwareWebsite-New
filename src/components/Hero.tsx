@@ -134,11 +134,11 @@ export function Hero() {
             AI-powered analytics
           </h1>
           <Body1 as="p" className={s.sub}>
-            As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree,
-            MAQ Software brings 26 years of enterprise delivery to every
-            engagement. Whether you're modernizing a legacy BI stack, migrating
-            to the cloud, or scaling AI across your organization — our 1,800+
-            engineers deliver outcomes, not just recommendations.
+            A Microsoft Fabric Featured Partner with deep engineering across
+            Snowflake and Databricks — we modernize legacy BI, migrate workloads
+            to the cloud, and ship production GenAI agents on Microsoft Foundry.
+            One partner across the full data and AI stack, with industry-specific
+            accelerators that move you from pilot to production in weeks.
           </Body1>
           <div className={s.btns}>
             <Button
