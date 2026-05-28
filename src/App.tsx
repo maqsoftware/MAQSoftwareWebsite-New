@@ -25,6 +25,7 @@ import { ServiceSecurityCompliance } from "./pages/ServiceSecurityCompliance";
 import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 import { ServiceWorkplaceTransformation } from "./pages/ServiceWorkplaceTransformation";
 import { PartnershipSnowflake } from "./pages/PartnershipSnowflake";
+import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 
 const useStyles = makeStyles({
   root: {
@@ -51,6 +52,15 @@ export function App() {
         <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
         <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
         <Route path="/services/workplace-transformation" element={<ServiceWorkplaceTransformation />} />
+        <Route
+          path="/partnerships/microsoft"
+          element={
+            <>
+              <PartnershipMicrosoft />
+              <CTA />
+            </>
+          }
+        />
         <Route
           path="/partnerships/snowflake"
           element={
