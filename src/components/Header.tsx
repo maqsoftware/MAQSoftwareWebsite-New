@@ -104,6 +104,10 @@ const insights: NavItem[] = [
   { label: "Best practice guides", href: "/insights/best-practice-guides" },
 ];
 
+const aboutUs: NavItem[] = [
+  { label: "Who we are", href: "/who-we-are" },
+];
+
 const contact: NavItem[] = [
   { label: "Talk to sales" },
   { label: "Customer success" },
@@ -174,9 +178,7 @@ export function Header() {
         <MegaMenu label="Industries" items={industries} btnClass={s.navBtn} />
         <MegaMenu label="Partnerships" items={partnerships} btnClass={s.navBtn} />
         <MegaMenu label="Insights" items={insights} btnClass={s.navBtn} />
-        <Button appearance="subtle" className={s.navBtn}>
-          About Us
-        </Button>
+        <MegaMenu label="About Us" items={aboutUs} btnClass={s.navBtn} />
         <MegaMenu label="Contact Us" items={contact} btnClass={s.navBtn} />
       </div>
 

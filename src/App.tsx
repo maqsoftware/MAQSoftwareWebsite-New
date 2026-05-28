@@ -31,6 +31,7 @@ import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
 import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
+import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 
 const useStyles = makeStyles({
   root: {
@@ -149,6 +150,15 @@ export function App() {
           }
         />
         <Route path="/lab" element={<ComponentLab />} />
+        <Route
+          path="/who-we-are"
+          element={
+            <>
+              <AboutWhoWeAre />
+              <CTA />
+            </>
+          }
+        />
       </Routes>
       <Footer />
     </div>
