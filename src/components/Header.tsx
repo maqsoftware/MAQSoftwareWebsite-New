@@ -55,6 +55,8 @@ const useStyles = makeStyles({
   navBtn: {
     color: "var(--maq-ink)",
     fontWeight: 500,
+    whiteSpace: "nowrap",
+    minWidth: "auto",
     ":hover": {
       backgroundColor: "var(--maq-red-pale)",
       color: "var(--maq-red)",
@@ -106,6 +108,7 @@ const insights: NavItem[] = [
 
 const aboutUs: NavItem[] = [
   { label: "Who we are", href: "/who-we-are" },
+  { label: "Sustainability", href: "/sustainability" },
 ];
 
 const contact: NavItem[] = [

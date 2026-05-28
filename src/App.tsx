@@ -32,6 +32,7 @@ import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomV
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
+import { AboutSustainability } from "./pages/AboutSustainability";
 
 const useStyles = makeStyles({
   root: {
@@ -155,6 +156,15 @@ export function App() {
           element={
             <>
               <AboutWhoWeAre />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/sustainability"
+          element={
+            <>
+              <AboutSustainability />
               <CTA />
             </>
           }
