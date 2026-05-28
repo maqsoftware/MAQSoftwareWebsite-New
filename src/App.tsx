@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -26,6 +26,10 @@ import { ServiceSecurityCompliance } from "./pages/ServiceSecurityCompliance";
 import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 import { ServiceWorkplaceTransformation } from "./pages/ServiceWorkplaceTransformation";
 import { PartnershipSnowflake } from "./pages/PartnershipSnowflake";
+import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
+import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
+import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
+import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 
 const useStyles = makeStyles({
@@ -63,6 +67,14 @@ export function App() {
             </>
           }
         />
+        <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
+        <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
+        <Route path="/insights/consulting-offers" element={<InsightsConsultingOffers />} />
+        <Route
+          path="/insights/power-bi-custom-visual-guide"
+          element={<InsightsPowerBICustomVisualGuide />}
+        />
+        <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
         <Route
           path="/partnerships/snowflake"
           element={
