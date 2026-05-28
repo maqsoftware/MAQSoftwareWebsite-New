@@ -97,6 +97,10 @@ const partnerships: NavItem[] = [
   { label: "Databricks", href: "/partnerships/databricks" },
 ];
 
+const aboutUs: NavItem[] = [
+  { label: "Who we are", href: "/who-we-are" },
+];
+
 const contact: NavItem[] = [
   { label: "Talk to sales" },
   { label: "Customer success" },
@@ -165,9 +169,7 @@ export function Header() {
         >
           Insights
         </Button>
-        <Button appearance="subtle" className={s.navBtn}>
-          About Us
-        </Button>
+        <MegaMenu label="About Us" items={aboutUs} btnClass={s.navBtn} />
         <MegaMenu label="Contact Us" items={contact} btnClass={s.navBtn} />
       </div>
 

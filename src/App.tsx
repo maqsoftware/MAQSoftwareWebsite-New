@@ -26,6 +26,7 @@ import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 import { ServiceWorkplaceTransformation } from "./pages/ServiceWorkplaceTransformation";
 import { PartnershipSnowflake } from "./pages/PartnershipSnowflake";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
+import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 
 const useStyles = makeStyles({
   root: {
@@ -135,6 +136,15 @@ export function App() {
           }
         />
         <Route path="/lab" element={<ComponentLab />} />
+        <Route
+          path="/who-we-are"
+          element={
+            <>
+              <AboutWhoWeAre />
+              <CTA />
+            </>
+          }
+        />
       </Routes>
       <Footer />
     </div>
