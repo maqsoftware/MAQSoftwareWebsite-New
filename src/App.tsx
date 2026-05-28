@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -8,6 +8,7 @@ import { IndustryRetail } from "./pages/IndustryRetail";
 import { IndustryFinancialServices } from "./pages/IndustryFinancialServices";
 import { IndustryHealthcareLifeSciences } from "./pages/IndustryHealthcareLifeSciences";
 import { IndustryTechnology } from "./pages/IndustryTechnology";
+import { IndustryPublicSector } from "./pages/IndustryPublicSector";
 import { ProductsHome } from "./pages/ProductsHome";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ProductFabricAdminAgent } from "./pages/ProductFabricAdminAgent";
@@ -26,6 +27,12 @@ import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 import { ServiceWorkplaceTransformation } from "./pages/ServiceWorkplaceTransformation";
 import { PartnershipSnowflake } from "./pages/PartnershipSnowflake";
 import { PartnershipDatabricks } from "./pages/PartnershipDatabricks";
+import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
+import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
+import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
+import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
+import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
+import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 
 const useStyles = makeStyles({
   root: {
@@ -45,6 +52,7 @@ export function App() {
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
         <Route path="/industries/healthcare-life-sciences" element={<IndustryHealthcareLifeSciences />} />
         <Route path="/industries/technology" element={<IndustryTechnology />} />
+        <Route path="/industries/public-sector" element={<IndustryPublicSector />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
         <Route path="/services/cloud" element={<ServiceCloud />} />
         <Route path="/services/reporting-bi" element={<ServiceReportingBI />} />
@@ -52,6 +60,23 @@ export function App() {
         <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
         <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
         <Route path="/services/workplace-transformation" element={<ServiceWorkplaceTransformation />} />
+        <Route
+          path="/partnerships/microsoft"
+          element={
+            <>
+              <PartnershipMicrosoft />
+              <CTA />
+            </>
+          }
+        />
+        <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
+        <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
+        <Route path="/insights/consulting-offers" element={<InsightsConsultingOffers />} />
+        <Route
+          path="/insights/power-bi-custom-visual-guide"
+          element={<InsightsPowerBICustomVisualGuide />}
+        />
+        <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
         <Route
           path="/partnerships/snowflake"
           element={
@@ -135,6 +160,15 @@ export function App() {
           }
         />
         <Route path="/lab" element={<ComponentLab />} />
+        <Route
+          path="/who-we-are"
+          element={
+            <>
+              <AboutWhoWeAre />
+              <CTA />
+            </>
+          }
+        />
       </Routes>
       <Footer />
     </div>
