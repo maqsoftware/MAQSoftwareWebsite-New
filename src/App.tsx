@@ -29,6 +29,7 @@ import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
 import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
 import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
+import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 
 const useStyles = makeStyles({
   root: {
@@ -55,6 +56,15 @@ export function App() {
         <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
         <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
         <Route path="/services/workplace-transformation" element={<ServiceWorkplaceTransformation />} />
+        <Route
+          path="/partnerships/microsoft"
+          element={
+            <>
+              <PartnershipMicrosoft />
+              <CTA />
+            </>
+          }
+        />
         <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
         <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
         <Route path="/insights/consulting-offers" element={<InsightsConsultingOffers />} />

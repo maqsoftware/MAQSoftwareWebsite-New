@@ -92,6 +92,7 @@ const productNav: NavItem[] = [
 ];
 
 const partnerships: NavItem[] = [
+  { label: "Microsoft", href: "/partnerships/microsoft" },
   { label: "Snowflake", href: "/partnerships/snowflake" },
   { label: "Databricks", href: "/partnerships/databricks" },
 ];
