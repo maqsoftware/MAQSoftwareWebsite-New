@@ -73,7 +73,7 @@ const industries: NavItem[] = [
   { label: "Healthcare & life sciences", href: "/industries/healthcare-life-sciences" },
   { label: "Manufacturing" },
   { label: "Technology", href: "/industries/technology" },
-  { label: "Public sector" },
+  { label: "Public sector", href: "/industries/public-sector" },
 ];
 
 const services: NavItem[] = [
@@ -95,6 +95,17 @@ const partnerships: NavItem[] = [
   { label: "Microsoft", href: "/partnerships/microsoft" },
   { label: "Snowflake", href: "/partnerships/snowflake" },
   { label: "Databricks", href: "/partnerships/databricks" },
+];
+
+const insights: NavItem[] = [
+  { label: "Case Studies", href: "/insights/case-studies" },
+  { label: "Consulting offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
+  { label: "Power BI custom visual guide", href: "/insights/power-bi-custom-visual-guide" },
+  { label: "Best practice guides", href: "/insights/best-practice-guides" },
+];
+
+const aboutUs: NavItem[] = [
+  { label: "Who we are", href: "/who-we-are" },
 ];
 
 const contact: NavItem[] = [
@@ -124,7 +135,17 @@ function MegaMenu({
       <MenuPopover>
         <MenuList>
           {items.map((i) => (
-            <MenuItem key={i.label} onClick={() => i.href && navigate(i.href)}>
+            <MenuItem
+              key={i.label}
+              onClick={() => {
+                if (!i.href) return;
+                if (i.href.startsWith("http")) {
+                  window.open(i.href, "_blank", "noopener,noreferrer");
+                  return;
+                }
+                navigate(i.href);
+              }}
+            >
               {i.label}
             </MenuItem>
           ))}
@@ -156,18 +177,8 @@ export function Header() {
         <MegaMenu label="Products" items={productNav} btnClass={s.navBtn} />
         <MegaMenu label="Industries" items={industries} btnClass={s.navBtn} />
         <MegaMenu label="Partnerships" items={partnerships} btnClass={s.navBtn} />
-        <Button
-          appearance="subtle"
-          className={s.navBtn}
-          onClick={() =>
-            document.getElementById("case-studies")?.scrollIntoView({ behavior: "smooth" })
-          }
-        >
-          Insights
-        </Button>
-        <Button appearance="subtle" className={s.navBtn}>
-          About Us
-        </Button>
+        <MegaMenu label="Insights" items={insights} btnClass={s.navBtn} />
+        <MegaMenu label="About Us" items={aboutUs} btnClass={s.navBtn} />
         <MegaMenu label="Contact Us" items={contact} btnClass={s.navBtn} />
       </div>
 
