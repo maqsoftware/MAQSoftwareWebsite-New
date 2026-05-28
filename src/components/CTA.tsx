@@ -87,11 +87,23 @@ export function CTA() {
             size="large"
             icon={<ArrowRight20Regular />}
             iconPosition="after"
-            onClick={() =>
-              document
-                .getElementById("case-studies")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
+            onClick={() => {
+              try {
+                const path = window?.location?.pathname || "";
+                if (path.includes("/services/cloud")) {
+                  // On cloud page: redirect to external case studies hub with 'all' selected
+                  window.location.href = "https://maqsoftware.com/case-studies.html?filter=all";
+                } else {
+                  document
+                    .getElementById("case-studies")
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }
+              } catch (e) {
+                document
+                  .getElementById("case-studies")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
           >
             Read case studies
           </Button>
