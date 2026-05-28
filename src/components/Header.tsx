@@ -91,6 +91,11 @@ const productNav: NavItem[] = [
   { label: "All products →", href: "/products" },
 ];
 
+const partnerships: NavItem[] = [
+  { label: "Snowflake", href: "/partnerships/snowflake" },
+  { label: "Databricks", href: "/partnerships/databricks" },
+];
+
 const contact: NavItem[] = [
   { label: "Talk to sales" },
   { label: "Customer success" },
@@ -149,6 +154,7 @@ export function Header() {
         <MegaMenu label="Services" items={services} btnClass={s.navBtn} />
         <MegaMenu label="Products" items={productNav} btnClass={s.navBtn} />
         <MegaMenu label="Industries" items={industries} btnClass={s.navBtn} />
+        <MegaMenu label="Partnerships" items={partnerships} btnClass={s.navBtn} />
         <Button
           appearance="subtle"
           className={s.navBtn}
