@@ -73,7 +73,7 @@ const industries: NavItem[] = [
   { label: "Healthcare & life sciences", href: "/industries/healthcare-life-sciences" },
   { label: "Manufacturing" },
   { label: "Technology", href: "/industries/technology" },
-  { label: "Public sector" },
+  { label: "Public sector", href: "/industries/public-sector" },
 ];
 
 const services: NavItem[] = [
