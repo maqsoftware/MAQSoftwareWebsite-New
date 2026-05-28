@@ -72,18 +72,18 @@ const insights = [
   {
     title: "Optimize your DevOps strategies with our 9 essential best practices",
     teaser: "Essential DevOps practices for efficient cloud deployment and operations.",
-    href: "/insights/azure-dev-ops-best-practices-guide.html",
+    href: "https://maqsoftware.com/insights/azure-dev-ops-best-practices-guide.html",
   },
   {
     title: "Strengthen your cloud security and protect your assets with 19 security best practices",
     teaser: "Comprehensive security best practices for protecting your cloud infrastructure and data.",
-    href: "/insights/azure-security-best-practices.html",
+    href: "https://maqsoftware.com/insights/azure-security-best-practices.html",
   },
   {
     title: "This guide covers the 7 best practices you need to secure Dataverse",
     teaser:
       "Essential security controls for protecting data in Microsoft Dataverse cloud environment.",
-    href: "/insights/dataverse-security-best-practices.html",
+    href: "https://maqsoftware.com/insights/dataverse-security-best-practices.html",
   },
 ];
 
@@ -101,7 +101,7 @@ export function ServiceCloudInsights() {
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
-            <a key={i.title} className={s.card} href={i.href} target="_blank" rel="noreferrer">
+            <a key={i.title} className={s.card} href={i.href}>
               <div className={s.cover} aria-hidden="true" />
               <div className={s.body}>
                 <h3 className={s.cardTitle}>{i.title}</h3>
