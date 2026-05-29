@@ -241,7 +241,7 @@ export function IndustryRetail() {
         title="How retailers move faster with MAQ Software"
         cases={retailCases}
         seeAllLabel="See all retail case studies"
-        seeAllHref="https://maqsoftware.com/case-studies"
+        seeAllHref="/insights/case-studies"
       />
       <MarketplaceOffers
         sub="Accelerate retail outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning demand planning, customer experience, and real-time intelligence."

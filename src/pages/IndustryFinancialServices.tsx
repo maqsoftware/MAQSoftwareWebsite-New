@@ -288,7 +288,7 @@ export function IndustryFinancialServices() {
         title="How financial firms move faster with MAQ Software"
         cases={fsCases}
         seeAllLabel="See all financial services case studies"
-        seeAllHref="https://maqsoftware.com/case-studies"
+        seeAllHref="/insights/case-studies"
       />
       <MarketplaceOffers
         sub="Accelerate financial outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning risk & compliance, FP&A automation, lending intelligence, and claims processing."

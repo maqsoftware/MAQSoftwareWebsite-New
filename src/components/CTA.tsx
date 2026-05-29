@@ -92,7 +92,7 @@ export function CTA() {
                 const path = window?.location?.pathname || "";
                 if (path.includes("/services/cloud")) {
                   // On cloud page: redirect to external case studies hub with 'all' selected
-                  window.location.href = "https://maqsoftware.com/case-studies.html?filter=all";
+                  window.location.href = "/insights/case-studies";
                 } else {
                   document
                     .getElementById("case-studies")

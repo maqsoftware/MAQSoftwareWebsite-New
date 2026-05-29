@@ -100,7 +100,7 @@ export function IndustryCaseStudies({
   title,
   cases,
   seeAllLabel = "See all case studies",
-  seeAllHref = "https://maqsoftware.com/case-studies",
+  seeAllHref = "/insights/case-studies",
 }: IndustryCaseStudiesProps) {
   const s = useStyles();
   return (

@@ -246,7 +246,7 @@ export function ServiceSecurityCompliance() {
         subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
         capabilities={capabilities}
         footerLabel="See security case studies"
-        footerHref="https://maqsoftware.com/case-studies.html?filter=security"
+        footerHref="/insights/case-studies?filter=security"
         mailSubjectSuffix="Security & Compliance"
       />
       <ServiceOutcomes
@@ -258,7 +258,7 @@ export function ServiceSecurityCompliance() {
         title="How clients are strengthening their security posture"
         studies={caseStudies}
         footerLabel="See all security case studies"
-        footerHref="https://maqsoftware.com/case-studies.html?filter=security"
+        footerHref="/insights/case-studies?filter=security"
       />
       <ServiceInsights
         title="Our security insights"

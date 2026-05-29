@@ -706,7 +706,7 @@ export function ServiceWorkplaceTransformation() {
                     </div>
                     <a
                         className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies"
+                        href="/insights/case-studies"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -767,7 +767,7 @@ export function ServiceWorkplaceTransformation() {
                     </div>
                     <a
                         className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies"
+                        href="/insights/case-studies"
                         target="_blank"
                         rel="noreferrer"
                     >

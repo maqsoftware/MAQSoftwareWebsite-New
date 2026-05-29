@@ -136,7 +136,7 @@ export function ServiceCaseStudiesData() {
         </div>
         <a
           className={s.footerLink}
-          href="https://maqsoftware.com/case-studies.html?filter=data-and-analytics"
+          href="/insights/case-studies?filter=data-and-analytics"
           target="_blank"
           rel="noreferrer"
         >
