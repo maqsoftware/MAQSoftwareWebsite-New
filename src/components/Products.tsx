@@ -5,6 +5,7 @@ import {
   Badge,
 } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
@@ -98,6 +99,7 @@ const useStyles = makeStyles({
 interface Product {
   initials: string;
   name: string;
+  slug: string;
   tagline: string;
   desc: string;
   tags: string[];
@@ -107,6 +109,7 @@ const products: Product[] = [
   {
     initials: "FA",
     name: "Fabric Admin Agent",
+    slug: "fabric-admin-agent",
     tagline: "Fabric Workload",
     desc: "AI-powered capacity management for Microsoft Fabric admins. Detects anomalies and spikes in real time, forecasts demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost.",
     tags: ["Fabric Workload"],
@@ -114,6 +117,7 @@ const products: Product[] = [
   {
     initials: "MF",
     name: "MigrateFAST",
+    slug: "migratefast",
     tagline: "Migration accelerator",
     desc: "AI-powered migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
     tags: ["Fabric", "Power BI", "AI Powered"],
@@ -121,6 +125,7 @@ const products: Product[] = [
   {
     initials: "EF",
     name: "EmbedFAST",
+    slug: "embedfast",
     tagline: "Power BI embedding",
     desc: "Seamlessly embed Power BI into your applications with role-based access, unlimited tenant/workspace onboarding, and tailored features — without heavy integration or licensing overhead.",
     tags: ["Power BI", "SaaS"],
@@ -128,6 +133,7 @@ const products: Product[] = [
   {
     initials: "AI",
     name: "AI-DataLens",
+    slug: "ai-datalens",
     tagline: "Conversational analytics",
     desc: "Interact with enterprise datasets in natural language. No SQL or DAX — ask questions and get instant answers, with row-level security and audit preserved.",
     tags: ["Gen AI", "Power BI", "Conversational AI"],
@@ -135,6 +141,7 @@ const products: Product[] = [
   {
     initials: "LF",
     name: "LoadFAST",
+    slug: "loadfast",
     tagline: "Power BI load testing",
     desc: "Web-based load-testing for Power BI on Microsoft Fabric — simulates real-time user traffic to right-size capacity, prevent slowdowns, and cut over-provisioning.",
     tags: ["Power BI", "Performance"],
@@ -142,6 +149,7 @@ const products: Product[] = [
   {
     initials: "CF",
     name: "CertyFAST",
+    slug: "certyfast",
     tagline: "Power BI quality control",
     desc: "Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.",
     tags: ["Power BI", "Quality", "Governance"],
@@ -150,6 +158,7 @@ const products: Product[] = [
 
 export function Products() {
   const s = useStyles();
+  const navigate = useNavigate();
   return (
     <section className={s.section} id="products">
       <div className={s.inner}>
@@ -164,7 +173,12 @@ export function Products() {
         </div>
         <div className={s.grid}>
           {products.map((p) => (
-            <article key={p.name} className={s.card}>
+            <article
+              key={p.name}
+              className={s.card}
+              onClick={() => navigate(`/products/${p.slug}`)}
+              style={{ cursor: "pointer" }}
+            >
               <div className={s.logo}>{p.initials}</div>
               <div className={s.tagline}>{p.tagline}</div>
               <div className={s.name}>{p.name}</div>
@@ -182,6 +196,10 @@ export function Products() {
                 iconPosition="after"
                 size="small"
                 style={{ alignSelf: "flex-start", paddingLeft: 0 }}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigate(`/products/${p.slug}`);
+                }}
               >
                 Learn more
               </Button>

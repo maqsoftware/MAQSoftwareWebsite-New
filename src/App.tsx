@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -9,6 +10,7 @@ import { IndustryFinancialServices } from "./pages/IndustryFinancialServices";
 import { IndustryHealthcareLifeSciences } from "./pages/IndustryHealthcareLifeSciences";
 import { IndustryTechnology } from "./pages/IndustryTechnology";
 import { IndustryPublicSector } from "./pages/IndustryPublicSector";
+import { IndustryManufacturing } from "./pages/IndustryManufacturing";
 import { ProductsHome } from "./pages/ProductsHome";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ProductFabricAdminAgent } from "./pages/ProductFabricAdminAgent";
@@ -33,6 +35,10 @@ import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomV
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
+import { AboutSustainability } from "./pages/AboutSustainability";
+import { AboutNews } from "./pages/AboutNews";
+import { AboutCareers } from "./pages/AboutCareers";
+import { Contact } from "./pages/Contact";
 
 const useStyles = makeStyles({
   root: {
@@ -41,10 +47,19 @@ const useStyles = makeStyles({
   },
 });
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+  return null;
+}
+
 export function App() {
   const s = useStyles();
   return (
     <div className={s.root}>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -52,6 +67,7 @@ export function App() {
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
         <Route path="/industries/healthcare-life-sciences" element={<IndustryHealthcareLifeSciences />} />
         <Route path="/industries/technology" element={<IndustryTechnology />} />
+        <Route path="/industries/manufacturing" element={<IndustryManufacturing />} />
         <Route path="/industries/public-sector" element={<IndustryPublicSector />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
         <Route path="/services/cloud" element={<ServiceCloud />} />
@@ -169,6 +185,18 @@ export function App() {
             </>
           }
         />
+        <Route
+          path="/sustainability"
+          element={
+            <>
+              <AboutSustainability />
+              <CTA />
+            </>
+          }
+        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/news" element={<AboutNews />} />
+        <Route path="/careers" element={<AboutCareers />} />
       </Routes>
       <Footer />
     </div>
