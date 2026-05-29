@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Button } from "@fluentui/react-components";
 import {
   Checkmark24Regular,
@@ -26,6 +26,52 @@ const useStyles = makeStyles({
   heroInner: {
     maxWidth: "1240px",
     margin: "0 auto",
+    display: "grid",
+    gridTemplateColumns: "1.3fr 1fr",
+    gap: "48px",
+    alignItems: "center",
+    "@media (max-width: 960px)": { gridTemplateColumns: "1fr", gap: "32px" },
+  },
+  heroCopy: {
+    minWidth: 0,
+  },
+  heroMosaic: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap: "16px",
+    "@media (max-width: 960px)": { maxWidth: "420px" },
+  },
+  mosaicTile: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "8px",
+    padding: "20px",
+    background: "#fff",
+    border: "1px solid var(--maq-border)",
+    borderRadius: "12px",
+    boxShadow: "0 4px 16px rgba(0,0,0,0.04)",
+  },
+  mosaicTileAccent: {
+    background: "var(--maq-red)",
+    border: "1px solid var(--maq-red)",
+  },
+  mosaicMetric: {
+    fontSize: "36px",
+    fontWeight: 700,
+    lineHeight: 1,
+    letterSpacing: "-0.02em",
+    color: "var(--maq-black)",
+  },
+  mosaicMetricAccent: {
+    color: "#fff",
+  },
+  mosaicLabel: {
+    fontSize: "13px",
+    lineHeight: 1.4,
+    color: "var(--maq-gray-700)",
+  },
+  mosaicLabelAccent: {
+    color: "rgba(255,255,255,0.92)",
   },
   eyebrow: {
     display: "block",
@@ -600,24 +646,44 @@ export function AboutWhoWeAre() {
       {/* ── Hero ── */}
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <span className={s.eyebrow}>Who we are</span>
-          <h1 className={s.h1}>Who we are</h1>
-          <p className={s.heroSub}>
-            We are a Microsoft Fabric Featured Partner who enables leading
-            companies to accelerate their business intelligence and analytics
-            initiatives. Our solutions enable our clients to improve their
-            operations, reduce costs, increase sales, and build stronger
-            customer relationships.
-          </p>
-          <Button
-            appearance="primary"
-            size="large"
-            as="a"
-            href="#specializations"
-            onClick={scrollToSpecializations}
-          >
-            View our specializations
-          </Button>
+          <div className={s.heroCopy}>
+            <span className={s.eyebrow}>Who we are</span>
+            <h1 className={s.h1}>Who we are</h1>
+            <p className={s.heroSub}>
+              We are a Microsoft Fabric Featured Partner who enables leading
+              companies to accelerate their business intelligence and analytics
+              initiatives. Our solutions enable our clients to improve their
+              operations, reduce costs, increase sales, and build stronger
+              customer relationships.
+            </p>
+            <Button
+              appearance="primary"
+              size="large"
+              as="a"
+              href="#specializations"
+              onClick={scrollToSpecializations}
+            >
+              View our specializations
+            </Button>
+          </div>
+          <div className={s.heroMosaic} aria-hidden="true">
+            {heroStats.map((stat, index) => {
+              const accent = index === 0;
+              return (
+                <div
+                  key={stat.label}
+                  className={`${s.mosaicTile}${accent ? ` ${s.mosaicTileAccent}` : ""}`}
+                >
+                  <span className={`${s.mosaicMetric}${accent ? ` ${s.mosaicMetricAccent}` : ""}`}>
+                    {stat.metric}
+                  </span>
+                  <span className={`${s.mosaicLabel}${accent ? ` ${s.mosaicLabelAccent}` : ""}`}>
+                    {stat.label}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 

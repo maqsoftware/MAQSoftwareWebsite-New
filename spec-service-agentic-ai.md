@@ -17,7 +17,7 @@ Security) should reuse the section taxonomy defined here.
 | Route | `/services/agentic-ai` |
 | Page component | `src/pages/ServiceAgenticAI.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
-| New service building blocks | `src/components/service/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx` |
+| New service building blocks | `src/components/services/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx` |
 | Header nav integration | Services mega-menu "Agentic AI & ML" → `/services/agentic-ai` |
 
 **Design goal:** scannable, dense, single-viewport sections. Vertical padding `48px`

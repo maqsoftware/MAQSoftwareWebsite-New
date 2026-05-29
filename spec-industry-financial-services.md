@@ -16,7 +16,7 @@
 | Route | `/industries/financial-services` (client-side, react-router-dom) |
 | Page component | `src/pages/IndustryFinancialServices.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />` from home |
-| Shared building blocks | All six components in `src/components/industry/` — no new components needed |
+| Shared building blocks | All six components in `src/components/industries/` — no new components needed |
 | Header nav integration | Industries mega-menu "Financial services" → `/industries/financial-services` |
 
 **Design goal:** identical density and visual rhythm to the Retail page. Same `48px` section padding, same compact typography, same component order.

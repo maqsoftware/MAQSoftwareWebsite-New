@@ -17,7 +17,7 @@
 | Route | `/industries/retail` (client-side; introduce `react-router-dom` if not present) |
 | Page component | `src/pages/IndustryRetail.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />` from home |
-| New shared building blocks | `src/components/industry/IndustryHero.tsx`, `SolutionShowcase.tsx`, `ImpactStats.tsx`, `MarketplaceOffers.tsx`, `Testimonials.tsx`, `IndustryCaseStudies.tsx` — generic, content-driven, reusable across industries |
+| New shared building blocks | `src/components/industries/IndustryHero.tsx`, `SolutionShowcase.tsx`, `ImpactStats.tsx`, `MarketplaceOffers.tsx`, `Testimonials.tsx`, `IndustryCaseStudies.tsx` — generic, content-driven, reusable across industries |
 | Header nav integration | Industries mega-menu items become real links; "Retail & consumer goods" → `/industries/retail` |
 
 **Design goal:** the entire page should feel **dense and scannable** — minimize vertical scrolling. Use:

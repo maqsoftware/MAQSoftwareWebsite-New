@@ -13,7 +13,7 @@
 | Route | `/services/security-compliance` |
 | Page component | `src/pages/ServiceSecurityCompliance.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
-| Service building blocks | `src/components/service/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx`, `ServiceTestimonials.tsx` |
+| Service building blocks | `src/components/services/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx`, `ServiceTestimonials.tsx` |
 | Header nav integration | Services mega-menu "Security & Compliance" → `/services/security-compliance` |
 
 **Design goal:** scannable, dense, single-viewport sections. Vertical padding `48px`

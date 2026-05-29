@@ -17,7 +17,7 @@ deviations are limited to copy and the 4 capability pillars.
 | Route | `/services/reporting-bi` |
 | Page component | `src/pages/ServiceReportingBI.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
-| Reused service building blocks | `src/components/service/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx`, `ServiceTestimonials.tsx` |
+| Reused service building blocks | `src/components/services/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx`, `ServiceTestimonials.tsx` |
 | Header nav integration | Services mega-menu "Reporting & business intelligence" → `/services/reporting-bi` |
 
 **Design goal:** identical to Agentic AI page — scannable, dense, single-viewport

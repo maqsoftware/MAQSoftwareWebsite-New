@@ -29,12 +29,12 @@ metrics, theming and content authoring rules.
 | Route | Page | Purpose |
 |---|---|---|
 | `/products` | `ProductsHome` | Listing of all 6 products with thumbnails and aggregated impact strip. |
-| `/products/ai-datalens` | `ProductAIDataLens` | Dedicated product page composed from `src/components/product-ai-datalens/`. |
-| `/products/certyfast` | `ProductCertyFAST` | Dedicated product page composed from `src/components/product-certyfast/`. |
-| `/products/embedfast` | `ProductEmbedFAST` | Dedicated product page composed from `src/components/product-embedfast/`. |
-| `/products/fabric-admin-agent` | `ProductFabricAdminAgent` | Dedicated product page composed from `src/components/product-fabric-admin-agent/`. |
-| `/products/loadfast` | `ProductLoadFAST` | Dedicated product page composed from `src/components/product-loadfast/`. |
-| `/products/migratefast` | `ProductMigrateFAST` | Dedicated product page composed from `src/components/product-migratefast/`. |
+| `/products/ai-datalens` | `ProductAIDataLens` | Dedicated product page composed from `src/components/products/ai-datalens/`. |
+| `/products/certyfast` | `ProductCertyFAST` | Dedicated product page composed from `src/components/products/certyfast/`. |
+| `/products/embedfast` | `ProductEmbedFAST` | Dedicated product page composed from `src/components/products/embedfast/`. |
+| `/products/fabric-admin-agent` | `ProductFabricAdminAgent` | Dedicated product page composed from `src/components/products/fabric-admin-agent/`. |
+| `/products/loadfast` | `ProductLoadFAST` | Dedicated product page composed from `src/components/products/loadfast/`. |
+| `/products/migratefast` | `ProductMigrateFAST` | Dedicated product page composed from `src/components/products/migratefast/`. |
 | `/products/:slug` | `ProductDetail` | Fallback product route for products still driven directly from `products[]`. |
 
 - Header **Products** menu is a MegaMenu rendered from `products[]`.
@@ -42,7 +42,7 @@ metrics, theming and content authoring rules.
   - Final row: "All products →" linking to `/products`.
 - Unknown `:slug` → `<Navigate to="/products" replace />`.
 - Dedicated product pages remain thin composer files in `src/pages/`.
-- Product-specific sections live in page-owned folders under `src/components/product-*/`.
+- Product-specific sections live in page-owned folders under `src/components/products/<product>/`.
 - Visible product resource sections should use the site label `Insights`, even where internal component filenames still use `*Resources.tsx`.
 
 ---

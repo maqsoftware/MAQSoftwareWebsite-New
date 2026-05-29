@@ -28,7 +28,7 @@
 | Route | `/industries/public-sector` (client-side, react-router-dom) |
 | Page component | `src/pages/IndustryPublicSector.tsx` |
 | Shared layout | Reuse `<Header />`, `<Footer />`, `<CTA />` from `src/App.tsx` |
-| Shared building blocks | Five components in `src/components/industry/` plus `<TrustBanner />` and `<CTA />` — no new components needed |
+| Shared building blocks | Five components in `src/components/industries/` plus `<TrustBanner />` and `<CTA />` — no new components needed |
 | Header nav integration | Industries mega-menu "Public sector" → `/industries/public-sector` |
 
 **Design goal:** identical density and visual rhythm to the Technology page (the most recent industry sibling) — IndustryHero + TrustBanner + ImpactStats + SolutionShowcase + IndustryCaseStudies + CTA. Skip MarketplaceOffers (public-sector procurement runs through contract vehicles, not Azure Marketplace SKUs) and skip Testimonials (no signed-off public-sector quotes yet). No new design tokens, no new components — only props.

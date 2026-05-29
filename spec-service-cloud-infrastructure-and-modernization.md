@@ -16,7 +16,7 @@ defined in `spec-service-agentic-ai.md` as the authoritative service-page shape.
 | Route | `/services/cloud` |
 | Page component | `src/pages/ServiceCloud.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
-| Service building blocks | `src/components/service/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx` |
+| Service building blocks | `src/components/services/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx` |
 | Header nav integration | Services mega-menu "Cloud optimization" → `/services/cloud` |
 
 **Design goal:** scannable, dense, single-viewport sections. Vertical padding `48px`

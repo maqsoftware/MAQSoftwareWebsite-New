@@ -14,7 +14,7 @@
 | Route | `/industries/technology` |
 | Page component | `src/pages/IndustryTechnology.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />` from home |
-| Industry building blocks | Reuse `src/components/industry/IndustryHero.tsx`, `SolutionShowcase.tsx`, `ImpactStats.tsx`, `IndustryCaseStudies.tsx` |
+| Industry building blocks | Reuse `src/components/industries/IndustryHero.tsx`, `SolutionShowcase.tsx`, `ImpactStats.tsx`, `IndustryCaseStudies.tsx` |
 | Header nav integration | Industries mega-menu "Technology" → `/industries/technology` |
 
 **Design goal:** same dense, scannable layout used by Retail — tight section padding (`48–56px`), multi-column layouts, compact typography.

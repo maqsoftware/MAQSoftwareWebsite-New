@@ -15,7 +15,7 @@ This page describes the Data & Analytics service surface and maps content from t
 | Route | `/services/data-and-analytics` |
 | Page component | `src/pages/ServiceDataAndAnalytics.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
-| New service building blocks | `src/components/service/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx` |
+| New service building blocks | `src/components/services/ServiceHero.tsx`, `ServiceCapabilities.tsx`, `ServiceOutcomes.tsx`, `ServiceProducts.tsx`, `ServiceCaseStudies.tsx`, `ServiceInsights.tsx` |
 | Header nav integration | Services mega-menu "Data & analytics" → `/services/data-and-analytics` |
 
 **Design goal:** scannable, dense, single-viewport sections. Vertical padding `48px` (hero `48–56px`), parallel multi-column layouts, h2 `28–30px`, body `14px`. No oversized hero.

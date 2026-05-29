@@ -14,7 +14,9 @@
 | Concern | Choice |
 |---|---|
 | Route | `/partnerships/databricks` |
-| Page component | `src/pages/PartnershipDatabricks.tsx` |
+| Page component | `src/pages/PartnershipDatabricks.tsx` (thin shell — composes the page-owned wrappers below) |
+| Page-owned sections | `src/components/partnerships/databricks/DatabricksPartnershipHero.tsx`, `DatabricksPartnershipValueProps.tsx`, `DatabricksPartnershipHighlights.tsx`, `DatabricksPartnershipOverview.tsx`, `DatabricksPartnershipOfferings.tsx`, `DatabricksPartnershipMarketplace.tsx`, `DatabricksPartnershipInsights.tsx`, `DatabricksPartnershipConnect.tsx` — each wraps a shared `partnerships/Partnership*` base with Databricks content |
+| Shared base components | `src/components/partnerships/PartnershipHero.tsx`, `PartnershipValueProps.tsx`, `PartnershipHighlights.tsx`, `PartnershipOverview.tsx`, `PartnershipOfferings.tsx`, `PartnershipMarketplace.tsx`, `PartnershipInsights.tsx`, `PartnershipConnect.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
 | Self-contained sections | Hero, Why Databricks, Partnership Highlights, Capabilities/Offerings, Guides & Marketplace, Blogs & Case Studies, Connect CTA |
 | Header nav integration | Partnerships mega-menu "Databricks" → `/partnerships/databricks` (ensure `Header.tsx` contains this href) |

@@ -6,7 +6,7 @@
 
 This page now follows the current service-page pattern used across the site:
 a thin route component in `src/pages/ServiceBusinessApps.tsx` that composes
-page-owned sections from `src/components/service-business-apps/`.
+page-owned sections from `src/components/services/business-apps/`.
 
 The goal is maintainability. Shared behavior stays in shared wrappers and the
 Business Apps content stays local to this slice, so changes to one service do
@@ -25,7 +25,7 @@ not force broad edits in unrelated pages.
 |---|---|
 | Route | `/services/business-apps` |
 | Page component | `src/pages/ServiceBusinessApps.tsx` (thin composer only) |
-| Page-owned sections | `src/components/service-business-apps/BusinessAppsHero.tsx`, `BusinessAppsCapabilities.tsx`, `BusinessAppsOutcomes.tsx`, `BusinessAppsCaseStudies.tsx`, `BusinessAppsInsights.tsx` |
+| Page-owned sections | `src/components/services/business-apps/BusinessAppsHero.tsx`, `BusinessAppsCapabilities.tsx`, `BusinessAppsOutcomes.tsx`, `BusinessAppsCaseStudies.tsx`, `BusinessAppsInsights.tsx` |
 | Shared layout | `<Header />` and `<Footer />` come from `App.tsx`; the page itself renders `<TrustBanner />` and `<CTA />` |
 | Shared service wrappers | Not required for this page; Business Apps uses page-owned components for maintainability |
 | Header nav integration | Services mega-menu "Business apps & process automation" → `/services/business-apps` |

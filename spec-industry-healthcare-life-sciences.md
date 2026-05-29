@@ -26,7 +26,7 @@
 | Route | `/industries/healthcare-life-sciences` (client-side, react-router-dom) |
 | Page component | `src/pages/IndustryHealthcareLifeSciences.tsx` |
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />` from home |
-| Shared building blocks | All six components in `src/components/industry/` — no new components needed |
+| Shared building blocks | All six components in `src/components/industries/` — no new components needed |
 | Header nav integration | Industries mega-menu "Healthcare & life sciences" → `/industries/healthcare-life-sciences` |
 
 **Design goal:** identical density and visual rhythm to the Retail and Financial Services pages. Same `48px` section padding, same compact typography, same component order. No new design tokens, no new components — only props.
