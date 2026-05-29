@@ -3,6 +3,7 @@ import {
   Button,
 } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: "#fff" },
@@ -61,6 +62,8 @@ const useStyles = makeStyles({
 
 export function CTA() {
   const s = useStyles();
+  const navigate = useNavigate();
+  const location = useLocation();
   return (
     <section className={s.section} id="contact">
       <div className={s.inner}>
@@ -88,20 +91,10 @@ export function CTA() {
             icon={<ArrowRight20Regular />}
             iconPosition="after"
             onClick={() => {
-              try {
-                const path = window?.location?.pathname || "";
-                if (path.includes("/services/cloud")) {
-                  // On cloud page: redirect to external case studies hub with 'all' selected
-                  window.location.href = "https://maqsoftware.com/case-studies.html?filter=all";
-                } else {
-                  document
-                    .getElementById("case-studies")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }
-              } catch (e) {
-                document
-                  .getElementById("case-studies")
-                  ?.scrollIntoView({ behavior: "smooth" });
+              if (location.pathname === "/insights/case-studies") {
+                window.scrollTo({ top: 0 });
+              } else {
+                navigate("/insights/case-studies");
               }
             }}
           >
