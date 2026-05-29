@@ -10,7 +10,6 @@ import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { Testimonials } from "../components/industry/Testimonials";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
@@ -47,19 +46,46 @@ const useVisualStyles = makeStyles({
   },
   badgeDone: { background: "#dcfce7", color: "#15803d" },
   badgeInReview: { background: "#fef9c3", color: "#92400e" },
-  badgePending: { background: "var(--maq-gray-100)", color: "var(--maq-gray-500)" },
-  barRow: { display: "flex", alignItems: "flex-end", gap: "5px", height: "40px" },
-  bar: { flex: 1, background: "var(--maq-gray-200)", borderRadius: "3px 3px 0 0" },
+  badgePending: {
+    background: "var(--maq-gray-100)",
+    color: "var(--maq-gray-500)",
+  },
+  barRow: {
+    display: "flex",
+    alignItems: "flex-end",
+    gap: "5px",
+    height: "40px",
+  },
+  bar: {
+    flex: 1,
+    background: "var(--maq-gray-200)",
+    borderRadius: "3px 3px 0 0",
+  },
   barRed: { background: "var(--maq-red)" },
   barLabel: {
     display: "flex",
     justifyContent: "space-between",
     marginTop: "4px",
   },
-  barLabelText: { fontSize: "9px", color: "var(--maq-gray-500)", flex: 1, textAlign: "center" },
-  riskRow: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" },
+  barLabelText: {
+    fontSize: "9px",
+    color: "var(--maq-gray-500)",
+    flex: 1,
+    textAlign: "center",
+  },
+  riskRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    marginBottom: "6px",
+  },
   riskLabel: { fontSize: "11px", width: "68px", color: "var(--maq-gray-500)" },
-  riskTrack: { flex: 1, height: "6px", background: "var(--maq-gray-100)", borderRadius: "3px" },
+  riskTrack: {
+    flex: 1,
+    height: "6px",
+    background: "var(--maq-gray-100)",
+    borderRadius: "3px",
+  },
   riskFill: { height: "100%", borderRadius: "3px" },
 });
 
@@ -99,11 +125,15 @@ function FinancialHeroVisual() {
                   status === "done"
                     ? v.badgeDone
                     : status === "in-review"
-                    ? v.badgeInReview
-                    : v.badgePending
+                      ? v.badgeInReview
+                      : v.badgePending
                 }`}
               >
-                {status === "done" ? "Done" : status === "in-review" ? "In review" : "Pending"}
+                {status === "done"
+                  ? "Done"
+                  : status === "in-review"
+                    ? "In review"
+                    : "Pending"}
               </span>
             </div>
           ))}
@@ -113,12 +143,18 @@ function FinancialHeroVisual() {
         <span className={v.tileTitle}>Claims processed today</span>
         <div className={v.barRow}>
           {claimsStages.map(({ label, h }, i) => (
-            <div key={label} className={`${v.bar} ${i === 3 ? v.barRed : ""}`} style={{ height: `${h}%` }} />
+            <div
+              key={label}
+              className={`${v.bar} ${i === 3 ? v.barRed : ""}`}
+              style={{ height: `${h}%` }}
+            />
           ))}
         </div>
         <div className={v.barLabel}>
           {claimsStages.map(({ label }) => (
-            <span key={label} className={v.barLabelText}>{label}</span>
+            <span key={label} className={v.barLabelText}>
+              {label}
+            </span>
           ))}
         </div>
       </div>
@@ -128,7 +164,10 @@ function FinancialHeroVisual() {
           <div key={label} className={v.riskRow}>
             <span className={v.riskLabel}>{label}</span>
             <div className={v.riskTrack}>
-              <div className={v.riskFill} style={{ width: pct, background: color }} />
+              <div
+                className={v.riskFill}
+                style={{ width: pct, background: color }}
+              />
             </div>
           </div>
         ))}
@@ -141,27 +180,35 @@ function FinancialHeroVisual() {
 const fsStats = [
   {
     metric: "Millions",
-    label: "Borrowers matched to better loan options with real-time lending analytics",
+    label:
+      "Borrowers matched to better loan options with real-time lending analytics",
     sourceLabel: "Fintech analytics case study",
-    sourceHref: "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
   },
   {
     metric: "< 1 week",
-    label: "Month-end close compressed from 18+ days with agentic AI finance automation",
+    label:
+      "Month-end close compressed from 18+ days with agentic AI finance automation",
     sourceLabel: "Finance agentic AI case study",
-    sourceHref: "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
   },
   {
     metric: "Real-time",
-    label: "Credit decisioning replacing overnight batch scoring for faster loan approvals",
+    label:
+      "Credit decisioning replacing overnight batch scoring for faster loan approvals",
     sourceLabel: "Fintech analytics case study",
-    sourceHref: "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
   },
   {
     metric: "100%",
-    label: "Audit traceability on reconciled transactions with Fabric-native lineage",
+    label:
+      "Audit traceability on reconciled transactions with Fabric-native lineage",
     sourceLabel: "Finance agentic AI case study",
-    sourceHref: "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
   },
 ];
 
@@ -199,7 +246,8 @@ const fsAgents = [
 const fsCases = [
   {
     tag: "Fintech",
-    title: "Enhancing fintech analytics to provide millions of borrowers with better loan options",
+    title:
+      "Enhancing fintech analytics to provide millions of borrowers with better loan options",
     teaser:
       "Real-time lending analytics platform on Microsoft Fabric helping millions of borrowers match to the right loan product.",
     href: "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
@@ -213,7 +261,8 @@ const fsCases = [
   },
   {
     tag: "Data platform",
-    title: "Unifying disconnected data systems using Microsoft Fabric and OneLake",
+    title:
+      "Unifying disconnected data systems using Microsoft Fabric and OneLake",
     teaser:
       "Siloed financial data sources unified on OneLake for a single governed surface powering reporting and risk analytics.",
     href: "https://blog.maqsoftware.com/2026/01/unifying-disconnected-data-systems.html",
@@ -244,17 +293,6 @@ const fsOffers = [
     title: "Claims Processing Intelligence for Insurance: 2-Week Assessment",
     desc: "A 2-week assessment that maps your claims intake workflow and identifies AI automation opportunities to cut cycle time and enforce policy-rule compliance.",
     href: "#", // TODO: replace with Azure Marketplace listing URL
-  },
-];
-
-const fsTestimonials = [
-  {
-    body: "MAQ Software compressed our month-end close from 18 days to under a week. The reconciliation agent flags exceptions automatically — our team focuses on judgement calls, not spreadsheet hunting.",
-    cite: "VP, Finance Operations — Global asset manager",
-  },
-  {
-    body: "We moved from overnight credit batch scoring to real-time lending signals in one quarter. Our borrowers get better-matched loan options at the point of decision.",
-    cite: "Head of Data & Analytics — Regional bank",
   },
 ];
 
@@ -294,7 +332,6 @@ export function IndustryFinancialServices() {
         sub="Accelerate financial outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning risk & compliance, FP&A automation, lending intelligence, and claims processing."
         offers={fsOffers}
       />
-      <Testimonials quotes={fsTestimonials} />
       <CTA />
     </>
   );

@@ -17,13 +17,11 @@ import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
 import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
-import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
 import { CTA } from "../components/CTA";
 import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
 import type { CaseStudyItem } from "../components/service/ServiceCaseStudies";
 import type { InsightItem } from "../components/service/ServiceInsights";
-import type { TestimonialItem } from "../components/service/ServiceTestimonials";
 
 const useVisualStyles = makeStyles({
   visual: {
@@ -150,7 +148,12 @@ const capabilities: Capability[] = [
     icon: <ArrowReset24Regular />,
     description:
       "Build playbooks and automated response workflows in Microsoft Sentinel and Defender XDR. When incidents strike, our runbooks orchestrate containment, forensics, communication, and recovery — minimizing downtime and preserving evidence for compliance audits.",
-    tags: ["Sentinel SOAR", "Incident playbooks", "Azure Backup", "Disaster Recovery"],
+    tags: [
+      "Sentinel SOAR",
+      "Incident playbooks",
+      "Azure Backup",
+      "Disaster Recovery",
+    ],
   },
 ];
 
@@ -198,7 +201,8 @@ const caseStudies: CaseStudyItem[] = [
 
 const insights: InsightItem[] = [
   {
-    title: "Strengthen your cloud security and protect your assets with 19 security best practices",
+    title:
+      "Strengthen your cloud security and protect your assets with 19 security best practices",
     teaser:
       "Field-tested Azure security best practices covering identity, network, data, and operations layers.",
     href: "https://maqsoftware.com/insights/azure-security-best-practices.html",
@@ -214,17 +218,6 @@ const insights: InsightItem[] = [
     teaser:
       "Eliminate credential sprawl with Azure Managed Identity and enforce least-privilege access with RBAC.",
     href: "https://blog.maqsoftware.com/2024/08/strengthening-cybersecurity.html",
-  },
-];
-
-const testimonials: TestimonialItem[] = [
-  {
-    body: "MAQ Software implemented a zero-trust architecture across our Azure tenant in under six weeks — our compliance audit passed with zero findings for the first time.",
-    cite: "CISO — Enterprise financial services",
-  },
-  {
-    body: "Their Sentinel deployment and custom detection rules cut our mean time to detect from days to minutes. The team operates like an extension of our own security org.",
-    cite: "VP of IT Security — Global retailer",
   },
 ];
 
@@ -265,7 +258,6 @@ export function ServiceSecurityCompliance() {
         subhead="See our research that goes into optimizing our security service."
         insights={insights}
       />
-      <ServiceTestimonials quotes={testimonials} />
       <CTA />
     </>
   );

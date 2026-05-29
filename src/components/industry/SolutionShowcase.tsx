@@ -1,12 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import {
-  ArrowTrendingLines24Regular,
-  Clock24Regular,
-  Chat24Regular,
-  BuildingShop24Regular,
-} from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },

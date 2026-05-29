@@ -10,7 +10,6 @@ import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { Testimonials } from "../components/industry/Testimonials";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
@@ -48,41 +47,71 @@ const useVisualStyles = makeStyles({
   badgeCritical: { background: "#fee2e2", color: "#b91c1c" },
   badgeWatch: { background: "#fef9c3", color: "#92400e" },
   badgeStable: { background: "#dcfce7", color: "#15803d" },
-  badgeRoutine: { background: "var(--maq-gray-100)", color: "var(--maq-gray-600)" },
-  badgeDischarge: { background: "var(--maq-red-pale)", color: "var(--maq-red)" },
-  barRow: { display: "flex", alignItems: "flex-end", gap: "5px", height: "40px" },
-  bar: { flex: 1, background: "var(--maq-gray-200)", borderRadius: "3px 3px 0 0" },
+  badgeRoutine: {
+    background: "var(--maq-gray-100)",
+    color: "var(--maq-gray-600)",
+  },
+  badgeDischarge: {
+    background: "var(--maq-red-pale)",
+    color: "var(--maq-red)",
+  },
+  barRow: {
+    display: "flex",
+    alignItems: "flex-end",
+    gap: "5px",
+    height: "40px",
+  },
+  bar: {
+    flex: 1,
+    background: "var(--maq-gray-200)",
+    borderRadius: "3px 3px 0 0",
+  },
   barRed: { background: "var(--maq-red)" },
   barLabel: {
     display: "flex",
     justifyContent: "space-between",
     marginTop: "4px",
   },
-  barLabelText: { fontSize: "9px", color: "var(--maq-gray-500)", flex: 1, textAlign: "center" },
-  trialRow: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "6px" },
+  barLabelText: {
+    fontSize: "9px",
+    color: "var(--maq-gray-500)",
+    flex: 1,
+    textAlign: "center",
+  },
+  trialRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    marginBottom: "6px",
+  },
   trialLabel: { fontSize: "11px", width: "82px", color: "var(--maq-gray-500)" },
-  trialTrack: { flex: 1, height: "6px", background: "var(--maq-gray-100)", borderRadius: "3px" },
+  trialTrack: {
+    flex: 1,
+    height: "6px",
+    background: "var(--maq-gray-100)",
+    borderRadius: "3px",
+  },
   trialFill: { height: "100%", borderRadius: "3px" },
 });
 
 const triageRows = [
   { label: "Bed 12 · Sepsis risk", status: "critical" },
-  { label: "Bed 07 · Post-op",     status: "watch" },
-  { label: "ED · Chest pain",       status: "watch" },
-  { label: "Bed 03 · Stable",       status: "stable" },
+  { label: "Bed 07 · Post-op", status: "watch" },
+  { label: "ED · Chest pain", status: "watch" },
+  { label: "Bed 03 · Stable", status: "stable" },
   { label: "Bed 19 · Ready for discharge", status: "discharge" },
 ];
 
 const wardStages = [
-  { label: "ICU",       h: 92 },
-  { label: "Med-Surg",  h: 78 },
-  { label: "ED",        h: 65 },
+  { label: "ICU", h: 92 },
+  { label: "Med-Surg", h: 78 },
+  { label: "ED", h: 65 },
   { label: "Step-down", h: 48 },
 ];
 
 const trialBands = [
-  { label: "Phase I",   pct: "70%", color: "#22c55e" },
-  { label: "Phase II",  pct: "45%", color: "#f59e0b" },
+  { label: "Phase I", pct: "70%", color: "#22c55e" },
+  { label: "Phase II", pct: "45%", color: "#f59e0b" },
   { label: "Phase III", pct: "18%", color: "var(--maq-red)" },
 ];
 
@@ -101,23 +130,23 @@ function HealthcareHeroVisual() {
                   status === "critical"
                     ? v.badgeCritical
                     : status === "watch"
-                    ? v.badgeWatch
-                    : status === "stable"
-                    ? v.badgeStable
-                    : status === "discharge"
-                    ? v.badgeDischarge
-                    : v.badgeRoutine
+                      ? v.badgeWatch
+                      : status === "stable"
+                        ? v.badgeStable
+                        : status === "discharge"
+                          ? v.badgeDischarge
+                          : v.badgeRoutine
                 }`}
               >
                 {status === "critical"
                   ? "Critical"
                   : status === "watch"
-                  ? "Watch"
-                  : status === "stable"
-                  ? "Stable"
-                  : status === "discharge"
-                  ? "Discharge"
-                  : "Routine"}
+                    ? "Watch"
+                    : status === "stable"
+                      ? "Stable"
+                      : status === "discharge"
+                        ? "Discharge"
+                        : "Routine"}
               </span>
             </div>
           ))}
@@ -127,12 +156,18 @@ function HealthcareHeroVisual() {
         <span className={v.tileTitle}>Ward occupancy today</span>
         <div className={v.barRow}>
           {wardStages.map(({ label, h }, i) => (
-            <div key={label} className={`${v.bar} ${i === 0 ? v.barRed : ""}`} style={{ height: `${h}%` }} />
+            <div
+              key={label}
+              className={`${v.bar} ${i === 0 ? v.barRed : ""}`}
+              style={{ height: `${h}%` }}
+            />
           ))}
         </div>
         <div className={v.barLabel}>
           {wardStages.map(({ label }) => (
-            <span key={label} className={v.barLabelText}>{label}</span>
+            <span key={label} className={v.barLabelText}>
+              {label}
+            </span>
           ))}
         </div>
       </div>
@@ -142,7 +177,10 @@ function HealthcareHeroVisual() {
           <div key={label} className={v.trialRow}>
             <span className={v.trialLabel}>{label}</span>
             <div className={v.trialTrack}>
-              <div className={v.trialFill} style={{ width: pct, background: color }} />
+              <div
+                className={v.trialFill}
+                style={{ width: pct, background: color }}
+              />
             </div>
           </div>
         ))}
@@ -155,27 +193,35 @@ function HealthcareHeroVisual() {
 const hlsStats = [
   {
     metric: "Agentic",
-    label: "AI agents reshaping clinical, operational, and research workflows across healthcare and life sciences",
+    label:
+      "AI agents reshaping clinical, operational, and research workflows across healthcare and life sciences",
     sourceLabel: "Cross-industry agentic AI case study",
-    sourceHref: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
   },
   {
     metric: "HIPAA-ready",
-    label: "Secure-by-design Copilot patterns for environments handling PHI and other regulated data",
+    label:
+      "Secure-by-design Copilot patterns for environments handling PHI and other regulated data",
     sourceLabel: "Secure Copilot case study",
-    sourceHref: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
   },
   {
     metric: "CoE-led",
-    label: "Structured adoption playbook for moving healthcare AI pilots into production safely",
+    label:
+      "Structured adoption playbook for moving healthcare AI pilots into production safely",
     sourceLabel: "AI Center of Excellence case study",
-    sourceHref: "https://blog.maqsoftware.com/2026/02/transforming-ai-interest-into-adoption.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2026/02/transforming-ai-interest-into-adoption.html",
   },
   {
     metric: "Grounded",
-    label: "Clinicians and researchers retrieve citation-backed answers from clinical content and policy libraries",
+    label:
+      "Clinicians and researchers retrieve citation-backed answers from clinical content and policy libraries",
     sourceLabel: "AI Copilot information retrieval case study",
-    sourceHref: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html",
   },
 ];
 
@@ -227,7 +273,8 @@ const hlsCases = [
   },
   {
     tag: "AI Center of Excellence",
-    title: "Transforming AI interest into adoption by establishing an AI Center of Excellence",
+    title:
+      "Transforming AI interest into adoption by establishing an AI Center of Excellence",
     teaser:
       "A proven CoE blueprint for moving pilot interest into enterprise-wide adoption — particularly relevant for health systems and life-sciences orgs scaling AI safely.",
     href: "https://blog.maqsoftware.com/2026/02/transforming-ai-interest-into-adoption.html",
@@ -237,13 +284,15 @@ const hlsCases = [
 const hlsOffers = [
   {
     pill: "Clinical analytics",
-    title: "Clinical Operations & Care Quality Analytics for Healthcare: 4-Week PoC",
+    title:
+      "Clinical Operations & Care Quality Analytics for Healthcare: 4-Week PoC",
     desc: "A 4-week proof of concept that unifies EHR, claims, and operational data on Microsoft Fabric to expose care-quality gaps and accelerate value-based care reporting.",
     href: "#", // TODO: replace with Azure Marketplace listing URL
   },
   {
     pill: "Patient experience",
-    title: "Patient Engagement & Care Navigation for Healthcare: 2-Week Assessment",
+    title:
+      "Patient Engagement & Care Navigation for Healthcare: 2-Week Assessment",
     desc: "A 2-week assessment that maps the patient journey across digital and clinical touchpoints, identifying AI-driven engagement and navigation opportunities.",
     href: "#", // TODO: replace with Azure Marketplace listing URL
   },
@@ -258,17 +307,6 @@ const hlsOffers = [
     title: "HIPAA & 21 CFR Part 11 Data Governance Assessment",
     desc: "A 2-week assessment of your data governance posture against HIPAA, HITECH, and 21 CFR Part 11 requirements with Microsoft Purview-aligned remediations.",
     href: "#", // TODO: replace with Azure Marketplace listing URL
-  },
-];
-
-const hlsTestimonials = [
-  {
-    body: "MAQ Software's HIPAA-aligned Copilot rollout let our care teams retrieve cited policy and guideline answers without leaving the EHR. Information retrieval that used to take minutes now takes seconds.",
-    cite: "VP, Clinical Informatics — Integrated health system (placeholder)",
-  },
-  {
-    body: "Our research data was scattered across labs, trial systems, and partner repositories. MAQ Software unified it on Microsoft Fabric with 21 CFR Part 11-aligned audit trails — cohort discovery cycles dropped from weeks to days.",
-    cite: "Director, Research Informatics — Global life sciences company (placeholder)",
   },
 ];
 
@@ -308,7 +346,6 @@ export function IndustryHealthcareLifeSciences() {
         sub="Accelerate healthcare and life sciences outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning clinical analytics, patient experience, research data unification, and regulated-data governance."
         offers={hlsOffers}
       />
-      <Testimonials quotes={hlsTestimonials} />
       <CTA />
     </>
   );

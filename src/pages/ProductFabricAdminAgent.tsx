@@ -96,7 +96,13 @@ const useStyles = makeStyles({
     margin: 0,
     letterSpacing: "-0.01em",
   },
-  sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "720px" },
+  sub: {
+    display: "block",
+    fontSize: "14px",
+    color: "var(--maq-gray-600)",
+    margin: 0,
+    maxWidth: "720px",
+  },
 
   // Impact ----------------------------------------------------------------
   impactGrid: {
@@ -168,7 +174,12 @@ const useStyles = makeStyles({
     justifyContent: "center",
   },
   featTitle: { fontSize: "15px", fontWeight: 700, color: "var(--maq-black)" },
-  featDesc: { fontSize: "13.5px", color: "var(--maq-gray-700)", lineHeight: 1.6, margin: 0 },
+  featDesc: {
+    fontSize: "13.5px",
+    color: "var(--maq-gray-700)",
+    lineHeight: 1.6,
+    margin: 0,
+  },
 
   // Case studies ----------------------------------------------------------
   caseGrid: {
@@ -230,47 +241,6 @@ const useStyles = makeStyles({
     gap: "4px",
   },
 
-  // Testimonials ----------------------------------------------------------
-  quoteGrid: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
-  },
-  quote: {
-    background: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    padding: "24px",
-    position: "relative",
-    margin: 0,
-  },
-  quoteMark: {
-    position: "absolute",
-    top: "4px",
-    left: "16px",
-    fontSize: "56px",
-    color: "var(--maq-red)",
-    opacity: 0.18,
-    lineHeight: 1,
-    fontFamily: "Georgia, serif",
-  },
-  quoteBody: {
-    fontSize: "15px",
-    color: "var(--maq-black)",
-    lineHeight: 1.55,
-    marginBottom: "14px",
-    paddingTop: "16px",
-  },
-  quoteCite: {
-    fontSize: "12px",
-    color: "var(--maq-gray-600)",
-    fontStyle: "normal",
-    fontWeight: 600,
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-  },
-
   // Marketplace -----------------------------------------------------------
   mktGrid: {
     display: "grid",
@@ -300,7 +270,12 @@ const useStyles = makeStyles({
     background:
       "linear-gradient(135deg, #ececec 0%, #f5f5f5 50%, #e6e6e6 100%)",
   },
-  mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1 },
+  mktBody: {
+    padding: "16px 18px 20px",
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
+  },
   mktPill: {
     alignSelf: "flex-start",
     fontSize: "10px",
@@ -327,7 +302,12 @@ const useStyles = makeStyles({
     flex: 1,
   },
   mktArrow: { color: "var(--maq-red)", flexShrink: 0, marginTop: "2px" },
-  mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0 },
+  mktDesc: {
+    fontSize: "12.5px",
+    color: "var(--maq-gray-600)",
+    lineHeight: 1.55,
+    margin: 0,
+  },
 
   // Featured marketplace banner -------------------------------------------
   banner: {
@@ -377,49 +357,73 @@ const useStyles = makeStyles({
 // Data
 // ---------------------------------------------------------------------------
 const impact = [
-  { metric: "60%", label: "Fewer capacity incidents after enabling autonomous monitoring", source: "Enterprise Fabric tenant" },
-  { metric: "24/7", label: "Autonomous coverage across capacities, workspaces, and items", source: "Always-on agent" },
-  { metric: "5 min", label: "Mean time to detect drift in permissions and SLAs", source: "MTTD benchmark" },
-  { metric: "30+", label: "Fabric tenants monitored in production", source: "Deployment footprint" },
+  {
+    metric: "60%",
+    label: "Fewer capacity incidents after enabling autonomous monitoring",
+    source: "Enterprise Fabric tenant",
+  },
+  {
+    metric: "24/7",
+    label: "Autonomous coverage across capacities, workspaces, and items",
+    source: "Always-on agent",
+  },
+  {
+    metric: "5 min",
+    label: "Mean time to detect drift in permissions and SLAs",
+    source: "MTTD benchmark",
+  },
+  {
+    metric: "30+",
+    label: "Fabric tenants monitored in production",
+    source: "Deployment footprint",
+  },
 ];
 
-
 const features = [
-  { icon: <Pulse24Regular />, title: "24/7 health monitoring", desc: "Capacity utilization, refresh SLAs, and item failures tracked across every workspace and domain in your tenant." },
-  { icon: <Warning24Regular />, title: "Proactive risk alerts", desc: "Surface issues before business users hit broken reports or throttled queries — alerts correlated, not noisy." },
-  { icon: <Wrench24Regular />, title: "One-click remediation", desc: "Suggested fixes (resize capacity, reassign workspace, archive orphaned items) execute with full audit trail." },
-  { icon: <Eye24Regular />, title: "Tenant-wide visibility", desc: "A single pane across capacities, domains, workspaces, lakehouses, warehouses, and semantic models." },
+  {
+    icon: <Pulse24Regular />,
+    title: "24/7 health monitoring",
+    desc: "Capacity utilization, refresh SLAs, and item failures tracked across every workspace and domain in your tenant.",
+  },
+  {
+    icon: <Warning24Regular />,
+    title: "Proactive risk alerts",
+    desc: "Surface issues before business users hit broken reports or throttled queries — alerts correlated, not noisy.",
+  },
+  {
+    icon: <Wrench24Regular />,
+    title: "One-click remediation",
+    desc: "Suggested fixes (resize capacity, reassign workspace, archive orphaned items) execute with full audit trail.",
+  },
+  {
+    icon: <Eye24Regular />,
+    title: "Tenant-wide visibility",
+    desc: "A single pane across capacities, domains, workspaces, lakehouses, warehouses, and semantic models.",
+  },
 ];
 
 const cases = [
   {
     tag: "Microsoft Fabric \u00b7 OneLake",
-    title: "Unifying disconnected data systems using Microsoft Fabric and OneLake",
-    teaser: "Siloed enterprise data unified on OneLake for a single governed surface \u2014 monitored end-to-end by an admin agent layer.",
+    title:
+      "Unifying disconnected data systems using Microsoft Fabric and OneLake",
+    teaser:
+      "Siloed enterprise data unified on OneLake for a single governed surface \u2014 monitored end-to-end by an admin agent layer.",
     href: "https://blog.maqsoftware.com/2026/01/unifying-disconnected-data-systems.html",
   },
   {
     tag: "Fabric migration \u00b7 OSOT",
     title: "Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT)",
-    teaser: "Consolidating fragmented data estates onto Microsoft Fabric with proactive capacity and workspace governance.",
+    teaser:
+      "Consolidating fragmented data estates onto Microsoft Fabric with proactive capacity and workspace governance.",
     href: "https://blog.maqsoftware.com/2025/07/migrating-to-microsoft-fabric-to-unlock.html",
   },
   {
     tag: "Fabric ISV \u00b7 CI/CD",
     title: "Microsoft Fabric ISV Solutions: Implementing CI/CD",
-    teaser: "Repeatable CI/CD patterns for Fabric ISV solutions \u2014 with admin-grade controls baked into the deployment lifecycle.",
+    teaser:
+      "Repeatable CI/CD patterns for Fabric ISV solutions \u2014 with admin-grade controls baked into the deployment lifecycle.",
     href: "https://blog.maqsoftware.com/2025/05/microsoft-fabric-isv-solutions.html",
-  },
-];
-
-const quotes = [
-  {
-    body: "Fabric Admin Agent caught a throttling pattern on our F64 capacity before our morning standup. We resized in one click and avoided a board-level escalation.",
-    cite: "Director, Data Platform — Fortune 500 retailer",
-  },
-  {
-    body: "We replaced three manual Fabric health checklists with the agent. Our platform team now spends weeks on roadmap work instead of firefighting.",
-    cite: "Head of Analytics Engineering — Global manufacturer",
   },
 ];
 
@@ -478,12 +482,12 @@ export function ProductFabricAdminAgent() {
               AI-powered capacity management for Microsoft Fabric
             </h1>
             <p className={s.heroSub}>
-              Fabric Admin Agent gives Microsoft Fabric administrators an
-              AI copilot for capacity. It detects anomalies and usage spikes
-              in real time, forecasts upcoming demand, and recommends
-              actions to reduce throttling, eliminate waste, and optimize
-              cost — so platform teams stay ahead of capacity issues instead
-              of firefighting them.
+              Fabric Admin Agent gives Microsoft Fabric administrators an AI
+              copilot for capacity. It detects anomalies and usage spikes in
+              real time, forecasts upcoming demand, and recommends actions to
+              reduce throttling, eliminate waste, and optimize cost — so
+              platform teams stay ahead of capacity issues instead of
+              firefighting them.
             </p>
             <div className={s.btns}>
               <Button
@@ -531,7 +535,9 @@ export function ProductFabricAdminAgent() {
         <div className={s.inner}>
           <div className={s.head}>
             <span className={s.secEyebrow}>Proven outcomes</span>
-            <h2 className={s.title}>Real impact for Microsoft Fabric platform owners</h2>
+            <h2 className={s.title}>
+              Real impact for Microsoft Fabric platform owners
+            </h2>
             <p className={s.sub} style={{ margin: "0 auto" }}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
               enterprise tenants.
@@ -554,7 +560,9 @@ export function ProductFabricAdminAgent() {
         <div className={s.inner}>
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Capabilities</span>
-            <h2 className={s.titleLg}>What the Fabric Admin Agent does for you</h2>
+            <h2 className={s.titleLg}>
+              What the Fabric Admin Agent does for you
+            </h2>
           </div>
           <div className={s.featGrid}>
             {features.map((f) => (
@@ -575,7 +583,9 @@ export function ProductFabricAdminAgent() {
         <div className={s.inner}>
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Fabric case studies</span>
-            <h2 className={s.titleLg}>How platform teams ship Fabric faster with MAQ Software</h2>
+            <h2 className={s.titleLg}>
+              How platform teams ship Fabric faster with MAQ Software
+            </h2>
           </div>
           <div className={s.caseGrid}>
             {cases.map((c) => (
@@ -625,7 +635,9 @@ export function ProductFabricAdminAgent() {
           {/* Featured banner */}
           <div className={s.banner}>
             <div>
-              <span className={s.bannerEyebrow}>Microsoft AppSource · Preview</span>
+              <span className={s.bannerEyebrow}>
+                Microsoft AppSource · Preview
+              </span>
               <h3 className={s.bannerTitle}>
                 Get Fabric Admin Agent on Microsoft Marketplace
               </h3>
@@ -685,28 +697,6 @@ export function ProductFabricAdminAgent() {
           </div>
         </div>
       </section>
-
-      {/* ---------------------- Testimonials ---------------------- */}
-      <section className={s.sectionAlt}>
-        <div className={s.inner}>
-          <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Testimonials</span>
-            <h2 className={s.titleLg}>What our clients have to say</h2>
-          </div>
-          <div className={s.quoteGrid}>
-            {quotes.map((q, i) => (
-              <blockquote key={i} className={s.quote}>
-                <span className={s.quoteMark} aria-hidden="true">
-                  &ldquo;
-                </span>
-                <p className={s.quoteBody}>{q.body}</p>
-                <cite className={s.quoteCite}>{q.cite}</cite>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
-
     </>
   );
 }

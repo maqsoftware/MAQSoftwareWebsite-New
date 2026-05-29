@@ -11,7 +11,6 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { Testimonials } from "../components/industry/Testimonials";
 import { CTA } from "../components/CTA";
 
 // --- Manufacturing hero visual ---
@@ -52,7 +51,11 @@ const useVisualStyles = makeStyles({
     alignItems: "center",
     gap: "8px",
   },
-  statusLabel: { fontSize: "10px", color: "var(--maq-gray-500)", width: "60px" },
+  statusLabel: {
+    fontSize: "10px",
+    color: "var(--maq-gray-500)",
+    width: "60px",
+  },
   statusDot: {
     width: "8px",
     height: "8px",
@@ -60,8 +63,17 @@ const useVisualStyles = makeStyles({
     flexShrink: 0,
   },
   statusText: { fontSize: "10px", color: "var(--maq-gray-600)", flex: 1 },
-  spark: { display: "flex", alignItems: "flex-end", gap: "4px", height: "36px" },
-  sparkBar: { width: "10px", background: "var(--maq-gray-500)", borderRadius: "2px" },
+  spark: {
+    display: "flex",
+    alignItems: "flex-end",
+    gap: "4px",
+    height: "36px",
+  },
+  sparkBar: {
+    width: "10px",
+    background: "var(--maq-gray-500)",
+    borderRadius: "2px",
+  },
 });
 
 const inventoryLevels = [
@@ -105,7 +117,10 @@ function ManufacturingHeroVisual() {
           </div>
           <div className={v.statusRow}>
             <span className={v.statusLabel}>PO-8127</span>
-            <span className={v.statusDot} style={{ background: "var(--maq-red)" }} />
+            <span
+              className={v.statusDot}
+              style={{ background: "var(--maq-red)" }}
+            />
             <span className={v.statusText}>Pending</span>
           </div>
           <div className={v.statusRow}>
@@ -198,13 +213,6 @@ const manufacturingOffers = [
   },
 ];
 
-const manufacturingTestimonials = [
-  {
-    body: "We engaged MAQ Software to build our AI CoE and prioritize use cases across plant operations, supply chain, and quality. Within two weeks we had a working prototype and a clear roadmap to enterprise rollout.",
-    cite: "VP, Manufacturing Operations \u2014 Global industrial manufacturer",
-  },
-];
-
 export function IndustryManufacturing() {
   return (
     <>
@@ -242,7 +250,6 @@ export function IndustryManufacturing() {
         sub="Accelerate manufacturing outcomes with ready-to-deploy Microsoft Azure Marketplace offerings \u2014 spanning AI strategy, real-time intelligence, and data platform modernization."
         offers={manufacturingOffers}
       />
-      <Testimonials quotes={manufacturingTestimonials} />
       <CTA />
     </>
   );

@@ -4,7 +4,6 @@ import { ReportingBICapabilities } from "../components/service-reporting-bi/Repo
 import { ReportingBIOutcomes } from "../components/service-reporting-bi/ReportingBIOutcomes";
 import { ReportingBICaseStudies } from "../components/service-reporting-bi/ReportingBICaseStudies";
 import { ReportingBIInsights } from "../components/service-reporting-bi/ReportingBIInsights";
-import { ReportingBITestimonials } from "../components/service-reporting-bi/ReportingBITestimonials";
 import { CTA } from "../components/CTA";
 
 export function ServiceReportingBI() {
@@ -16,7 +15,6 @@ export function ServiceReportingBI() {
       <ReportingBIOutcomes />
       <ReportingBICaseStudies />
       <ReportingBIInsights />
-      <ReportingBITestimonials />
       <CTA />
     </>
   );

@@ -12,7 +12,6 @@ import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { Testimonials } from "../components/industry/Testimonials";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
@@ -34,14 +33,45 @@ const useVisualStyles = makeStyles({
     alignItems: "center",
     gap: "6px",
   },
-  spark: { display: "flex", alignItems: "flex-end", gap: "4px", height: "36px" },
-  bar: { width: "10px", background: "var(--maq-gray-500)", borderRadius: "2px" },
-  shelfGrid: { display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "4px" },
-  shelfCell: { aspectRatio: "1.4", background: "var(--maq-gray-100)", borderRadius: "3px" },
-  recoRow: { display: "flex", alignItems: "center", gap: "10px", marginTop: "6px" },
+  spark: {
+    display: "flex",
+    alignItems: "flex-end",
+    gap: "4px",
+    height: "36px",
+  },
+  bar: {
+    width: "10px",
+    background: "var(--maq-gray-500)",
+    borderRadius: "2px",
+  },
+  shelfGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gap: "4px",
+  },
+  shelfCell: {
+    aspectRatio: "1.4",
+    background: "var(--maq-gray-100)",
+    borderRadius: "3px",
+  },
+  recoRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    marginTop: "6px",
+  },
   recoLabel: { fontSize: "11px", width: "70px", color: "var(--maq-gray-500)" },
-  recoTrack: { flex: 1, height: "6px", background: "var(--maq-gray-100)", borderRadius: "3px" },
-  recoFill: { height: "100%", background: "var(--maq-red)", borderRadius: "3px" },
+  recoTrack: {
+    flex: 1,
+    height: "6px",
+    background: "var(--maq-gray-100)",
+    borderRadius: "3px",
+  },
+  recoFill: {
+    height: "100%",
+    background: "var(--maq-red)",
+    borderRadius: "3px",
+  },
 });
 
 const sparkHeights = [40, 60, 50, 78, 65, 90, 72, 95];
@@ -96,25 +126,30 @@ const retailStats = [
     metric: "8×",
     label: "Faster Power BI refresh for a top-3 US retailer",
     sourceLabel: "Microsoft Fabric BI modernization",
-    sourceHref: "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
   },
   {
     metric: "Real-time",
     label: "Direct Store Delivery visibility on Microsoft Fabric",
     sourceLabel: "Real-time DSD case study",
-    sourceHref: "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
   },
   {
     metric: "< 1 min",
-    label: "Live KPIs replacing nightly batches at an organic supermarket chain",
+    label:
+      "Live KPIs replacing nightly batches at an organic supermarket chain",
     sourceLabel: "Organic supermarket case study",
-    sourceHref: "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
   },
   {
     metric: "Personalized",
     label: "Loyalty program lift across millions of members",
     sourceLabel: "Loyalty program case study",
-    sourceHref: "https://blog.maqsoftware.com/2024/02/empowering-retail-growth-with-optimized.html",
+    sourceHref:
+      "https://blog.maqsoftware.com/2024/02/empowering-retail-growth-with-optimized.html",
   },
 ];
 
@@ -166,7 +201,8 @@ const retailCases = [
   },
   {
     tag: "Direct Store Delivery",
-    title: "Enabling real-time visibility: Direct Store Delivery with Microsoft Fabric",
+    title:
+      "Enabling real-time visibility: Direct Store Delivery with Microsoft Fabric",
     teaser:
       "Deliver real-time DSD visibility on Fabric so field operations can act on live route and stock data.",
     href: "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
@@ -182,7 +218,8 @@ const retailOffers = [
   },
   {
     pill: "Store operations",
-    title: "Store Operations & Workforce Intelligence for Retail: 2-Week Assessment",
+    title:
+      "Store Operations & Workforce Intelligence for Retail: 2-Week Assessment",
     desc: "A 2-week assessment that benchmarks store operations and workforce productivity on Microsoft Fabric, surfacing opportunities to lift throughput and service levels.",
     href: "#", // TODO: replace with Azure Marketplace listing URL
   },
@@ -197,17 +234,6 @@ const retailOffers = [
     title: "Store Manager Assistant for Retail",
     desc: "A Copilot-powered assistant that gives store managers real-time visibility into sales, inventory, and workforce signals, with guided actions to run a smarter store.",
     href: "#", // TODO: replace with Azure Marketplace listing URL
-  },
-];
-
-const retailTestimonials = [
-  {
-    body: "MAQ Software's team helped us move from overnight batches to live store KPIs in under a quarter. Our managers now act on minute-by-minute signals instead of yesterday's report.",
-    cite: "VP, Retail Analytics — Global grocery chain",
-  },
-  {
-    body: "The pricing simulation agent gave our merchants the confidence to test scenarios safely. We shipped three campaigns in the time it used to take to debate one.",
-    cite: "Director, Pricing & Promotions — Specialty retailer",
   },
 ];
 
@@ -247,7 +273,6 @@ export function IndustryRetail() {
         sub="Accelerate retail outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning demand planning, customer experience, and real-time intelligence."
         offers={retailOffers}
       />
-      <Testimonials quotes={retailTestimonials} />
       <CTA />
     </>
   );
