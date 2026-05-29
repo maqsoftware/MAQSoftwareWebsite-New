@@ -408,7 +408,7 @@ const cases = [
     tag: "Fabric ISV \u00b7 CI/CD",
     title: "Microsoft Fabric ISV Solutions: Implementing CI/CD",
     teaser: "Repeatable CI/CD patterns for Fabric ISV solutions \u2014 with admin-grade controls baked into the deployment lifecycle.",
-    href: "https://blog.maqsoftware.com/2025/05/microsoft-fabric-isv-solutions.html",
+    href: "https://blog.maqsoftware.com/2024/11/microsoft-fabric-isv-cicd.html",
   },
 ];
 
@@ -447,12 +447,6 @@ const resources = [
     title: "Fabric & Power BI best-practice guides",
     desc: "Authoritative guides on Fabric capacity sizing, Power BI optimization, and governance — from the MAQ Software community.",
     href: "https://maqsoftware.com/community/best-practices",
-  },
-  {
-    pill: "Engineering blog",
-    title: "Inside Fabric Admin Agent",
-    desc: "Engineering posts on agent architecture, anomaly detection, capacity forecasting, and remediation playbooks.",
-    href: "https://blog.maqsoftware.com/search/label/Microsoft%20Fabric",
   },
   {
     pill: "Talk to us",

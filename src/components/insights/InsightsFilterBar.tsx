@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     border: "1px solid var(--maq-border)",
     color: "var(--maq-ink)",
     background: "#fff",
+    transition: "all 0.2s ease",
     ":hover": {
       border: "1px solid var(--maq-red)",
       color: "var(--maq-red)",
@@ -17,9 +18,11 @@ const useStyles = makeStyles({
     },
   },
   active: {
-    border: "1px solid var(--maq-red)",
+    border: "2px solid var(--maq-red)",
     color: "var(--maq-red)",
     background: "var(--maq-red-pale)",
+    fontWeight: 600,
+    boxShadow: "0 0 0 3px rgba(208, 43, 30, 0.1)",
   },
 });
 
