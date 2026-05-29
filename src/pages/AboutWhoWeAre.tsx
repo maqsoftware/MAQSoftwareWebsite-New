@@ -501,22 +501,22 @@ const heroStats = [
 const designations = [
   {
     label: "Solutions Partner for Data & AI (Azure)",
-    imgSrc: "/logos/solutions-partner-data-and-AI.png",
+    imgSrc: "/logos/designations/solutions-partner-data-and-AI.png",
     href: "https://partner.microsoft.com/en-rs/asset/collection/solutions-partner-for-data-and-ai-azure#/",
   },
   {
     label: "Solutions Partner for Digital & App Innovation (Azure)",
-    imgSrc: "/logos/solutions-partner-digital-and-apps-innovation.png",
+    imgSrc: "/logos/designations/solutions-partner-digital-and-apps-innovation.png",
     href: "https://partner.microsoft.com/en-US/asset/collection/solutions-partner-for-digital-and-app-innovation-azure#/",
   },
   {
     label: "Solutions Partner for Infrastructure (Azure)",
-    imgSrc: "/logos/solutions-partner-infrastructure.png",
+    imgSrc: "/logos/designations/solutions-partner-infrastructure.png",
     href: "https://partner.microsoft.com/en-US/asset/collection/solutions-partner-for-infrastructure-azure#/",
   },
   {
     label: "Solutions Partner for Security",
-    imgSrc: "/logos/solutions-partner-security.png",
+    imgSrc: "/logos/designations/solutions-partner-security.png",
     href: "https://partner.microsoft.com/en-US/asset/collection/solutions-partner-for-security#/",
   },
 ];
@@ -558,25 +558,25 @@ const whyItems = [
 
 const partners = [
   {
-    imgSrc: "/logos/microsoft-logo.png" as string | null,
+    imgSrc: "/logos/partners/microsoft-logo.png" as string | null,
     initials: "MS",
     label: "Microsoft Preferred Supplier, Since 2000",
     href: "https://marketplace.microsoft.com/en-us/partners/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview",
   },
   {
-    imgSrc: "/logos/Snowflake-Services-Select.png" as string | null,
+    imgSrc: "/logos/partners/Snowflake-Services-Select.png" as string | null,
     initials: "SF",
     label: "Snowflake Technology Partner",
     href: "https://www.snowflake.com/en/why-snowflake/partners/all-partners/maq-llc-dba-maq-software/",
   },
   {
-    imgSrc: "/logos/databricks-logo.png" as string | null,
+    imgSrc: "/logos/partners/databricks-logo.png" as string | null,
     initials: "DB",
     label: "Databricks Technology Partner",
     href: "https://partners.databricks.com/s/directory/listing?recordId=0016100001F00jXAAR",
   },
   {
-    imgSrc: "/logos/AWS_Partner.png" as string | null,
+    imgSrc: "/logos/partners/AWS_Partner.png" as string | null,
     initials: "AWS",
     label: "Amazon Consulting Partner",
     href: "http://www.aws-partner-directory.com/PartnerDirectory/PartnerDetail?Name=MAQ+LLC+dba+MAQ+Software",
@@ -585,19 +585,19 @@ const partners = [
 
 const recognitions = [
   {
-    imgSrc: "/logos/Inc5000-2.png" as string | null,
+    imgSrc: "/logos/recognitions/Inc5000-2.png" as string | null,
     title: "Twelve-Time Honoree, Inc. 5000, Fastest Growing Companies in America",
     href: "http://www.inc.com/profile/maq-software",
     desc: "Inc. has honored MAQ Software on its prestigious Inc. 5000 list twelve times, a rare achievement. Since 2007, Inc. magazine has recognized more than 35,000 unique companies on its Inc. 5000 list based on the sales growth of the companies. Less than 0.5% of Inc. 5000 companies demonstrate sustained growth by appearing twelve or more times.",
   },
   {
-    imgSrc: "/logos/Power_BI_Partner_Apr2023.png" as string | null,
+    imgSrc: "/logos/recognitions/Power_BI_Partner_Apr2023.png" as string | null,
     title: "2021 Microsoft Power BI Partner of the Year — Global Award Winner",
     href: "https://news.maqsoftware.com/2021/07/maq-software-honored-as-winner-of-2021.html",
     desc: "The Microsoft Partner of the Year award recognizes Microsoft partners that deliver outstanding solutions and innovations using Microsoft technologies. Microsoft awarded MAQ Software this global award for delivering innovative business intelligence and analytics solutions using Microsoft Power BI.",
   },
   {
-    imgSrc: "/logos/Fastest_Growing_Companies.png" as string | null,
+    imgSrc: "/logos/recognitions/Fastest_Growing_Companies.png" as string | null,
     title: "Puget Sound Business Journal's 100 Fastest-Growing Private Companies in Washington State",
     href: "http://www.bizjournals.com/seattle/stories/2009/10/19/focus2.html",
     desc: "MAQ Software is recognized as one of the fastest growing private companies in Washington State for five consecutive years. Because MAQ Software has earned a spot on the list four or more years, we are featured in the Business Journal Hall of Fame.",
@@ -606,19 +606,19 @@ const recognitions = [
 
 const certifications = [
   {
-    imgSrc: "/logos/ISO_27701_27001_Logo.png",
+    imgSrc: "/logos/certifications/ISO_27701_27001_Logo.png",
     title: "ISO/IEC 27701:2019 – Privacy Information Management",
     href: "https://www.bsigroup.com/en-IN/products-and-services/assessment-and-certification/validation-and-verification/client-directory-certificate/PM%20747130",
     desc: "MAQ Software is certified ISO 27701:2019 by British Standards Institution. ISO 27701 standards provide guidance for establishing, implementing, maintaining and continually improving a Privacy Information Management System (PIMS). They serve as an extension of ISO/IEC 27001 for privacy management within MAQ Software.",
   },
   {
-    imgSrc: "/logos/ISO-icon-27001.png",
+    imgSrc: "/logos/certifications/ISO-icon-27001.png",
     title: "ISO 27001:2022 – Information Security",
     href: "https://www.bsigroup.com/en-IN/products-and-services/assessment-and-certification/validation-and-verification/client-directory-certificate/IS%20592346",
     desc: "MAQ Software is certified ISO 27001:2022 by British Standards Institution. ISO 27001 standards, the only auditable international standard, provide an Information Security Management Systems (ISMS) model for adequate and proportionate security controls to protect information assets.",
   },
   {
-    imgSrc: "/logos/ISO-icon-27018.png",
+    imgSrc: "/logos/certifications/ISO-icon-27018.png",
     title: "ISO/IEC 27018:2019 – Cloud Security",
     href: "https://www.bsigroup.com/en-IN/products-and-services/assessment-and-certification/validation-and-verification/client-directory-certificate/PII%20732855",
     desc: "MAQ Software is certified ISO/IEC 27018:2019 by British Standards Institution. ISO/IEC 27018:2019 is a code of practice that focuses on protection of personal data in the cloud. It is based on ISO/IEC information security standard 27002 and provides implementation guidance on ISO/IEC 27002 controls applicable to public cloud Personally Identifiable Information (PII).",
