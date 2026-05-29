@@ -1,5 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -33,6 +34,9 @@ import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 import { AboutSustainability } from "./pages/AboutSustainability";
+import { AboutNews } from "./pages/AboutNews";
+import { AboutCareers } from "./pages/AboutCareers";
+import { Contact } from "./pages/Contact";
 
 const useStyles = makeStyles({
   root: {
@@ -41,10 +45,19 @@ const useStyles = makeStyles({
   },
 });
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+  return null;
+}
+
 export function App() {
   const s = useStyles();
   return (
     <div className={s.root}>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -169,6 +182,9 @@ export function App() {
             </>
           }
         />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/news" element={<AboutNews />} />
+        <Route path="/careers" element={<AboutCareers />} />
       </Routes>
       <Footer />
     </div>
