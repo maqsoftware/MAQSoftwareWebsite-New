@@ -112,9 +112,9 @@ export function ServiceCloudHero() {
               size="large"
               icon={<Mail24Regular />}
               as="a"
-              href="/contact"
+              href="mailto:customersuccess@maqsoftware.com?subject=Cloud%20Infrastructure%20%26%20Modernization"
             >
-              Get started
+              Contact us
             </Button>
             <Button
               appearance="outline"
