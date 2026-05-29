@@ -1,6 +1,6 @@
+import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -10,6 +10,7 @@ import { IndustryFinancialServices } from "./pages/IndustryFinancialServices";
 import { IndustryHealthcareLifeSciences } from "./pages/IndustryHealthcareLifeSciences";
 import { IndustryTechnology } from "./pages/IndustryTechnology";
 import { IndustryPublicSector } from "./pages/IndustryPublicSector";
+import { IndustryManufacturing } from "./pages/IndustryManufacturing";
 import { ProductsHome } from "./pages/ProductsHome";
 import { ProductDetail } from "./pages/ProductDetail";
 import { ProductFabricAdminAgent } from "./pages/ProductFabricAdminAgent";
@@ -27,6 +28,7 @@ import { ServiceSecurityCompliance } from "./pages/ServiceSecurityCompliance";
 import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 import { ServiceWorkplaceTransformation } from "./pages/ServiceWorkplaceTransformation";
 import { PartnershipSnowflake } from "./pages/PartnershipSnowflake";
+import { PartnershipDatabricks } from "./pages/PartnershipDatabricks";
 import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
 import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
 import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
@@ -65,6 +67,7 @@ export function App() {
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
         <Route path="/industries/healthcare-life-sciences" element={<IndustryHealthcareLifeSciences />} />
         <Route path="/industries/technology" element={<IndustryTechnology />} />
+        <Route path="/industries/manufacturing" element={<IndustryManufacturing />} />
         <Route path="/industries/public-sector" element={<IndustryPublicSector />} />
         <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
         <Route path="/services/cloud" element={<ServiceCloud />} />
@@ -95,6 +98,15 @@ export function App() {
           element={
             <>
               <PartnershipSnowflake />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/partnerships/databricks"
+          element={
+            <>
+              <PartnershipDatabricks />
               <CTA />
             </>
           }
