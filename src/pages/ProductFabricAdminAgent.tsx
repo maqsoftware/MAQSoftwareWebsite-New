@@ -440,7 +440,7 @@ const resources = [
     pill: "Case studies",
     title: "Fabric & analytics case studies",
     desc: "Real customer stories on Microsoft Fabric, Power BI modernization, governance, and FinOps.",
-    href: "https://maqsoftware.com/case-studies",
+    href: "/insights/case-studies",
   },
   {
     pill: "Best practices",
@@ -600,7 +600,7 @@ export function ProductFabricAdminAgent() {
           <div className={s.seeAll}>
             <a
               className={s.seeAllLink}
-              href="https://maqsoftware.com/case-studies"
+              href="/insights/case-studies"
               target="_blank"
               rel="noreferrer"
             >

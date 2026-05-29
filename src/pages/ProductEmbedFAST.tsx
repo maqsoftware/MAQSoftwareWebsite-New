@@ -34,7 +34,7 @@ const supportRows = [
 const resources = [
   { pill: "AppSource", title: "EmbedFAST on Azure Marketplace", desc: "Purchase plans and licensing.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.embedfastpowerbi" },
   { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace consulting offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "Power BI embedding outcomes", desc: "Real-world wins from EmbedFAST customers.", href: "https://maqsoftware.com/case-studies" },
+  { pill: "Case studies", title: "Power BI embedding outcomes", desc: "Real-world wins from EmbedFAST customers.", href: "/insights/case-studies" },
   { pill: "Best practices", title: "Power BI embedding best practices", desc: "Authoritative guidance from MAQ Software engineers.", href: "https://maqsoftware.com/community/best-practices" },
 ];
 

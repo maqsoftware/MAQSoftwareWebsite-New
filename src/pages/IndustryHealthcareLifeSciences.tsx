@@ -302,7 +302,7 @@ export function IndustryHealthcareLifeSciences() {
         title="How regulated organizations move faster with MAQ Software"
         cases={hlsCases}
         seeAllLabel="See all case studies"
-        seeAllHref="https://maqsoftware.com/case-studies"
+        seeAllHref="/insights/case-studies"
       />
       <MarketplaceOffers
         sub="Accelerate healthcare and life sciences outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning clinical analytics, patient experience, research data unification, and regulated-data governance."

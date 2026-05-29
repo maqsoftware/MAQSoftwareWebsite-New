@@ -682,7 +682,7 @@ export function ServiceBusinessApps() {
                     </div>
                     <a
                         className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies.html?filter=application-modernization"
+                        href="/insights/case-studies?filter=application-modernization"
                         target="_blank"
                         rel="noreferrer"
                     >
@@ -741,7 +741,7 @@ export function ServiceBusinessApps() {
                     </div>
                     <a
                         className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies.html?filter=application-modernization"
+                        href="/insights/case-studies?filter=application-modernization"
                         target="_blank"
                         rel="noreferrer"
                     >

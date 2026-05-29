@@ -21,7 +21,7 @@ const features = [
 
 const resources = [
   { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace consulting offers from MAQ Software.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "https://maqsoftware.com/case-studies" },
+  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "/insights/case-studies" },
   { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "https://maqsoftware.com/community/best-practices" },
   { pill: "Talk to us", title: "Request a personalized demo", desc: "Email customersuccess@maqsoftware.com and we'll set up a tailored walkthrough.", href: "mailto:customersuccess@maqsoftware.com?subject=Demo%20-%20AI-DataLens" },
 ];

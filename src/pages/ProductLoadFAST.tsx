@@ -31,7 +31,7 @@ const resources = [
   { pill: "AppSource", title: "LoadFAST on Azure Marketplace", desc: "Get LoadFAST and start load-testing today.", href: APPSOURCE },
   { pill: "Docs", title: "Technical documentation", desc: "Integration and usage reference on GitBook.", href: "https://maqsoftware.gitbook.io/loadfast-technical-documentation" },
   { pill: "Best practices", title: "Power BI performance patterns", desc: "Capacity sizing, refresh optimization, and performance tuning guides.", href: "https://maqsoftware.com/community/best-practices" },
-  { pill: "Case studies", title: "Load-testing case studies", desc: "Real-world Power BI capacity wins.", href: "https://maqsoftware.com/case-studies" },
+  { pill: "Case studies", title: "Load-testing case studies", desc: "Real-world Power BI capacity wins.", href: "/insights/case-studies" },
 ];
 
 export function ProductLoadFAST() {

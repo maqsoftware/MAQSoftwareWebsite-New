@@ -133,7 +133,7 @@ export function ServiceCaseStudies({
   title = "How clients are putting agentic AI to work",
   studies = defaultStudies,
   footerLabel = "See all AI case studies",
-  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
+  footerHref = "/insights/case-studies?filter=gen-ai-and-machine-learning",
 }: ServiceCaseStudiesProps = {}) {
   const s = useStyles();
   return (

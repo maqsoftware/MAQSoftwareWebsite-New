@@ -136,7 +136,7 @@ export function ServiceCloudCaseStudies() {
             </a>
           ))}
         </div>
-        <a className={s.footerLink} href="https://maqsoftware.com/case-studies?filter=cloud-optimization">
+        <a className={s.footerLink} href="/insights/case-studies?filter=cloud-optimization">
           See all cloud case studies <ArrowRight16Regular />
         </a>
       </div>
