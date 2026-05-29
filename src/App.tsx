@@ -29,11 +29,11 @@ import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
 import { ServiceWorkplaceTransformation } from "./pages/ServiceWorkplaceTransformation";
 import { PartnershipSnowflake } from "./pages/PartnershipSnowflake";
 import { PartnershipDatabricks } from "./pages/PartnershipDatabricks";
+import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
 import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
 import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
-import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 import { AboutSustainability } from "./pages/AboutSustainability";
 import { AboutNews } from "./pages/AboutNews";
@@ -85,14 +85,31 @@ export function App() {
             </>
           }
         />
+        <Route
+          path="/who-we-are"
+          element={
+            <>
+              <AboutWhoWeAre />
+              <CTA />
+            </>
+          }
+        />
         <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
         <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
+        <Route
+          path="/insights/case-studies/:legacyCaseStudySlug"
+          element={<Navigate to="/insights/case-studies" replace />}
+        />
         <Route path="/insights/consulting-offers" element={<InsightsConsultingOffers />} />
         <Route
           path="/insights/power-bi-custom-visual-guide"
           element={<InsightsPowerBICustomVisualGuide />}
         />
         <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
+        <Route
+          path="/insights/:legacyGuideSlug"
+          element={<Navigate to="/insights/best-practice-guides" replace />}
+        />
         <Route
           path="/partnerships/snowflake"
           element={

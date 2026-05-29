@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
     gap: "48px",
-    alignItems: "center",
+    alignItems: "start",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
   eyebrow: {

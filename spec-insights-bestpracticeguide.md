@@ -4,8 +4,8 @@
 > Sibling specs: [spec-insights-casesstudies.md](spec-insights-casesstudies.md), [spec-insights-consultingoffer.md](spec-insights-consultingoffer.md), [spec-insights-powerbicustomvisualguide.md](spec-insights-powerbicustomvisualguide.md)
 > Generator: [spec-page-generator.md](spec-page-generator.md)
 
-This page captures MAQ Software best-practice guide content and presents it in the
-same compact, card-forward visual style used by the Agentic AI service page.
+This page captures MAQ Software best-practice guide content inside the current
+first-party insights shell.
 
 ---
 
@@ -15,8 +15,8 @@ same compact, card-forward visual style used by the Agentic AI service page.
 |---|---|
 | Route | `/insights/best-practice-guides` |
 | Page component | `src/pages/InsightsBestPracticeGuides.tsx` |
-| Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<CTA />` |
-| New insights building blocks | `src/components/insights/InsightsHero.tsx`, `InsightsResourceNav.tsx`, `InsightsBestPracticeGrid.tsx`, `InsightsTopicFilters.tsx` |
+| Shared layout | `<Header />` and `<Footer />` come from `App.tsx`; this page renders `<CTA />` |
+| Insights building blocks | `src/components/insights/InsightsHero.tsx`, `InsightsResourceNav.tsx`, `InsightsBestPracticeCatalog.tsx` |
 | Header nav integration | Discoverable via header Insights route and resource strip |
 
 **Design goal:** maintain source article titles and links while matching the 48px
@@ -26,14 +26,10 @@ section rhythm, typography, and hover interactions of `/services/agentic-ai`.
 
 ## 2. Page composition (top -> bottom)
 
-1. `<Announcement />` *(shared)*
-2. `<Header />` *(shared, active on "Insights")*
-3. `<InsightsHero variant="best-practice-guides" />` — section 3.1
-4. `<InsightsResourceNav active="best-practice-guides" />` — section 3.2
-5. `<InsightsTopicFilters />`                         — section 3.3
-6. `<InsightsBestPracticeGrid />`                     — section 3.4
-7. `<CTA />` *(shared)*
-8. `<Footer />` *(shared)*
+1. `<InsightsHero />`                                  — section 3.1
+2. `<InsightsResourceNav active="best-practice-guides" />` — section 3.2
+3. `<InsightsBestPracticeCatalog />`                   — section 3.3
+4. `<CTA />`                                           — section 3.4
 
 > **Global Insights rule:** keep the 4 resources destinations visible and consistent across all Insights pages.
 
@@ -54,24 +50,12 @@ section rhythm, typography, and hover interactions of `/services/agentic-ai`.
 
 Same 4-card nav contract with `Best practice guides` active.
 
-### 3.3 InsightsTopicFilters
+### 3.3 InsightsBestPracticeCatalog
 
-- **Topic chips (derived from source guide catalog):**
-  - `All`
-  - `Copilot`
-  - `Power BI`
-  - `Databricks`
-  - `Snowflake`
-  - `Azure`
-  - `Security`
-  - `Dynamics 365`
-  - `Power Apps`
-- **Default:** `All`.
-
-### 3.4 InsightsBestPracticeGrid
-
-- **Layout:** 3-up desktop, 2-up tablet, 1-up mobile.
-- **Card fields:** topic chip, title (verbatim), short teaser, `Read full article ->` link.
+- Rendered by `src/components/insights/InsightsBestPracticeCatalog.tsx`.
+- Layout remains responsive card catalog.
+- Cards should link local-first when the source URL already maps to a first-party `/insights/<slug>` route.
+- Preserve original titles and source destinations in the data model even when the rendered link normalizes to an internal route first.
 
 **Guides (from source list):**
 1. `Maximize developer productivity with GitHub Copilot`
@@ -107,7 +91,7 @@ Same 4-card nav contract with `Best practice guides` active.
 16. `This guide covers the 7 best practices you need to secure dataverse`
     - https://maqsoftware.com/insights/dataverse-security-best-practices
 
-### 3.5 CTA + footer
+### 3.4 CTA + footer
 
 Reuse shared `<CTA />` and `<Footer />`.
 
@@ -147,11 +131,11 @@ Use Agentic-AI service page visual rules:
 |---|---|
 | Best Practice Guides page title/list | 3.1 hero + 3.4 grid |
 | Resource links in footer | 3.2 resource nav |
-| Long guide list | 3.4 responsive guide cards |
+| Long guide list | 3.3 responsive guide catalog |
 | Site footer blocks | shared `<Footer />` |
 
 **Drops:** none.
-**Adds:** topic filter chips for scanability.
+**Adds:** local-first routing for guide URLs that already map to first-party insights routes.
 
 ---
 
@@ -165,9 +149,8 @@ npm run build
 Done when:
 1. `/insights/best-practice-guides` renders all 16 guides.
 2. Each card links to the correct `/insights/...` article URL.
-3. Topic filters work client-side.
-4. Insights resource strip shows all 4 pages.
-5. `npm run build` exits 0.
+3. Insights resource strip shows all 4 pages.
+4. `npm run build` exits 0.
 
 ## 9. Out of scope (v1)
 

@@ -1,7 +1,7 @@
-# MAQ Software — Home Page Specification
+# MAQ Software — Site and Home Specification
 
-> This is the **source of truth** for the home page implementation.
-> Update this file (or ask the assistant to update it) and treat code changes as a downstream consequence of edits here.
+> This is the source of truth for the routed site shell and the home page implementation.
+> Update this file when app-level structure, routing, or home-page composition changes.
 > When this file changes, the assistant should reconcile `src/` to match.
 
 ---
@@ -16,30 +16,40 @@
 | UI library | **Fluent UI v9** — `@fluentui/react-components` |
 | Icons | `@fluentui/react-icons` |
 | Styling | Fluent `makeStyles` (Griffel) + a few CSS variables in `src/styles.css` |
-| Routing | None — single-page home with in-page scroll anchors |
+| Routing | `react-router-dom` with `BrowserRouter` and route-based pages |
 | State | Local component state only — no Redux/Zustand/etc. |
 
 Project layout:
 ```
 src/
-  main.tsx              # React entry, wraps App in FluentProvider(maqLightTheme)
-  App.tsx               # Composes the home page sections in order
+  main.tsx              # React entry, wraps App in FluentProvider + BrowserRouter
+  App.tsx               # Global shell: Header, Routes, Footer, selected CTA wrappers
   theme.ts              # maqBrand BrandVariants + maqLightTheme
-  styles.css            # @import Roboto, CSS vars, body/global resets
+  styles.css            # global vars, typography, resets
   components/
-    Announcement.tsx
-    Header.tsx
-    Hero.tsx
-    TrustBanner.tsx
-    Services.tsx
-    Products.tsx
-    CaseStudies.tsx
-    CTA.tsx
-    Footer.tsx
+    Header.tsx          # shared site navigation and mega-menus
+    Footer.tsx          # shared site footer
+    CTA.tsx             # shared CTA band used by multiple routes
+    service/           # generic service building blocks
+    service-*/         # page-owned service sections
+    product-*/         # page-owned product sections
+    industry/          # generic industry building blocks
+    insights/          # shared insights shell + catalogs + redirect helper
+    partnerships/      # shared partnership building blocks
+  pages/
+    Home.tsx
+    Service*.tsx
+    Product*.tsx
+    Industry*.tsx
+    Partnership*.tsx
+    Insights*.tsx
 ```
 
 **Rules:**
-- One section = one component. Do not collapse sections into `App.tsx`.
+- Keep `App.tsx` thin. It owns the site shell and route table, not page content.
+- Keep page files in `src/pages/` thin composer components.
+- Keep page-owned sections under `src/components/<slice>/` when a page has substantial custom content.
+- Reuse shared wrappers where the behavior is global, such as header menus, shared hero shells, shared industry blocks, or insights navigation.
 - Prefer Fluent v9 primitives (`Button`, `Text`, `Card`, `Title1`, etc.) over raw HTML.
 - Griffel `makeStyles` must use full shorthand (`border`, `padding`, `margin`) — never the rejected partial shorthands (e.g. `borderColor` alone).
 
@@ -77,21 +87,29 @@ Sourced from the live https://maqsoftware.com (computed styles), **not** from an
 
 ---
 
-## 3. Page composition (`App.tsx`, top → bottom)
+## 3. App shell and home composition
 
-Render order is fixed:
+`App.tsx` render order is fixed:
 
 1. `<Header />`
-2. `<main>` containing:
-   1. `<Hero />` — anchor: top of page
-   2. `<TrustBanner />`
-   3. `<Services id="services" />`
-   4. `<Products id="products" />`
-   5. `<CaseStudies id="case-studies" />`
-   6. `<CTA id="contact" />`
+2. `<Routes>` for home, services, products, industries, partnerships, and insights
 3. `<Footer />`
 
-In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `#contact`. Industries currently is a mega-menu (no anchor jump).
+Route-specific notes:
+
+- Home renders through `src/pages/Home.tsx`.
+- Product and partnership routes append the shared `<CTA />` from the route shell in `App.tsx`.
+- Some service and insights routes render `<CTA />` inside the page composer.
+- Insights use first-party routes such as `/insights/case-studies` and `/insights/best-practice-guides`, with local redirect helpers where needed.
+
+Home route composition in `Home.tsx` remains, top to bottom:
+
+1. `<Hero />`
+2. `<TrustBanner />`
+3. `<Services />`
+4. `<Products />`
+5. `<CaseStudies />`
+6. `<CTA />`
 
 ---
 
@@ -102,17 +120,12 @@ In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `
 
 ### 4.2 Header / nav (`Header.tsx`) — sticky
 - Sticky to top, full-width, background `--maq-black`, text white.
-- Left: MAQ logo (text or img — text fallback is fine).
-- Center/right nav items in this exact order:
-  1. **Homepage** — `onClick` scrolls to top
-  2. **Services** — scrolls to `#services`
-  3. **Products** — scrolls to `#products`
-  4. **Industries** — `<MegaMenu label="Industries" items={industries}>`
-  5. **Insights** — scrolls to `#case-studies`
-  6. **About Us** — plain button (no anchor yet)
-  7. **Contact Us** — `<MegaMenu label="Contact Us" items={contact}>`
-- Right cluster: **"Request a demo"** primary Fluent `Button` that scrolls to `#contact`.
-- All nav items use a shared `navBtn` Griffel class: white text, transparent bg, transparent-white hover. No borders.
+- Left: MAQ logo / wordmark.
+- Primary navigation is route-driven, not home-anchor-driven.
+- Services, Products, Industries, Partnerships, and Insights are mega-menus backed by route items.
+- The Insights entry routes users to `/insights/case-studies` and related first-party insights pages.
+- Desktop dropdowns open on hover and close on scroll. Keyboard access must continue to work.
+- All nav items use the shared header button styling: white text, transparent background, transparent-white hover.
 
 **Mega-menu data (must stay exact):**
 ```ts
@@ -210,7 +223,6 @@ A change is considered **done** only when `npm run build` exits with code 0.
   3. Run `npm run build` and confirm it passes.
   4. Not touch unrelated files (case-studies.md, react components not affected, etc.).
 - **Out of scope (do not add unless spec is updated first):**
-  - Routing, additional pages
   - CMS / data fetching
   - Auth
   - Analytics SDKs

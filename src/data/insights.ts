@@ -15,7 +15,7 @@ export const insightsResourceLinks: InsightsResourceLink[] = [
   {
     key: "consulting-offers",
     label: "Consulting offers",
-    href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software",
+    href: "/insights/consulting-offers",
     description: "Microsoft Marketplace engagements from MAQ Software.",
   },
   {

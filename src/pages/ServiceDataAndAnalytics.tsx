@@ -1,22 +1,22 @@
-import { ServiceHeroData } from "../components/service/ServiceHeroData";
+import { DataAndAnalyticsHero } from "../components/service-data-and-analytics/DataAndAnalyticsHero";
 import { TrustBanner } from "../components/TrustBanner";
-import { ServiceCapabilitiesData } from "../components/service/ServiceCapabilitiesData";
-import { ServiceOutcomesData } from "../components/service/ServiceOutcomesData";
-import { ServiceCaseStudiesData } from "../components/service/ServiceCaseStudiesData";
-import { ServiceInsightsData } from "../components/service/ServiceInsightsData";
-// import { ServiceTestimonialsData } from "../components/service/ServiceTestimonialsData";
+import { DataAndAnalyticsCapabilities } from "../components/service-data-and-analytics/DataAndAnalyticsCapabilities";
+import { DataAndAnalyticsOutcomes } from "../components/service-data-and-analytics/DataAndAnalyticsOutcomes";
+import { DataAndAnalyticsCaseStudies } from "../components/service-data-and-analytics/DataAndAnalyticsCaseStudies";
+import { DataAndAnalyticsInsights } from "../components/service-data-and-analytics/DataAndAnalyticsInsights";
+import { DataAndAnalyticsTestimonials } from "../components/service-data-and-analytics/DataAndAnalyticsTestimonials";
 import { CTA } from "../components/CTA";
 
 export function ServiceDataAndAnalytics() {
   return (
     <>
-      <ServiceHeroData />
+      <DataAndAnalyticsHero />
       <TrustBanner />
-      <ServiceCapabilitiesData />
-      <ServiceOutcomesData />
-      <ServiceCaseStudiesData />
-      <ServiceInsightsData />
-      {/* <ServiceTestimonialsData /> */}
+      <DataAndAnalyticsCapabilities />
+      <DataAndAnalyticsOutcomes />
+      <DataAndAnalyticsCaseStudies />
+      <DataAndAnalyticsInsights />
+      <DataAndAnalyticsTestimonials />
       <CTA />
     </>
   );

@@ -1,5 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -89,18 +90,27 @@ export function PartnershipInsights({
         </div>
         <div className={s.grid}>
           {items.map((b) => (
-            <a
-              key={b.title}
-              className={s.card}
-              href={b.href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className={s.cardTitle}>{b.title}</div>
-              <span className={s.cardLink}>
-                Read more <ArrowRight20Regular fontSize={14} />
-              </span>
-            </a>
+            b.href.startsWith("/") ? (
+              <Link key={b.title} className={s.card} to={b.href}>
+                <div className={s.cardTitle}>{b.title}</div>
+                <span className={s.cardLink}>
+                  Read more <ArrowRight20Regular fontSize={14} />
+                </span>
+              </Link>
+            ) : (
+              <a
+                key={b.title}
+                className={s.card}
+                href={b.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className={s.cardTitle}>{b.title}</div>
+                <span className={s.cardLink}>
+                  Read more <ArrowRight20Regular fontSize={14} />
+                </span>
+              </a>
+            )
           ))}
         </div>
       </div>

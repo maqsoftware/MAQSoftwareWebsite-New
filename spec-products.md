@@ -29,12 +29,21 @@ metrics, theming and content authoring rules.
 | Route | Page | Purpose |
 |---|---|---|
 | `/products` | `ProductsHome` | Listing of all 6 products with thumbnails and aggregated impact strip. |
-| `/products/:slug` | `ProductDetail` | Per-product page with hero illustration, capabilities, impact cards, use cases. |
+| `/products/ai-datalens` | `ProductAIDataLens` | Dedicated product page composed from `src/components/product-ai-datalens/`. |
+| `/products/certyfast` | `ProductCertyFAST` | Dedicated product page composed from `src/components/product-certyfast/`. |
+| `/products/embedfast` | `ProductEmbedFAST` | Dedicated product page composed from `src/components/product-embedfast/`. |
+| `/products/fabric-admin-agent` | `ProductFabricAdminAgent` | Dedicated product page composed from `src/components/product-fabric-admin-agent/`. |
+| `/products/loadfast` | `ProductLoadFAST` | Dedicated product page composed from `src/components/product-loadfast/`. |
+| `/products/migratefast` | `ProductMigrateFAST` | Dedicated product page composed from `src/components/product-migratefast/`. |
+| `/products/:slug` | `ProductDetail` | Fallback product route for products still driven directly from `products[]`. |
 
 - Header **Products** menu is a MegaMenu rendered from `products[]`.
   - Lists each product (icon + name + tagline).
   - Final row: "All products →" linking to `/products`.
 - Unknown `:slug` → `<Navigate to="/products" replace />`.
+- Dedicated product pages remain thin composer files in `src/pages/`.
+- Product-specific sections live in page-owned folders under `src/components/product-*/`.
+- Visible product resource sections should use the site label `Insights`, even where internal component filenames still use `*Resources.tsx`.
 
 ---
 
@@ -368,14 +377,12 @@ server, or hosting anything.
   (`file://`) and the full site renders, including routing.
 - Works offline. Works behind corporate firewalls. Works on any OS.
 
-### 13.3 Build settings that make this possible
+### 13.3 Build settings and current routing constraints
 
-- `vite.config.ts` → `base: "./"` so generated asset URLs are relative
-  (required for `file://`).
-- `src/main.tsx` uses `HashRouter` from `react-router-dom`, not
-  `BrowserRouter`. This makes routes look like
-  `maqsoftware.html#/products/migratefast` and removes any dependency
-  on a server-side rewrite for SPA routing.
+- `vite.config.ts` uses relative-friendly asset output for the shared HTML snapshot workflow.
+- The live app now uses `BrowserRouter` in `src/main.tsx`.
+- That means the shareable single-file artifact is a convenience snapshot, not the canonical implementation model for route behavior.
+- First-party production routing depends on normal SPA rewrites, while the snapshot remains useful for simple stakeholder sharing.
 
 ### 13.4 How to regenerate
 

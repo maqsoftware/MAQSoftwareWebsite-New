@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
     gap: "48px",
-    alignItems: "center",
+    alignItems: "start",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
   h1: {
@@ -33,15 +33,24 @@ const useStyles = makeStyles({
   btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
   imageWrap: {
     display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: "8px",
+    alignItems: "flex-start",
+    justifyContent: "flex-start",
+    alignSelf: "start",
+    width: "100%",
+    padding: "20px",
+    backgroundColor: "#f7f8fa",
+    border: "1px solid var(--maq-border)",
+    borderRadius: "20px",
+    boxShadow: "0 18px 36px rgba(15, 23, 42, 0.08)",
   },
   image: {
     width: "100%",
     maxWidth: "520px",
+    maxHeight: "320px",
     height: "auto",
     display: "block",
+    objectFit: "contain",
+    objectPosition: "top left",
   },
 });
 

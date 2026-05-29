@@ -4,8 +4,9 @@
 > Sibling specs: [spec-insights-casesstudies.md](spec-insights-casesstudies.md), [spec-insights-powerbicustomvisualguide.md](spec-insights-powerbicustomvisualguide.md), [spec-insights-bestpracticeguide.md](spec-insights-bestpracticeguide.md)
 > Generator: [spec-page-generator.md](spec-page-generator.md)
 
-This page surfaces MAQ Software consulting offers from Microsoft Marketplace while
-remaining visually consistent with the Agentic AI service page style.
+This route is currently a first-party redirect endpoint, not a full marketplace
+catalog page. It keeps the Insights navigation on-site first, then opens the
+Microsoft Marketplace in a new tab and returns the user to a first-party route.
 
 ---
 
@@ -15,97 +16,45 @@ remaining visually consistent with the Agentic AI service page style.
 |---|---|
 | Route | `/insights/consulting-offers` |
 | Page component | `src/pages/InsightsConsultingOffers.tsx` |
-| Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<CTA />` |
-| New insights building blocks | `src/components/insights/InsightsHero.tsx`, `InsightsResourceNav.tsx`, `InsightsOfferGrid.tsx`, `InsightsOfferFilters.tsx` |
+| Redirect helper | `src/components/insights/InsightsConsultingOffersRedirect.tsx` |
+| Shared layout | `<Header />` and `<Footer />` come from `App.tsx` |
 | Header nav integration | Header "Insights" entry routes to `/insights/case-studies`; resource strip links here |
 
-**Design goal:** same spacing, typography, and card behaviors as `/services/agentic-ai`, with marketplace-oriented content cards and pricing metadata.
+**Design goal:** keep the consulting-offers destination discoverable inside the insights hub without pretending the marketplace catalog is a first-party MAQ page.
 
 ---
 
 ## 2. Page composition (top -> bottom)
 
-1. `<Announcement />` *(shared)*
-2. `<Header />` *(shared, active on "Insights")*
-3. `<InsightsHero variant="consulting-offers" />`   — section 3.1
-4. `<InsightsResourceNav active="consulting-offers" />` — section 3.2
-5. `<InsightsOfferFilters />`                          — section 3.3
-6. `<InsightsOfferGrid />`                             — section 3.4
-7. `<CTA />` *(shared)*
-8. `<Footer />` *(shared)*
+1. `<InsightsConsultingOffersRedirect />` — section 3.1
 
-> **Global Insights rule:** this page must retain cross-links to all 4 resource pages in `InsightsResourceNav`.
+> **Global Insights rule:** resource navigation still points here from the shared insights strip, but this route intentionally hands off to Microsoft Marketplace.
 
 ---
 
 ## 3. Section specs
 
-### 3.1 InsightsHero (consulting offers)
+### 3.1 InsightsConsultingOffersRedirect
 
-- **Eyebrow:** `INSIGHTS`
-- **H1:** `Consulting offers`
-- **Subhead (from source intent):**
-  > Browse Microsoft Marketplace consulting engagements from MAQ Software across Power BI, Microsoft Fabric, Agentic AI, Copilot, migration, and cloud modernization scenarios.
-- **Primary CTA:** `Explore offers` -> scroll to offers grid.
-- **Secondary CTA:** `Open marketplace source` -> source URL.
-
-### 3.2 InsightsResourceNav (shared hub strip)
-
-Same 4-card navigation contract as in [spec-insights-casesstudies.md](spec-insights-casesstudies.md), with `Consulting offers` card active.
-
-### 3.3 InsightsOfferFilters
-
-- **Default facets (v1):**
-  - `All`
-  - `Free`
-  - `$5K-$15K`
-  - `$25K-$35K`
-  - `$45K+`
-  - `Power BI`
-  - `Microsoft Fabric`
-  - `Agentic AI / Copilot`
-  - `Migration`
-- **Sort options:** `Featured`, `Price: Low to High`, `Price: High to Low`.
-
-### 3.4 InsightsOfferGrid
-
-- **Layout:** 3-up desktop, 2-up tablet, 1-up mobile.
-- **Card fields:** offer title, category chips, short description, price, `Contact me` / `View in Marketplace` links.
-- **Source baseline:** search results for "maq software" showing 101 consulting services.
-
-**Pinned offers (from source results):**
-1. `Power BI for Business Analytics: 1-Day Workshop` (Free)
-2. `Microsoft Fabric: 2-Hour Briefing` (Free)
-3. `Power BI Performance Improvement: 1-Day Assessment` (Free)
-4. `Qlik to Power BI Migration: Free 3-Week Assessment` (Free)
-5. `Power BI Performance Improvement: 3-Week Workshop` ($25,000)
-6. `Tableau to Power BI: Full Migration Engagement` ($75,000)
-7. `Agentic AI Envisioning Workshop - 1 Day Engagement` (Free)
-8. `GitHub Copilot Implementation - 3 Days` ($10,000)
-
-- **External source link pattern:** `https://marketplace.microsoft.com/en-us/product/<offer-id>`.
-
-### 3.5 CTA + footer
-
-Use shared components. No marketplace footer duplication needed.
+- Rendered by `src/components/insights/InsightsConsultingOffersRedirect.tsx`.
+- On mount, open the Microsoft Marketplace consulting-offers search for MAQ Software in a new tab.
+- After opening the marketplace tab:
+  - if browser history exists, navigate back;
+  - otherwise replace the current route with `/insights/case-studies`.
+- Provide a simple fallback message and link for browsers that block automatic popups.
 
 ---
 
 ## 4. Theming
 
-Reuse Agentic AI page visual language:
-- 48px section rhythm
-- compact hero
-- white/off-white alternation
-- red accent states
-- chips and pricing badges aligned to `--maq-red` palette
+Minimal fallback content only. No catalog-specific theming rules are required beyond the shared site shell.
 
 ---
 
 ## 5. SEO
 
 - **title:** `Consulting Offers | MAQ Software`
-- **description:** `Explore MAQ Software consulting offers on Microsoft Marketplace, including Power BI, Fabric, Agentic AI, and migration workshops and implementations.`
+**description:** `Use the MAQ Software insights route to open consulting offers on Microsoft Marketplace.`
 - **canonical:** `https://maqsoftware.com/insights/consulting-offers`
 - **og:image:** `[PLACEHOLDER - marketing asset]`
 
@@ -113,10 +62,9 @@ Reuse Agentic AI page visual language:
 
 ## 6. Brand rules (must hold)
 
-- Keep offer titles exactly as listed in Microsoft Marketplace.
-- All marketplace links open in new tab.
-- Show explicit source attribution: "Data from Microsoft Marketplace search results for MAQ Software".
-- Keep InsightsResourceNav with all 4 resource destinations.
+- All marketplace openings happen in a new tab.
+- The first-party route must remain safe if the popup is blocked.
+- Keep the shared insights navigation pointing to this route rather than linking directly to Marketplace from the header.
 
 ---
 
@@ -124,14 +72,11 @@ Reuse Agentic AI page visual language:
 
 | Source block | Target |
 |---|---|
-| Search results header (`maq software`, 101 results) | 3.1 Hero + result count badge |
-| Offer listing cards + pricing | 3.4 Offer grid |
-| Contact me CTA pattern | Card-level action |
-| Pagination on marketplace | Future enhancement (v2); v1 curated card set |
-| Resource taxonomy from MAQ footer | 3.2 Resource nav |
+| Marketplace search destination | 3.1 redirect helper |
+| Shared insights taxonomy | shared resource navigation from the calling page |
 
-**Drops:** Microsoft marketplace global footer/legal content.
-**Adds:** MAQ-styled filters and category chips.
+**Drops:** embedded first-party catalog, filters, pricing cards, and marketplace footer duplication.
+**Adds:** local-first route handoff with explicit fallback behavior.
 
 ---
 
@@ -143,13 +88,14 @@ npm run build
 ```
 
 Done when:
-1. `/insights/consulting-offers` renders curated marketplace offers.
-2. Each card opens the correct marketplace listing.
-3. Resource nav exposes all 4 insights destinations.
+1. `/insights/consulting-offers` opens the MAQ Software marketplace search in a new tab.
+2. The current tab navigates back or falls through to `/insights/case-studies`.
+3. The fallback link remains usable if popup opening is blocked.
 4. `npm run build` exits 0.
 
 ## 9. Out of scope (v1)
 
 - Live marketplace API sync.
 - Authenticated marketplace workflows.
+- Curated first-party consulting-offer catalog.
 - Country-specific price normalization.

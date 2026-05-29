@@ -125,7 +125,7 @@ function MegaMenu({
 }) {
   const navigate = useNavigate();
   return (
-    <Menu>
+    <Menu openOnHover closeOnScroll>
       <MenuTrigger disableButtonEnhancement>
         <Button appearance="subtle" className={btnClass} icon={<ChevronDown20Regular />} iconPosition="after">
           {label}

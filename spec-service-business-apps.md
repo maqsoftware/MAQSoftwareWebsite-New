@@ -4,16 +4,13 @@
 > Sibling specs: [spec-service-agentic-ai.md](spec-service-agentic-ai.md), [spec-industry-retail.md](spec-industry-retail.md), [spec-product-fabric-admin-agent.md](spec-product-fabric-admin-agent.md)
 > Generator: [spec-page-generator.md](spec-page-generator.md)
 
-This is the **second** service-overview page in the new site. It is implemented
-as a **self-contained page file** (all sections rendered inline) rather than
-reusing the existing `src/components/service/*` components. The agentic-AI
-components have agentic-AI content hardcoded inside them, so reusing them
-would require either duplicating-then-editing the content there or refactoring
-all seven components to take a `data` prop. To keep the blast radius small
-while multiple teammates are working in the services folder, this page does
-neither — it copies the JSX patterns into one new file and changes nothing
-shared. The data-driven refactor remains a viable future PR once 2–3 service
-pages exist and the right abstraction is obvious.
+This page now follows the current service-page pattern used across the site:
+a thin route component in `src/pages/ServiceBusinessApps.tsx` that composes
+page-owned sections from `src/components/service-business-apps/`.
+
+The goal is maintainability. Shared behavior stays in shared wrappers and the
+Business Apps content stays local to this slice, so changes to one service do
+not force broad edits in unrelated pages.
 
 > **Naming note:** The old site labels this service **Application modernization**.
 > The new content brief (`content-brief-services.md`) renames it
@@ -27,9 +24,10 @@ pages exist and the right abstraction is obvious.
 | Concern | Choice |
 |---|---|
 | Route | `/services/business-apps` |
-| Page component | `src/pages/ServiceBusinessApps.tsx` (self-contained — all sections, styles, and content inline) |
-| Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
-| Reused service components | **None.** The page does not import from `src/components/service/`. |
+| Page component | `src/pages/ServiceBusinessApps.tsx` (thin composer only) |
+| Page-owned sections | `src/components/service-business-apps/BusinessAppsHero.tsx`, `BusinessAppsCapabilities.tsx`, `BusinessAppsOutcomes.tsx`, `BusinessAppsCaseStudies.tsx`, `BusinessAppsInsights.tsx` |
+| Shared layout | `<Header />` and `<Footer />` come from `App.tsx`; the page itself renders `<TrustBanner />` and `<CTA />` |
+| Shared service wrappers | Not required for this page; Business Apps uses page-owned components for maintainability |
 | Header nav integration | Services mega-menu "Business apps & process automation" → `/services/business-apps` |
 
 **Design goal:** identical visual rhythm to `/services/agentic-ai` — scannable,
@@ -40,24 +38,23 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 
 ## 2. Page composition (top → bottom)
 
-1. `<Announcement />` *(shared, rendered by `App.tsx`)*
-2. `<Header />` *(shared, rendered by `App.tsx`, active state on "Services")*
-3. Hero section              — §3.1
-4. `<TrustBanner />` *(shared)*
-5. Capabilities section       — §3.2  (4 capability pillars, tabbed list+detail)
-6. Outcomes section           — §3.3  (3 business-outcome cards)
-7. Case studies section       — §3.4  (4 related case studies)
-8. Insights section           — §3.5  (3 blog insights)
-9. Testimonials section *[hidden — placeholder comment only; see §3.6]*
-10. `<CTA />` *(shared)*
-11. `<Footer />` *(shared, rendered by `App.tsx`)*
+1. Hero section               — §3.1
+2. `<TrustBanner />`          *(shared)*
+3. Capabilities section       — §3.2  (4 capability pillars, tabbed list+detail)
+4. Outcomes section           — §3.3  (3 business-outcome cards)
+5. Case studies section       — §3.4  (4 related case studies)
+6. Insights section           — §3.5  (3 blog insights)
+7. Testimonials section *[hidden — placeholder comment only; see §3.6]*
+8. `<CTA />`                  *(shared)*
 
+> `App.tsx` owns the surrounding `<Header />` and `<Footer />`.
+>
 > **Global rule (carried over from `spec-service-agentic-ai.md`):** when a
 > Testimonials section is rendered on this page in the future, it must appear
 > immediately before `<CTA />` (last content section). Eyebrow must be
 > `TESTIMONIALS`; H2 must be `What our clients have to say`. Until signed
-> quotes are available, the section is not rendered — only a placeholder
-> comment marks the slot in the JSX.
+> quotes are available, the section is not rendered. A placeholder comment
+> remains in `src/pages/ServiceBusinessApps.tsx` marking that slot.
 
 ---
 

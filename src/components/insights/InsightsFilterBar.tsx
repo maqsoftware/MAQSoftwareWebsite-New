@@ -1,10 +1,11 @@
 import { Button, makeStyles } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
-  row: {
+  wrap: {
     display: "flex",
     flexWrap: "wrap",
-    gap: "8px",
+    gap: "10px",
+    marginTop: "14px",
   },
   chip: {
     border: "1px solid var(--maq-border)",
@@ -31,15 +32,16 @@ const useStyles = makeStyles({
 });
 
 interface InsightsFilterBarProps {
-  items: string[];
+  items: readonly string[];
   active: string;
   onChange: (value: string) => void;
 }
 
 export function InsightsFilterBar({ items, active, onChange }: InsightsFilterBarProps) {
   const s = useStyles();
+
   return (
-    <div className={s.row}>
+    <div className={s.wrap}>
       {items.map((item) => (
         <Button
           key={item}

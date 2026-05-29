@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
     gap: "48px",
-    alignItems: "center",
+    alignItems: "start",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
   eyebrow: {
@@ -44,6 +44,7 @@ const useStyles = makeStyles({
     padding: "20px",
     display: "grid",
     gap: "12px",
+    alignSelf: "start",
     boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
   },
   tile: {

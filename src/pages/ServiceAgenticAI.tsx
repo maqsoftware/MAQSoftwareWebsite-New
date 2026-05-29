@@ -1,22 +1,22 @@
-import { ServiceHero } from "../components/service/ServiceHero";
+import { AgenticAIHero } from "../components/service-agentic-ai/AgenticAIHero";
 import { TrustBanner } from "../components/TrustBanner";
-import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
-import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
-import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
-import { ServiceInsights } from "../components/service/ServiceInsights";
-// import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
+import { AgenticAICapabilities } from "../components/service-agentic-ai/AgenticAICapabilities";
+import { AgenticAIOutcomes } from "../components/service-agentic-ai/AgenticAIOutcomes";
+import { AgenticAICaseStudies } from "../components/service-agentic-ai/AgenticAICaseStudies";
+import { AgenticAIInsights } from "../components/service-agentic-ai/AgenticAIInsights";
+import { AgenticAITestimonials } from "../components/service-agentic-ai/AgenticAITestimonials";
 import { CTA } from "../components/CTA";
 
 export function ServiceAgenticAI() {
   return (
     <>
-      <ServiceHero />
+      <AgenticAIHero />
       <TrustBanner />
-      <ServiceCapabilities />
-      <ServiceOutcomes />
-      <ServiceCaseStudies />
-      <ServiceInsights />
-      {/* <ServiceTestimonials /> */}
+      <AgenticAICapabilities />
+      <AgenticAIOutcomes />
+      <AgenticAICaseStudies />
+      <AgenticAIInsights />
+      <AgenticAITestimonials />
       <CTA />
     </>
   );

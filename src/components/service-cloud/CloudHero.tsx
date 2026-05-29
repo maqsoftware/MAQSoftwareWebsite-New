@@ -1,0 +1,176 @@
+import { Button, makeStyles } from "@fluentui/react-components";
+import {
+    Mail24Regular,
+    ArrowRight20Regular,
+    Server20Filled,
+    Cloud20Filled,
+    ShieldLock20Filled,
+} from "@fluentui/react-icons";
+
+const useStyles = makeStyles({
+    wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
+    grid: {
+        maxWidth: "1240px",
+        margin: "0 auto",
+        display: "grid",
+        gridTemplateColumns: "1.3fr 1fr",
+        gap: "48px",
+        alignItems: "start",
+        "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+    },
+    eyebrow: {
+        fontSize: "12px",
+        fontWeight: 700,
+        color: "var(--maq-red)",
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        marginBottom: "12px",
+        display: "block",
+    },
+    h1: {
+        fontSize: "40px",
+        lineHeight: 1.15,
+        fontWeight: 700,
+        color: "var(--maq-black)",
+        letterSpacing: "-0.02em",
+        margin: "0 0 16px",
+    },
+    sub: {
+        fontSize: "15px",
+        lineHeight: 1.6,
+        color: "var(--maq-gray-600)",
+        marginBottom: "24px",
+        maxWidth: "640px",
+    },
+    btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
+
+    visual: {
+        background: "var(--maq-surface-cream)",
+        border: "1px solid var(--maq-red-pale)",
+        borderRadius: "16px",
+        padding: "20px",
+        display: "grid",
+        gap: "12px",
+        boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+        color: "var(--maq-ink)",
+    },
+    tile: {
+        background: "#fff",
+        border: "1px solid var(--maq-border)",
+        borderRadius: "10px",
+        padding: "14px 16px",
+    },
+    tileTitle: {
+        fontSize: "11px",
+        textTransform: "uppercase",
+        letterSpacing: "0.08em",
+        color: "var(--maq-gray-500)",
+        marginBottom: "8px",
+        display: "flex",
+        alignItems: "center",
+        gap: "6px",
+    },
+    statusRow: { display: "flex", gap: "8px", alignItems: "center" },
+    check: {
+        width: "10px",
+        height: "10px",
+        borderRadius: "50%",
+        background: "var(--maq-red)",
+    },
+    statusLabel: { fontSize: "12px", color: "var(--maq-gray-600)" },
+
+    costRow: { display: "flex", alignItems: "center", gap: "10px", marginTop: "6px" },
+    costLabel: { fontSize: "11px", width: "70px", color: "var(--maq-gray-500)" },
+    costTrack: { flex: 1, height: "6px", background: "var(--maq-gray-100)", borderRadius: "3px" },
+    costFill: { height: "100%", background: "var(--maq-red)", borderRadius: "3px", width: "65%" },
+
+    deployRow: {
+        display: "flex",
+        justifyContent: "space-between",
+        fontSize: "12px",
+        color: "var(--maq-ink)",
+        marginTop: "4px",
+    },
+});
+
+export function CloudHero() {
+    const s = useStyles();
+    return (
+        <section className={s.wrap}>
+            <div className={s.grid}>
+                <div>
+                    <span className={s.eyebrow}>Cloud infrastructure &amp; modernization</span>
+                    <h1 className={s.h1}>Modernize from on-premises to cloud-native on Azure</h1>
+                    <p className={s.sub}>
+                        MAQ Software replatforms on-premises workloads to Azure — from lift-and-shift
+                        through full cloud-native re-architecture — with FinOps discipline that delivers
+                        30–40% lower run cost on average across enterprise workloads.
+                    </p>
+                    <div className={s.btns}>
+                        <Button
+                            appearance="primary"
+                            size="large"
+                            icon={<Mail24Regular />}
+                            as="a"
+                            href="/contact"
+                        >
+                            Get started
+                        </Button>
+                        <Button
+                            appearance="outline"
+                            size="large"
+                            icon={<ArrowRight20Regular />}
+                            iconPosition="after"
+                            onClick={() =>
+                                document
+                                    .getElementById("cloud-capabilities")
+                                    ?.scrollIntoView({ behavior: "smooth" })
+                            }
+                        >
+                            Explore capabilities
+                        </Button>
+                    </div>
+                </div>
+
+                <div className={s.visual} aria-hidden="true">
+                    <div className={s.tile}>
+                        <div className={s.tileTitle}>
+                            <Cloud20Filled /> Cloud infrastructure
+                        </div>
+                        <div className={s.statusRow}>
+                            <span className={s.check} />
+                            <span className={s.check} />
+                            <span className={s.check} />
+                            <span className={s.statusLabel}>All systems online</span>
+                        </div>
+                    </div>
+                    <div className={s.tile}>
+                        <div className={s.tileTitle}>
+                            <Server20Filled /> Uptime status
+                        </div>
+                        <div className={s.statusRow}>
+                            <span style={{ fontSize: "14px", fontWeight: 700, color: "var(--maq-red)" }}>
+                                99.99%
+                            </span>
+                            <span className={s.statusLabel}>SLA compliance</span>
+                        </div>
+                    </div>
+                    <div className={s.tile}>
+                        <div className={s.tileTitle}>
+                            <ShieldLock20Filled /> Cost optimization
+                        </div>
+                        <div className={s.costRow}>
+                            <span className={s.costLabel}>Saved</span>
+                            <div className={s.costTrack}>
+                                <div className={s.costFill} />
+                            </div>
+                        </div>
+                        <div className={s.deployRow}>
+                            <span>35% reduction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

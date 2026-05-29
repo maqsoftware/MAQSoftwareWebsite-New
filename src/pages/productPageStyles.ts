@@ -8,7 +8,7 @@ export const useProductPageStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
     gap: "48px",
-    alignItems: "center",
+    alignItems: "start",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
   eyebrow: { fontSize: "12px", fontWeight: 700, color: "var(--maq-red)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "12px", display: "block" },

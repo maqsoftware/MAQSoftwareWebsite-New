@@ -1,8 +1,8 @@
 # Generic Page-Spec Generator
 
-A reusable prompt for turning any **maqsoftware.com** page into a structured page spec in the same shape as `spec-product-fabric-admin-agent.md` and `spec-industry-retail.md`.
+A reusable prompt for turning any `maqsoftware.com` page into a structured page spec that matches the current routed MAQ Software site architecture.
 
-Hand this file plus a target URL to any agent (or person) and they can produce a build-ready spec.
+Hand this file plus a target URL to any agent (or person) and they can produce a build-ready spec that fits the thin-page, page-owned-components pattern used in `src/pages/` and `src/components/`.
 
 ---
 
@@ -20,15 +20,17 @@ Hand this file plus a target URL to any agent (or person) and they can produce a
 >
 > ### Inputs
 > - `TARGET_URL` — a live maqsoftware.com page (e.g. `https://maqsoftware.com/products/fabricadminagent`).
-> - `OUTPUT_FILE` — `spec-<kind>-<slug>.md` where `<kind>` is one of `home | product | service | industry | insight | about | contact | case-study` and `<slug>` is kebab-case.
+> - `OUTPUT_FILE` — `spec-<kind>-<slug>.md` where `<kind>` is one of `home | product | service | industry | insights | partnership | about | contact | case-study` and `<slug>` is kebab-case.
 >
 > ### Step 1 — Classify the page
 > Fetch `TARGET_URL`. From the URL path and visible content, classify it as one of:
-> `home`, `product`, `service`, `industry`, `insight`, `about`, `contact`, `case-study`.
+> `home`, `product`, `service`, `industry`, `insights`, `partnership`, `about`, `contact`, `case-study`.
 > Pick the matching reference spec:
 > - product → mirror `spec-product-fabric-admin-agent.md`
 > - industry → mirror `spec-industry-retail.md`
-> - others → adapt the same 9-section taxonomy
+> - insights → mirror `spec-insights-casesstudies.md`
+> - partnership → mirror `spec-partnership-microsoft.md`
+> - others → adapt the same routed-page taxonomy
 >
 > ### Step 2 — Migrate ALL content (verbatim, nothing dropped)
 > Read the **entire** live page top-to-bottom. The goal is **full content migration**, not summarization — every visible block on the source page must land somewhere in the new spec.
@@ -53,6 +55,7 @@ Hand this file plus a target URL to any agent (or person) and they can produce a
 > - Embedded videos / demos (URL + caption)
 > - Footnotes, disclaimers, legal copy
 > - Page meta: `<title>`, `<meta description>`, canonical, OG image
+> - If the source URL already corresponds to a first-party route on the new site, preserve it as the primary destination and document any fallback redirect behavior separately.
 >
 > **Reconciliation check:** after Pass B, diff the Pass A inventory against the spec. Every inventoried block must appear in the spec. Report any intentionally dropped block with a one-line reason.
 >
@@ -69,28 +72,26 @@ Hand this file plus a target URL to any agent (or person) and they can produce a
 > | Concern | Choice |
 > |---|---|
 > | Route | /<kind>s/<slug> |
-> | Page component | src/pages/<PascalCase>.tsx |
-> | Shared layout | Announcement, Header, Footer, TrustBanner, CTA |
-| Header nav integration | Services mega-menu "<Title>" → /<kind>s/<slug> |
-| Redirect (legacy) | Add server redirect from legacy URL → /<kind>s/<slug> (e.g. Netlify `_redirects` or Vercel rewrite) |
+> | Page component | src/pages/<PascalCase>.tsx (thin composer) |
+> | Page-owned sections | src/components/<slice>/... when the page has custom sections |
+> | Shared shell | Header + Footer owned by App.tsx; TrustBanner / CTA only where that route uses them |
+> | Header nav integration | The matching mega-menu or route entry points to /<kind>s/<slug> |
+> | Redirect / local-first guidance | Document first-party route behavior first, then any legacy redirect or external fallback |
 >
 > ## 2. Page composition (top → bottom)
-> 1. Announcement
-> 2. Header
-> 3. Hero — §3.1
-> 4. TrustBanner
-> 5. Impact / outcome — §3.2
-> 6. Features overview — §3.3
-> 7. Case studies — §3.4
-> 8. Resources & Marketplace — §3.6
-> 9. Testimonials — §3.5  *(must always be the last content section, immediately before CTA)*
-> 10. CTA
-> 11. Footer
+> 1. Hero — §3.1
+> 2. TrustBanner — optional, when the route uses it
+> 3. Impact / outcome — §3.2
+> 4. Features overview — §3.3
+> 5. Case studies — §3.4
+> 6. Insights / resources / marketplace — §3.6
+> 7. Testimonials — §3.5  *(if present, this must always be the last content section, immediately before CTA)*
+> 8. CTA — optional, depending on the route shell or page composer
 >
 > ## 3. Section specs
 >
 > ### 3.1 Hero
-> - Layout, background, padding (use Editorial Red v3 tokens)
+> - Layout, background, padding (use Editorial Red tokens)
 > - Eyebrow / H1 / subhead (verbatim from source)
 > - Primary CTA → mailto:customersuccess@maqsoftware.com?subject=...
 > - Secondary CTA
@@ -112,11 +113,11 @@ Hand this file plus a target URL to any agent (or person) and they can produce a
 >
 > | Quote | Attribution |
 >
-> ### 3.6 Resources & Marketplace
+> ### 3.6 Insights / Resources / Marketplace
 > | Label | URL | Description |
 >
 > ## 4. Theming
-> Editorial Red v3 tokens only (--maq-red, --maq-red-pale, --maq-off-white,
+> Editorial Red tokens only (--maq-red, --maq-red-pale, --maq-off-white,
 > --maq-surface-cream, --maq-black, --maq-ink, --maq-gray-500/600/700, --maq-border).
 > Section background alternation: white / off-white.
 >
@@ -137,11 +138,11 @@ Hand this file plus a target URL to any agent (or person) and they can produce a
 > - Every literal string came from `TARGET_URL` (or is explicitly marked `[PLACEHOLDER]`).
 > - Hero image URL is the live `.svg` under `maqsoftware.com/images-new/`.
 > - Full feature/case-study/testimonial copy preserved (not trimmed).
-> - Section count and order match the reference spec.
+> - Section order matches the routed-page structure actually used by the target page.
 > - No invented metrics, customers, or quotes.
 > - Brand rules hold.
- - Header nav integration: the spec includes the Services mega-menu label and the route to add to `Header.tsx` or server navigation configuration.
- - Redirect guidance: the spec documents any legacy source URL and includes a recommended server redirect/rewrite example (Netlify `_redirects` or Vercel rewrite) to the new route.
+> - Header nav integration names the correct existing menu group or route entry.
+> - Redirect guidance documents any first-party route, legacy redirect, and external fallback behavior distinctly.
 >
 > Return: path to `OUTPUT_FILE`, a 3-line summary of what was extracted, and the reconciliation report (blocks-in vs blocks-out, with reasons for any drops).
 
