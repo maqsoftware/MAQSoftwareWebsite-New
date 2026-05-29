@@ -35,6 +35,10 @@ import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomV
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
+import { AboutSustainability } from "./pages/AboutSustainability";
+import { AboutNews } from "./pages/AboutNews";
+import { AboutCareers } from "./pages/AboutCareers";
+import { Contact } from "./pages/Contact";
 
 const useStyles = makeStyles({
   root: {
@@ -46,7 +50,7 @@ const useStyles = makeStyles({
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [pathname]);
   return null;
 }
@@ -181,6 +185,18 @@ export function App() {
             </>
           }
         />
+        <Route
+          path="/sustainability"
+          element={
+            <>
+              <AboutSustainability />
+              <CTA />
+            </>
+          }
+        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/news" element={<AboutNews />} />
+        <Route path="/careers" element={<AboutCareers />} />
       </Routes>
       <Footer />
     </div>

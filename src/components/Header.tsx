@@ -55,6 +55,8 @@ const useStyles = makeStyles({
   navBtn: {
     color: "var(--maq-ink)",
     fontWeight: 500,
+    whiteSpace: "nowrap",
+    minWidth: "auto",
     ":hover": {
       backgroundColor: "var(--maq-red-pale)",
       color: "var(--maq-red)",
@@ -104,15 +106,12 @@ const insights: NavItem[] = [
   { label: "Best practice guides", href: "/insights/best-practice-guides" },
 ];
 
-const aboutUs: NavItem[] = [
+const about: NavItem[] = [
   { label: "Who we are", href: "/who-we-are" },
-];
-
-const contact: NavItem[] = [
-  { label: "Talk to sales" },
-  { label: "Customer success" },
-  { label: "Partner with us" },
-  { label: "Careers" },
+  { label: "News", href: "/news" },
+  { label: "Careers", href: "/careers" },
+  { label: "Sustainability", href: "/sustainability" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 function MegaMenu({
@@ -165,21 +164,12 @@ export function Header() {
       </Link>
 
       <div className={s.links}>
-        <Button
-          appearance="subtle"
-          className={s.navBtn}
-          as="a"
-          href="/"
-        >
-          Home
-        </Button>
         <MegaMenu label="Services" items={services} btnClass={s.navBtn} />
         <MegaMenu label="Products" items={productNav} btnClass={s.navBtn} />
         <MegaMenu label="Industries" items={industries} btnClass={s.navBtn} />
         <MegaMenu label="Partnerships" items={partnerships} btnClass={s.navBtn} />
         <MegaMenu label="Insights" items={insights} btnClass={s.navBtn} />
-        <MegaMenu label="About Us" items={aboutUs} btnClass={s.navBtn} />
-        <MegaMenu label="Contact Us" items={contact} btnClass={s.navBtn} />
+        <MegaMenu label="About" items={about} btnClass={s.navBtn} />
       </div>
 
       <div className={s.right}>
