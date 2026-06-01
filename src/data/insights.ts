@@ -1046,7 +1046,7 @@ export const consultingOfferItems: ConsultingOfferItem[] = [
 export interface VisualGuideItem {
   name: string;
   href: string;
-  category: string[];
+  category: string | string[];
   description: string;
   badges: string[];
   imageUrl: string;
