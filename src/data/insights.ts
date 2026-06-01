@@ -1046,7 +1046,7 @@ export const consultingOfferItems: ConsultingOfferItem[] = [
 export interface VisualGuideItem {
   name: string;
   href: string;
-  category: string;
+  category: string[];
   description: string;
   badges: string[];
   imageUrl: string;
@@ -1271,7 +1271,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   {
     "name": "KPI Column",
     "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/KPIColumnChart",
-    "category": "Comparison",
+    "category": ["Comparison", "KPI"],
     "description": "Measure progress with color-coded columns and an integrated line chart.",
     "badges": [
       "Certified"
@@ -1281,7 +1281,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   {
     "name": "KPI Grid",
     "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/KPIGridChart",
-    "category": "Ranking",
+    "category": ["Ranking", "KPI"],
     "description": "Display hierarchical data, separate categories, and illustrate trends.",
     "badges": [
       "Certified"
@@ -1291,7 +1291,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   {
     "name": "KPI Ticker",
     "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/KPITickerChart",
-    "category": "Single Metric",
+    "category": ["Single Metric", "KPI"],
     "description": "Rotate through multiple KPIs in an auto-scrolling visual.",
     "badges": [
       "Certified",
