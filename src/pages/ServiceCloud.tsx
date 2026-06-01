@@ -4,7 +4,7 @@ import { ServiceCloudCapabilities } from "../components/service/ServiceCloudCapa
 import { ServiceCloudOutcomes } from "../components/service/ServiceCloudOutcomes";
 import { ServiceCloudCaseStudies } from "../components/service/ServiceCloudCaseStudies";
 import { ServiceCloudInsights } from "../components/service/ServiceCloudInsights";
-import { ServiceCloudTestimonials } from "../components/service/ServiceCloudTestimonials";
+// import { ServiceCloudTestimonials } from "../components/service/ServiceCloudTestimonials";
 import { CTA } from "../components/CTA";
 
 export function ServiceCloud() {
@@ -16,7 +16,7 @@ export function ServiceCloud() {
       <ServiceCloudOutcomes />
       <ServiceCloudCaseStudies />
       <ServiceCloudInsights />
-      <ServiceCloudTestimonials />
+      {/* <ServiceCloudTestimonials /> */}
       <CTA />
     </>
   );

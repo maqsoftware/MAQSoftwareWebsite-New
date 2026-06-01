@@ -680,7 +680,7 @@ export function ProductFabricAdminAgent() {
         </div>
       </section>
 
-      {/* ---------------------- Testimonials ---------------------- */}
+      {/* Testimonials section commented out
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
@@ -700,6 +700,7 @@ export function ProductFabricAdminAgent() {
           </div>
         </div>
       </section>
+      */}
 
     </>
   );

@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const benefits = [
   { title: "Large-scale migration", desc: "Enables large-scale migration of reports from Tableau to Power BI." },
@@ -141,7 +141,7 @@ export function ProductMigrateFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.sectionAlt}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

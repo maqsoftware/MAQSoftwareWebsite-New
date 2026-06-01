@@ -4,7 +4,7 @@ import { ServiceCapabilitiesData } from "../components/service/ServiceCapabiliti
 import { ServiceOutcomesData } from "../components/service/ServiceOutcomesData";
 import { ServiceCaseStudiesData } from "../components/service/ServiceCaseStudiesData";
 import { ServiceInsightsData } from "../components/service/ServiceInsightsData";
-import { ServiceTestimonialsData } from "../components/service/ServiceTestimonialsData";
+// import { ServiceTestimonialsData } from "../components/service/ServiceTestimonialsData";
 import { CTA } from "../components/CTA";
 
 export function ServiceDataAndAnalytics() {
@@ -16,7 +16,7 @@ export function ServiceDataAndAnalytics() {
       <ServiceOutcomesData />
       <ServiceCaseStudiesData />
       <ServiceInsightsData />
-      <ServiceTestimonialsData />
+      {/* <ServiceTestimonialsData /> */}
       <CTA />
     </>
   );

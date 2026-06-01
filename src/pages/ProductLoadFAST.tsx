@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular, Server24Regular, Group24Regular, CursorClick24Regular, Bot24Regular, ChartMultiple24Regular, People24Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview";
 const APPSOURCE_PLANS = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=PlansAndPrice";
@@ -149,7 +149,7 @@ export function ProductLoadFAST() {
         </div>
       </section>
 
-      <section className={s.section}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.section}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }
