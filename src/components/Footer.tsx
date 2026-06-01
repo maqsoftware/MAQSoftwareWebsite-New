@@ -129,12 +129,12 @@ const cols: FooterCol[] = [
     ],
   },
   {
-    title: "Resources",
+    title: "Insights",
     items: [
-      { label: "Case studies" },
-      { label: "Power BI custom visuals" },
-      { label: "Best practice guides" },
-      { label: "Webinars" },
+      { label: "Case Studies",        to: "/insights/case-studies" },
+      { label: "Consulting offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
+      { label: "Power BI custom visual guide", to: "/insights/power-bi-custom-visual-guide" },
+      { label: "Best practice guides", to: "/insights/best-practice-guides" },
     ],
   },
   {
