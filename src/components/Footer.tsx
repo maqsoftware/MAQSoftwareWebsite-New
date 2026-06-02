@@ -142,16 +142,16 @@ const cols: FooterCol[] = [
     items: [
       { label: "Who we are", to: "/who-we-are" },
       { label: "Careers",    href: "https://maqsoftware.com/careers" },
-      { label: "News" },
-      { label: "Sustainability" },
-      { label: "Contact us", href: "mailto:customersuccess@maqsoftware.com" },
+      { label: "News", to: "/news" },
+      { label: "Sustainability", to: "/sustainability" },
+      { label: "Contact us", to: "/contact" },
     ],
   },
   {
     title: "Support",
     items: [
-      { label: "Terms of Service" },
-      { label: "Privacy Statement" },
+      { label: "Terms of Service", href: "https://maqsoftware.com/termsofservice" },
+      { label: "Privacy Statement", href: "https://maqsoftware.com/privacystatement" },
     ],
   },
 ];
