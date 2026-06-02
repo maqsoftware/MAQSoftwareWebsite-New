@@ -1,8 +1,8 @@
 # About Page Spec — News
 
 > Source: https://maqsoftware.com/news
-> Sibling specs: spec-about-who-we-are.md, spec-contact.md, spec.md
-> Generator: spec-page-generator.md
+> Sibling specs: about-who-we-are.md, contact.md, spec.md
+> Generator: page-generator.md
 
 ---
 

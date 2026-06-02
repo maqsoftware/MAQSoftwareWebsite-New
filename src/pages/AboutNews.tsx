@@ -263,6 +263,7 @@ export function AboutNews() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional fetch-on-mount
     void loadPage(1);
   }, [loadPage]);
 

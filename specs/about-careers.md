@@ -1,8 +1,8 @@
 # About Page Spec — Careers
 
 > Source: https://maqsoftware.com/careers
-> Sibling specs: spec-about-news.md, spec-about-who-we-are.md, spec-contact.md, spec.md
-> Generator: spec-page-generator.md
+> Sibling specs: about-news.md, about-who-we-are.md, contact.md, spec.md
+> Generator: page-generator.md
 
 ---
 

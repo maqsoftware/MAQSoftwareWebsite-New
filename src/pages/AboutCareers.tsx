@@ -266,6 +266,7 @@ export function AboutCareers() {
   }, []);
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional fetch-on-mount
     if (!jobsByRegion[region]) void load(region);
   }, [region, jobsByRegion, load]);
 

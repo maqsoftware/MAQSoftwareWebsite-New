@@ -1,7 +1,7 @@
 # Industry Page Spec — Manufacturing
 
-> Sibling document to [spec.md](spec.md) (home page) and
-> [spec-industry-retail.md](spec-industry-retail.md). Same authoring rules
+> Sibling document to [spec.md](../spec.md) (home page) and
+> [retail.md](retail.md). Same authoring rules
 > apply: edit this file, then ask the assistant to "sync code to spec" and only
 > the matching components / route data will change.
 >

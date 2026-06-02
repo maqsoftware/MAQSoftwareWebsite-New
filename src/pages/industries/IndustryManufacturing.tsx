@@ -5,14 +5,14 @@ import {
   BoxMultiple24Regular,
   DocumentSearch24Regular,
 } from "@fluentui/react-icons";
-import { IndustryHero } from "../components/industry/IndustryHero";
-import { TrustBanner } from "../components/TrustBanner";
-import { ImpactStats } from "../components/industry/ImpactStats";
-import { SolutionShowcase } from "../components/industry/SolutionShowcase";
-import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-// import { Testimonials } from "../components/industry/Testimonials";
-import { CTA } from "../components/CTA";
+import { IndustryHero } from "../../components/industries/IndustryHero";
+import { TrustBanner } from "../../components/TrustBanner";
+import { ImpactStats } from "../../components/industries/ImpactStats";
+import { SolutionShowcase } from "../../components/industries/SolutionShowcase";
+import { IndustryCaseStudies } from "../../components/industries/IndustryCaseStudies";
+import { MarketplaceOffers } from "../../components/industries/MarketplaceOffers";
+// import { Testimonials } from "../../components/industries/Testimonials";
+import { CTA } from "../../components/CTA";
 
 // --- Manufacturing hero visual ---
 const useVisualStyles = makeStyles({
@@ -195,13 +195,6 @@ const manufacturingOffers = [
     title: "Microsoft Fabric: 2-Hour Briefing",
     desc: "Free briefing covering how Microsoft Fabric unifies manufacturing data estates\u2014from ERP and MES to plant-floor feeds\u2014with AI capabilities and governance built in.",
     href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.microsoftfabricbriefing",
-  },
-];
-
-const manufacturingTestimonials = [
-  {
-    body: "We engaged MAQ Software to build our AI CoE and prioritize use cases across plant operations, supply chain, and quality. Within two weeks we had a working prototype and a clear roadmap to enterprise rollout.",
-    cite: "VP, Manufacturing Operations \u2014 Global industrial manufacturer",
   },
 ];
 

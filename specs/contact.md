@@ -1,8 +1,8 @@
 # Contact Page Spec — Contact MAQ Software
 
 > Source: https://maqsoftware.com/contact
-> Sibling specs: spec-about-who-we-are.md, spec-partnership-microsoft.md, spec.md
-> Generator: spec-page-generator.md
+> Sibling specs: about-who-we-are.md, partnerships/microsoft.md, spec.md
+> Generator: page-generator.md
 
 ---
 

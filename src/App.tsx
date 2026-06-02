@@ -10,7 +10,7 @@ import { IndustryFinancialServices } from "./pages/industries/IndustryFinancialS
 import { IndustryHealthcareLifeSciences } from "./pages/industries/IndustryHealthcareLifeSciences";
 import { IndustryTechnology } from "./pages/industries/IndustryTechnology";
 import { IndustryPublicSector } from "./pages/industries/IndustryPublicSector";
-import { IndustryManufacturing } from "./pages/IndustryManufacturing";
+import { IndustryManufacturing } from "./pages/industries/IndustryManufacturing";
 import { ProductsHome } from "./pages/products/ProductsHome";
 import { ProductDetail } from "./pages/products/ProductDetail";
 import { ProductFabricAdminAgent } from "./pages/products/ProductFabricAdminAgent";
