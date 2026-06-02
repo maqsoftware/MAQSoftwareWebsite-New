@@ -6,14 +6,98 @@ import {
   LockClosed24Regular,
   ScaleFill24Regular,
 } from "@fluentui/react-icons";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight20Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipValueProps } from "../components/partnerships/PartnershipValueProps";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
 import { PartnershipOverview } from "../components/partnerships/PartnershipOverview";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
-import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
+
+// ---------------------------------------------------------------------------
+// Styles for Marketplace section
+// ---------------------------------------------------------------------------
+const useStyles = makeStyles({
+  marketSection: {
+    padding: "48px 32px",
+    backgroundColor: "var(--maq-off-white)",
+  },
+  marketInner: {
+    maxWidth: "1240px",
+    margin: "0 auto",
+  },
+  marketHead: {
+    marginBottom: "20px",
+    textAlign: "center" as const,
+  },
+  marketEyebrow: {
+    fontSize: "12px",
+    fontWeight: 700,
+    color: "var(--maq-red)",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase" as const,
+    display: "block",
+    marginBottom: "8px",
+    textAlign: "center" as const,
+  },
+  marketTitle: {
+    display: "block",
+    fontSize: "30px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: 0,
+    letterSpacing: "-0.01em",
+    textAlign: "center" as const,
+  },
+  panelGrid: {
+    display: "flex",
+    justifyContent: "center",
+    maxWidth: "700px",
+    margin: "0 auto",
+  },
+  panel: {
+    display: "flex",
+    flexDirection: "column",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    borderRadius: "12px",
+    padding: "28px",
+    background: "#fff",
+    transition: "all 0.2s",
+    width: "100%",
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+    },
+  },
+  panelContent: {
+    flex: 1,
+  },
+  panelSubhead: {
+    fontSize: "20px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: "0 0 12px",
+  },
+  panelDesc: {
+    fontSize: "14px",
+    lineHeight: 1.65,
+    color: "var(--maq-gray-700)",
+    margin: "0 0 16px",
+  },
+  bulletList: {
+    margin: "0 0 20px 20px",
+    padding: 0,
+    listStyleType: "disc",
+  },
+  bulletItem: {
+    fontSize: "14px",
+    color: "var(--maq-gray-700)",
+    lineHeight: 1.65,
+    marginBottom: "6px",
+  },
+});
 
 // ---------------------------------------------------------------------------
 // Data
@@ -114,6 +198,7 @@ const blogs = [
 // Page
 // ---------------------------------------------------------------------------
 export function PartnershipSnowflake() {
+  const s = useStyles();
   return (
     <>
       <PartnershipHero
@@ -127,12 +212,12 @@ export function PartnershipSnowflake() {
       <TrustBanner />
       <PartnershipValueProps
         eyebrow="Why Snowflake?"
-        title="Why Snowflake?"
+        title="Enterprise Data Platform for Analytics & AI"
         items={whySnowflake}
       />
       <PartnershipHighlights
         eyebrow="Partnership Highlights"
-        title="Partnership Highlights"
+        title="Proven Expertise and Results"
         stats={highlights}
       />
       <PartnershipOverview
@@ -146,15 +231,50 @@ export function PartnershipSnowflake() {
         sectionId="snowflake-offerings"
         offerings={offerings}
       />
-      <PartnershipMarketplace
-        eyebrow="Marketplace Offerings"
-        title="Data Validator"
-        sectionId="snowflake-marketplace"
-        intro="Begin your RTI journey today"
-        bulletGroups={dataValidatorBullets}
-        ctaLabel="Learn more"
-        ctaHref="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
-      />
+
+      {/* Marketplace Offerings — dual-panel */}
+      <section className={s.marketSection} id="snowflake-marketplace">
+        <div className={s.marketInner}>
+          <div className={s.marketHead}>
+            <span className={s.marketEyebrow}>Marketplace Offerings</span>
+            <h2 className={s.marketTitle}>Accelerating Data Excellence Through Our Snowflake Marketplace Solutions</h2>
+          </div>
+
+          <div className={s.panelGrid}>
+            {/* Panel A — Data Validator */}
+            <div className={s.panel}>
+              <div className={s.panelContent}>
+                <h3 className={s.panelSubhead}>Data Validator</h3>
+                <p className={s.panelDesc}>
+                  Ensure data integrity and reliability across your Snowflake environment with our comprehensive Data Validator tool. Validate row counts, grain checks, and KPIs with automated scheduling and detailed result tracking.
+                </p>
+                <ul className={s.bulletList}>
+                  {dataValidatorBullets[0].items.map((item, i) => (
+                    <li key={i} className={s.bulletItem}>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Button
+                appearance="primary"
+                size="large"
+                icon={<ArrowRight20Regular />}
+                iconPosition="after"
+                as="a"
+                href="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Learn more
+              </Button>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
       <PartnershipInsights
         eyebrow="Insights"
         title="Related blogs and case studies"
