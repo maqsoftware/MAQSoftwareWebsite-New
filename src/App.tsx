@@ -40,6 +40,7 @@ import { AboutNews } from "./pages/AboutNews";
 import { AboutCareers } from "./pages/AboutCareers";
 import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
 import { Contact } from "./pages/Contact";
+import { TermsOfService } from "./pages/TermsOfService";
 
 const useStyles = makeStyles({
   root: {
@@ -207,6 +208,7 @@ export function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/news" element={<AboutNews />} />
         <Route path="/careers" element={<AboutCareers />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
       </Routes>
       <Footer />
     </div>

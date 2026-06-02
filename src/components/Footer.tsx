@@ -150,7 +150,7 @@ const cols: FooterCol[] = [
   {
     title: "Support",
     items: [
-      { label: "Terms of Service" },
+      { label: "Terms of Service", to: "/terms-of-service" },
       { label: "Privacy Statement", to: "/privacystatement" },
     ],
   },
