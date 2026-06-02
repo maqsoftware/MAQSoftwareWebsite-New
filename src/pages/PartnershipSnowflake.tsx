@@ -207,7 +207,7 @@ export function PartnershipSnowflake() {
         subhead="Are you thinking about how to unify siloed data, scale analytics, and drive smarter decisions across your organization? At MAQ Software, we harness the power of Snowflake to help businesses mobilize data, enable secure collaboration, and unlock real-time, AI-powered insights across clouds and regions."
         ctaLabel="Contact our team"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-        imageUrl="/public/logos/Snowflake-hero.webp"
+        imageUrl="/logos/Snowflake-hero.png"
         imageAlt="MAQ Software and Snowflake"
       />
       <TrustBanner />
@@ -220,7 +220,7 @@ export function PartnershipSnowflake() {
         stats={highlights}
       />
       <PartnershipOverview
-        badgeUrl="/public/logos/Snowflake-Services-Select.png"
+        badgeUrl="/logos/Snowflake-Services-Select.png"
         badgeAlt="Snowflake Service Partner"
         description="As a Snowflake Technology Partner, we specialize in end-to-end Snowflake implementations, performance and cost optimization, and AI-driven analytics for modern business needs. Our deep expertise enables organizations to unlock seamless data integration, transformation, reporting, and AI-powered insights, ensuring they stay ahead in an evolving digital landscape. From migration to advanced analytics integrated with Power BI, we empower businesses to maximize their data potential and achieve unparalleled success with Snowflake's industry-leading platform."
       />
