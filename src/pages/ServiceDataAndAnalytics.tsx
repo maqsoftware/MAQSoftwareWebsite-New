@@ -7,6 +7,12 @@ import { ServiceInsightsData } from "../components/service/ServiceInsightsData";
 // import { ServiceTestimonialsData } from "../components/service/ServiceTestimonialsData";
 import { CTA } from "../components/CTA";
 
+const DATA_ANALYTICS_CASE_STUDIES_CONFIG = {
+  serviceFilter: "Data & analytics",
+  allCasesLabel: "See all case studies",
+  serviceSpecificLabel: "See data & analytics case studies",
+};
+
 export function ServiceDataAndAnalytics() {
   return (
     <>
@@ -14,7 +20,7 @@ export function ServiceDataAndAnalytics() {
       <TrustBanner />
       <ServiceCapabilitiesData />
       <ServiceOutcomesData />
-      <ServiceCaseStudiesData />
+      <ServiceCaseStudiesData {...DATA_ANALYTICS_CASE_STUDIES_CONFIG} />
       <ServiceInsightsData />
       {/* <ServiceTestimonialsData /> */}
       <CTA />

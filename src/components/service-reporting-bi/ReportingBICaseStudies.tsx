@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens, Button } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
@@ -82,6 +82,13 @@ const useStyles = makeStyles({
     textDecoration: "none",
     ":hover": { textDecoration: "underline" },
   },
+  buttonGroup: {
+    marginTop: "20px",
+    display: "flex",
+    gap: "12px",
+    flexWrap: "wrap",
+    "@media (max-width: 640px)": { flexDirection: "column" },
+  },
 });
 
 interface Study {
@@ -115,7 +122,15 @@ const studies: Study[] = [
   },
 ];
 
-export function ReportingBICaseStudies() {
+export function ReportingBICaseStudies({
+  serviceFilter,
+  allCasesLabel,
+  serviceSpecificLabel,
+}: {
+  serviceFilter?: string;
+  allCasesLabel?: string;
+  serviceSpecificLabel?: string;
+} = {}) {
   const s = useStyles();
   return (
     <section className={s.section}>
@@ -136,14 +151,28 @@ export function ReportingBICaseStudies() {
             </a>
           ))}
         </div>
-        <a
-          className={s.footerLink}
-          href="/insights/case-studies?filter=reporting-and-visualization"
-          target="_blank"
-          rel="noreferrer"
-        >
-          See all reporting &amp; BI case studies <ArrowRight16Regular />
-        </a>
+        {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
+          <div className={s.buttonGroup}>
+            <Button
+              appearance="outline"
+              as="a"
+              href={`/insights/case-studies?filter=${encodeURIComponent(serviceFilter)}#insights-content`}
+              icon={<ArrowRight16Regular />}
+              iconPosition="after"
+            >
+              {allCasesLabel}
+            </Button>
+          </div>
+        ) : (
+          <a
+            className={s.footerLink}
+            href="/insights/case-studies?filter=Reporting & visualization"
+            target="_blank"
+            rel="noreferrer"
+          >
+            See all reporting &amp; BI case studies <ArrowRight16Regular />
+          </a>
+        )}
       </div>
     </section>
   );

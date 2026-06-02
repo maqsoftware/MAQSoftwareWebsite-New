@@ -226,7 +226,7 @@ export function ServiceCapabilitiesData() {
         </div>
         <a
           className={s.footerLink}
-          href="/insights/case-studies?filter=data-and-analytics"
+          href="/insights/case-studies?filter=Data%20%26%20analytics#insights-content"
           target="_blank"
           rel="noreferrer"
         >
