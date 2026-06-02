@@ -7,6 +7,12 @@ import { ReportingBIInsights } from "../components/service-reporting-bi/Reportin
 // import { ReportingBITestimonials } from "../components/service-reporting-bi/ReportingBITestimonials";
 import { CTA } from "../components/CTA";
 
+const REPORTING_BI_CASE_STUDIES_CONFIG = {
+  serviceFilter: "Reporting & visualization",
+  allCasesLabel: "See all case studies",
+  serviceSpecificLabel: "See reporting & BI case studies",
+};
+
 export function ServiceReportingBI() {
   return (
     <>
@@ -14,7 +20,7 @@ export function ServiceReportingBI() {
       <TrustBanner />
       <ReportingBICapabilities />
       <ReportingBIOutcomes />
-      <ReportingBICaseStudies />
+      <ReportingBICaseStudies {...REPORTING_BI_CASE_STUDIES_CONFIG} />
       <ReportingBIInsights />
       {/* <ReportingBITestimonials /> */}
       <CTA />
