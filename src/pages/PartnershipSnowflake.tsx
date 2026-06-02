@@ -6,14 +6,99 @@ import {
   LockClosed24Regular,
   ScaleFill24Regular,
 } from "@fluentui/react-icons";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight20Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipValueProps } from "../components/partnerships/PartnershipValueProps";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
 import { PartnershipOverview } from "../components/partnerships/PartnershipOverview";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
-import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
+import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
+
+// ---------------------------------------------------------------------------
+// Styles for Marketplace section
+// ---------------------------------------------------------------------------
+const useStyles = makeStyles({
+  marketSection: {
+    padding: "48px 32px",
+    backgroundColor: "var(--maq-off-white)",
+  },
+  marketInner: {
+    maxWidth: "1240px",
+    margin: "0 auto",
+  },
+  marketHead: {
+    marginBottom: "20px",
+    textAlign: "center" as const,
+  },
+  marketEyebrow: {
+    fontSize: "12px",
+    fontWeight: 700,
+    color: "var(--maq-red)",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase" as const,
+    display: "block",
+    marginBottom: "8px",
+    textAlign: "center" as const,
+  },
+  marketTitle: {
+    display: "block",
+    fontSize: "30px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: 0,
+    letterSpacing: "-0.01em",
+    textAlign: "center" as const,
+  },
+  panelGrid: {
+    display: "flex",
+    justifyContent: "center",
+    maxWidth: "700px",
+    margin: "0 auto",
+  },
+  panel: {
+    display: "flex",
+    flexDirection: "column",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    borderRadius: "12px",
+    padding: "28px",
+    background: "#fff",
+    transition: "all 0.2s",
+    width: "100%",
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+    },
+  },
+  panelContent: {
+    flex: 1,
+  },
+  panelSubhead: {
+    fontSize: "20px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: "0 0 12px",
+  },
+  panelDesc: {
+    fontSize: "14px",
+    lineHeight: 1.65,
+    color: "var(--maq-gray-700)",
+    margin: "0 0 16px",
+  },
+  bulletList: {
+    margin: "0 0 20px 20px",
+    padding: 0,
+    listStyleType: "disc",
+  },
+  bulletItem: {
+    fontSize: "14px",
+    color: "var(--maq-gray-700)",
+    lineHeight: 1.65,
+    marginBottom: "6px",
+  },
+});
 
 // ---------------------------------------------------------------------------
 // Data
@@ -114,6 +199,7 @@ const blogs = [
 // Page
 // ---------------------------------------------------------------------------
 export function PartnershipSnowflake() {
+  const s = useStyles();
   return (
     <>
       <PartnershipHero
@@ -121,22 +207,20 @@ export function PartnershipSnowflake() {
         subhead="Are you thinking about how to unify siloed data, scale analytics, and drive smarter decisions across your organization? At MAQ Software, we harness the power of Snowflake to help businesses mobilize data, enable secure collaboration, and unlock real-time, AI-powered insights across clouds and regions."
         ctaLabel="Contact our team"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-        imageUrl="https://maqsoftware-beta.netlify.app/images-new/Snowflake/Snowflake-hero.webp"
+        imageUrl="/public/logos/Snowflake-hero.webp"
         imageAlt="MAQ Software and Snowflake"
       />
       <TrustBanner />
       <PartnershipValueProps
-        eyebrow="Why Snowflake?"
         title="Why Snowflake?"
         items={whySnowflake}
       />
       <PartnershipHighlights
-        eyebrow="Partnership Highlights"
         title="Partnership Highlights"
         stats={highlights}
       />
       <PartnershipOverview
-        badgeUrl="https://maqsoftware-beta.netlify.app/images-new/Snowflake/Snowflake-Services-Select.png"
+        badgeUrl="/public/logos/Snowflake-Services-Select.png"
         badgeAlt="Snowflake Service Partner"
         description="As a Snowflake Technology Partner, we specialize in end-to-end Snowflake implementations, performance and cost optimization, and AI-driven analytics for modern business needs. Our deep expertise enables organizations to unlock seamless data integration, transformation, reporting, and AI-powered insights, ensuring they stay ahead in an evolving digital landscape. From migration to advanced analytics integrated with Power BI, we empower businesses to maximize their data potential and achieve unparalleled success with Snowflake's industry-leading platform."
       />
@@ -146,19 +230,18 @@ export function PartnershipSnowflake() {
         sectionId="snowflake-offerings"
         offerings={offerings}
       />
+      <PartnershipInsights
+        eyebrow="Insights"
+        title="Related blogs and case studies"
+        items={blogs}
+      />
       <PartnershipMarketplace
-        eyebrow="Marketplace Offerings"
         title="Data Validator"
         sectionId="snowflake-marketplace"
         intro="Begin your RTI journey today"
         bulletGroups={dataValidatorBullets}
         ctaLabel="Learn more"
         ctaHref="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
-      />
-      <PartnershipInsights
-        eyebrow="Insights"
-        title="Related blogs and case studies"
-        items={blogs}
       />
     </>
   );

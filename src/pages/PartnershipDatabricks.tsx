@@ -6,14 +6,99 @@ import {
   Lightbulb24Regular,
   People24Regular,
 } from "@fluentui/react-icons";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight20Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipValueProps } from "../components/partnerships/PartnershipValueProps";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
 import { PartnershipOverview } from "../components/partnerships/PartnershipOverview";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
-import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
+import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
+
+// ---------------------------------------------------------------------------
+// Styles for Marketplace section
+// ---------------------------------------------------------------------------
+const useStyles = makeStyles({
+  marketSection: {
+    padding: "48px 32px",
+    backgroundColor: "var(--maq-off-white)",
+  },
+  marketInner: {
+    maxWidth: "1240px",
+    margin: "0 auto",
+  },
+  marketHead: {
+    marginBottom: "20px",
+    textAlign: "center" as const,
+  },
+  marketEyebrow: {
+    fontSize: "12px",
+    fontWeight: 700,
+    color: "var(--maq-red)",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase" as const,
+    display: "block",
+    marginBottom: "8px",
+    textAlign: "center" as const,
+  },
+  marketTitle: {
+    display: "block",
+    fontSize: "30px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: 0,
+    letterSpacing: "-0.01em",
+    textAlign: "center" as const,
+  },
+  panelGrid: {
+    display: "flex",
+    justifyContent: "center",
+    maxWidth: "700px",
+    margin: "0 auto",
+  },
+  panel: {
+    display: "flex",
+    flexDirection: "column",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    borderRadius: "12px",
+    padding: "28px",
+    background: "#fff",
+    transition: "all 0.2s",
+    width: "100%",
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+    },
+  },
+  panelContent: {
+    flex: 1,
+  },
+  panelSubhead: {
+    fontSize: "20px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: "0 0 12px",
+  },
+  panelDesc: {
+    fontSize: "14px",
+    lineHeight: 1.65,
+    color: "var(--maq-gray-700)",
+    margin: "0 0 16px",
+  },
+  bulletList: {
+    margin: "0 0 20px 20px",
+    padding: 0,
+    listStyleType: "disc",
+  },
+  bulletItem: {
+    fontSize: "14px",
+    color: "var(--maq-gray-700)",
+    lineHeight: 1.65,
+    marginBottom: "6px",
+  },
+});
 
 // ---------------------------------------------------------------------------
 // Data
@@ -85,11 +170,19 @@ const guides = [
 const guideBulletGroups = [
   {
     title: "Guides",
-    items: guides.map((g) => (
-      <a key={g.href} href={g.href} target="_blank" rel="noreferrer">
-        {g.title}
-      </a>
-    )),
+    items: guides.map((g) => {
+      const isLocal = g.href.startsWith("/");
+      return (
+        <a
+          key={g.href}
+          href={g.href}
+          target={isLocal ? undefined : "_blank"}
+          rel={isLocal ? undefined : "noreferrer"}
+        >
+          {g.title}
+        </a>
+      );
+    }),
   },
 ];
 
@@ -104,6 +197,7 @@ const blogs = [
 // Page
 // ---------------------------------------------------------------------------
 export function PartnershipDatabricks() {
+  const s = useStyles();
   return (
     <>
       <PartnershipHero
@@ -111,27 +205,27 @@ export function PartnershipDatabricks() {
         subhead="Unlock the power of your data with MAQ Software and Databricks—where innovation meets intelligence. Together, we transform data into actionable insights through next-generation analytics, seamless integration, and AI-driven accelerators. Experience agility, scalability, and security like never before as we propel your business to new heights in the data-driven era."
         ctaLabel="Contact our team"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-        imageUrl="https://maqsoftware.com/images-new/isv/databricks.jpg"
+        imageUrl="/public/logos/databricks.jpg"
         imageAlt="MAQ Software and Databricks"
       />
 
       <TrustBanner />
 
-      <PartnershipValueProps eyebrow="Why Databricks?" title="Why Databricks?" items={whyDatabricks} />
+      <PartnershipValueProps title="Why Databricks?" items={whyDatabricks} />
 
-      <PartnershipHighlights eyebrow="Partnership Highlights" title="Our proven expertise" stats={highlights} />
+      <PartnershipHighlights title="Partnership Highlights" stats={highlights} />
 
       <PartnershipOverview
-        badgeUrl="https://maqsoftware.com/images-new/Databricks/databricks-partner.png"
+        badgeUrl="/public/logos/databricks-partner.png"
         badgeAlt="Databricks partner"
         description="As a Databricks Technology Partner, MAQ Software brings deep expertise in helping organizations unlock the full potential of Databricks. Whether you're looking for guidance on implementing data solutions or optimizing your existing platform, we’re here to support you every step of the way."
       />
 
-      <PartnershipOfferings eyebrow="Our Capabilities" title="Our capabilities" sectionId="databricks-offerings" offerings={offerings} />
-
-      <PartnershipMarketplace eyebrow="Databricks Guides" title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Learn more" ctaHref="/insights" />
+      <PartnershipOfferings title="Our capabilities" sectionId="databricks-offerings" offerings={offerings} />
 
       <PartnershipInsights eyebrow="Insights" title="Related blogs and case studies" items={blogs} />
+
+      <PartnershipMarketplace title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Learn more" ctaHref="/insights" />
 
     </>
   );

@@ -38,6 +38,7 @@ import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 import { AboutSustainability } from "./pages/AboutSustainability";
 import { AboutNews } from "./pages/AboutNews";
 import { AboutCareers } from "./pages/AboutCareers";
+import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
 import { Contact } from "./pages/Contact";
 import { TermsOfService } from "./pages/TermsOfService";
 
@@ -191,6 +192,15 @@ export function App() {
           element={
             <>
               <AboutSustainability />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/privacystatement"
+          element={
+            <>
+              <AboutPrivacyStatement />
               <CTA />
             </>
           }

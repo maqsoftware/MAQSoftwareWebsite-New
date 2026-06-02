@@ -142,7 +142,7 @@ const cols: FooterCol[] = [
     items: [
       { label: "Who we are", to: "/who-we-are" },
       { label: "Careers",    to: "/careers" },
-      { label: "News", to: "/news" },
+      { label: "News",       to: "/news" },
       { label: "Sustainability", to: "/sustainability" },
       { label: "Contact us", to: "/contact" },
     ],
@@ -151,7 +151,7 @@ const cols: FooterCol[] = [
     title: "Support",
     items: [
       { label: "Terms of Service", to: "/terms-of-service" },
-      { label: "Privacy Statement" },
+      { label: "Privacy Statement", to: "/privacystatement" },
     ],
   },
 ];

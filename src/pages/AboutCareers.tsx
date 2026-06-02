@@ -276,7 +276,6 @@ export function AboutCareers() {
       {/* Hero */}
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <span className={s.eyebrow}>About</span>
           <h1 className={s.h1}>Careers</h1>
           <p className={s.heroSub}>
             Build a career working on AI, data, and cloud solutions for Fortune
