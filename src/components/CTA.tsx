@@ -80,8 +80,7 @@ export function CTA() {
             appearance="primary"
             size="large"
             icon={<Mail24Regular />}
-            as="a"
-            href="mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software"
+            onClick={() => navigate("/contact")}
           >
             Contact us
           </Button>
