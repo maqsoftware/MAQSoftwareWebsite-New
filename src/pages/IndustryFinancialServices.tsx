@@ -38,7 +38,7 @@ const useVisualStyles = makeStyles({
     gap: "10px",
     transition: "all 0.2s",
     ":hover": {
-      borderColor: "var(--maq-red)",
+      border: "1px solid var(--maq-red)",
       boxShadow: "0 4px 12px rgba(186,20,26,0.08)",
     },
   },
