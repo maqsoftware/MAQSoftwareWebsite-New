@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { useNavigate } from "react-router-dom";
 import {
     Mail24Regular,
     ArrowRight20Regular,
@@ -560,6 +561,7 @@ const insights: Insight[] = [
 
 export function ServiceWorkplaceTransformation() {
     const s = useStyles();
+    const navigate = useNavigate();
     const [activeCap, setActiveCap] = useState(0);
     const sel = capabilities[activeCap];
 
@@ -585,8 +587,7 @@ export function ServiceWorkplaceTransformation() {
                                 appearance="primary"
                                 size="large"
                                 icon={<Mail24Regular />}
-                                as="a"
-                                href="mailto:customersuccess@maqsoftware.com?subject=Workplace%20Transformation%20%26%20Productivity%20-%20MAQ%20Software"
+                                onClick={() => navigate("/contact")}
                             >
                                 Contact us
                             </Button>
@@ -678,10 +679,7 @@ export function ServiceWorkplaceTransformation() {
                             <Button
                                 appearance="outline"
                                 className={s.knowMore}
-                                as="a"
-                                href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                                    `${sel.name} - Workplace Transformation`
-                                )}`}
+                                onClick={() => navigate("/contact")}
                             >
                                 Know more
                             </Button>
