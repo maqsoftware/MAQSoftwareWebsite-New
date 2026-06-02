@@ -92,6 +92,7 @@ const useStyles = makeStyles({
   },
   marketHead: {
     marginBottom: "20px",
+    textAlign: "center" as const,
   },
   marketEyebrow: {
     fontSize: "12px",
@@ -101,6 +102,7 @@ const useStyles = makeStyles({
     textTransform: "uppercase" as const,
     display: "block",
     marginBottom: "8px",
+    textAlign: "center" as const,
   },
   marketTitle: {
     display: "block",
@@ -109,6 +111,7 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     margin: 0,
     letterSpacing: "-0.01em",
+    textAlign: "center" as const,
   },
   panelGrid: {
     display: "grid",
@@ -318,12 +321,12 @@ export function PartnershipMicrosoft() {
       <TrustBanner />
       <PartnershipValueProps
         eyebrow="Why Microsoft?"
-        title="Why Microsoft?"
+        title="The Enterprise Cloud Platform for Data, AI & Business Applications"
         items={whyMicrosoft}
       />
       <PartnershipHighlights
         eyebrow="Partnership Highlights"
-        title="Partnership Highlights"
+        title="Proven Expertise and Results"
         stats={highlights}
       />
 
@@ -390,7 +393,8 @@ export function PartnershipMicrosoft() {
         <div className={s.marketInner}>
           <div className={s.marketHead}>
             <span className={s.marketEyebrow}>Marketplace Offerings</span>
-            <h2 className={s.marketTitle}>Marketplace Offerings</h2>
+            <h2 className={s.marketTitle}>Accelerating Enterprise Innovation Through Our Microsoft Marketplace Solutions
+</h2>
           </div>
 
           <div className={s.panelGrid}>

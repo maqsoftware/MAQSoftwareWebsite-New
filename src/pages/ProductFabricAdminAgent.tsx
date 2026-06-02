@@ -448,12 +448,6 @@ const resources = [
     desc: "Authoritative guides on Fabric capacity sizing, Power BI optimization, and governance — from the MAQ Software community.",
     href: "https://maqsoftware.com/community/best-practices",
   },
-  {
-    pill: "Talk to us",
-    title: "Schedule a 30-minute walkthrough",
-    desc: "Have a tenant in mind? Email customersuccess@maqsoftware.com and we'll set up a personalized walkthrough.",
-    href: "mailto:customersuccess@maqsoftware.com?subject=Fabric%20Admin%20Agent%20-%20Walkthrough",
-  },
 ];
 
 // ---------------------------------------------------------------------------

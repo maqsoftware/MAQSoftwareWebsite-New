@@ -144,7 +144,7 @@ const cols: FooterCol[] = [
       { label: "Careers",    to: "/careers" },
       { label: "News",       to: "/news" },
       { label: "Sustainability", to: "/sustainability" },
-      { label: "Contact us", href: "mailto:customersuccess@maqsoftware.com" },
+      { label: "Contact us", to: "/contact" },
     ],
   },
   {

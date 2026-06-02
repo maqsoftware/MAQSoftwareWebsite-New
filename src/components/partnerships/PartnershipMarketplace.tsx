@@ -5,7 +5,7 @@ import { ArrowRight20Regular } from "@fluentui/react-icons";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  headLeft: { marginBottom: "20px" },
+  headLeft: { marginBottom: "20px", textAlign: "center" as const },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     textTransform: "uppercase",
     display: "block",
     marginBottom: "8px",
+    textAlign: "center" as const,
   },
   titleLg: {
     display: "block",
@@ -22,6 +23,7 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     margin: 0,
     letterSpacing: "-0.01em",
+    textAlign: "center" as const,
   },
   intro: {
     fontSize: "16px",

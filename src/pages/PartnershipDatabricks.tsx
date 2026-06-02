@@ -6,14 +6,98 @@ import {
   Lightbulb24Regular,
   People24Regular,
 } from "@fluentui/react-icons";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight20Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipValueProps } from "../components/partnerships/PartnershipValueProps";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
 import { PartnershipOverview } from "../components/partnerships/PartnershipOverview";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
-import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
+
+// ---------------------------------------------------------------------------
+// Styles for Marketplace section
+// ---------------------------------------------------------------------------
+const useStyles = makeStyles({
+  marketSection: {
+    padding: "48px 32px",
+    backgroundColor: "var(--maq-off-white)",
+  },
+  marketInner: {
+    maxWidth: "1240px",
+    margin: "0 auto",
+  },
+  marketHead: {
+    marginBottom: "20px",
+    textAlign: "center" as const,
+  },
+  marketEyebrow: {
+    fontSize: "12px",
+    fontWeight: 700,
+    color: "var(--maq-red)",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase" as const,
+    display: "block",
+    marginBottom: "8px",
+    textAlign: "center" as const,
+  },
+  marketTitle: {
+    display: "block",
+    fontSize: "30px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: 0,
+    letterSpacing: "-0.01em",
+    textAlign: "center" as const,
+  },
+  panelGrid: {
+    display: "flex",
+    justifyContent: "center",
+    maxWidth: "700px",
+    margin: "0 auto",
+  },
+  panel: {
+    display: "flex",
+    flexDirection: "column",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    borderRadius: "12px",
+    padding: "28px",
+    background: "#fff",
+    transition: "all 0.2s",
+    width: "100%",
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+    },
+  },
+  panelContent: {
+    flex: 1,
+  },
+  panelSubhead: {
+    fontSize: "20px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: "0 0 12px",
+  },
+  panelDesc: {
+    fontSize: "14px",
+    lineHeight: 1.65,
+    color: "var(--maq-gray-700)",
+    margin: "0 0 16px",
+  },
+  bulletList: {
+    margin: "0 0 20px 20px",
+    padding: 0,
+    listStyleType: "disc",
+  },
+  bulletItem: {
+    fontSize: "14px",
+    color: "var(--maq-gray-700)",
+    lineHeight: 1.65,
+    marginBottom: "6px",
+  },
+});
 
 // ---------------------------------------------------------------------------
 // Data
@@ -104,6 +188,7 @@ const blogs = [
 // Page
 // ---------------------------------------------------------------------------
 export function PartnershipDatabricks() {
+  const s = useStyles();
   return (
     <>
       <PartnershipHero
@@ -117,9 +202,9 @@ export function PartnershipDatabricks() {
 
       <TrustBanner />
 
-      <PartnershipValueProps eyebrow="Why Databricks?" title="Why Databricks?" items={whyDatabricks} />
+      <PartnershipValueProps eyebrow="Why Databricks?" title="The Data Intelligence Platform for Modern Enterprises" items={whyDatabricks} />
 
-      <PartnershipHighlights eyebrow="Partnership Highlights" title="Our proven expertise" stats={highlights} />
+      <PartnershipHighlights eyebrow="Partnership Highlights" title="Proven Expertise and Results" stats={highlights} />
 
       <PartnershipOverview
         badgeUrl="https://maqsoftware.com/images-new/Databricks/databricks-partner.png"
@@ -127,9 +212,50 @@ export function PartnershipDatabricks() {
         description="As a Databricks Technology Partner, MAQ Software brings deep expertise in helping organizations unlock the full potential of Databricks. Whether you're looking for guidance on implementing data solutions or optimizing your existing platform, we’re here to support you every step of the way."
       />
 
-      <PartnershipOfferings eyebrow="Our Capabilities" title="Our capabilities" sectionId="databricks-offerings" offerings={offerings} />
+      <PartnershipOfferings eyebrow="Our Offerings" title="Accelerating Data & AI Innovation Through Our Databricks Partnership" sectionId="databricks-offerings" offerings={offerings} />
 
-      <PartnershipMarketplace eyebrow="Databricks Guides" title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Learn more" ctaHref="/insights" />
+      {/* Marketplace Offerings — dual-panel */}
+      <section className={s.marketSection} id="databricks-marketplace">
+        <div className={s.marketInner}>
+          <div className={s.marketHead}>
+            <span className={s.marketEyebrow}>Marketplace Offerings</span>
+            <h2 className={s.marketTitle}>Accelerating Data & AI Innovation Through Our Databricks Marketplace Solutions</h2>
+          </div>
+
+          <div className={s.panelGrid}>
+            {/* Panel A — Databricks Guides & Resources */}
+            <div className={s.panel}>
+              <div className={s.panelContent}>
+                <h3 className={s.panelSubhead}>Databricks Guides & Resources</h3>
+                <p className={s.panelDesc}>
+                  Access our comprehensive collection of Databricks best practice guides, technical resources, and industry insights to help you maximize your Databricks investment and accelerate your data and AI initiatives.
+                </p>
+                <ul className={s.bulletList}>
+                  {guides.map((g, i) => (
+                    <li key={i} className={s.bulletItem}>
+                      <a href={g.href} target="_blank" rel="noreferrer" style={{ color: "var(--maq-red)", textDecoration: "none" }}>
+                        {g.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Button
+                appearance="primary"
+                size="large"
+                icon={<ArrowRight20Regular />}
+                iconPosition="after"
+                as="a"
+                href="/insights"
+              >
+                View all resources
+              </Button>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
 
       <PartnershipInsights eyebrow="Insights" title="Related blogs and case studies" items={blogs} />
 
