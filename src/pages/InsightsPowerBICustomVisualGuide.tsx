@@ -80,7 +80,10 @@ export function InsightsPowerBICustomVisualGuide() {
   const filtered = useMemo(() => {
     if (activeFilter === "All") return visualGuideItems;
     if (activeFilter === "Certified") return visualGuideItems.filter((item) => item.badges.includes("Certified"));
-    return visualGuideItems.filter((item) => item.category === activeFilter);
+    return visualGuideItems.filter((item) => {
+      const categories = Array.isArray(item.category) ? item.category : [item.category];
+      return categories.includes(activeFilter);
+    });
   }, [activeFilter]);
 
   return (
