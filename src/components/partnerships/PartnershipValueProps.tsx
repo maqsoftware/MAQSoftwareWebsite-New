@@ -67,7 +67,7 @@ export interface ValueProp {
 }
 
 export interface PartnershipValuePropsProps {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   items: ValueProp[];
 }
@@ -82,7 +82,7 @@ export function PartnershipValueProps({
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.title}>{title}</h2>
         </div>
         <div className={s.grid}>

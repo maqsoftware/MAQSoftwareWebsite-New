@@ -61,7 +61,7 @@ export interface HighlightStat {
 }
 
 export interface PartnershipHighlightsProps {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   stats: HighlightStat[];
 }
@@ -76,7 +76,7 @@ export function PartnershipHighlights({
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.title}>{title}</h2>
         </div>
         <div className={s.grid}>
