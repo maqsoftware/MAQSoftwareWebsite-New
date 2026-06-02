@@ -252,7 +252,6 @@ export function AboutSustainability() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <div>
-            <span className={s.eyebrow}>Sustainability</span>
             <h1 className={s.h1}>Sustainability is the Way Forward</h1>
             <p className={s.heroSub}>
               At MAQ Software, sustainability is at the heart of how we operate. As a global

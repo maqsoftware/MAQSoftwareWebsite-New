@@ -529,12 +529,6 @@ const partners = [
     label: "Databricks Technology Partner",
     href: "https://partners.databricks.com/s/directory/listing?recordId=0016100001F00jXAAR",
   },
-  {
-    imgSrc: "/logos/AWS_Partner.png" as string | null,
-    initials: "AWS",
-    label: "Amazon Consulting Partner",
-    href: "http://www.aws-partner-directory.com/PartnerDirectory/PartnerDetail?Name=MAQ+LLC+dba+MAQ+Software",
-  },
 ];
 
 const recognitions = [
@@ -600,7 +594,6 @@ export function AboutWhoWeAre() {
       {/* ── Hero ── */}
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <span className={s.eyebrow}>Who we are</span>
           <h1 className={s.h1}>Who we are</h1>
           <p className={s.heroSub}>
             We are a Microsoft Fabric Featured Partner who enables leading
@@ -655,9 +648,6 @@ export function AboutWhoWeAre() {
       {/* ── Microsoft Solutions Partner Designations ── */}
       <section className={s.sectionGray}>
         <div className={s.inner}>
-          <span className={s.sectionEyebrow}>
-            Our Microsoft Solutions Partner Designations
-          </span>
           <span className={s.h2}>Our Microsoft Solutions Partner Designations</span>
           <div className={s.designationGrid}>
             {designations.map((d) => (
@@ -684,7 +674,6 @@ export function AboutWhoWeAre() {
       {/* ── Microsoft Specializations ── */}
       <section className={s.sectionWhite} id="specializations">
         <div className={s.inner}>
-          <span className={s.sectionEyebrow}>Our Microsoft Specializations</span>
           <span className={s.h2}>Our Microsoft Specializations</span>
           <div className={s.specGrid}>
             {specializations.map((spec, i) => (
@@ -719,7 +708,6 @@ export function AboutWhoWeAre() {
       {/* ── Why Choose MAQ Software ── */}
       <section className={s.sectionGray}>
         <div className={s.inner}>
-          <span className={s.sectionEyebrow}>Why choose MAQ Software</span>
           <span className={s.h2}>Why choose MAQ Software</span>
           <div className={s.whyGrid}>
             {whyItems.map((item) => (
@@ -736,7 +724,6 @@ export function AboutWhoWeAre() {
       {/* ── Our Partners ── */}
       <section className={s.sectionWhite}>
         <div className={s.inner}>
-          <span className={s.sectionEyebrow}>Our partners</span>
           <span className={s.h2}>Our partners</span>
           <div className={s.partnerGrid}>
             {partners.map((p) => (
@@ -767,7 +754,6 @@ export function AboutWhoWeAre() {
       {/* ── Recognitions ── */}
       <section className={s.sectionGray}>
         <div className={s.inner}>
-          <span className={s.sectionEyebrow}>Recognitions</span>
           <span className={s.h2}>Recognitions</span>
           <div className={s.recognitionStack}>
             {recognitions.map((r) => (
@@ -806,7 +792,6 @@ export function AboutWhoWeAre() {
       {/* ── Certifications ── */}
       <section className={s.sectionWhite}>
         <div className={s.inner}>
-          <span className={s.sectionEyebrow}>Certifications</span>
           <span className={s.h2}>Certifications</span>
           <div className={s.certStack}>
             {certifications.map((c) => (

@@ -240,7 +240,6 @@ export function Contact() {
       {/* Hero */}
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <span className={s.eyebrow}>Contact</span>
           <h1 className={s.h1}>Contact MAQ Software</h1>
           <p className={s.heroSub}>
             Contact us today—learn how MAQ Software can deliver the solutions that propel
