@@ -65,7 +65,7 @@ export interface Offering {
 }
 
 export interface PartnershipOfferingsProps {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   sectionId?: string;
   offerings: Offering[];
@@ -82,7 +82,7 @@ export function PartnershipOfferings({
     <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.headLeft}>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.titleLg}>{title}</h2>
         </div>
         {offerings.map((o, i) => (

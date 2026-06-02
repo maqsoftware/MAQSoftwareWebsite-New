@@ -44,6 +44,13 @@ const useStyles = makeStyles({
       justifyItems: "center",
     },
   },
+  badgeLink: {
+    display: "inline-block",
+    transition: "transform 0.2s ease",
+    ":hover": {
+      transform: "scale(1.05)",
+    },
+  },
   badgeImg: {
     width: "140px",
     height: "auto",
@@ -315,18 +322,16 @@ export function PartnershipMicrosoft() {
         subhead="As a Microsoft Fabric Featured Partner and Preferred Supplier since 2000, MAQ Software enables leading companies to accelerate their business intelligence, analytics, and AI initiatives. With 9 Microsoft specializations and 4 solution partner designations, we deliver enterprise-grade solutions across the Microsoft ecosystem—from Azure and Fabric to Power BI and Copilot."
         ctaLabel="Contact our team"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20Microsoft%20Partnership&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-        imageUrl="https://maqsoftware.com/images/logos/Power_BI_Partner_Apr2023.png"
+        imageUrl="/logos/Power_BI_Partner_Apr2023.png"
         imageAlt="MAQ Software and Microsoft"
       />
       <TrustBanner />
       <PartnershipValueProps
-        eyebrow="Why Microsoft?"
-        title="The Enterprise Cloud Platform for Data, AI & Business Applications"
+        title="Why Microsoft?"
         items={whyMicrosoft}
       />
       <PartnershipHighlights
-        eyebrow="Partnership Highlights"
-        title="Proven Expertise and Results"
+        title="Partnership Highlights"
         stats={highlights}
       />
 
@@ -341,10 +346,11 @@ export function PartnershipMicrosoft() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`Solutions Partner for ${d.label}`}
+                className={s.badgeLink}
               >
                 <img
                   className={s.badgeImg}
-                  src={`https://maqsoftware.com/images-new/isv/solutions-partner-${d.label === "Data & AI" ? "data-and-AI" : d.label === "Digital & App Innovation" ? "digital-and-apps-innovation" : d.label.toLowerCase()}.png`}
+                  src={`/logos/solutions-partner-${d.label === "Data & AI" ? "data-and-AI" : d.label === "Digital & App Innovation" ? "digital-and-apps-innovation" : d.label.toLowerCase()}.png`}
                   alt={`Microsoft Solutions Partner - ${d.label}`}
                   loading="lazy"
                 />
@@ -388,13 +394,17 @@ export function PartnershipMicrosoft() {
         offerings={offerings}
       />
 
+      <PartnershipInsights
+        eyebrow="Insights"
+        title="Related blogs and case studies"
+        items={blogs}
+      />
+
       {/* Marketplace Offerings — dual-panel */}
       <section className={s.marketSection} id="microsoft-marketplace">
         <div className={s.marketInner}>
           <div className={s.marketHead}>
-            <span className={s.marketEyebrow}>Marketplace Offerings</span>
-            <h2 className={s.marketTitle}>Accelerating Enterprise Innovation Through Our Microsoft Marketplace Solutions
-</h2>
+            <h2 className={s.marketTitle}>Marketplace Offerings</h2>
           </div>
 
           <div className={s.panelGrid}>
@@ -430,9 +440,7 @@ export function PartnershipMicrosoft() {
                 icon={<ArrowRight20Regular />}
                 iconPosition="after"
                 as="a"
-                href="https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals"
-                target="_blank"
-                rel="noreferrer"
+                href="/insights/power-bi-custom-visual-guide"
               >
                 Explore custom visuals
               </Button>
@@ -484,12 +492,6 @@ export function PartnershipMicrosoft() {
           </div>
         </div>
       </section>
-
-      <PartnershipInsights
-        eyebrow="Insights"
-        title="Related blogs and case studies"
-        items={blogs}
-      />
     </>
   );
 }

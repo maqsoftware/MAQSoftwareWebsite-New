@@ -280,7 +280,6 @@ export function AboutNews() {
       {/* Hero */}
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <span className={s.eyebrow}>About</span>
           <h1 className={s.h1}>News</h1>
           <p className={s.heroSub}>
             Updates on events, partnerships, product launches, and what's happening

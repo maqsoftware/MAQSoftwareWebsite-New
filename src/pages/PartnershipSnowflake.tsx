@@ -15,6 +15,7 @@ import { PartnershipHighlights } from "../components/partnerships/PartnershipHig
 import { PartnershipOverview } from "../components/partnerships/PartnershipOverview";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
+import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
 
 // ---------------------------------------------------------------------------
 // Styles for Marketplace section
@@ -206,22 +207,20 @@ export function PartnershipSnowflake() {
         subhead="Are you thinking about how to unify siloed data, scale analytics, and drive smarter decisions across your organization? At MAQ Software, we harness the power of Snowflake to help businesses mobilize data, enable secure collaboration, and unlock real-time, AI-powered insights across clouds and regions."
         ctaLabel="Contact our team"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-        imageUrl="https://maqsoftware-beta.netlify.app/images-new/Snowflake/Snowflake-hero.webp"
+        imageUrl="/public/logos/Snowflake-hero.webp"
         imageAlt="MAQ Software and Snowflake"
       />
       <TrustBanner />
       <PartnershipValueProps
-        eyebrow="Why Snowflake?"
-        title="Enterprise Data Platform for Analytics & AI"
+        title="Why Snowflake?"
         items={whySnowflake}
       />
       <PartnershipHighlights
-        eyebrow="Partnership Highlights"
-        title="Proven Expertise and Results"
+        title="Partnership Highlights"
         stats={highlights}
       />
       <PartnershipOverview
-        badgeUrl="https://maqsoftware-beta.netlify.app/images-new/Snowflake/Snowflake-Services-Select.png"
+        badgeUrl="/public/logos/Snowflake-Services-Select.png"
         badgeAlt="Snowflake Service Partner"
         description="As a Snowflake Technology Partner, we specialize in end-to-end Snowflake implementations, performance and cost optimization, and AI-driven analytics for modern business needs. Our deep expertise enables organizations to unlock seamless data integration, transformation, reporting, and AI-powered insights, ensuring they stay ahead in an evolving digital landscape. From migration to advanced analytics integrated with Power BI, we empower businesses to maximize their data potential and achieve unparalleled success with Snowflake's industry-leading platform."
       />
@@ -231,54 +230,18 @@ export function PartnershipSnowflake() {
         sectionId="snowflake-offerings"
         offerings={offerings}
       />
-
-      {/* Marketplace Offerings — dual-panel */}
-      <section className={s.marketSection} id="snowflake-marketplace">
-        <div className={s.marketInner}>
-          <div className={s.marketHead}>
-            <span className={s.marketEyebrow}>Marketplace Offerings</span>
-            <h2 className={s.marketTitle}>Accelerating Data Excellence Through Our Snowflake Marketplace Solutions</h2>
-          </div>
-
-          <div className={s.panelGrid}>
-            {/* Panel A — Data Validator */}
-            <div className={s.panel}>
-              <div className={s.panelContent}>
-                <h3 className={s.panelSubhead}>Data Validator</h3>
-                <p className={s.panelDesc}>
-                  Ensure data integrity and reliability across your Snowflake environment with our comprehensive Data Validator tool. Validate row counts, grain checks, and KPIs with automated scheduling and detailed result tracking.
-                </p>
-                <ul className={s.bulletList}>
-                  {dataValidatorBullets[0].items.map((item, i) => (
-                    <li key={i} className={s.bulletItem}>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Button
-                appearance="primary"
-                size="large"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
-                as="a"
-                href="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Learn more
-              </Button>
-            </div>
-
-
-          </div>
-        </div>
-      </section>
-
       <PartnershipInsights
         eyebrow="Insights"
         title="Related blogs and case studies"
         items={blogs}
+      />
+      <PartnershipMarketplace
+        title="Data Validator"
+        sectionId="snowflake-marketplace"
+        intro="Begin your RTI journey today"
+        bulletGroups={dataValidatorBullets}
+        ctaLabel="Learn more"
+        ctaHref="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
       />
     </>
   );

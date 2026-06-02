@@ -15,6 +15,7 @@ import { PartnershipHighlights } from "../components/partnerships/PartnershipHig
 import { PartnershipOverview } from "../components/partnerships/PartnershipOverview";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
+import { PartnershipMarketplace } from "../components/partnerships/PartnershipMarketplace";
 
 // ---------------------------------------------------------------------------
 // Styles for Marketplace section
@@ -169,11 +170,19 @@ const guides = [
 const guideBulletGroups = [
   {
     title: "Guides",
-    items: guides.map((g) => (
-      <a key={g.href} href={g.href} target="_blank" rel="noreferrer">
-        {g.title}
-      </a>
-    )),
+    items: guides.map((g) => {
+      const isLocal = g.href.startsWith("/");
+      return (
+        <a
+          key={g.href}
+          href={g.href}
+          target={isLocal ? undefined : "_blank"}
+          rel={isLocal ? undefined : "noreferrer"}
+        >
+          {g.title}
+        </a>
+      );
+    }),
   },
 ];
 
@@ -196,68 +205,27 @@ export function PartnershipDatabricks() {
         subhead="Unlock the power of your data with MAQ Software and Databricks—where innovation meets intelligence. Together, we transform data into actionable insights through next-generation analytics, seamless integration, and AI-driven accelerators. Experience agility, scalability, and security like never before as we propel your business to new heights in the data-driven era."
         ctaLabel="Contact our team"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-        imageUrl="https://maqsoftware.com/images-new/isv/databricks.jpg"
+        imageUrl="/public/logos/databricks.jpg"
         imageAlt="MAQ Software and Databricks"
       />
 
       <TrustBanner />
 
-      <PartnershipValueProps eyebrow="Why Databricks?" title="The Data Intelligence Platform for Modern Enterprises" items={whyDatabricks} />
+      <PartnershipValueProps title="Why Databricks?" items={whyDatabricks} />
 
-      <PartnershipHighlights eyebrow="Partnership Highlights" title="Proven Expertise and Results" stats={highlights} />
+      <PartnershipHighlights title="Partnership Highlights" stats={highlights} />
 
       <PartnershipOverview
-        badgeUrl="https://maqsoftware.com/images-new/Databricks/databricks-partner.png"
+        badgeUrl="/public/logos/databricks-partner.png"
         badgeAlt="Databricks partner"
         description="As a Databricks Technology Partner, MAQ Software brings deep expertise in helping organizations unlock the full potential of Databricks. Whether you're looking for guidance on implementing data solutions or optimizing your existing platform, we’re here to support you every step of the way."
       />
 
-      <PartnershipOfferings eyebrow="Our Offerings" title="Accelerating Data & AI Innovation Through Our Databricks Partnership" sectionId="databricks-offerings" offerings={offerings} />
-
-      {/* Marketplace Offerings — dual-panel */}
-      <section className={s.marketSection} id="databricks-marketplace">
-        <div className={s.marketInner}>
-          <div className={s.marketHead}>
-            <span className={s.marketEyebrow}>Marketplace Offerings</span>
-            <h2 className={s.marketTitle}>Accelerating Data & AI Innovation Through Our Databricks Marketplace Solutions</h2>
-          </div>
-
-          <div className={s.panelGrid}>
-            {/* Panel A — Databricks Guides & Resources */}
-            <div className={s.panel}>
-              <div className={s.panelContent}>
-                <h3 className={s.panelSubhead}>Databricks Guides & Resources</h3>
-                <p className={s.panelDesc}>
-                  Access our comprehensive collection of Databricks best practice guides, technical resources, and industry insights to help you maximize your Databricks investment and accelerate your data and AI initiatives.
-                </p>
-                <ul className={s.bulletList}>
-                  {guides.map((g, i) => (
-                    <li key={i} className={s.bulletItem}>
-                      <a href={g.href} target="_blank" rel="noreferrer" style={{ color: "var(--maq-red)", textDecoration: "none" }}>
-                        {g.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <Button
-                appearance="primary"
-                size="large"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
-                as="a"
-                href="/insights"
-              >
-                View all resources
-              </Button>
-            </div>
-
-
-          </div>
-        </div>
-      </section>
+      <PartnershipOfferings title="Our capabilities" sectionId="databricks-offerings" offerings={offerings} />
 
       <PartnershipInsights eyebrow="Insights" title="Related blogs and case studies" items={blogs} />
+
+      <PartnershipMarketplace title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Learn more" ctaHref="/insights" />
 
     </>
   );
