@@ -138,16 +138,6 @@ export function SolutionShowcase({ sectionId, eyebrow = "Agentic AI", title, age
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <Button
-              appearance="outline"
-              className={s.knowMore}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " — " + industryLabel + " — MAQ Software"
-              )}`}
-            >
-              Know More
-            </Button>
           </div>
           <div className={s.rail}>
             {agents.map((a, i) => (

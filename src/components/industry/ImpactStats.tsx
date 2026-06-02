@@ -1,4 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight20Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -28,15 +29,30 @@ const useStyles = makeStyles({
     "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
   },
   card: {
+    display: "flex",
+    flexDirection: "column",
     border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "10px",
-    padding: "20px",
+    borderRadius: "12px",
+    padding: "22px",
     background: "#fff",
     transition: "all 0.2s",
     ":hover": {
       border: `1px solid var(--maq-red)`,
       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      transform: "translateY(-2px)",
     },
+  },
+  chip: {
+    alignSelf: "flex-start",
+    fontSize: "10px",
+    fontWeight: 700,
+    color: "var(--maq-red)",
+    background: "var(--maq-red-pale)",
+    textTransform: "uppercase",
+    letterSpacing: "0.06em",
+    padding: "3px 8px",
+    borderRadius: "4px",
+    marginBottom: "12px",
   },
   metric: {
     fontSize: "32px",
@@ -46,24 +62,36 @@ const useStyles = makeStyles({
     marginBottom: "8px",
     letterSpacing: "-0.02em",
   },
-  label: {
-    fontSize: "14px",
-    fontWeight: 600,
+  cardTitle: {
+    fontSize: "15px",
+    fontWeight: 700,
     color: "var(--maq-black)",
-    lineHeight: 1.35,
-    marginBottom: "8px",
+    lineHeight: 1.4,
+    marginBottom: "10px",
   },
-  source: {
-    fontSize: "11px",
+  label: {
+    fontSize: "13px",
+    fontWeight: 400,
     color: "var(--maq-gray-600)",
-    textTransform: "uppercase",
-    letterSpacing: "0.06em",
+    lineHeight: 1.55,
+    marginBottom: "14px",
+    flex: 1,
   },
-  link: { color: "var(--maq-red)", textDecoration: "none" },
+  link: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "4px",
+    fontSize: "13px",
+    fontWeight: 600,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+  },
 });
 
 export interface ImpactStat {
-  metric: string;
+  metric?: string;
+  chip?: string;
+  title?: string;
   label: string;
   sourceLabel: string;
   sourceHref: string;
@@ -89,15 +117,19 @@ export function ImpactStats({ eyebrow = "Proven outcomes", title, sub, stats }: 
         <div className={s.grid}>
           {stats.map((st) => (
             <div key={st.label} className={s.card}>
-              <div className={s.metric}>{st.metric}</div>
+              {st.chip && <span className={s.chip}>{st.chip}</span>}
+              {st.metric && st.metric !== "____" && (
+                <div className={s.metric}>{st.metric}</div>
+              )}
+              {st.title && <div className={s.cardTitle}>{st.title}</div>}
               <div className={s.label}>{st.label}</div>
               <a
-                className={`${s.source} ${s.link}`}
+                className={s.link}
                 href={st.sourceHref}
                 target="_blank"
                 rel="noreferrer"
               >
-                {st.sourceLabel} ↗
+                {st.sourceLabel} <ArrowRight20Regular fontSize={14} />
               </a>
             </div>
           ))}
