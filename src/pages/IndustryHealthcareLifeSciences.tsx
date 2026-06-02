@@ -10,7 +10,7 @@ import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { Testimonials } from "../components/industry/Testimonials";
+// import { Testimonials } from "../components/industry/Testimonials";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
@@ -308,7 +308,7 @@ export function IndustryHealthcareLifeSciences() {
         sub="Accelerate healthcare and life sciences outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning clinical analytics, patient experience, research data unification, and regulated-data governance."
         offers={hlsOffers}
       />
-      <Testimonials quotes={hlsTestimonials} />
+      {/* <Testimonials quotes={hlsTestimonials} /> */}
       <CTA />
     </>
   );

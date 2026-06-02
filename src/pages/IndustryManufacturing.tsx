@@ -11,7 +11,7 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { Testimonials } from "../components/industry/Testimonials";
+// import { Testimonials } from "../components/industry/Testimonials";
 import { CTA } from "../components/CTA";
 
 // --- Manufacturing hero visual ---
@@ -242,7 +242,7 @@ export function IndustryManufacturing() {
         sub="Accelerate manufacturing outcomes with ready-to-deploy Microsoft Azure Marketplace offerings \u2014 spanning AI strategy, real-time intelligence, and data platform modernization."
         offers={manufacturingOffers}
       />
-      <Testimonials quotes={manufacturingTestimonials} />
+      {/* <Testimonials quotes={manufacturingTestimonials} /> */}
       <CTA />
     </>
   );

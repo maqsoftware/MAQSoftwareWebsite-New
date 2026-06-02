@@ -17,7 +17,7 @@ import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
 import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
-import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
+// import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
 import { CTA } from "../components/CTA";
 import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
@@ -265,7 +265,7 @@ export function ServiceSecurityCompliance() {
         subhead="See our research that goes into optimizing our security service."
         insights={insights}
       />
-      <ServiceTestimonials quotes={testimonials} />
+      {/* <ServiceTestimonials quotes={testimonials} /> */}
       <CTA />
     </>
   );
