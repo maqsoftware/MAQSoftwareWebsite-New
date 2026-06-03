@@ -2,6 +2,7 @@ import { Button, makeStyles, tokens, Badge } from "@fluentui/react-components";
 import {
   Mail24Regular,
   ArrowRight20Regular,
+  ArrowRight16Regular,
   Pulse24Regular,
   Warning24Regular,
   Wrench24Regular,
@@ -580,7 +581,7 @@ export function ProductFabricAdminAgent() {
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
-                  Read full story <ArrowRight20Regular fontSize={14} />
+                  Read full story <ArrowRight16Regular />
                 </span>
               </a>
             ))}
@@ -592,7 +593,7 @@ export function ProductFabricAdminAgent() {
               target="_blank"
               rel="noreferrer"
             >
-              See all Fabric case studies <ArrowRight20Regular fontSize={14} />
+              See all Fabric case studies <ArrowRight16Regular />
             </a>
           </div>
         </div>

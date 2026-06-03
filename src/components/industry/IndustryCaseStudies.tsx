@@ -1,5 +1,5 @@
 import { makeStyles, tokens, Badge } from "@fluentui/react-components";
-import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -126,7 +126,7 @@ export function IndustryCaseStudies({
               <div className={s.cardTitle}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <span className={s.link}>
-                Read full story <ArrowRight20Regular fontSize={14} />
+                Read full story <ArrowRight16Regular />
               </span>
             </a>
           ))}
@@ -138,7 +138,7 @@ export function IndustryCaseStudies({
             target="_blank"
             rel="noreferrer"
           >
-            {seeAllLabel} <ArrowRight20Regular fontSize={14} />
+            {seeAllLabel} <ArrowRight16Regular />
           </a>
         </div>
       </div>
