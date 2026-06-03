@@ -2,7 +2,7 @@
 
 > This is the **source of truth** for the home page implementation.
 > Update this file (or ask the assistant to update it) and treat code changes as a downstream consequence of edits here.
-> When this file changes, the assistant should reconcile `src/` to match. 
+> When this file changes, the assistant should reconcile `src/` to match.
 
 ---
 
