@@ -154,11 +154,11 @@ export function ProductEmbedFAST() {
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
                   <span className={s.mktPill}>{o.pill}</span>
-                  <div className={s.mktTitleRow}>
-                    <div className={s.mktTitle}>{o.title}</div>
-                    <ArrowRight20Regular className={s.mktArrow} />
-                  </div>
+                  <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
+                  <span className={s.mktRead}>
+                    Read more <ArrowRight20Regular fontSize={14} />
+                  </span>
                 </div>
               </a>
             ))}
