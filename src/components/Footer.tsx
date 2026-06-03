@@ -30,15 +30,12 @@ const useStyles = makeStyles({
   logoMark: {
     width: "32px",
     height: "32px",
-    backgroundColor: "var(--maq-red)",
-    borderRadius: "8px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontWeight: 800,
-    color: "#fff",
-    fontSize: "14px",
+    flexShrink: 0,
   },
+  logoImage: { width: "100%", height: "100%", display: "block", objectFit: "contain" },
   logoName: { fontSize: "16px", fontWeight: 700, color: "#fff" },
   about: {
     fontSize: "13px",
@@ -186,7 +183,9 @@ export function Footer() {
         <div className={s.top}>
           <div>
             <div className={s.brand}>
-              <div className={s.logoMark}>M</div>
+              <div className={s.logoMark}>
+                <img src="/favicon.png" alt="" className={s.logoImage} />
+              </div>
               <div className={s.logoName}>MAQ Software</div>
             </div>
             <p className={s.about}>

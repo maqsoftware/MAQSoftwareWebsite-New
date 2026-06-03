@@ -44,12 +44,15 @@ const useStyles = makeStyles({
   brand: {
     display: "flex",
     alignItems: "center",
-    fontSize: "20px",
-    fontWeight: 700,
     textDecoration: "none",
   },
-  brandRed: { color: "var(--maq-red)", fontWeight: 800 },
-  brandGray: { color: "var(--maq-ink)", fontWeight: 500, marginLeft: "6px" },
+  brandLogo: {
+    height: "22px",
+    width: "auto",
+    display: "block",
+    flexShrink: 0,
+    transform: "translateY(-3px)",
+  },
   links: {
     display: "flex",
     gap: "4px",
@@ -322,8 +325,7 @@ export function Header() {
   return (
     <nav className={`${s.nav} site-header`}>
       <Link to="/" className={s.brand} aria-label="MAQ Software homepage">
-        <span className={s.brandRed}>MAQ</span>
-        <span className={s.brandGray}>Software</span>
+        <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
       </Link>
 
       <button
@@ -376,9 +378,8 @@ export function Header() {
                 ×
               </button>
               <div className={s.mobileBrand}>
-                <Link to="/" onClick={closeMenu} className={s.brand}>
-                  <span className={s.brandRed}>MAQ</span>
-                  <span className={s.brandGray} style={{ color: "#8f8f8f" }}>Software</span>
+                <Link to="/" onClick={closeMenu} className={s.brand} aria-label="MAQ Software homepage">
+                    <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
                 </Link>
               </div>
 
