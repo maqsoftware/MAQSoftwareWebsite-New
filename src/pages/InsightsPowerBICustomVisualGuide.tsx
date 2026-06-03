@@ -93,7 +93,6 @@ export function InsightsPowerBICustomVisualGuide() {
         subhead="Expand your reporting capabilities with our 43 certified Power BI custom visuals. If you need help choosing the right visual for your report, try our visual guide."
         primaryLabel="Explore custom visuals"
         primaryTargetId="insights-content"
-        secondaryHref="https://maqsoftware.com/services/Power-BI/VisualChooserPDF.pdf"
       />
       <InsightsResourceNav active="power-bi-custom-visual-guide" />
       <section className={s.section} id="insights-content">
