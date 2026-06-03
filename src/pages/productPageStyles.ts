@@ -73,11 +73,12 @@ export const useProductPageStyles = makeStyles({
 
   mktGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" }, "@media (max-width: 640px)": { gridTemplateColumns: "1fr" } },
   mktCard: { background: "#fff", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "10px", overflow: "hidden", display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", transition: "all 0.2s", ":hover": { border: `1px solid var(--maq-red)`, boxShadow: "0 6px 16px rgba(0,0,0,0.06)", transform: "translateY(-2px)" } },
-  mktImg: { aspectRatio: "16 / 9", background: "linear-gradient(135deg, #ececec 0%, #f5f5f5 50%, #e6e6e6 100%)" },
-  mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1 },
+  mktImg: { height: "100px", background: "linear-gradient(135deg, var(--maq-red-pale) 0%, var(--maq-off-white) 60%, var(--maq-surface-cream) 100%)", borderBottom: "1px solid var(--maq-border)" },
+  mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1, gap: "8px" },
   mktPill: { alignSelf: "flex-start", fontSize: "10px", fontWeight: 700, color: "var(--maq-red)", background: "var(--maq-red-pale)", textTransform: "uppercase", letterSpacing: "0.06em", padding: "3px 8px", borderRadius: "4px", marginBottom: "10px" },
   mktTitleRow: { display: "flex", alignItems: "flex-start", gap: "8px", marginBottom: "8px" },
   mktTitle: { fontSize: "14px", fontWeight: 700, color: "var(--maq-black)", lineHeight: 1.4, flex: 1 },
   mktArrow: { color: "var(--maq-red)", flexShrink: 0, marginTop: "2px" },
-  mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0 },
+  mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
+  mktRead: { display: "inline-flex", alignItems: "center", gap: "4px", fontSize: "13px", fontWeight: 600, color: "var(--maq-red)", marginTop: "4px" },
 });
