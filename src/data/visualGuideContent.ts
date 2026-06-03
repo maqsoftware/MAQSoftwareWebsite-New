@@ -13,6 +13,11 @@ export interface VisualGuideContent {
   useCases: string[];
   whatsNew?: { version: string; items: string[] };
   appSourceProductId: string;
+  /**
+   * Power BI publish-to-web URL hosting the multi-page feature walkthrough
+   * (mirrors the embedded slideshow on maqsoftware.com Marketplace pages).
+   */
+  pbiReportUrl?: string;
 }
 
 export const visualGuideContent: VisualGuideContent[] = [
@@ -37,6 +42,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Admin: Display employee salary distribution and salary variation for individual employees",
     ],
     appSourceProductId: "WA104381032",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZDZiYTBhZTItYTRhMy00NzFiLTgwMDQtODYwOGY0ZWM1Y2FlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "gantt-chart",
@@ -71,6 +77,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       items: ["Added toggle for changing sort behavior – Independent sort"],
     },
     appSourceProductId: "WA104381364",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiN2FmN2U2ZmQtNjdmMi00NGNiLTg3ZmEtZjRkMDdjZDUxMWY2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "bowtie-chart",
@@ -97,6 +104,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       items: ["Fixed the summary label position"],
     },
     appSourceProductId: "WA104380838",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjNhNTc1YmEtNzE0MC00ZTA4LWFiMjgtZjY5MTMwZjM2ZTA0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "kpi-ticker",
@@ -124,6 +132,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       items: ["Handle percentage values"],
     },
     appSourceProductId: "WA104380946",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNGNlMWFmZjMtZmFhNC00NzI0LTkwMjYtZjhkMzkwNDEwMjBiIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "sunburst",
@@ -151,6 +160,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       items: ["Added toggle for changing sort behavior – Independent sort"],
     },
     appSourceProductId: "WA200000097",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiYjE2ZjgyODktYjJmNC00ODI5LWE4YzUtMzdkMDI2NGUyN2Y0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "advanced-linear-gauge",
@@ -172,6 +182,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Operations management: Ensure production efficiency by monitoring daily output against targets, visually identifying areas for improvement.",
     ],
     appSourceProductId: "maqsoftware1587623472284.advancedlineargaugebymaqsoftware",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiMWE3NmUyZjItM2Y3ZS00MzFmLTkyZTktZDAzNDlkMDMwNzVmIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "box-and-whisker-chart",
@@ -194,6 +205,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Added support for the context menu"] },
     appSourceProductId: "WA104381351",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNTBiOWI3MjgtYzgzNi00MzE4LThjNzYtNzY5YjJjMGNlOTA1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "brick-chart",
@@ -214,6 +226,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Government: Highlight seats occupied versus unoccupied in a legislature",
     ],
     appSourceProductId: "WA104380836",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiMGY0ZWJmYzAtNTNhMS00ZjEwLTg5ODktNjhlNjdlNmRlMzkxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "cylindrical-gauge",
@@ -235,6 +248,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Travel: Evaluate fuel levels across different journey routes",
     ],
     appSourceProductId: "WA104380874",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNDRiYmIyYmItMGJiMS00MmFmLTgxYTUtZjlmODUwMjg3YjkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "data-insights",
@@ -255,6 +269,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Shift between multiple KPIs or reporting periods by changing the axis base",
     ],
     appSourceProductId: "WA104381454",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNDZhZDY0NTYtNTg3ZC00OWIzLWFkMGMtMzc5NWJmOTRkOTYzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "dot-plot",
@@ -277,6 +292,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Hospitality: Break down the popularity of different hotels in the same chain based on location, revenue, and seasonality",
     ],
     appSourceProductId: "WA104381101",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiYTdiN2E2MWYtY2FhMC00MzdkLWI3ZWMtN2IyMGViNDIzYjMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "dynamic-tooltip",
@@ -301,6 +317,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       items: ["Added separate data fields for header and body values of the tooltip"],
     },
     appSourceProductId: "WA104380983",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNDIzMGQxN2ItODI2NS00MGQzLWFkYmUtZDdhMjkzOGI0ZWRkIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "funnel-with-source",
@@ -321,6 +338,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Management: Track team contribution across quarters",
     ],
     appSourceProductId: "WA104381334",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZmI0OTg3YmEtMzFkNC00ODExLWIxMDktZDZmMDhjODE4OTM0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "grid",
@@ -342,6 +360,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Added support for the context menu"] },
     appSourceProductId: "WA104380825",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZmM0YmUzODMtMGM0YS00ZTkxLWEyZTQtOWE3MDU4ZWNkNDljIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "hierarchy-chart",
@@ -365,6 +384,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Finance: Illustrate budget distributions across divisions or projects, using color coding to identify areas on or off track.",
     ],
     appSourceProductId: "maqsoftware1587623472284.hierarchychartbymaqsoftware",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNTZkZTgyNjgtZjI3OS00MzllLWIwNmUtYTVhNDI2NDQyYWViIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "horizontal-funnel",
@@ -387,6 +407,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Support for the context menu"] },
     appSourceProductId: "WA104380846",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiMGQ0YzFhYjEtYTM4MS00MmU4LTlhYWQtZTY5Y2FmMDc2OTc2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "hourglass-chart",
@@ -408,6 +429,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Travel: Compare the number of scheduled flights versus delayed flights between major airports",
     ],
     appSourceProductId: "WA104381843",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiMDMwNzBjOTQtYTA3OC00NmYzLWFlZGItYWMzOGZiN2UwM2Y1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "image-carousel",
@@ -429,6 +451,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Websites: Show company details, customer quotes, products, and more",
     ],
     appSourceProductId: "maqsoftware1587623472284.imagecarouselbymaqsoftware",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiODYwNjYwNWEtZTgzMi00YzJlLWJkMDktNzgzNjAyOGNlMmYxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "journey-chart",
@@ -449,6 +472,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Recruitment: Highlight candidates' strengths, weaknesses, and other relevant traits",
     ],
     appSourceProductId: "WA104380989",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiM2IwNzRhYWUtZTJlNC00MTNlLTlhNzAtZDNmYmU4YjRiYzNiIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "kpi-column",
@@ -473,6 +497,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       items: ["Context menu support", "Increased support to handle 5000 records"],
     },
     appSourceProductId: "WA104380996",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjlhZjliYmItNzMyZC00N2Y3LTk1YTAtMTYyZDAzYzQ5MmM4IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "kpi-grid",
@@ -496,6 +521,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Context menu support"] },
     appSourceProductId: "WA104380947",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZTY2YWIzN2UtMjM4Zi00MzRjLWE1NmQtOWMxZjZjNzI2MzAzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "linear-gauge",
@@ -529,6 +555,8 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Added support for the context menu", "Bug fixes"] },
     appSourceProductId: "WA104380821",
+    pbiReportUrl:
+      "https://app.powerbi.com/view?r=eyJrIjoiYTUwYjY5ODEtNDY3Zi00NzdmLWEyODMtZjI4OWIyZGYwMzVjIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "organization-chart",
@@ -558,6 +586,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Finance: Display budget allocation by divisions or projects, breaking them down into subdivisions or sub-projects",
     ],
     appSourceProductId: "WA200001120",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNDJjNzk4ZjctZDUwMS00ZTM3LWJhZTgtYzY4OWU1MzM2Y2Q0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "quadrant-chart",
@@ -579,6 +608,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Finance – Represent the regions where your product sells best, breaking down success by sales and quantity of store fronts",
     ],
     appSourceProductId: "WA104381011",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiOGEzMTQ5MzEtMDY1Mi00YmUxLTkwZTQtMGEwZTAwYzM4NWYzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "radar-chart",
@@ -608,6 +638,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Operations: Outline employee competencies across key performance indicators.",
     ],
     appSourceProductId: "WA200001561",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiOTBiZTk0ZWEtMjZlOC00MGIyLWIyYjQtMTM3NWI4OTU5ZWUwIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "ratings",
@@ -628,6 +659,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Customer support: Analyze business performance by tracking customer support ratings for different products",
     ],
     appSourceProductId: "WA104381838",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZjc1YTNlNTQtYjA5Zi00NmMyLWJhNzItNmI5Yjc1M2E0ODJmIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "ring-chart",
@@ -651,6 +683,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.5.3", items: ["Resolved a minor bug with the tooltip"] },
     appSourceProductId: "WA104380824",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNzcyYmNmNzQtYjQ4Mi00NmNjLTgxZTQtMGFiOTQwM2MyZDA2IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "rotating-chart",
@@ -672,6 +705,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Management: Analyze the performance of multiple departments over time",
     ],
     appSourceProductId: "WA104381007",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZDBjNjY4MmUtMjM5Yy00NmRjLTgyMDctM2Y2YmE5ZjlmZGU3IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "rotating-tile",
@@ -693,6 +727,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Supply Chain - Highlight units sold over time in a compact space",
     ],
     appSourceProductId: "WA104380877",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNTY4OTZhODctZmQyMC00YjcxLWFkOTktMDVjNmE3MDRlNGQ5IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "text-enhancer",
@@ -713,6 +748,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Support for the context menu"] },
     appSourceProductId: "WA104381762",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZDc1NzAwMTUtOWZiNy00MTI3LTg0NTMtOWM5MDkxMzI4M2M1IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "text-wrapper",
@@ -729,6 +765,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Text Wrapper by MAQ Software enables more dynamic reports for any business application",
     ],
     appSourceProductId: "WA104380826",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiYTkwYjk3ZTQtMmQ0NS00N2RjLTlmMmQtM2Y0MTU2MTUzNTAxIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "thermometer",
@@ -752,6 +789,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       items: ["Added Context menu", "Fixed target and fill issue"],
     },
     appSourceProductId: "WA104380847",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZTVhMjY5Y2QtNTRlNS00YTYzLThmZTktZWM0Y2JjNjEyZGMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "trading-chart",
@@ -772,6 +810,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Support for the context menu"] },
     appSourceProductId: "WA104380823",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiYWY2YjU4MjEtZTNmYi00MTMzLTkzZTQtNDIwNzQ0YjMwOWNlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "treemap-bar-chart",
@@ -801,6 +840,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "4.0.0", items: ["Context menu support"] },
     appSourceProductId: "WA200000043",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiNjI0ZmI2MTctMGNkNS00ZjA4LWIwOWItZjVhZTgzOTFmYTMyIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "venn-diagram",
@@ -822,6 +862,7 @@ export const visualGuideContent: VisualGuideContent[] = [
     ],
     whatsNew: { version: "3.1.1", items: ["Updated with the latest certification ruleset"] },
     appSourceProductId: "WA104381231",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiMDhhYTQwM2UtYTQyZC00YTIyLWI2YjItMmI1ZDE2YjRjODVlIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
   {
     slug: "violin-plot",
@@ -843,6 +884,7 @@ export const visualGuideContent: VisualGuideContent[] = [
       "Human resources: Predict, analyze, and plan team expenditure",
     ],
     appSourceProductId: "maqsoftware1587623472284.violinplotbymaqsoftware",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZmU0MDZjMGYtNDUyNC00OTQ0LTk3NDMtYTIwNGIyOGM5YjM0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
 ];
 
@@ -852,4 +894,21 @@ export function findVisualGuideContent(slug: string): VisualGuideContent | undef
 
 export function appSourceUrl(productId: string): string {
   return `https://appsource.microsoft.com/en-us/product/power-bi-visuals/${productId}?tab=Overview`;
+}
+
+/**
+ * Power BI publish-to-web report URLs for every visual, including those
+ * without authored long-form content (Calendar, Circular Gauge). These
+ * mirror the embedded slideshow shown on each maqsoftware.com Marketplace
+ * page and are sourced from /resources/powerbi visuals/Visuals.json.
+ */
+export const visualGuidePbiReportUrls: Record<string, string> = {
+  calendar:
+    "https://app.powerbi.com/view?r=eyJrIjoiYzc2NjI4M2QtYmRhMC00YTc1LWIwOTktNDA2YjBiYTNmNjkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+  "circular-gauge":
+    "https://app.powerbi.com/view?r=eyJrIjoiMjQ2YzhkNTktYTgzNS00Yzc3LTgwNTgtNjJiNzc2N2E2MDczIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+};
+
+export function findVisualPbiReportUrl(slug: string): string | undefined {
+  return findVisualGuideContent(slug)?.pbiReportUrl ?? visualGuidePbiReportUrls[slug];
 }

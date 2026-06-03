@@ -2,13 +2,18 @@ import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowLeft16Regular, ArrowRight16Regular, Open16Regular } from "@fluentui/react-icons";
 import { Link, useParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
+import { VisualPbiEmbed } from "../components/insights/VisualPbiEmbed";
 import {
   findVisualGuideItem,
   visualGuideItems,
   visualGuideSlug,
   type VisualGuideItem,
 } from "../data/insights";
-import { appSourceUrl, findVisualGuideContent } from "../data/visualGuideContent";
+import {
+  appSourceUrl,
+  findVisualGuideContent,
+  findVisualPbiReportUrl,
+} from "../data/visualGuideContent";
 
 const useStyles = makeStyles({
   hero: {
@@ -260,6 +265,7 @@ export function InsightsCustomVisualDetail() {
 
   const appSourceHref = content ? appSourceUrl(content.appSourceProductId) : item.href;
   const heroDescription = content?.tagline ?? item.description;
+  const pbiReportUrl = findVisualPbiReportUrl(slug);
   const supportSubject = encodeURIComponent(`Support - ${item.name}`);
   const prioritySubject = encodeURIComponent(`Priority request - ${item.name}`);
 
@@ -390,6 +396,13 @@ export function InsightsCustomVisualDetail() {
                       </li>
                     ))}
                   </ul>
+                </div>
+              )}
+
+              {pbiReportUrl && (
+                <div style={{ marginTop: 36 }}>
+                  <h2 className={s.sectionTitle}>Feature walkthrough</h2>
+                  <VisualPbiEmbed productName={item.name} reportUrl={pbiReportUrl} />
                 </div>
               )}
 
