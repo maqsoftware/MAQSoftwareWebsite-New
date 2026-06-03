@@ -7,6 +7,8 @@ import {
   MenuItem,
   MenuPopover,
 } from "@fluentui/react-components";
+import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   ChevronDown20Regular,
 } from "@fluentui/react-icons";
@@ -27,6 +29,17 @@ const useStyles = makeStyles({
     height: "64px",
     gap: "32px",
     color: "var(--maq-ink)",
+  },
+  navToggle: {
+    display: "none",
+    background: "transparent",
+    border: "none",
+    cursor: "pointer",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 0,
+    width: "44px",
+    height: "44px",
   },
   brand: {
     display: "flex",
@@ -62,7 +75,60 @@ const useStyles = makeStyles({
       color: "var(--maq-red)",
     },
   },
+  overlay: {
+    display: "none",
+  },
+  overlayOpen: {
+    display: "block",
+    position: "fixed",
+    inset: 0,
+    backgroundColor: "#2b2b2b",
+    color: "#fff",
+    zIndex: 1200,
+    paddingTop: "24px",
+    paddingLeft: "20px",
+    paddingRight: "20px",
+    overflowY: "auto",
+  },
+  mobileBrand: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    marginBottom: "20px",
+  },
+  closeBtn: {
+    position: "absolute",
+    right: "16px",
+    top: "16px",
+    width: "44px",
+    height: "44px",
+    background: "transparent",
+    border: "none",
+    color: "#e33",
+    fontSize: "20px",
+    cursor: "pointer",
+  },
+  mobileNavList: {
+    display: "block",
+    listStyle: "none",
+    padding: 0,
+    margin: 0,
+  },
+  mobileSectionTitle: {
+    marginTop: "8px",
+    fontWeight: 600,
+    marginBottom: "12px",
+  },
+  mobileNavLink: {
+    display: "block",
+    padding: "10px 0",
+    color: "#fff",
+    textDecoration: "none",
+    fontSize: "16px",
+  },
 });
+
+
 
 interface NavItem {
   label: string;
@@ -156,14 +222,81 @@ function MegaMenu({
 
 export function Header() {
   const s = useStyles();
+  const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
+  const firstFocusable = useRef<HTMLElement | null>(null);
+  const scrollPos = useRef<number>(0);
+
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === "Escape") setOpen(false);
+    }
+    if (open) {
+      document.addEventListener("keydown", onKey);
+    } else {
+      document.removeEventListener("keydown", onKey);
+    }
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  useEffect(() => {
+    // scroll lock when open
+    if (open) {
+      scrollPos.current = window.scrollY;
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollPos.current}px`;
+    } else {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      window.scrollTo(0, scrollPos.current || 0);
+      // restore focus to toggle
+      toggleRef.current?.focus();
+    }
+  }, [open]);
+
+  function openMenu() {
+    setOpen(true);
+    // focus will be set after render
+    setTimeout(() => {
+      firstFocusable.current?.focus();
+    }, 0);
+  }
+
+  function closeMenu() {
+    setOpen(false);
+  }
+
+  function navigateTo(href?: string) {
+    if (!href) return;
+    if (href.startsWith("http")) {
+      window.open(href, "_blank", "noopener,noreferrer");
+      return;
+    }
+    window.location.href = href;
+    closeMenu();
+  }
+
   return (
-    <nav className={s.nav}>
-      <Link to="/" className={s.brand}>
+    <nav className={`${s.nav} site-header`}>
+      <Link to="/" className={s.brand} aria-label="MAQ Software homepage">
         <span className={s.brandRed}>MAQ</span>
         <span className={s.brandGray}>Software</span>
       </Link>
 
-      <div className={s.links}>
+      <button
+        ref={(el) => (toggleRef.current = el)}
+        className={`${s.navToggle} nav-toggle`}
+        aria-controls="mobile-nav"
+        aria-expanded={open}
+        aria-label={open ? "Close navigation" : "Open navigation"}
+        onClick={() => (open ? closeMenu() : openMenu())}
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+          <path d="M3 6h18M3 12h18M3 18h18" stroke="#333" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      </button>
+
+      <div className={`${s.links} site-nav-links`}>
         <MegaMenu label="Services" items={services} btnClass={s.navBtn} />
         <MegaMenu label="Products" items={productNav} btnClass={s.navBtn} />
         <MegaMenu label="Industries" items={industries} btnClass={s.navBtn} />
@@ -172,7 +305,7 @@ export function Header() {
         <MegaMenu label="About" items={about} btnClass={s.navBtn} />
       </div>
 
-      <div className={s.right}>
+      <div className={`${s.right} header-right`}>
         <Button
           appearance="primary"
           onClick={() =>
@@ -184,6 +317,95 @@ export function Header() {
           Request a demo
         </Button>
       </div>
+
+      {/* Mobile overlay rendered as a portal to avoid clipping by ancestor styles */}
+      {typeof document !== "undefined" && createPortal(
+        <div
+          id="mobile-nav"
+          role="dialog"
+          aria-modal={open}
+          aria-hidden={!open}
+          className={`${open ? s.overlayOpen : s.overlay} mobile-overlay ${open ? 'open' : ''}`}
+        >
+          {open && (
+            <>
+              <button className={s.closeBtn} aria-label="Close navigation" onClick={closeMenu}>
+                ×
+              </button>
+              <div className={s.mobileBrand}>
+                <Link to="/" onClick={closeMenu} className={s.brand}>
+                  <span className={s.brandRed}>MAQ</span>
+                  <span className={s.brandGray}>Software</span>
+                </Link>
+              </div>
+
+              <div>
+                <div className={s.mobileSectionTitle}>Services</div>
+                <ul className={s.mobileNavList}>
+                  {services.map((i, idx) => (
+                    <li key={i.label}>
+                      <a
+                        href={i.href}
+                        className={s.mobileNavLink}
+                        ref={idx === 0 ? ((el) => (firstFocusable.current = el as HTMLElement)) : undefined}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigateTo(i.href);
+                        }}
+                      >
+                        {i.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className={s.mobileSectionTitle}>Our Products</div>
+                <ul className={s.mobileNavList}>
+                  {productNav.map((i) => (
+                    <li key={i.label}>
+                      <a
+                        href={i.href}
+                        className={s.mobileNavLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigateTo(i.href);
+                        }}
+                      >
+                        {i.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className={s.mobileSectionTitle}>More</div>
+                <ul className={s.mobileNavList}>
+                  {partnerships.concat(insights, industries, about).map((i) => (
+                    <li key={i.label}>
+                      <a
+                        href={i.href}
+                        className={s.mobileNavLink}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigateTo(i.href);
+                        }}
+                      >
+                        {i.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+
+                <div style={{ marginTop: 24, marginBottom: 40 }}>
+                  <Button appearance="primary" onClick={() => { closeMenu(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                    Request a demo
+                  </Button>
+                </div>
+              </div>
+            </>
+          )}
+        </div>,
+        document.body
+      )}
     </nav>
   );
 }
