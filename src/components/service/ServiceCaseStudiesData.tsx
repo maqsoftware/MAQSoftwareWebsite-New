@@ -150,25 +150,22 @@ export function ServiceCaseStudiesData({
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
-          <div className={s.buttonGroup}>
-            <Button
-              appearance="outline"
-              as="a"
-              href={`/insights/case-studies?filter=${encodeURIComponent(serviceFilter)}#insights-content`}
-              icon={<ArrowRight16Regular />}
-              iconPosition="after"
-            >
-              {allCasesLabel}
-            </Button>
-          </div>
+          <a
+          className={s.footerLink}
+          href="/insights/case-studies?filter=Data%20%26%20analytics#insights-content"
+          target="_blank"
+          rel="noreferrer"
+        >
+          See all case studies <ArrowRight16Regular />
+        </a>
         ) : (
           <a
             className={s.footerLink}
-            href="/insights/case-studies?filter=Data & analytics"
+            href="/insights/case-studies?filter=Data%20%26%20analytics#insights-content"
             target="_blank"
             rel="noreferrer"
           >
-            See all data &amp; analytics case studies <ArrowRight16Regular />
+            See all case studies <ArrowRight16Regular />
           </a>
         )}
       </div>

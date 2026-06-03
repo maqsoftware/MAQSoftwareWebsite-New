@@ -232,7 +232,8 @@ export function ServiceCloudCapabilities() {
             ))}
           </div>
         </div>
-        <a className={s.footerLink} href="/insights/case-studies?filter=Cloud optimization#insights-content">
+        <a className={s.footerLink} href="/insights/case-studies?filter=Cloud optimization#insights-content" target="_blank"
+          rel="noreferrer">
           See cloud case studies <ArrowRight16Regular />
         </a>
       </div>

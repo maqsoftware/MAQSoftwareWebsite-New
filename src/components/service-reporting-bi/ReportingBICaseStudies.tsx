@@ -153,20 +153,19 @@ export function ReportingBICaseStudies({
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
           <div className={s.buttonGroup}>
-            <Button
-              appearance="outline"
-              as="a"
-              href={`/insights/case-studies?filter=${encodeURIComponent(serviceFilter)}#insights-content`}
-              icon={<ArrowRight16Regular />}
-              iconPosition="after"
+            <a
+              className={s.footerLink}
+              href="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
+              target="_blank"
+              rel="noreferrer"
             >
-              {allCasesLabel}
-            </Button>
+              {allCasesLabel} <ArrowRight16Regular />
+            </a>
           </div>
         ) : (
           <a
             className={s.footerLink}
-            href="/insights/case-studies?filter=Reporting & visualization"
+            href="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
             target="_blank"
             rel="noreferrer"
           >
