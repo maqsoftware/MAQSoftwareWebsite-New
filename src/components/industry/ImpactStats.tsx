@@ -35,6 +35,8 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     padding: "22px",
     background: "#fff",
+    textDecoration: "none",
+    color: "inherit",
     transition: "all 0.2s",
     ":hover": {
       border: `1px solid var(--maq-red)`,
@@ -116,22 +118,17 @@ export function ImpactStats({ eyebrow = "Proven outcomes", title, sub, stats }: 
         </div>
         <div className={s.grid}>
           {stats.map((st) => (
-            <div key={st.label} className={s.card}>
+            <a key={st.label} className={s.card} href={st.sourceHref} target="_blank" rel="noreferrer">
               {st.chip && <span className={s.chip}>{st.chip}</span>}
               {st.metric && st.metric !== "____" && (
                 <div className={s.metric}>{st.metric}</div>
               )}
               {st.title && <div className={s.cardTitle}>{st.title}</div>}
               <div className={s.label}>{st.label}</div>
-              <a
-                className={s.link}
-                href={st.sourceHref}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <span className={s.link}>
                 {st.sourceLabel} <ArrowRight20Regular fontSize={14} />
-              </a>
-            </div>
+              </span>
+            </a>
           ))}
         </div>
       </div>
