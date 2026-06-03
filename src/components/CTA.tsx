@@ -6,17 +6,13 @@ import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles({
-  section: { padding: "32px 32px", backgroundColor: "#fff" },
+  section: { padding: "32px 32px", backgroundColor: "var(--maq-surface-cream)" },
   inner: {
     maxWidth: "1100px",
     margin: "0 auto",
-    background: "var(--maq-surface-cream)",
-    border: "1px solid var(--maq-red-pale)",
-    borderRadius: "20px",
     padding: "32px 32px",
     color: "var(--maq-ink)",
     textAlign: "center",
-    boxShadow: "0 10px 30px rgba(186, 20, 26, 0.06)",
   },
   eyebrow: {
     fontSize: "12px",

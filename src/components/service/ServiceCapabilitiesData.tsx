@@ -230,7 +230,7 @@ export function ServiceCapabilitiesData() {
           target="_blank"
           rel="noreferrer"
         >
-          Data &amp; analytics case studies <ArrowRight16Regular />
+          See data &amp; analytics case studies <ArrowRight16Regular />
         </a>
       </div>
     </section>

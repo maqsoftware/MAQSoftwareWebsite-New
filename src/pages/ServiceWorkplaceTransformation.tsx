@@ -709,17 +709,15 @@ export function ServiceWorkplaceTransformation() {
                             ))}
                         </div>
                     </div>
-                    <div className={s.buttonGroup}>
-                        <Button
-                            appearance="primary"
-                            as="a"
-                            href="/insights/case-studies"
-                            icon={<ArrowRight16Regular />}
-                            iconPosition="after"
-                        >
-                            See all case studies
-                        </Button>
-                    </div>
+                    <a
+                        className={s.footerLink}
+                        href="/insights/case-studies"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        See Workplace Transformation case studies
+                        <ArrowRight16Regular />
+                    </a>
                 </div>
             </section>
 
@@ -773,17 +771,15 @@ export function ServiceWorkplaceTransformation() {
                             </a>
                         ))}
                     </div>
-                    <div className={s.buttonGroup}>
-                        <Button
-                            appearance="primary"
-                            as="a"
-                            href="/insights/case-studies"
-                            icon={<ArrowRight16Regular />}
-                            iconPosition="after"
-                        >
-                            See all case studies
-                        </Button>
-                    </div>
+                    <a
+                        className={s.footerLink}
+                        href="/insights/case-studies"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        See all case studies
+                        <ArrowRight16Regular />
+                    </a>
                 </div>
             </section>
 
