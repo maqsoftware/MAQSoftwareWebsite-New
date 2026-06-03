@@ -1052,6 +1052,17 @@ export interface VisualGuideItem {
   imageUrl: string;
 }
 
+export function visualGuideSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+export function findVisualGuideItem(slug: string): VisualGuideItem | undefined {
+  return visualGuideItems.find((item) => visualGuideSlug(item.name) === slug);
+}
+
 export const visualGuideFilters = [
   "All",
   "Certified",
@@ -1072,7 +1083,7 @@ export const visualGuideFilters = [
 export const visualGuideItems: VisualGuideItem[] = [
   {
     "name": "Advanced Linear Gauge",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/AdvancedLinearGauge",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Flow",
     "description": "Track progress visually with a detailed linear gauge for easy goal monitoring.",
     "badges": [
@@ -1082,7 +1093,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Bowtie Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/BowtieChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Flow",
     "description": "Compare data flow between processes using a clear and simple bowtie visualization.",
     "badges": [
@@ -1093,7 +1104,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Box and Whisker Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/BoxAndWhiskers",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Distribution",
     "description": "See data spread at a glance with a chart showing mean, median, and quartiles.",
     "badges": [
@@ -1104,7 +1115,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Brick Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/BrickChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Part-to-Whole",
     "description": "Display data percentages creatively using colorful shaded bricks.",
     "badges": [
@@ -1115,7 +1126,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Calendar",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/Calendar",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Utility",
     "description": "View key events on your reports with an intuitive calendar layout.",
     "badges": [
@@ -1126,7 +1137,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Circular Gauge",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/CircularGaugeChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Comparison",
     "description": "Gauge progress toward goals with a pie or donut chart.",
     "badges": [
@@ -1136,7 +1147,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Cylindrical Gauge",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/CylindricalGaugeChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Comparison",
     "description": "Compare metrics with an easy-to-read 3D cylinder visual.",
     "badges": [
@@ -1146,7 +1157,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Data Insights",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/DataInsights",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Comparison",
     "description": "Gain insights with a variety of visual formats for better understanding.",
     "badges": [
@@ -1156,7 +1167,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Dot Plot",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/DotPlotChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Comparison",
     "description": "Spot gaps and clusters easily with a simple dot plot.",
     "badges": [
@@ -1167,7 +1178,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Dynamic Tooltip",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/DynamicTooltipChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Utility",
     "description": "Improve report readability with informative dynamic tooltips.",
     "badges": [
@@ -1177,7 +1188,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Funnel with Source",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/FunnelWithSourceChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Flow",
     "description": "Track data flow end-to-end, highlighting each data source.",
     "badges": [
@@ -1187,7 +1198,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Gantt Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/GanttChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Change Over Time",
     "description": "Monitor project milestones with a unique grid feature.",
     "badges": [
@@ -1198,7 +1209,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Grid",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/GridChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Ranking",
     "description": "Navigate large datasets easily with a paginated grid format.",
     "badges": [
@@ -1208,7 +1219,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Hierarchy Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/HierarchyChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Distribution",
     "description": "Visually depict the structure and relationships of authorities in an organization.",
     "badges": [
@@ -1218,7 +1229,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Histogram With Points",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/HistogramChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Distribution",
     "description": "Compare distribution density and actual values effectively.",
     "badges": [
@@ -1228,7 +1239,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Horizontal Funnel",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/HorizontalFunnelChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Flow",
     "description": "Break down process stages horizontally for clearer insights.",
     "badges": [
@@ -1238,7 +1249,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Hourglass Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/HourglassChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Comparison",
     "description": "Compare category values before and after an event simply.",
     "badges": [
@@ -1249,7 +1260,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Image Carousel",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/ImageCarousel",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Utility",
     "description": "Showcase images seamlessly with a sliding carousel visual.",
     "badges": [
@@ -1259,7 +1270,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Journey Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/JourneyChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Correlation",
     "description": "Transform statistical data into a network of categories and relationships.",
     "badges": [
@@ -1270,7 +1281,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "KPI Column",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/KPIColumnChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": ["Comparison", "KPI"],
     "description": "Measure progress with color-coded columns and an integrated line chart.",
     "badges": [
@@ -1280,7 +1291,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "KPI Grid",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/KPIGridChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": ["Ranking", "KPI"],
     "description": "Display hierarchical data, separate categories, and illustrate trends.",
     "badges": [
@@ -1290,7 +1301,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "KPI Ticker",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/KPITickerChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": ["Single Metric", "KPI"],
     "description": "Rotate through multiple KPIs in an auto-scrolling visual.",
     "badges": [
@@ -1301,7 +1312,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Linear Gauge",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/LinearGaugeChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Comparison",
     "description": "Compare progress against goals with an easy-to-read linear gauge.",
     "badges": [
@@ -1311,7 +1322,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Organization Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/OrganizationChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Flow",
     "description": "Display organizational hierarchy or functional structure.",
     "badges": [
@@ -1321,7 +1332,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Quadrant Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/QuadrantChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Correlation",
     "description": "Represent data distribution and common traits in separate quadrants.",
     "badges": [
@@ -1331,7 +1342,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Radar Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/RadarChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Flow",
     "description": "Compare data across multiple variables in a two-dimensional chart.",
     "badges": [
@@ -1342,7 +1353,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Ratings",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/Ratings",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Ranking",
     "description": "Show performance or approval scores within your Power BI reports.",
     "badges": [
@@ -1353,7 +1364,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Ring Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/RingChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Part-to-Whole",
     "description": "Display relationships between values segmented in a ring.",
     "badges": [
@@ -1363,7 +1374,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Rotating Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/RotatingChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Single Metric",
     "description": "Showcase multiple KPIs with a rotating bar chart for dynamic insights.",
     "badges": [
@@ -1373,7 +1384,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Rotating Tile",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/RotatingTileChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Flow",
     "description": "Display multiple KPIs with an automatically flipping, customizable tile.",
     "badges": [
@@ -1383,7 +1394,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Sunburst",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/Sunburst",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Clustering",
     "description": "Break down hierarchical data with color-coded concentric rings.",
     "badges": [
@@ -1394,7 +1405,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Text Enhancer",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/TextEnhancer",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Utility",
     "description": "Customize text in Power BI reports with adjustable shadow, rotation, and more.",
     "badges": [
@@ -1404,7 +1415,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Text Wrapper",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/TextWrapperChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Utility",
     "description": "Represent complete data with enabled text wrapping on Power BI reports.",
     "badges": [
@@ -1414,7 +1425,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Thermometer",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/ThermometerChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Single Metric",
     "description": "Illustrate progress towards goals with a customizable thermometer graphic.",
     "badges": [
@@ -1424,7 +1435,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Trading Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/TradingChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Change Over Time",
     "description": "Simplify historical trading records with a color-coded chart.",
     "badges": [
@@ -1435,7 +1446,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Treemap Bar Chart",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/TreemapBarChart",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Comparison",
     "description": "Categorize hierarchical data with color-coded, proportional rectangles.",
     "badges": [
@@ -1445,7 +1456,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Venn Diagram",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/VennDiagram",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Correlation",
     "description": "Compare and contrast data across multiple sets with a clear Venn diagram.",
     "badges": [
@@ -1455,7 +1466,7 @@ export const visualGuideItems: VisualGuideItem[] = [
   },
   {
     "name": "Violin Plot",
-    "href": "https://maqsoftware.com/Marketplace-Offers/Power-BI-custom-visuals/ViolinPlot",
+    "href": "https://appsource.microsoft.com/en-us/marketplace/partner-dir/e4d98dd2-9199-42e5-ba8b-da3e763ede2e/overview?exp=ubp8",
     "category": "Clustering",
     "description": "Visualize data distribution across categories with a simple and effective plot.",
     "badges": [
