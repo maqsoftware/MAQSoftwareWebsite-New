@@ -32,6 +32,8 @@ import { PartnershipDatabricks } from "./pages/PartnershipDatabricks";
 import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
 import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
 import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
+import { InsightsCustomVisualDetail } from "./pages/InsightsCustomVisualDetail";
+import { InsightsVisualChooser } from "./pages/InsightsVisualChooser";
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { InsightsDatabricksBestPractices } from "./pages/InsightsDatabricksBestPractices";
 import { InsightsAzureDatabricksBestPractices } from "./pages/InsightsAzureDatabricksBestPractices";
@@ -96,6 +98,11 @@ export function App() {
           path="/insights/power-bi-custom-visual-guide"
           element={<InsightsPowerBICustomVisualGuide />}
         />
+        <Route
+          path="/insights/power-bi-custom-visual-guide/:slug"
+          element={<InsightsCustomVisualDetail />}
+        />
+        <Route path="/insights/visual-chooser" element={<InsightsVisualChooser />} />
         <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
         <Route
           path="/insights/databricks-best-practices"

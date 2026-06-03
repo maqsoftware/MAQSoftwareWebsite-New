@@ -1,11 +1,12 @@
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { CTA } from "../components/CTA";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
-import { visualGuideFilters, visualGuideItems } from "../data/insights";
+import { visualGuideFilters, visualGuideItems, visualGuideSlug } from "../data/insights";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -98,10 +99,19 @@ export function InsightsPowerBICustomVisualGuide() {
       <section className={s.section} id="insights-content">
         <div className={s.inner}>
           <h2 className={s.title}>Popular visuals</h2>
-          <InsightsFilterBar items={visualGuideFilters} active={activeFilter} onChange={setActiveFilter} />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+            <InsightsFilterBar items={visualGuideFilters} active={activeFilter} onChange={setActiveFilter} />
+            <Button appearance="outline" size="small" as="a" href="/insights/visual-chooser">
+              Open visual chooser guide
+            </Button>
+          </div>
           <div className={s.grid}>
             {filtered.map((item) => (
-              <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noreferrer">
+              <Link
+                key={item.name}
+                className={s.card}
+                to={`/insights/power-bi-custom-visual-guide/${visualGuideSlug(item.name)}`}
+              >
                 <div className={s.imageWrap}>
                   <img className={s.image} src={item.imageUrl} alt={item.name} loading="lazy" />
                 </div>
@@ -110,11 +120,11 @@ export function InsightsPowerBICustomVisualGuide() {
                     <span key={badge} className={s.pill}>{badge}</span>
                   ))}
                 </div>
-                <span className={s.category}>{item.category}</span>
+                <span className={s.category}>{Array.isArray(item.category) ? item.category.join(", ") : item.category}</span>
                 <h3 className={s.cardTitle}>{item.name}</h3>
                 <p className={s.teaser}>{item.description}</p>
                 <span className={s.read}>View visual <ArrowRight16Regular /></span>
-              </a>
+              </Link>
             ))}
           </div>
           <div className={s.support}>
