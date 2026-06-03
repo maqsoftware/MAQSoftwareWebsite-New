@@ -886,6 +886,63 @@ export const visualGuideContent: VisualGuideContent[] = [
     appSourceProductId: "maqsoftware1587623472284.violinplotbymaqsoftware",
     pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiZmU0MDZjMGYtNDUyNC00OTQ0LTk3NDMtYTIwNGIyOGM5YjM0IiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
   },
+  {
+    slug: "calendar",
+    productName: "Calendar by MAQ Software",
+    tagline: "View key events on your Power BI report in a calendar view | Power BI certified",
+    description:
+      "Calendar by MAQ Software is the most effective way to track events in Power BI. Schedule events for specific days, then use them as a reference while reviewing your report.",
+    benefitsLabel: "Key benefits",
+    benefits: [
+      "Ability to group events based on category",
+      "Multiple views available—Month, Week, Day, and List",
+      "Ability to navigate to event details with a click",
+      "Ability to set workdays and hours",
+    ],
+    useCasesLabel: "Use cases",
+    useCases: [
+      "Project managers: Monitor project schedules and key deadlines",
+      "Sales and marketing: Keep track of key dates in your sales and marketing campaigns",
+      "Human resources: Manage your organization's events, vacation schedule, and year-end reviews",
+    ],
+    whatsNew: {
+      version: "4.0.4.1",
+      items: [
+        "Resolve the event color issue",
+        "Resolve the localization error",
+        "Resolve the drill through event",
+        "Resolve the initial message issue during visual rendering",
+        "Resolve the duplicate data color issue",
+        "Resolve the Today persistence issue",
+        "Add dynamic cell color configuration option",
+        "Add weekend toggle configuration to show/hide weekends",
+      ],
+    },
+    appSourceProductId: "WA104381844",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiYzc2NjI4M2QtYmRhMC00YTc1LWIwOTktNDA2YjBiYTNmNjkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+  },
+  {
+    slug: "circular-gauge",
+    productName: "Circular Gauge by MAQ Software",
+    tagline: "Illustrate your progress toward goals in a pie or donut chart | Power BI certified",
+    description:
+      "Showcase task progression with Circular Gauge by MAQ Software. This visual enables you to display progress as an actual value or as a percentage of the target value. You can also pick between displaying the information in a pie or donut chart format and setting a threshold value.",
+    benefitsLabel: "Key benefits",
+    benefits: [
+      "One color illustrates actual progress while another displays a set target",
+      "Ability to display percentage of progress against a set target",
+      "Customizable text size and ring size",
+    ],
+    useCasesLabel: "Use cases",
+    useCases: [
+      "Sales: Compare your actual yearly sales to a pre-set target",
+      "Marketing: Display key performance metrics such as target conversions and impressions in relation to the actual values",
+      "Human resources: Track the success of internal campaigns by comparing the total number of employees to the amount that have been onboarded",
+    ],
+    whatsNew: { version: "4.0.0", items: ["Enabled the context menu"] },
+    appSourceProductId: "WA104380837",
+    pbiReportUrl: "https://app.powerbi.com/view?r=eyJrIjoiMjQ2YzhkNTktYTgzNS00Yzc3LTgwNTgtNjJiNzc2N2E2MDczIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
+  },
 ];
 
 export function findVisualGuideContent(slug: string): VisualGuideContent | undefined {
@@ -897,18 +954,12 @@ export function appSourceUrl(productId: string): string {
 }
 
 /**
- * Power BI publish-to-web report URLs for every visual, including those
- * without authored long-form content (Calendar, Circular Gauge). These
- * mirror the embedded slideshow shown on each maqsoftware.com Marketplace
- * page and are sourced from /resources/powerbi visuals/Visuals.json.
+ * Resolve the Power BI publish-to-web report URL for a visual slug. Looks up
+ * the authored content first; future visuals without long-form copy can be
+ * added to the optional fallback map below.
  */
-export const visualGuidePbiReportUrls: Record<string, string> = {
-  calendar:
-    "https://app.powerbi.com/view?r=eyJrIjoiYzc2NjI4M2QtYmRhMC00YTc1LWIwOTktNDA2YjBiYTNmNjkzIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
-  "circular-gauge":
-    "https://app.powerbi.com/view?r=eyJrIjoiMjQ2YzhkNTktYTgzNS00Yzc3LTgwNTgtNjJiNzc2N2E2MDczIiwidCI6ImU0ZDk4ZGQyLTkxOTktNDJlNS1iYThiLWRhM2U3NjNlZGUyZSIsImMiOjZ9",
-};
+const visualGuidePbiReportUrlFallback: Record<string, string> = {};
 
 export function findVisualPbiReportUrl(slug: string): string | undefined {
-  return findVisualGuideContent(slug)?.pbiReportUrl ?? visualGuidePbiReportUrls[slug];
+  return findVisualGuideContent(slug)?.pbiReportUrl ?? visualGuidePbiReportUrlFallback[slug];
 }
