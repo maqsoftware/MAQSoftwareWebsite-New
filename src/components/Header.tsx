@@ -114,6 +114,15 @@ const useStyles = makeStyles({
     padding: 0,
     margin: 0,
   },
+  mobileSubList: {
+    paddingLeft: "14px",
+  },
+  mobileNavItem: {
+    marginBottom: "10px",
+  },
+  mobileSection: {
+    marginBottom: "18px",
+  },
   mobileSectionTitle: {
     marginTop: "8px",
     fontWeight: 600,
@@ -125,6 +134,7 @@ const useStyles = makeStyles({
     color: "#fff",
     textDecoration: "none",
     fontSize: "16px",
+  },
   navBtnActive: {
     backgroundColor: "var(--maq-red-pale)",
     color: "var(--maq-red)",
@@ -132,6 +142,9 @@ const useStyles = makeStyles({
   menuItemActive: {
     backgroundColor: "var(--maq-red-pale)",
     color: "var(--maq-red)",
+  },
+  mobileRequestDemoBtn: {
+    fontWeight: 700,
   },
 });
 
@@ -370,10 +383,12 @@ export function Header() {
               </div>
 
               <div>
-                <div className={s.mobileSectionTitle}>Services</div>
-                <ul className={s.mobileNavList}>
-                  {services.map((i, idx) => (
-                    <li key={i.label}>
+                {/* Services */}
+                <div className={s.mobileSection}>
+                  <div className={s.mobileSectionTitle}>Services</div>
+                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
+                    {services.map((i, idx) => (
+                      <li key={i.label} className={s.mobileNavItem}>
                       <a
                         href={i.href}
                         className={s.mobileNavLink}
@@ -385,48 +400,118 @@ export function Header() {
                       >
                         {i.label}
                       </a>
-                    </li>
-                  ))}
-                </ul>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                <div className={s.mobileSectionTitle}>Our Products</div>
-                <ul className={s.mobileNavList}>
-                  {productNav.map((i) => (
-                    <li key={i.label}>
-                      <a
-                        href={i.href}
-                        className={s.mobileNavLink}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigateTo(i.href);
-                        }}
-                      >
-                        {i.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                {/* Products */}
+                <div className={s.mobileSection}>
+                  <div className={s.mobileSectionTitle}>Products</div>
+                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
+                    {productNav.map((i) => (
+                      <li key={i.label} className={s.mobileNavItem}>
+                        <a
+                          href={i.href}
+                          className={s.mobileNavLink}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigateTo(i.href);
+                          }}
+                        >
+                          {i.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                <div className={s.mobileSectionTitle}>More</div>
-                <ul className={s.mobileNavList}>
-                  {partnerships.concat(insights, industries, about).map((i) => (
-                    <li key={i.label}>
-                      <a
-                        href={i.href}
-                        className={s.mobileNavLink}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigateTo(i.href);
-                        }}
-                      >
-                        {i.label}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                {/* Industries */}
+                <div className={s.mobileSection}>
+                  <div className={s.mobileSectionTitle}>Industries</div>
+                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
+                    {industries.map((i) => (
+                      <li key={i.label} className={s.mobileNavItem}>
+                        <a
+                          href={i.href}
+                          className={s.mobileNavLink}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigateTo(i.href);
+                          }}
+                        >
+                          {i.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Partnerships */}
+                <div className={s.mobileSection}>
+                  <div className={s.mobileSectionTitle}>Partnerships</div>
+                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
+                    {partnerships.map((i) => (
+                      <li key={i.label} className={s.mobileNavItem}>
+                        <a
+                          href={i.href}
+                          className={s.mobileNavLink}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigateTo(i.href);
+                          }}
+                        >
+                          {i.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Insights */}
+                <div className={s.mobileSection}>
+                  <div className={s.mobileSectionTitle}>Insights</div>
+                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
+                    {insights.map((i) => (
+                      <li key={i.label} className={s.mobileNavItem}>
+                        <a
+                          href={i.href}
+                          className={s.mobileNavLink}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigateTo(i.href);
+                          }}
+                        >
+                          {i.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* About */}
+                <div className={s.mobileSection}>
+                  <div className={s.mobileSectionTitle}>About</div>
+                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
+                    {about.map((i) => (
+                      <li key={i.label} className={s.mobileNavItem}>
+                        <a
+                          href={i.href}
+                          className={s.mobileNavLink}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigateTo(i.href);
+                          }}
+                        >
+                          {i.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
                 <div style={{ marginTop: 24, marginBottom: 40 }}>
-                  <Button appearance="primary" onClick={() => { closeMenu(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => { closeMenu(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
                     Request a demo
                   </Button>
                 </div>
