@@ -1,10 +1,9 @@
 import {
   makeStyles,
   tokens,
-  Button,
   Badge,
 } from "@fluentui/react-components";
-import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -94,6 +93,14 @@ const useStyles = makeStyles({
     marginBottom: "20px",
   },
   badgeRow: { display: "flex", gap: "6px", marginBottom: "16px", flexWrap: "wrap" },
+  more: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "4px",
+    fontSize: "13px",
+    color: "var(--maq-red)",
+    fontWeight: 600,
+  },
 });
 
 interface Product {
@@ -190,19 +197,9 @@ export function Products() {
                   </Badge>
                 ))}
               </div>
-              <Button
-                appearance="subtle"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
-                size="small"
-                style={{ alignSelf: "flex-start", paddingLeft: 0 }}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  navigate(`/products/${p.slug}`);
-                }}
-              >
-                Learn more
-              </Button>
+              <span className={s.more}>
+                Learn more <ArrowRight16Regular />
+              </span>
             </article>
           ))}
         </div>
