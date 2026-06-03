@@ -378,7 +378,7 @@ export function Header() {
               <div className={s.mobileBrand}>
                 <Link to="/" onClick={closeMenu} className={s.brand}>
                   <span className={s.brandRed}>MAQ</span>
-                  <span className={s.brandGray}>Software</span>
+                  <span className={s.brandGray} style={{ color: "#8f8f8f" }}>Software</span>
                 </Link>
               </div>
 
