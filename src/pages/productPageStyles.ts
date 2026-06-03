@@ -49,7 +49,7 @@ export const useProductPageStyles = makeStyles({
   featDesc: { fontSize: "13.5px", color: "var(--maq-gray-700)", lineHeight: 1.6, margin: 0 },
 
   caseGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "1fr" } },
-  caseCard: { display: "flex", flexDirection: "column", border: `1px dashed ${tokens.colorNeutralStroke2}`, borderRadius: "12px", padding: "22px", background: "#fff", minHeight: "160px" },
+  caseCard: { display: "flex", flexDirection: "column", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "12px", padding: "22px", background: "#fff", minHeight: "160px", transition: "all 0.2s", ":hover": { border: `1px solid var(--maq-red)`, boxShadow: "0 6px 16px rgba(0,0,0,0.06)", transform: "translateY(-2px)" } },
   caseTag: { alignSelf: "flex-start", marginBottom: "12px" },
   casePlaceholderTitle: { fontSize: "14px", fontWeight: 700, color: "var(--maq-gray-600)", marginBottom: "8px" },
   casePlaceholderText: { fontSize: "13px", color: "var(--maq-gray-600)", fontStyle: "italic" },
