@@ -1,0 +1,265 @@
+import { makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight16Regular, Mail24Regular } from "@fluentui/react-icons";
+import { Button } from "@fluentui/react-components";
+import { Link } from "react-router-dom";
+
+const useStyles = makeStyles({
+  hero: {
+    backgroundColor: "var(--maq-off-white)",
+    padding: "48px 32px 32px",
+  },
+  heroInner: { maxWidth: "960px", margin: "0 auto" },
+  crumbs: {
+    fontSize: "12px",
+    color: "var(--maq-gray-600)",
+    textTransform: "uppercase",
+    letterSpacing: "0.06em",
+    marginBottom: "12px",
+    "& a": {
+      color: "var(--maq-gray-600)",
+      textDecoration: "none",
+      ":hover": { color: "var(--maq-red)" },
+    },
+  },
+  eyebrow: {
+    display: "inline-block",
+    fontSize: "11px",
+    fontWeight: 700,
+    color: "var(--maq-red)",
+    background: "var(--maq-red-pale)",
+    padding: "3px 8px",
+    borderRadius: "4px",
+    textTransform: "uppercase",
+    letterSpacing: "0.06em",
+    marginBottom: "12px",
+  },
+  title: {
+    fontSize: "36px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    lineHeight: 1.2,
+    margin: "0 0 12px",
+    letterSpacing: "-0.01em",
+  },
+  intro: {
+    fontSize: "16px",
+    color: "var(--maq-gray-700)",
+    lineHeight: 1.6,
+    margin: 0,
+    maxWidth: "780px",
+  },
+  meta: {
+    marginTop: "16px",
+    fontSize: "12px",
+    color: "var(--maq-gray-600)",
+    textTransform: "uppercase",
+    letterSpacing: "0.06em",
+  },
+  body: { padding: "32px 32px 56px", backgroundColor: "#fff" },
+  bodyInner: { maxWidth: "960px", margin: "0 auto" },
+  section: {
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    borderRadius: "12px",
+    padding: "24px 28px",
+    background: "#fff",
+    marginBottom: "16px",
+  },
+  sectionTitle: {
+    fontSize: "20px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: "0 0 14px",
+    letterSpacing: "-0.005em",
+    paddingBottom: "8px",
+    borderBottom: `2px solid var(--maq-red-pale)`,
+  },
+  practice: { marginBottom: "16px", "&:last-child": { marginBottom: 0 } },
+  practiceTitle: {
+    fontSize: "15px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    marginBottom: "4px",
+  },
+  practiceBody: {
+    fontSize: "14px",
+    color: "var(--maq-gray-700)",
+    lineHeight: 1.6,
+    margin: 0,
+  },
+  refs: {
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    borderRadius: "12px",
+    padding: "20px 24px",
+    background: "var(--maq-off-white)",
+    marginTop: "20px",
+  },
+  refsTitle: {
+    fontSize: "14px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    textTransform: "uppercase",
+    letterSpacing: "0.06em",
+    margin: "0 0 10px",
+  },
+  refList: {
+    margin: 0,
+    paddingLeft: "18px",
+    "& li": { marginBottom: "6px", fontSize: "13.5px", color: "var(--maq-gray-700)" },
+    "& a": { color: "var(--maq-red)", textDecoration: "none" },
+    "& a:hover": { textDecoration: "underline" },
+  },
+  ctaBand: {
+    marginTop: "24px",
+    padding: "20px 24px",
+    background: "var(--maq-surface-cream)",
+    border: "1px solid var(--maq-red-pale)",
+    borderLeft: "4px solid var(--maq-red)",
+    borderRadius: "12px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "10px",
+    "@media (min-width: 720px)": {
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+  },
+  ctaText: {
+    fontSize: "14px",
+    color: "var(--maq-gray-700)",
+    margin: 0,
+    lineHeight: 1.5,
+  },
+  upNext: {
+    marginTop: "20px",
+    fontSize: "13.5px",
+    color: "var(--maq-gray-600)",
+    "& a": {
+      color: "var(--maq-red)",
+      fontWeight: 600,
+      textDecoration: "none",
+      display: "inline-flex",
+      alignItems: "center",
+      gap: "4px",
+    },
+  },
+});
+
+export interface GuidePractice {
+  title: string;
+  body: string;
+}
+
+export interface GuideSection {
+  title: string;
+  practices: GuidePractice[];
+}
+
+export interface GuideReference {
+  label: string;
+  href: string;
+  source?: string;
+}
+
+export interface GuideUpNext {
+  label: string;
+  to: string;
+}
+
+export interface GuideArticleProps {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  lastUpdated?: string;
+  sections: GuideSection[];
+  references?: GuideReference[];
+  upNext?: GuideUpNext;
+  ctaSubject: string;
+}
+
+export function GuideArticle({
+  eyebrow,
+  title,
+  intro,
+  lastUpdated,
+  sections,
+  references,
+  upNext,
+  ctaSubject,
+}: GuideArticleProps) {
+  const s = useStyles();
+  const mailto = `mailto:CustomerSuccess@MAQSoftware.com?subject=${encodeURIComponent(ctaSubject)}`;
+
+  return (
+    <>
+      <section className={s.hero}>
+        <div className={s.heroInner}>
+          <div className={s.crumbs}>
+            <Link to="/insights/best-practice-guides">Best practice guides</Link> /{" "}
+            <span>{eyebrow}</span>
+          </div>
+          <span className={s.eyebrow}>{eyebrow}</span>
+          <h1 className={s.title}>{title}</h1>
+          <p className={s.intro}>{intro}</p>
+          {lastUpdated ? <div className={s.meta}>Last updated: {lastUpdated}</div> : null}
+        </div>
+      </section>
+
+      <section className={s.body}>
+        <div className={s.bodyInner}>
+          {sections.map((sec) => (
+            <div key={sec.title} className={s.section}>
+              <h2 className={s.sectionTitle}>{sec.title}</h2>
+              {sec.practices.map((p) => (
+                <div key={p.title} className={s.practice}>
+                  <div className={s.practiceTitle}>{p.title}</div>
+                  <p className={s.practiceBody}>{p.body}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+
+          {references && references.length > 0 ? (
+            <div className={s.refs}>
+              <h3 className={s.refsTitle}>References</h3>
+              <ul className={s.refList}>
+                {references.map((r) => (
+                  <li key={r.href}>
+                    <a href={r.href} target="_blank" rel="noreferrer">
+                      {r.label}
+                    </a>
+                    {r.source ? ` — ${r.source}` : null}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          <div className={s.ctaBand}>
+            <p className={s.ctaText}>
+              Want a tailored review of your Databricks environment? MAQ Software's data
+              engineering team can help.
+            </p>
+            <Button
+              appearance="primary"
+              icon={<Mail24Regular />}
+              as="a"
+              href={mailto}
+            >
+              Talk to our team
+            </Button>
+          </div>
+
+          {upNext ? (
+            <div className={s.upNext}>
+              Up next:{" "}
+              <Link to={upNext.to}>
+                {upNext.label} <ArrowRight16Regular />
+              </Link>
+            </div>
+          ) : null}
+        </div>
+      </section>
+    </>
+  );
+}

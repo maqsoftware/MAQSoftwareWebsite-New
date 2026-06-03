@@ -2,9 +2,8 @@ import {
   makeStyles,
   tokens,
   Badge,
-  Link,
 } from "@fluentui/react-components";
-import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -81,8 +80,8 @@ const useStyles = makeStyles({
     alignItems: "center",
     gap: "4px",
     fontSize: "13px",
-    color: "var(--maq-blue)",
-    fontWeight: 500,
+    color: "var(--maq-red)",
+    fontWeight: 600,
   },
 });
 
@@ -109,7 +108,7 @@ const cases: Case[] = [
     teaser:
       "Bridging Snowflake and Microsoft Fabric to streamline data movement, governance, and cost — without rewriting existing pipelines or rebuilding semantic models.",
     href: "https://blog.maqsoftware.com/2025/03/optimizing-data-management-by.html",
-    color: "informative",
+    color: "brand",
   },
   {
     industry: "Fabric migration",
@@ -156,9 +155,9 @@ export function CaseStudies() {
               </Badge>
               <div className={s.title2}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
-              <Link className={s.more} appearance="subtle">
-                Read full story <ArrowRight20Regular fontSize={14} />
-              </Link>
+              <span className={s.more}>
+                Read full story <ArrowRight16Regular />
+              </span>
             </a>
           ))}
         </div>
