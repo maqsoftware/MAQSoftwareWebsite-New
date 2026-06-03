@@ -4,8 +4,14 @@ import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
 import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
-import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
+// import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
 import { CTA } from "../components/CTA";
+
+const SERVICE_CASE_STUDIES_CONFIG = {
+  serviceFilter: "Agentic AI & Machine Learning",
+  allCasesLabel: "See all case studies",
+  serviceSpecificLabel: "See agentic AI case studies",
+};
 
 export function ServiceAgenticAI() {
   return (
@@ -14,9 +20,9 @@ export function ServiceAgenticAI() {
       <TrustBanner />
       <ServiceCapabilities />
       <ServiceOutcomes />
-      <ServiceCaseStudies />
+      <ServiceCaseStudies {...SERVICE_CASE_STUDIES_CONFIG} />
       <ServiceInsights />
-      <ServiceTestimonials />
+      {/* <ServiceTestimonials /> */}
       <CTA />
     </>
   );

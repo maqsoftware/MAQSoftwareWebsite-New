@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     border: "1px solid var(--maq-border)",
     color: "var(--maq-ink)",
     background: "#fff",
+    transition: "all 0.2s ease-in-out",
     ":hover": {
       border: "1px solid var(--maq-red)",
       color: "var(--maq-red)",
@@ -17,9 +18,15 @@ const useStyles = makeStyles({
     },
   },
   active: {
-    border: "1px solid var(--maq-red)",
+    border: "2px solid var(--maq-red)",
     color: "var(--maq-red)",
     background: "var(--maq-red-pale)",
+    fontWeight: 600,
+    ":hover": {
+      border: "2px solid var(--maq-red)",
+      color: "var(--maq-red)",
+      background: "var(--maq-red-pale)",
+    },
   },
 });
 
@@ -37,7 +44,7 @@ export function InsightsFilterBar({ items, active, onChange }: InsightsFilterBar
         <Button
           key={item}
           appearance="subtle"
-          className={`${s.chip} ${active === item ? s.active : ""}`}
+          className={active === item ? s.active : s.chip}
           onClick={() => onChange(item)}
         >
           {item}

@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const benefits = [
   { title: "Large-scale migration", desc: "Enables large-scale migration of reports from Tableau to Power BI." },
@@ -29,9 +29,8 @@ const capabilities = [
 
 const resources = [
   { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse migration and Fabric consulting offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "Fabric migration outcomes", desc: "Real customer stories on Tableau-to-Power-BI and platform migration.", href: "https://maqsoftware.com/case-studies" },
+  { pill: "Case studies", title: "Fabric migration outcomes", desc: "Real customer stories on Tableau-to-Power-BI and platform migration.", href: "/insights/case-studies" },
   { pill: "Best practices", title: "Migration patterns and standards", desc: "MAQ Software's authoritative migration guidance.", href: "https://maqsoftware.com/community/best-practices" },
-  { pill: "Talk to us", title: "Get a tailored migration plan", desc: "Email customersuccess@maqsoftware.com to scope your estate.", href: "mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20MigrateFAST" },
 ];
 
 export function ProductMigrateFAST() {
@@ -141,7 +140,7 @@ export function ProductMigrateFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.sectionAlt}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

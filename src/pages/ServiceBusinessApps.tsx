@@ -233,6 +233,13 @@ const useStyles = makeStyles({
         textDecoration: "none",
         ":hover": { textDecoration: "underline" },
     },
+    buttonGroup: {
+        marginTop: "20px",
+        display: "flex",
+        gap: "12px",
+        flexWrap: "wrap",
+        "@media (max-width: 640px)": { flexDirection: "column" },
+    },
 
     // Outcomes
     outcomesGrid: {
@@ -680,14 +687,17 @@ export function ServiceBusinessApps() {
                             ))}
                         </div>
                     </div>
-                    <a
-                        className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies.html?filter=application-modernization"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        See business apps &amp; process automation case studies <ArrowRight16Regular />
-                    </a>
+                    <div className={s.buttonGroup}>
+                        <Button
+                            appearance="outline"
+                            as="a"
+                            href="/insights/case-studies?filter=Application%20modernization#insights-content"
+                            icon={<ArrowRight16Regular />}
+                            iconPosition="after"
+                        >
+                            See all case studies
+                        </Button>
+                    </div>
                 </div>
             </section>
 
@@ -739,14 +749,17 @@ export function ServiceBusinessApps() {
                             </a>
                         ))}
                     </div>
-                    <a
-                        className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies.html?filter=application-modernization"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        See all application modernization case studies <ArrowRight16Regular />
-                    </a>
+                    <div className={s.buttonGroup}>
+                        <Button
+                            appearance="outline"
+                            as="a"
+                            href="/insights/case-studies?filter=Application%20modernization#insights-content"
+                            icon={<ArrowRight16Regular />}
+                            iconPosition="after"
+                        >
+                            See all case studies
+                        </Button>
+                    </div>
                 </div>
             </section>
 

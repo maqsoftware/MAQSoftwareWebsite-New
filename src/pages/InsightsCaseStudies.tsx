@@ -1,6 +1,7 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
 import { TrustBanner } from "../components/TrustBanner";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
@@ -65,7 +66,26 @@ const useStyles = makeStyles({
 
 export function InsightsCaseStudies() {
   const s = useStyles();
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [searchParams] = useSearchParams();
+  const filterParam = searchParams.get("filter") || "All";
+  const [activeFilter, setActiveFilter] = useState(filterParam);
+
+  useEffect(() => {
+    setActiveFilter(filterParam);
+  }, [filterParam]);
+
+  // inside the component, after the existing useEffect:
+const didScroll = useRef(false);
+
+useEffect(() => {
+  if (didScroll.current) return;
+  if (window.location.hash !== "#insights-content") return; // ← only scroll if hash present
+  const el = document.getElementById("insights-content");
+  if (el) {
+    didScroll.current = true;
+    setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 80);
+  }
+}, []);
 
   const filtered = useMemo(() => {
     if (activeFilter === "All") return caseStudyItems;

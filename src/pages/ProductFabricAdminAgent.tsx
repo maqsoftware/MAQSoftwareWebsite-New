@@ -408,7 +408,7 @@ const cases = [
     tag: "Fabric ISV \u00b7 CI/CD",
     title: "Microsoft Fabric ISV Solutions: Implementing CI/CD",
     teaser: "Repeatable CI/CD patterns for Fabric ISV solutions \u2014 with admin-grade controls baked into the deployment lifecycle.",
-    href: "https://blog.maqsoftware.com/2025/05/microsoft-fabric-isv-solutions.html",
+    href: "https://blog.maqsoftware.com/2024/11/microsoft-fabric-isv-cicd.html",
   },
 ];
 
@@ -440,25 +440,13 @@ const resources = [
     pill: "Case studies",
     title: "Fabric & analytics case studies",
     desc: "Real customer stories on Microsoft Fabric, Power BI modernization, governance, and FinOps.",
-    href: "https://maqsoftware.com/case-studies",
+    href: "/insights/case-studies",
   },
   {
     pill: "Best practices",
     title: "Fabric & Power BI best-practice guides",
     desc: "Authoritative guides on Fabric capacity sizing, Power BI optimization, and governance — from the MAQ Software community.",
     href: "https://maqsoftware.com/community/best-practices",
-  },
-  {
-    pill: "Engineering blog",
-    title: "Inside Fabric Admin Agent",
-    desc: "Engineering posts on agent architecture, anomaly detection, capacity forecasting, and remediation playbooks.",
-    href: "https://blog.maqsoftware.com/search/label/Microsoft%20Fabric",
-  },
-  {
-    pill: "Talk to us",
-    title: "Schedule a 30-minute walkthrough",
-    desc: "Have a tenant in mind? Email customersuccess@maqsoftware.com and we'll set up a personalized walkthrough.",
-    href: "mailto:customersuccess@maqsoftware.com?subject=Fabric%20Admin%20Agent%20-%20Walkthrough",
   },
 ];
 
@@ -600,7 +588,7 @@ export function ProductFabricAdminAgent() {
           <div className={s.seeAll}>
             <a
               className={s.seeAllLink}
-              href="https://maqsoftware.com/case-studies"
+              href="/insights/case-studies"
               target="_blank"
               rel="noreferrer"
             >
@@ -686,7 +674,7 @@ export function ProductFabricAdminAgent() {
         </div>
       </section>
 
-      {/* ---------------------- Testimonials ---------------------- */}
+      {/* Testimonials section commented out
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
@@ -706,6 +694,7 @@ export function ProductFabricAdminAgent() {
           </div>
         </div>
       </section>
+      */}
 
     </>
   );

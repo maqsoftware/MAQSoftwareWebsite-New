@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { useNavigate } from "react-router-dom";
 import {
     Mail24Regular,
     ArrowRight20Regular,
@@ -242,6 +243,13 @@ const useStyles = makeStyles({
         color: "var(--maq-red)",
         textDecoration: "none",
         ":hover": { textDecoration: "underline" },
+    },
+    buttonGroup: {
+        marginTop: "20px",
+        display: "flex",
+        gap: "12px",
+        flexWrap: "wrap",
+        "@media (max-width: 640px)": { flexDirection: "column" },
     },
 
     // Outcomes
@@ -560,6 +568,7 @@ const insights: Insight[] = [
 
 export function ServiceWorkplaceTransformation() {
     const s = useStyles();
+    const navigate = useNavigate();
     const [activeCap, setActiveCap] = useState(0);
     const sel = capabilities[activeCap];
 
@@ -585,8 +594,7 @@ export function ServiceWorkplaceTransformation() {
                                 appearance="primary"
                                 size="large"
                                 icon={<Mail24Regular />}
-                                as="a"
-                                href="mailto:customersuccess@maqsoftware.com?subject=Workplace%20Transformation%20%26%20Productivity%20-%20MAQ%20Software"
+                                onClick={() => navigate("/contact")}
                             >
                                 Contact us
                             </Button>
@@ -678,10 +686,7 @@ export function ServiceWorkplaceTransformation() {
                             <Button
                                 appearance="outline"
                                 className={s.knowMore}
-                                as="a"
-                                href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                                    `${sel.name} - Workplace Transformation`
-                                )}`}
+                                onClick={() => navigate("/contact")}
                             >
                                 Know more
                             </Button>
@@ -704,14 +709,17 @@ export function ServiceWorkplaceTransformation() {
                             ))}
                         </div>
                     </div>
-                    <a
-                        className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        See workplace transformation case studies <ArrowRight16Regular />
-                    </a>
+                    <div className={s.buttonGroup}>
+                        <Button
+                            appearance="primary"
+                            as="a"
+                            href="/insights/case-studies"
+                            icon={<ArrowRight16Regular />}
+                            iconPosition="after"
+                        >
+                            See all case studies
+                        </Button>
+                    </div>
                 </div>
             </section>
 
@@ -765,14 +773,17 @@ export function ServiceWorkplaceTransformation() {
                             </a>
                         ))}
                     </div>
-                    <a
-                        className={s.footerLink}
-                        href="https://maqsoftware.com/case-studies"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        See all case studies <ArrowRight16Regular />
-                    </a>
+                    <div className={s.buttonGroup}>
+                        <Button
+                            appearance="primary"
+                            as="a"
+                            href="/insights/case-studies"
+                            icon={<ArrowRight16Regular />}
+                            iconPosition="after"
+                        >
+                            See all case studies
+                        </Button>
+                    </div>
                 </div>
             </section>
 

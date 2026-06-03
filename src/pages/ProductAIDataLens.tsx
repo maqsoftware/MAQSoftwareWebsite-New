@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const benefits = [
   { title: "Informed decisions", desc: "Move beyond guesswork — leverage data-backed insights to make informed decisions that reduce risk and accelerate growth." },
@@ -21,9 +21,8 @@ const features = [
 
 const resources = [
   { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace consulting offers from MAQ Software.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "https://maqsoftware.com/case-studies" },
+  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "/insights/case-studies" },
   { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "https://maqsoftware.com/community/best-practices" },
-  { pill: "Talk to us", title: "Request a personalized demo", desc: "Email customersuccess@maqsoftware.com and we'll set up a tailored walkthrough.", href: "mailto:customersuccess@maqsoftware.com?subject=Demo%20-%20AI-DataLens" },
 ];
 
 export function ProductAIDataLens() {
@@ -122,7 +121,7 @@ export function ProductAIDataLens() {
         </div>
       </section>
 
-      <section className={s.section}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.section}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

@@ -17,7 +17,7 @@ import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
 import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
-import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
+// import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
 import { CTA } from "../components/CTA";
 import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
@@ -246,7 +246,7 @@ export function ServiceSecurityCompliance() {
         subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
         capabilities={capabilities}
         footerLabel="See security case studies"
-        footerHref="https://maqsoftware.com/case-studies.html?filter=security"
+        footerHref="/insights/case-studies?filter=Security#insights-content"
         mailSubjectSuffix="Security & Compliance"
       />
       <ServiceOutcomes
@@ -257,15 +257,16 @@ export function ServiceSecurityCompliance() {
       <ServiceCaseStudies
         title="How clients are strengthening their security posture"
         studies={caseStudies}
-        footerLabel="See all security case studies"
-        footerHref="https://maqsoftware.com/case-studies.html?filter=security"
+        serviceFilter="Security"
+        allCasesLabel="See all case studies"
+        serviceSpecificLabel="See security case studies"
       />
       <ServiceInsights
         title="Our security insights"
         subhead="See our research that goes into optimizing our security service."
         insights={insights}
       />
-      <ServiceTestimonials quotes={testimonials} />
+      {/* <ServiceTestimonials quotes={testimonials} /> */}
       <CTA />
     </>
   );

@@ -2,7 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular } from "@fluentui/react-icons";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
-import { ProductCaseStudies, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const benefits = [
   { title: "Automate the review process", desc: "Save time and effort by easily identifying errors, formatting DAX measures, and creating knowledge base documents." },
@@ -20,7 +20,7 @@ const resources = [
   { pill: "GitHub", title: "CertyFAST on GitHub", desc: "Download the tool from the official MAQ Software repository.", href: "https://github.com/maqsoftware/CertyFAST" },
   { pill: "Docs", title: "Installation & user guide", desc: "Step-by-step integration, best practices, and troubleshooting.", href: "https://maqsoftware.com/services/Power-BI/InstallationandUsageGuide" },
   { pill: "Best practices", title: "Power BI development standards", desc: "Authoritative guides from the MAQ Software community.", href: "https://maqsoftware.com/community/best-practices" },
-  { pill: "Case studies", title: "Quality-control case studies", desc: "Real-world Power BI quality wins.", href: "https://maqsoftware.com/case-studies" },
+  { pill: "Case studies", title: "Quality-control case studies", desc: "Real-world Power BI quality wins.", href: "/insights/case-studies" },
 ];
 
 export function ProductCertyFAST() {
@@ -113,7 +113,7 @@ export function ProductCertyFAST() {
         </div>
       </section>
 
-      <section className={s.section}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.section}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

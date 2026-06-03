@@ -234,7 +234,7 @@ export function ReportingBICapabilities() {
         </div>
         <a
           className={s.footerLink}
-          href="https://maqsoftware.com/case-studies.html?filter=reporting-and-visualization"
+          href="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
           target="_blank"
           rel="noreferrer"
         >

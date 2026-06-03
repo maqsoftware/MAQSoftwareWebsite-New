@@ -200,7 +200,7 @@ export function ServiceCapabilities({
   subhead = "Four capability pillars that turn Microsoft Foundry and the Agent Framework into governed, production-grade business automation.",
   capabilities = defaultCapabilities,
   footerLabel = "See agentic AI case studies",
-  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
+  footerHref = "/insights/case-studies?filter=Agentic%20AI%20%26%20Machine%20Learning#insights-content",
   mailSubjectSuffix = "Agentic AI & ML",
 }: ServiceCapabilitiesProps = {}) {
   const s = useStyles();

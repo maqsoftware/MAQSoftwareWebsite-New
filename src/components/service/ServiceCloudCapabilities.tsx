@@ -232,7 +232,7 @@ export function ServiceCloudCapabilities() {
             ))}
           </div>
         </div>
-        <a className={s.footerLink} href="https://maqsoftware.com/case-studies?filter=cloud-optimization">
+        <a className={s.footerLink} href="/insights/case-studies?filter=Cloud optimization#insights-content">
           See cloud case studies <ArrowRight16Regular />
         </a>
       </div>

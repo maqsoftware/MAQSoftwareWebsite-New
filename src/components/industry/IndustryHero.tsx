@@ -104,9 +104,11 @@ export function IndustryHero({
             </Button>
           </div>
         </div>
-        <div className={s.visualWrap} aria-hidden="true">
-          {visual}
-        </div>
+        {visual && (
+          <div className={s.visualWrap} aria-hidden="true">
+            {visual}
+          </div>
+        )}
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens, Button } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 export interface CaseStudyItem {
@@ -13,6 +13,9 @@ export interface ServiceCaseStudiesProps {
   studies?: CaseStudyItem[];
   footerLabel?: string;
   footerHref?: string;
+  serviceFilter?: string;
+  allCasesLabel?: string;
+  serviceSpecificLabel?: string;
 }
 
 const useStyles = makeStyles({
@@ -96,6 +99,13 @@ const useStyles = makeStyles({
     textDecoration: "none",
     ":hover": { textDecoration: "underline" },
   },
+  buttonGroup: {
+    marginTop: "20px",
+    display: "flex",
+    gap: "12px",
+    flexWrap: "wrap",
+    "@media (max-width: 640px)": { flexDirection: "column" },
+  },
 });
 
 interface Study {
@@ -132,8 +142,11 @@ const defaultStudies: Study[] = [
 export function ServiceCaseStudies({
   title = "How clients are putting agentic AI to work",
   studies = defaultStudies,
-  footerLabel = "See all AI case studies",
-  footerHref = "https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning",
+  footerLabel,
+  footerHref,
+  serviceFilter,
+  allCasesLabel,
+  serviceSpecificLabel,
 }: ServiceCaseStudiesProps = {}) {
   const s = useStyles();
   return (
@@ -155,14 +168,28 @@ export function ServiceCaseStudies({
             </a>
           ))}
         </div>
-        <a
-          className={s.footerLink}
-          href={footerHref}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {footerLabel} <ArrowRight16Regular />
-        </a>
+        {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
+          <div className={s.buttonGroup}>
+            <Button
+              appearance="outline"
+              as="a"
+              href={`/insights/case-studies?filter=${encodeURIComponent(serviceFilter)}#insights-content`}
+              icon={<ArrowRight16Regular />}
+              iconPosition="after"
+            >
+              {allCasesLabel}
+            </Button>
+          </div>
+        ) : footerLabel && footerHref ? (
+          <a
+            className={s.footerLink}
+            href={footerHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {footerLabel} <ArrowRight16Regular />
+          </a>
+        ) : null}
       </div>
     </section>
   );

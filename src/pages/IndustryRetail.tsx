@@ -12,7 +12,7 @@ import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { Testimonials } from "../components/industry/Testimonials";
+// import { Testimonials } from "../components/industry/Testimonials";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
@@ -241,13 +241,13 @@ export function IndustryRetail() {
         title="How retailers move faster with MAQ Software"
         cases={retailCases}
         seeAllLabel="See all retail case studies"
-        seeAllHref="https://maqsoftware.com/case-studies"
+        seeAllHref="/insights/case-studies"
       />
       <MarketplaceOffers
         sub="Accelerate retail outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning demand planning, customer experience, and real-time intelligence."
         offers={retailOffers}
       />
-      <Testimonials quotes={retailTestimonials} />
+      {/* <Testimonials quotes={retailTestimonials} /> */}
       <CTA />
     </>
   );
