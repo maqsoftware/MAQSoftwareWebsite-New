@@ -10,7 +10,7 @@ import {
 import {
   ChevronDown20Regular,
 } from "@fluentui/react-icons";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { products } from "../data/products";
 
 const useStyles = makeStyles({
@@ -61,6 +61,14 @@ const useStyles = makeStyles({
       backgroundColor: "var(--maq-red-pale)",
       color: "var(--maq-red)",
     },
+  },
+  navBtnActive: {
+    backgroundColor: "var(--maq-red-pale)",
+    color: "var(--maq-red)",
+  },
+  menuItemActive: {
+    backgroundColor: "var(--maq-red-pale)",
+    color: "var(--maq-red)",
   },
 });
 
@@ -114,6 +122,13 @@ const about: NavItem[] = [
   { label: "Contact Us", href: "/contact" },
 ];
 
+function isItemActive(href: string | undefined, pathname: string): boolean {
+  if (!href || href.startsWith("http") || href === "#") return false;
+  const target = href.split("?")[0].split("#")[0];
+  if (target === "/") return pathname === "/";
+  return pathname === target || pathname.startsWith(`${target}/`);
+}
+
 function MegaMenu({
   label,
   items,
@@ -124,10 +139,25 @@ function MegaMenu({
   btnClass?: string;
 }) {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const s = useStyles();
+  // Pick only the most specific (longest matching) item so a parent link
+  // like "/products" doesn't also highlight when on "/products/embedfast".
+  const activeHref = items.reduce<string | undefined>((best, i) => {
+    if (!isItemActive(i.href, pathname)) return best;
+    if (!best || (i.href as string).length > best.length) return i.href;
+    return best;
+  }, undefined);
+  const groupActive = activeHref !== undefined;
   return (
     <Menu>
       <MenuTrigger disableButtonEnhancement>
-        <Button appearance="subtle" className={btnClass} icon={<ChevronDown20Regular />} iconPosition="after">
+        <Button
+          appearance="subtle"
+          className={`${btnClass ?? ""} ${groupActive ? s.navBtnActive : ""}`}
+          icon={<ChevronDown20Regular />}
+          iconPosition="after"
+        >
           {label}
         </Button>
       </MenuTrigger>
@@ -136,6 +166,7 @@ function MegaMenu({
           {items.map((i) => (
             <MenuItem
               key={i.label}
+              className={i.href === activeHref ? s.menuItemActive : undefined}
               onClick={() => {
                 if (!i.href) return;
                 if (i.href.startsWith("http")) {
