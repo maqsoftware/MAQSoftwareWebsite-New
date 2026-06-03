@@ -170,15 +170,14 @@ export function ServiceCaseStudies({
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
           <div className={s.buttonGroup}>
-            <Button
-              appearance="outline"
-              as="a"
+            <a
+              className={s.footerLink}
               href={`/insights/case-studies?filter=${encodeURIComponent(serviceFilter)}#insights-content`}
-              icon={<ArrowRight16Regular />}
-              iconPosition="after"
+              target="_blank"
+              rel="noreferrer"
             >
-              {allCasesLabel}
-            </Button>
+              {allCasesLabel} <ArrowRight16Regular />
+            </a>
           </div>
         ) : footerLabel && footerHref ? (
           <a

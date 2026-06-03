@@ -33,6 +33,8 @@ import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
 import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
 import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
+import { InsightsDatabricksBestPractices } from "./pages/InsightsDatabricksBestPractices";
+import { InsightsAzureDatabricksBestPractices } from "./pages/InsightsAzureDatabricksBestPractices";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 import { AboutSustainability } from "./pages/AboutSustainability";
@@ -95,6 +97,24 @@ export function App() {
           element={<InsightsPowerBICustomVisualGuide />}
         />
         <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
+        <Route
+          path="/insights/databricks-best-practices"
+          element={
+            <>
+              <InsightsDatabricksBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-databricks-best-practices"
+          element={
+            <>
+              <InsightsAzureDatabricksBestPractices />
+              <CTA />
+            </>
+          }
+        />
         <Route
           path="/partnerships/snowflake"
           element={

@@ -1,5 +1,6 @@
 import { Button, makeStyles } from "@fluentui/react-components";
 import { ArrowRight20Regular, Mail24Regular, ChartMultiple20Filled } from "@fluentui/react-icons";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -91,7 +92,6 @@ interface InsightsHeroProps {
   subhead: string;
   primaryLabel: string;
   primaryTargetId?: string;
-  secondaryHref?: string;
 }
 
 export function InsightsHero({
@@ -99,9 +99,9 @@ export function InsightsHero({
   subhead,
   primaryLabel,
   primaryTargetId,
-  secondaryHref = "mailto:customersuccess@maqsoftware.com?subject=Insights%20-%20MAQ%20Software",
 }: InsightsHeroProps) {
   const s = useStyles();
+  const navigate = useNavigate();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -119,7 +119,7 @@ export function InsightsHero({
             >
               {primaryLabel}
             </Button>
-            <Button appearance="outline" size="large" icon={<Mail24Regular />} as="a" href={secondaryHref}>
+            <Button appearance="outline" size="large" icon={<Mail24Regular />} onClick={() => navigate("/contact")}>
               Contact us
             </Button>
           </div>

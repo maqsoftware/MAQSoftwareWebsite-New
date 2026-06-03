@@ -2,6 +2,7 @@ import { Button, makeStyles, tokens, Badge } from "@fluentui/react-components";
 import {
   Mail24Regular,
   ArrowRight20Regular,
+  ArrowRight16Regular,
   Pulse24Regular,
   Warning24Regular,
   Wrench24Regular,
@@ -296,11 +297,12 @@ const useStyles = makeStyles({
     },
   },
   mktImg: {
-    aspectRatio: "16 / 9",
+    height: "100px",
     background:
-      "linear-gradient(135deg, #ececec 0%, #f5f5f5 50%, #e6e6e6 100%)",
+      "linear-gradient(135deg, var(--maq-red-pale) 0%, var(--maq-off-white) 60%, var(--maq-surface-cream) 100%)",
+    borderBottom: "1px solid var(--maq-border)",
   },
-  mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1 },
+  mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1, gap: "8px" },
   mktPill: {
     alignSelf: "flex-start",
     fontSize: "10px",
@@ -327,7 +329,16 @@ const useStyles = makeStyles({
     flex: 1,
   },
   mktArrow: { color: "var(--maq-red)", flexShrink: 0, marginTop: "2px" },
-  mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0 },
+  mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
+  mktRead: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "4px",
+    fontSize: "13px",
+    fontWeight: 600,
+    color: "var(--maq-red)",
+    marginTop: "4px",
+  },
 
   // Featured marketplace banner -------------------------------------------
   banner: {
@@ -580,7 +591,7 @@ export function ProductFabricAdminAgent() {
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
-                  Read full story <ArrowRight20Regular fontSize={14} />
+                  Read full story <ArrowRight16Regular />
                 </span>
               </a>
             ))}
@@ -592,7 +603,7 @@ export function ProductFabricAdminAgent() {
               target="_blank"
               rel="noreferrer"
             >
-              See all Fabric case studies <ArrowRight20Regular fontSize={14} />
+              See all Fabric case studies <ArrowRight16Regular />
             </a>
           </div>
         </div>
@@ -662,11 +673,11 @@ export function ProductFabricAdminAgent() {
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
                   <span className={s.mktPill}>{o.pill}</span>
-                  <div className={s.mktTitleRow}>
-                    <div className={s.mktTitle}>{o.title}</div>
-                    <ArrowRight20Regular className={s.mktArrow} />
-                  </div>
+                  <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
+                  <span className={s.mktRead}>
+                    Read more <ArrowRight20Regular fontSize={14} />
+                  </span>
                 </div>
               </a>
             ))}
