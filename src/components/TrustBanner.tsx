@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, mergeClasses, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   wrap: {
@@ -59,7 +59,7 @@ export function TrustBanner() {
         {items.map((i) => (
           <span
             key={i.label}
-            className={`${s.chip} ${i.blue ? s.chipBlue : ""}`}
+            className={mergeClasses(s.chip, i.blue && s.chipBlue)}
           >
             {i.label}
           </span>
