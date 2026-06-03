@@ -687,17 +687,15 @@ export function ServiceBusinessApps() {
                             ))}
                         </div>
                     </div>
-                    <div className={s.buttonGroup}>
-                        <Button
-                            appearance="outline"
-                            as="a"
-                            href="/insights/case-studies?filter=Application%20modernization#insights-content"
-                            icon={<ArrowRight16Regular />}
-                            iconPosition="after"
-                        >
-                            See all case studies
-                        </Button>
-                    </div>
+                    <a
+                        className={s.footerLink}
+                        href="/insights/case-studies?filter=Application%20modernization#insights-content"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        See Business Intelligence case studies
+                        <ArrowRight16Regular />
+                    </a>
                 </div>
             </section>
 
@@ -749,17 +747,15 @@ export function ServiceBusinessApps() {
                             </a>
                         ))}
                     </div>
-                    <div className={s.buttonGroup}>
-                        <Button
-                            appearance="outline"
-                            as="a"
-                            href="/insights/case-studies?filter=Application%20modernization#insights-content"
-                            icon={<ArrowRight16Regular />}
-                            iconPosition="after"
-                        >
-                            See all case studies
-                        </Button>
-                    </div>
+                    <a
+                        className={s.footerLink}
+                        href="/insights/case-studies?filter=Application%20modernization#insights-content"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        See all case studies
+                        <ArrowRight16Regular />
+                    </a>
                 </div>
             </section>
 

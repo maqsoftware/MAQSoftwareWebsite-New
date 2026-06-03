@@ -9,6 +9,7 @@ import {
   PeopleTeam24Regular,
 } from "@fluentui/react-icons";
 import type { FC, ReactNode } from "react";
+import {useNavigate} from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
@@ -79,6 +80,7 @@ interface Svc {
   icon: ReactNode;
   name: string;
   desc: string;
+  path: string;
 }
 
 const services: Svc[] = [
@@ -86,41 +88,49 @@ const services: Svc[] = [
     icon: <Bot24Regular />,
     name: "AI solutions & agentic automation",
     desc: "Production GenAI agents and industry-specific solution accelerators built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value business workflows.",
+    path: "/services/agentic-ai",
   },
   {
     icon: <DataPie24Regular />,
     name: "Data engineering & analytics",
     desc: "Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses and real-time analytics that power Copilot, AI agents, and enterprise decision-making.",
+    path: "/services/data-and-analytics",
   },
   {
     icon: <ChartMultiple24Regular />,
     name: "Reporting & business intelligence",
     desc: "Microsoft Power BI Partner of the Year (2021). We build, modernize, and migrate BI stacks — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, MicroStrategy — into real-time Power BI on Microsoft Fabric.",
+    path: "/services/reporting-bi",
   },
   {
     icon: <AppFolder24Regular />,
     name: "Business apps & process automation",
     desc: "Low-code and pro-code apps on Microsoft Power Platform and Dynamics 365 — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations.",
+    path: "/services/business-apps",
   },
   {
     icon: <Cloud24Regular />,
     name: "Cloud infrastructure & modernization",
     desc: "Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture — delivering 30–40% lower run cost on average across enterprise workloads.",
+    path: "/services/cloud",
   },
   {
     icon: <ShieldCheckmark24Regular />,
     name: "Security & compliance",
     desc: "ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape.",
+    path: "/services/security-compliance",
   },
   {
     icon: <PeopleTeam24Regular />,
     name: "Workplace transformation & productivity",
     desc: "Microsoft 365, Teams, SharePoint, and Copilot rollouts that drive adoption — not just deployment. Change management included.",
+    path: "/services/workplace-transformation",
   },
 ];
 
 export const Services: FC = () => {
   const s = useStyles();
+  const navigate = useNavigate();
   return (
     <section className={s.section} id="services">
       <div className={s.inner}>
@@ -136,7 +146,7 @@ export const Services: FC = () => {
         </div>
         <div className={s.grid}>
           {services.map((svc) => (
-            <div key={svc.name} className={s.card}>
+            <div key={svc.name} className={s.card} onClick={() => navigate(svc.path)}>
               <div className={s.iconBox}>{svc.icon}</div>
               <div className={s.name}>{svc.name}</div>
               <div className={s.desc}>{svc.desc}</div>
