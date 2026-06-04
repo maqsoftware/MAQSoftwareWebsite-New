@@ -89,9 +89,6 @@ const useStyles = makeStyles({
     lineHeight: 1.6,
     marginBottom: "20px",
   },
-  badge: {
-    padding: "10px 10px",
-  },
   badgeRow: { display: "flex", gap: "6px", marginBottom: "16px", flexWrap: "wrap" },
   badge: { padding: "2px 10px" },
   more: {
