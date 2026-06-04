@@ -254,6 +254,8 @@ function MegaMenu({
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const s = useStyles();
+  const [open, setOpen] = useState(false);
+
   // Pick only the most specific (longest matching) item so a parent link
   // like "/products" doesn't also highlight when on "/products/embedfast".
   const activeHref = items.reduce<string | undefined>((best, i) => {
@@ -262,7 +264,13 @@ function MegaMenu({
     return best;
   }, undefined);
   return (
-    <Menu>
+    <Menu
+      open={open}
+      onOpenChange={(_, data) => setOpen(data.open)}
+      openOnHover
+      hoverDelay={0}
+      closeOnScroll
+    >
       <MenuTrigger disableButtonEnhancement>
         <Button
           appearance="subtle"
@@ -281,6 +289,7 @@ function MegaMenu({
               className={i.href === activeHref ? s.menuItemActive : undefined}
               onClick={() => {
                 if (!i.href) return;
+                setOpen(false);
                 if (i.href.startsWith("http")) {
                   window.open(i.href, "_blank", "noopener,noreferrer");
                   return;
