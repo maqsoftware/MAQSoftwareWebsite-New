@@ -4,7 +4,7 @@ import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "#fff" },
+  section: { padding: "48px 32px", backgroundColor: "#fff", "@media (max-width: 768px)": { padding: "32px 16px" } },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { marginBottom: "20px" },
   eyebrow: {

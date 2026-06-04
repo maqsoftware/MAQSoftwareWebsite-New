@@ -7,7 +7,7 @@ import {
 } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
+  section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)", "@media (max-width: 768px)": { padding: "32px 16px" } },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "28px" },
   eyebrow: {
@@ -31,7 +31,8 @@ const useStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
-    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
+    "@media (max-width: 960px) and (min-width: 481px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+    "@media (max-width: 480px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     border: `1px solid ${tokens.colorNeutralStroke2}`,

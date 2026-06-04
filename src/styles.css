@@ -171,26 +171,22 @@ a {
   .site-header .brand { font-size: 18px !important; }
 }
 
-/* Aggressive resets for very small devices to avoid any boxed/card layout */
+/* Resets for very small devices */
 @media (max-width: 420px) {
-  /* Reset common container elements that may create centered cards */
-  header, section, main, footer, .wrap, .grid, .visual, .site-root, .site-content, .page, .hero, .shell {
+  /* Ensure full-bleed layout with consistent 16px horizontal padding */
+  header, section, main {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    background-clip: border-box !important;
-    background: transparent !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
   }
 
-  /* Restore footer visuals on extra-small devices so it remains visible */
+  /* Footer keeps its own background and padding */
   footer {
     background: var(--maq-gray-600) !important;
     color: #fff !important;
-    padding: 32px 12px !important;
+    padding: 32px 16px !important;
     box-shadow: none !important;
     border-radius: 0 !important;
     width: 100% !important;

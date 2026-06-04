@@ -17,6 +17,7 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-gray-600)",
     color: "#fff",
     padding: "56px 32px 24px",
+    "@media (max-width: 768px)": { padding: "40px 16px 20px" },
   },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   top: {
@@ -25,6 +26,7 @@ const useStyles = makeStyles({
     gap: "40px",
     marginBottom: "40px",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr 1fr", gap: "32px" },
+    "@media (max-width: 768px)": { gridTemplateColumns: "1fr", gap: "24px" },
   },
   brand: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" },
   logoMark: {

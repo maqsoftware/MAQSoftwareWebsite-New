@@ -15,6 +15,7 @@ const useStyles = makeStyles({
   wrap: {
     backgroundColor: "var(--maq-off-white)",
     padding: "32px 32px",
+    "@media (max-width: 768px)": { padding: "24px 16px" },
   },
   grid: {
     maxWidth: "1240px",
@@ -46,6 +47,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     letterSpacing: "-0.02em",
     margin: "0 0 12px",
+    "@media (max-width: 768px)": { fontSize: "32px" },
   },
   em: {
     color: "var(--maq-blue)",

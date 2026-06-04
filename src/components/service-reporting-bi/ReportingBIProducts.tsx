@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "#fff" },
+  section: { padding: "48px 32px", backgroundColor: "#fff", "@media (max-width: 768px)": { padding: "32px 16px" } },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { marginBottom: "24px" },
   eyebrow: {
@@ -27,8 +27,8 @@ const useStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "20px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
+    "@media (max-width: 960px) and (min-width: 481px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+    "@media (max-width: 480px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     border: `1px solid ${tokens.colorNeutralStroke2}`,

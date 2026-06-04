@@ -2,7 +2,7 @@ import { Button, makeStyles } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
+  wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px", "@media (max-width: 768px)": { padding: "32px 16px" } },
   grid: {
     maxWidth: "1240px",
     margin: "0 auto",

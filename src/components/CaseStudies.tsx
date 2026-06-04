@@ -6,7 +6,11 @@ import {
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
-  section: { padding: "32px 32px", backgroundColor: "var(--maq-off-white)" },
+  section: {
+    padding: "32px 32px",
+    backgroundColor: "var(--maq-off-white)",
+    "@media (max-width: 768px)": { padding: "24px 16px" },
+  },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
@@ -26,6 +30,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     margin: "0 0 12px",
     letterSpacing: "-0.02em",
+    "@media (max-width: 768px)": { fontSize: "26px" },
   },
   sub: {
     display: "block",
@@ -39,8 +44,8 @@ const useStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
+    "@media (max-width: 960px) and (min-width: 481px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+    "@media (max-width: 480px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     backgroundColor: "#fff",

@@ -26,7 +26,7 @@ import { CTA } from "../components/CTA";
 
 const useStyles = makeStyles({
     // Hero
-    hero: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
+    hero: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px", "@media (max-width: 768px)": { padding: "32px 16px" } },
     heroGrid: {
         maxWidth: "1240px",
         margin: "0 auto",
@@ -105,8 +105,8 @@ const useStyles = makeStyles({
     },
 
     // Section commons
-    section: { padding: "48px 32px", backgroundColor: "#fff" },
-    sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
+    section: { padding: "48px 32px", backgroundColor: "#fff", "@media (max-width: 768px)": { padding: "32px 16px" } },
+    sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)", "@media (max-width: 768px)": { padding: "32px 16px" } },
     inner: { maxWidth: "1240px", margin: "0 auto" },
     head: { marginBottom: "20px" },
     headCentered: { textAlign: "center", marginBottom: "28px" },
@@ -246,7 +246,8 @@ const useStyles = makeStyles({
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
         gap: "16px",
-        "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
+        "@media (max-width: 960px) and (min-width: 481px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+        "@media (max-width: 480px)": { gridTemplateColumns: "1fr" },
     },
     outcomeCard: {
         border: `1px solid ${tokens.colorNeutralStroke2}`,
@@ -283,8 +284,8 @@ const useStyles = makeStyles({
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
         gap: "16px",
-        "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-        "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
+        "@media (max-width: 960px) and (min-width: 481px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+        "@media (max-width: 480px)": { gridTemplateColumns: "1fr" },
     },
     caseCard: {
         border: `1px solid ${tokens.colorNeutralStroke2}`,
@@ -341,7 +342,8 @@ const useStyles = makeStyles({
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
         gap: "20px",
-        "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+        "@media (max-width: 960px) and (min-width: 481px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+        "@media (max-width: 480px)": { gridTemplateColumns: "1fr" },
     },
     insCard: {
         border: `1px solid ${tokens.colorNeutralStroke2}`,
