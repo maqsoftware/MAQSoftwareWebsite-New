@@ -354,11 +354,7 @@ export function Header() {
       <div className={`${s.right} header-right`}>
         <Button
           appearance="primary"
-          onClick={() =>
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={() => navigateTo("/contact")}
         >
           Request a demo
         </Button>
@@ -380,7 +376,7 @@ export function Header() {
               </button>
               <div className={s.mobileBrand}>
                 <Link to="/" onClick={closeMenu} className={s.brand} aria-label="MAQ Software homepage">
-                    <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
                 </Link>
               </div>
 
@@ -391,17 +387,17 @@ export function Header() {
                   <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
                     {services.map((i, idx) => (
                       <li key={i.label} className={s.mobileNavItem}>
-                      <a
-                        href={i.href}
-                        className={s.mobileNavLink}
-                        ref={idx === 0 ? ((el) => (firstFocusable.current = el as HTMLElement)) : undefined}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigateTo(i.href);
-                        }}
-                      >
-                        {i.label}
-                      </a>
+                        <a
+                          href={i.href}
+                          className={s.mobileNavLink}
+                          ref={idx === 0 ? ((el) => (firstFocusable.current = el as HTMLElement)) : undefined}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            navigateTo(i.href);
+                          }}
+                        >
+                          {i.label}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -513,7 +509,7 @@ export function Header() {
                 </div>
 
                 <div style={{ marginTop: 24, marginBottom: 40 }}>
-                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => { closeMenu(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => navigateTo('/contact')}>
                     Request a demo
                   </Button>
                 </div>
