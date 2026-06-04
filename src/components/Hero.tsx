@@ -156,11 +156,7 @@ export function Hero() {
               size="large"
               icon={<ArrowRight20Regular />}
               iconPosition="after"
-              onClick={() =>
-                document
-                  .getElementById("case-studies")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => navigate("/insights/case-studies")}
             >
               View case studies
             </Button>
