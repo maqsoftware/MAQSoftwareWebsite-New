@@ -1,6 +1,7 @@
 import {
   Button,
   makeStyles,
+  mergeClasses,
   Menu,
   MenuTrigger,
   MenuList,
@@ -235,7 +236,7 @@ function MegaMenu({
       <MenuTrigger disableButtonEnhancement>
         <Button
           appearance="subtle"
-          className={`${btnClass ?? ""} ${groupActive ? s.navBtnActive : ""}`}
+          className={mergeClasses(btnClass ?? "", groupActive ? s.navBtnActive : undefined)}
           icon={<ChevronDown20Regular />}
           iconPosition="after"
         >
