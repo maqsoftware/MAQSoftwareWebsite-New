@@ -74,15 +74,17 @@ const useStyles = makeStyles({
   },
   drivenGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 240px), 1fr))",
     gap: "32px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)", gap: "28px" },
-    "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
   },
   drivenStatItem: {
     display: "flex",
     flexDirection: "column",
     gap: "10px",
+    "@media (max-width: 560px)": {
+      alignItems: "center",
+      textAlign: "center",
+    },
   },
   drivenStatNumber: {
     fontSize: "52px",
@@ -102,6 +104,9 @@ const useStyles = makeStyles({
     color: "var(--maq-gray-700)",
     lineHeight: 1.45,
     maxWidth: "180px",
+    "@media (max-width: 560px)": {
+      margin: "0 auto",
+    },
   },
 
   // ── Shared section shell ──────────────────────────────────────────────────
@@ -130,9 +135,14 @@ const useStyles = makeStyles({
     display: "block",
     fontSize: "30px",
     fontWeight: 700,
+    lineHeight: 1.15,
     color: "var(--maq-black)",
     letterSpacing: "-0.01em",
     margin: "0 0 32px",
+    "@media (max-width: 560px)": {
+      fontSize: "24px",
+      lineHeight: 1.2,
+    },
   },
 
   // ── Excellence ────────────────────────────────────────────────────────────
@@ -167,10 +177,8 @@ const useStyles = makeStyles({
   // ── Designations ─────────────────────────────────────────────────────────
   designationGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))",
     gap: "24px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
   },
   designationCard: {
     display: "flex",
@@ -204,11 +212,9 @@ const useStyles = makeStyles({
   // ── Specializations ───────────────────────────────────────────────────────
   specGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 240px), 1fr))",
     gap: "12px",
     marginBottom: "28px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
   },
   specChip: {
     display: "flex",
@@ -250,10 +256,8 @@ const useStyles = makeStyles({
   // ── Why MAQ ───────────────────────────────────────────────────────────────
   whyGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 240px), 1fr))",
     gap: "20px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
   },
   whyCard: {
     padding: "24px",
@@ -290,10 +294,8 @@ const useStyles = makeStyles({
   // ── Partners ──────────────────────────────────────────────────────────────
   partnerGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 220px), 1fr))",
     gap: "20px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
   },
   partnerCard: {
     display: "flex",

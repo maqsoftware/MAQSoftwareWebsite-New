@@ -35,7 +35,7 @@ export const useProductPageStyles = makeStyles({
   benDesc: { fontSize: "13.5px", color: "var(--maq-gray-700)", lineHeight: 1.6, margin: 0 },
 
   stepGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", "@media (max-width: 960px)": { gridTemplateColumns: "1fr" } },
-  stepGrid6: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" }, "@media (max-width: 640px)": { gridTemplateColumns: "1fr" } },
+  stepGrid6: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "20px" },
   stepCard: { background: "#fff", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "12px", padding: "22px", position: "relative" },
   stepNum: { width: "32px", height: "32px", borderRadius: "50%", background: "var(--maq-red)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 700, fontSize: "14px", marginBottom: "12px" },
   stepTitle: { fontSize: "15px", fontWeight: 700, color: "var(--maq-black)", marginBottom: "8px" },
@@ -71,7 +71,7 @@ export const useProductPageStyles = makeStyles({
   supportTh: { background: "var(--maq-off-white)", padding: "14px 16px", textAlign: "left", fontSize: "13px", fontWeight: 700, color: "var(--maq-black)", borderBottom: `1px solid ${tokens.colorNeutralStroke2}` },
   supportTd: { padding: "12px 16px", fontSize: "13px", color: "var(--maq-gray-700)", borderBottom: `1px solid ${tokens.colorNeutralStroke2}` },
 
-  mktGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" }, "@media (max-width: 640px)": { gridTemplateColumns: "1fr" } },
+  mktGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "16px" },
   mktCard: { background: "#fff", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "10px", overflow: "hidden", display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", transition: "all 0.2s", ":hover": { border: `1px solid var(--maq-red)`, boxShadow: "0 6px 16px rgba(0,0,0,0.06)", transform: "translateY(-2px)" } },
   mktImg: { height: "100px", background: "linear-gradient(135deg, var(--maq-red-pale) 0%, var(--maq-off-white) 60%, var(--maq-surface-cream) 100%)", borderBottom: "1px solid var(--maq-border)" },
   mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1, gap: "8px" },

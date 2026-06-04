@@ -23,10 +23,8 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     border: `1px solid ${tokens.colorNeutralStroke2}`,
@@ -36,7 +34,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "10px",
-    textDecoration: "none",
+    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
     color: "inherit",
     transition: "all 0.2s",
     ":hover": {
