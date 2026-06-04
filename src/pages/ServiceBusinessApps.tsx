@@ -281,10 +281,8 @@ const useStyles = makeStyles({
     // Case studies
     caseGrid: {
         display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
+        gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
         gap: "16px",
-        "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-        "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
     },
     caseCard: {
         border: `1px solid ${tokens.colorNeutralStroke2}`,

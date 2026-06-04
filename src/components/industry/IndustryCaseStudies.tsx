@@ -23,9 +23,8 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     display: "flex",

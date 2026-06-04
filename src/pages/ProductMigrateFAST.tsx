@@ -99,7 +99,7 @@ export function ProductMigrateFAST() {
             <span className={s.secEyebrow}>Automation</span>
             <h2 className={s.titleLg}>Tableau → Power BI automation capabilities</h2>
           </div>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
+          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "12px" }}>
             {capabilities.map((c) => (
               <li key={c} style={{ fontSize: "14px", color: "var(--maq-gray-700)", lineHeight: 1.6, paddingLeft: "20px", position: "relative" }}>
                 <span style={{ position: "absolute", left: 0, color: "var(--maq-red)", fontWeight: 700 }}>✓</span>

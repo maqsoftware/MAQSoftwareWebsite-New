@@ -38,10 +38,8 @@ const useStyles = makeStyles({
   listInner: { maxWidth: "1240px", margin: "0 auto" },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "20px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     backgroundColor: "#fff",
@@ -149,9 +147,8 @@ const useStyles = makeStyles({
     maxWidth: "1240px",
     margin: "0 auto",
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 720px)": { gridTemplateColumns: "repeat(2, 1fr)" },
   },
   statCard: {
     background: "var(--maq-surface-cream)",

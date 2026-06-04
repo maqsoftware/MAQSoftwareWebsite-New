@@ -236,7 +236,7 @@ export function IndustryManufacturing() {
         title="How manufacturers move faster with MAQ Software"
         cases={manufacturingCases}
         seeAllLabel="See all manufacturing case studies"
-        seeAllHref="https://maqsoftware.com/case-studies"
+        seeAllHref="/insights/case-studies"
       />
       <MarketplaceOffers
         sub="Accelerate manufacturing outcomes with ready-to-deploy Microsoft Azure Marketplace offerings \u2014 spanning AI strategy, real-time intelligence, and data platform modernization."

@@ -38,7 +38,7 @@ const useStyles = makeStyles({
   },
   badgeGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 140px), 1fr))",
     gap: "12px",
     "@media (max-width: 960px)": {
       justifyItems: "center",

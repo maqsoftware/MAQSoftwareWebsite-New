@@ -23,9 +23,8 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
   },
   card: {
     border: `1px solid ${tokens.colorNeutralStroke2}`,
@@ -72,6 +71,9 @@ export function PartnershipHighlights({
   stats,
 }: PartnershipHighlightsProps) {
   const s = useStyles();
+  //changes for 3 card layout
+  const isThreeCardLayout = stats.length === 3; 
+
   return (
     <section className={s.section}>
       <div className={s.inner}>
@@ -79,6 +81,7 @@ export function PartnershipHighlights({
           {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.title}>{title}</h2>
         </div>
+        {/* changes for 3 card layout */}
         <div className={s.grid}>
           {stats.map((h) => (
             <div key={h.label} className={s.card}>

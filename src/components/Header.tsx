@@ -11,6 +11,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   ChevronDown20Regular,
+  ChevronUp20Regular,
 } from "@fluentui/react-icons";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { products } from "../data/products";
@@ -44,12 +45,15 @@ const useStyles = makeStyles({
   brand: {
     display: "flex",
     alignItems: "center",
-    fontSize: "20px",
-    fontWeight: 700,
     textDecoration: "none",
   },
-  brandRed: { color: "var(--maq-red)", fontWeight: 800 },
-  brandGray: { color: "var(--maq-ink)", fontWeight: 500, marginLeft: "6px" },
+  brandLogo: {
+    height: "22px",
+    width: "auto",
+    display: "block",
+    flexShrink: 0,
+    transform: "translateY(-3px)",
+  },
   links: {
     display: "flex",
     gap: "4px",
@@ -127,6 +131,27 @@ const useStyles = makeStyles({
     marginTop: "8px",
     fontWeight: 600,
     marginBottom: "12px",
+    cursor: "default",
+  },
+  mobileSectionHeader: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "10px 0",
+    cursor: "pointer",
+    background: "transparent",
+    border: "none",
+    width: "100%",
+    color: "#fff",
+    fontSize: "16px",
+    fontWeight: 600,
+  },
+  mobileSectionChevron: {
+    transition: "transform 0.2s",
+  },
+  mobileSubListWrapper: {
+    overflow: "hidden",
+    transition: "max-height 0.3s ease",
   },
   mobileNavLink: {
     display: "block",
@@ -134,6 +159,16 @@ const useStyles = makeStyles({
     color: "#fff",
     textDecoration: "none",
     fontSize: "16px",
+  },
+  mobileNavLinkActive: {
+    display: "block",
+    padding: "10px 0",
+    color: "#fff",
+    textDecoration: "none",
+    fontSize: "16px",
+    backgroundColor: "rgba(255, 255, 255, 0.12)",
+    borderRadius: "6px",
+    fontWeight: 600,
   },
   navBtnActive: {
     backgroundColor: "var(--maq-red-pale)",
@@ -144,7 +179,7 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
   },
   mobileRequestDemoBtn: {
-    fontWeight: 700,
+    fontWeight: 600,
   },
 });
 
@@ -219,6 +254,8 @@ function MegaMenu({
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const s = useStyles();
+  const [open, setOpen] = useState(false);
+
   // Pick only the most specific (longest matching) item so a parent link
   // like "/products" doesn't also highlight when on "/products/embedfast".
   const activeHref = items.reduce<string | undefined>((best, i) => {
@@ -226,13 +263,18 @@ function MegaMenu({
     if (!best || (i.href as string).length > best.length) return i.href;
     return best;
   }, undefined);
-  const groupActive = activeHref !== undefined;
   return (
-    <Menu>
+    <Menu
+      open={open}
+      onOpenChange={(_, data) => setOpen(data.open)}
+      openOnHover
+      hoverDelay={0}
+      closeOnScroll
+    >
       <MenuTrigger disableButtonEnhancement>
         <Button
           appearance="subtle"
-          className={`${btnClass ?? ""} ${groupActive ? s.navBtnActive : ""}`}
+          className={btnClass}
           icon={<ChevronDown20Regular />}
           iconPosition="after"
         >
@@ -247,6 +289,7 @@ function MegaMenu({
               className={i.href === activeHref ? s.menuItemActive : undefined}
               onClick={() => {
                 if (!i.href) return;
+                setOpen(false);
                 if (i.href.startsWith("http")) {
                   window.open(i.href, "_blank", "noopener,noreferrer");
                   return;
@@ -263,12 +306,102 @@ function MegaMenu({
   );
 }
 
+function MobileSection({
+  label,
+  items,
+  expanded,
+  onToggle,
+  navigateTo,
+  pathname,
+  isFirst,
+  firstFocusable,
+}: {
+  label: string;
+  items: NavItem[];
+  expanded: boolean;
+  onToggle: () => void;
+  navigateTo: (href?: string) => void;
+  pathname: string;
+  isFirst?: boolean;
+  firstFocusable: React.RefObject<HTMLElement | null>;
+}) {
+  const s = useStyles();
+  // Find the most specific (longest) active item in this section
+  const activeHref = items.reduce<string | undefined>((best, i) => {
+    if (!isItemActive(i.href, pathname)) return best;
+    if (!best || (i.href as string).length > best.length) return i.href;
+    return best;
+  }, undefined);
+  return (
+    <div className={s.mobileSection}>
+      <button className={s.mobileSectionHeader} onClick={onToggle}>
+        <span>{label}</span>
+        <span className={s.mobileSectionChevron} style={{ display: expanded ? "none" : "inline-block" }}>
+          <ChevronDown20Regular />
+        </span>
+        <span className={s.mobileSectionChevron} style={{ display: expanded ? "inline-block" : "none" }}>
+          <ChevronUp20Regular />
+        </span>
+      </button>
+      {expanded && (
+        <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
+          {items.map((i, idx) => {
+            const isActive = i.href === activeHref;
+            return (
+              <li key={i.label} className={s.mobileNavItem}>
+                <a
+                  href={i.href}
+                  className={isActive ? s.mobileNavLinkActive : s.mobileNavLink}
+                  ref={isFirst && idx === 0 ? ((el) => ((firstFocusable as React.MutableRefObject<HTMLElement | null>).current = el)) : undefined}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigateTo(i.href);
+                  }}
+                >
+                  {i.label}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 export function Header() {
   const s = useStyles();
   const [open, setOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const toggleRef = useRef<HTMLButtonElement | null>(null);
   const firstFocusable = useRef<HTMLElement | null>(null);
   const scrollPos = useRef<number>(0);
+  const { pathname } = useLocation();
+
+  // Determine which section contains the current active item
+  const activeSectionKey = (() => {
+    const allSections: Record<string, NavItem[]> = {
+      services,
+      products: productNav,
+      industries,
+      partnerships,
+      insights,
+      about,
+    };
+    for (const [key, items] of Object.entries(allSections)) {
+      if (items.some((i) => isItemActive(i.href, pathname))) {
+        return key;
+      }
+    }
+    return null;
+  })();
+
+  // Auto-expand the active section when menu opens
+  useEffect(() => {
+    if (open && activeSectionKey && !expandedSections[activeSectionKey]) {
+      setExpandedSections((prev) => ({ ...prev, [activeSectionKey]: true }));
+    }
+  }, [open]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -309,6 +442,10 @@ export function Header() {
     setOpen(false);
   }
 
+  function toggleSection(key: string) {
+    setExpandedSections((prev) => ({ ...prev, [key]: !prev[key] }));
+  }
+
   function navigateTo(href?: string) {
     if (!href) return;
     if (href.startsWith("http")) {
@@ -322,8 +459,7 @@ export function Header() {
   return (
     <nav className={`${s.nav} site-header`}>
       <Link to="/" className={s.brand} aria-label="MAQ Software homepage">
-        <span className={s.brandRed}>MAQ</span>
-        <span className={s.brandGray}>Software</span>
+        <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
       </Link>
 
       <button
@@ -351,11 +487,7 @@ export function Header() {
       <div className={`${s.right} header-right`}>
         <Button
           appearance="primary"
-          onClick={() =>
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={() => navigateTo("/contact")}
         >
           Request a demo
         </Button>
@@ -376,142 +508,80 @@ export function Header() {
                 ×
               </button>
               <div className={s.mobileBrand}>
-                <Link to="/" onClick={closeMenu} className={s.brand}>
-                  <span className={s.brandRed}>MAQ</span>
-                  <span className={s.brandGray} style={{ color: "#8f8f8f" }}>Software</span>
+                <Link to="/" onClick={closeMenu} className={s.brand} aria-label="MAQ Software homepage">
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
                 </Link>
               </div>
 
               <div>
                 {/* Services */}
-                <div className={s.mobileSection}>
-                  <div className={s.mobileSectionTitle}>Services</div>
-                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
-                    {services.map((i, idx) => (
-                      <li key={i.label} className={s.mobileNavItem}>
-                      <a
-                        href={i.href}
-                        className={s.mobileNavLink}
-                        ref={idx === 0 ? ((el) => (firstFocusable.current = el as HTMLElement)) : undefined}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          navigateTo(i.href);
-                        }}
-                      >
-                        {i.label}
-                      </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <MobileSection
+                  label="Services"
+                  items={services}
+                  expanded={expandedSections["services"] ?? (activeSectionKey === "services")}
+                  onToggle={() => toggleSection("services")}
+                  navigateTo={navigateTo}
+                  pathname={pathname}
+                  isFirst
+                  firstFocusable={firstFocusable}
+                />
 
                 {/* Products */}
-                <div className={s.mobileSection}>
-                  <div className={s.mobileSectionTitle}>Products</div>
-                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
-                    {productNav.map((i) => (
-                      <li key={i.label} className={s.mobileNavItem}>
-                        <a
-                          href={i.href}
-                          className={s.mobileNavLink}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigateTo(i.href);
-                          }}
-                        >
-                          {i.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <MobileSection
+                  label="Products"
+                  items={productNav}
+                  expanded={expandedSections["products"] ?? (activeSectionKey === "products")}
+                  onToggle={() => toggleSection("products")}
+                  navigateTo={navigateTo}
+                  pathname={pathname}
+                  firstFocusable={firstFocusable}
+                />
 
                 {/* Industries */}
-                <div className={s.mobileSection}>
-                  <div className={s.mobileSectionTitle}>Industries</div>
-                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
-                    {industries.map((i) => (
-                      <li key={i.label} className={s.mobileNavItem}>
-                        <a
-                          href={i.href}
-                          className={s.mobileNavLink}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigateTo(i.href);
-                          }}
-                        >
-                          {i.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <MobileSection
+                  label="Industries"
+                  items={industries}
+                  expanded={expandedSections["industries"] ?? (activeSectionKey === "industries")}
+                  onToggle={() => toggleSection("industries")}
+                  navigateTo={navigateTo}
+                  pathname={pathname}
+                  firstFocusable={firstFocusable}
+                />
 
                 {/* Partnerships */}
-                <div className={s.mobileSection}>
-                  <div className={s.mobileSectionTitle}>Partnerships</div>
-                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
-                    {partnerships.map((i) => (
-                      <li key={i.label} className={s.mobileNavItem}>
-                        <a
-                          href={i.href}
-                          className={s.mobileNavLink}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigateTo(i.href);
-                          }}
-                        >
-                          {i.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <MobileSection
+                  label="Partnerships"
+                  items={partnerships}
+                  expanded={expandedSections["partnerships"] ?? (activeSectionKey === "partnerships")}
+                  onToggle={() => toggleSection("partnerships")}
+                  navigateTo={navigateTo}
+                  pathname={pathname}
+                  firstFocusable={firstFocusable}
+                />
 
                 {/* Insights */}
-                <div className={s.mobileSection}>
-                  <div className={s.mobileSectionTitle}>Insights</div>
-                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
-                    {insights.map((i) => (
-                      <li key={i.label} className={s.mobileNavItem}>
-                        <a
-                          href={i.href}
-                          className={s.mobileNavLink}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigateTo(i.href);
-                          }}
-                        >
-                          {i.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <MobileSection
+                  label="Insights"
+                  items={insights}
+                  expanded={expandedSections["insights"] ?? (activeSectionKey === "insights")}
+                  onToggle={() => toggleSection("insights")}
+                  navigateTo={navigateTo}
+                  pathname={pathname}
+                  firstFocusable={firstFocusable}
+                />
 
                 {/* About */}
-                <div className={s.mobileSection}>
-                  <div className={s.mobileSectionTitle}>About</div>
-                  <ul className={`${s.mobileNavList} ${s.mobileSubList}`}>
-                    {about.map((i) => (
-                      <li key={i.label} className={s.mobileNavItem}>
-                        <a
-                          href={i.href}
-                          className={s.mobileNavLink}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigateTo(i.href);
-                          }}
-                        >
-                          {i.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
+                <MobileSection
+                  label="About"
+                  items={about}
+                  expanded={expandedSections["about"] ?? (activeSectionKey === "about")}
+                  onToggle={() => toggleSection("about")}
+                  navigateTo={navigateTo}
+                  pathname={pathname}
+                  firstFocusable={firstFocusable}
+                />
                 <div style={{ marginTop: 24, marginBottom: 40 }}>
-                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => { closeMenu(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>
+                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => navigateTo('/contact')}>
                     Request a demo
                   </Button>
                 </div>

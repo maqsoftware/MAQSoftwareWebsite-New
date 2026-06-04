@@ -24,9 +24,8 @@ const useStyles = makeStyles({
   sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0 },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
   },
   card: {
     display: "flex",

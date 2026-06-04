@@ -146,7 +146,7 @@ Third-party widgets
 
 ## QA checklist (manual)
 - [ ] Review desktop pages at 1280×800 and 1920×1080 — confirm no visual changes.
-- [ ] Review mobile pages at common sizes: 360×800, 375×812, 414×896 — confirm layout, nav, forms, and CTAs are usable.
+ - [ ] Review mobile pages at common sizes: 320×568, 375×568, 425×568, 768×568, 360×800, 375×812, 414×896 — confirm layout, nav, forms, and CTAs are usable.
 - [ ] Confirm images load appropriate sizes and CLS is low for hero/content images.
 - [ ] Test menu open/close focus trap and keyboard accessibility.
 - [ ] Check tap targets, input types, and keyboard types for forms.
