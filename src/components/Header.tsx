@@ -478,11 +478,7 @@ export function Header() {
       <div className={`${s.right} header-right`}>
         <Button
           appearance="primary"
-          onClick={() =>
-            document
-              .getElementById("contact")
-              ?.scrollIntoView({ behavior: "smooth" })
-          }
+          onClick={() => navigateTo("/contact")}
         >
           Request a demo
         </Button>
@@ -504,7 +500,7 @@ export function Header() {
               </button>
               <div className={s.mobileBrand}>
                 <Link to="/" onClick={closeMenu} className={s.brand} aria-label="MAQ Software homepage">
-                    <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
                 </Link>
               </div>
 
@@ -575,9 +571,8 @@ export function Header() {
                   pathname={pathname}
                   firstFocusable={firstFocusable}
                 />
-
                 <div style={{ marginTop: 24, marginBottom: 40 }}>
-                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => { closeMenu(); window.location.href = "/contact"; }}>
+                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => navigateTo('/contact')}>
                     Request a demo
                   </Button>
                 </div>
