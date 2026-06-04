@@ -9,6 +9,7 @@ import {
   CalendarLtr20Regular,
   ArrowRight20Regular,
 } from "@fluentui/react-icons";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   wrap: {
@@ -125,6 +126,7 @@ const regions: { name: string; pct: number }[] = [
 
 export function Hero() {
   const s = useStyles();
+  const navigate = useNavigate();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -145,11 +147,7 @@ export function Hero() {
               appearance="primary"
               size="large"
               icon={<CalendarLtr20Regular />}
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
+              onClick={() => navigate("/contact")}
             >
               Request a demo
             </Button>
