@@ -38,10 +38,8 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     backgroundColor: "#fff",
@@ -91,6 +89,9 @@ const useStyles = makeStyles({
     lineHeight: 1.6,
     flex: 1,
     marginBottom: "20px",
+  },
+  badge: {
+    padding: "10px 10px",
   },
   badgeRow: { display: "flex", gap: "6px", marginBottom: "16px", flexWrap: "wrap" },
   more: {
@@ -192,7 +193,7 @@ export function Products() {
               <div className={s.desc}>{p.desc}</div>
               <div className={s.badgeRow}>
                 {p.tags.map((t) => (
-                  <Badge key={t} appearance="outline" color="brand" size="small">
+                  <Badge key={t} appearance="outline" color="brand" size="small" className={s.badge}>
                     {t}
                   </Badge>
                 ))}

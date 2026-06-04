@@ -165,7 +165,8 @@ const useStyles = makeStyles({
     fontSize: "14px",
     fontWeight: 600,
     color: "var(--maq-red)",
-    marginTop: "4px",
+    marginTop: "auto",
+    paddingTop: "3px",
   },
 });
 

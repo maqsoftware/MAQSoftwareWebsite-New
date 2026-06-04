@@ -15,7 +15,7 @@ import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { Testimonials } from "../components/industry/Testimonials";
+// import { Testimonials } from "../components/industry/Testimonials";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
@@ -285,7 +285,7 @@ export function IndustryFinancialServices() {
         sub="Accelerate financial outcomes with ready-to-deploy Microsoft Azure Marketplace offerings and MAQ Software products—spanning consulting services, real-time intelligence, AI analytics, and migration."
         offers={fsOffers}
       />
-      <Testimonials quotes={fsTestimonials} />
+      {/* <Testimonials quotes={fsTestimonials} /> */}
       <CTA />
     </>
   );
