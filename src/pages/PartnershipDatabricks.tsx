@@ -116,7 +116,7 @@ const highlights = [
   { metric: "34+", label: "Databricks Data Engineering Associates" },
   { metric: "7+", label: "Databricks Data Engineering Professionals" },
   { metric: "66+", label: "Databricks Sales Badges" },
-  { metric: "", label: "Global client engagements" },
+  // { metric: "", label: "Global client engagements" },
 ];
 
 const offerings = [

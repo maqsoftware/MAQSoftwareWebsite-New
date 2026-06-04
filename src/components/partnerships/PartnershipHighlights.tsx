@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, mergeClasses, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -26,7 +26,17 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(4, 1fr)",
     gap: "16px",
     "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+    //changes for cards
+    "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
+  gridThree: {
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    maxWidth: "930px",
+    margin: "0 auto",
+    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(3, 1fr)" },
+    "@media (max-width: 720px)": { gridTemplateColumns: "1fr" },
+  },
+  //tiil here
   card: {
     border: `1px solid ${tokens.colorNeutralStroke2}`,
     borderRadius: "10px",
@@ -72,6 +82,8 @@ export function PartnershipHighlights({
   stats,
 }: PartnershipHighlightsProps) {
   const s = useStyles();
+  const isThreeCardLayout = stats.length === 3; //changes for 3 card layout
+
   return (
     <section className={s.section}>
       <div className={s.inner}>
@@ -79,7 +91,9 @@ export function PartnershipHighlights({
           {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.title}>{title}</h2>
         </div>
-        <div className={s.grid}>
+        // changes for 3 card layout
+        {/* <div className={s.grid}> */}
+        <div className={mergeClasses(s.grid, isThreeCardLayout && s.gridThree)}> 
           {stats.map((h) => (
             <div key={h.label} className={s.card}>
               <div className={s.metric}>{h.metric}</div>
