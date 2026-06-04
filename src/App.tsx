@@ -63,6 +63,70 @@ function ScrollToTop() {
 
 export function App() {
   const s = useStyles();
+  // Ensure SPA responds immediately when the viewport changes (device toolbar or resize).
+  // Some browsers/devtools don't always force a repaint that re-applies CSS-in-JS styles
+  // or media-query-dependent layout; keeping a body class in sync with matchMedia
+  // ensures styles tied to `.is-mobile` or generic reflow happen immediately.
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 768px)");
+    const update = (e?: MediaQueryListEvent | MediaQueryList) => {
+      try {
+        const matches = mq.matches;
+        // diagnostic log to help debug when running in devtools
+        // eslint-disable-next-line no-console
+        // also set a DOM attribute so it's easy to inspect in Elements panel
+        try {
+          document.body.setAttribute("data-is-mobile", String(matches));
+        } catch (e) {
+          /* ignore */
+        }
+        if (matches) document.body.classList.add("is-mobile");
+        else document.body.classList.remove("is-mobile");
+      } catch (err) {
+        // ignore
+      }
+    };
+
+    // Initial set
+    update(mq);
+
+    // matchMedia change listener (modern + legacy)
+    if ((mq as any).addEventListener) mq.addEventListener("change", update as any);
+    else (mq as any).addListener(update as any);
+
+    // Fallback: also respond to resize and orientationchange events
+    const onResize = () => update();
+    window.addEventListener("resize", onResize);
+    window.addEventListener("orientationchange", onResize);
+
+    // Some devtools/device-toolbar toggles don't reliably emit events immediately.
+    // Polling briefly after mount can catch these cases in practice.
+    let pollHandle: number | null = null;
+    let pollCount = 0;
+    const startPoll = () => {
+      pollHandle = window.setInterval(() => {
+        pollCount += 1;
+        update();
+        if (pollCount > 8 && pollHandle != null) {
+          window.clearInterval(pollHandle);
+          pollHandle = null;
+        }
+      }, 150);
+    };
+    startPoll();
+
+    // cleanup
+    return () => {
+      if ((mq as any).removeEventListener) mq.removeEventListener("change", update as any);
+      else (mq as any).removeListener(update as any);
+      window.removeEventListener("resize", onResize);
+      window.removeEventListener("orientationchange", onResize);
+      if (pollHandle != null) {
+        window.clearInterval(pollHandle);
+        pollHandle = null;
+      }
+    };
+  }, []);
   return (
     <div className={s.root}>
       <ScrollToTop />

@@ -87,13 +87,13 @@ const useStyles = makeStyles({
     fontSize: "13.5px",
     color: "var(--maq-text-muted)",
     lineHeight: 1.6,
-    flex: 1,
     marginBottom: "20px",
   },
   badge: {
     padding: "10px 10px",
   },
   badgeRow: { display: "flex", gap: "6px", marginBottom: "16px", flexWrap: "wrap" },
+  badge: { padding: "2px 10px" },
   more: {
     display: "inline-flex",
     alignItems: "center",
@@ -101,6 +101,7 @@ const useStyles = makeStyles({
     fontSize: "13px",
     color: "var(--maq-red)",
     fontWeight: 600,
+    marginTop: "auto",
   },
 });
 

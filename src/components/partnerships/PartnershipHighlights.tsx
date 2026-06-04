@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, mergeClasses, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -26,6 +26,7 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
   },
+  //tiil here
   card: {
     border: `1px solid ${tokens.colorNeutralStroke2}`,
     borderRadius: "10px",
@@ -71,6 +72,9 @@ export function PartnershipHighlights({
   stats,
 }: PartnershipHighlightsProps) {
   const s = useStyles();
+  //changes for 3 card layout
+  const isThreeCardLayout = stats.length === 3; 
+
   return (
     <section className={s.section}>
       <div className={s.inner}>
@@ -78,7 +82,9 @@ export function PartnershipHighlights({
           {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.title}>{title}</h2>
         </div>
-        <div className={s.grid}>
+        {/* changes for 3 card layout */}
+        {/* <div className={s.grid}> */}
+        <div className={mergeClasses(s.grid, isThreeCardLayout && s.gridThree)}> 
           {stats.map((h) => (
             <div key={h.label} className={s.card}>
               <div className={s.metric}>{h.metric}</div>

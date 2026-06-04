@@ -1,5 +1,6 @@
 import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
+import { useNavigate } from "react-router-dom";
 import { TrustBanner } from "../components/TrustBanner";
 import { useProductPageStyles } from "./productPageStyles";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
@@ -27,6 +28,7 @@ const resources = [
 
 export function ProductAIDataLens() {
   const s = useProductPageStyles();
+  const navigate = useNavigate();
   return (
     <>
       <section className={s.hero}>
@@ -38,7 +40,7 @@ export function ProductAIDataLens() {
               Transform how users interact with data by enabling natural-language queries and delivering instant, intelligent insights. Unlock a new way to interact with your data.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Demo%20-%20AI-DataLens&body=Hello,%20I%20would%20like%20to%20request%20a%20demo%20for%20AI-DataLens.">
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => navigate("/contact")}>
                 Request a demo
               </Button>
               <Button appearance="outline" size="large" icon={<ArrowRight20Regular />} iconPosition="after" onClick={() => document.getElementById("ai-datalens-features")?.scrollIntoView({ behavior: "smooth" })}>
