@@ -223,6 +223,25 @@ function MegaMenu({
   const navigate = useNavigate();
   const { pathname } = useLocation();
   const s = useStyles();
+  const [open, setOpen] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+
+  function clearCloseTimer() {
+    if (closeTimer.current !== null) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  }
+  function scheduleClose() {
+    clearCloseTimer();
+    closeTimer.current = window.setTimeout(() => setOpen(false), 150);
+  }
+  function handleEnter() {
+    clearCloseTimer();
+    setOpen(true);
+  }
+  useEffect(() => () => clearCloseTimer(), []);
+
   // Pick only the most specific (longest matching) item so a parent link
   // like "/products" doesn't also highlight when on "/products/embedfast".
   const activeHref = items.reduce<string | undefined>((best, i) => {
@@ -232,38 +251,43 @@ function MegaMenu({
   }, undefined);
   const groupActive = activeHref !== undefined;
   return (
-    <Menu>
-      <MenuTrigger disableButtonEnhancement>
-        <Button
-          appearance="subtle"
-          className={mergeClasses(btnClass ?? "", groupActive ? s.navBtnActive : undefined)}
-          icon={<ChevronDown20Regular />}
-          iconPosition="after"
-        >
-          {label}
-        </Button>
-      </MenuTrigger>
-      <MenuPopover>
-        <MenuList>
-          {items.map((i) => (
-            <MenuItem
-              key={i.label}
-              className={i.href === activeHref ? s.menuItemActive : undefined}
-              onClick={() => {
-                if (!i.href) return;
-                if (i.href.startsWith("http")) {
-                  window.open(i.href, "_blank", "noopener,noreferrer");
-                  return;
-                }
-                navigate(i.href);
-              }}
-            >
-              {i.label}
-            </MenuItem>
-          ))}
-        </MenuList>
-      </MenuPopover>
-    </Menu>
+    <div onMouseEnter={handleEnter} onMouseLeave={scheduleClose} style={{ display: "inline-flex" }}>
+      <Menu open={open} onOpenChange={(_, data) => setOpen(data.open)} hoverDelay={0}>
+        <MenuTrigger disableButtonEnhancement>
+          <Button
+            appearance="subtle"
+            className={mergeClasses(btnClass ?? "", groupActive ? s.navBtnActive : undefined)}
+            icon={<ChevronDown20Regular />}
+            iconPosition="after"
+            onFocus={handleEnter}
+            onBlur={scheduleClose}
+          >
+            {label}
+          </Button>
+        </MenuTrigger>
+        <MenuPopover onMouseEnter={clearCloseTimer} onMouseLeave={scheduleClose}>
+          <MenuList>
+            {items.map((i) => (
+              <MenuItem
+                key={i.label}
+                className={i.href === activeHref ? s.menuItemActive : undefined}
+                onClick={() => {
+                  if (!i.href) return;
+                  setOpen(false);
+                  if (i.href.startsWith("http")) {
+                    window.open(i.href, "_blank", "noopener,noreferrer");
+                    return;
+                  }
+                  navigate(i.href);
+                }}
+              >
+                {i.label}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </MenuPopover>
+      </Menu>
+    </div>
   );
 }
 
