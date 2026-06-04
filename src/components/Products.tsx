@@ -89,10 +89,10 @@ const useStyles = makeStyles({
     fontSize: "13.5px",
     color: "var(--maq-text-muted)",
     lineHeight: 1.6,
-    flex: 1,
     marginBottom: "20px",
   },
   badgeRow: { display: "flex", gap: "6px", marginBottom: "16px", flexWrap: "wrap" },
+  badge: { padding: "2px 10px" },
   more: {
     display: "inline-flex",
     alignItems: "center",
@@ -100,6 +100,7 @@ const useStyles = makeStyles({
     fontSize: "13px",
     color: "var(--maq-red)",
     fontWeight: 600,
+    marginTop: "auto",
   },
 });
 
@@ -192,7 +193,7 @@ export function Products() {
               <div className={s.desc}>{p.desc}</div>
               <div className={s.badgeRow}>
                 {p.tags.map((t) => (
-                  <Badge key={t} appearance="outline" color="brand" size="small">
+                  <Badge key={t} appearance="outline" color="brand" size="small" className={s.badge}>
                     {t}
                   </Badge>
                 ))}
