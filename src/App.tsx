@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -131,6 +132,7 @@ export function App() {
     <div className={s.root}>
       <ScrollToTop />
       <Header />
+      <AnnouncementRibbon />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/industries/retail" element={<IndustryRetail />} />
