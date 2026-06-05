@@ -1,5 +1,6 @@
 import { makeStyles, tokens, Badge } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -131,14 +132,12 @@ export function IndustryCaseStudies({
           ))}
         </div>
         <div className={s.seeAll}>
-          <a
+          <Link
             className={s.seeAllLink}
-            href={seeAllHref}
-            target="_blank"
-            rel="noreferrer"
+            to={seeAllHref}
           >
             {seeAllLabel} <ArrowRight16Regular />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

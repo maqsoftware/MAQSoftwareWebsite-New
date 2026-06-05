@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import {
   CloudArrowUp24Regular,
@@ -232,10 +233,9 @@ export function ServiceCloudCapabilities() {
             ))}
           </div>
         </div>
-        <a className={s.footerLink} href="/insights/case-studies?filter=Cloud optimization#insights-content" target="_blank"
-          rel="noreferrer">
+        <Link className={s.footerLink} to="/insights/case-studies?filter=Cloud optimization#insights-content">
           See cloud case studies <ArrowRight16Regular />
-        </a>
+        </Link>
       </div>
     </section>
   );
