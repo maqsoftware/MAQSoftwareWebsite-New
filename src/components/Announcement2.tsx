@@ -39,7 +39,7 @@ export function Announcement() {
   return (
     <div className={s.bar} role="status">
       <div className={s.message}>
-        MAQ Software is a Diamond Sponsor at TechCon 365, DATACON &amp; PWRCON
+        MAQ Software is at TechCon 365, DATACON &amp; PWRCON
         Chicago 2026, taking place June 15–19, 2026, in Chicago, IL.{" "}
         <Link href="/techcon365" className={s.link} appearance="subtle">
           Learn more
