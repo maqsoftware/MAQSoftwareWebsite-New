@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Button, makeStyles, Link } from "@fluentui/react-components";
+import { Button, makeStyles } from "@fluentui/react-components";
 import { Dismiss20Regular } from "@fluentui/react-icons";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles({
   bar: {
@@ -20,6 +21,10 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     marginLeft: "8px",
     fontWeight: 600,
+    textDecoration: "none",
+    ":hover": {
+      textDecoration: "underline",
+    },
   },
   strong: { color: "var(--maq-red)", fontWeight: 700 },
   dismiss: {
@@ -41,9 +46,9 @@ export function Announcement() {
       <div className={s.message}>
         MAQ Software is at TechCon 365, DATACON &amp; PWRCON
         Chicago 2026, taking place June 15–19, 2026, in Chicago, IL.{" "}
-        <Link href="https://www.techcon365.com/Chicago/" className={s.link} appearance="subtle" target="_blank" rel="noopener">
+        <RouterLink to="/techcon365" className={s.link}>
           Learn more
-        </Link>
+        </RouterLink>
       </div>
       <Button
         appearance="subtle"
