@@ -6,8 +6,8 @@ import {
   ShieldCheckmark24Regular,
   BuildingGovernment24Regular,
 } from "@fluentui/react-icons";
-import { IndustryHero } from "../components/industry/IndustryHero";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
@@ -239,7 +239,7 @@ export function IndustryPublicSector() {
         scrollLabel="Explore public sector solutions"
         visual={<PublicSectorHeroVisual />}
       />
-      <TrustBanner />
+
       <ImpactStats
         eyebrow="Proven outcomes"
         title="Real impact for public sector leaders"

@@ -1,12 +1,12 @@
 import { Button, makeStyles } from "@fluentui/react-components";
 import {
+  Mail20Regular,
   ArrowRight20Regular,
   People24Regular,
   Trophy24Regular,
   Lightbulb24Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
-import { MaqPrimaryButton } from "./MaqPrimaryButton";
 
 const useStyles = makeStyles({
   wrap: {
@@ -165,9 +165,14 @@ export function Hero() {
             engineers deliver outcomes, not just recommendations.
           </p>
           <div className={s.btns}>
-            <MaqPrimaryButton href="mailto:customersuccess@maqsoftware.com?subject=Request%20a%20demo%20-%20MAQ%20Software">
-              Request a demo
-            </MaqPrimaryButton>
+            <Button
+              appearance="primary"
+              size="large"
+              icon={<Mail20Regular />}
+              onClick={() => navigate("/contact")}
+            >
+              Contact Us
+            </Button>
             <Button
               appearance="outline"
               size="large"

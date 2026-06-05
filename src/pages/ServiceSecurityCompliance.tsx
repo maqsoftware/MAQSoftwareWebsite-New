@@ -12,13 +12,14 @@ import {
   ArrowSync24Regular,
 } from "@fluentui/react-icons";
 import { ServiceHero } from "../components/service/ServiceHero";
-import { TrustBanner } from "../components/TrustBanner";
+
 import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
 import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
 // import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
 import { CTA } from "../components/CTA";
+// import { TrustBanner } from "../components/TrustBanner";
 import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
 import type { CaseStudyItem } from "../components/service/ServiceCaseStudies";
@@ -239,7 +240,7 @@ export function ServiceSecurityCompliance() {
         scrollTargetId="security-capabilities"
         visual={<SecurityVisual />}
       />
-      <TrustBanner />
+
       <ServiceCapabilities
         sectionId="security-capabilities"
         title="Our security & compliance capabilities"

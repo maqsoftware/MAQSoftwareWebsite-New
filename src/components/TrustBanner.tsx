@@ -40,11 +40,10 @@ const useStyles = makeStyles({
 });
 
 const items = [
-  { label: "Top 25 Global Microsoft Partner", blue: true },
-  { label: "Microsoft Fabric Featured Partner", blue: true },
-  { label: "Power BI Partner of the Year — Global", blue: true },
+  { label: "Top 25 Global Microsoft Partner" },
+  { label: "Microsoft Fabric Featured Partner" },
+  { label: "Power BI Partner of the Year — Global" },
   { label: "Inc. 5000 — 12 Consecutive Times" },
-  { label: "1,800+ Engineers Globally" },
   { label: "ISO 27001 / 27701 / 27018 Certified" },
   { label: "Partners: Microsoft · Snowflake · Databricks" },
   { label: "Microsoft Preferred Supplier — 26 Years" },

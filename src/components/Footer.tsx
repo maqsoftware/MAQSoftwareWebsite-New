@@ -28,8 +28,8 @@ const useStyles = makeStyles({
   },
   brand: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" },
   logoMark: {
-    width: "32px",
-    height: "32px",
+    width: "80px",
+    height: "auto",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -184,9 +184,8 @@ export function Footer() {
           <div>
             <div className={s.brand}>
               <div className={s.logoMark}>
-                <img src="/favicon.png" alt="" className={s.logoImage} />
+                <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} />
               </div>
-              <div className={s.logoName}>MAQ Software</div>
             </div>
             <p className={s.about}>
               Microsoft Fabric Featured Partner. 26 years of enterprise

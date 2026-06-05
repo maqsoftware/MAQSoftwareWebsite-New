@@ -1,4 +1,5 @@
 import { Button, makeStyles, tokens, Badge } from "@fluentui/react-components";
+// import { TrustBanner } from "../components/TrustBanner";
 import {
   Mail24Regular,
   ArrowRight20Regular,
@@ -8,7 +9,7 @@ import {
   Wrench24Regular,
   Eye24Regular,
 } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+
 
 // ---------------------------------------------------------------------------
 // Styles
@@ -520,7 +521,7 @@ export function ProductFabricAdminAgent() {
       </section>
 
       {/* ---------------------- Trust banner ---------------------- */}
-      <TrustBanner />
+
 
       {/* ---------------------- Impact ---------------------- */}
       <section className={s.section}>

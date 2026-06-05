@@ -16,8 +16,9 @@ import {
     Sparkle20Filled,
     CheckmarkCircle20Filled,
 } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+
 import { CTA } from "../components/CTA";
+// import { TrustBanner } from \"../components/TrustBanner\";
 
 // ---------------------------------------------------------------------------
 // Self-contained page — does not share components with /services/agentic-ai
@@ -631,7 +632,7 @@ export function ServiceBusinessApps() {
                 </div>
             </section>
 
-            <TrustBanner />
+
 
             {/* CAPABILITIES */}
             <section className={s.section} id="business-apps-capabilities">

@@ -6,7 +6,7 @@ import {
   Body1,
 } from "@fluentui/react-components";
 import {
-  CalendarLtr20Regular,
+  Mail20Regular,
   ArrowRight20Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
@@ -146,10 +146,10 @@ export function Hero() {
             <Button
               appearance="primary"
               size="large"
-              icon={<CalendarLtr20Regular />}
+              icon={<Mail20Regular />}
               onClick={() => navigate("/contact")}
             >
-              Request a demo
+              Contact Us
             </Button>
             <Button
               appearance="outline"

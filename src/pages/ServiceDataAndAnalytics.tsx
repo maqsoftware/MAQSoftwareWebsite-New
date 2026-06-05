@@ -1,5 +1,6 @@
 import { ServiceHeroData } from "../components/service/ServiceHeroData";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from \"../components/TrustBanner\";
+
 import { ServiceCapabilitiesData } from "../components/service/ServiceCapabilitiesData";
 import { ServiceOutcomesData } from "../components/service/ServiceOutcomesData";
 import { ServiceCaseStudiesData } from "../components/service/ServiceCaseStudiesData";
@@ -17,7 +18,7 @@ export function ServiceDataAndAnalytics() {
   return (
     <>
       <ServiceHeroData />
-      <TrustBanner />
+
       <ServiceCapabilitiesData />
       <ServiceOutcomesData />
       <ServiceCaseStudiesData {...DATA_ANALYTICS_CASE_STUDIES_CONFIG} />

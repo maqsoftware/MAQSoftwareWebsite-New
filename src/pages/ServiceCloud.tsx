@@ -1,5 +1,6 @@
 import { ServiceCloudHero } from "../components/service/ServiceCloudHero";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { ServiceCloudCapabilities } from "../components/service/ServiceCloudCapabilities";
 import { ServiceCloudOutcomes } from "../components/service/ServiceCloudOutcomes";
 import { ServiceCloudCaseStudies } from "../components/service/ServiceCloudCaseStudies";
@@ -17,7 +18,7 @@ export function ServiceCloud() {
   return (
     <>
       <ServiceCloudHero />
-      <TrustBanner />
+
       <ServiceCloudCapabilities />
       <ServiceCloudOutcomes />
       <ServiceCloudCaseStudies {...CLOUD_CASE_STUDIES_CONFIG} />

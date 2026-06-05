@@ -5,8 +5,8 @@ import {
   HeartPulse24Regular,
   Beaker24Regular,
 } from "@fluentui/react-icons";
-import { IndustryHero } from "../components/industry/IndustryHero";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
@@ -284,7 +284,7 @@ export function IndustryHealthcareLifeSciences() {
         scrollLabel="Explore healthcare solutions"
         visual={<HealthcareHeroVisual />}
       />
-      <TrustBanner />
+
       <ImpactStats
         eyebrow="Proven outcomes"
         title="Real impact for healthcare and life sciences leaders"

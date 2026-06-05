@@ -1,5 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Button } from "@fluentui/react-components";
+// import { TrustBanner } from "../components/TrustBanner";
 import {
   Checkmark24Regular,
   Clock24Regular,
@@ -8,7 +9,7 @@ import {
   Star24Filled,
   ShieldCheckmark24Regular,
 } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+
 
 // ---------------------------------------------------------------------------
 // Styles
@@ -616,7 +617,7 @@ export function AboutWhoWeAre() {
         </div>
       </section>
 
-      <TrustBanner />
+
 
       {/* ── Driven by expertise ── */}
       <section className={s.drivenSection}>
@@ -823,6 +824,7 @@ export function AboutWhoWeAre() {
           </div>
         </div>
       </section>
+      {/* <TrustBanner /> */}
     </>
   );
 }
