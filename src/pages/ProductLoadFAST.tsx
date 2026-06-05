@@ -1,7 +1,8 @@
 import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular, Server24Regular, Group24Regular, CursorClick24Regular, Bot24Regular, ChartMultiple24Regular, People24Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+
 import { useProductPageStyles } from "./productPageStyles";
+// import { TrustBanner } from "../components/TrustBanner";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview";
@@ -57,7 +58,7 @@ export function ProductLoadFAST() {
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>

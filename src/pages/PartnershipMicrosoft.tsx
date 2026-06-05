@@ -8,7 +8,8 @@ import {
 } from "@fluentui/react-icons";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from \"../components/TrustBanner\";
+
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipValueProps } from "../components/partnerships/PartnershipValueProps";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
@@ -325,7 +326,7 @@ export function PartnershipMicrosoft() {
         imageUrl="/logos/Power_BI_Partner_Apr2023.png"
         imageAlt="MAQ Software and Microsoft"
       />
-      <TrustBanner />
+
       <PartnershipValueProps
         title="Why Microsoft?"
         items={whyMicrosoft}

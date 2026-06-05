@@ -7,14 +7,14 @@ import {
   Code24Regular,
   BranchFork24Regular,
 } from "@fluentui/react-icons";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { IndustryHero } from "../components/industry/IndustryHero";
-import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
+import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
-
-// --- Technology hero visual ---
 const useVisualStyles = makeStyles({
   tile: {
     background: "#fff",
@@ -210,7 +210,7 @@ export function IndustryTechnology() {
         scrollLabel="Explore tech solutions"
         visual={<TechnologyHeroVisual />}
       />
-      <TrustBanner />
+
       <ImpactStats
         eyebrow="Proven outcomes"
         title="Real impact for technology leaders"

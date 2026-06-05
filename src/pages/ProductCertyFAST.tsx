@@ -1,6 +1,7 @@
 import { Button } from "@fluentui/react-components";
+// import { TrustBanner } from \"../components/TrustBanner\";
 import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+
 import { useProductPageStyles } from "./productPageStyles";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
@@ -46,7 +47,7 @@ export function ProductCertyFAST() {
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>

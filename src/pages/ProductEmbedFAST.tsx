@@ -1,7 +1,8 @@
 import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+
 import { useProductPageStyles } from "./productPageStyles";
+// import { TrustBanner } from "../components/TrustBanner";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.embedfastpowerbi?tab=PlansAndPrice";
@@ -61,7 +62,7 @@ export function ProductEmbedFAST() {
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>

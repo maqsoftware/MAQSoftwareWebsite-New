@@ -1,7 +1,8 @@
 import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+
 import { useProductPageStyles } from "./productPageStyles";
+// import { TrustBanner } from "../components/TrustBanner";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const benefits = [
@@ -56,7 +57,7 @@ export function ProductMigrateFAST() {
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>

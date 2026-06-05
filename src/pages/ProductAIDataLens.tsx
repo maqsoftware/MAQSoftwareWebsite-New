@@ -1,7 +1,8 @@
 import { Button } from "@fluentui/react-components";
+// import { TrustBanner } from "../components/TrustBanner";
 import { Mail24Regular, ArrowRight20Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
-import { TrustBanner } from "../components/TrustBanner";
+
 import { useProductPageStyles } from "./productPageStyles";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
@@ -41,7 +42,7 @@ export function ProductAIDataLens() {
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => navigate("/contact")}>
-                Request a demo
+                Contact Us
               </Button>
               <Button appearance="outline" size="large" icon={<ArrowRight20Regular />} iconPosition="after" onClick={() => document.getElementById("ai-datalens-features")?.scrollIntoView({ behavior: "smooth" })}>
                 See key features
@@ -54,7 +55,7 @@ export function ProductAIDataLens() {
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>

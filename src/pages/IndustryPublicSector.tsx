@@ -6,14 +6,14 @@ import {
   ShieldCheckmark24Regular,
   BuildingGovernment24Regular,
 } from "@fluentui/react-icons";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { IndustryHero } from "../components/industry/IndustryHero";
-import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
+import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
-
-// --- Public Sector hero visual ---
 const useVisualStyles = makeStyles({
   tile: {
     background: "#fff",
@@ -239,7 +239,7 @@ export function IndustryPublicSector() {
         scrollLabel="Explore public sector solutions"
         visual={<PublicSectorHeroVisual />}
       />
-      <TrustBanner />
+
       <ImpactStats
         eyebrow="Proven outcomes"
         title="Real impact for public sector leaders"

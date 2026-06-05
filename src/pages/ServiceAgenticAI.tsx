@@ -1,5 +1,6 @@
 import { ServiceHero } from "../components/service/ServiceHero";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
 import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
@@ -17,7 +18,7 @@ export function ServiceAgenticAI() {
   return (
     <>
       <ServiceHero />
-      <TrustBanner />
+
       <ServiceCapabilities />
       <ServiceOutcomes />
       <ServiceCaseStudies {...SERVICE_CASE_STUDIES_CONFIG} />

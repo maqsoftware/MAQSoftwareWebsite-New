@@ -10,12 +10,12 @@ import {
   LockClosed24Regular,
   ArrowTrendingLines24Regular,
 } from "@fluentui/react-icons";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { IndustryHero } from "../components/industry/IndustryHero";
-import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-// import { Testimonials } from "../components/industry/Testimonials";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
@@ -260,7 +260,7 @@ export function IndustryFinancialServices() {
         scrollLabel="Explore financial solutions"
         visual={<FinancialHeroVisual />}
       />
-      <TrustBanner />
+
       <ImpactStats
         eyebrow="Proven outcomes"
         title="Real impact for financial services leaders"

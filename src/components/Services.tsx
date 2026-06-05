@@ -135,7 +135,7 @@ export const Services: FC = () => {
         <div className={s.head}>
           <span className={s.eyebrow}>What we do</span>
           <h2 className={s.title}>
-            Seven capabilities. One Microsoft-aligned partner.
+            Capabilities That Accelerate Growth.
           </h2>
           <p className={s.sub}>
             From AI agents to Fabric migrations — delivered by 1,800+ engineers

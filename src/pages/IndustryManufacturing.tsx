@@ -5,13 +5,13 @@ import {
   BoxMultiple24Regular,
   DocumentSearch24Regular,
 } from "@fluentui/react-icons";
+// import { TrustBanner } from "../components/TrustBanner";
+
 import { IndustryHero } from "../components/industry/IndustryHero";
-import { TrustBanner } from "../components/TrustBanner";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-// import { Testimonials } from "../components/industry/Testimonials";
 import { CTA } from "../components/CTA";
 
 // --- Manufacturing hero visual ---
@@ -217,7 +217,7 @@ export function IndustryManufacturing() {
         scrollLabel="Explore manufacturing solutions"
         visual={<ManufacturingHeroVisual />}
       />
-      <TrustBanner />
+
       <ImpactStats
         eyebrow="Proven outcomes"
         title="Real impact for manufacturing leaders"

@@ -484,14 +484,14 @@ export function Header() {
         <MegaMenu label="About" items={about} btnClass={s.navBtn} />
       </div>
 
-      <div className={`${s.right} header-right`}>
+      {/* <div className={`${s.right} header-right`}>
         <Button
           appearance="primary"
           onClick={() => navigateTo("/contact")}
         >
           Request a demo
         </Button>
-      </div>
+      </div> */}
 
       {/* Mobile overlay rendered as a portal to avoid clipping by ancestor styles */}
       {typeof document !== "undefined" && createPortal(
@@ -581,9 +581,9 @@ export function Header() {
                   firstFocusable={firstFocusable}
                 />
                 <div style={{ marginTop: 24, marginBottom: 40 }}>
-                  <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => navigateTo('/contact')}>
+                  {/* <Button appearance="primary" className={s.mobileRequestDemoBtn} onClick={() => navigateTo('/contact')}>
                     Request a demo
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </>

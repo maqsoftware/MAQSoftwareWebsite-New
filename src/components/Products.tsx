@@ -7,7 +7,7 @@ import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
-  section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
+  section: { padding: "32px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {

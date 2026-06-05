@@ -8,7 +8,8 @@ import {
 } from "@fluentui/react-icons";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from \"../components/TrustBanner\";
+
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipValueProps } from "../components/partnerships/PartnershipValueProps";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
@@ -209,7 +210,7 @@ export function PartnershipDatabricks() {
         imageAlt="MAQ Software and Databricks"
       />
 
-      <TrustBanner />
+
 
       <PartnershipValueProps eyebrow="Our advantage" title="Why Databricks?" items={whyDatabricks} />
 

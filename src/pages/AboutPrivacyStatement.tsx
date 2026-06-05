@@ -1,5 +1,6 @@
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from "../components/TrustBanner";
+
 
 const useStyles = makeStyles({
   page: {
@@ -99,7 +100,7 @@ export function AboutPrivacyStatement() {
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={styles.section}>
         <div className={styles.sectionInner}>

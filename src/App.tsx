@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -45,6 +46,7 @@ import { AboutCareers } from "./pages/AboutCareers";
 import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
 import { Contact } from "./pages/Contact";
 import { TermsOfService } from "./pages/TermsOfService";
+import { TechCon365 } from "./pages/TechCon365";
 
 const useStyles = makeStyles({
   root: {
@@ -131,6 +133,7 @@ export function App() {
     <div className={s.root}>
       <ScrollToTop />
       <Header />
+      <AnnouncementRibbon />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/industries/retail" element={<IndustryRetail />} />
@@ -300,6 +303,7 @@ export function App() {
         <Route path="/news" element={<AboutNews />} />
         <Route path="/careers" element={<AboutCareers />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/techcon365" element={<TechCon365 />} />
       </Routes>
       <Footer />
     </div>

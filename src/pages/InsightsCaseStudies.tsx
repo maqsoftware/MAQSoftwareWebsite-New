@@ -3,7 +3,8 @@ import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useMemo, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from \"../components/TrustBanner\";
+
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
@@ -100,7 +101,7 @@ useEffect(() => {
         primaryLabel="Explore latest studies"
         primaryTargetId="insights-content"
       />
-      <TrustBanner />
+
       <InsightsResourceNav active="case-studies" />
       <section className={s.section} id="insights-content">
         <div className={s.inner}>
