@@ -2,9 +2,6 @@ import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Mail20Regular,
   ArrowRight20Regular,
-  People24Regular,
-  Trophy24Regular,
-  Lightbulb24Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -148,6 +145,10 @@ const useStyles = makeStyles({
 export function Hero() {
   const s = useStyles();
   const navigate = useNavigate();
+  const handleContactClick = () => {
+    navigate("/contact");
+    window.open("mailto:CustomerSuccess@MAQSoftware.com", "_blank");
+  };
   return (
     <section className={s.wrap}>
       <img
@@ -174,27 +175,23 @@ export function Hero() {
 
       <div className={s.grid}>
         <div>
-          <div className={s.badgesRow}>
-            <span className={s.badge}>Microsoft Fabric Featured Partner</span>
-            <span className={s.badge}>Top 25 Global Microsoft Partner</span>
-          </div>
           <h1 className={s.h1}>
-            Turn data into decisions <em className={s.em}>faster</em> with
-            AI-powered analytics
+            Harness data to drive <em className={s.em}>faster</em> decisions with AI-powered analytics
           </h1>
           <p className={s.sub}>
             As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree,
-            MAQ Software brings 26 years of enterprise delivery to every
-            engagement. Whether you're modernizing a legacy BI stack, migrating
-            to the cloud, or scaling AI across your organization — our 1,800+
-            engineers deliver outcomes, not just recommendations.
+            MAQ Software combines 26 years of enterprise delivery excellence with
+            deep expertise in data, analytics, and AI. Whether modernizing legacy
+            BI platforms, accelerating cloud transformation, or scaling AI across
+            the enterprise, our team of 1,800+ engineers delivers measurable
+            business outcomes with speed, quality, and reliability.
           </p>
           <div className={s.btns}>
             <Button
               appearance="primary"
               size="large"
               icon={<Mail20Regular />}
-              onClick={() => navigate("/contact")}
+              onClick={handleContactClick}
             >
               Contact Us
             </Button>
