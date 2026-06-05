@@ -83,47 +83,73 @@ const useStyles = makeStyles({
     flexDirection: "column",
     gap: "16px",
   },
-  statCard: {
-    display: "flex",
-    alignItems: "center",
-    gap: "18px",
-    backgroundColor: "#fff",
-    border: "1px solid var(--maq-border)",
-    borderRadius: "16px",
-    padding: "22px 26px",
-    boxShadow: "0 4px 12px rgba(15,23,42,0.04)",
-  },
-  statIcon: {
-    width: "48px",
-    height: "48px",
-    borderRadius: "12px",
-    background: "var(--maq-gray-100)",
-    color: "var(--maq-gray-700)",
+
+  // ─── Hero image (replaces stat cards) ───────────────────────────────────────
+  visual: {
+    position: "relative",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexShrink: 0,
+    "@media (max-width: 960px)": {
+      // On mobile, constrain height so the image doesn't dominate
+      maxHeight: "320px",
+    },
   },
-  statBody: { display: "flex", flexDirection: "column" },
-  statNumber: {
-    fontSize: "30px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    lineHeight: 1.05,
-    letterSpacing: "-0.02em",
+  heroImg: {
+    width: "100%",
+    height: "auto",
+    maxHeight: "460px",
+    objectFit: "cover",
+    borderRadius: "16px",
+    boxShadow: "0 8px 32px rgba(15,23,42,0.10)",
+    display: "block",
+    "@media (max-width: 960px)": {
+      maxHeight: "320px",
+      borderRadius: "12px",
+    },
   },
-  statAccent: { color: "var(--maq-red)", marginLeft: "2px" },
-  statLabel: {
-    fontSize: "14px",
-    fontWeight: 600,
-    color: "var(--maq-ink)",
-    marginTop: "2px",
-  },
-  statMeta: {
-    fontSize: "12px",
-    color: "var(--maq-gray-500)",
-    marginTop: "2px",
-  },
+
+  // statCard: {
+  //   display: "flex",
+  //   alignItems: "center",
+  //   gap: "18px",
+  //   backgroundColor: "#fff",
+  //   border: "1px solid var(--maq-border)",
+  //   borderRadius: "16px",
+  //   padding: "22px 26px",
+  //   boxShadow: "0 4px 12px rgba(15,23,42,0.04)",
+  // },
+  // statIcon: {
+  //   width: "48px",
+  //   height: "48px",
+  //   borderRadius: "12px",
+  //   background: "var(--maq-gray-100)",
+  //   color: "var(--maq-gray-700)",
+  //   display: "flex",
+  //   alignItems: "center",
+  //   justifyContent: "center",
+  //   flexShrink: 0,
+  // },
+  // statBody: { display: "flex", flexDirection: "column" },
+  // statNumber: {
+  //   fontSize: "30px",
+  //   fontWeight: 700,
+  //   color: "var(--maq-black)",
+  //   lineHeight: 1.05,
+  //   letterSpacing: "-0.02em",
+  // },
+  // statAccent: { color: "var(--maq-red)", marginLeft: "2px" },
+  // statLabel: {
+  //   fontSize: "14px",
+  //   fontWeight: 600,
+  //   color: "var(--maq-ink)",
+  //   marginTop: "2px",
+  // },
+  // statMeta: {
+  //   fontSize: "12px",
+  //   color: "var(--maq-gray-500)",
+  //   marginTop: "2px",
+  // },
 });
 
 export function Hero() {
@@ -185,8 +211,17 @@ export function Hero() {
             </Button>
           </div>
         </div>
-
+        
+         {/* ── Right: hero image (stat cards commented out below) ── */}
         <div className={s.visual}>
+          <img
+            src="/HomePage.png"
+            alt="Analytics team reviewing data dashboards together"
+            className={s.heroImg}
+          />
+        </div>
+
+        {/* <div className={s.visual}>
           <div className={s.statCard}>
             <div className={s.statIcon}>
               <People24Regular />
@@ -225,7 +260,7 @@ export function Hero() {
               <div className={s.statMeta}>2013 — 2025</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
