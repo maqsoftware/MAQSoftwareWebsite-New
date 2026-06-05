@@ -24,7 +24,7 @@ export function Announcement() {
     <div className={s.bar}>
       <span className={s.strong}>New:</span> MAQ Software named Top 25 Global
       Microsoft Partner for 2026 &nbsp;·&nbsp;
-      <Link href="https://www.techcon365.com/Chicago/" className={s.link} appearance="subtle">
+      <Link href="" className={s.link} appearance="subtle">
         Read the announcement →
       </Link>
     </div>
