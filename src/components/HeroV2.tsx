@@ -179,7 +179,7 @@ export function Hero() {
               className="maq-secondary-btn"
               icon={<ArrowRight20Regular />}
               iconPosition="after"
-              onClick={() => navigate("/case-studies")}
+              onClick={() => navigate("/insights/case-studies")}
             >
               View case studies
             </Button>
