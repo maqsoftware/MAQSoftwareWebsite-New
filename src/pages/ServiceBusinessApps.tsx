@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import {
     Mail24Regular,
@@ -686,15 +687,13 @@ export function ServiceBusinessApps() {
                             ))}
                         </div>
                     </div>
-                    <a
+                    <Link
                         className={s.footerLink}
-                        href="/insights/case-studies?filter=Application%20modernization#insights-content"
-                        target="_blank"
-                        rel="noreferrer"
+                        to="/insights/case-studies?filter=Application%20modernization#insights-content"
                     >
                         See Business Intelligence case studies
                         <ArrowRight16Regular />
-                    </a>
+                    </Link>
                 </div>
             </section>
 
@@ -746,15 +745,13 @@ export function ServiceBusinessApps() {
                             </a>
                         ))}
                     </div>
-                    <a
+                    <Link
                         className={s.footerLink}
-                        href="/insights/case-studies?filter=Application%20modernization#insights-content"
-                        target="_blank"
-                        rel="noreferrer"
+                        to="/insights/case-studies#insights-content"
                     >
                         See all case studies
                         <ArrowRight16Regular />
-                    </a>
+                    </Link>
                 </div>
             </section>
 
