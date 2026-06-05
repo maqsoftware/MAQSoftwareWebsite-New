@@ -13,8 +13,8 @@ export function Home() {
       {/* <TrustBanner /> */}
 
       <Services />
-      <CaseStudies />
       <Products />
+      <CaseStudies />
       <CTA />
     </>
   );
