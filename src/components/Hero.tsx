@@ -127,13 +127,16 @@ const regions: { name: string; pct: number }[] = [
 export function Hero() {
   const s = useStyles();
   const navigate = useNavigate();
+  const handleContactClick = () => {
+    navigate("/contact");
+    window.open("mailto:CustomerSuccess@MAQSoftware.com", "_blank");
+  };
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
           <h1 className={s.h1}>
-            Turn data into decisions <em className={s.em}>faster</em> with
-            AI-powered analytics
+            Harness data to drive faster decisions with AI-powered analytics
           </h1>
           <Body1 as="p" className={s.sub}>
             A Microsoft Fabric Featured Partner with deep engineering across
@@ -147,7 +150,7 @@ export function Hero() {
               appearance="primary"
               size="large"
               icon={<Mail20Regular />}
-              onClick={() => navigate("/contact")}
+              onClick={handleContactClick}
             >
               Contact Us
             </Button>
