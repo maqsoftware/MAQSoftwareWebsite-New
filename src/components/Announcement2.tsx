@@ -44,8 +44,7 @@ export function Announcement() {
   return (
     <div className={s.bar} role="status">
       <div className={s.message}>
-        MAQ Software is at TechCon 365, DATACON &amp; PWRCON
-        Chicago 2026, taking place June 15–19, 2026, in Chicago, IL.{" "}
+       Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
         <RouterLink to="/techcon365" className={s.link}>
           Learn more
         </RouterLink>
