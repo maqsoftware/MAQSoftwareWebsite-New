@@ -46,6 +46,7 @@ import { AboutCareers } from "./pages/AboutCareers";
 import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
 import { Contact } from "./pages/Contact";
 import { TermsOfService } from "./pages/TermsOfService";
+import { TechCon365 } from "./pages/TechCon365";
 
 const useStyles = makeStyles({
   root: {
@@ -302,6 +303,7 @@ export function App() {
         <Route path="/news" element={<AboutNews />} />
         <Route path="/careers" element={<AboutCareers />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/techcon365" element={<TechCon365 />} />
       </Routes>
       <Footer />
     </div>
