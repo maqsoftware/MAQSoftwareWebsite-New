@@ -102,48 +102,47 @@ const useStyles = makeStyles({
     flexDirection: "column",
     gap: "16px",
   },
-
-  // statCard: {
-  //   display: "flex",
-  //   alignItems: "center",
-  //   gap: "18px",
-  //   backgroundColor: "#fff",
-  //   border: "1px solid var(--maq-border)",
-  //   borderRadius: "16px",
-  //   padding: "22px 26px",
-  //   boxShadow: "0 4px 12px rgba(15,23,42,0.04)",
-  // },
-  // statIcon: {
-  //   width: "48px",
-  //   height: "48px",
-  //   borderRadius: "12px",
-  //   background: "var(--maq-gray-100)",
-  //   color: "var(--maq-gray-700)",
-  //   display: "flex",
-  //   alignItems: "center",
-  //   justifyContent: "center",
-  //   flexShrink: 0,
-  // },
-  // statBody: { display: "flex", flexDirection: "column" },
-  // statNumber: {
-  //   fontSize: "30px",
-  //   fontWeight: 700,
-  //   color: "var(--maq-black)",
-  //   lineHeight: 1.05,
-  //   letterSpacing: "-0.02em",
-  // },
-  // statAccent: { color: "var(--maq-red)", marginLeft: "2px" },
-  // statLabel: {
-  //   fontSize: "14px",
-  //   fontWeight: 600,
-  //   color: "var(--maq-ink)",
-  //   marginTop: "2px",
-  // },
-  // statMeta: {
-  //   fontSize: "12px",
-  //   color: "var(--maq-gray-500)",
-  //   marginTop: "2px",
-  // },
+  statCard: {
+    display: "flex",
+    alignItems: "center",
+    gap: "18px",
+    backgroundColor: "#fff",
+    border: "1px solid var(--maq-border)",
+    borderRadius: "16px",
+    padding: "22px 26px",
+    boxShadow: "0 4px 12px rgba(15,23,42,0.04)",
+  },
+  statIcon: {
+    width: "48px",
+    height: "48px",
+    borderRadius: "12px",
+    background: "var(--maq-gray-100)",
+    color: "var(--maq-gray-700)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: 0,
+  },
+  statBody: { display: "flex", flexDirection: "column" },
+  statNumber: {
+    fontSize: "30px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    lineHeight: 1.05,
+    letterSpacing: "-0.02em",
+  },
+  statAccent: { color: "var(--maq-red)", marginLeft: "2px" },
+  statLabel: {
+    fontSize: "14px",
+    fontWeight: 600,
+    color: "var(--maq-ink)",
+    marginTop: "2px",
+  },
+  statMeta: {
+    fontSize: "12px",
+    color: "var(--maq-gray-500)",
+    marginTop: "2px",
+  },
 });
 
 export function Hero() {
@@ -177,7 +176,7 @@ export function Hero() {
         <div>
           <div className={s.badgesRow}>
             <span className={s.badge}>Microsoft Fabric Featured Partner</span>
-            <span className={s.badge}>Top 25 Global Microsoft Partner</span>
+            <span className={s.badge}>2021 Microsoft Power BI Partner of the Year</span>
           </div>
           <h1 className={s.h1}>
             Turn data into decisions <em className={s.em}>faster</em> with
