@@ -8,10 +8,46 @@ import {
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-const REGISTER_URL = "https://techcon365.com/Chicago/tickets";
-const BROCHURE_URL = "/resources/MAQ%20Software%20Brochure.pdf";
-const APPSOURCE_URL =
-  "https://appsource.microsoft.com/en-us/marketplace/partner-dir/3778db04-784a-4ef7-9eaa-7a9b67cf9e35/overview";
+export interface EventFeaturedSession {
+  label: string;
+  value: string;
+}
+
+export interface EventTalk {
+  type: string;
+  title: string;
+  desc: string;
+  time: string;
+  room: string;
+  speakers: string[];
+  href: string;
+}
+
+export interface EventResource {
+  label: string;
+  href: string;
+  desc: string;
+}
+
+export interface EventSolution {
+  name: string;
+  desc: string;
+  href: string;
+}
+
+export interface ConferenceEventPageProps {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  promo: string;
+  registerUrl: string;
+  featuredSessions: EventFeaturedSession[];
+  talks: EventTalk[];
+  offerings: string[];
+  resources: EventResource[];
+  solutions: EventSolution[];
+  contactSubject: string;
+}
 
 const useStyles = makeStyles({
   hero: {
@@ -48,10 +84,6 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     letterSpacing: "-0.02em",
     margin: "0 0 16px",
-  },
-  emText: {
-    color: "var(--maq-red)",
-    fontStyle: "normal",
   },
   sub: {
     fontSize: "16px",
@@ -298,106 +330,6 @@ const useStyles = makeStyles({
   },
 });
 
-const talks = [
-  {
-    type: "70 min - Technical Session",
-    title:
-      "Agentic Spec-Driven Development for Low-Code Power Platform and Copilot Studio Solutions",
-    desc:
-      "Explore how Agentic AI is transforming the way low-code solutions are designed, built, and governed using Microsoft Power Platform and Copilot Studio. We'll introduce a Spec-Driven Development approach - covering app generation, workflow orchestration, testing, documentation, and governance - and demonstrate how agentic patterns improve developer productivity and accelerate delivery while maintaining enterprise standards and scalability.",
-    time: "Wednesday, June 17 at 1:40 PM - 2:50 PM CDT",
-    room: "Room S106a",
-    tags: ["Copilot/AI", "Power Apps", "Power Automate", "Special Topics"],
-    speakers: [
-      "Keshav Polepalle, Solution Architect and Director, MAQ Software",
-      "Hansraj Singh, AI Architect, MAQ Software",
-    ],
-    href:
-      "https://techcon365.com/Chicago/agenda?search=agentic+spec+driven+development+for+low+code+power+platform+and+copilot+studio+solutions",
-  },
-  {
-    type: "20 min - Solution Showcase Session",
-    title: "M365 Copilot Enablement Best Practices and Learnings",
-    desc:
-      "Discover practical best practices and proven strategies for enabling Microsoft 365 Copilot across enterprise organizations. We'll cover the end-to-end enablement journey - from governance, security, and data readiness to change management, user adoption, and measuring success. Real-world examples and lessons learned will help you avoid common pitfalls and drive sustainable business value.",
-    time: "Thursday, June 18 at 10:20 AM - 10:40 AM CDT",
-    room: "Solution Showcase Stage",
-    tags: ["Adoption", "Admin/Implementation", "Security & Governance"],
-    speakers: [
-      "Keshav Polepalle, Solution Architect and Director, MAQ Software",
-      "Srinivas Kandula, Solution Architect and Director, MAQ Software",
-    ],
-    href:
-      "https://techcon365.com/Chicago/agenda?search=m365+copilot+enablement+best+practices+and+learning",
-  },
-];
-
-const offerings = [
-  "Accelerate M365 modernization across Teams, SharePoint, and Viva with governance built in",
-  "Enable Power Platform at enterprise scale with ALM, environment strategy, and DLP",
-  "Embed Copilot readiness with permissions hygiene, content quality, and information architecture",
-  "Orchestrate responsible AI with policies, monitoring, and clear data boundaries",
-  "Operationalize a Power Platform Center of Excellence with intake, standards, and monitoring",
-  "Strengthen collaboration security and compliance with lifecycle, external sharing, and Purview guardrails",
-  "Deliver sustainable adoption with change management and measurable productivity outcomes",
-];
-
-const resources = [
-  {
-    label: "Our company brochure",
-    href: BROCHURE_URL,
-    desc: "A quick overview of MAQ Software capabilities, recognitions, and Microsoft-aligned delivery.",
-  },
-  {
-    label: "Microsoft AppSource Partner profile page",
-    href: APPSOURCE_URL,
-    desc: "Explore MAQ Software offerings available through the Microsoft marketplace.",
-  },
-  {
-    label: "More about us and our recognitions",
-    href: "/who-we-are",
-    desc: "Learn more about MAQ Software, our history, recognitions, and global delivery model.",
-  },
-];
-
-const products = [
-  {
-    name: "MigrateFAST",
-    desc: "Accelerate reporting and data platform migration with AI-powered tools.",
-    href: "/products/migratefast",
-  },
-  {
-    name: "EmbedFAST",
-    desc: "Embed Power BI reports into enterprise solutions.",
-    href: "/products/embedfast",
-  },
-  {
-    name: "LoadFAST",
-    desc: "Simplify load testing for Power BI reports.",
-    href: "/products/loadfast",
-  },
-  {
-    name: "IngestFAST",
-    desc: "Streamline data ingestion with a standardized template.",
-    href: "https://blog.maqsoftware.com/search?q=IngestFAST",
-  },
-  {
-    name: "CertyFAST",
-    desc: "Make Power BI reports reliable and adhere to quality standards.",
-    href: "/products/certyfast",
-  },
-  {
-    name: "Fabric Admin Agent",
-    desc: "Track and monitor Fabric capacity health across tenants using an autonomous agent.",
-    href: "/products/fabric-admin-agent",
-  },
-  {
-    name: "AI-DataLens",
-    desc: "Unlock data-driven insights with AI-powered conversational analytics.",
-    href: "/products/ai-datalens",
-  },
-];
-
 function ProductLink({
   href,
   children,
@@ -407,7 +339,7 @@ function ProductLink({
   children: ReactNode;
   className: string;
 }) {
-  if (href.startsWith("http") || href === BROCHURE_URL) {
+  if (href.startsWith("http")) {
     return (
       <a className={className} href={href} target="_blank" rel="noreferrer">
         {children}
@@ -421,7 +353,7 @@ function ProductLink({
   );
 }
 
-export function TechCon365() {
+export function ConferenceEventPage(props: ConferenceEventPageProps) {
   const s = useStyles();
 
   return (
@@ -429,21 +361,17 @@ export function TechCon365() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <div>
-            <h1 className={s.h1}>Join <em className={s.emText}> MAQ Software</em> at TechCon 365 at Booth #20–21</h1>
-            <p className={s.sub}>
-              Learn how we help organizations modernize
-              their data platforms with Microsoft Fabric, Power BI, and
-              AI-powered analytics - and connect productivity to insights with
-              Power Platform and Copilot.
-            </p>
+            <span className={s.eyebrow}>{props.eyebrow}</span>
+            <h1 className={s.h1}>{props.title}</h1>
+            <p className={s.sub}>{props.subtitle}</p>
             <div className={s.promo}>
               <TicketDiagonal24Regular />
-              Use code "MAQ15" when registering to get 15% off your conference pass.
+              {props.promo}
             </div>
             <div className={s.btns}>
               <Button
                 as="a"
-                href={REGISTER_URL}
+                href={props.registerUrl}
                 target="_blank"
                 rel="noreferrer"
                 appearance="primary"
@@ -458,26 +386,23 @@ export function TechCon365() {
           <aside className={s.heroPanel} aria-label="Featured sessions">
             <h2 className={s.panelTitle}>Featured sessions</h2>
             <div className={s.eventGrid}>
-              <div 
-                className={s.eventRow}
-                onClick={() => document.getElementById("talks-section")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                <div className={s.iconBox}><Brain24Regular /></div>
-                <div>
-                  <div className={s.eventLabel}>Session 1</div>
-                  <div className={s.eventValue}>Agentic Spec-Driven Development</div>
+              {props.featuredSessions.map((item) => (
+                <div
+                  key={item.label}
+                  className={s.eventRow}
+                  onClick={() =>
+                    document
+                      .getElementById("talks-section")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  <div className={s.iconBox}><Brain24Regular /></div>
+                  <div>
+                    <div className={s.eventLabel}>{item.label}</div>
+                    <div className={s.eventValue}>{item.value}</div>
+                  </div>
                 </div>
-              </div>
-              <div 
-                className={s.eventRow}
-                onClick={() => document.getElementById("talks-section")?.scrollIntoView({ behavior: "smooth" })}
-              >
-                <div className={s.iconBox}><Brain24Regular /></div>
-                <div>
-                  <div className={s.eventLabel}>Session 2</div>
-                  <div className={s.eventValue}>M365 Copilot Enablement</div>
-                </div>
-              </div>
+              ))}
             </div>
           </aside>
         </div>
@@ -490,7 +415,7 @@ export function TechCon365() {
             <h2 className={s.title}>Sessions from MAQ Software leaders</h2>
           </div>
           <div className={s.talksGrid}>
-            {talks.map((talk) => (
+            {props.talks.map((talk) => (
               <article key={talk.title} className={s.talkCard}>
                 <h3 className={s.talkTitle}>{talk.title}</h3>
                 <p className={s.bodyText}>{talk.desc}</p>
@@ -528,7 +453,7 @@ export function TechCon365() {
             <h2 className={s.title}>Modernize Microsoft 365, Power Platform, Copilot, and AI</h2>
           </div>
           <div className={s.grid}>
-            {offerings.map((item) => (
+            {props.offerings.map((item) => (
               <div key={item} className={s.card}>
                 <h3 className={s.cardTitle}>{item}</h3>
               </div>
@@ -544,7 +469,7 @@ export function TechCon365() {
             <h2 className={s.title}>Explore MAQ Software resources</h2>
           </div>
           <div className={s.resourcesGrid}>
-            {resources.map((resource) => (
+            {props.resources.map((resource) => (
               <ProductLink key={resource.label} href={resource.href} className={s.resourceLink}>
                 <div className={s.card}>
                   <h3 className={s.cardTitle}>{resource.label}</h3>
@@ -566,10 +491,10 @@ export function TechCon365() {
             <h2 className={s.title}>Solutions designed to improve and streamline your operations</h2>
           </div>
           <div className={s.grid}>
-            {products.map((product) => (
-              <ProductLink key={product.name} href={product.href} className={s.productCard}>
-                <div className={s.productName}>{product.name}</div>
-                <div className={s.productDesc}>{product.desc}</div>
+            {props.solutions.map((solution) => (
+              <ProductLink key={solution.name} href={solution.href} className={s.productCard}>
+                <div className={s.productName}>{solution.name}</div>
+                <div className={s.productDesc}>{solution.desc}</div>
                 <span className={s.more}>
                   Learn more <ArrowRight20Regular fontSize={14} />
                 </span>
@@ -591,12 +516,12 @@ export function TechCon365() {
             <div className={s.storyButtons}>
               <Button
                 as="a"
-                href="mailto:customersuccess@maqsoftware.com?subject=TechCon%20365%20Chicago%202026%20meeting"
+                href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(props.contactSubject)}`}
                 appearance="primary"
                 size="large"
                 icon={<Mail24Regular />}
               >
-                Contact Us
+                Contact us
               </Button>
               <Button
                 as="a"
@@ -606,15 +531,12 @@ export function TechCon365() {
                 icon={<ArrowRight20Regular />}
                 iconPosition="after"
               >
-                Case studies
+                Read case studies
               </Button>
             </div>
             <div className={s.email}>
               Or email us directly at{" "}
-              <a
-                className={s.emailLink}
-                href="mailto:customersuccess@maqsoftware.com"
-              >
+              <a className={s.emailLink} href="mailto:customersuccess@maqsoftware.com">
                 customersuccess@maqsoftware.com
               </a>
             </div>

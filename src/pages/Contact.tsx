@@ -2,7 +2,6 @@ import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Location24Regular,
   Mail24Regular,
-  Call24Regular,
   People24Regular,
   Lightbulb24Regular,
 } from "@fluentui/react-icons";
@@ -326,7 +325,6 @@ export function Contact() {
                   <div className={s.miniActionColumn}>
                     {office.phone && (
                       <span className={s.miniLocationPhone}>
-                        <Call24Regular />
                         {office.phone}
                       </span>
                     )}

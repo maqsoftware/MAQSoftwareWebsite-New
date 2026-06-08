@@ -13,22 +13,22 @@ export const insightsResourceLinks: InsightsResourceLink[] = [
     description: "Client outcomes across AI, data, cloud, and reporting.",
   },
   {
+    key: "best-practice-guides",
+    label: "Best practices",
+    href: "/insights/best-practice-guides",
+    description: "Implementation playbooks and technical guidance.",
+  },
+  {
     key: "consulting-offers",
-    label: "Consulting offers",
+    label: "Marketplace offers",
     href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software",
     description: "Microsoft Marketplace engagements from MAQ Software.",
   },
   {
     key: "power-bi-custom-visual-guide",
-    label: "Power BI custom visual guide",
+    label: "Power BI custom visual",
     href: "/insights/power-bi-custom-visual-guide",
     description: "Certified custom visuals and category-based discovery.",
-  },
-  {
-    key: "best-practice-guides",
-    label: "Best practice guides",
-    href: "/insights/best-practice-guides",
-    description: "Implementation playbooks and technical guidance.",
   },
 ];
 

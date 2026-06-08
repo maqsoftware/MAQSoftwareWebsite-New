@@ -13,7 +13,6 @@ import { IndustryHero } from "../components/industry/IndustryHero";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
 // --- Retail hero visual ---
@@ -173,33 +172,6 @@ const retailCases = [
   },
 ];
 
-const retailOffers = [
-  {
-    pill: "Supply chain",
-    title: "Supply Chain & Vendor Performance Analytics for Retail: 4-Week PoC",
-    desc: "A 4-week proof of concept that unifies supplier, logistics, and inventory data to expose vendor performance gaps and improve supply chain reliability.",
-    href: "#", // TODO: replace with Azure Marketplace listing URL
-  },
-  {
-    pill: "Store operations",
-    title: "Store Operations & Workforce Intelligence for Retail: 2-Week Assessment",
-    desc: "A 2-week assessment that benchmarks store operations and workforce productivity on Microsoft Fabric, surfacing opportunities to lift throughput and service levels.",
-    href: "#", // TODO: replace with Azure Marketplace listing URL
-  },
-  {
-    pill: "Merchandising",
-    title: "Merchandising & Shelf Analytics for Retail: 2-Week Assessment",
-    desc: "A 2-week assessment that connects assortment, planogram, and shelf-execution data on Microsoft Fabric to sharpen merchandising and lift in-store conversion.",
-    href: "#", // TODO: replace with Azure Marketplace listing URL
-  },
-  {
-    pill: "Store operations",
-    title: "Store Manager Assistant for Retail",
-    desc: "A Copilot-powered assistant that gives store managers real-time visibility into sales, inventory, and workforce signals, with guided actions to run a smarter store.",
-    href: "#", // TODO: replace with Azure Marketplace listing URL
-  },
-];
-
 const retailTestimonials = [
   {
     body: "MAQ Software's team helped us move from overnight batches to live store KPIs in under a quarter. Our managers now act on minute-by-minute signals instead of yesterday's report.",
@@ -242,10 +214,6 @@ export function IndustryRetail() {
         cases={retailCases}
         seeAllLabel="See all retail case studies"
         seeAllHref="/insights/case-studies"
-      />
-      <MarketplaceOffers
-        sub="Accelerate retail outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning demand planning, customer experience, and real-time intelligence."
-        offers={retailOffers}
       />
       {/* <Testimonials quotes={retailTestimonials} /> */}
       <CTA />
