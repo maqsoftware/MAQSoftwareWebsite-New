@@ -105,7 +105,7 @@ const useStyles = makeStyles({
 });
 
 export function ServiceHero({
-  eyebrow = "AI solutions & agentic automation",
+  eyebrow = "AI Solutions & Agents",
   heading = "Build production-ready AI agents on Microsoft Foundry",
   subhead = "MAQ Software designs, builds, and operates GenAI agents and copilots on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting, with full governance, evaluation, and human-in-the-loop controls.",
   ctaMailSubject = "Agentic%20AI%20%26%20ML%20-%20MAQ%20Software",
@@ -128,7 +128,7 @@ export function ServiceHero({
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${ctaMailSubject}`}
             >
-              Contact us
+              Contact Us
             </Button>
             <Button
               appearance="outline"

@@ -166,7 +166,7 @@ export function AboutPrivacyStatement() {
         <div className={styles.sectionInner}>
           <h2 className={styles.sectionTitle}>How to Contact Us</h2>
           <p className={styles.body}>
-            If you have any questions regarding our privacy policy, please contact us at <a href="mailto:Support@MAQSoftware.com">Support@MAQSoftware.com</a>.
+            If you have any questions regarding our privacy policy, please Contact Us at <a href="mailto:Support@MAQSoftware.com">Support@MAQSoftware.com</a>.
           </p>
           <p className={styles.note}>
             This page is served at <strong>/privacystatement</strong> to preserve the existing legacy support route.

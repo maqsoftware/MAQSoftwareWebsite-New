@@ -97,7 +97,7 @@
 
 - **Section title:** `How to Contact Us`
 - **Section copy:**
-  > If you have any questions regarding our privacy policy, please contact us at [Support@MAQSoftware.com](mailto:Support@MAQSoftware.com)
+  > If you have any questions regarding our privacy policy, please Contact Us at [Support@MAQSoftware.com](mailto:Support@MAQSoftware.com)
 
 - **Primary support link:** `mailto:Support@MAQSoftware.com`
 

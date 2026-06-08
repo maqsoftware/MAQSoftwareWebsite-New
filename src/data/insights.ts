@@ -45,10 +45,10 @@ export interface CaseStudyItem {
 export const caseStudyFilters = [
   "All",
   "Agentic AI & Machine Learning",
-  "Data & analytics",
-  "Reporting & visualization",
+  "Data & AI Platforms",
+  "Insights & Analytics",
   "Application modernization",
-  "Cloud optimization",
+  "Cloud Modernization",
   "Security",
 ];
 
@@ -66,7 +66,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Modernizing retail business intelligence with Microsoft Fabric and Power BI",
     "href": "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
     "tag": "Modernizing retail",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-12",
     "teaser": "Case study: Modernizing retail business intelligence with Microsoft Fabric and Power BI.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/reporting-and-visualization/retail-report-stock-image.jpg"
@@ -75,7 +75,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Building scalable e-commerce product recommendations with Microsoft Fabric SQL",
     "href": "https://blog.maqsoftware.com/2025/09/building-scalable-e-commerce-product.html",
     "tag": "Building scalable",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-09",
     "teaser": "Case study: Building scalable e-commerce product recommendations with Microsoft Fabric SQL.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/ai-and-machine-learning/product_recommendations_cover.jpeg"
@@ -84,7 +84,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Transforming grocery retail analytics with Microsoft Fabric",
     "href": "https://blog.maqsoftware.com/2025/07/transforming-analytics-with-microsoft.html",
     "tag": "Transforming grocery",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Transforming grocery retail analytics with Microsoft Fabric.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/Grocery_retailer_report.jpeg"
@@ -93,7 +93,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Enhancing retail sales reporting by migrating from MicroStrategy to Power BI",
     "href": "https://blog.maqsoftware.com/2025/06/improving-retail-sales-reporting-by.html",
     "tag": "Enhancing retail",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Enhancing retail sales reporting by migrating from MicroStrategy to Power BI.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/Computer-with-report.jpeg"
@@ -102,7 +102,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Transforming supply chain analytics with Power BI on Snowflake for a specialty retailer",
     "href": "https://blog.maqsoftware.com/2025/03/transforming-supply-chain-analytics.html",
     "tag": "Transforming supply",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-03",
     "teaser": "Case study: Transforming supply chain analytics with Power BI on Snowflake for a specialty retailer.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/AdobeStock_305928424.jpeg"
@@ -129,7 +129,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Enabling real-time visibility: How a retail leader transformed Direct Store Delivery with Microsoft Fabric",
     "href": "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
     "tag": "Enabling real-time",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-05",
     "teaser": "Case study: Enabling real-time visibility: How a retail leader transformed Direct Store Delivery with Microsoft Fabric.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS076-banner.jpg"
@@ -147,7 +147,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Microsoft Fabric: Powering Real-Time Analytics for Retailers",
     "href": "https://blog.maqsoftware.com/2023/11/microsoft-fabric-powering-real-time.html",
     "tag": "Microsoft Fabric",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2023-11",
     "teaser": "Case study: Microsoft Fabric: Powering Real-Time Analytics for Retailers.",
     "imageUrl": "https://www.maqsoftware.com/images/blog/B025_MSFabric_Banner.png"
@@ -156,7 +156,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Real-time reporting for an organic supermarket chain",
     "href": "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
     "tag": "Real-time reporting",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2022-06",
     "teaser": "Case study: Real-time reporting for an organic supermarket chain.",
     "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBEIqfVElginQBBg8Fh2YfoF95hICj-XGOmvXvtCtZaTObO2XCm5HT0rott12MpvPpcye5K1q_zBl7T3uJj1Ib7-nIJsjqO-ON7YDSQDOIPYNhaGgZsqUoVaOOJAbYxIprFpjrDdv9uFaWR6taFMTCwrwSkY-68FnmBudwTkxr7S-XmJfw9_3W74fj0g/s1600/Shopper2.png"
@@ -219,7 +219,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Enhancing fintech analytics to provide millions of borrowers with better loan options",
     "href": "https://blog.maqsoftware.com/2022/06/enhancing-fintech-analytics-to-provide.html",
     "tag": "Enhancing fintech",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2022-06",
     "teaser": "Case study: Enhancing fintech analytics to provide millions of borrowers with better loan options.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS0065-Banner%20image.png"
@@ -246,7 +246,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Simplifying Power BI integration for the automotive industry using EmbedFAST",
     "href": "https://blog.maqsoftware.com/2024/10/simplifying-power-bi-integration-for.html",
     "tag": "Simplifying Power",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2024-10",
     "teaser": "Case study: Simplifying Power BI integration for the automotive industry using EmbedFAST.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS085-banner.jpg"
@@ -255,7 +255,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Transforming data management in manufacturing with an AI-driven chatbot solution",
     "href": "https://blog.maqsoftware.com/2024/09/transforming-data-management-in.html",
     "tag": "Transforming data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-09",
     "teaser": "Case study: Transforming data management in manufacturing with an AI-driven chatbot solution.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS084-banner.jpg"
@@ -291,7 +291,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Delivering embedded Power BI reporting with EmbedFAST",
     "href": "https://blog.maqsoftware.com/2025/07/delivering-embedded-power-bi-reporting.html",
     "tag": "Delivering embedded",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-07",
     "teaser": "Case study: Delivering embedded Power BI reporting with EmbedFAST.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/EmbedFASTUI-blurred.png"
@@ -300,7 +300,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Get ideas to code from months to hours with DevelopFAST",
     "href": "https://blog.maqsoftware.com/2025/07/streamlining-developer-productivity.html",
     "tag": "Get ideas",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Get ideas to code from months to hours with DevelopFAST.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/macbook-pro-displaying-computer-icons.jpg"
@@ -309,7 +309,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Empowering self-service using Custom Copilot agent with Power BI Embedded",
     "href": "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html",
     "tag": "Empowering self-service",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-03",
     "teaser": "Case study: Empowering self-service using Custom Copilot agent with Power BI Embedded.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/Copilot-computer-screen.jpeg"
@@ -318,7 +318,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Transforming data operations with Microsoft Fabric and CI/CD for ISVs",
     "href": "https://blog.maqsoftware.com/2024/11/microsoft-fabric-isv-cicd.html",
     "tag": "Transforming data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-11",
     "teaser": "Case study: Transforming data operations with Microsoft Fabric and CI/CD for ISVs.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS088-banner.jpg"
@@ -327,7 +327,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Real-Time Intelligence in Microsoft Fabric for ISVs",
     "href": "https://blog.maqsoftware.com/2024/11/microsoft-fabric-rti.html",
     "tag": "Real-Time Intelligence",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-11",
     "teaser": "Case study: Real-Time Intelligence in Microsoft Fabric for ISVs.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS089-banner.jpg"
@@ -336,7 +336,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Transforming customer support with AIOps-driven Power BI embedding",
     "href": "https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html",
     "tag": "Transforming customer",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2023-02",
     "teaser": "Case study: Transforming customer support with AIOps-driven Power BI embedding.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS070-banner.jpg"
@@ -345,7 +345,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "ADX implementation for a global Cloud Management Software Provider",
     "href": "https://blog.maqsoftware.com/2022/11/adx-implementation-cloud-management-software-provider.html",
     "tag": "ADX implementation",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2022-11",
     "teaser": "Case study: ADX implementation for a global Cloud Management Software Provider.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS068-banner.png"
@@ -354,7 +354,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Resolve Support Tickets Faster with Predictive Risk Algorithms",
     "href": "https://blog.maqsoftware.com/2020/12/resolve-support-tickets-faster-with.html",
     "tag": "Resolve Support",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2020-12",
     "teaser": "Case study: Resolve Support Tickets Faster with Predictive Risk Algorithms.",
     "imageUrl": "https://maqsoftware.com/img/case-study/CS028%20Main.jpg"
@@ -363,7 +363,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Simplify Software Health Checks with a Downloadable Application",
     "href": "https://blog.maqsoftware.com/2019/11/engineering-insights-wpf-application.html",
     "tag": "Simplify Software",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2019-11",
     "teaser": "Case study: Simplify Software Health Checks with a Downloadable Application.",
     "imageUrl": "https://maqsoftware.com/img/case-study/WPF%20case-study-main.jpg"
@@ -372,7 +372,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Easily Search Through Large Data Collections With Azure Architecture",
     "href": "https://blog.maqsoftware.com/2019/09/engineering-insights-azure-search-based.html",
     "tag": "Easily Search",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2019-09",
     "teaser": "Case study: Easily Search Through Large Data Collections With Azure Architecture.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Azure%20Search%20case-study-main.jpg"
@@ -381,7 +381,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Data Validation Framework Reduces Support Tickets",
     "href": "https://blog.maqsoftware.com/2019/06/case-study-data-validation-framework.html",
     "tag": "Data Validation",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2019-06",
     "teaser": "Case study: Data Validation Framework Reduces Support Tickets.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Data%20Validation%20Framework%20main.jpg"
@@ -417,7 +417,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "ADX implementation in the Energy and Utilities industry",
     "href": "https://blog.maqsoftware.com/2023/06/adx-implementation-for-energy-and.html",
     "tag": "ADX implementation",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2023-06",
     "teaser": "Case study: ADX implementation in the Energy and Utilities industry.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS071-banner.jpg"
@@ -426,7 +426,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "ADX implementation in the Real Estate industry",
     "href": "https://blog.maqsoftware.com/2022/11/adx-implementation-real-estate.html",
     "tag": "ADX implementation",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2022-11",
     "teaser": "Case study: ADX implementation in the Real Estate industry.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS069-banner.png"
@@ -435,7 +435,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Custom Visual Allows Travel Company to Analyze Flight Performance",
     "href": "https://blog.maqsoftware.com/2018/09/case-study-custom-visual-allows-travel.html",
     "tag": "Custom Visual",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2018-09",
     "teaser": "Case study: Custom Visual Allows Travel Company to Analyze Flight Performance.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Flight%20Route%20Visual%20case-study-main.jpg"
@@ -444,7 +444,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Delivering personalization intelligence with MLOps and Databricks CI/CD framework",
     "href": "https://blog.maqsoftware.com/2025/08/delivering-personalization-intelligence.html",
     "tag": "Delivering personalization",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-08",
     "teaser": "Case study: Delivering personalization intelligence with MLOps and Databricks CI/CD framework.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/mlops-and-databricks-ci-cd-framework/MLOps-Databricks-framework.jpg"
@@ -453,7 +453,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Enabling sales insights for global operations with Power BI and Snowflake",
     "href": "https://blog.maqsoftware.com/2025/06/enabling-sales-insights-for-global.html",
     "tag": "Enabling sales",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Enabling sales insights for global operations with Power BI and Snowflake.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/Person-typing-on-report.jpeg"
@@ -462,7 +462,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Improving sales insights with a migration from SAP BOBJ to Power BI",
     "href": "https://blog.maqsoftware.com/2025/06/improving-sales-insights-with-migration.html",
     "tag": "Improving sales",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Improving sales insights with a migration from SAP BOBJ to Power BI.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/Convenience-store-counter.jpeg"
@@ -534,7 +534,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Events Management Software Tracks Conference Performance",
     "href": "https://blog.maqsoftware.com/2018/11/events-management-software-tracks.html",
     "tag": "Events Management",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2018-11",
     "teaser": "Case study: Events Management Software Tracks Conference Performance.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Events%20management%20case-study-main.jpg"
@@ -624,7 +624,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Harnessing real-time data insights with a versatile bot application",
     "href": "https://blog.maqsoftware.com/2023/09/harnessing-real-time-data-insights-with.html",
     "tag": "Harnessing real-time",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2023-09",
     "teaser": "Case study: Harnessing real-time data insights with a versatile bot application.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS072-banner.jpg"
@@ -642,7 +642,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Master Data Management (MDM) Improves Customer Relationships with Machine Learning",
     "href": "https://blog.maqsoftware.com/2018/11/master-data-management-mdm-improves.html",
     "tag": "Master Data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2018-11",
     "teaser": "Case study: Master Data Management (MDM) Improves Customer Relationships with Machine Learning.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Master%20Data%20Management%20case-study-main.jpg"
@@ -651,7 +651,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Unifying disconnected data systems using Microsoft Fabric and OneLake",
     "href": "https://blog.maqsoftware.com/2026/01/unifying-disconnected-data-systems.html",
     "tag": "Unifying disconnected",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2026-01",
     "teaser": "Case study: Unifying disconnected data systems using Microsoft Fabric and OneLake.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/person-analyzing-report.png"
@@ -660,7 +660,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Delivering accurate business intelligence insights with a Fabric data agent",
     "href": "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
     "tag": "Delivering accurate",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2026-01",
     "teaser": "Case study: Delivering accurate business intelligence insights with a Fabric data agent.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/Sales-data-agent-on-laptop.png"
@@ -669,7 +669,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Optimizing data refresh by integrating Snowflake iceberg tables with Microsoft Fabric",
     "href": "https://blog.maqsoftware.com/2025/08/optimizing-data-refresh-by-integrating.html",
     "tag": "Optimizing data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-08",
     "teaser": "Case study: Optimizing data refresh by integrating Snowflake iceberg tables with Microsoft Fabric.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/data-and-analytics/snowflake-iceberg-cover.jpeg"
@@ -678,7 +678,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Unlocking business insights: Integrating Databricks with Power BI",
     "href": "https://blog.maqsoftware.com/2025/08/unlocking-business-insights-integrating.html",
     "tag": "Unlocking business",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-08",
     "teaser": "Case study: Unlocking business insights: Integrating Databricks with Power BI.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/unlocking-business-insights-integrating-databricks-with-power-bi.jpeg"
@@ -687,7 +687,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Unlocking advanced analytics with Databricks",
     "href": "https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html",
     "tag": "Unlocking advanced",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Unlocking advanced analytics with Databricks.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/unlocking-advanced-analytics-with-databricks.jpeg"
@@ -696,7 +696,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT)",
     "href": "https://blog.maqsoftware.com/2025/07/migrating-to-microsoft-fabric-to-unlock.html",
     "tag": "Migrating to",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT).",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/corporate-buildings.jpeg"
@@ -705,7 +705,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Optimizing data management by integrating Snowflake and Microsoft Fabric",
     "href": "https://blog.maqsoftware.com/2025/03/optimizing-data-management-by.html",
     "tag": "Optimizing data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2025-03",
     "teaser": "Case study: Optimizing data management by integrating Snowflake and Microsoft Fabric.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/Laptop-data-report.jpeg"
@@ -714,7 +714,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Enabling self-service for supply chain analytics with Microsoft Fabric and Direct Lake",
     "href": "https://blog.maqsoftware.com/2024/11/Microsoft-Fabric-Direct-Lake.html",
     "tag": "Enabling self-service",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-11",
     "teaser": "Case study: Enabling self-service for supply chain analytics with Microsoft Fabric and Direct Lake.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS090-banner.jpg"
@@ -723,7 +723,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Unifying data management with a centralized framework",
     "href": "https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html",
     "tag": "Unifying data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-08",
     "teaser": "Case study: Unifying data management with a centralized framework.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS082-banner.png"
@@ -732,7 +732,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Increasing efficiency by switching from batch processing to real-time streaming",
     "href": "https://blog.maqsoftware.com/2024/07/increasing-efficiency-by-switching-from.html",
     "tag": "Increasing efficiency",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-07",
     "teaser": "Case study: Increasing efficiency by switching from batch processing to real-time streaming.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS079-banner.jpg"
@@ -741,7 +741,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Microsoft Fabric Features for Real-Time Analytics",
     "href": "https://blog.maqsoftware.com/2024/05/microsoft-fabric-features-for-real-time.html",
     "tag": "Microsoft Fabric",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-05",
     "teaser": "Case study: Microsoft Fabric Features for Real-Time Analytics.",
     "imageUrl": "https://maqsoftware.com/images/blog/B031_MSFabric_Banner.png"
@@ -750,7 +750,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Simplifying Data Ingestion with IngestFAST",
     "href": "https://blog.maqsoftware.com/2024/04/simplifying-data-ingestion-with.html",
     "tag": "Simplifying Data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2024-04",
     "teaser": "Case study: Simplifying Data Ingestion with IngestFAST.",
     "imageUrl": "https://maqsoftware.com/images/blog/B030_Banner.png"
@@ -759,7 +759,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Embracing the Future of Data Management with Microsoft Fabric: A Setup Guide",
     "href": "https://blog.maqsoftware.com/2023/11/embracing-future-of-data-management.html",
     "tag": "Embracing the",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2023-11",
     "teaser": "Case study: Embracing the Future of Data Management with Microsoft Fabric: A Setup Guide.",
     "imageUrl": "https://www.maqsoftware.com/images/blog/B026_MSFabric_Banner.png"
@@ -768,7 +768,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Microsoft Fabric: Empowering All Personas",
     "href": "https://blog.maqsoftware.com/2023/09/microsoft-fabric-empowering.html",
     "tag": "Microsoft Fabric",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2023-09",
     "teaser": "Case study: Microsoft Fabric: Empowering All Personas.",
     "imageUrl": "https://www.maqsoftware.com/images/blog/B024_MSFabric_Banner_V2.png"
@@ -777,7 +777,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Modern Data Analytics using Microsoft Fabric",
     "href": "https://blog.maqsoftware.com/2023/06/modern-data-analytics-using-microsoft.html",
     "tag": "Modern Data",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2023-06",
     "teaser": "Case study: Modern Data Analytics using Microsoft Fabric.",
     "imageUrl": "https://www.maqsoftware.com/images/blog/B023_MSFabric_Banner_V2.png"
@@ -786,7 +786,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Improving insights and reducing costs through unified reporting",
     "href": "https://blog.maqsoftware.com/2022/07/improving-insights-and-reducing-costs.html",
     "tag": "Improving insights",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2022-07",
     "teaser": "Case study: Improving insights and reducing costs through unified reporting.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS066_banner_2.png"
@@ -795,7 +795,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Enabling Fast-Paced BI and Analytics",
     "href": "https://blog.maqsoftware.com/2020/11/azure-fast-paced-bi-analytics.html",
     "tag": "Enabling Fast-Paced",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2020-11",
     "teaser": "Case study: Enabling Fast-Paced BI and Analytics.",
     "imageUrl": "https://maqsoftware.com/img/case-study/CS043-main.jpg"
@@ -804,7 +804,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Modernize Data Systems by Migrating to the Cloud",
     "href": "https://blog.maqsoftware.com/2020/09/modernize-data-cloud-migration.html",
     "tag": "Modernize Data",
-    "service": "Cloud optimization",
+    "service": "Cloud Modernization",
     "date": "2020-09",
     "teaser": "Case study: Modernize Data Systems by Migrating to the Cloud.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Data%20Migration%20case-study-main.jpg"
@@ -813,7 +813,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Transitioning legacy reports from Qlik to Power BI",
     "href": "https://blog.maqsoftware.com/2025/06/transitioning-legacy-reports-from-qlik.html",
     "tag": "Transitioning legacy",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Transitioning legacy reports from Qlik to Power BI.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/cover-images/warehouse-inventory.jpeg"
@@ -822,7 +822,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Accelerate your Tableau to Power BI (Fabric) migration with MigrateFAST",
     "href": "https://blog.maqsoftware.com/2025/03/accelerate-your-tableau-to-power-bi.html",
     "tag": "Accelerate your",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2025-03",
     "teaser": "Case study: Accelerate your Tableau to Power BI (Fabric) migration with MigrateFAST.",
     "imageUrl": "https://www.maqsoftware.com/images/blog/B028_MigrateFAST_Banner.png"
@@ -831,7 +831,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Modernizing reporting platforms through AI-driven SQL Migration",
     "href": "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html",
     "tag": "Modernizing reporting",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2024-08",
     "teaser": "Case study: Modernizing reporting platforms through AI-driven SQL Migration.",
     "imageUrl": "https://maqsoftware.com/images/case-studies/CS083-banner.jpg"
@@ -840,7 +840,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Optimize your Power BI Reports and Usage with LoadFAST",
     "href": "https://blog.maqsoftware.com/2024/03/transform-your-power-bi.html",
     "tag": "Optimize your",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2024-03",
     "teaser": "Case study: Optimize your Power BI Reports and Usage with LoadFAST.",
     "imageUrl": "https://maqsoftware.com/images/blog/B029_Banner.png"
@@ -849,7 +849,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Building a Powerful Foundation: The Ultimate Guide to Power BI Center of Excellence",
     "href": "https://blog.maqsoftware.com/2023/12/building-powerful-foundation-ultimate.html",
     "tag": "Building a",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2023-12",
     "teaser": "Case study: Building a Powerful Foundation: The Ultimate Guide to Power BI Center of Excellence.",
     "imageUrl": "https://www.maqsoftware.com/images/blog/B027_CoE_Banner_V4.png"
@@ -858,7 +858,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Everything You Need to Know About Migrating to Power BI",
     "href": "https://blog.maqsoftware.com/2020/06/everything-you-need-to-know-about.html",
     "tag": "Everything You",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2020-06",
     "teaser": "Case study: Everything You Need to Know About Migrating to Power BI.",
     "imageUrl": "https://maqsoftware.com/img/blog/B010-main.jpg"
@@ -867,7 +867,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Modernize Reporting with Power BI: A Cost-Effective, Scalable Solution",
     "href": "https://blog.maqsoftware.com/2020/07/qlikview-to-power-bi-migration.html",
     "tag": "Modernize Reporting",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2020-07",
     "teaser": "Case study: Modernize Reporting with Power BI: A Cost-Effective, Scalable Solution.",
     "imageUrl": "https://maqsoftware.com/img/case-study/CS008-main.jpg"
@@ -876,7 +876,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Improve Power BI Premium Report Performance and Eliminate Data Refresh Failures",
     "href": "https://blog.maqsoftware.com/2019/07/improve-power-bi-premium-report.html",
     "tag": "Improve Power",
-    "service": "Reporting & visualization",
+    "service": "Insights & Analytics",
     "date": "2019-07",
     "teaser": "Case study: Improve Power BI Premium Report Performance and Eliminate Data Refresh Failures.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Improve%20Power%20BI%20Premium%20Report%20Performance%20and%20Eliminate%20Data%20Refresh%20Failures%20case-study-main.jpg"
@@ -921,7 +921,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Connect High-Impact Service Opportunities with Underutilized Support Team Resources",
     "href": "https://blog.maqsoftware.com/2020/10/track-resource-allocation-power-platform.html",
     "tag": "Connect High-Impact",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2020-10",
     "teaser": "Case study: Connect High-Impact Service Opportunities with Underutilized Support Team Resources.",
     "imageUrl": "https://maqsoftware.com/img/case-study/CS029-main.jpg"
@@ -939,7 +939,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Ensure Business Continuity Through Covid-19 Remote Work",
     "href": "https://blog.maqsoftware.com/2020/07/promoting-business-continuity-through.html",
     "tag": "Ensure Business",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2020-07",
     "teaser": "Case study: Ensure Business Continuity Through Covid-19 Remote Work.",
     "imageUrl": "https://maqsoftware.com/img/case-study/CS006-main.jpg"
@@ -948,7 +948,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "title": "Custom Gantt Chart Improves B2B Communication",
     "href": "https://blog.maqsoftware.com/2019/03/custom-gantt-chart-improves-b2b.html",
     "tag": "Custom Gantt",
-    "service": "Data & analytics",
+    "service": "Data & AI Platforms",
     "date": "2019-03",
     "teaser": "Case study: Custom Gantt Chart Improves B2B Communication.",
     "imageUrl": "https://maqsoftware.com/img/case-study/Custom%20Gantt%20Chart%20case-study-main.jpg"
@@ -1499,112 +1499,112 @@ export const bestPracticeFilters = [
 export const bestPracticeItems: BestPracticeItem[] = [
   {
     "title": "Maximize developer productivity with GitHub Copilot",
-    "href": "https://maqsoftware.com/insights/github-copilot-best-practices",
+    "href": "/insights/github-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Maximize developer productivity with GitHub Copilot.",
     "imageUrl": "https://maqsoftware.com/images/best-practices/GitHub Copilot Best Practices.png"
   },
   {
     "title": "Build AI-ready semantic models with Power BI Copilot",
-    "href": "https://maqsoftware.com/insights/power-bi-copilot-best-practices",
+    "href": "/insights/power-bi-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Build AI-ready semantic models with Power BI Copilot.",
     "imageUrl": "https://maqsoftware.com/images/best-practices/Power BI Copilot best practice guide.png"
   },
   {
     "title": "Improve your Power BI performance and security with our best practices",
-    "href": "https://maqsoftware.com/insights/power-bi-best-practices",
+    "href": "/insights/power-bi-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve your Power BI performance and security with our best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG006-main.jpg"
   },
   {
     "title": "Improve job speed and save storage with our 18 Azure Databricks best practices",
-    "href": "https://maqsoftware.com/insights/azure-databricks-best-practices",
+    "href": "/insights/azure-databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Improve job speed and save storage with our 18 Azure Databricks best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG007-main.jpg"
   },
   {
     "title": "Optimizing Performance, Collaboration, and Security on Databricks",
-    "href": "https://maqsoftware.com/insights/databricks-best-practices",
+    "href": "/insights/databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Optimizing Performance, Collaboration, and Security on Databricks.",
     "imageUrl": "https://maqsoftware.com/img/blog/databricks-best-practice-guide.png"
   },
   {
     "title": "Optimize Snowflake storage for efficient Power BI data extraction",
-    "href": "https://maqsoftware.com/insights/snowflake-and-power-bi-best-practices",
+    "href": "/insights/snowflake-and-power-bi-best-practices",
     "topic": "Snowflake",
     "teaser": "Best practice guide: Optimize Snowflake storage for efficient Power BI data extraction.",
     "imageUrl": "https://maqsoftware.com/img/blog/snowflake-best-practices.png"
   },
   {
     "title": "Explore best practices for creating enterprise-wide knowledge bots",
-    "href": "https://maqsoftware.com/insights/knowledge-bot-best-practices",
+    "href": "/insights/knowledge-bot-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Explore best practices for creating enterprise-wide knowledge bots.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG010-main.png"
   },
   {
     "title": "Improve Power BI speed and functionality with our 22 DAX best practices",
-    "href": "https://maqsoftware.com/insights/dax-best-practices",
+    "href": "/insights/dax-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve Power BI speed and functionality with our 22 DAX best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG005-main.jpg"
   },
   {
     "title": "Optimize your DevOps strategies with our 9 essential best practices",
-    "href": "https://maqsoftware.com/insights/azure-dev-ops-best-practices-guide",
+    "href": "/insights/azure-dev-ops-best-practices-guide",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize your DevOps strategies with our 9 essential best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/AzureDevOpsBestPracticeguide.png"
   },
   {
     "title": "Optimize costs for your Azure platforms with our 10 best practices",
-    "href": "https://maqsoftware.com/insights/azure-architecture-best-practices",
+    "href": "/insights/azure-architecture-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize costs for your Azure platforms with our 10 best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG004-main.jpg"
   },
   {
     "title": "Strengthen your cloud security and protect your assets with 19 security best practices",
-    "href": "https://maqsoftware.com/insights/azure-security-best-practices",
+    "href": "/insights/azure-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: Strengthen your cloud security and protect your assets with 19 security best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG003-main.jpg"
   },
   {
     "title": "Ensure quality data on demand with our 7 data validation best practices",
-    "href": "https://maqsoftware.com/insights/data-validation-best-practices",
+    "href": "/insights/data-validation-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Ensure quality data on demand with our 7 data validation best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG002-main.jpg"
   },
   {
     "title": "Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more",
-    "href": "https://maqsoftware.com/insights/dynamics-365-development-best-practices",
+    "href": "/insights/dynamics-365-development-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG008-main.jpg"
   },
   {
     "title": "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices",
-    "href": "https://maqsoftware.com/insights/dynamics-365-deployment-best-practices",
+    "href": "/insights/dynamics-365-deployment-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Deploy Dynamics 365 faster with minimal downtime using our 8 best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG001-main.jpg"
   },
   {
     "title": "This guide covers the 11 best practices you need to optimize your canvas apps",
-    "href": "https://maqsoftware.com/insights/power-apps-best-practices",
+    "href": "/insights/power-apps-best-practices",
     "topic": "Power Apps",
     "teaser": "Best practice guide: This guide covers the 11 best practices you need to optimize your canvas apps.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG009-main.png"
   },
   {
     "title": "This guide covers the 7 best practices you need to secure dataverse",
-    "href": "https://maqsoftware.com/insights/dataverse-security-best-practices",
+    "href": "/insights/dataverse-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: This guide covers the 7 best practices you need to secure dataverse.",
     "imageUrl": "https://maqsoftware.com/img/blog/dataverse-best-practices.png"

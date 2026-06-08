@@ -52,7 +52,7 @@
 - **H1:** `AI-Driven Intelligence for a Faster, More Compliant Financial Enterprise`
 - **Subhead:**
   > Financial services organizations face mounting pressure to accelerate decisions, reduce compliance risk, and modernize aging data estates. At MAQ Software, we help banks, insurers, and fintech firms embed AI across the front and back office — from automated claims processing and real-time credit decisioning to autonomous FP&A and regulatory reporting. Built on Microsoft Fabric, Snowflake, and Databricks, our solutions turn complex financial data into a competitive edge.
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Financial%20Services%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Financial%20Services%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore financial solutions` → scroll to `#fs-solutions`
 
 **Hero visual (CSS-only, no external asset):** Three stacked tiles:

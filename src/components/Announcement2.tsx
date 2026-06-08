@@ -67,7 +67,7 @@ const s = useStyles();
   return (
     <div className={s.bar} role="status">
       <div className={s.message}>
-        Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
+        TechCon 365 – Chicago, IL, taking place June 17–18, 2026.{""}
         <RouterLink to="/techcon365" className={s.link}>
           Learn more
         </RouterLink>

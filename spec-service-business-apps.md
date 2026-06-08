@@ -75,7 +75,7 @@ parallel multi-column layouts, h2 `28–30px`, body `14px`.
 - **H1:** `AI-native business apps on Microsoft Power Platform`
 - **Subhead:**
   > Low-code and pro-code apps built on Power Apps, Dynamics 365, and Microsoft 365 — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations.
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Business%20Apps%20%26%20Process%20Automation%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Business%20Apps%20%26%20Process%20Automation%20-%20MAQ%20Software`
   *Source CTA was `Get started → /contact`; standardized to mailto pattern to match `/services/agentic-ai`.*
 - **Secondary CTA:** `Explore capabilities` → scroll to `#business-apps-capabilities`
 

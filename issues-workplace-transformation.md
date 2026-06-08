@@ -7,14 +7,14 @@
 
 ## Critical Issues
 
-### 1. "Contact us" button (Hero section) links to mailto instead of /contact page
+### 1. "Contact Us" button (Hero section) links to mailto instead of /contact page
 
 - **Location:** Hero section, primary CTA button
 - **Current behavior:** Links to `mailto:customersuccess@maqsoftware.com?subject=Workplace%20Transformation%20%26%20Productivity%20-%20MAQ%20Software`
 - **Expected behavior:** Should navigate to `/contact` page
 - **Impact:** High — users expecting to land on the contact page are instead prompted to open an email client
 
-### 2. "Contact us" button (Bottom CTA section) links to mailto instead of /contact page
+### 2. "Contact Us" button (Bottom CTA section) links to mailto instead of /contact page
 
 - **Location:** "Ready to move faster?" CTA section near bottom of page
 - **Current behavior:** Links to `mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software`
@@ -25,9 +25,9 @@
 
 ## Footer Issues (Broken/Missing Links)
 
-### 3. Footer "Contact us" links to mailto instead of /contact
+### 3. Footer "Contact Us" links to mailto instead of /contact
 
-- **Location:** Footer → Company section → "Contact us"
+- **Location:** Footer → Company section → "Contact Us"
 - **Current behavior:** Links to `mailto:customersuccess@maqsoftware.com`
 - **Expected behavior:** Should navigate to `/contact` page (route exists in app)
 
@@ -82,9 +82,9 @@
 
 | # | Issue | Severity | Section |
 |---|-------|----------|---------|
-| 1 | Hero "Contact us" → mailto instead of /contact | **Critical** | Hero |
-| 2 | CTA "Contact us" → mailto instead of /contact | **Critical** | Bottom CTA |
-| 3 | Footer "Contact us" → mailto instead of /contact | Medium | Footer |
+| 1 | Hero "Contact Us" → mailto instead of /contact | **Critical** | Hero |
+| 2 | CTA "Contact Us" → mailto instead of /contact | **Critical** | Bottom CTA |
+| 3 | Footer "Contact Us" → mailto instead of /contact | Medium | Footer |
 | 4 | Footer "News" — no link | Medium | Footer |
 | 5 | Footer "Sustainability" — no link | Medium | Footer |
 | 6 | Footer "Terms of Service" — no link | Medium | Footer |

@@ -548,7 +548,7 @@ export function ServiceBusinessApps() {
             <section className={s.hero}>
                 <div className={s.heroGrid}>
                     <div>
-                        <span className={s.eyebrow}>Business apps &amp; process automation</span>
+                        <span className={s.eyebrow}>Business Applications &amp; Automation</span>
                         <h1 className={s.h1}>AI-native business apps on Microsoft Power Platform</h1>
                         <p className={s.heroSub}>
                             Low-code and pro-code apps built on Power Apps, Dynamics 365, and
@@ -561,9 +561,9 @@ export function ServiceBusinessApps() {
                                 size="large"
                                 icon={<Mail24Regular />}
                                 as="a"
-                                href="mailto:customersuccess@maqsoftware.com?subject=Business%20Apps%20%26%20Process%20Automation%20-%20MAQ%20Software"
+                                href="mailto:customersuccess@maqsoftware.com?subject=Business%20Applications%20%26%20Automation%20-%20MAQ%20Software"
                             >
-                                Contact us
+                                Contact Us
                             </Button>
                             <Button
                                 appearance="outline"
@@ -640,7 +640,7 @@ export function ServiceBusinessApps() {
                 <div className={s.inner}>
                     <div className={s.head}>
                         <span className={s.secEyebrow}>Our expertise</span>
-                        <h2 className={s.title}>Our business apps and process automation capabilities</h2>
+                        <h2 className={s.title}>Our business applications &amp; automation capabilities</h2>
                         <p className={s.secSub}>
                             Four capability pillars that modernize legacy applications and automate
                             operations across the Microsoft business apps stack.
@@ -663,7 +663,7 @@ export function ServiceBusinessApps() {
                                 className={s.knowMore}
                                 as="a"
                                 href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                                    `${sel.name} - Business Apps & Process Automation`
+                                    `${sel.name} - Business Applications & Automation`
                                 )}`}
                             >
                                 Know more
@@ -691,7 +691,7 @@ export function ServiceBusinessApps() {
                         className={s.footerLink}
                         to="/insights/case-studies?filter=Application%20modernization#insights-content"
                     >
-                        See Business Intelligence case studies
+                        See business applications case studies
                         <ArrowRight16Regular />
                     </Link>
                 </div>

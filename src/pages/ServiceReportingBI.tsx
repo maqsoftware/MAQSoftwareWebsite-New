@@ -9,9 +9,9 @@ import { CTA } from "../components/CTA";
 // import { TrustBanner } from "../components/TrustBanner";
 
 const REPORTING_BI_CASE_STUDIES_CONFIG = {
-  serviceFilter: "Reporting & visualization",
+  serviceFilter: "Insights & Analytics",
   allCasesLabel: "See all case studies",
-  serviceSpecificLabel: "See reporting & BI case studies",
+  serviceSpecificLabel: "See insights & analytics case studies",
 };
 
 export function ServiceReportingBI() {

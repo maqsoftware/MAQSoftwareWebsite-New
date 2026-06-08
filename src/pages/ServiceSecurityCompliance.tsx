@@ -233,7 +233,7 @@ export function ServiceSecurityCompliance() {
   return (
     <>
       <ServiceHero
-        eyebrow="Security & compliance"
+        eyebrow="Security & Governance"
         heading="Zero Trust security and AI governance, end to end"
         subhead="ISO 27001 / 27701 / 27018 certified delivery. We implement Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape and Microsoft security stack."
         ctaMailSubject="Security%20%26%20Compliance%20-%20MAQ%20Software"
@@ -243,12 +243,12 @@ export function ServiceSecurityCompliance() {
 
       <ServiceCapabilities
         sectionId="security-capabilities"
-        title="Our security & compliance capabilities"
+        title="Our security & governance capabilities"
         subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
         capabilities={capabilities}
         footerLabel="See security case studies"
         footerHref="/insights/case-studies?filter=Security#insights-content"
-        mailSubjectSuffix="Security & Compliance"
+        mailSubjectSuffix="Security & Governance"
       />
       <ServiceOutcomes
         title="Your business outcomes"

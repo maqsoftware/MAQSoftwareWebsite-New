@@ -407,7 +407,7 @@ export function InsightsCustomVisualDetail() {
               )}
 
               <div className={s.contact}>
-                <strong>Contact us.</strong> Thank you for using {content.productName}. Have
+                <strong>Contact Us.</strong> Thank you for using {content.productName}. Have
                 questions about this or any of our other Power BI custom visuals? Visit our community
                 pages on{" "}
                 <a

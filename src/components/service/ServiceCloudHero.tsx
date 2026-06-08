@@ -99,7 +99,7 @@ export function ServiceCloudHero() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Cloud infrastructure &amp; modernization</span>
+          <span className={s.eyebrow}>Cloud Modernization</span>
           <h1 className={s.h1}>Modernize from on-premises to cloud-native on Azure</h1>
           <p className={s.sub}>
             MAQ Software replatforms on-premises workloads to Azure — from lift-and-shift
@@ -112,9 +112,9 @@ export function ServiceCloudHero() {
               size="large"
               icon={<Mail24Regular />}
               as="a"
-              href="mailto:customersuccess@maqsoftware.com?subject=Cloud%20Infrastructure%20%26%20Modernization"
+              href="mailto:customersuccess@maqsoftware.com?subject=Cloud%20Modernization"
             >
-              Contact us
+              Contact Us
             </Button>
             <Button
               appearance="outline"
