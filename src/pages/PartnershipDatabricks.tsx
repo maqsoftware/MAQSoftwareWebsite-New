@@ -212,7 +212,7 @@ export function PartnershipDatabricks() {
 
 
 
-      <PartnershipValueProps eyebrow="Our advantage" title="Why Databricks?" items={whyDatabricks} />
+      {/* <PartnershipValueProps eyebrow="Our advantage" title="Why Databricks?" items={whyDatabricks} /> */}
 
       <PartnershipHighlights title="Partnership Highlights" stats={highlights} />
 

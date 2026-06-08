@@ -212,10 +212,10 @@ export function PartnershipSnowflake() {
         imageAlt="MAQ Software and Snowflake"
       />
 
-      <PartnershipValueProps
+      {/* <PartnershipValueProps
         title="Why Snowflake?"
         items={whySnowflake}
-      />
+      /> */}
       <PartnershipHighlights
         title="Partnership Highlights"
         stats={highlights}
