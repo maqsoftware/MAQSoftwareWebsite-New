@@ -1499,112 +1499,112 @@ export const bestPracticeFilters = [
 export const bestPracticeItems: BestPracticeItem[] = [
   {
     "title": "Maximize developer productivity with GitHub Copilot",
-    "href": "https://maqsoftware.com/insights/github-copilot-best-practices",
+    "href": "/insights/github-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Maximize developer productivity with GitHub Copilot.",
     "imageUrl": "https://maqsoftware.com/images/best-practices/GitHub Copilot Best Practices.png"
   },
   {
     "title": "Build AI-ready semantic models with Power BI Copilot",
-    "href": "https://maqsoftware.com/insights/power-bi-copilot-best-practices",
+    "href": "/insights/power-bi-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Build AI-ready semantic models with Power BI Copilot.",
     "imageUrl": "https://maqsoftware.com/images/best-practices/Power BI Copilot best practice guide.png"
   },
   {
     "title": "Improve your Power BI performance and security with our best practices",
-    "href": "https://maqsoftware.com/insights/power-bi-best-practices",
+    "href": "/insights/power-bi-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve your Power BI performance and security with our best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG006-main.jpg"
   },
   {
     "title": "Improve job speed and save storage with our 18 Azure Databricks best practices",
-    "href": "https://maqsoftware.com/insights/azure-databricks-best-practices",
+    "href": "/insights/azure-databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Improve job speed and save storage with our 18 Azure Databricks best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG007-main.jpg"
   },
   {
     "title": "Optimizing Performance, Collaboration, and Security on Databricks",
-    "href": "https://maqsoftware.com/insights/databricks-best-practices",
+    "href": "/insights/databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Optimizing Performance, Collaboration, and Security on Databricks.",
     "imageUrl": "https://maqsoftware.com/img/blog/databricks-best-practice-guide.png"
   },
   {
     "title": "Optimize Snowflake storage for efficient Power BI data extraction",
-    "href": "https://maqsoftware.com/insights/snowflake-and-power-bi-best-practices",
+    "href": "/insights/snowflake-and-power-bi-best-practices",
     "topic": "Snowflake",
     "teaser": "Best practice guide: Optimize Snowflake storage for efficient Power BI data extraction.",
     "imageUrl": "https://maqsoftware.com/img/blog/snowflake-best-practices.png"
   },
   {
     "title": "Explore best practices for creating enterprise-wide knowledge bots",
-    "href": "https://maqsoftware.com/insights/knowledge-bot-best-practices",
+    "href": "/insights/knowledge-bot-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Explore best practices for creating enterprise-wide knowledge bots.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG010-main.png"
   },
   {
     "title": "Improve Power BI speed and functionality with our 22 DAX best practices",
-    "href": "https://maqsoftware.com/insights/dax-best-practices",
+    "href": "/insights/dax-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve Power BI speed and functionality with our 22 DAX best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG005-main.jpg"
   },
   {
     "title": "Optimize your DevOps strategies with our 9 essential best practices",
-    "href": "https://maqsoftware.com/insights/azure-dev-ops-best-practices-guide",
+    "href": "/insights/azure-dev-ops-best-practices-guide",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize your DevOps strategies with our 9 essential best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/AzureDevOpsBestPracticeguide.png"
   },
   {
     "title": "Optimize costs for your Azure platforms with our 10 best practices",
-    "href": "https://maqsoftware.com/insights/azure-architecture-best-practices",
+    "href": "/insights/azure-architecture-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize costs for your Azure platforms with our 10 best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG004-main.jpg"
   },
   {
     "title": "Strengthen your cloud security and protect your assets with 19 security best practices",
-    "href": "https://maqsoftware.com/insights/azure-security-best-practices",
+    "href": "/insights/azure-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: Strengthen your cloud security and protect your assets with 19 security best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG003-main.jpg"
   },
   {
     "title": "Ensure quality data on demand with our 7 data validation best practices",
-    "href": "https://maqsoftware.com/insights/data-validation-best-practices",
+    "href": "/insights/data-validation-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Ensure quality data on demand with our 7 data validation best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG002-main.jpg"
   },
   {
     "title": "Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more",
-    "href": "https://maqsoftware.com/insights/dynamics-365-development-best-practices",
+    "href": "/insights/dynamics-365-development-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG008-main.jpg"
   },
   {
     "title": "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices",
-    "href": "https://maqsoftware.com/insights/dynamics-365-deployment-best-practices",
+    "href": "/insights/dynamics-365-deployment-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Deploy Dynamics 365 faster with minimal downtime using our 8 best practices.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG001-main.jpg"
   },
   {
     "title": "This guide covers the 11 best practices you need to optimize your canvas apps",
-    "href": "https://maqsoftware.com/insights/power-apps-best-practices",
+    "href": "/insights/power-apps-best-practices",
     "topic": "Power Apps",
     "teaser": "Best practice guide: This guide covers the 11 best practices you need to optimize your canvas apps.",
     "imageUrl": "https://maqsoftware.com/img/blog/BPG009-main.png"
   },
   {
     "title": "This guide covers the 7 best practices you need to secure dataverse",
-    "href": "https://maqsoftware.com/insights/dataverse-security-best-practices",
+    "href": "/insights/dataverse-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: This guide covers the 7 best practices you need to secure dataverse.",
     "imageUrl": "https://maqsoftware.com/img/blog/dataverse-best-practices.png"
