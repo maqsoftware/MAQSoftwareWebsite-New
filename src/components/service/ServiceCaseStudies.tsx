@@ -1,5 +1,6 @@
 import { makeStyles, tokens, Button } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 export interface CaseStudyItem {
   tag: string;
@@ -168,24 +169,20 @@ export function ServiceCaseStudies({
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
           <div className={s.buttonGroup}>
-            <a
+            <Link
               className={s.footerLink}
-              href={`/insights/case-studies?filter=${encodeURIComponent(serviceFilter)}#insights-content`}
-              target="_blank"
-              rel="noreferrer"
+              to="/insights/case-studies#insights-content"
             >
               {allCasesLabel} <ArrowRight16Regular />
-            </a>
+            </Link>
           </div>
         ) : footerLabel && footerHref ? (
-          <a
+          <Link
             className={s.footerLink}
-            href={footerHref}
-            target="_blank"
-            rel="noreferrer"
+            to={footerHref}
           >
             {footerLabel} <ArrowRight16Regular />
-          </a>
+          </Link>
         ) : null}
       </div>
     </section>

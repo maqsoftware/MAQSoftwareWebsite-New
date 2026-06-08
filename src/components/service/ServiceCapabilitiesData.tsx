@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
@@ -224,14 +225,12 @@ export function ServiceCapabilitiesData() {
             ))}
           </div>
         </div>
-        <a
+        <Link
           className={s.footerLink}
-          href="/insights/case-studies?filter=Data%20%26%20analytics#insights-content"
-          target="_blank"
-          rel="noreferrer"
+          to="/insights/case-studies?filter=Data%20%26%20analytics#insights-content"
         >
           See data &amp; analytics case studies <ArrowRight16Regular />
-        </a>
+        </Link>
       </div>
     </section>
   );

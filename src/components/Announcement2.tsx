@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, makeStyles } from "@fluentui/react-components";
 import { Dismiss20Regular } from "@fluentui/react-icons";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles({
   bar: {
@@ -39,13 +39,22 @@ const useStyles = makeStyles({
 
 export function Announcement() {
   const s = useStyles();
-  const [dismissed, setDismissed] = useState(false);
-  if (dismissed) return null;
+  const [dismissed, setDismissed] = useState(
+  () => sessionStorage.getItem("announcement-dismissed") === "true"
+);
+  const dismiss = () => {
+  sessionStorage.setItem("announcement-dismissed", "true");
+  setDismissed(true);
+};
+  const { pathname } = useLocation();
+
+  if (dismissed || pathname === "/techcon365") return null;
+  
   return (
     <div className={s.bar} role="status">
       <div className={s.message}>
        Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
-        <RouterLink to="/techcon365" className={s.link}>
+        <RouterLink to="/techcon365" className={s.link} onClick={dismiss}>
           Learn more
         </RouterLink>
       </div>

@@ -1,4 +1,5 @@
 import { Button, makeStyles, tokens, Badge } from "@fluentui/react-components";
+import { Link } from "react-router-dom";
 // import { TrustBanner } from "../components/TrustBanner";
 import {
   Mail24Regular,
@@ -595,14 +596,12 @@ export function ProductFabricAdminAgent() {
             ))}
           </div>
           <div className={s.seeAll}>
-            <a
+            <Link
               className={s.seeAllLink}
-              href="/insights/case-studies"
-              target="_blank"
-              rel="noreferrer"
+              to="/insights/case-studies"
             >
               See all Fabric case studies <ArrowRight16Regular />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
