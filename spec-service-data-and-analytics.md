@@ -52,7 +52,7 @@ This page describes the Data & Analytics service surface and maps content from t
 - **Eyebrow:** `Data engineering & analytics`
 - **H1:** `Medallion lakehouses, built for scale and trust`
 - **Subhead:** `Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses, semantic models, and real-time analytics that power Copilot, AI agents, and decision-making across the enterprise.`
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Data%20%26%20Analytics%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Data%20%26%20Analytics%20-%20MAQ%20Software`
 - **Secondary CTA:** `Get started` → `https://maqsoftware.com/contact` (preserve live CTAs as secondary where appropriate)
 
 ### 3.2 ServiceCapabilities — "Our data & analytics capabilities"

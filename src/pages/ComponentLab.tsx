@@ -279,9 +279,9 @@ const useSvcCard = makeStyles({
 });
 
 const svcSample = [
-  { icon: <Bot24Regular />, name: "AI solutions & agentic automation", desc: "Production GenAI agents and copilots on Azure OpenAI — automating high-value workflows." },
-  { icon: <ChartMultiple24Regular />, name: "Reporting & business intelligence", desc: "Microsoft Power BI Partner of the Year — modernizing legacy BI to Fabric, up to 8× faster." },
-  { icon: <Cloud24Regular />, name: "Cloud infrastructure & modernization", desc: "Azure architecture, migration, and FinOps — 30–40% lower run cost on average." },
+  { icon: <Bot24Regular />, name: "AI Solutions & Agents", desc: "Production GenAI agents and copilots on Azure OpenAI — automating high-value workflows." },
+  { icon: <ChartMultiple24Regular />, name: "Insights & Analytics", desc: "Microsoft Power BI Partner of the Year — modernizing legacy BI to Fabric, up to 8× faster." },
+  { icon: <Cloud24Regular />, name: "Cloud Modernization", desc: "Azure architecture, migration, and FinOps — 30–40% lower run cost on average." },
 ];
 
 const ServiceCardLab: FC = () => {
@@ -1175,11 +1175,11 @@ const compPillars = [
 const compAvanade = [
   { tag: "Microsoft Solutions", title: "Modern Workplace with Copilot", desc: "Roll out Microsoft 365 Copilot with adoption, change management and security baked in.", stat: "92%", statL: "Adoption" },
   { tag: "AI & Innovation", title: "Azure OpenAI agentic platform", desc: "Production-ready agent platform on Azure OpenAI with full governance and observability.", stat: "3.5×", statL: "Faster" },
-  { tag: "Data & Analytics", title: "Microsoft Fabric for the enterprise", desc: "End-to-end Fabric implementation — OneLake, real-time analytics, Power BI.", stat: "60%", statL: "Saved" },
+  { tag: "Data & AI Platforms", title: "Microsoft Fabric for the enterprise", desc: "End-to-end Fabric implementation — OneLake, real-time analytics, Power BI.", stat: "60%", statL: "Saved" },
 ];
 
 const compQuote = [
-  { quote: "MAQ Software delivered our Fabric migration ahead of schedule and 30% under budget. Their AI-DataLens product is now used by every analyst in the bank.", initials: "SJ", name: "Sarah Johnson", role: "VP Data & Analytics, Top-3 US Bank" },
+  { quote: "MAQ Software delivered our Fabric migration ahead of schedule and 30% under budget. Their AI-DataLens product is now used by every analyst in the bank.", initials: "SJ", name: "Sarah Johnson", role: "VP Data & AI Platforms, Top-3 US Bank" },
   { quote: "We replaced 14 disconnected reporting tools with one Power BI estate. Refresh times went from minutes to sub-second.", initials: "MP", name: "Michael Park", role: "CIO, Fortune 100 Insurer" },
 ];
 

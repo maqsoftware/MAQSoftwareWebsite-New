@@ -1,4 +1,4 @@
-import { makeStyles } from "@fluentui/react-components";
+﻿import { makeStyles } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 
 type FooterItem = {
@@ -107,11 +107,12 @@ const cols: FooterCol[] = [
   {
     title: "Services",
     items: [
-      { label: "AI solutions & agentic automation", to: "/services/agentic-ai" },
-      { label: "Data engineering & analytics",      to: "/services/data-and-analytics" },
-      { label: "Reporting & business intelligence",  to: "/services/reporting-bi" },
-      { label: "Cloud infrastructure & modernization", to: "/services/cloud" },
-      { label: "Security & compliance",             to: "/services/security-compliance" },
+      { label: "Data & AI Platforms",              to: "/services/data-and-analytics" },
+      { label: "AI Solutions & Agents",            to: "/services/agentic-ai" },
+      { label: "Insights & Analytics",             to: "/services/reporting-bi" },
+      { label: "Business Applications & Automation", to: "/services/business-apps" },
+      { label: "Cloud Modernization",              to: "/services/cloud" },
+      { label: "Security & Governance",            to: "/services/security-compliance" },
     ],
   },
   {
@@ -141,7 +142,7 @@ const cols: FooterCol[] = [
       { label: "Careers",    to: "/careers" },
       { label: "Events",     to: "/events" },
       { label: "Sustainability", to: "/sustainability" },
-      { label: "Contact us", to: "/contact" },
+      { label: "Contact Us", to: "/contact" },
     ],
   },
   {
@@ -249,7 +250,7 @@ export function Footer() {
           </div>
           <div className={s.bottomRow2}>
             <span className={s.bottomText}>
-              © {new Date().getFullYear()} MAQ Software. All rights reserved.
+              Â© {new Date().getFullYear()} MAQ Software. All rights reserved.
             </span>
             <span className={s.bottomText}>
               Microsoft, Azure, Fabric, and Power BI are trademarks of Microsoft
@@ -261,3 +262,4 @@ export function Footer() {
     </footer>
   );
 }
+

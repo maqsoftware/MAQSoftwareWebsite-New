@@ -58,7 +58,7 @@ case-studies content and filtering behavior from maqsoftware.com.
 - **Subhead:**
   > Explore real-world outcomes across AI, data, reporting, cloud, and security implementations delivered by MAQ Software.
 - **Primary CTA:** `Explore latest studies` -> scroll to filters/grid.
-- **Secondary CTA:** `Contact us` -> `mailto:customersuccess@maqsoftware.com?subject=Case%20Studies%20-%20MAQ%20Software`
+- **Secondary CTA:** `Contact Us` -> `mailto:customersuccess@maqsoftware.com?subject=Case%20Studies%20-%20MAQ%20Software`
 
 ### 3.2 InsightsResourceNav (shared hub strip)
 

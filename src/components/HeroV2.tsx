@@ -1,7 +1,6 @@
 import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Mail20Regular,
-  ArrowRight20Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -179,12 +178,7 @@ export function Hero() {
             Harness data to drive <em className={s.em}>faster</em> decisions with AI-powered analytics
           </h1>
           <p className={s.sub}>
-            As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree,
-            MAQ Software combines 26 years of enterprise delivery excellence with
-            deep expertise in data, analytics, and AI. Whether modernizing legacy
-            BI platforms, accelerating cloud transformation, or scaling AI across
-            the enterprise, our team of 1,800+ engineers delivers measurable
-            business outcomes with speed, quality, and reliability.
+         MAQ Software helps enterprises transform data into decisions and AI into measurable business outcomes. Backed by 26 years of delivery excellence and a global team of certified engineers, we enable organizations to scale AI and agentic automation, modernize data and analytics platforms, and accelerate cloud transformation—delivering results with speed, quality, and confidence.
           </p>
           <div className={s.btns}>
             <Button
@@ -199,11 +193,9 @@ export function Hero() {
               appearance="outline"
               size="large"
               className="maq-secondary-btn"
-              icon={<ArrowRight20Regular />}
-              iconPosition="after"
               onClick={() => navigate("/insights/case-studies")}
             >
-              View case studies
+              Case Studies
             </Button>
           </div>
         </div>

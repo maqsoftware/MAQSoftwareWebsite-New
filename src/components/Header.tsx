@@ -200,12 +200,12 @@ const industries: NavItem[] = [
 ];
 
 const services: NavItem[] = [
-  { label: "AI solutions & agentic automation", href: "/services/agentic-ai" },
-  { label: "Data engineering & analytics", href: "/services/data-and-analytics" },
-  { label: "Reporting & business intelligence", href: "/services/reporting-bi" },
-  { label: "Business apps & process automation", href: "/services/business-apps" },
-  { label: "Cloud infrastructure & modernization", href: "/services/cloud" },
-  { label: "Security & compliance", href: "/services/security-compliance" },
+  { label: "Data & AI Platforms", href: "/services/data-and-analytics" },
+  { label: "AI Solutions & Agents", href: "/services/agentic-ai" },
+  { label: "Insights & Analytics", href: "/services/reporting-bi" },
+  { label: "Business Applications & Automation", href: "/services/business-apps" },
+  { label: "Cloud Modernization", href: "/services/cloud" },
+  { label: "Security & Governance", href: "/services/security-compliance" },
   { label: "Workplace transformation & productivity", href: "/services/workplace-transformation" },
 ];
 

@@ -138,7 +138,7 @@ interface Capability {
 
 const capabilities: Capability[] = [
   {
-    name: "Data & analytics strategy",
+    name: "Data strategy & governance",
     tagline: "Craft a winning data strategy",
     description:
       "Develop a comprehensive data strategy that aligns with your business goals. Our experts help you identify key data sources, establish governance frameworks, and create a roadmap for data-driven success.",
@@ -179,7 +179,7 @@ export function ServiceCapabilitiesData() {
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
-          <h2 className={s.title}>Our data & analytics capabilities</h2>
+          <h2 className={s.title}>Our data &amp; AI platform capabilities</h2>
           <p className={s.sub}>
             Capabilities that turn data into reliable, scalable analytics and real-time decisioning.
           </p>
@@ -201,7 +201,7 @@ export function ServiceCapabilitiesData() {
               className={s.knowMore}
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Data & Analytics"
+                sel.name + " - Data & AI Platforms"
               )}`}
             >
               Know more

@@ -102,7 +102,7 @@ export function ReportingBIHero() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Reporting &amp; business intelligence</span>
+          <span className={s.eyebrow}>Insights &amp; Analytics</span>
           <h1 className={s.h1}>From legacy BI to real-time Power BI on Microsoft Fabric</h1>
           <p className={s.sub}>
             We build, modernize, and migrate enterprise BI — moving Tableau, SAP BO, SAP Crystal,
@@ -117,7 +117,7 @@ export function ReportingBIHero() {
               as="a"
               href="mailto:customersuccess@maqsoftware.com?subject=Reporting%20%26%20BI%20-%20MAQ%20Software"
             >
-              Contact us
+              Contact Us
             </Button>
             <Button
               appearance="outline"
