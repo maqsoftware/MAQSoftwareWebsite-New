@@ -29,7 +29,7 @@ const capabilities = [
 ];
 
 const resources = [
-  { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse migration and Fabric consulting offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
+  { pill: "Marketplace offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse migration and Fabric marketplace offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
   { pill: "Case studies", title: "Fabric migration outcomes", desc: "Real customer stories on Tableau-to-Power-BI and platform migration.", href: "/insights/case-studies" },
   { pill: "Best practices", title: "Migration patterns and standards", desc: "MAQ Software's authoritative migration guidance.", href: "/insights/best-practice-guides" },
 ];

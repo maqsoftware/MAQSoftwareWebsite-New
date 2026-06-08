@@ -210,7 +210,7 @@ const fsOffers = [
   {
     pill: "Consulting services",
     title: "MAQ Software consulting services on Azure Marketplace",
-    desc: "Full catalog of MAQ's Microsoft-listed consulting offers, including Fabric assessments and AI workshops tagged for Financial Services.",
+    desc: "Full catalog of MAQ's Microsoft-listed marketplace offers, including Fabric assessments and AI workshops tagged for Financial Services.",
     href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software",
     image: "/images/marketplace-consulting.jpg",
   },
