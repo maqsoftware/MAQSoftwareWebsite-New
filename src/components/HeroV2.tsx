@@ -176,7 +176,7 @@ export function Hero() {
         <div>
           <div className={s.badgesRow}>
             <span className={s.badge}>Microsoft Fabric Featured Partner</span>
-            <span className={s.badge}>Top 25 Global Microsoft Partner</span>
+            <span className={s.badge}>2021 Microsoft Power BI Partner of the Year</span>
           </div>
           <h1 className={s.h1}>
             Turn data into decisions <em className={s.em}>faster</em> with
