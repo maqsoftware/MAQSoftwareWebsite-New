@@ -20,16 +20,17 @@ export function buildContactMailto(subject?: string, body?: string): string {
 export function useContactAction() {
   const navigate = useNavigate();
   return (subjectOrMailto?: string, body?: string) => {
-    navigate("/contact");
     const mailto = subjectOrMailto?.startsWith("mailto:")
       ? subjectOrMailto
       : buildContactMailto(subjectOrMailto, body);
-    // Open in a new window (keeps the website visible underneath). Some
-    // browsers leave an empty blank tab behind after launching the mail
-    // handler, so close it once the mailto has been handed off.
+    // Launch the mail compose first, synchronously within the click gesture,
+    // so it opens instantly (before React processes the route change). Opens
+    // in a new window to keep the website visible underneath; some browsers
+    // leave an empty blank tab behind, so close it once handed off.
     const win = window.open(mailto, "_blank");
     if (win) {
       setTimeout(() => win.close(), 500);
     }
+    navigate("/contact");
   };
 }
