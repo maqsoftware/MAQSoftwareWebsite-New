@@ -60,6 +60,10 @@ export function CTA() {
   const s = useStyles();
   const navigate = useNavigate();
   const location = useLocation();
+  const handleContactClick = () => {
+    navigate("/contact");
+    window.open("mailto:CustomerSuccess@MAQSoftware.com", "_blank");
+  };
   return (
     <section className={s.section} id="contact">
       <div className={s.inner}>
@@ -76,7 +80,7 @@ export function CTA() {
             appearance="primary"
             size="large"
             icon={<Mail24Regular />}
-            onClick={() => navigate("/contact")}
+            onClick={handleContactClick}
           >
             Contact us
           </Button>
