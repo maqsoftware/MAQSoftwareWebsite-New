@@ -8,12 +8,12 @@ import {
 } from "@fluentui/react-icons";
 // import { TrustBanner } from "../components/TrustBanner";
 
+import { IndustryHero } from "../components/industry/IndustryHero";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
+import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
-
-// --- Public Sector hero visual ---
 const useVisualStyles = makeStyles({
   tile: {
     background: "#fff",

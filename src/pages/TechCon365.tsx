@@ -1,11 +1,8 @@
-import { Badge, Button, makeStyles, tokens } from "@fluentui/react-components";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import {
   ArrowRight20Regular,
-  CalendarLtr24Regular,
-  Location24Regular,
+  Brain24Regular,
   Mail24Regular,
-  MegaphoneLoud24Regular,
-  PeopleTeam24Regular,
   TicketDiagonal24Regular,
 } from "@fluentui/react-icons";
 import type { ReactNode } from "react";
@@ -52,6 +49,10 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     letterSpacing: "-0.02em",
     margin: "0 0 16px",
+  },
+  emText: {
+    color: "var(--maq-red)",
+    fontStyle: "normal",
   },
   sub: {
     fontSize: "16px",
@@ -100,6 +101,13 @@ const useStyles = makeStyles({
     gridTemplateColumns: "40px 1fr",
     gap: "12px",
     alignItems: "start",
+    cursor: "pointer",
+    padding: "12px",
+    borderRadius: "8px",
+    transition: "background-color 0.2s",
+    ":hover": {
+      backgroundColor: "var(--maq-red-pale)",
+    },
   },
   iconBox: {
     width: "40px",
@@ -171,11 +179,6 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "14px",
-  },
-  talkMeta: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "8px",
   },
   talkTitle: {
     fontSize: "20px",
@@ -427,14 +430,9 @@ export function TechCon365() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <div>
-            <span className={s.eyebrow}>TechCon 365 Chicago 2026</span>
-            <h1 className={s.h1}>Join MAQ Software at TechCon 365 Chicago 2026</h1>
+            <h1 className={s.h1}>Join <em className={s.emText}> MAQ Software</em> at TechCon 365 at Booth #20–21</h1>
             <p className={s.sub}>
-              MAQ Software is a diamond sponsor at TechCon 365, DATACON &amp;
-              PWRCON Chicago 2026.
-            </p>
-            <p className={s.sub}>
-              Stop by booth #20-21 to learn how we help organizations modernize
+              Learn how we help organizations modernize
               their data platforms with Microsoft Fabric, Power BI, and
               AI-powered analytics - and connect productivity to insights with
               Power Platform and Copilot.
@@ -458,35 +456,27 @@ export function TechCon365() {
             </div>
           </div>
 
-          <aside className={s.heroPanel} aria-label="Event details">
-            <h2 className={s.panelTitle}>Event details</h2>
+          <aside className={s.heroPanel} aria-label="Featured sessions">
+            <h2 className={s.panelTitle}>Featured sessions</h2>
             <div className={s.eventGrid}>
-              <div className={s.eventRow}>
-                <div className={s.iconBox}><CalendarLtr24Regular /></div>
+              <div 
+                className={s.eventRow}
+                onClick={() => document.getElementById("talks-section")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                <div className={s.iconBox}><Brain24Regular /></div>
                 <div>
-                  <div className={s.eventLabel}>Date</div>
-                  <div className={s.eventValue}>June 15 - 19, 2026</div>
+                  <div className={s.eventLabel}>Session 1</div>
+                  <div className={s.eventValue}>Agentic Spec-Driven Development</div>
                 </div>
               </div>
-              <div className={s.eventRow}>
-                <div className={s.iconBox}><Location24Regular /></div>
+              <div 
+                className={s.eventRow}
+                onClick={() => document.getElementById("talks-section")?.scrollIntoView({ behavior: "smooth" })}
+              >
+                <div className={s.iconBox}><Brain24Regular /></div>
                 <div>
-                  <div className={s.eventLabel}>Location</div>
-                  <div className={s.eventValue}>Chicago, IL (McCormick Place South)</div>
-                </div>
-              </div>
-              <div className={s.eventRow}>
-                <div className={s.iconBox}><MegaphoneLoud24Regular /></div>
-                <div>
-                  <div className={s.eventLabel}>Sponsorship</div>
-                  <div className={s.eventValue}>Diamond Sponsor</div>
-                </div>
-              </div>
-              <div className={s.eventRow}>
-                <div className={s.iconBox}><PeopleTeam24Regular /></div>
-                <div>
-                  <div className={s.eventLabel}>Where to find us</div>
-                  <div className={s.eventValue}>Booth #20-21</div>
+                  <div className={s.eventLabel}>Session 2</div>
+                  <div className={s.eventValue}>M365 Copilot Enablement</div>
                 </div>
               </div>
             </div>
@@ -494,7 +484,7 @@ export function TechCon365() {
         </div>
       </section>
 
-      <section className={s.section}>
+      <section className={s.section} id="talks-section">
         <div className={s.inner}>
           <div className={s.head}>
             <span className={s.eyebrow}>Our featured talks</span>
@@ -503,12 +493,6 @@ export function TechCon365() {
           <div className={s.talksGrid}>
             {talks.map((talk) => (
               <article key={talk.title} className={s.talkCard}>
-                <div className={s.talkMeta}>
-                  <Badge appearance="tint" color="danger">{talk.type}</Badge>
-                  {talk.tags.map((tag) => (
-                    <Badge key={tag} appearance="outline" color="brand">{tag}</Badge>
-                  ))}
-                </div>
                 <h3 className={s.talkTitle}>{talk.title}</h3>
                 <p className={s.bodyText}>{talk.desc}</p>
                 <div className={s.talkDetails}>

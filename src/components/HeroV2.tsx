@@ -2,9 +2,6 @@ import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Mail20Regular,
   ArrowRight20Regular,
-  People24Regular,
-  Trophy24Regular,
-  Lightbulb24Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -24,6 +21,24 @@ const useStyles = makeStyles({
     pointerEvents: "none",
     opacity: 0.45,
   },
+  bgImage: {
+    position: "absolute",
+    inset: 0,
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    objectPosition: "center",
+    zIndex: 0,
+  },
+  heroGradient: {
+    position: "absolute",
+    inset: 0,
+    background: "linear-gradient(to right, rgba(255,255,255,1) 30%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%)",
+    zIndex: 1,
+    "@media (max-width: 768px)": {
+      background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.7) 100%)",
+    },
+  },
   grid: {
     maxWidth: "1240px",
     margin: "0 auto",
@@ -32,6 +47,7 @@ const useStyles = makeStyles({
     gap: "56px",
     alignItems: "center",
     position: "relative",
+    zIndex: 2,
     "@media (max-width: 960px)": {
       gridTemplateColumns: "1fr",
     },
@@ -129,9 +145,19 @@ const useStyles = makeStyles({
 export function Hero() {
   const s = useStyles();
   const navigate = useNavigate();
+  const handleContactClick = () => {
+    navigate("/contact");
+    window.open("mailto:CustomerSuccess@MAQSoftware.com", "_blank");
+  };
   return (
     <section className={s.wrap}>
-      <svg
+      <img
+        alt="Team collaborating in a modern office"
+        className={s.bgImage}
+        src="/images/home.png"
+      />
+      <div className={s.heroGradient}></div>
+      {/* <svg
         className={s.strands}
         viewBox="0 0 600 600"
         preserveAspectRatio="xMaxYMin slice"
@@ -145,31 +171,27 @@ export function Hero() {
         <path d="M 250 0 Q 400 200 600 220" stroke="#e4e7ec" strokeWidth="1" fill="none" />
         <path d="M 300 0 Q 440 230 600 260" stroke="#fde7ea" strokeWidth="1" fill="none" />
         <path d="M 350 0 Q 480 260 600 300" stroke="#fde7ea" strokeWidth="1" fill="none" />
-      </svg>
+      </svg> */}
 
       <div className={s.grid}>
         <div>
-          <div className={s.badgesRow}>
-            <span className={s.badge}>Microsoft Fabric Featured Partner</span>
-            <span className={s.badge}>Top 25 Global Microsoft Partner</span>
-          </div>
           <h1 className={s.h1}>
-            Turn data into decisions <em className={s.em}>faster</em> with
-            AI-powered analytics
+            Harness data to drive <em className={s.em}>faster</em> decisions with AI-powered analytics
           </h1>
           <p className={s.sub}>
             As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree,
-            MAQ Software brings 26 years of enterprise delivery to every
-            engagement. Whether you're modernizing a legacy BI stack, migrating
-            to the cloud, or scaling AI across your organization — our 1,800+
-            engineers deliver outcomes, not just recommendations.
+            MAQ Software combines 26 years of enterprise delivery excellence with
+            deep expertise in data, analytics, and AI. Whether modernizing legacy
+            BI platforms, accelerating cloud transformation, or scaling AI across
+            the enterprise, our team of 1,800+ engineers delivers measurable
+            business outcomes with speed, quality, and reliability.
           </p>
           <div className={s.btns}>
             <Button
               appearance="primary"
               size="large"
               icon={<Mail20Regular />}
-              onClick={() => navigate("/contact")}
+              onClick={handleContactClick}
             >
               Contact Us
             </Button>
@@ -186,7 +208,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className={s.visual}>
+        {/* <div className={s.visual}>
           <div className={s.statCard}>
             <div className={s.statIcon}>
               <People24Regular />
@@ -225,7 +247,7 @@ export function Hero() {
               <div className={s.statMeta}>2013 — 2025</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

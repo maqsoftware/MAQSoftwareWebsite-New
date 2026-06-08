@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
     Mail24Regular,
     ArrowRight20Regular,
@@ -708,15 +708,13 @@ export function ServiceWorkplaceTransformation() {
                             ))}
                         </div>
                     </div>
-                    <a
+                    <Link
                         className={s.footerLink}
-                        href="/insights/case-studies"
-                        target="_blank"
-                        rel="noreferrer"
+                        to="/insights/case-studies"
                     >
                         See Workplace Transformation case studies
                         <ArrowRight16Regular />
-                    </a>
+                    </Link>
                 </div>
             </section>
 
@@ -770,15 +768,13 @@ export function ServiceWorkplaceTransformation() {
                             </a>
                         ))}
                     </div>
-                    <a
+                    <Link
                         className={s.footerLink}
-                        href="/insights/case-studies"
-                        target="_blank"
-                        rel="noreferrer"
+                        to="/insights/case-studies"
                     >
                         See all case studies
                         <ArrowRight16Regular />
-                    </a>
+                    </Link>
                 </div>
             </section>
 

@@ -210,8 +210,8 @@ const services: NavItem[] = [
 ];
 
 const productNav: NavItem[] = [
-  ...products.map((p) => ({ label: p.name, href: `/products/${p.slug}` })),
   { label: "All products →", href: "/products" },
+  ...products.map((p) => ({ label: p.name, href: `/products/${p.slug}` })),
 ];
 
 const partnerships: NavItem[] = [

@@ -1,5 +1,6 @@
 import { makeStyles, tokens, Button } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -150,14 +151,13 @@ export function ServiceCloudCaseStudies({
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
-          <a className={s.footerLink} href="/insights/case-studies?filter=Cloud optimization#insights-content" target="_blank"
-          rel="noreferrer">
-          See all case studies <ArrowRight16Regular />
-        </a>
-        ) : (
-          <a className={s.footerLink} href="/insights/case-studies?filter=Cloud optimization">
+          <Link className={s.footerLink} to="/insights/case-studies#insights-content">
             See all case studies <ArrowRight16Regular />
-          </a>
+          </Link>
+        ) : (
+          <Link className={s.footerLink} to="/insights/case-studies#insights-content">
+            See all case studies <ArrowRight16Regular />
+          </Link>
         )}
       </div>
     </section>

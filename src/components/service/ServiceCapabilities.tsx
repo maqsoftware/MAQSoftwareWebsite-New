@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import {
   Bot24Regular,
@@ -255,14 +256,12 @@ export function ServiceCapabilities({
             ))}
           </div>
         </div>
-        <a
+        <Link
           className={s.footerLink}
-          href={footerHref}
-          target="_blank"
-          rel="noreferrer"
+          to={footerHref}
         >
           {footerLabel} <ArrowRight16Regular />
-        </a>
+        </Link>
       </div>
     </section>
   );

@@ -137,10 +137,6 @@ export const Services: FC = () => {
           <h2 className={s.title}>
             Capabilities That Accelerate Growth.
           </h2>
-          <p className={s.sub}>
-            From AI agents to Fabric migrations — delivered by 1,800+ engineers
-            with 26 years of Fortune 500 experience.
-          </p>
         </div>
         <div className={s.grid}>
           {services.map((svc) => (

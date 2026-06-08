@@ -1,17 +1,6 @@
-import {
-  Cloud24Regular,
-  DataTrending24Regular,
-  Shield24Regular,
-  ScaleFill24Regular,
-  PlugConnected24Regular,
-  People24Regular,
-} from "@fluentui/react-icons";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
-// import { TrustBanner } from \"../components/TrustBanner\";
-
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
-import { PartnershipValueProps } from "../components/partnerships/PartnershipValueProps";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
@@ -196,39 +185,6 @@ const useStyles = makeStyles({
 // ---------------------------------------------------------------------------
 // Data
 // ---------------------------------------------------------------------------
-const whyMicrosoft = [
-  {
-    icon: <Cloud24Regular />,
-    title: "Unified Platform",
-    desc: "A comprehensive cloud ecosystem spanning infrastructure, data, AI, and productivity—all integrated under one platform.",
-  },
-  {
-    icon: <DataTrending24Regular />,
-    title: "AI-Powered Insights",
-    desc: "Harness Azure AI, Copilot, and Fabric to turn raw data into actionable intelligence with built-in machine learning and generative AI.",
-  },
-  {
-    icon: <Shield24Regular />,
-    title: "Enterprise Security",
-    desc: "Protect your organization with industry-leading security, compliance, and governance built into every layer of the Microsoft stack.",
-  },
-  {
-    icon: <ScaleFill24Regular />,
-    title: "Scalable",
-    desc: "Seamlessly scale from small teams to global enterprises with elastic compute, serverless architectures, and consumption-based pricing.",
-  },
-  {
-    icon: <PlugConnected24Regular />,
-    title: "Deeply Integrated",
-    desc: "Benefit from native integration across Azure, Microsoft 365, Dynamics 365, Power Platform, and GitHub for frictionless workflows.",
-  },
-  {
-    icon: <People24Regular />,
-    title: "Trusted Ecosystem",
-    desc: "Join a global network of partners and customers backed by Microsoft's enterprise support, training, and continuous innovation.",
-  },
-];
-
 const highlights = [
   { metric: "9", label: "Microsoft Specializations" },
   { metric: "5K+", label: "Microsoft Technical Certifications" },
@@ -283,6 +239,13 @@ const designations = [
   },
 ];
 
+const designationImageNames: Record<string, string> = {
+  "Data & AI": "data-and-AI",
+  "Digital & App Innovation": "digital-and-apps-innovation",
+  Infrastructure: "infrastructure",
+  Security: "security",
+};
+
 const featuredOffers = [
   { name: "Microsoft Fabric: 2-Hour Briefing", duration: "2 hours", price: "Free" },
   { name: "Microsoft Fabric: 4-Week Assessment", duration: "4 weeks", price: "$15,000" },
@@ -327,10 +290,6 @@ export function PartnershipMicrosoft() {
         imageAlt="MAQ Software and Microsoft"
       />
 
-      <PartnershipValueProps
-        title="Why Microsoft?"
-        items={whyMicrosoft}
-      />
       <PartnershipHighlights
         title="Partnership Highlights"
         stats={highlights}
@@ -351,7 +310,7 @@ export function PartnershipMicrosoft() {
               >
                 <img
                   className={s.badgeImg}
-                  src={`/logos/solutions-partner-${d.label === "Data & AI" ? "data-and-AI" : d.label === "Digital & App Innovation" ? "digital-and-apps-innovation" : d.label.toLowerCase()}.png`}
+                  src={`/logos/solutions-partner-${designationImageNames[d.label]}.png`}
                   alt={`Microsoft Solutions Partner - ${d.label}`}
                   loading="lazy"
                 />

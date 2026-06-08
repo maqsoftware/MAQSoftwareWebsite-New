@@ -1,5 +1,6 @@
 import { makeStyles, tokens, Button } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -151,24 +152,20 @@ export function ReportingBICaseStudies({
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
           <div className={s.buttonGroup}>
-            <a
+            <Link
               className={s.footerLink}
-              href="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
-              target="_blank"
-              rel="noreferrer"
+              to="/insights/case-studies#insights-content"
             >
               {allCasesLabel} <ArrowRight16Regular />
-            </a>
+            </Link>
           </div>
         ) : (
-          <a
+          <Link
             className={s.footerLink}
-            href="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
-            target="_blank"
-            rel="noreferrer"
+            to="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
           >
             See all reporting &amp; BI case studies <ArrowRight16Regular />
-          </a>
+          </Link>
         )}
       </div>
     </section>

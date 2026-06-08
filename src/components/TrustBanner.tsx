@@ -58,7 +58,7 @@ export function TrustBanner() {
         {items.map((i) => (
           <span
             key={i.label}
-            className={mergeClasses(s.chip, i.blue && s.chipBlue)}
+            className={s.chip}
           >
             {i.label}
           </span>

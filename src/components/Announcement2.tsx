@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Button, makeStyles, Link } from "@fluentui/react-components";
+import { Button, makeStyles } from "@fluentui/react-components";
 import { Dismiss20Regular } from "@fluentui/react-icons";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles({
   bar: {
@@ -20,6 +21,10 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     marginLeft: "8px",
     fontWeight: 600,
+    textDecoration: "none",
+    ":hover": {
+      textDecoration: "underline",
+    },
   },
   strong: { color: "var(--maq-red)", fontWeight: 700 },
   dismiss: {
@@ -33,17 +38,39 @@ const useStyles = makeStyles({
 });
 
 export function Announcement() {
-  const s = useStyles();
+//   const s = useStyles();
+//   const [dismissed, setDismissed] = useState(
+//   () => sessionStorage.getItem("announcement-dismissed") === "true"
+// );
+//   const dismiss = () => {
+//   sessionStorage.setItem("announcement-dismissed", "true");
+//   setDismissed(true);
+// };
+//   const { pathname } = useLocation();
+
+//   if (dismissed || pathname === "/techcon365") return null;
+  
+//   return (
+//     <div className={s.bar} role="status">
+//       <div className={s.message}>
+//        Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
+//         <RouterLink to="/techcon365" className={s.link} onClick={dismiss}>
+//           Learn more
+//         </RouterLink>
+//       </div>
+const s = useStyles();
   const [dismissed, setDismissed] = useState(false);
-  if (dismissed) return null;
+  const { pathname } = useLocation();
+
+  if (dismissed || pathname === "/techcon365") return null;
+
   return (
     <div className={s.bar} role="status">
       <div className={s.message}>
-        MAQ Software is a Diamond Sponsor at TechCon 365, DATACON &amp; PWRCON
-        Chicago 2026, taking place June 15–19, 2026, in Chicago, IL.{" "}
-        <Link href="/techcon365" className={s.link} appearance="subtle">
+        Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
+        <RouterLink to="/techcon365" className={s.link}>
           Learn more
-        </Link>
+        </RouterLink>
       </div>
       <Button
         appearance="subtle"

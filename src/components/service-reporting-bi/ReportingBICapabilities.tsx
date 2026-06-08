@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import {
   ChartMultiple24Regular,
@@ -232,14 +233,12 @@ export function ReportingBICapabilities() {
             ))}
           </div>
         </div>
-        <a
+        <Link
           className={s.footerLink}
-          href="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
-          target="_blank"
-          rel="noreferrer"
+          to="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
         >
           See reporting &amp; visualization case studies <ArrowRight16Regular />
-        </a>
+        </Link>
       </div>
     </section>
   );
