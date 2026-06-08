@@ -595,7 +595,7 @@ export function ServiceWorkplaceTransformation() {
                                 icon={<Mail24Regular />}
                                 onClick={() => navigate("/contact")}
                             >
-                                Contact us
+                                Contact Us
                             </Button>
                             <Button
                                 appearance="outline"

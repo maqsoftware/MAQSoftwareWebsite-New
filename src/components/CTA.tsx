@@ -2,7 +2,7 @@ import {
   makeStyles,
   Button,
 } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
+import { Mail24Regular } from "@fluentui/react-icons";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -82,13 +82,11 @@ export function CTA() {
             icon={<Mail24Regular />}
             onClick={handleContactClick}
           >
-            Contact us
+            Contact Us
           </Button>
           <Button
             appearance="outline"
             size="large"
-            icon={<ArrowRight20Regular />}
-            iconPosition="after"
             onClick={() => {
               if (location.pathname === "/insights/case-studies") {
                 window.scrollTo({ top: 0 });
@@ -97,7 +95,7 @@ export function CTA() {
               }
             }}
           >
-            Read case studies
+            Case Studies
           </Button>
         </div>
         <div className={s.email}>

@@ -63,7 +63,7 @@ const useStyles = makeStyles({
 
 const quotes = [
   {
-    body: "MAQ Software managed our complete Azure migration project, reducing infrastructure costs by 35% while improving performance. The team's expertise in cloud optimization and change management was invaluable.",
+    body: "MAQ Software managed our complete Azure migration project, reducing infrastructure costs by 35% while improving performance. The team's expertise in cloud modernization and change management was invaluable.",
     cite: "CTO — Global financial services firm",
   },
   {

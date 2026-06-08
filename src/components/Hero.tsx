@@ -7,7 +7,6 @@ import {
 } from "@fluentui/react-components";
 import {
   Mail20Regular,
-  ArrowRight20Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -157,11 +156,9 @@ export function Hero() {
             <Button
               appearance="outline"
               size="large"
-              icon={<ArrowRight20Regular />}
-              iconPosition="after"
               onClick={() => navigate("/insights/case-studies")}
             >
-              View case studies
+              Case Studies
             </Button>
           </div>
         </div>

@@ -186,7 +186,7 @@ export function ServiceCloudCapabilities() {
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
-          <h2 className={s.title}>Our cloud infrastructure &amp; modernization capabilities</h2>
+          <h2 className={s.title}>Our cloud modernization capabilities</h2>
           <p className={s.sub}>
             Four capability pillars that replatform on-premises workloads to Azure with
             FinOps discipline — scalable, secure, and cost-controlled.
@@ -209,7 +209,7 @@ export function ServiceCloudCapabilities() {
               className={s.knowMore}
               as="a"
               href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Cloud Optimization"
+                sel.name + " - Cloud Modernization"
               )}`}
             >
               Know more
@@ -233,7 +233,7 @@ export function ServiceCloudCapabilities() {
             ))}
           </div>
         </div>
-        <Link className={s.footerLink} to="/insights/case-studies?filter=Cloud optimization#insights-content">
+        <Link className={s.footerLink} to="/insights/case-studies?filter=Cloud modernization#insights-content">
           See cloud case studies <ArrowRight16Regular />
         </Link>
       </div>

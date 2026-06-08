@@ -57,7 +57,7 @@ layouts, h2 `28–30px`, body `14px`. No oversized hero.
 - **H1:** `From legacy BI to real-time Power BI on Microsoft Fabric`
 - **Subhead:**
   > We build, modernize, and migrate enterprise BI — moving Tableau, SAP BO, SAP Crystal, Qlik, Cognos, and MicroStrategy estates to Power BI on Microsoft Fabric, with semantic models, custom visuals, and a storytelling layer your business actually uses.
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Reporting%20%26%20BI%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Reporting%20%26%20BI%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore capabilities` → scroll to `#bi-capabilities`
 
 **Decorative visual (CSS mosaic, aria-hidden):**

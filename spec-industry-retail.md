@@ -57,7 +57,7 @@
 - **H1:** `Powering the Next Era of Retail with AI-Driven Intelligence`
 - **Subhead:**
   > AI is redefining how retailers operate, compete, and grow. At MAQ Software, we help retail and CPG organizations embed intelligence across the enterprise, from real-time decision-making to autonomous operations. Backed by deep Microsoft expertise and advanced data platforms, we enable seamless customer experiences, resilient supply chains, and intelligent store ecosystems.
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Retail%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Retail%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore retail solutions` → scroll to `#retail-solutions`
 
 **Image:** illustrative SVG / CSS composition (no external asset required). Default: a stylized retail dashboard mosaic — gradient card (red→black) with three stacked mini-tiles:
