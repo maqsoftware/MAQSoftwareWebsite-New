@@ -182,6 +182,7 @@ const offices: Office[] = [
   {
     city: "Redmond, Washington, USA",
     address: "2027 152nd Avenue NE\nRedmond, WA 98052",
+    phone: "+1 425-526-5399",
     maps: "https://maps.app.goo.gl/Bu9iNvKvn7m9Wvkb6",
   },
   {
@@ -226,10 +227,7 @@ export function Contact() {
               Why Work With MAQ Software?
             </h1>
             <p className={s.heroSub}>
-              MAQ Software accelerates data-driven transformation for Global 2000
-              companies through analytics, cloud, and data science. For 26+ years,
-              we have helped organizations improve customer relationships,
-              operations, sales, and marketing outcomes.
+           MAQ Software helps organizations unlock the full potential of their data through AI, intelligent automation, analytics, and cloud technologies. From modern data platforms to generative AI and agentic solutions, we enable businesses to transform information into real-time intelligence, accelerate innovation, and drive measurable outcomes at scale.
             </p>
 
             <div className={s.proofList}>
