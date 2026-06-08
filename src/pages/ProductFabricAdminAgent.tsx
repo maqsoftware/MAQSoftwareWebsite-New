@@ -494,7 +494,7 @@ export function ProductFabricAdminAgent() {
                   handleContactClick("Fabric Admin Agent - Walkthrough")
                 }
               >
-                Get it now
+                Contact Us
               </Button>
             </div>
           </div>

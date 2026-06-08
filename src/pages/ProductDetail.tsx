@@ -278,7 +278,7 @@ export function ProductDetail() {
                   handleContactClick(product.name + " - request a walkthrough")
                 }
               >
-                Get it now
+                Contact Us
               </Button>
             </div>
           </div>
