@@ -9,7 +9,6 @@ import { PartnershipInsights } from "../components/partnerships/PartnershipInsig
 // Styles for custom sections (Overview + Marketplace)
 // ---------------------------------------------------------------------------
 const useStyles = makeStyles({
-  // Partnership Overview — multi-badge layout
   overviewSection: {
     padding: "48px 32px",
     backgroundColor: "var(--maq-off-white)",
@@ -18,7 +17,7 @@ const useStyles = makeStyles({
     maxWidth: "1240px",
     margin: "0 auto",
     display: "grid",
-    gridTemplateColumns: "auto 1fr",
+    gridTemplateColumns: "1fr",
     gap: "48px",
     alignItems: "center",
     "@media (max-width: 960px)": {
@@ -26,56 +25,11 @@ const useStyles = makeStyles({
       textAlign: "center",
     },
   },
-  badgeGrid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 140px), 1fr))",
-    gap: "12px",
-    "@media (max-width: 960px)": {
-      justifyItems: "center",
-    },
-  },
-  badgeLink: {
-    display: "inline-block",
-    transition: "transform 0.2s ease",
-    ":hover": {
-      transform: "scale(1.05)",
-    },
-  },
-  badgeImg: {
-    width: "140px",
-    height: "auto",
-    display: "block",
-  },
   overviewText: {
     fontSize: "15px",
     lineHeight: 1.7,
     color: "var(--maq-gray-700)",
     margin: 0,
-  },
-  designationRow: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "10px",
-    marginTop: "16px",
-    "@media (max-width: 960px)": {
-      justifyContent: "center",
-    },
-  },
-  designationPill: {
-    fontSize: "11px",
-    fontWeight: 700,
-    letterSpacing: "0.06em",
-    textTransform: "uppercase" as const,
-    padding: "4px 8px",
-    borderRadius: "4px",
-    backgroundColor: "var(--maq-red-pale)",
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    transition: "all 0.2s",
-    ":hover": {
-      backgroundColor: "var(--maq-red)",
-      color: "#fff",
-    },
   },
 
   // Marketplace section
@@ -239,13 +193,6 @@ const designations = [
   },
 ];
 
-const designationImageNames: Record<string, string> = {
-  "Data & AI": "data-and-AI",
-  "Digital & App Innovation": "digital-and-apps-innovation",
-  Infrastructure: "infrastructure",
-  Security: "security",
-};
-
 const featuredOffers = [
   { name: "Microsoft Fabric: 2-Hour Briefing", duration: "2 hours", price: "Free" },
   { name: "Microsoft Fabric: 4-Week Assessment", duration: "4 weeks", price: "$15,000" },
@@ -295,28 +242,9 @@ export function PartnershipMicrosoft() {
         stats={highlights}
       />
 
-      {/* Partnership Overview — custom multi-badge layout */}
+      {/* Partnership Overview */}
       <section className={s.overviewSection}>
         <div className={s.overviewInner}>
-          <div className={s.badgeGrid}>
-            {designations.map((d) => (
-              <a
-                key={d.label}
-                href={d.href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Solutions Partner for ${d.label}`}
-                className={s.badgeLink}
-              >
-                <img
-                  className={s.badgeImg}
-                  src={`/logos/solutions-partner-${designationImageNames[d.label]}.png`}
-                  alt={`Microsoft Solutions Partner - ${d.label}`}
-                  loading="lazy"
-                />
-              </a>
-            ))}
-          </div>
           <div>
             <p className={s.overviewText}>
               As a Microsoft Fabric Featured Partner and Preferred Supplier since
@@ -330,19 +258,6 @@ export function PartnershipMicrosoft() {
               empower organizations to maximize their investment in Microsoft
               technologies.
             </p>
-            <div className={s.designationRow}>
-              {designations.map((d) => (
-                <a
-                  key={d.label}
-                  className={s.designationPill}
-                  href={d.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {d.label}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </section>

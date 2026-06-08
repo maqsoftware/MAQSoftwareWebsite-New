@@ -651,13 +651,6 @@ export function ServiceBusinessApps() {
                             <div className={s.iconBox}>{sel.icon}</div>
                             <div className={s.detailName}>{sel.name}</div>
                             <p className={s.detailDesc}>{sel.description}</p>
-                            <div className={s.tagRow}>
-                                {sel.tags.map((t) => (
-                                    <span key={t} className={s.tag}>
-                                        {t}
-                                    </span>
-                                ))}
-                            </div>
                             <Button
                                 appearance="outline"
                                 className={s.knowMore}
@@ -736,7 +729,6 @@ export function ServiceBusinessApps() {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <span className={s.pill}>{c.tag}</span>
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>

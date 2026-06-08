@@ -1,6 +1,5 @@
 import {
   Button,
-  Badge,
   makeStyles,
   tokens,
   Body1,
@@ -90,14 +89,6 @@ const useStyles = makeStyles({
     marginBottom: "16px",
   },
   visTitle: { fontSize: "13px", fontWeight: 600, color: "var(--maq-navy)" },
-  visBadge: {
-    fontSize: "11px",
-    fontWeight: 600,
-    backgroundColor: "#e8faf5",
-    color: "#007a65",
-    padding: "4px 10px",
-    borderRadius: "20px",
-  },
   metrics: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "14px" },
   metric: {
     background: "var(--maq-off-white)",
@@ -166,9 +157,6 @@ export function Hero() {
         <div className={s.visual} aria-label="Live Power BI dashboard preview">
           <div className={s.visHeader}>
             <div className={s.visTitle}>Power BI on Microsoft Fabric</div>
-            <Badge appearance="tint" color="success" className={s.visBadge}>
-              ● Live
-            </Badge>
           </div>
           <div className={s.metrics}>
             <div className={s.metric}>

@@ -158,7 +158,6 @@ export function ServiceCaseStudies({
         <div className={s.grid}>
           {studies.map((c) => (
             <a key={c.title} className={s.card} href={c.href} target="_blank" rel="noreferrer">
-              <span className={s.pill}>{c.tag}</span>
               <h3 className={s.cardTitle}>{c.title}</h3>
               <p className={s.teaser}>{c.teaser}</p>
               <span className={s.read}>

@@ -134,7 +134,6 @@ export function ProductMigrateFAST() {
               >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
-                  <span className={s.mktPill}>{o.pill}</span>
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>

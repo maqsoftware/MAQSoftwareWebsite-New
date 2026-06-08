@@ -1,4 +1,4 @@
-import { makeStyles, tokens, Button, Badge } from "@fluentui/react-components";
+import { makeStyles, tokens, Button } from "@fluentui/react-components";
 import {
   ArrowRight20Regular,
   Bot24Regular,
@@ -512,13 +512,7 @@ const prodSample = [
 const ProductCardLab: FC = () => {
   const g = useCardShared();
   const c = useProdCard();
-  const renderTags = (tags: string[], appearance: "outline" | "filled" = "outline") => (
-    <div className={c.tagRow}>
-      {tags.map((t) => (
-        <Badge key={t} appearance={appearance} color="brand" size="small">{t}</Badge>
-      ))}
-    </div>
-  );
+  const renderTags = () => null;
   return (
     <>
       <Variant label="A · Gradient initials + tags + subtle CTA (current Products section)" notes="src/components/Products.tsx">
@@ -529,7 +523,7 @@ const ProductCardLab: FC = () => {
               <div className={c.tagline}>{p.tagline}</div>
               <div className={c.name}>{p.name}</div>
               <div className={c.desc}>{p.desc}</div>
-              {renderTags(p.tags)}
+              {renderTags()}
               <Button appearance="subtle" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
                 Learn more
               </Button>
@@ -549,7 +543,7 @@ const ProductCardLab: FC = () => {
               <div className={c.bBody}>
                 <div className={c.name}>{p.name}</div>
                 <div className={c.desc}>{p.desc}</div>
-                {renderTags(p.tags)}
+                {renderTags()}
                 <Button appearance="primary" size="small" style={{ alignSelf: "flex-start" }}>
                   View product
                 </Button>
@@ -566,7 +560,7 @@ const ProductCardLab: FC = () => {
               <div className={c.tagline}>{p.tagline}</div>
               <div className={c.name} style={{ fontSize: 22 }}>{p.name}</div>
               <div className={c.desc}>{p.desc}</div>
-              {renderTags(p.tags, "filled")}
+              {renderTags()}
               <Button appearance="subtle" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
                 Learn more
               </Button>
@@ -583,11 +577,6 @@ const ProductCardLab: FC = () => {
               <div className={c.taglineLight}>{p.tagline}</div>
               <div className={c.nameLight}>{p.name}</div>
               <div className={c.descLight}>{p.desc}</div>
-              <div className={c.tagRow}>
-                {p.tags.map((t) => (
-                  <Badge key={t} appearance="outline" color="brand" size="small" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>{t}</Badge>
-                ))}
-              </div>
               <Button appearance="primary" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start" }}>
                 Learn more
               </Button>
@@ -605,7 +594,7 @@ const ProductCardLab: FC = () => {
                 <div className={c.tagline}>{p.tagline}</div>
                 <div className={c.name}>{p.name}</div>
                 <div className={c.desc}>{p.desc}</div>
-                {renderTags(p.tags)}
+                {renderTags()}
               </div>
             </article>
           ))}
@@ -766,7 +755,6 @@ const CaseCardLab: FC = () => {
         <div className={g.grid3}>
           {caseSample.map((x) => (
             <article key={x.title} className={c.a}>
-              <Badge appearance="tint" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
               <div className={c.aMetric}>{x.metric}</div>
               <div className={c.title}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
@@ -781,7 +769,6 @@ const CaseCardLab: FC = () => {
           {caseSample.map((x) => (
             <article key={x.title} className={c.b}>
               <span className={c.bMetric}>{x.metric}</span>
-              <Badge appearance="tint" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
               <div className={c.title} style={{ fontSize: 17, marginTop: 8 }}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
               <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
@@ -814,7 +801,6 @@ const CaseCardLab: FC = () => {
         <div className={g.grid3}>
           {caseSample.map((x) => (
             <article key={x.title} className={c.d}>
-              <Badge appearance="filled" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
               <div className={c.dMetric}>{x.metric}</div>
               <div className={c.titleLight}>{x.title}</div>
               <div className={c.teaserLight}>{x.teaser}</div>
@@ -833,7 +819,6 @@ const CaseCardLab: FC = () => {
                 <div className={c.eMetricL}>Result</div>
               </div>
               <div>
-                <Badge appearance="tint" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
                 <div className={c.title} style={{ fontSize: 17 }}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
                 <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
@@ -1265,7 +1250,6 @@ const CompetitorCardLab: FC = () => {
           {compAvanade.map((x) => (
             <article key={x.title} className={c.ava}>
               <div>
-                <div className={c.avaTag}>{x.tag}</div>
                 <div className={c.avaTitle}>{x.title}</div>
                 <div className={c.avaDesc}>{x.desc}</div>
                 <span style={{ fontSize: 13, fontWeight: 600, color: "var(--maq-blue)", display: "inline-flex", alignItems: "center", gap: 4 }}>
@@ -1383,12 +1367,8 @@ const HeaderLab: FC = () => {
         </div>
       </Variant>
 
-      <Variant label="B · Pill eyebrow (badge style)" notes="Softer, more modern">
+      <Variant label="B · Minimal heading" notes="Softer, more modern">
         <div className={h.base}>
-          <span className={h.pillBrow}>
-            <Sparkle24Regular style={{ width: 14, height: 14 }} />
-            Our Services
-          </span>
           <h3 className={h.title}>Engineered to deliver outcomes</h3>
           <p className={h.sub}>From AI agents to enterprise data platforms — we ship measurable business value.</p>
         </div>
@@ -1978,15 +1958,10 @@ const PriceLab: FC = () => {
         </div>
       </Variant>
 
-      <Variant label="B · Featured middle tier with badge">
+      <Variant label="B · Featured middle tier">
         <div className={p.grid}>
           {tiers.map((t, i) => (
             <div key={t.name} className={i === 1 ? p.b : p.a}>
-              {i === 1 && (
-                <div className={p.bBadge}>
-                  <Badge appearance="filled" color="brand">Most popular</Badge>
-                </div>
-              )}
               <div className={p.tier}>{t.name}</div>
               <div className={p.price}>{t.price}</div>
               <div className={p.per}>{t.per}</div>

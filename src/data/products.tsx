@@ -332,7 +332,7 @@ export const products: Product[] = [
     shortDesc:
       "Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.",
     longDesc:
-      "CertyFAST runs your Power BI certification gate as code. Every promoted report passes through automated lineage, performance, accessibility, and data-quality checks — so your certified badge actually means something.",
+      "CertyFAST runs your Power BI certification gate as code. Every promoted report passes through automated lineage, performance, accessibility, and data-quality checks — so certified reports actually mean something.",
     heroIcon: <ShieldCheckmark24Regular />,
     image: illustration("shield"),
     tags: ["Power BI", "Quality", "Governance"],

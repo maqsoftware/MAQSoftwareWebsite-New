@@ -1,4 +1,3 @@
-import { Badge } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useProductPageStyles } from "./productPageStyles";
 
@@ -39,9 +38,6 @@ export function ProductCaseStudies({
               color: "inherit",
             }}
           >
-            <Badge appearance="tint" color="danger" className={s.caseTag}>
-              {c.tag}
-            </Badge>
             <div
               style={{
                 fontSize: "15px",
@@ -94,7 +90,6 @@ export function CaseStudiesPlaceholder({ count = 3, heading = "Case studies", ey
       <div className={s.caseGrid}>
         {Array.from({ length: count }).map((_, i) => (
           <div key={i} className={s.caseCard}>
-            <Badge appearance="tint" color="danger" className={s.caseTag}>Coming soon</Badge>
             <div className={s.casePlaceholderTitle}>Case study {i + 1}</div>
             <div className={s.casePlaceholderText}>Content to be supplied by Sales post-launch.</div>
           </div>

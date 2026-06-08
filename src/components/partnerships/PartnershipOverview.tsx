@@ -6,16 +6,10 @@ const useStyles = makeStyles({
     maxWidth: "1240px",
     margin: "0 auto",
     display: "grid",
-    gridTemplateColumns: "auto 1fr",
+    gridTemplateColumns: "1fr",
     gap: "48px",
     alignItems: "center",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
-  },
-  badge: {
-    maxWidth: "280px",
-    width: "100%",
-    height: "auto",
-    display: "block",
   },
   text: {
     fontSize: "15px",
@@ -32,20 +26,12 @@ export interface PartnershipOverviewProps {
 }
 
 export function PartnershipOverview({
-  badgeUrl,
-  badgeAlt,
   description,
 }: PartnershipOverviewProps) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.grid}>
-        <img
-          className={s.badge}
-          src={badgeUrl}
-          alt={badgeAlt}
-          loading="lazy"
-        />
         <p className={s.text}>{description}</p>
       </div>
     </section>

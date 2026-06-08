@@ -1,4 +1,4 @@
-import { makeStyles, tokens, Badge } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 
@@ -41,7 +41,6 @@ const useStyles = makeStyles({
       transform: "translateY(-2px)",
     },
   },
-  tag: { alignSelf: "flex-start", marginBottom: "12px" },
   cardTitle: {
     fontSize: "15px",
     fontWeight: 700,
@@ -120,9 +119,6 @@ export function IndustryCaseStudies({
               rel="noreferrer"
               style={{ textDecoration: "none" }}
             >
-              <Badge appearance="tint" color="danger" className={s.tag}>
-                {c.tag}
-              </Badge>
               <div className={s.cardTitle}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <span className={s.link}>

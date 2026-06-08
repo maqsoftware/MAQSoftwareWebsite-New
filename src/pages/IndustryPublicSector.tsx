@@ -43,17 +43,6 @@ const useVisualStyles = makeStyles({
     gap: "8px",
   },
   programLabel: { fontSize: "11px", color: "var(--maq-gray-600)", flex: 1 },
-  badge: {
-    fontSize: "10px",
-    fontWeight: 700,
-    padding: "2px 7px",
-    borderRadius: "4px",
-    letterSpacing: "0.04em",
-  },
-  badgeOnTrack: { background: "#dcfce7", color: "#15803d" },
-  badgeAtRisk: { background: "#fef9c3", color: "#92400e" },
-  badgeBehind: { background: "#fee2e2", color: "#b91c1c" },
-  badgeComplete: { background: "var(--maq-red-pale)", color: "var(--maq-red)" },
   scoreBox: {
     display: "flex",
     alignItems: "center",
@@ -110,25 +99,6 @@ function PublicSectorHeroVisual() {
           {programRows.map(({ label, status }) => (
             <div key={label} className={v.programRow}>
               <span className={v.programLabel}>{label}</span>
-              <span
-                className={`${v.badge} ${
-                  status === "ontrack"
-                    ? v.badgeOnTrack
-                    : status === "atrisk"
-                    ? v.badgeAtRisk
-                    : status === "behind"
-                    ? v.badgeBehind
-                    : v.badgeComplete
-                }`}
-              >
-                {status === "ontrack"
-                  ? "On track"
-                  : status === "atrisk"
-                  ? "At risk"
-                  : status === "behind"
-                  ? "Behind"
-                  : "Complete"}
-              </span>
             </div>
           ))}
         </div>

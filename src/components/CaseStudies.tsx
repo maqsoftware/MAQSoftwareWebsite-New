@@ -1,8 +1,4 @@
-import {
-  makeStyles,
-  tokens,
-  Badge,
-} from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
@@ -57,7 +53,6 @@ const useStyles = makeStyles({
       transform: "translateY(-2px)",
     },
   },
-  tag: { alignSelf: "flex-start", marginBottom: "16px" },
   title2: {
     fontSize: "18px",
     fontWeight: 700,
@@ -143,14 +138,6 @@ export function CaseStudies() {
               target="_blank"
               rel="noreferrer"
             >
-              <Badge
-                appearance="tint"
-                color={c.color}
-                size="medium"
-                className={s.tag}
-              >
-                {c.industry}
-              </Badge>
               <div className={s.title2}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <span className={s.more}>
