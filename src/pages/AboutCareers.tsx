@@ -5,6 +5,7 @@ import {
   ChevronDown20Regular,
   ChevronRight20Regular,
 } from "@fluentui/react-icons";
+import { CTA } from "../components/CTA";
 import {
   fetchOpenings,
   careerReasons,
@@ -377,6 +378,8 @@ export function AboutCareers() {
           )}
         </div>
       </section>
+
+      <CTA />
     </>
   );
 }
