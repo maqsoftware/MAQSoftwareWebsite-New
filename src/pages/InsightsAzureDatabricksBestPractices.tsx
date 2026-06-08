@@ -102,6 +102,12 @@ export function InsightsAzureDatabricksBestPractices() {
         { label: "Adaptive Query Execution", href: "https://learn.microsoft.com/en-us/azure/databricks/optimizations/aqe", source: "Microsoft" },
       ]}
       upNext={{ label: "Best practices in Databricks", to: "/insights/databricks-best-practices" }}
+      continueReading={{
+        image: "https://maqsoftware.com/img/blog/databricks-best-practice-guide.png",
+        title: "Best practices in Databricks",
+        description: "Optimizing performance, collaboration, and security on Databricks.",
+        to: "/insights/databricks-best-practices",
+      }}
     />
   );
 }
