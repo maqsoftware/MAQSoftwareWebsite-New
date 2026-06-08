@@ -38,23 +38,37 @@ const useStyles = makeStyles({
 });
 
 export function Announcement() {
-  const s = useStyles();
-  const [dismissed, setDismissed] = useState(
-  () => sessionStorage.getItem("announcement-dismissed") === "true"
-);
-  const dismiss = () => {
-  sessionStorage.setItem("announcement-dismissed", "true");
-  setDismissed(true);
-};
+//   const s = useStyles();
+//   const [dismissed, setDismissed] = useState(
+//   () => sessionStorage.getItem("announcement-dismissed") === "true"
+// );
+//   const dismiss = () => {
+//   sessionStorage.setItem("announcement-dismissed", "true");
+//   setDismissed(true);
+// };
+//   const { pathname } = useLocation();
+
+//   if (dismissed || pathname === "/techcon365") return null;
+  
+//   return (
+//     <div className={s.bar} role="status">
+//       <div className={s.message}>
+//        Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
+//         <RouterLink to="/techcon365" className={s.link} onClick={dismiss}>
+//           Learn more
+//         </RouterLink>
+//       </div>
+const s = useStyles();
+  const [dismissed, setDismissed] = useState(false);
   const { pathname } = useLocation();
 
   if (dismissed || pathname === "/techcon365") return null;
-  
+
   return (
     <div className={s.bar} role="status">
       <div className={s.message}>
-       Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
-        <RouterLink to="/techcon365" className={s.link} onClick={dismiss}>
+        Microsoft 365 Power Platform & AI Conference in Chicago, IL.{""}
+        <RouterLink to="/techcon365" className={s.link}>
           Learn more
         </RouterLink>
       </div>
