@@ -413,7 +413,7 @@ export function PartnershipMicrosoft() {
                   Consulting Services on Azure Marketplace
                 </h3>
                 <p className={s.panelDesc}>
-                  Access 100+ consulting offers across Microsoft Fabric, Power BI,
+                  Access 100+ marketplace offers across Microsoft Fabric, Power BI,
                   Azure AI, Copilot, Power Platform, and Dynamics 365—ranging from
                   free assessments and briefings to full migration engagements.
                 </p>
@@ -446,7 +446,7 @@ export function PartnershipMicrosoft() {
                 target="_blank"
                 rel="noreferrer"
               >
-                View all consulting offers
+                View all marketplace offers
               </Button>
             </div>
           </div>

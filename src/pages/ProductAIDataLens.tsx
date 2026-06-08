@@ -22,9 +22,9 @@ const features = [
 ];
 
 const resources = [
-  { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace consulting offers from MAQ Software.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
+  { pill: "Marketplace offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace marketplace offers from MAQ Software.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
   { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "/insights/case-studies" },
-  { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "https://maqsoftware.com/community/best-practices" },
+  { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "/insights/best-practice-guides" },
 ];
 
 export function ProductAIDataLens() {
@@ -100,12 +100,18 @@ export function ProductAIDataLens() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            <span className={s.secEyebrow}>Insights</span>
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>
             {resources.map((o) => (
-              <a key={o.title} className={s.mktCard} href={o.href} target="_blank" rel="noreferrer">
+              <a
+                key={o.title}
+                className={s.mktCard}
+                href={o.href}
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
                   <span className={s.mktPill}>{o.pill}</span>

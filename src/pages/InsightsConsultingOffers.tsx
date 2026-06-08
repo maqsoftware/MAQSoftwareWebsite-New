@@ -20,7 +20,7 @@ export function InsightsConsultingOffers() {
       <p>Redirecting to Microsoft Marketplace...</p>
       <p>
         <a href={MARKETPLACE_URL} target="_blank" rel="noreferrer">
-          Open consulting offers
+          Open marketplace offers
         </a>
       </p>
     </main>

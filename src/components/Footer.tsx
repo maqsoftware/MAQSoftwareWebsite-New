@@ -1,4 +1,4 @@
-﻿import { makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 
 type FooterItem = {
@@ -118,21 +118,22 @@ const cols: FooterCol[] = [
   {
     title: "Products",
     items: [
-      { label: "AI-DataLens",        to: "/products/ai-datalens" },
+      { label: "All products",       to: "/products" },
       { label: "Fabric Admin Agent", to: "/products/fabric-admin-agent" },
       { label: "MigrateFAST",        to: "/products/migratefast" },
       { label: "EmbedFAST",          to: "/products/embedfast" },
-      { label: "CertyFAST",          to: "/products/certyfast" },
+      { label: "AI-DataLens",        to: "/products/ai-datalens" },
       { label: "LoadFAST",           to: "/products/loadfast" },
+      { label: "CertyFAST",          to: "/products/certyfast" },
     ],
   },
   {
     title: "Insights",
     items: [
       { label: "Case Studies",        to: "/insights/case-studies" },
-      { label: "Consulting offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
-      { label: "Power BI custom visual guide", to: "/insights/power-bi-custom-visual-guide" },
-      { label: "Best practice guides", to: "/insights/best-practice-guides" },
+      { label: "Best practices", to: "/insights/best-practice-guides" },
+      { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
+      { label: "Power BI custom visual", to: "/insights/power-bi-custom-visual-guide" },
     ],
   },
   {
@@ -140,7 +141,7 @@ const cols: FooterCol[] = [
     items: [
       { label: "Who we are", to: "/who-we-are" },
       { label: "Careers",    to: "/careers" },
-      { label: "News",       to: "/news" },
+      { label: "Events",     to: "/events" },
       { label: "Sustainability", to: "/sustainability" },
       { label: "Contact Us", to: "/contact" },
     ],
@@ -250,7 +251,7 @@ export function Footer() {
           </div>
           <div className={s.bottomRow2}>
             <span className={s.bottomText}>
-              Â© {new Date().getFullYear()} MAQ Software. All rights reserved.
+              © {new Date().getFullYear()} MAQ Software. All rights reserved.
             </span>
             <span className={s.bottomText}>
               Microsoft, Azure, Fabric, and Power BI are trademarks of Microsoft

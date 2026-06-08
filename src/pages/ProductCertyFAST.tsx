@@ -21,7 +21,7 @@ const steps = [
 const resources = [
   { pill: "GitHub", title: "CertyFAST on GitHub", desc: "Download the tool from the official MAQ Software repository.", href: "https://github.com/maqsoftware/CertyFAST" },
   { pill: "Docs", title: "Installation & user guide", desc: "Step-by-step integration, best practices, and troubleshooting.", href: "https://maqsoftware.com/services/Power-BI/InstallationandUsageGuide" },
-  { pill: "Best practices", title: "Power BI development standards", desc: "Authoritative guides from the MAQ Software community.", href: "https://maqsoftware.com/community/best-practices" },
+  { pill: "Best practices", title: "Power BI development standards", desc: "Authoritative guides from the MAQ Software community.", href: "/insights/best-practice-guides" },
   { pill: "Case studies", title: "Quality-control case studies", desc: "Real-world Power BI quality wins.", href: "/insights/case-studies" },
 ];
 
@@ -94,12 +94,18 @@ export function ProductCertyFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            <span className={s.secEyebrow}>Insights</span>
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>
             {resources.map((o) => (
-              <a key={o.title} className={s.mktCard} href={o.href} target="_blank" rel="noreferrer">
+              <a
+                key={o.title}
+                className={s.mktCard}
+                href={o.href}
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
                   <span className={s.mktPill}>{o.pill}</span>

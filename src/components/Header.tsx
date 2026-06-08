@@ -206,7 +206,7 @@ const services: NavItem[] = [
   { label: "Business Applications & Automation", href: "/services/business-apps" },
   { label: "Cloud Modernization", href: "/services/cloud" },
   { label: "Security & Governance", href: "/services/security-compliance" },
-  { label: "Workplace transformation & productivity", href: "/services/workplace-transformation" },
+  /* { label: "Workplace transformation & productivity", href: "/services/workplace-transformation" }, */
 ];
 
 const productNav: NavItem[] = [
@@ -222,14 +222,14 @@ const partnerships: NavItem[] = [
 
 const insights: NavItem[] = [
   { label: "Case Studies", href: "/insights/case-studies" },
-  { label: "Consulting offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
-  { label: "Power BI custom visual guide", href: "/insights/power-bi-custom-visual-guide" },
-  { label: "Best practice guides", href: "/insights/best-practice-guides" },
+  { label: "Best practices", href: "/insights/best-practice-guides" },
+  { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
+  { label: "Power BI custom visual", href: "/insights/power-bi-custom-visual-guide" },
 ];
 
 const about: NavItem[] = [
   { label: "Who we are", href: "/who-we-are" },
-  { label: "News", href: "/news" },
+  { label: "Events", href: "/events" },
   { label: "Careers", href: "/careers" },
   { label: "Sustainability", href: "/sustainability" },
   { label: "Contact Us", href: "/contact" },

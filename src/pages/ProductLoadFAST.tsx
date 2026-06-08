@@ -32,7 +32,7 @@ const plans = [
 const resources = [
   { pill: "AppSource", title: "LoadFAST on Azure Marketplace", desc: "Get LoadFAST and start load-testing today.", href: APPSOURCE },
   { pill: "Docs", title: "Technical documentation", desc: "Integration and usage reference on GitBook.", href: "https://maqsoftware.gitbook.io/loadfast-technical-documentation" },
-  { pill: "Best practices", title: "Power BI performance patterns", desc: "Capacity sizing, refresh optimization, and performance tuning guides.", href: "https://maqsoftware.com/community/best-practices" },
+  { pill: "Best practices", title: "Power BI performance patterns", desc: "Capacity sizing, refresh optimization, and performance tuning guides.", href: "/insights/best-practice-guides" },
   { pill: "Case studies", title: "Load-testing case studies", desc: "Real-world Power BI capacity wins.", href: "/insights/case-studies" },
 ];
 
@@ -130,12 +130,18 @@ export function ProductLoadFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            <span className={s.secEyebrow}>Insights</span>
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>
             {resources.map((o) => (
-              <a key={o.title} className={s.mktCard} href={o.href} target="_blank" rel="noreferrer">
+              <a
+                key={o.title}
+                className={s.mktCard}
+                href={o.href}
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
                   <span className={s.mktPill}>{o.pill}</span>
