@@ -119,10 +119,12 @@ const useStyles = makeStyles({
   miniLocationList: {
     display: "grid",
     gap: "12px",
-    flex: 1,
-    minHeight: 0,
+    maxHeight: "500px",
     overflowY: "auto",
     paddingRight: "8px",
+    "@media (max-width: 980px)": {
+      maxHeight: "390px",
+    },
   },
   miniLocation: {
     display: "grid",
