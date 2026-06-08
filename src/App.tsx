@@ -38,6 +38,20 @@ import { InsightsVisualChooser } from "./pages/InsightsVisualChooser";
 import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
 import { InsightsDatabricksBestPractices } from "./pages/InsightsDatabricksBestPractices";
 import { InsightsAzureDatabricksBestPractices } from "./pages/InsightsAzureDatabricksBestPractices";
+import { InsightsGitHubCopilotBestPractices } from "./pages/InsightsGitHubCopilotBestPractices";
+import { InsightsPowerBICopilotBestPractices } from "./pages/InsightsPowerBICopilotBestPractices";
+import { InsightsPowerBIBestPractices } from "./pages/InsightsPowerBIBestPractices";
+import { InsightsSnowflakePowerBIBestPractices } from "./pages/InsightsSnowflakePowerBIBestPractices";
+import { InsightsKnowledgeBotBestPractices } from "./pages/InsightsKnowledgeBotBestPractices";
+import { InsightsDAXBestPractices } from "./pages/InsightsDAXBestPractices";
+import { InsightsAzureDevOpsBestPractices } from "./pages/InsightsAzureDevOpsBestPractices";
+import { InsightsAzureArchitectureBestPractices } from "./pages/InsightsAzureArchitectureBestPractices";
+import { InsightsAzureSecurityBestPractices } from "./pages/InsightsAzureSecurityBestPractices";
+import { InsightsDataValidationBestPractices } from "./pages/InsightsDataValidationBestPractices";
+import { InsightsDynamics365DevelopmentBestPractices } from "./pages/InsightsDynamics365DevelopmentBestPractices";
+import { InsightsDynamics365DeploymentBestPractices } from "./pages/InsightsDynamics365DeploymentBestPractices";
+import { InsightsPowerAppsBestPractices } from "./pages/InsightsPowerAppsBestPractices";
+import { InsightsDataverseSecurityBestPractices } from "./pages/InsightsDataverseSecurityBestPractices";
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 import { AboutSustainability } from "./pages/AboutSustainability";
@@ -46,7 +60,6 @@ import { AboutCareers } from "./pages/AboutCareers";
 import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
 import { Contact } from "./pages/Contact";
 import { TermsOfService } from "./pages/TermsOfService";
-import { TechCon365 } from "./pages/TechCon365";
 
 const useStyles = makeStyles({
   root: {
@@ -190,6 +203,132 @@ export function App() {
           }
         />
         <Route
+          path="/insights/github-copilot-best-practices"
+          element={
+            <>
+              <InsightsGitHubCopilotBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/power-bi-copilot-best-practices"
+          element={
+            <>
+              <InsightsPowerBICopilotBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/power-bi-best-practices"
+          element={
+            <>
+              <InsightsPowerBIBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/snowflake-and-power-bi-best-practices"
+          element={
+            <>
+              <InsightsSnowflakePowerBIBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/knowledge-bot-best-practices"
+          element={
+            <>
+              <InsightsKnowledgeBotBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dax-best-practices"
+          element={
+            <>
+              <InsightsDAXBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-dev-ops-best-practices-guide"
+          element={
+            <>
+              <InsightsAzureDevOpsBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-architecture-best-practices"
+          element={
+            <>
+              <InsightsAzureArchitectureBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-security-best-practices"
+          element={
+            <>
+              <InsightsAzureSecurityBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/data-validation-best-practices"
+          element={
+            <>
+              <InsightsDataValidationBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dynamics-365-development-best-practices"
+          element={
+            <>
+              <InsightsDynamics365DevelopmentBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dynamics-365-deployment-best-practices"
+          element={
+            <>
+              <InsightsDynamics365DeploymentBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/power-apps-best-practices"
+          element={
+            <>
+              <InsightsPowerAppsBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dataverse-security-best-practices"
+          element={
+            <>
+              <InsightsDataverseSecurityBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
           path="/partnerships/snowflake"
           element={
             <>
@@ -303,7 +442,6 @@ export function App() {
         <Route path="/news" element={<AboutNews />} />
         <Route path="/careers" element={<AboutCareers />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
-        <Route path="/techcon365" element={<TechCon365 />} />
       </Routes>
       <Footer />
     </div>

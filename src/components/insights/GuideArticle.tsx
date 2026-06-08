@@ -143,6 +143,69 @@ const useStyles = makeStyles({
       gap: "4px",
     },
   },
+  continueCard: {
+    marginTop: "20px",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    borderRadius: "12px",
+    overflow: "hidden",
+    background: "#fff",
+    display: "grid",
+    gridTemplateColumns: "1fr",
+    "@media (min-width: 720px)": {
+      gridTemplateColumns: "minmax(220px, 360px) 1fr",
+    },
+    transition: "all 0.2s",
+    textDecoration: "none",
+    color: "inherit",
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+    },
+  },
+  continueImageWrap: {
+    background: "var(--maq-off-white)",
+    overflow: "hidden",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "180px",
+  },
+  continueImage: {
+    width: "100%",
+    height: "auto",
+    maxHeight: "240px",
+    objectFit: "contain",
+    display: "block",
+  },
+  continueBody: {
+    padding: "22px 24px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "8px",
+    justifyContent: "center",
+  },
+  continueTitle: {
+    fontSize: "18px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    margin: 0,
+    lineHeight: 1.3,
+  },
+  continueDesc: {
+    fontSize: "14px",
+    color: "var(--maq-gray-700)",
+    margin: 0,
+    lineHeight: 1.5,
+  },
+  continueLink: {
+    color: "var(--maq-red)",
+    fontWeight: 600,
+    fontSize: "13.5px",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "4px",
+    marginTop: "4px",
+  },
 });
 
 export interface GuidePractice {
@@ -166,6 +229,13 @@ export interface GuideUpNext {
   to: string;
 }
 
+export interface GuideContinueReading {
+  image: string;
+  title: string;
+  description: string;
+  to: string;
+}
+
 export interface GuideArticleProps {
   eyebrow: string;
   title: string;
@@ -174,7 +244,9 @@ export interface GuideArticleProps {
   sections: GuideSection[];
   references?: GuideReference[];
   upNext?: GuideUpNext;
+  continueReading?: GuideContinueReading;
   ctaSubject: string;
+  ctaText?: string;
 }
 
 export function GuideArticle({
@@ -185,7 +257,9 @@ export function GuideArticle({
   sections,
   references,
   upNext,
+  continueReading,
   ctaSubject,
+  ctaText,
 }: GuideArticleProps) {
   const s = useStyles();
   const mailto = `mailto:CustomerSuccess@MAQSoftware.com?subject=${encodeURIComponent(ctaSubject)}`;
@@ -237,8 +311,7 @@ export function GuideArticle({
 
           <div className={s.ctaBand}>
             <p className={s.ctaText}>
-              Want a tailored review of your Databricks environment? MAQ Software's data
-              engineering team can help.
+              {ctaText ?? "Want a tailored review for your environment? MAQ Software's team can help."}
             </p>
             <Button
               appearance="primary"
@@ -250,7 +323,25 @@ export function GuideArticle({
             </Button>
           </div>
 
-          {upNext ? (
+          {continueReading ? (
+            <Link to={continueReading.to} className={s.continueCard}>
+              <div className={s.continueImageWrap}>
+                <img
+                  className={s.continueImage}
+                  src={continueReading.image}
+                  alt={continueReading.title}
+                  loading="lazy"
+                />
+              </div>
+              <div className={s.continueBody}>
+                <h3 className={s.continueTitle}>{continueReading.title}</h3>
+                <p className={s.continueDesc}>{continueReading.description}</p>
+                <span className={s.continueLink}>
+                  Read More <ArrowRight16Regular />
+                </span>
+              </div>
+            </Link>
+          ) : upNext ? (
             <div className={s.upNext}>
               Up next:{" "}
               <Link to={upNext.to}>
