@@ -50,7 +50,8 @@ export function ProductLoadFAST() {
               Optimize your Power BI environments for greater efficiency and lower costs with our web application. Empower your business with the dynamic capabilities of Power BI.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - LoadFAST")}>Get it now</Button>
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</Button>
+              <Button appearance="outline" size="large" as="a" href={APPSOURCE} target="_blank" rel="noreferrer">Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

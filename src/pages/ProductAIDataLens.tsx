@@ -42,7 +42,7 @@ export function ProductAIDataLens() {
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
-                Get it now
+                Contact Us
               </Button>
             </div>
           </div>

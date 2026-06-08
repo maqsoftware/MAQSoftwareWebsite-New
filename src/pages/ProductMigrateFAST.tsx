@@ -49,7 +49,7 @@ export function ProductMigrateFAST() {
               Accelerate your migration journey to Microsoft Fabric. Simplify data and reporting platform migration with AI-powered tools for faster and easier transitions.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Get it now</Button>
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact Us</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">
