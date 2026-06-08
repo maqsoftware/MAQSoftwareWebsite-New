@@ -1,12 +1,10 @@
-import { Button, makeStyles, Link as FluentLink } from "@fluentui/react-components";
+import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Location24Regular,
   Mail24Regular,
   Call24Regular,
-  ArrowRight16Regular,
-  Person24Regular,
-  Handshake24Regular,
-  PeopleTeam24Regular,
+  People24Regular,
+  Lightbulb24Regular,
 } from "@fluentui/react-icons";
 
 const MAIL_TO =
@@ -23,150 +21,153 @@ const useStyles = makeStyles({
     backgroundSize: "cover",
   },
   heroInner: {
-    maxWidth: "760px",
+    maxWidth: "1240px",
     margin: "0 auto",
-    textAlign: "center" as const,
+    display: "grid",
+    gridTemplateColumns: "1.05fr 0.95fr",
+    gap: "40px",
+    alignItems: "start",
+    "@media (max-width: 980px)": {
+      gridTemplateColumns: "1fr",
+      gap: "28px",
+    },
   },
-  eyebrow: {
-    display: "block",
-    fontSize: "12px",
-    fontWeight: 700,
-    letterSpacing: "0.08em",
-    textTransform: "uppercase" as const,
-    color: "var(--maq-red)",
-    marginBottom: "12px",
+  heroLeft: {
+    maxWidth: "700px",
   },
   h1: {
     display: "block",
-    fontSize: "40px",
+    fontSize: "50px",
     fontWeight: 700,
     lineHeight: 1.15,
     color: "var(--maq-black)",
     letterSpacing: "-0.02em",
-    margin: "0 0 16px",
+    margin: "0 0 18px",
+    "@media (max-width: 980px)": {
+      fontSize: "38px",
+    },
   },
   heroSub: {
     display: "block",
     fontSize: "16px",
     lineHeight: 1.65,
     color: "var(--maq-gray-700)",
-    margin: "0 auto 28px",
-    maxWidth: "560px",
+    margin: "0 0 26px",
+    maxWidth: "620px",
   },
-  heroEmail: {
-    display: "block",
-    fontSize: "14px",
-    color: "var(--maq-gray-700)",
-    marginTop: "16px",
-  },
-
-  // ── Inquiry options ───────────────────────────────────────────────────────
-  inquirySection: {
-    padding: "56px 32px",
-    backgroundColor: "#fff",
-  },
-  inquiryInner: {
-    maxWidth: "1240px",
-    margin: "0 auto",
-  },
-  inquiryGrid: {
+  proofList: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "24px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
+    gap: "14px",
+    marginBottom: "28px",
   },
-  inquiryCard: {
-    padding: "28px",
-    borderRadius: "12px",
-    backgroundColor: "var(--maq-off-white)",
-    border: "1px solid var(--maq-border)",
-    display: "flex",
-    flexDirection: "column",
-    gap: "12px",
-    textDecoration: "none",
-    color: "inherit",
-    transition: "border-color 0.15s, box-shadow 0.15s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(15, 23, 42, 0.06)",
-    },
-  },
-  inquiryIcon: { color: "var(--maq-red)" },
-  inquiryTitle: {
-    fontSize: "16px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-  },
-  inquiryDesc: {
-    fontSize: "14px",
-    lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
-  },
-
-  // ── Locations ─────────────────────────────────────────────────────────────
-  locationsSection: {
-    padding: "64px 32px 80px",
-    backgroundColor: "var(--maq-off-white)",
-  },
-  locationsInner: {
-    maxWidth: "1240px",
-    margin: "0 auto",
-  },
-  sectionHeading: {
-    fontSize: "32px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    letterSpacing: "-0.01em",
-    margin: "0 0 40px",
-    textAlign: "center" as const,
-  },
-  locationGrid: {
+  proofItem: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "24px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
-  },
-  locationCard: {
-    padding: "24px",
-    borderRadius: "12px",
-    backgroundColor: "#fff",
-    border: "1px solid var(--maq-border)",
-    display: "flex",
-    flexDirection: "column",
+    gridTemplateColumns: "44px 1fr",
     gap: "12px",
+    alignItems: "start",
   },
-  pin: { color: "var(--maq-red)" },
-  locationTitle: {
-    fontSize: "16px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    margin: 0,
-  },
-  locationAddress: {
-    fontSize: "14px",
-    lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
-    whiteSpace: "pre-line" as const,
-    margin: 0,
-  },
-  locationPhone: {
+  proofIcon: {
+    color: "var(--maq-red)",
+    backgroundColor: "var(--maq-red-pale)",
+    width: "44px",
+    height: "44px",
+    borderRadius: "10px",
     display: "flex",
     alignItems: "center",
-    gap: "8px",
+    justifyContent: "center",
+  },
+  proofTitle: {
+    margin: "0 0 4px",
+    fontSize: "22px",
+    lineHeight: 1.2,
+    fontWeight: 700,
+    color: "var(--maq-black)",
+  },
+  proofDesc: {
+    margin: 0,
     fontSize: "14px",
+    lineHeight: 1.6,
     color: "var(--maq-gray-700)",
   },
-  directions: {
+  heroRight: {
+    backgroundColor: "#fff",
+    border: "1px solid var(--maq-border)",
+    borderRadius: "16px",
+    padding: "24px",
+    boxShadow: "0 8px 20px rgba(15, 23, 42, 0.06)",
+    alignSelf: "start",
+    display: "flex",
+    flexDirection: "column",
+    height: "680px",
+    overflow: "hidden",
+    "@media (max-width: 980px)": {
+      height: "560px",
+    },
+  },
+  rightTitle: {
+    margin: "0 0 14px",
+    fontSize: "22px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+  },
+  rightSub: {
+    margin: "0 0 18px",
+    fontSize: "14px",
+    lineHeight: 1.6,
+    color: "var(--maq-gray-700)",
+  },
+  miniLocationList: {
+    display: "grid",
+    gap: "12px",
+    flex: 1,
+    minHeight: 0,
+    overflowY: "auto",
+    paddingRight: "8px",
+  },
+  miniLocation: {
+    display: "grid",
+    gridTemplateColumns: "28px 1fr",
+    gap: "8px",
+    alignItems: "start",
+    padding: "10px 0",
+    borderBottom: "1px solid var(--maq-border)",
+  },
+  miniLocationIcon: {
+    color: "var(--maq-red)",
+    marginTop: "2px",
+  },
+  miniLocationCity: {
+    margin: "0 0 2px",
+    fontSize: "15px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+  },
+  miniLocationAddress: {
+    margin: 0,
+    fontSize: "13px",
+    lineHeight: 1.5,
+    color: "var(--maq-gray-700)",
+    whiteSpace: "pre-line" as const,
+  },
+  miniLocationPhone: {
     display: "inline-flex",
     alignItems: "center",
     gap: "6px",
+    fontSize: "13px",
+    lineHeight: 1.5,
+    color: "var(--maq-gray-700)",
+    marginTop: "6px",
+  },
+  miniDirections: {
+    display: "flex",
+    alignItems: "center",
+    fontFamily: "inherit",
     fontSize: "14px",
+    lineHeight: 1.4,
     fontWeight: 600,
     color: "var(--maq-red)",
-    marginTop: "auto",
-    paddingTop: "3px",
+    marginTop: "8px",
+    textDecoration: "none",
   },
 });
 
@@ -212,27 +213,6 @@ const offices: Office[] = [
   },
 ];
 
-const inquiries = [
-  {
-    icon: <Person24Regular />,
-    title: "Talk to sales",
-    desc: "Discuss a new engagement or project with our solutions team.",
-    href: "mailto:CustomerSuccess@MAQSoftware.com?subject=Sales%20Inquiry",
-  },
-  {
-    icon: <PeopleTeam24Regular />,
-    title: "Customer success",
-    desc: "Get support for an existing engagement or active project.",
-    href: "mailto:CustomerSuccess@MAQSoftware.com?subject=Customer%20Success",
-  },
-  {
-    icon: <Handshake24Regular />,
-    title: "Partner with us",
-    desc: "Explore strategic partnership and alliance opportunities.",
-    href: "mailto:CustomerSuccess@MAQSoftware.com?subject=Partnership%20Inquiry",
-  },
-];
-
 export function Contact() {
   const s = useStyles();
 
@@ -241,73 +221,124 @@ export function Contact() {
       {/* Hero */}
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <h1 className={s.h1}>Contact MAQ Software</h1>
-          <p className={s.heroSub}>
-            Contact us today—learn how MAQ Software can deliver the solutions that propel
-            your business forward.
-          </p>
-          <Button
-            appearance="primary"
-            size="large"
-            icon={<Mail24Regular />}
-            as="a"
-            href={MAIL_TO}
-          >
-            Email Customer Success
-          </Button>
-          <span className={s.heroEmail}>
-            <FluentLink href={MAIL_TO}>CustomerSuccess@MAQSoftware.com</FluentLink>
-          </span>
-        </div>
-      </section>
+          <div className={s.heroLeft}>
+            <h1 className={s.h1}>
+              Why Work With MAQ Software?
+            </h1>
+            <p className={s.heroSub}>
+              MAQ Software accelerates data-driven transformation for Global 2000
+              companies through analytics, cloud, and data science. For 26+ years,
+              we have helped organizations improve customer relationships,
+              operations, sales, and marketing outcomes.
+            </p>
 
-      {/* Inquiry options */}
-      <section className={s.inquirySection}>
-        <div className={s.inquiryInner}>
-          <div className={s.inquiryGrid}>
-            {inquiries.map((i) => (
-              <a key={i.title} className={s.inquiryCard} href={i.href}>
-                <span className={s.inquiryIcon}>{i.icon}</span>
-                <span className={s.inquiryTitle}>{i.title}</span>
-                <span className={s.inquiryDesc}>{i.desc}</span>
-                <span className={s.directions}>
-                  Send email <ArrowRight16Regular />
+            <div className={s.proofList}>
+              <div className={s.proofItem}>
+                <span className={s.proofIcon}>
+                  <Lightbulb24Regular />
                 </span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Locations */}
-      <section className={s.locationsSection}>
-        <div className={s.locationsInner}>
-          <h2 className={s.sectionHeading}>Our locations</h2>
-          <div className={s.locationGrid}>
-            {offices.map((o) => (
-              <div key={o.city} className={s.locationCard}>
-                <span className={s.pin}>
-                  <Location24Regular />
-                </span>
-                <h3 className={s.locationTitle}>{o.city}</h3>
-                <p className={s.locationAddress}>{o.address}</p>
-                {o.phone && (
-                  <span className={s.locationPhone}>
-                    <Call24Regular />
-                    {o.phone}
-                  </span>
-                )}
-                <a
-                  className={s.directions}
-                  href={o.maps}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Get directions <ArrowRight16Regular />
-                </a>
+                <div>
+                  <p className={s.proofTitle}>Microsoft Solutions Partner</p>
+                  <p className={s.proofDesc}>
+                    Award-winning Power BI expertise recognized by Microsoft with
+                    the 2021 Microsoft Power BI Partner of the Year Award.
+                    Delivered frameworks for thousands of reports across 30 global
+                    companies and accelerated adoption from years to months.
+                  </p>
+                </div>
               </div>
-            ))}
+
+              <div className={s.proofItem}>
+                <span className={s.proofIcon}>
+                  <People24Regular />
+                </span>
+                <div>
+                  <p className={s.proofTitle}>Commitment to Your Success</p>
+                  <p className={s.proofDesc}>
+                    End-to-end partnership from modernization and migration
+                    planning to implementation, optimization, and scalable
+                    analytics adoption.
+                  </p>
+                </div>
+              </div>
+
+              <div className={s.proofItem}>
+                <span className={s.proofIcon}>
+                  <People24Regular />
+                </span>
+                <div>
+                  <p className={s.proofTitle}>Customer-Centric Delivery</p>
+                  <p className={s.proofDesc}>
+                    Trusted to modernize legacy BI platforms, improve report
+                    performance by up to 90%, and enable self-service reporting and
+                    embedded Power BI for ISVs.
+                  </p>
+                </div>
+              </div>
+
+              <div className={s.proofItem}>
+                <span className={s.proofIcon}>
+                  <Lightbulb24Regular />
+                </span>
+                <div>
+                  <p className={s.proofTitle}>Innovation at Scale</p>
+                  <p className={s.proofDesc}>
+                    Published 33 certified Power BI custom visuals with 2.3M+
+                    downloads and expanded community expertise through best-practice
+                    guides and training.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <Button
+              appearance="primary"
+              size="large"
+              icon={<Mail24Regular />}
+              as="a"
+              href={MAIL_TO}
+            >
+              Email Customer Success
+            </Button>
           </div>
+
+          <aside className={s.heroRight}>
+            <h2 className={s.rightTitle}>Our global locations</h2>
+            <p className={s.rightSub}>
+              Teams across the United States and India are ready to support your
+              analytics, AI, and cloud transformation goals.
+            </p>
+
+            <div className={s.miniLocationList}>
+              {offices.map((office) => (
+                <div key={office.city} className={s.miniLocation}>
+                  <span className={s.miniLocationIcon}>
+                    <Location24Regular />
+                  </span>
+                  <div>
+                    <p className={s.miniLocationCity}>{office.city}</p>
+                    <p className={s.miniLocationAddress}>
+                      {office.address}
+                    </p>
+                    {office.phone && (
+                      <span className={s.miniLocationPhone}>
+                        <Call24Regular />
+                        {office.phone}
+                      </span>
+                    )}
+                    <a
+                      className={s.miniDirections}
+                      href={office.maps}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get directions
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </section>
     </>
