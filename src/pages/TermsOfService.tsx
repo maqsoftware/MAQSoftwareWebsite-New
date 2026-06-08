@@ -56,7 +56,7 @@ const useStyles = makeStyles({
     margin: "0 0 20px",
   },
   h2: {
-    fontSize: "24px",
+    fontSize: "30px",
     fontWeight: 700,
     color: "var(--maq-black)",
     letterSpacing: "-0.01em",

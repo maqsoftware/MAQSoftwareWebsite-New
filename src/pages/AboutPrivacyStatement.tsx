@@ -1,4 +1,4 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { Button, makeStyles } from "@fluentui/react-components";
 // import { TrustBanner } from "../components/TrustBanner";
 
 
@@ -10,6 +10,10 @@ const useStyles = makeStyles({
   hero: {
     backgroundColor: "var(--maq-off-white)",
     padding: "48px 32px 56px",
+    backgroundImage: "url('/logos/wave_dots.svg')",
+    backgroundPosition: "bottom left",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
   heroInner: {
     maxWidth: "900px",
@@ -27,17 +31,17 @@ const useStyles = makeStyles({
     marginBottom: "24px",
   },
   intro: {
-    fontSize: "16px",
-    lineHeight: 1.8,
+    fontSize: "15px",
+    lineHeight: 1.75,
     maxWidth: "840px",
-    marginBottom: "28px",
+    margin: "0 0 20px",
     color: "var(--maq-gray-700)",
   },
   section: {
-    padding: "48px 32px",
+    padding: "56px 32px 80px",
   },
   sectionInner: {
-    maxWidth: "900px",
+    maxWidth: "820px",
     margin: "0 auto",
   },
   eyebrow: {
@@ -59,7 +63,7 @@ const useStyles = makeStyles({
     fontSize: "15px",
     lineHeight: 1.75,
     color: "var(--maq-gray-700)",
-    marginBottom: "24px",
+    margin: "0 0 20px",
   },
   list: {
     margin: "0 0 24px 24px",
@@ -120,20 +124,12 @@ export function AboutPrivacyStatement() {
               We may collect usage and download statistics, trends, or any other <strong>Administrator Data**</strong> that Office 365 application administrators are provided with, but not the specific usage of any user.
             </li>
           </ul>
-        </div>
-      </section>
 
-      <section className={styles.section}>
-        <div className={styles.sectionInner}>
           <h2 className={styles.sectionTitle}>Application Service Configuration Data</h2>
           <p className={styles.body}>
             Certain MAQ Software applications may collect and store limited-service configuration metadata, including Microsoft Tenant ID and limited application connection information, solely to enable application functionality, authentication, troubleshooting, and service reliability. This data is stored within MAQ Software’s Microsoft Azure tenant and is not used beyond required for operating the applicable service.
           </p>
-        </div>
-      </section>
 
-      <section className={styles.section}>
-        <div className={styles.sectionInner}>
           <h2 className={styles.sectionTitle}>Privacy definitions</h2>
           <div className={styles.definition}>
             <div className={styles.defTerm}>Customer Data</div>
@@ -150,27 +146,12 @@ export function AboutPrivacyStatement() {
           <p className={styles.body}>
             We will not disclose Customer Data or Administrator Data ("your information") outside of MAQ Software except as you direct, as described in your agreement(s) or as described in this privacy statement.
           </p>
-        </div>
-      </section>
 
-      <section className={styles.section}>
-        <div className={styles.sectionInner}>
           <h2 className={styles.sectionTitle}>Changes to this Privacy Statement</h2>
           <p className={styles.body}>
             We will occasionally update this privacy statement to reflect customer feedback and changes in our Services. When we post changes to this statement, we will revise the "last updated" date at the top of the statement. We encourage you to periodically review this privacy statement to learn how MAQ Software is protecting your information.
           </p>
-        </div>
-      </section>
 
-      <section className={styles.section}>
-        <div className={styles.sectionInner}>
-          <h2 className={styles.sectionTitle}>How to Contact Us</h2>
-          <p className={styles.body}>
-            If you have any questions regarding our privacy policy, please Contact Us at <a href="mailto:Support@MAQSoftware.com">Support@MAQSoftware.com</a>.
-          </p>
-          <p className={styles.note}>
-            This page is served at <strong>/privacystatement</strong> to preserve the existing legacy support route.
-          </p>
         </div>
       </section>
     </div>
