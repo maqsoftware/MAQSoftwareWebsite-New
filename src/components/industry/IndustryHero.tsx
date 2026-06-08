@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Button, makeStyles } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
+import { Mail24Regular } from "@fluentui/react-icons";
+import { useContactAction } from "../../lib/contact";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -55,8 +56,6 @@ export interface IndustryHeroProps {
   h1: string;
   subhead: string;
   mailSubject: string;
-  scrollTargetId: string;
-  scrollLabel: string;
   visual: ReactNode;
 }
 
@@ -65,11 +64,10 @@ export function IndustryHero({
   h1,
   subhead,
   mailSubject,
-  scrollTargetId,
-  scrollLabel,
   visual,
 }: IndustryHeroProps) {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -82,25 +80,9 @@ export function IndustryHero({
               appearance="primary"
               size="large"
               icon={<Mail24Regular />}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                mailSubject
-              )}`}
+              onClick={() => handleContactClick(mailSubject)}
             >
               Contact Us
-            </Button>
-            <Button
-              appearance="outline"
-              size="large"
-              icon={<ArrowRight20Regular />}
-              iconPosition="after"
-              onClick={() =>
-                document
-                  .getElementById(scrollTargetId)
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              {scrollLabel}
             </Button>
           </div>
         </div>

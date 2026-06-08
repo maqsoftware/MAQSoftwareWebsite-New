@@ -184,8 +184,6 @@ export function InsightsVisualChooser() {
       <InsightsHero
         title="Visual chooser guide"
         subhead="Pick the right Power BI custom visual for your story. Browse by intent — comparison, distribution, flow, ranking, and more — and jump straight to a detail page or get the visual on Microsoft AppSource."
-        primaryLabel="Browse by category"
-        primaryTargetId="visual-chooser-content"
       />
       <InsightsResourceNav active="power-bi-custom-visual-guide" />
 

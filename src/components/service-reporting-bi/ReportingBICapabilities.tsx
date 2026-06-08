@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { useContactAction } from "../../lib/contact";
 import {
   ChartMultiple24Regular,
   ArrowSwap24Regular,
@@ -179,6 +180,7 @@ const capabilities: Capability[] = [
 
 export function ReportingBICapabilities() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   const [active, setActive] = useState(0);
   const sel = capabilities[active];
   return (
@@ -200,10 +202,9 @@ export function ReportingBICapabilities() {
             <Button
               appearance="outline"
               className={s.knowMore}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Insights & Analytics"
-              )}`}
+              onClick={() =>
+                handleContactClick(sel.name + " - Insights & Analytics")
+              }
             >
               Know more
             </Button>

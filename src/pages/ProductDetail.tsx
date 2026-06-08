@@ -1,4 +1,5 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import { useContactAction } from "../lib/contact";
 import {
   makeStyles,
   tokens,
@@ -240,6 +241,7 @@ export function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
   const product = slug ? getProduct(slug) : undefined;
   const s = useStyles();
+  const handleContactClick = useContactAction();
 
   if (!product) {
     return <Navigate to="/products" replace />;
@@ -263,20 +265,11 @@ export function ProductDetail() {
                 appearance="primary"
                 size="large"
                 icon={<Mail24Regular />}
-                as="a"
-                href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                  product.name + " - request a walkthrough"
-                )}`}
+                onClick={() =>
+                  handleContactClick(product.name + " - request a walkthrough")
+                }
               >
-                Request a walkthrough
-              </Button>
-              <Button
-                appearance="outline"
-                size="large"
-                as="a"
-                href="mailto:customersuccess@maqsoftware.com?subject=Pricing%20inquiry"
-              >
-                Talk to sales
+                Get it now
               </Button>
             </div>
           </div>

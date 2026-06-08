@@ -1,7 +1,8 @@
 import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular, Server24Regular, Group24Regular, CursorClick24Regular, Bot24Regular, ChartMultiple24Regular, People24Regular } from "@fluentui/react-icons";
+import { Mail24Regular, ArrowRight20Regular, Server24Regular, Group24Regular, CursorClick24Regular, Bot24Regular, ChartMultiple24Regular, People24Regular } from "@fluentui/react-icons";
 
 import { useProductPageStyles } from "./productPageStyles";
+import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
@@ -37,6 +38,7 @@ const resources = [
 
 export function ProductLoadFAST() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
@@ -48,8 +50,7 @@ export function ProductLoadFAST() {
               Optimize your Power BI environments for greater efficiency and lower costs with our web application. Empower your business with the dynamic capabilities of Power BI.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<ArrowDownload24Regular />} as="a" href={APPSOURCE} target="_blank" rel="noreferrer">Download now</Button>
-              <Button appearance="outline" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20LoadFAST">Talk to our team</Button>
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - LoadFAST")}>Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

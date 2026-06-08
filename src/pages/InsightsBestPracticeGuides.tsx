@@ -73,8 +73,6 @@ export function InsightsBestPracticeGuides() {
       <InsightsHero
         title="Best practice guides"
         subhead="Learn implementation patterns and guardrails across GitHub Copilot, Power BI, Databricks, Snowflake, Azure architecture, Dynamics 365, and Power Platform."
-        primaryLabel="Explore guides"
-        primaryTargetId="insights-content"
       />
       <InsightsResourceNav active="best-practice-guides" />
       <section className={s.section} id="insights-content">

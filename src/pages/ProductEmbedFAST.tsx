@@ -2,6 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
 
 import { useProductPageStyles } from "./productPageStyles";
+import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
@@ -41,6 +42,7 @@ const resources = [
 
 export function ProductEmbedFAST() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
@@ -52,8 +54,7 @@ export function ProductEmbedFAST() {
               Effortlessly embed Power BI into your apps without the complexity of writing your own code. Achieve faster time to market, improve operations, and elevate your workflow — all with EmbedFAST.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<ArrowRight20Regular />} iconPosition="after" as="a" href={APPSOURCE} target="_blank" rel="noreferrer">Get it now</Button>
-              <Button appearance="outline" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20EmbedFAST">Talk to our team</Button>
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

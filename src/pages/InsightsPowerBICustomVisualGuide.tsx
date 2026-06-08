@@ -92,8 +92,6 @@ export function InsightsPowerBICustomVisualGuide() {
       <InsightsHero
         title="Power BI custom visual guide"
         subhead="Expand your reporting capabilities with our 43 certified Power BI custom visuals. If you need help choosing the right visual for your report, try our visual guide."
-        primaryLabel="Explore custom visuals"
-        primaryTargetId="insights-content"
       />
       <InsightsResourceNav active="power-bi-custom-visual-guide" />
       <section className={s.section} id="insights-content">

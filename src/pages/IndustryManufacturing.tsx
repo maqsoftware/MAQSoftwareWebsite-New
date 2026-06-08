@@ -213,8 +213,6 @@ export function IndustryManufacturing() {
         h1="Powering Smarter Manufacturing with AI-Driven Operations"
         subhead="Supply chain disruptions and manual vendor receipt processing are costing manufacturers time and margin they cannot afford to lose. Leading industrial organizations are deploying AI agents that monitor inventory in real time and automate goods receipt processing from delivery to ERP entry\u2014all on a governed data foundation. At MAQ Software, we build and deploy those agents on Microsoft Fabric, Snowflake, and Databricks\u2014connecting plant operations, supply chain, and procurement on a single platform. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, we take you from AI experimentation to enterprise-scale production\u2014with governance, security, and measurable ROI built in."
         mailSubject="Manufacturing - MAQ Software"
-        scrollTargetId="manufacturing-solutions"
-        scrollLabel="Explore manufacturing solutions"
         visual={<ManufacturingHeroVisual />}
       />
 

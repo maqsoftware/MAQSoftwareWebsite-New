@@ -191,8 +191,6 @@ export function IndustryRetail() {
         h1="Powering the Next Era of Retail with AI-Driven Intelligence"
         subhead="AI is redefining how retailers operate, compete, and grow. At MAQ Software, we help retail and CPG organizations embed intelligence across the enterprise, from real-time decision-making to autonomous operations. Backed by deep Microsoft expertise and advanced data platforms, we enable seamless customer experiences, resilient supply chains, and intelligent store ecosystems."
         mailSubject="Retail - MAQ Software"
-        scrollTargetId="retail-solutions"
-        scrollLabel="Explore retail solutions"
         visual={<RetailHeroVisual />}
       />
 

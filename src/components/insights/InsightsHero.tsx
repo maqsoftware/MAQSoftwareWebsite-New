@@ -1,6 +1,6 @@
 import { Button, makeStyles } from "@fluentui/react-components";
-import { ArrowRight20Regular, Mail24Regular, ChartMultiple20Filled } from "@fluentui/react-icons";
-import { useNavigate } from "react-router-dom";
+import { Mail24Regular, ChartMultiple20Filled } from "@fluentui/react-icons";
+import { useContactAction } from "../../lib/contact";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -90,18 +90,16 @@ const useStyles = makeStyles({
 interface InsightsHeroProps {
   title: string;
   subhead: string;
-  primaryLabel: string;
-  primaryTargetId?: string;
+  ctaLabel?: string;
 }
 
 export function InsightsHero({
   title,
   subhead,
-  primaryLabel,
-  primaryTargetId,
+  ctaLabel = "Contact Us",
 }: InsightsHeroProps) {
   const s = useStyles();
-  const navigate = useNavigate();
+  const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -110,17 +108,8 @@ export function InsightsHero({
           <h1 className={s.h1}>{title}</h1>
           <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
-              size="large"
-              icon={<ArrowRight20Regular />}
-              iconPosition="after"
-              onClick={() => primaryTargetId && document.getElementById(primaryTargetId)?.scrollIntoView({ behavior: "smooth" })}
-            >
-              {primaryLabel}
-            </Button>
-            <Button appearance="outline" size="large" icon={<Mail24Regular />} onClick={() => navigate("/contact")}>
-              Contact Us
+            <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick()}>
+              {ctaLabel}
             </Button>
           </div>
         </div>

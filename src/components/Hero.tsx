@@ -8,6 +8,7 @@ import {
   Mail20Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
+import { useContactAction } from "../lib/contact";
 
 const useStyles = makeStyles({
   wrap: {
@@ -117,10 +118,7 @@ const regions: { name: string; pct: number }[] = [
 export function Hero() {
   const s = useStyles();
   const navigate = useNavigate();
-  const handleContactClick = () => {
-    navigate("/contact");
-    window.open("mailto:CustomerSuccess@MAQSoftware.com", "_blank");
-  };
+  const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -140,7 +138,7 @@ export function Hero() {
               appearance="primary"
               size="large"
               icon={<Mail20Regular />}
-              onClick={handleContactClick}
+              onClick={() => handleContactClick()}
             >
               Contact Us
             </Button>

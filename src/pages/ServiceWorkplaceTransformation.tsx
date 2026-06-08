@@ -1,10 +1,10 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useContactAction } from "../lib/contact";
 import {
     Mail24Regular,
-    ArrowRight20Regular,
     ArrowRight16Regular,
     Sparkle24Regular,
     Globe24Regular,
@@ -567,7 +567,7 @@ const insights: Insight[] = [
 
 export function ServiceWorkplaceTransformation() {
     const s = useStyles();
-    const navigate = useNavigate();
+    const handleContactClick = useContactAction();
     const [activeCap, setActiveCap] = useState(0);
     const sel = capabilities[activeCap];
 
@@ -593,22 +593,13 @@ export function ServiceWorkplaceTransformation() {
                                 appearance="primary"
                                 size="large"
                                 icon={<Mail24Regular />}
-                                onClick={() => navigate("/contact")}
-                            >
-                                Contact Us
-                            </Button>
-                            <Button
-                                appearance="outline"
-                                size="large"
-                                icon={<ArrowRight20Regular />}
-                                iconPosition="after"
                                 onClick={() =>
-                                    document
-                                        .getElementById("workplace-capabilities")
-                                        ?.scrollIntoView({ behavior: "smooth" })
+                                    handleContactClick(
+                                        "Workplace Transformation - MAQ Software"
+                                    )
                                 }
                             >
-                                Explore capabilities
+                                Contact Us
                             </Button>
                         </div>
                     </div>
@@ -678,7 +669,11 @@ export function ServiceWorkplaceTransformation() {
                             <Button
                                 appearance="outline"
                                 className={s.knowMore}
-                                onClick={() => navigate("/contact")}
+                                onClick={() =>
+                                    handleContactClick(
+                                        "Workplace Transformation - MAQ Software"
+                                    )
+                                }
                             >
                                 Know more
                             </Button>

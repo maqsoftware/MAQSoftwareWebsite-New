@@ -2,6 +2,7 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular, Mail24Regular } from "@fluentui/react-icons";
 import { Button } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
+import { useContactAction } from "../../lib/contact";
 
 const useStyles = makeStyles({
   hero: {
@@ -262,7 +263,7 @@ export function GuideArticle({
   ctaText,
 }: GuideArticleProps) {
   const s = useStyles();
-  const mailto = `mailto:CustomerSuccess@MAQSoftware.com?subject=${encodeURIComponent(ctaSubject)}`;
+  const handleContactClick = useContactAction();
 
   return (
     <>
@@ -316,8 +317,7 @@ export function GuideArticle({
             <Button
               appearance="primary"
               icon={<Mail24Regular />}
-              as="a"
-              href={mailto}
+              onClick={() => handleContactClick(ctaSubject)}
             >
               Talk to our team
             </Button>

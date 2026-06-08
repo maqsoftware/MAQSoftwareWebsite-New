@@ -206,8 +206,6 @@ export function IndustryTechnology() {
         h1="Accelerate Software Delivery with AI-Powered Engineering"
         subhead="AI is reshaping how technology organizations build, test, and ship software. At MAQ Software, we help ISVs, cloud-native teams, and enterprise software organizations embed intelligence across the SDLC — from agentic code review to embedded analytics — so engineering teams spend less time on rework and more time on innovation."
         mailSubject="Technology - MAQ Software"
-        scrollTargetId="technology-solutions"
-        scrollLabel="Explore tech solutions"
         visual={<TechnologyHeroVisual />}
       />
 
