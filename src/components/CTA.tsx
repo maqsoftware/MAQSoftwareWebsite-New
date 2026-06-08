@@ -3,7 +3,7 @@ import {
   Button,
 } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useContactAction } from "../lib/contact";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: "var(--maq-surface-cream)" },
@@ -58,12 +58,7 @@ const useStyles = makeStyles({
 
 export function CTA() {
   const s = useStyles();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const handleContactClick = () => {
-    navigate("/contact");
-    window.open("mailto:CustomerSuccess@MAQSoftware.com", "_blank");
-  };
+  const handleContactClick = useContactAction();
   return (
     <section className={s.section} id="contact">
       <div className={s.inner}>
@@ -71,31 +66,14 @@ export function CTA() {
         <h2 className={s.title}>
           Ready to move faster?
         </h2>
-        <p className={s.sub}>
-          Tell us where you are. We'll show you what's possible in 30 minutes —
-          no obligation.
-        </p>
         <div className={s.btns}>
           <Button
             appearance="primary"
             size="large"
             icon={<Mail24Regular />}
-            onClick={handleContactClick}
+            onClick={() => handleContactClick()}
           >
             Contact Us
-          </Button>
-          <Button
-            appearance="outline"
-            size="large"
-            onClick={() => {
-              if (location.pathname === "/insights/case-studies") {
-                window.scrollTo({ top: 0 });
-              } else {
-                navigate("/insights/case-studies");
-              }
-            }}
-          >
-            Case Studies
           </Button>
         </div>
         <div className={s.email}>

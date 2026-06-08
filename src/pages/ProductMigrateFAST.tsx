@@ -2,6 +2,7 @@ import { Button } from "@fluentui/react-components";
 import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 
 import { useProductPageStyles } from "./productPageStyles";
+import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
@@ -36,6 +37,7 @@ const resources = [
 
 export function ProductMigrateFAST() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
@@ -47,8 +49,7 @@ export function ProductMigrateFAST() {
               Accelerate your migration journey to Microsoft Fabric. Simplify data and reporting platform migration with AI-powered tools for faster and easier transitions.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20MigrateFAST">Contact our team</Button>
-              <Button appearance="outline" size="large" icon={<ArrowRight20Regular />} iconPosition="after" onClick={() => document.getElementById("migratefast-process")?.scrollIntoView({ behavior: "smooth" })}>See the process</Button>
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

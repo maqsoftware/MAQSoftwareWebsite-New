@@ -280,8 +280,6 @@ export function IndustryHealthcareLifeSciences() {
         h1="AI-Powered Care, Compliance, and Discovery for the Connected Health Enterprise"
         subhead="Healthcare and life sciences organizations face mounting pressure to improve outcomes, accelerate research, and modernize fragmented data estates — all while honoring HIPAA, 21 CFR Part 11, and other regulatory commitments. At MAQ Software, we help providers, payers, and life-sciences firms embed AI across the care continuum and the research lifecycle — from grounded clinical Copilots and care-coordination agents to population-health analytics and trial-data unification. Built on Microsoft Fabric, Databricks, and Snowflake, our solutions turn sensitive health data into safer decisions and faster discovery."
         mailSubject="Healthcare & Life Sciences - MAQ Software"
-        scrollTargetId="hls-solutions"
-        scrollLabel="Explore healthcare solutions"
         visual={<HealthcareHeroVisual />}
       />
 

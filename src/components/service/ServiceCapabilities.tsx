@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { useContactAction } from "../../lib/contact";
 import {
   Bot24Regular,
   ChartMultiple24Regular,
@@ -205,6 +206,7 @@ export function ServiceCapabilities({
   mailSubjectSuffix = "Agentic AI & ML",
 }: ServiceCapabilitiesProps = {}) {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   const [active, setActive] = useState(0);
   const sel = capabilities[active];
   return (
@@ -230,10 +232,9 @@ export function ServiceCapabilities({
             <Button
               appearance="outline"
               className={s.knowMore}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - " + mailSubjectSuffix
-              )}`}
+              onClick={() =>
+                handleContactClick(sel.name + " - " + mailSubjectSuffix)
+              }
             >
               Know more
             </Button>

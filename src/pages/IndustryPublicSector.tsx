@@ -235,8 +235,6 @@ export function IndustryPublicSector() {
         h1="Trusted AI for Citizen Services, Mission Outcomes, and Modern Government"
         subhead="Federal, state, and local agencies face mounting pressure to deliver faster citizen services, modernize aging systems, and protect sensitive data — all under audit-grade accountability. At MAQ Software, we help public-sector organizations embed AI across the mission stack — from citizen-facing chatbots and policy-knowledge Copilots to program analytics on Microsoft Fabric — with secure-by-design patterns aligned to FedRAMP, CJIS, and agency compliance frameworks. Our solutions turn fragmented government data into faster decisions and better outcomes for the citizens you serve."
         mailSubject="Public Sector - MAQ Software"
-        scrollTargetId="public-sector-solutions"
-        scrollLabel="Explore public sector solutions"
         visual={<PublicSectorHeroVisual />}
       />
 

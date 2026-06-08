@@ -1,5 +1,6 @@
 import { Button, makeStyles, tokens, Badge } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
+import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
 import {
   Mail24Regular,
@@ -465,6 +466,7 @@ const resources = [
 // ---------------------------------------------------------------------------
 export function ProductFabricAdminAgent() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       {/* ---------------------- Hero ---------------------- */}
@@ -488,23 +490,11 @@ export function ProductFabricAdminAgent() {
                 appearance="primary"
                 size="large"
                 icon={<Mail24Regular />}
-                as="a"
-                href="mailto:customersuccess@maqsoftware.com?subject=Fabric%20Admin%20Agent%20-%20Walkthrough"
-              >
-                Request a walkthrough
-              </Button>
-              <Button
-                appearance="outline"
-                size="large"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
                 onClick={() =>
-                  document
-                    .getElementById("fabric-admin-features")
-                    ?.scrollIntoView({ behavior: "smooth" })
+                  handleContactClick("Fabric Admin Agent - Walkthrough")
                 }
               >
-                See capabilities
+                Get it now
               </Button>
             </div>
           </div>

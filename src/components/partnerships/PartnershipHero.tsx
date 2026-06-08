@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Button, makeStyles } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
+import { useContactAction } from "../../lib/contact";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px 56px" },
@@ -65,6 +66,7 @@ export function PartnershipHero({
   extraCta,
 }: PartnershipHeroProps) {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -76,8 +78,7 @@ export function PartnershipHero({
               appearance="primary"
               size="large"
               icon={<Mail24Regular />}
-              as="a"
-              href={ctaHref}
+              onClick={() => handleContactClick(ctaHref)}
             >
               {ctaLabel}
             </Button>

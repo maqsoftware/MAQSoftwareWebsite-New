@@ -1,8 +1,9 @@
 import { Button } from "@fluentui/react-components";
 // import { TrustBanner } from \"../components/TrustBanner\";
-import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular } from "@fluentui/react-icons";
+import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
 
 import { useProductPageStyles } from "./productPageStyles";
+import { useContactAction } from "../lib/contact";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const benefits = [
@@ -26,6 +27,7 @@ const resources = [
 
 export function ProductCertyFAST() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
@@ -37,8 +39,7 @@ export function ProductCertyFAST() {
               Streamline Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<ArrowDownload24Regular />} as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noreferrer">Download now</Button>
-              <Button appearance="outline" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20CertyFAST">Talk to our team</Button>
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - CertyFAST")}>Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

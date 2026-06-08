@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { useContactAction } from "../../lib/contact";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -172,6 +173,7 @@ const capabilities: Capability[] = [
 
 export function ServiceCapabilitiesData() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   const [active, setActive] = useState(0);
   const sel = capabilities[active];
   return (
@@ -199,10 +201,9 @@ export function ServiceCapabilitiesData() {
             <Button
               appearance="outline"
               className={s.knowMore}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Data & AI Platforms"
-              )}`}
+              onClick={() =>
+                handleContactClick(sel.name + " - Data & AI Platforms")
+              }
             >
               Know more
             </Button>

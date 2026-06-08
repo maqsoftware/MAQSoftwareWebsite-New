@@ -1,5 +1,4 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import {
+import { Button, makeStyles, tokens } from "@fluentui/react-components";import {
   ArrowRight20Regular,
   Brain24Regular,
   Mail24Regular,
@@ -7,6 +6,7 @@ import {
 } from "@fluentui/react-icons";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { useContactAction } from "../lib/contact";
 
 const REGISTER_URL = "https://techcon365.com/Chicago/tickets";
 const BROCHURE_URL =
@@ -424,6 +424,7 @@ function ProductLink({
 
 export function TechCon365() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
 
   return (
     <>
@@ -591,8 +592,9 @@ export function TechCon365() {
             </p>
             <div className={s.storyButtons}>
               <Button
-                as="a"
-                href="mailto:customersuccess@maqsoftware.com?subject=TechCon%20365%20Chicago%202026%20meeting"
+                onClick={() =>
+                  handleContactClick("TechCon 365 Chicago 2026 meeting")
+                }
                 appearance="primary"
                 size="large"
                 icon={<Mail24Regular />}

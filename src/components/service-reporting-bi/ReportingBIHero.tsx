@@ -1,11 +1,11 @@
 import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Mail24Regular,
-  ArrowRight20Regular,
   ChartMultiple20Filled,
   Gauge20Filled,
   Window20Filled,
 } from "@fluentui/react-icons";
+import { useContactAction } from "../../lib/contact";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -98,6 +98,7 @@ const useStyles = makeStyles({
 
 export function ReportingBIHero() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -114,23 +115,11 @@ export function ReportingBIHero() {
               appearance="primary"
               size="large"
               icon={<Mail24Regular />}
-              as="a"
-              href="mailto:customersuccess@maqsoftware.com?subject=Reporting%20%26%20BI%20-%20MAQ%20Software"
-            >
-              Contact Us
-            </Button>
-            <Button
-              appearance="outline"
-              size="large"
-              icon={<ArrowRight20Regular />}
-              iconPosition="after"
               onClick={() =>
-                document
-                  .getElementById("bi-capabilities")
-                  ?.scrollIntoView({ behavior: "smooth" })
+                handleContactClick("Reporting & BI - MAQ Software")
               }
             >
-              Explore capabilities
+              Contact Us
             </Button>
           </div>
         </div>

@@ -98,8 +98,7 @@ useEffect(() => {
       <InsightsHero
         title="Case Studies"
         subhead="Explore real-world outcomes across AI, data, reporting, cloud, and security implementations delivered by MAQ Software."
-        primaryLabel="Explore latest studies"
-        primaryTargetId="insights-content"
+        ctaLabel="Discuss your project"
       />
 
       <InsightsResourceNav active="case-studies" />

@@ -2,6 +2,7 @@ import { makeStyles, tokens, Badge, Button } from "@fluentui/react-components";
 import { ArrowRight20Regular, Mail24Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
+import { useContactAction } from "../lib/contact";
 
 const useStyles = makeStyles({
   hero: {
@@ -180,6 +181,7 @@ const aggregateStats = [
 
 export function ProductsHome() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
@@ -250,14 +252,15 @@ export function ProductsHome() {
         <div className={s.ctaInner}>
           <h2 className={s.ctaTitle}>Want a guided walkthrough?</h2>
           <p className={s.ctaSub}>
-            Pick any product. We'll show it running on your data in 30 minutes.
+            Pick any product. We'll show it running on your data.
           </p>
           <Button
             appearance="primary"
             size="large"
             icon={<Mail24Regular />}
-            as="a"
-            href="mailto:customersuccess@maqsoftware.com?subject=Product%20walkthrough"
+            onClick={() =>
+              handleContactClick("Product walkthrough")
+            }
           >
             Request a walkthrough
           </Button>

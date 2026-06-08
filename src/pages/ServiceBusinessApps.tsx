@@ -2,9 +2,9 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { useContactAction } from "../lib/contact";
 import {
     Mail24Regular,
-    ArrowRight20Regular,
     ArrowRight16Regular,
     Flow24Regular,
     PeopleSearch24Regular,
@@ -539,6 +539,7 @@ const insights: Insight[] = [
 
 export function ServiceBusinessApps() {
     const s = useStyles();
+    const handleContactClick = useContactAction();
     const [activeCap, setActiveCap] = useState(0);
     const sel = capabilities[activeCap];
 
@@ -560,23 +561,13 @@ export function ServiceBusinessApps() {
                                 appearance="primary"
                                 size="large"
                                 icon={<Mail24Regular />}
-                                as="a"
-                                href="mailto:customersuccess@maqsoftware.com?subject=Business%20Applications%20%26%20Automation%20-%20MAQ%20Software"
-                            >
-                                Contact Us
-                            </Button>
-                            <Button
-                                appearance="outline"
-                                size="large"
-                                icon={<ArrowRight20Regular />}
-                                iconPosition="after"
                                 onClick={() =>
-                                    document
-                                        .getElementById("business-apps-capabilities")
-                                        ?.scrollIntoView({ behavior: "smooth" })
+                                    handleContactClick(
+                                        "Business Applications & Automation - MAQ Software"
+                                    )
                                 }
                             >
-                                Explore capabilities
+                                Contact Us
                             </Button>
                         </div>
                     </div>
@@ -661,10 +652,11 @@ export function ServiceBusinessApps() {
                             <Button
                                 appearance="outline"
                                 className={s.knowMore}
-                                as="a"
-                                href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                                    `${sel.name} - Business Applications & Automation`
-                                )}`}
+                                onClick={() =>
+                                    handleContactClick(
+                                        `${sel.name} - Business Applications & Automation`
+                                    )
+                                }
                             >
                                 Know more
                             </Button>

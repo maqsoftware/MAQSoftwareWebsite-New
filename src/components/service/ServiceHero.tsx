@@ -2,18 +2,17 @@ import type { ReactNode } from "react";
 import { Button, makeStyles } from "@fluentui/react-components";
 import {
   Mail24Regular,
-  ArrowRight20Regular,
   Bot20Filled,
   ChartMultiple20Filled,
   Sparkle20Filled,
 } from "@fluentui/react-icons";
+import { useContactAction } from "../../lib/contact";
 
 export interface ServiceHeroProps {
   eyebrow?: string;
   heading?: string;
   subhead?: string;
   ctaMailSubject?: string;
-  scrollTargetId?: string;
   visual?: ReactNode;
 }
 
@@ -108,11 +107,11 @@ export function ServiceHero({
   eyebrow = "AI Solutions & Agents",
   heading = "Build production-ready AI agents on Microsoft Foundry",
   subhead = "MAQ Software designs, builds, and operates GenAI agents and copilots on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting, with full governance, evaluation, and human-in-the-loop controls.",
-  ctaMailSubject = "Agentic%20AI%20%26%20ML%20-%20MAQ%20Software",
-  scrollTargetId = "ai-capabilities",
+  ctaMailSubject = "Agentic AI & ML - MAQ Software",
   visual,
 }: ServiceHeroProps = {}) {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
@@ -125,23 +124,11 @@ export function ServiceHero({
               appearance="primary"
               size="large"
               icon={<Mail24Regular />}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${ctaMailSubject}`}
-            >
-              Contact Us
-            </Button>
-            <Button
-              appearance="outline"
-              size="large"
-              icon={<ArrowRight20Regular />}
-              iconPosition="after"
               onClick={() =>
-                document
-                  .getElementById(scrollTargetId)
-                  ?.scrollIntoView({ behavior: "smooth" })
+                handleContactClick(ctaMailSubject)
               }
             >
-              Explore capabilities
+              Contact Us
             </Button>
           </div>
         </div>
