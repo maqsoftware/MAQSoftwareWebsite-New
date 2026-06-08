@@ -25,7 +25,7 @@ export const useProductPageStyles = makeStyles({
   headLeft: { marginBottom: "20px" },
   secEyebrow: { fontSize: "12px", fontWeight: 700, color: "var(--maq-red)", letterSpacing: "0.08em", textTransform: "uppercase", display: "block", marginBottom: "8px" },
   title: { display: "block", fontSize: "28px", fontWeight: 700, color: "var(--maq-black)", margin: "0 0 6px", letterSpacing: "-0.01em" },
-  titleLg: { display: "block", fontSize: "30px", fontWeight: 700, color: "var(--maq-black)", margin: 0, letterSpacing: "-0.01em" },
+  titleLg: { display: "block", fontSize: "30px", fontWeight: 700, color: "var(--maq-black)", margin: "0 0 10px", letterSpacing: "-0.01em" },
   sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "720px" },
 
   benGrid3: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "1fr" } },

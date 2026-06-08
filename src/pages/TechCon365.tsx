@@ -9,8 +9,7 @@ import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 const REGISTER_URL = "https://techcon365.com/Chicago/tickets";
-const BROCHURE_URL =
-  "https://maqsoftware.com/resources/MAQ%20Software%20Brochure%20%28One%20page%29.pdf";
+const BROCHURE_URL = "/resources/MAQ%20Software%20Brochure.pdf";
 const APPSOURCE_URL =
   "https://appsource.microsoft.com/en-us/marketplace/partner-dir/3778db04-784a-4ef7-9eaa-7a9b67cf9e35/overview";
 
@@ -408,7 +407,7 @@ function ProductLink({
   children: ReactNode;
   className: string;
 }) {
-  if (href.startsWith("http")) {
+  if (href.startsWith("http") || href === BROCHURE_URL) {
     return (
       <a className={className} href={href} target="_blank" rel="noreferrer">
         {children}
