@@ -222,9 +222,9 @@ const partnerships: NavItem[] = [
 
 const insights: NavItem[] = [
   { label: "Case Studies", href: "/insights/case-studies" },
-  { label: "Consulting offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
-  { label: "Power BI custom visual guide", href: "/insights/power-bi-custom-visual-guide" },
-  { label: "Best practice guides", href: "/insights/best-practice-guides" },
+  { label: "Best practices", href: "/insights/best-practice-guides" },
+  { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
+  { label: "Power BI custom visual", href: "/insights/power-bi-custom-visual-guide" },
 ];
 
 const about: NavItem[] = [

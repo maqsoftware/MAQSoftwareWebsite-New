@@ -441,9 +441,9 @@ const resources = [
     href: "https://marketplace.microsoft.com/en-us/product/maqsoftware.fabricadminagent-preview?tab=Overview&flightCodes=f7b20ceffeeb4e1fab33185d0cd74d08",
   },
   {
-    pill: "Consulting offers",
+    pill: "Marketplace offers",
     title: "MAQ Software offers on Azure Marketplace",
-    desc: "Browse all Azure Marketplace consulting offers from MAQ Software — Fabric, Power BI, AI, and modernization engagements.",
+    desc: "Browse all Azure Marketplace marketplace offers from MAQ Software — Fabric, Power BI, AI, and modernization engagements.",
     href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software",
   },
   {
@@ -614,7 +614,7 @@ export function ProductFabricAdminAgent() {
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
             <p className={s.sub}>
               Get the agent from Microsoft AppSource, browse Azure Marketplace
-              consulting offers, and explore deeper guidance from MAQ Software.
+              marketplace offers, and explore deeper guidance from MAQ Software.
             </p>
           </div>
 
@@ -652,7 +652,7 @@ export function ProductFabricAdminAgent() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Browse all consulting offers
+                Browse all marketplace offers
               </Button>
             </div>
           </div>

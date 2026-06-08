@@ -148,7 +148,7 @@ export function InsightsHero({
             <div className={s.tileTitle}>Resource channels</div>
             <div className={s.miniRows}>
               <div className={s.miniRow}><span>Case studies</span><span>Updated</span></div>
-              <div className={s.miniRow}><span>Consulting offers</span><span>Marketplace</span></div>
+              <div className={s.miniRow}><span>Marketplace offers</span><span>Marketplace</span></div>
               <div className={s.miniRow}><span>Visual guide</span><span>Certified</span></div>
               <div className={s.miniRow}><span>Best practices</span><span>Technical</span></div>
             </div>
