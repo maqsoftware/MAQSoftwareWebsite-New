@@ -96,7 +96,7 @@ const useStyles = makeStyles({
     fontSize: "30px",
     fontWeight: 700,
     color: "var(--maq-black)",
-    margin: 0,
+    margin: "0 0 10px",
     letterSpacing: "-0.01em",
   },
   sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "720px" },
@@ -456,7 +456,7 @@ const resources = [
     pill: "Best practices",
     title: "Fabric & Power BI best-practice guides",
     desc: "Authoritative guides on Fabric capacity sizing, Power BI optimization, and governance — from the MAQ Software community.",
-    href: "https://maqsoftware.com/community/best-practices",
+    href: "/insights/best-practice-guides",
   },
 ];
 
@@ -606,11 +606,11 @@ export function ProductFabricAdminAgent() {
         </div>
       </section>
 
-      {/* ---------------------- Resources & Marketplace ---------------------- */}
+      {/* ---------------------- Insights ---------------------- */}
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            <span className={s.secEyebrow}>Insights</span>
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
             <p className={s.sub}>
               Get the agent from Microsoft AppSource, browse Azure Marketplace
@@ -664,8 +664,8 @@ export function ProductFabricAdminAgent() {
                 key={o.title}
                 className={s.mktCard}
                 href={o.href}
-                target="_blank"
-                rel="noreferrer"
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
               >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
