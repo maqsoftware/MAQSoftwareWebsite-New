@@ -327,7 +327,6 @@ export function AboutNews() {
                 )}
                 <div className={s.articleBody}>
                   <div className={s.articleMeta}>
-                    <span className={s.tag}>{a.tag}</span>
                     <span>{formatPublishedDate(a.date)}</span>
                   </div>
                   <h2 className={s.articleTitle}>{a.title}</h2>

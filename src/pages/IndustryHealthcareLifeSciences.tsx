@@ -37,18 +37,6 @@ const useVisualStyles = makeStyles({
     gap: "8px",
   },
   triageLabel: { fontSize: "11px", color: "var(--maq-gray-600)", flex: 1 },
-  badge: {
-    fontSize: "10px",
-    fontWeight: 700,
-    padding: "2px 7px",
-    borderRadius: "4px",
-    letterSpacing: "0.04em",
-  },
-  badgeCritical: { background: "#fee2e2", color: "#b91c1c" },
-  badgeWatch: { background: "#fef9c3", color: "#92400e" },
-  badgeStable: { background: "#dcfce7", color: "#15803d" },
-  badgeRoutine: { background: "var(--maq-gray-100)", color: "var(--maq-gray-600)" },
-  badgeDischarge: { background: "var(--maq-red-pale)", color: "var(--maq-red)" },
   barRow: { display: "flex", alignItems: "flex-end", gap: "5px", height: "40px" },
   bar: { flex: 1, background: "var(--maq-gray-200)", borderRadius: "3px 3px 0 0" },
   barRed: { background: "var(--maq-red)" },
@@ -95,29 +83,6 @@ function HealthcareHeroVisual() {
           {triageRows.map(({ label, status }) => (
             <div key={label} className={v.triageRow}>
               <span className={v.triageLabel}>{label}</span>
-              <span
-                className={`${v.badge} ${
-                  status === "critical"
-                    ? v.badgeCritical
-                    : status === "watch"
-                    ? v.badgeWatch
-                    : status === "stable"
-                    ? v.badgeStable
-                    : status === "discharge"
-                    ? v.badgeDischarge
-                    : v.badgeRoutine
-                }`}
-              >
-                {status === "critical"
-                  ? "Critical"
-                  : status === "watch"
-                  ? "Watch"
-                  : status === "stable"
-                  ? "Stable"
-                  : status === "discharge"
-                  ? "Discharge"
-                  : "Routine"}
-              </span>
             </div>
           ))}
         </div>

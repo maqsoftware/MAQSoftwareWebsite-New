@@ -115,11 +115,6 @@ export function InsightsPowerBICustomVisualGuide() {
                 <div className={s.imageWrap}>
                   <img className={s.image} src={item.imageUrl} alt={item.name} loading="lazy" />
                 </div>
-                <div className={s.meta}>
-                  {item.badges.map((badge) => (
-                    <span key={badge} className={s.pill}>{badge}</span>
-                  ))}
-                </div>
                 <span className={s.category}>{Array.isArray(item.category) ? item.category.join(", ") : item.category}</span>
                 <h3 className={s.cardTitle}>{item.name}</h3>
                 <p className={s.teaser}>{item.description}</p>

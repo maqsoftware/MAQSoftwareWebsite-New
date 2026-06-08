@@ -134,7 +134,6 @@ export function MarketplaceOffers({
                 }
               />
               <div className={s.body}>
-                <span className={s.pill}>{o.pill}</span>
                 <div className={s.cardTitle}>{o.title}</div>
                 <p className={s.desc} style={{ margin: 0 }}>
                   {o.desc}

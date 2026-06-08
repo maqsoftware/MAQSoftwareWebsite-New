@@ -115,7 +115,6 @@ useEffect(() => {
                 <img className={s.image} src={item.imageUrl} alt={item.title} loading="lazy" />
                 <div className={s.body}>
                   <div className={s.meta}>
-                    <span className={s.pill}>{item.tag}</span>
                     <span className={s.date}>{item.date}</span>
                   </div>
                   <h3 className={s.cardTitle}>{item.title}</h3>

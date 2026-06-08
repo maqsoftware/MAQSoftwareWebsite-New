@@ -2,7 +2,6 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import {
   makeStyles,
   tokens,
-  Badge,
   Button,
 } from "@fluentui/react-components";
 import {
@@ -59,7 +58,6 @@ const useStyles = makeStyles({
     lineHeight: 1.65,
     marginBottom: "24px",
   },
-  badges: { display: "flex", gap: "6px", marginBottom: "24px", flexWrap: "wrap" },
   btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
 
   visual: {
@@ -260,13 +258,6 @@ export function ProductDetail() {
             <span className={s.tagline}>{product.tagline}</span>
             <h1 className={s.h1}>{product.name}</h1>
             <p className={s.sub}>{product.longDesc}</p>
-            <div className={s.badges}>
-              {product.tags.map((t) => (
-                <Badge key={t} appearance="tint" color="danger">
-                  {t}
-                </Badge>
-              ))}
-            </div>
             <div className={s.btns}>
               <Button
                 appearance="primary"

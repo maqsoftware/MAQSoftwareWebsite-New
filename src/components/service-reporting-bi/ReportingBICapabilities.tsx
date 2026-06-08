@@ -197,13 +197,6 @@ export function ReportingBICapabilities() {
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <div className={s.tagRow}>
-              {sel.tags.map((t) => (
-                <span key={t} className={s.tag}>
-                  {t}
-                </span>
-              ))}
-            </div>
             <Button
               appearance="outline"
               className={s.knowMore}

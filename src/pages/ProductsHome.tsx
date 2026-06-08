@@ -1,4 +1,4 @@
-import { makeStyles, tokens, Badge, Button } from "@fluentui/react-components";
+import { makeStyles, tokens, Button } from "@fluentui/react-components";
 import { ArrowRight20Regular, Mail24Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
@@ -99,12 +99,6 @@ const useStyles = makeStyles({
     lineHeight: 1.6,
     flex: 1,
     marginBottom: "16px",
-  },
-  badges: {
-    display: "flex",
-    gap: "6px",
-    marginBottom: "16px",
-    flexWrap: "wrap",
   },
   link: {
     display: "inline-flex",
@@ -229,13 +223,6 @@ export function ProductsHome() {
                   <div className={s.tagline}>{p.tagline}</div>
                   <div className={s.name}>{p.name}</div>
                   <div className={s.desc}>{p.shortDesc}</div>
-                  <div className={s.badges}>
-                    {p.tags.map((t) => (
-                      <Badge key={t} appearance="outline" color="danger" size="small">
-                        {t}
-                      </Badge>
-                    ))}
-                  </div>
                   <span className={s.link}>
                     Learn more <ArrowRight20Regular fontSize={14} />
                   </span>

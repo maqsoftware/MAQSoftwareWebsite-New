@@ -51,25 +51,6 @@ const useStyles = makeStyles({
       gridTemplateColumns: "1fr",
     },
   },
-
-  badgesRow: {
-    display: "flex",
-    gap: "10px",
-    flexWrap: "wrap",
-    marginBottom: "28px",
-  },
-  badge: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "8px",
-    backgroundColor: "#fff",
-    border: "1px solid var(--maq-border)",
-    color: "var(--maq-ink)",
-    fontSize: "12px",
-    fontWeight: 600,
-    padding: "6px 14px",
-    borderRadius: "999px",
-  },
   h1: {
     fontSize: "52px",
     lineHeight: 1.1,

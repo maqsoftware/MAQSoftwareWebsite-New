@@ -1,4 +1,4 @@
-import { Button, makeStyles, tokens, Badge } from "@fluentui/react-components";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 // import { TrustBanner } from "../components/TrustBanner";
 import {
@@ -195,7 +195,6 @@ const useStyles = makeStyles({
       transform: "translateY(-2px)",
     },
   },
-  caseTag: { alignSelf: "flex-start", marginBottom: "12px" },
   caseTitle: {
     fontSize: "15px",
     fontWeight: 700,
@@ -302,18 +301,6 @@ const useStyles = makeStyles({
     borderBottom: "1px solid var(--maq-border)",
   },
   mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1, gap: "8px" },
-  mktPill: {
-    alignSelf: "flex-start",
-    fontSize: "10px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    background: "var(--maq-red-pale)",
-    textTransform: "uppercase",
-    letterSpacing: "0.06em",
-    padding: "3px 8px",
-    borderRadius: "4px",
-    marginBottom: "10px",
-  },
   mktTitleRow: {
     display: "flex",
     alignItems: "flex-start",
@@ -352,19 +339,6 @@ const useStyles = makeStyles({
     padding: "22px 24px",
     marginBottom: "20px",
     "@media (max-width: 720px)": { gridTemplateColumns: "1fr" },
-  },
-  bannerEyebrow: {
-    display: "inline-block",
-    fontSize: "10px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    background: "#fff",
-    border: "1px solid var(--maq-red-pale)",
-    textTransform: "uppercase",
-    letterSpacing: "0.08em",
-    padding: "3px 8px",
-    borderRadius: "4px",
-    marginBottom: "8px",
   },
   bannerTitle: {
     fontSize: "20px",
@@ -584,9 +558,6 @@ export function ProductFabricAdminAgent() {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Badge appearance="tint" color="danger" className={s.caseTag}>
-                  {c.tag}
-                </Badge>
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
@@ -621,7 +592,6 @@ export function ProductFabricAdminAgent() {
           {/* Featured banner */}
           <div className={s.banner}>
             <div>
-              <span className={s.bannerEyebrow}>Microsoft AppSource · Preview</span>
               <h3 className={s.bannerTitle}>
                 Get Fabric Admin Agent on Microsoft Marketplace
               </h3>
@@ -669,7 +639,6 @@ export function ProductFabricAdminAgent() {
               >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
-                  <span className={s.mktPill}>{o.pill}</span>
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>

@@ -281,14 +281,6 @@ export function InsightsCustomVisualDetail() {
               <span className={s.eyebrow}>Power BI custom visual</span>
               <h1 className={s.h1}>{item.name}</h1>
               <p className={s.description}>{heroDescription}</p>
-              <div className={s.badges}>
-                {item.badges.map((badge) => (
-                  <span key={badge} className={s.pill}>
-                    {badge}
-                  </span>
-                ))}
-                <span className={s.catPill}>{categoryLabel(item)}</span>
-              </div>
               <div className={s.ctas}>
                 <Button
                   appearance="primary"
