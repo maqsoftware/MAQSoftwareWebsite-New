@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
+// import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { CTA } from "./components/CTA";
@@ -41,12 +41,15 @@ import { InsightsAzureDatabricksBestPractices } from "./pages/InsightsAzureDatab
 import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
 import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
 import { AboutSustainability } from "./pages/AboutSustainability";
-import { AboutNews } from "./pages/AboutNews";
+import { AboutEvents } from "./pages/AboutEvents";
 import { AboutCareers } from "./pages/AboutCareers";
 import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
 import { Contact } from "./pages/Contact";
 import { TermsOfService } from "./pages/TermsOfService";
 import { TechCon365 } from "./pages/TechCon365";
+import { TechCon365Dallas } from "./pages/TechCon365Dallas";
+import { TechCon365Seattle } from "./pages/TechCon365Seattle";
+import { FabCon2027 } from "./pages/FabCon2027";
 
 const useStyles = makeStyles({
   root: {
@@ -133,7 +136,7 @@ export function App() {
     <div className={s.root}>
       <ScrollToTop />
       <Header />
-      <AnnouncementRibbon />
+      {/* <AnnouncementRibbon /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/industries/retail" element={<IndustryRetail />} />
@@ -300,10 +303,14 @@ export function App() {
           }
         />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/news" element={<AboutNews />} />
+        <Route path="/events" element={<AboutEvents />} />
+        <Route path="/news" element={<Navigate to="/events" replace />} />
         <Route path="/careers" element={<AboutCareers />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/techcon365" element={<TechCon365 />} />
+        <Route path="/techcon365-dallas" element={<TechCon365Dallas />} />
+        <Route path="/techcon365-seattle" element={<TechCon365Seattle />} />
+        <Route path="/fabcon-2027" element={<FabCon2027 />} />
       </Routes>
       <Footer />
     </div>
