@@ -229,7 +229,7 @@ const insights: NavItem[] = [
 
 const about: NavItem[] = [
   { label: "Who we are", href: "/who-we-are" },
-  { label: "News", href: "/news" },
+  { label: "Events", href: "/events" },
   { label: "Careers", href: "/careers" },
   { label: "Sustainability", href: "/sustainability" },
   { label: "Contact Us", href: "/contact" },
