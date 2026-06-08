@@ -1,4 +1,5 @@
 import { makeStyles } from "@fluentui/react-components";
+import { CTA } from "../components/CTA";
 
 const useStyles = makeStyles({
   // ── Hero ──────────────────────────────────────────────────────────────────
@@ -142,7 +143,7 @@ export function TermsOfService() {
           <ul className={s.list}>
             <li className={s.listItem}>
               Is unlawful, threatening, abusive, harassing, defamatory, libelous,
-              deceptive, fraudulent, invasive of another’s privacy, tortious,
+              deceptive, fraudulent, invasive of another's privacy, tortious,
               contains explicit or graphic descriptions or accounts of sexual
               acts (including but not limited to sexual language of a violent or
               threatening nature directed at another individual or group of
@@ -323,6 +324,8 @@ export function TermsOfService() {
           </p>
         </div>
       </section>
+
+      <CTA />
     </>
   );
 }

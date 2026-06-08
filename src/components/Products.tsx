@@ -1,8 +1,4 @@
-import {
-  makeStyles,
-  tokens,
-  Badge,
-} from "@fluentui/react-components";
+import { makeStyles, tokens, Badge } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 
@@ -89,7 +85,15 @@ const useStyles = makeStyles({
     lineHeight: 1.6,
     marginBottom: "20px",
   },
-  badgeRow: { display: "flex", gap: "6px", marginBottom: "16px", flexWrap: "wrap" },
+  footer: {
+    marginTop: "auto",
+  },
+  badgeRow: {
+    display: "flex",
+    gap: "6px",
+    marginBottom: "16px",
+    flexWrap: "wrap",
+  },
   badge: { padding: "2px 10px" },
   more: {
     display: "inline-flex",
@@ -98,7 +102,6 @@ const useStyles = makeStyles({
     fontSize: "13px",
     color: "var(--maq-red)",
     fontWeight: 600,
-    marginTop: "auto",
   },
 });
 
@@ -189,16 +192,24 @@ export function Products() {
               <div className={s.tagline}>{p.tagline}</div>
               <div className={s.name}>{p.name}</div>
               <div className={s.desc}>{p.desc}</div>
-              <div className={s.badgeRow}>
-                {p.tags.map((t) => (
-                  <Badge key={t} appearance="outline" color="brand" size="small" className={s.badge}>
-                    {t}
-                  </Badge>
-                ))}
+              <div className={s.footer}>
+                <div className={s.badgeRow}>
+                  {p.tags.map((t) => (
+                    <Badge
+                      key={t}
+                      appearance="outline"
+                      color="brand"
+                      size="small"
+                      className={s.badge}
+                    >
+                      {t}
+                    </Badge>
+                  ))}
+                </div>
+                <span className={s.more}>
+                  Learn more <ArrowRight16Regular />
+                </span>
               </div>
-              <span className={s.more}>
-                Learn more <ArrowRight16Regular />
-              </span>
             </article>
           ))}
         </div>

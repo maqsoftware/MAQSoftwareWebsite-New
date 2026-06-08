@@ -1,4 +1,5 @@
 ﻿import { makeStyles } from "@fluentui/react-components";
+import type { MouseEvent } from "react";
 import { Link } from "react-router-dom";
 
 type FooterItem = {
@@ -157,7 +158,7 @@ const cols: FooterCol[] = [
 function FooterLink({ item, linkClass, disabledClass }: { item: FooterItem; linkClass: string; disabledClass: string }) {
   if (item.to) {
     return (
-      <Link to={item.to} className={linkClass} onClick={() => window.scrollTo(0, 0)}>
+      <Link to={item.to} className={linkClass}>
         {item.label}
       </Link>
     );
