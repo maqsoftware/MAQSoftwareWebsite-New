@@ -120,7 +120,7 @@ export function InsightsHero({
               {primaryLabel}
             </Button>
             <Button appearance="outline" size="large" icon={<Mail24Regular />} onClick={() => navigate("/contact")}>
-              Contact us
+              Contact Us
             </Button>
           </div>
         </div>

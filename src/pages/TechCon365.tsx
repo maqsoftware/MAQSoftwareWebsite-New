@@ -597,7 +597,7 @@ export function TechCon365() {
                 size="large"
                 icon={<Mail24Regular />}
               >
-                Contact us
+                Contact Us
               </Button>
               <Button
                 as="a"
@@ -607,7 +607,7 @@ export function TechCon365() {
                 icon={<ArrowRight20Regular />}
                 iconPosition="after"
               >
-                Read case studies
+                Case studies
               </Button>
             </div>
             <div className={s.email}>

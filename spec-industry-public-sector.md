@@ -61,7 +61,7 @@
 - **H1:** `Trusted AI for Citizen Services, Mission Outcomes, and Modern Government`
 - **Subhead:**
   > Federal, state, and local agencies face mounting pressure to deliver faster citizen services, modernize aging systems, and protect sensitive data — all under audit-grade accountability. At MAQ Software, we help public-sector organizations embed AI across the mission stack — from citizen-facing chatbots and policy-knowledge Copilots to program analytics on Microsoft Fabric — with secure-by-design patterns aligned to FedRAMP, CJIS, and agency compliance frameworks. Our solutions turn fragmented government data into faster decisions and better outcomes for the citizens you serve.
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Public%20Sector%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Public%20Sector%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore public sector solutions` → scroll to `#public-sector-solutions`
 
 **Hero visual (CSS-only, no external asset):** Three stacked tiles:

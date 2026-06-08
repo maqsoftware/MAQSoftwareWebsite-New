@@ -133,7 +133,7 @@ export function ReportingBIProducts() {
       <div className={s.inner}>
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
-          <h2 className={s.title}>Reporting &amp; business intelligence products</h2>
+          <h2 className={s.title}>Insights &amp; analytics products</h2>
           <p className={s.sub}>Solutions designed to improve and streamline your Power BI estate.</p>
         </div>
         <div className={s.grid}>

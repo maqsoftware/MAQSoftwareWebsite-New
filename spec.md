@@ -324,7 +324,7 @@ This section is the **source of truth for all rendered text** on the home page. 
 - **Eyebrow:** `Talk to us`
 - **Title:** `Ready to move faster?`
 - **Subhead:** `Tell us where you are. We'll show you what's possible in 30 minutes — no obligation.`
-- **Primary button:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software`
+- **Primary button:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software`
 - **Secondary button:** `Read case studies` (arrow icon) → `#case-studies`
 - **Trailing line:** `Or email us directly at ` + link `customersuccess@maqsoftware.com` → `mailto:customersuccess@maqsoftware.com`
 
@@ -339,7 +339,7 @@ This section is the **source of truth for all rendered text** on the home page. 
 | `Services` | `AI solutions & agentic automation`, `Data engineering & analytics`, `Reporting & business intelligence`, `Cloud infrastructure & modernization`, `Security & compliance` |
 | `Products` | `AI-DataLens`, `Fabric Admin Agent`, `MigrateFAST`, `EmbedFAST`, `CertyFAST`, `LoadFAST` |
 | `Resources` | `Case studies`, `Power BI custom visuals`, `Best practice guides`, `Webinars` |
-| `Company` | `Who we are`, `Careers`, `News`, `Sustainability`, `Contact us` |
+| `Company` | `Who we are`, `Careers`, `News`, `Sustainability`, `Contact Us` |
 
 - **Bottom-left:** `© {year} MAQ Software. All rights reserved.`
 - **Bottom-right:** `Microsoft, Azure, Fabric, and Power BI are trademarks of Microsoft Corporation.`

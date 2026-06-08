@@ -50,7 +50,7 @@
 - **H1:** `Accelerate Software Delivery with AI-Powered Engineering`
 - **Subhead:**
   > AI is reshaping how technology organizations build, test, and ship software. At MAQ Software, we help ISVs, cloud-native teams, and enterprise software organizations embed intelligence across the SDLC — from agentic code review to embedded analytics — so engineering teams spend less time on rework and more time on innovation.
-- **Primary CTA:** `Contact us` → `mailto:customersuccess@maqsoftware.com?subject=Technology%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` → `mailto:customersuccess@maqsoftware.com?subject=Technology%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore tech solutions` → scroll to `#technology-solutions`
 
 > ⚠️ Hero H1 and subhead are **placeholder copy** pending a content brief from the sales team. See `content-brief-industries.md` submission template.

@@ -94,7 +94,7 @@ export function ServiceHeroData() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Data engineering &amp; analytics</span>
+          <span className={s.eyebrow}>Data &amp; AI Platforms</span>
           <h1 className={s.h1}>Medallion lakehouses, built for scale and trust</h1>
           <p className={s.sub}>
             Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed
@@ -109,7 +109,7 @@ export function ServiceHeroData() {
               as="a"
               href="mailto:customersuccess@maqsoftware.com?subject=Data%20%26%20Analytics%20-%20MAQ%20Software"
             >
-              Contact us
+              Contact Us
             </Button>
             <Button
               appearance="outline"

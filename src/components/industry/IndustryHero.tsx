@@ -87,7 +87,7 @@ export function IndustryHero({
                 mailSubject
               )}`}
             >
-              Contact us
+              Contact Us
             </Button>
             <Button
               appearance="outline"

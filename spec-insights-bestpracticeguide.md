@@ -48,7 +48,7 @@ section rhythm, typography, and hover interactions of `/services/agentic-ai`.
 - **Subhead:**
   > Learn implementation patterns and guardrails across GitHub Copilot, Power BI, Databricks, Snowflake, Azure architecture, Dynamics 365, and Power Platform.
 - **Primary CTA:** `Explore guides` -> scroll to guides grid.
-- **Secondary CTA:** `Contact us` -> `mailto:customersuccess@maqsoftware.com?subject=Best%20Practice%20Guides%20-%20MAQ%20Software`
+- **Secondary CTA:** `Contact Us` -> `mailto:customersuccess@maqsoftware.com?subject=Best%20Practice%20Guides%20-%20MAQ%20Software`
 
 ### 3.2 InsightsResourceNav (shared hub strip)
 

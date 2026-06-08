@@ -68,7 +68,7 @@ This spec replaces every placeholder with the correct React Router `<Link>` poin
 | Careers | `https://maqsoftware.com/careers` | External link |
 | News | `null` | No internal route yet — render as non-interactive `<span>` |
 | Sustainability | `null` | No internal route yet — render as non-interactive `<span>` |
-| Contact us | `mailto:customersuccess@maqsoftware.com` | `mailto:` link |
+| Contact Us | `mailto:customersuccess@maqsoftware.com` | `mailto:` link |
 
 ---
 
@@ -268,7 +268,7 @@ const cols: FooterCol[] = [
       { label: "Careers",    href: "https://maqsoftware.com/careers" },
       { label: "News" },
       { label: "Sustainability" },
-      { label: "Contact us", href: "mailto:customersuccess@maqsoftware.com" },
+      { label: "Contact Us", href: "mailto:customersuccess@maqsoftware.com" },
     ],
   },
   {
@@ -290,7 +290,7 @@ const cols: FooterCol[] = [
 - [ ] Clicking any internal footer link scrolls the page to the top.
 - [ ] **Resources** items with no route render as dimmed non-clickable text (not `href="#"`).
 - [ ] **Company → Careers** opens `https://maqsoftware.com/careers` in a new tab.
-- [ ] **Company → Contact us** opens the default mail client via `mailto:`.
+- [ ] **Company → Contact Us** opens the default mail client via `mailto:`.
 - [ ] Remaining **Company** items with no route render as dimmed non-clickable text.
 - [ ] **Support → Terms of Service** and **Support → Privacy Statement** render as dimmed non-clickable text (no routes yet).
 - [ ] No `href="#"` attributes remain in `Footer.tsx`.

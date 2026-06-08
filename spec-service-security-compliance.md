@@ -53,7 +53,7 @@ oversized hero.
 - **H1:** `Zero Trust security and AI governance, end to end`
 - **Subhead:**
   > ISO 27001 / 27701 / 27018 certified delivery. We implement Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape and Microsoft security stack.
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Security%20%26%20Compliance%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Security%20%26%20Compliance%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore capabilities` → scroll to `#security-capabilities`
 
 **Decorative visual (CSS mosaic, aria-hidden):**

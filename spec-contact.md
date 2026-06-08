@@ -15,7 +15,7 @@
 | Shared layout | Reuse `<Header />`, `<Footer />`, `<CTA />` (CTA optional — see §2) |
 | Self-contained sections | Hero, Inquiry Form, Our Locations |
 | Header nav integration | About mega-menu "Contact Us" → `/contact` |
-| Footer nav update | `spec-footer-links.md` "Contact us" → `/contact` |
+| Footer nav update | `spec-footer-links.md` "Contact Us" → `/contact` |
 | Redirect (SPA fallback) | `/contact /contact 200` |
 
 **Design goal:** Action-first. The hero immediately invites contact via a prominent mailto link. The page is short, scannable, and ends with a location grid. Section padding `56–64px`, h2 `28–32px`, body `14–15px`.
@@ -43,7 +43,7 @@
 | Background | `--maq-off-white` with `wave_dots.svg` bottom-left, same as other About pages |
 | Eyebrow | `Contact` (red, `12px`, uppercase, `0.08em` tracking) |
 | H1 | **Contact MAQ Software** (`40px`, weight `700`, `-0.02em` letter-spacing) |
-| Sub copy | *Contact us today—learn how MAQ Software can deliver the solutions that propel your business forward.* |
+| Sub copy | *Contact Us today—learn how MAQ Software can deliver the solutions that propel your business forward.* |
 | Primary CTA | Fluent `Button` `appearance="primary"` → `mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.` Label: **Email Customer Success** |
 | Secondary text | Email displayed as plain link below the button: `CustomerSuccess@MAQSoftware.com` |
 | Layout | Centered, single-column, max-width `760px`, padding `64px 32px 72px` |
@@ -116,7 +116,7 @@ Reuse the same makeStyles patterns as `AboutWhoWeAre.tsx` and `AboutSustainabili
 - [ ] No TypeScript / ESLint errors (`npm run build` clean)
 - [ ] Page accessible from About → Contact Us in the header
 - [ ] No 404 when navigating to `/contact` from the header link
-- [ ] Footer "Contact us" link (if present) routes to `/contact`
+- [ ] Footer "Contact Us" link (if present) routes to `/contact`
 - [ ] No shared `<CTA />` block at the bottom (would duplicate intent)
 
 ---

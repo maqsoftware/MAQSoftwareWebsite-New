@@ -62,7 +62,7 @@
 - **H1:** `AI-Powered Care, Compliance, and Discovery for the Connected Health Enterprise`
 - **Subhead:**
   > Healthcare and life sciences organizations face mounting pressure to improve outcomes, accelerate research, and modernize fragmented data estates — all while honoring HIPAA, 21 CFR Part 11, and other regulatory commitments. At MAQ Software, we help providers, payers, and life-sciences firms embed AI across the care continuum and the research lifecycle — from grounded clinical Copilots and care-coordination agents to population-health analytics and trial-data unification. Built on Microsoft Fabric, Databricks, and Snowflake, our solutions turn sensitive health data into safer decisions and faster discovery.
-- **Primary CTA:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Healthcare%20%26%20Life%20Sciences%20-%20MAQ%20Software`
+- **Primary CTA:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Healthcare%20%26%20Life%20Sciences%20-%20MAQ%20Software`
 - **Secondary CTA:** `Explore healthcare solutions` → scroll to `#hls-solutions`
 
 **Hero visual (CSS-only, no external asset):** Three stacked tiles:

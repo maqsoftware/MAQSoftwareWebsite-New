@@ -215,7 +215,7 @@ const offerings = [
   },
   {
     eyebrow: "Protect & Govern",
-    title: "Security & Compliance",
+    title: "Security & Governance",
     desc: "With specializations in Cloud Security and Threat Protection, we help organizations implement robust security postures across Azure, Microsoft 365, and hybrid environments. Our solutions span Microsoft Purview governance, identity management, and end-to-end data protection aligned with global compliance standards.",
   },
 ];

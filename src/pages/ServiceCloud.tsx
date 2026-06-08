@@ -9,9 +9,9 @@ import { ServiceCloudInsights } from "../components/service/ServiceCloudInsights
 import { CTA } from "../components/CTA";
 
 const CLOUD_CASE_STUDIES_CONFIG = {
-  serviceFilter: "Cloud optimization",
+  serviceFilter: "Cloud Modernization",
   allCasesLabel: "See all case studies",
-  serviceSpecificLabel: "See cloud optimization case studies",
+  serviceSpecificLabel: "See cloud modernization case studies",
 };
 
 export function ServiceCloud() {

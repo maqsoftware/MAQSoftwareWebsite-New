@@ -50,8 +50,9 @@ const useStyles = makeStyles({
   heroSub: {
     display: "block",
     fontSize: "16px",
-    lineHeight: 1.65,
-    color: "var(--maq-gray-700)",
+    lineHeight: 1.2,
+    fontWeight: 400,
+    color: "var(--maq-black)",
     margin: "0 0 26px",
     maxWidth: "620px",
   },
@@ -93,20 +94,15 @@ const useStyles = makeStyles({
     backgroundColor: "#fff",
     border: "1px solid var(--maq-border)",
     borderRadius: "16px",
-    padding: "24px",
+    padding: "18px",
     boxShadow: "0 8px 20px rgba(15, 23, 42, 0.06)",
     alignSelf: "start",
     display: "flex",
     flexDirection: "column",
-    height: "680px",
-    overflow: "hidden",
-    "@media (max-width: 980px)": {
-      height: "560px",
-    },
   },
   rightTitle: {
-    margin: "0 0 14px",
-    fontSize: "22px",
+    margin: "0 0 10px",
+    fontSize: "18px",
     fontWeight: 700,
     color: "var(--maq-black)",
   },
@@ -118,21 +114,21 @@ const useStyles = makeStyles({
   },
   miniLocationList: {
     display: "grid",
-    gap: "12px",
-    maxHeight: "500px",
-    overflowY: "auto",
-    paddingRight: "8px",
-    "@media (max-width: 980px)": {
-      maxHeight: "390px",
-    },
+    gap: "8px",
   },
   miniLocation: {
     display: "grid",
-    gridTemplateColumns: "28px 1fr",
-    gap: "8px",
+    gridTemplateColumns: "28px 1fr auto",
+    gap: "6px",
     alignItems: "start",
-    padding: "10px 0",
+    padding: "8px 0",
     borderBottom: "1px solid var(--maq-border)",
+    ":last-child": {
+      borderBottom: "none",
+    },
+    "@media (max-width: 980px)": {
+      gridTemplateColumns: "28px 1fr",
+    },
   },
   miniLocationIcon: {
     color: "var(--maq-red)",
@@ -140,35 +136,48 @@ const useStyles = makeStyles({
   },
   miniLocationCity: {
     margin: "0 0 2px",
-    fontSize: "15px",
+    fontSize: "14px",
     fontWeight: 700,
     color: "var(--maq-black)",
   },
   miniLocationAddress: {
     margin: 0,
-    fontSize: "13px",
-    lineHeight: 1.5,
+    fontSize: "12px",
+    lineHeight: 1.4,
     color: "var(--maq-gray-700)",
     whiteSpace: "pre-line" as const,
   },
+  miniActionColumn: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-end",
+    gap: "6px",
+    minWidth: "150px",
+    paddingLeft: "12px",
+    "@media (max-width: 980px)": {
+      gridColumnStart: 2,
+      alignItems: "flex-start",
+      minWidth: "auto",
+      paddingLeft: 0,
+      marginTop: "6px",
+    },
+  },
   miniLocationPhone: {
-    display: "inline-flex",
+    display: "flex",
     alignItems: "center",
     gap: "6px",
-    fontSize: "13px",
-    lineHeight: 1.5,
+    fontSize: "12px",
+    lineHeight: 1.4,
     color: "var(--maq-gray-700)",
-    marginTop: "6px",
   },
   miniDirections: {
     display: "flex",
     alignItems: "center",
     fontFamily: "inherit",
-    fontSize: "14px",
+    fontSize: "13px",
     lineHeight: 1.4,
     fontWeight: 600,
     color: "var(--maq-red)",
-    marginTop: "8px",
     textDecoration: "none",
   },
 });
@@ -191,6 +200,7 @@ const offices: Office[] = [
     city: "Plano, Texas, USA",
     address:
       "Lincoln Legacy Two\n5810 Tennyson Parkway, Suite 100\nPlano, TX 75024",
+    phone: "+1 425-526-5399",
     maps: "https://maps.app.goo.gl/bipnas8wN2V8Uqst5",
   },
   {
@@ -225,9 +235,6 @@ export function Contact() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <div className={s.heroLeft}>
-            <h1 className={s.h1}>
-              Why Work With MAQ Software?
-            </h1>
             <p className={s.heroSub}>
            MAQ Software helps organizations unlock the full potential of their data through AI, intelligent automation, analytics, and cloud technologies. From modern data platforms to generative AI and agentic solutions, we enable businesses to transform information into real-time intelligence, accelerate innovation, and drive measurable outcomes at scale.
             </p>
@@ -298,17 +305,12 @@ export function Contact() {
               as="a"
               href={MAIL_TO}
             >
-              Email Customer Success
+              Get in Touch
             </Button>
           </div>
 
           <aside className={s.heroRight}>
             <h2 className={s.rightTitle}>Our global locations</h2>
-            <p className={s.rightSub}>
-              Teams across the United States and India are ready to support your
-              analytics, AI, and cloud transformation goals.
-            </p>
-
             <div className={s.miniLocationList}>
               {offices.map((office) => (
                 <div key={office.city} className={s.miniLocation}>
@@ -320,6 +322,8 @@ export function Contact() {
                     <p className={s.miniLocationAddress}>
                       {office.address}
                     </p>
+                  </div>
+                  <div className={s.miniActionColumn}>
                     {office.phone && (
                       <span className={s.miniLocationPhone}>
                         <Call24Regular />
