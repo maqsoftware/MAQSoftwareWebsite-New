@@ -71,13 +71,40 @@ const useStyles = makeStyles({
     marginBottom: "16px",
   },
   name: { fontSize: "16px", fontWeight: 600, color: "var(--maq-navy)", marginBottom: "8px" },
+  heading: {
+    fontSize: "14px",
+    fontWeight: 700,
+    color: "var(--maq-navy)",
+    marginBottom: "8px",
+    lineHeight: 1.45,
+  },
+  tagline: {
+    fontSize: "13px",
+    color: "var(--maq-text-muted)",
+    lineHeight: 1.55,
+    marginBottom: "10px",
+  },
   desc: { fontSize: "13.5px", color: "var(--maq-text-muted)", lineHeight: 1.6 },
+  bulletList: {
+    margin: "0",
+    paddingLeft: "18px",
+    display: "grid",
+    gap: "6px",
+  },
+  bullet: {
+    fontSize: "13px",
+    color: "var(--maq-text-muted)",
+    lineHeight: 1.5,
+  },
 });
 
 interface Svc {
   icon: ReactNode;
   name: string;
-  desc: string;
+  heading?: string;
+  tagline?: string;
+  bullets?: string[];
+  desc?: string;
   path: string;
 }
 
@@ -85,45 +112,108 @@ const services: Svc[] = [
   {
     icon: <DataPie24Regular />,
     name: "Data & AI Platforms",
-    desc: "Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses and real-time analytics that power Copilot, AI agents, and enterprise decision-making.",
+    heading: "Modern Data Foundations for Enterprise AI",
+    tagline: "Unify Data. Accelerate AI. Drive Business Value.",
+    bullets: [
+      "Microsoft Fabric",
+      "Azure Databricks",
+      "Snowflake AI Data Cloud",
+      "Azure Data Factory",
+      "Lakehouse & Data Warehouse Modernization",
+      "Master Data Management (MDM)",
+    ],
     path: "/services/data-and-analytics",
   },
   {
     icon: <Bot24Regular />,
     name: "AI Solutions & Agents",
-    desc: "Production GenAI agents and industry-specific solution accelerators built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value business workflows.",
+    heading: "From Copilots to Autonomous Agents",
+    tagline: "Automate Decisions. Enhance Productivity. Accelerate Outcomes.",
+    bullets: [
+      "Azure AI Foundry",
+      "Azure OpenAI Service",
+      "Microsoft Copilot Studio",
+      "Agentic AI & Multi-Agent Systems",
+      "Retrieval-Augmented Generation (RAG)",
+      "AI Governance & Responsible AI",
+    ],
     path: "/services/agentic-ai",
   },
   {
     icon: <ChartMultiple24Regular />,
     name: "Insights & Analytics",
-    desc: "Microsoft Power BI Partner of the Year (2021). We build, modernize, and migrate BI stacks — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, MicroStrategy — into real-time Power BI on Microsoft Fabric.",
+    heading: "Transform Data into Actionable Intelligence",
+    tagline: "Discover Trends. Drive Decisions. Accelerate Growth.",
+    bullets: [
+      "Power BI",
+      "Microsoft Fabric Real-Time Intelligence",
+      "Databricks SQL",
+      "Executive Dashboards & KPI Reporting",
+      "Self-Service Analytics",
+      "Predictive & Prescriptive Analytics",
+    ],
     path: "/services/reporting-bi",
   },
   {
     icon: <AppFolder24Regular />,
     name: "Business Applications & Automation",
-    desc: "Low-code and pro-code apps on Microsoft Power Platform and Dynamics 365 — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations.",
+    heading: "Intelligent Applications for Modern Business",
+    tagline: "Connect Workflows. Increase Productivity. Enable Growth.",
+    bullets: [
+      "Dynamics 365",
+      "Microsoft Power Platform",
+      "Power Apps",
+      "Power Automate",
+      "Customer 360",
+      "Workflow Automation & Process Optimization",
+    ],
     path: "/services/business-apps",
   },
   {
     icon: <Cloud24Regular />,
     name: "Cloud Modernization",
-    desc: "Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture — delivering 30–40% lower run cost on average across enterprise workloads.",
+    heading: "Modernize Faster. Innovate Without Limits.",
+    tagline: "Migrate Securely. Optimize Costs. Scale Confidently.",
+    bullets: [
+      "Microsoft Azure",
+      "Azure Kubernetes Service (AKS)",
+      "Cloud-Native Application Development",
+      "Application & Data Platform Migration",
+      "Infrastructure Modernization",
+      "FinOps & Cloud Cost Optimization",
+    ],
     path: "/services/cloud",
   },
   {
     icon: <ShieldCheckmark24Regular />,
     name: "Security & Governance",
-    desc: "ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape.",
+    heading: "Govern Data. Secure AI. Manage Risk.",
+    tagline: "Protect Assets. Ensure Compliance. Enable Trust.",
+    bullets: [
+      "Microsoft Purview",
+      "Microsoft Defender",
+      "Microsoft Entra",
+      "Unity Catalog (Databricks)",
+      "Data Governance & Compliance",
+      "Identity, Access & AI Governance",
+    ],
     path: "/services/security-compliance",
   },
-  {
+  /* {
     icon: <PeopleTeam24Regular />,
-    name: "Workplace transformation & productivity",
-    desc: "Microsoft 365, Teams, SharePoint, and Copilot rollouts that drive adoption — not just deployment. Change management included.",
+    name: "Workplace Transformation & Productivity",
+    heading: "Empower People. Modernize Work.",
+    tagline: "Drive Adoption. Boost Productivity. Sustain Change.",
+    bullets: [
+      "Microsoft 365",
+      "Microsoft Teams",
+      "SharePoint",
+      "Microsoft Copilot",
+      "Change Management & Adoption",
+      "Employee Experience & Collaboration",
+    ],
     path: "/services/workplace-transformation",
-  },
+  }, */
 ];
 
 export const Services: FC = () => {
@@ -143,7 +233,17 @@ export const Services: FC = () => {
             <div key={svc.name} className={s.card} onClick={() => navigate(svc.path)}>
               <div className={s.iconBox}>{svc.icon}</div>
               <div className={s.name}>{svc.name}</div>
-              <div className={s.desc}>{svc.desc}</div>
+              {svc.heading ? <div className={s.heading}>{svc.heading}</div> : null}
+              {svc.tagline ? <div className={s.tagline}>{svc.tagline}</div> : null}
+              {svc.bullets && svc.bullets.length > 0 ? (
+                <ul className={s.bulletList}>
+                  {svc.bullets.map((item) => (
+                    <li key={item} className={s.bullet}>{item}</li>
+                  ))}
+                </ul>
+              ) : svc.desc ? (
+                <div className={s.desc}>{svc.desc}</div>
+              ) : null}
             </div>
           ))}
         </div>
