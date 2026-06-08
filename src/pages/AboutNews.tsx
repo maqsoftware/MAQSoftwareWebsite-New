@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { makeStyles, Button, Spinner } from "@fluentui/react-components";
 import { ArrowRight16Regular, Open16Regular } from "@fluentui/react-icons";
+import { CTA } from "../components/CTA";
 import {
   fetchNews,
   formatPublishedDate,
@@ -415,6 +416,8 @@ export function AboutNews() {
           </div>
         </div>
       </section>
+
+      <CTA />
     </>
   );
 }

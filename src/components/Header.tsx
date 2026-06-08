@@ -74,10 +74,36 @@ const useStyles = makeStyles({
     fontWeight: 500,
     whiteSpace: "nowrap",
     minWidth: "auto",
+    height: "100%",
+    alignSelf: "stretch",
+    borderRadius: 0,
     ":hover": {
       backgroundColor: "var(--maq-red-pale)",
       color: "var(--maq-red)",
     },
+  },
+  chevronIcon: {
+    display: "inline-flex",
+    transition: "transform 180ms ease",
+    transform: "rotate(0deg)",
+  },
+  chevronIconOpen: {
+    transform: "rotate(180deg)",
+  },
+  menuPopover: {
+    opacity: 0,
+    animationName: {
+      from: {
+        opacity: 0,
+      },
+      to: {
+        opacity: 1,
+      },
+    },
+    animationDuration: "180ms",
+    animationTimingFunction: "ease",
+    animationFillMode: "forwards",
+    willChange: "opacity",
   },
   overlay: {
     display: "none",
@@ -255,6 +281,31 @@ function MegaMenu({
   const { pathname } = useLocation();
   const s = useStyles();
   const [open, setOpen] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+
+  const cancelClose = () => {
+    if (closeTimer.current !== null) {
+      window.clearTimeout(closeTimer.current);
+      closeTimer.current = null;
+    }
+  };
+
+  const openMenu = () => {
+    cancelClose();
+    setOpen(true);
+  };
+
+  // Delay closing so moving across the small gap between the trigger and the
+  // popover (e.g. approaching from below) doesn't briefly close + reopen.
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer.current = window.setTimeout(() => {
+      setOpen(false);
+      closeTimer.current = null;
+    }, 120);
+  };
+
+  useEffect(() => () => cancelClose(), []);
 
   // Pick only the most specific (longest matching) item so a parent link
   // like "/products" doesn't also highlight when on "/products/embedfast".
@@ -266,7 +317,7 @@ function MegaMenu({
   return (
     <Menu
       open={open}
-      onOpenChange={(_, data) => setOpen(data.open)}
+      onOpenChange={(_, data) => (data.open ? openMenu() : scheduleClose())}
       openOnHover
       hoverDelay={0}
       closeOnScroll
@@ -275,13 +326,22 @@ function MegaMenu({
         <Button
           appearance="subtle"
           className={btnClass}
-          icon={<ChevronDown20Regular />}
+          onMouseEnter={openMenu}
+          icon={(
+            <span className={open ? `${s.chevronIcon} ${s.chevronIconOpen}` : s.chevronIcon}>
+              <ChevronDown20Regular />
+            </span>
+          )}
           iconPosition="after"
         >
           {label}
         </Button>
       </MenuTrigger>
-      <MenuPopover>
+      <MenuPopover
+        className={s.menuPopover}
+        onMouseEnter={openMenu}
+        onMouseLeave={scheduleClose}
+      >
         <MenuList>
           {items.map((i) => (
             <MenuItem
@@ -289,6 +349,7 @@ function MegaMenu({
               className={i.href === activeHref ? s.menuItemActive : undefined}
               onClick={() => {
                 if (!i.href) return;
+                cancelClose();
                 setOpen(false);
                 if (i.href.startsWith("http")) {
                   window.open(i.href, "_blank", "noopener,noreferrer");

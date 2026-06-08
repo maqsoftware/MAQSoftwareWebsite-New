@@ -71,8 +71,6 @@ export function PartnershipHighlights({
   stats,
 }: PartnershipHighlightsProps) {
   const s = useStyles();
-  //changes for 3 card layout
-  const isThreeCardLayout = stats.length === 3; 
 
   return (
     <section className={s.section}>
@@ -81,7 +79,6 @@ export function PartnershipHighlights({
           {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.title}>{title}</h2>
         </div>
-        {/* changes for 3 card layout */}
         <div className={s.grid}>
           {stats.map((h) => (
             <div key={h.label} className={s.card}>

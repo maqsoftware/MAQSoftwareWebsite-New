@@ -98,7 +98,7 @@ const cases: Case[] = [
     teaser:
       "Agentic AI in production across retail, financial services, healthcare and manufacturing — a reference pattern for any regulated, multi-system enterprise.",
     href: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
-    color: "danger",
+    color: "brand",
   },
   {
     industry: "Snowflake + Fabric",
