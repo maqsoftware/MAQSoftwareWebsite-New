@@ -8,6 +8,7 @@ import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlac
 
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview";
 const APPSOURCE_PLANS = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=PlansAndPrice";
+const MARKETPLACE_OVERVIEW = "https://marketplace.microsoft.com/en-us/product/maqsoftware.powerbiloadanalyzer?tab=Overview";
 
 const benefits = [
   { icon: <Server24Regular />, title: "Evaluate Fabric Capacity", desc: "Simulate real-world concurrent user load to understand exactly how much Fabric capacity your reporting workloads need." },
@@ -46,7 +47,8 @@ export function ProductLoadFAST() {
               Microsoft Fabric adoption is growing fast, but estimating the right capacity for reporting workloads remains a challenge. LoadFAST automates Power BI load testing by simulating concurrent users, measuring page load time, and identifying slow reports and visuals so teams can validate performance and plan Fabric capacity with confidence.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</Button>
+              <Button appearance="primary" size="large" icon={<Mail24Regular />} style={{ width: "170px", justifyContent: "center" }} onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</Button>
+              <Button appearance="outline" size="large" style={{ width: "170px", justifyContent: "center" }} as="a" href={MARKETPLACE_OVERVIEW} target="_blank" rel="noreferrer">Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

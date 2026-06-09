@@ -61,6 +61,12 @@ const useStyles = makeStyles({
       transform: "translateY(-2px)",
     },
   },
+  titleRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    marginBottom: "12px",
+  },
   iconBox: {
     width: "44px",
     height: "44px",
@@ -70,23 +76,25 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: "16px",
+    flexShrink: 0,
   },
-  name: { fontSize: "16px", fontWeight: 600, color: "var(--maq-navy)", marginBottom: "8px" },
+  name: { fontSize: "20px", fontWeight: 700, color: "var(--maq-navy)", lineHeight: 1.2 },
   heading: {
-    fontSize: "14px",
-    fontWeight: 700,
-    color: "var(--maq-navy)",
-    marginBottom: "8px",
-    lineHeight: 1.45,
+    fontSize: "12px",
+    color: "var(--maq-blue)",
+    fontWeight: 500,
+    marginBottom: "10px",
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+    lineHeight: 1.4,
   },
   tagline: {
-    fontSize: "13px",
-    color: "var(--maq-text-muted)",
-    lineHeight: 1.55,
-    marginBottom: "10px",
+    fontSize: "13.5px",
+    color: "var(--maq-text-700)",
+    lineHeight: 1.6,
+    marginBottom: "12px",
   },
-  desc: { fontSize: "13.5px", color: "var(--maq-text-muted)", lineHeight: 1.6 },
+  desc: { fontSize: "13.5px", color: "var(--maq-text-700)", lineHeight: 1.6 },
   bulletList: {
     margin: "0",
     paddingLeft: "18px",
@@ -94,8 +102,8 @@ const useStyles = makeStyles({
     gap: "6px",
   },
   bullet: {
-    fontSize: "13px",
-    color: "var(--maq-text-muted)",
+    fontSize: "13.5px",
+    color: "var(--maq-text-700)",
     lineHeight: 1.5,
   },
 });
@@ -233,8 +241,10 @@ export const Services: FC = () => {
         <div className={s.grid}>
           {services.map((svc) => (
             <div key={svc.name} className={s.card} onClick={() => navigate(svc.path)}>
-              <div className={s.iconBox}>{svc.icon}</div>
-              <div className={s.name}>{svc.name}</div>
+              <div className={s.titleRow}>
+                <div className={s.iconBox}>{svc.icon}</div>
+                <div className={s.name}>{svc.name}</div>
+              </div>
               {svc.heading ? <div className={s.heading}>{svc.heading}</div> : null}
               {svc.tagline ? <div className={s.tagline}>{svc.tagline}</div> : null}
               {svc.bullets && svc.bullets.length > 0 ? (

@@ -1,5 +1,13 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
+import {
+  Bot24Regular,
+  Cloud24Regular,
+  AppFolder24Regular,
+  ChartMultiple24Regular,
+  DataPie24Regular,
+  ShieldCheckmark24Regular,
+} from "@fluentui/react-icons";
+import type { ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -53,25 +61,28 @@ const useStyles = makeStyles({
       boxShadow: "var(--maq-shadow-sm)",
     },
   },
+  titleRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    marginBottom: "12px",
+  },
   logo: {
-    width: "52px",
-    height: "52px",
-    borderRadius: "12px",
-    background: "linear-gradient(135deg, var(--maq-red) 0%, #6a0a0e 100%)",
-    color: "#fff",
+    width: "44px",
+    height: "44px",
+    borderRadius: "10px",
+    backgroundColor: "var(--maq-blue-pale)",
+    color: "var(--maq-blue)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontWeight: 700,
-    fontSize: "20px",
-    marginBottom: "16px",
-    letterSpacing: "-0.02em",
+    flexShrink: 0,
   },
   name: {
     fontSize: "18px",
     fontWeight: 700,
     color: "var(--maq-navy)",
-    marginBottom: "4px",
+    lineHeight: 1.2,
   },
   tagline: {
     fontSize: "12px",
@@ -83,7 +94,7 @@ const useStyles = makeStyles({
   },
   desc: {
     fontSize: "13.5px",
-    color: "var(--maq-text-muted)",
+    color: "var(--maq-text-700)",
     lineHeight: 1.6,
     marginBottom: "20px",
   },
@@ -101,7 +112,7 @@ const useStyles = makeStyles({
 });
 
 interface Product {
-  initials: string;
+  icon: ReactNode;
   name: string;
   slug: string;
   tagline: string;
@@ -111,7 +122,7 @@ interface Product {
 
 const products: Product[] = [
   {
-    initials: "FA",
+    icon: <Bot24Regular />,
     name: "Fabric Admin Agent",
     slug: "fabric-admin-agent",
     tagline: "Fabric Workload",
@@ -119,7 +130,7 @@ const products: Product[] = [
     tags: ["Fabric Workload"],
   },
   {
-    initials: "MF",
+    icon: <Cloud24Regular />,
     name: "MigrateFAST",
     slug: "migratefast",
     tagline: "Migration accelerator",
@@ -127,7 +138,7 @@ const products: Product[] = [
     tags: ["Fabric", "Power BI", "AI Powered"],
   },
   {
-    initials: "EF",
+    icon: <AppFolder24Regular />,
     name: "EmbedFAST",
     slug: "embedfast",
     tagline: "Power BI embedding",
@@ -135,7 +146,7 @@ const products: Product[] = [
     tags: ["Power BI", "SaaS"],
   },
   {
-    initials: "AI",
+    icon: <ChartMultiple24Regular />,
     name: "AI-DataLens",
     slug: "ai-datalens",
     tagline: "Conversational analytics",
@@ -143,7 +154,7 @@ const products: Product[] = [
     tags: ["Gen AI", "Power BI", "Conversational AI"],
   },
   {
-    initials: "LF",
+    icon: <DataPie24Regular />,
     name: "LoadFAST",
     slug: "loadfast",
     tagline: "Power BI load testing",
@@ -151,7 +162,7 @@ const products: Product[] = [
     tags: ["Power BI", "Performance"],
   },
   {
-    initials: "CF",
+    icon: <ShieldCheckmark24Regular />,
     name: "CertyFAST",
     slug: "certyfast",
     tagline: "Power BI quality control",
@@ -183,13 +194,15 @@ export function Products() {
               onClick={() => navigate(`/products/${p.slug}`)}
               style={{ cursor: "pointer" }}
             >
-              <div className={s.logo}>{p.initials}</div>
+              <div className={s.titleRow}>
+                <div className={s.logo}>{p.icon}</div>
+                <div className={s.name}>{p.name}</div>
+              </div>
               <div className={s.tagline}>{p.tagline}</div>
-              <div className={s.name}>{p.name}</div>
               <div className={s.desc}>{p.desc}</div>
               <div className={s.footer}>
                 <span className={s.more}>
-                  Learn more <ArrowRight16Regular />
+                  Learn more
                 </span>
               </div>
             </article>
