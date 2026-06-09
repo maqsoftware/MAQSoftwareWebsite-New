@@ -6,6 +6,8 @@ import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
+const CERTYFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/KIiI16IKHIY?si=ohsb-fK3J1cylEi4";
+
 const benefits = [
   { title: "Automate the review process", desc: "Save time and effort by easily identifying errors, formatting DAX measures, and creating knowledge base documents." },
   { title: "Error free reporting", desc: "Ensure your report aligns with organizational standards. Identify discrepancies that impact the report's size, performance, or user experience." },
@@ -40,11 +42,20 @@ export function ProductCertyFAST() {
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Get it now</Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/who.jpg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="CertyFAST demo video"
+                src={CERTYFAST_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -363,6 +363,7 @@ const useStyles = makeStyles({
 // Data
 // ---------------------------------------------------------------------------
 const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.fabricadminagent-preview?tab=Overview&flightCodes=f7b20ceffeeb4e1fab33185d0cd74d08";
+const FABRIC_ADMIN_AGENT_VIDEO_EMBED_URL = "https://www.youtube.com/embed/fVWr37LNvqM?si=_jqyhBZJzrNUCmBG";
 
 const impact = [
   { metric: "60%", label: "Fewer capacity incidents after enabling autonomous monitoring", source: "Enterprise Fabric tenant" },
@@ -473,18 +474,21 @@ export function ProductFabricAdminAgent() {
               >
                 Contact Us
               </Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Get it now</Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
 
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img
-              className={s.heroImage}
-              src="https://maqsoftware.com/images-new/isv/fabric-admin-agent-hero.svg"
-              alt=""
-              loading="eager"
-              decoding="async"
-            />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="Fabric Admin Agent demo video"
+                src={FABRIC_ADMIN_AGENT_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -585,7 +589,7 @@ export function ProductFabricAdminAgent() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Get it now
+                Marketplace
               </Button>
               <Button
                 appearance="outline"
