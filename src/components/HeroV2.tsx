@@ -132,7 +132,7 @@ export function Hero() {
       <img
         alt="Team collaborating in a modern office"
         className={s.bgImage}
-        src="images\Home.png"
+        src="/images/home.png"
       />
       <div className={s.heroGradient}></div>
       {/* <svg
