@@ -553,7 +553,7 @@ export function ProductFabricAdminAgent() {
                 className={s.caseCard}
                 href={c.href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
@@ -607,7 +607,7 @@ export function ProductFabricAdminAgent() {
                 as="a"
                 href="https://marketplace.microsoft.com/en-us/product/maqsoftware.fabricadminagent-preview?tab=Overview&flightCodes=f7b20ceffeeb4e1fab33185d0cd74d08"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Get it now
               </Button>
@@ -617,7 +617,7 @@ export function ProductFabricAdminAgent() {
                 as="a"
                 href="https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 Browse all marketplace offers
               </Button>

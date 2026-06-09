@@ -5,6 +5,16 @@ export interface VisualPbiEmbedProps {
   reportUrl: string;
 }
 
+function getSafePowerBiUrl(input: string): string | null {
+  try {
+    const parsed = new URL(input);
+    const trusted = parsed.protocol === "https:" && parsed.hostname === "app.powerbi.com";
+    return trusted ? parsed.toString() : null;
+  } catch {
+    return null;
+  }
+}
+
 const useStyles = makeStyles({
   shell: {
     border: `1px solid ${tokens.colorNeutralStroke2}`,
@@ -64,6 +74,12 @@ const useStyles = makeStyles({
 
 export function VisualPbiEmbed({ productName, reportUrl }: VisualPbiEmbedProps) {
   const s = useStyles();
+  const safeReportUrl = getSafePowerBiUrl(reportUrl);
+
+  if (!safeReportUrl) {
+    return null;
+  }
+
   return (
     <div className={s.shell}>
       <div className={s.ribbon}>
@@ -75,9 +91,9 @@ export function VisualPbiEmbed({ productName, reportUrl }: VisualPbiEmbedProps) 
         <iframe
           className={s.frame}
           title={`${productName} feature walkthrough`}
-          src={reportUrl}
+          src={safeReportUrl}
           allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerPolicy="strict-origin-when-cross-origin"
           loading="lazy"
         />
       </div>
@@ -88,7 +104,7 @@ export function VisualPbiEmbed({ productName, reportUrl }: VisualPbiEmbedProps) 
             className={s.link}
             href="https://www.youtube.com/@MAQSoftware"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             YouTube channel
           </a>
@@ -99,7 +115,7 @@ export function VisualPbiEmbed({ productName, reportUrl }: VisualPbiEmbedProps) 
             className={s.link}
             href="https://community.fabric.microsoft.com/"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             Power BI community forum
           </a>

@@ -31,7 +31,7 @@ export function ProductCaseStudies({
             className={s.caseCard}
             href={c.href}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             style={{
               borderStyle: "solid",
               textDecoration: "none",

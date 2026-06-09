@@ -164,7 +164,7 @@ export function ServiceCaseStudies({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <a key={c.title} className={s.card} href={c.href} target="_blank" rel="noreferrer">
+            <a key={c.title} className={s.card} href={c.href} target="_blank" rel="noopener noreferrer">
               <h3 className={s.cardTitle}>{c.title}</h3>
               <p className={s.teaser}>{c.teaser}</p>
               <span className={s.read}>

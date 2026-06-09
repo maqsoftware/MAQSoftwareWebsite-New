@@ -81,7 +81,7 @@ export function InsightsBestPracticeGuides() {
           <InsightsFilterBar items={bestPracticeFilters} active={activeFilter} onChange={setActiveFilter} />
           <div className={s.grid}>
             {filtered.map((item) => (
-              <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noreferrer">
+              <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noopener noreferrer">
                 <div className={s.imageWrap}>
                   <img className={s.image} src={item.imageUrl} alt={item.title} loading="lazy" />
                 </div>

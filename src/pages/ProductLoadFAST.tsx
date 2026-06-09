@@ -51,7 +51,7 @@ export function ProductLoadFAST() {
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noreferrer">Get it now</Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">
@@ -121,7 +121,7 @@ export function ProductLoadFAST() {
                 <ul className={s.priceList}>
                   {p.items.map((i) => <li key={i} className={s.priceItem}>{i}</li>)}
                 </ul>
-                <Button appearance="primary" size="medium" as="a" href={p.href} target="_blank" rel="noreferrer">{p.cta}</Button>
+                <Button appearance="primary" size="medium" as="a" href={p.href} target="_blank" rel="noopener noreferrer">{p.cta}</Button>
               </div>
             ))}
           </div>

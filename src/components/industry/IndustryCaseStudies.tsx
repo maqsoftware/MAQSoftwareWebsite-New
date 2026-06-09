@@ -123,7 +123,7 @@ export function IndustryCaseStudies({
               className={s.card}
               href={c.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               <div className={s.cardTitle}>{c.title}</div>

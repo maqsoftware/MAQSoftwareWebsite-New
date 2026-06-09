@@ -726,7 +726,7 @@ export function ServiceBusinessApps() {
                                 className={s.caseCard}
                                 href={c.href}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
@@ -764,7 +764,7 @@ export function ServiceBusinessApps() {
                                 className={s.insCard}
                                 href={i.href}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
                                 <div className={s.insCover} aria-hidden="true" />
                                 <div className={s.insBody}>

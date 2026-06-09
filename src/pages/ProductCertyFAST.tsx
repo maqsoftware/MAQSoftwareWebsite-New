@@ -40,7 +40,7 @@ export function ProductCertyFAST() {
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noreferrer">Get it now</Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

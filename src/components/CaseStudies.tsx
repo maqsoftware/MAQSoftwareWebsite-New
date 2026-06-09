@@ -143,7 +143,7 @@ export function CaseStudies() {
               className={s.card}
               href={c.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className={s.title2}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
