@@ -34,8 +34,10 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     gap: "16px",
+    "@media (max-width: 1120px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
+    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   card: {
     backgroundColor: "#fff",

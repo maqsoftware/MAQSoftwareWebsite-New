@@ -28,12 +28,13 @@ const useStyles = makeStyles({
   },
   brand: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "16px" },
   logoMark: {
-    width: "80px",
+    width: "128px",
     height: "auto",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     flexShrink: 0,
+    "@media (max-width: 960px)": { width: "112px" },
   },
   logoImage: { width: "100%", height: "100%", display: "block", objectFit: "contain" },
   logoName: { fontSize: "16px", fontWeight: 700, color: "#fff" },
@@ -185,14 +186,14 @@ export function Footer() {
         <div className={s.top}>
           <div>
             <div className={s.brand}>
-              <div className={s.logoMark}>
-                <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} />
-              </div>
+              <Link to="/" aria-label="MAQ Software homepage" className={s.socialLink}>
+                <div className={s.logoMark}>
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} />
+                </div>
+              </Link>
             </div>
             <p className={s.about}>
-              Microsoft Fabric Featured Partner. 26 years of enterprise
-              delivery. 1,800+ engineers turning data into decisions for the
-              Fortune 500.
+              MAQ Software helps enterprises transform data into decisions and AI into measurable business outcomes.
             </p>
             <p className={s.about} style={{ marginTop: 12 }}>
               2027 152nd Avenue NE, Redmond, WA 98052
