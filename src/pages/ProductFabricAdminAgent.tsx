@@ -490,46 +490,25 @@ export function ProductFabricAdminAgent() {
       {/* ---------------------- Impact ---------------------- */}
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
+          <div className={s.headLeft}>
             <span className={s.secEyebrow}>Proven outcomes</span>
-            <h2 className={s.title}>Real impact for Microsoft Fabric platform owners</h2>
-            <p className={s.sub} style={{ margin: "0 auto" }}>
+            <h2 className={s.titleLg}>Real impact for Microsoft Fabric platform owners</h2>
+            <p className={s.sub}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
               enterprise tenants.
             </p>
           </div>
           <div className={s.impactGrid}>
-            {impact.map((i) => (
-              <div key={i.label} className={s.impactCard}>
-                <div className={s.impactMetric}>{i.metric}</div>
-                <div className={s.impactLabel}>{i.label}</div>
-                <span className={s.impactSource}>{i.source}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------------- Features ---------------------- */}
-      <section className={s.sectionAlt} id="fabric-admin-features">
-        <div className={s.inner}>
-          <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Capabilities</span>
-            <h2 className={s.titleLg}>What the Fabric Admin Agent does for you</h2>
-          </div>
-          <div className={s.featGrid}>
-            {features.map((f) => (
-              <div key={f.title} className={s.feat}>
-                <div className={s.featHead}>
-                  <span className={s.featIconBox}>{f.icon}</span>
-                  <div className={s.featTitle}>{f.title}</div>
+              {impact.map((i) => (
+                <div key={i.label} className={s.impactCard}>
+                  <div className={s.impactMetric}>{i.metric}</div>
+                  <div className={s.impactLabel}>{i.label}</div>
+                  <span className={s.impactSource}>{i.source}</span>
                 </div>
-                <p className={s.featDesc}>{f.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ---------------------- Case studies ---------------------- */}
       <section className={s.section}>

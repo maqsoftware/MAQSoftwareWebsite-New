@@ -53,9 +53,9 @@ export function ProductCertyFAST() {
 
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
+          <div className={s.headLeft}>
             <span className={s.secEyebrow}>Why CertyFAST</span>
-            <h2 className={s.title}>Benefits</h2>
+            <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
             {benefits.map((b) => (
