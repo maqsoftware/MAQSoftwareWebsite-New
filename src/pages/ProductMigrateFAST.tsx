@@ -33,14 +33,6 @@ const steps = [
   { n: 6, title: "Center of Excellence (CoE)", desc: "Ongoing support, user training, troubleshooting, and KPI tracking post-migration." },
 ];
 
-const capabilities = [
-  "Upload Tableau reports and auto-extract metadata",
-  "Get timeline estimates for the migration",
-  "Analyze report similarity to remove duplicates",
-  "Auto-convert LOD to DAX and check for errors",
-  "Customize Power BI report UI",
-];
-
 const MIGRATEFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/NKd92QYRrG4?si=JoLs_S7wMKCaRZFz";
 
 const resources = [
@@ -110,19 +102,11 @@ export function ProductMigrateFAST() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Automation</span>
-            <h2 className={s.titleLg}>Discover how MigrateFAST automates a Tableau-to-Power BI migration.</h2>
+            <span className={s.secEyebrow}>Demo video</span>
+            <h2 className={s.titleLg}>Learn how you can automate Tableau-to-Power BI migration with MigrateFAST.</h2>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 360px), 1fr))", gap: "24px", alignItems: "start" }}>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: "12px" }}>
-              {capabilities.map((c) => (
-                <li key={c} style={{ fontSize: "14px", color: "var(--maq-gray-700)", lineHeight: 1.6, paddingLeft: "20px", position: "relative" }}>
-                  <span style={{ position: "absolute", left: 0, color: "var(--maq-red)", fontWeight: 700 }}>✓</span>
-                  {c}
-                </li>
-              ))}
-            </ul>
-            <div style={{ position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--maq-border)" }}>
+          <div style={{ width: "100%" }}>
+            <div style={{ position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: "6px", overflow: "hidden", border: "1px solid var(--maq-border)" }}>
               <iframe
                 src={MIGRATEFAST_VIDEO_EMBED_URL}
                 title="Discover how MigrateFAST automates a Tableau-to-Power BI migration"
