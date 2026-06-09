@@ -58,11 +58,18 @@ const useStyles = makeStyles({
   link: {
     display: "inline-flex",
     alignItems: "center",
-    gap: "4px",
+    justifyContent: "center",
+    gap: "6px",
     fontSize: "13px",
     fontWeight: 600,
     color: "var(--maq-red)",
     textDecoration: "none",
+    minHeight: "36px",
+    minWidth: "152px",
+    padding: "0 12px",
+    border: "1px solid var(--maq-red)",
+    borderRadius: "8px",
+    whiteSpace: "nowrap",
   },
   seeAll: {
     marginTop: "20px",
@@ -116,7 +123,7 @@ export function IndustryCaseStudies({
               className={s.card}
               href={c.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
             >
               <div className={s.cardTitle}>{c.title}</div>

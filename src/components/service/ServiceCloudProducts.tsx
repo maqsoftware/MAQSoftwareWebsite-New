@@ -155,7 +155,7 @@ export function ServiceCloudProducts() {
               </>
             );
             return p.external ? (
-              <a key={p.name} href={p.href} target="_blank" rel="noreferrer" className={s.card}>
+              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" className={s.card}>
                 {inner}
               </a>
             ) : (

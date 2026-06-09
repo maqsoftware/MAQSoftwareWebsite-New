@@ -9,6 +9,8 @@
 // When the talent team publishes a new opening on Blogger, it appears
 // automatically on /careers — no code change or deploy needed.
 
+import { sanitizeExternalHtml } from "../lib/sanitizeHtml";
+
 export interface JobOpening {
   id: string;
   title: string;
@@ -60,6 +62,16 @@ interface BloggerFeedResponse {
 let jsonpCounter = 0;
 function fetchJsonp<T>(url: string, timeoutMs = 15000): Promise<T> {
   return new Promise((resolve, reject) => {
+    const parsed = new URL(url);
+    const isTrustedBloggerFeed =
+      parsed.protocol === "https:" &&
+      parsed.hostname === "www.blogger.com" &&
+      parsed.pathname.startsWith(`/feeds/${CAREERS_BLOG_ID}/posts/default/`);
+    if (!isTrustedBloggerFeed) {
+      reject(new Error("Blocked untrusted careers feed URL"));
+      return;
+    }
+
     const cbName = `__maqCareersCb_${Date.now()}_${jsonpCounter++}`;
     const script = document.createElement("script");
     const cleanup = () => {
@@ -84,6 +96,7 @@ function fetchJsonp<T>(url: string, timeoutMs = 15000): Promise<T> {
     };
     const sep = url.includes("?") ? "&" : "?";
     script.src = `${url}${sep}callback=${cbName}`;
+    script.referrerPolicy = "no-referrer";
     document.head.appendChild(script);
   });
 }
@@ -114,7 +127,7 @@ function extractJobScoreUrl(html: string): string | null {
 }
 
 function mapEntry(entry: BloggerEntry): JobOpening {
-  const html = entry.content.$t ?? "";
+  const html = sanitizeExternalHtml(entry.content.$t ?? "");
   return {
     id: entry.id.$t,
     title: entry.title.$t,

@@ -212,7 +212,7 @@ function JobAccordionItem({ job }: { job: JobOpening }) {
       </button>
       {open && (
         <div className={s.jobBody}>
-          {/* Blogger content HTML — same source the original site renders. */}
+          {/* Sanitized Blogger content HTML from src/data/careers.ts. */}
           <div dangerouslySetInnerHTML={{ __html: job.contentHtml }} />
           <div className={s.jobActions}>
             {job.applyUrl && (

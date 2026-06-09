@@ -137,7 +137,7 @@ export function Hero() {
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail20Regular />}
+              className="maq-equal-cta"
               onClick={() => handleContactClick()}
             >
               Contact Us
@@ -145,6 +145,7 @@ export function Hero() {
             <Button
               appearance="outline"
               size="large"
+              className="maq-equal-cta"
               onClick={() => navigate("/insights/case-studies")}
             >
               Case Studies

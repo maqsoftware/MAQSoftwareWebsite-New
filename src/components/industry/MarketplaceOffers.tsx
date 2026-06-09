@@ -118,7 +118,7 @@ export function MarketplaceOffers({
               className={s.card}
               href={o.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div
                 className={s.imgBox}

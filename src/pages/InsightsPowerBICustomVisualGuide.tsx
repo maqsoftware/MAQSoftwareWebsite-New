@@ -122,7 +122,7 @@ export function InsightsPowerBICustomVisualGuide() {
           </div>
           <div className={s.support}>
             <p className={s.supportText}>If you have questions about our custom visuals, please visit our Power BI page on Zendesk.</p>
-            <Button appearance="primary" as="a" href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank" rel="noreferrer">
+            <Button appearance="primary" as="a" href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank" rel="noopener noreferrer">
               Go to Zendesk
             </Button>
           </div>

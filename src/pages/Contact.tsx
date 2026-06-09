@@ -300,7 +300,7 @@ export function Contact() {
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail24Regular />}
+             
               as="a"
               href={MAIL_TO}
             >

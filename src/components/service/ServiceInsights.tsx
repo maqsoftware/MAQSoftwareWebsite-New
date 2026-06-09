@@ -115,7 +115,7 @@ export function ServiceInsights({
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
-            <a key={i.title} className={s.card} href={i.href} target="_blank" rel="noreferrer">
+            <a key={i.title} className={s.card} href={i.href} target="_blank" rel="noopener noreferrer">
               <div className={s.cover} aria-hidden="true" />
               <div className={s.body}>
                 <h3 className={s.cardTitle}>{i.title}</h3>

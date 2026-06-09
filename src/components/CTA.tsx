@@ -70,7 +70,7 @@ export function CTA() {
           <Button
             appearance="primary"
             size="large"
-            icon={<Mail24Regular />}
+           
             onClick={() => handleContactClick()}
           >
             Contact Us
