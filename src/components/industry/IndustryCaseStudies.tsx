@@ -56,21 +56,13 @@ const useStyles = makeStyles({
     marginBottom: "14px",
   },
   link: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
     textDecoration: "none",
-    minHeight: "36px",
-    minWidth: "152px",
-    padding: "0 12px",
-    border: "1px solid var(--maq-red)",
-    borderRadius: "8px",
-    whiteSpace: "nowrap",
-  },
+    },
   seeAll: {
     marginTop: "20px",
     textAlign: "right",
@@ -129,7 +121,7 @@ export function IndustryCaseStudies({
               <div className={s.cardTitle}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <span className={s.link}>
-                Read full story <ArrowRight16Regular />
+                Read full story
               </span>
             </a>
           ))}
@@ -146,3 +138,4 @@ export function IndustryCaseStudies({
     </section>
   );
 }
+

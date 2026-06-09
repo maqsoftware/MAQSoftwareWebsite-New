@@ -68,20 +68,13 @@ const useStyles = makeStyles({
     marginBottom: "16px",
   },
   more: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-    fontWeight: 600,
-    minHeight: "36px",
-    minWidth: "152px",
-    padding: "0 12px",
-    border: "1px solid var(--maq-red)",
-    borderRadius: "8px",
-    whiteSpace: "nowrap",
-  },
+    textDecoration: "none",
+    },
 });
 
 interface Case {
@@ -156,3 +149,4 @@ export function CaseStudies() {
     </section>
   );
 }
+

@@ -151,7 +151,7 @@ useEffect(() => {
                   </div>
                   <h3 className={s.cardTitle}>{item.title}</h3>
                   <p className={s.teaser}>{item.teaser}</p>
-                  <span className={s.read}>Read full article <ArrowRight16Regular /></span>
+                  <span className={s.read}>Read full article</span>
                 </div>
               </a>
             ))}
@@ -178,3 +178,4 @@ useEffect(() => {
     </>
   );
 }
+

@@ -1,5 +1,5 @@
 import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular, Server24Regular, Money24Regular, ChartMultiple24Regular, Search24Regular } from "@fluentui/react-icons";
+import { Mail24Regular, Server24Regular, Money24Regular, ChartMultiple24Regular, Search24Regular } from "@fluentui/react-icons";
 
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
@@ -162,7 +162,7 @@ export function ProductLoadFAST() {
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>
-                    Read more <ArrowRight20Regular fontSize={14} />
+                    Read more
                   </span>
                 </div>
               </a>

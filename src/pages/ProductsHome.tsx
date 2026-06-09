@@ -1,5 +1,5 @@
 import { makeStyles, tokens, Button } from "@fluentui/react-components";
-import { ArrowRight20Regular, Mail24Regular } from "@fluentui/react-icons";
+import { Mail24Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import { useContactAction } from "../lib/contact";
@@ -102,14 +102,13 @@ const useStyles = makeStyles({
     marginBottom: "16px",
   },
   link: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-  },
-
+    textDecoration: "none",
+    },
   cta: { padding: "56px 32px", backgroundColor: "var(--maq-off-white)" },
   ctaInner: {
     maxWidth: "1100px",
@@ -226,7 +225,7 @@ export function ProductsHome() {
                   <div className={s.name}>{p.name}</div>
                   <div className={s.desc}>{p.shortDesc}</div>
                   <span className={s.link}>
-                    Learn more <ArrowRight20Regular fontSize={14} />
+                    Learn more
                   </span>
                 </div>
               </Link>
@@ -256,3 +255,4 @@ export function ProductsHome() {
     </>
   );
 }
+

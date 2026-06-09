@@ -1,5 +1,5 @@
 import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
+import { Mail24Regular } from "@fluentui/react-icons";
 
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
@@ -66,9 +66,9 @@ export function ProductMigrateFAST() {
 
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
+          <div className={s.headLeft}>
             <span className={s.secEyebrow}>Why MigrateFAST</span>
-            <h2 className={s.title}>Benefits</h2>
+            <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
             {benefits.map((b) => (
@@ -150,7 +150,7 @@ export function ProductMigrateFAST() {
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>
-                    Read more <ArrowRight20Regular fontSize={14} />
+                    Read more
                   </span>
                 </div>
               </a>

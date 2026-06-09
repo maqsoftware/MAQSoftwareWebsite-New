@@ -74,13 +74,13 @@ const useStyles = makeStyles({
   },
   desc: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
   link: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-  },
+    textDecoration: "none",
+    },
   footerLink: {
     marginTop: "20px",
     display: "inline-flex",
@@ -150,7 +150,7 @@ export function ServiceCloudProducts() {
                 <span className={s.tagline}>{p.tagline}</span>
                 <p className={s.desc}>{p.desc}</p>
                 <span className={s.link}>
-                  Learn more <ArrowRight16Regular />
+                  Learn more
                 </span>
               </>
             );
@@ -172,3 +172,4 @@ export function ServiceCloudProducts() {
     </section>
   );
 }
+

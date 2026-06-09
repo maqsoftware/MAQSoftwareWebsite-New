@@ -1,5 +1,5 @@
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowLeft16Regular, ArrowRight16Regular } from "@fluentui/react-icons";
+import { ArrowLeft16Regular } from "@fluentui/react-icons";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { CTA } from "../components/CTA";
@@ -113,13 +113,13 @@ const useStyles = makeStyles({
     flex: 1,
   },
   read: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-    fontWeight: 600,
-    fontSize: "12px",
-  },
+    textDecoration: "none",
+    },
   filterRow: {
     display: "flex",
     alignItems: "center",
@@ -246,7 +246,7 @@ export function InsightsVisualChooser() {
                     <h3 className={s.cardTitle}>{item.name}</h3>
                     <p className={s.cardTeaser}>{item.description}</p>
                     <span className={s.read}>
-                      Open visual detail <ArrowRight16Regular />
+                      Open visual detail
                     </span>
                   </Link>
                 ))}
@@ -259,3 +259,4 @@ export function InsightsVisualChooser() {
     </>
   );
 }
+

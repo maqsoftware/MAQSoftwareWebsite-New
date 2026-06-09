@@ -1,6 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { insightsResourceLinks, type InsightsResourceLink } from "../../data/insights";
 
 const useStyles = makeStyles({
@@ -52,7 +51,14 @@ const useStyles = makeStyles({
   },
   name: { fontSize: "16px", fontWeight: 700, color: "var(--maq-black)" },
   desc: { fontSize: "13px", color: "var(--maq-gray-600)", lineHeight: 1.5, margin: 0, flex: 1 },
-  link: { fontSize: "13px", color: "var(--maq-red)", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "4px" },
+  link: {
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    },
 });
 
 interface InsightsResourceNavProps {
@@ -82,7 +88,7 @@ export function InsightsResourceNav({ active }: InsightsResourceNavProps) {
                 >
                   <span className={s.name}>{r.label}</span>
                   <p className={s.desc}>{r.description}</p>
-                  <span className={s.link}>Open resource <ArrowRight16Regular /></span>
+                  <span className={s.link}>Open resource</span>
                 </a>
               );
             }
@@ -91,7 +97,7 @@ export function InsightsResourceNav({ active }: InsightsResourceNavProps) {
               <Link key={r.key} to={r.href} className={`${s.card} ${r.key === active ? s.active : ""}`}>
                 <span className={s.name}>{r.label}</span>
                 <p className={s.desc}>{r.description}</p>
-                <span className={s.link}>Open resource <ArrowRight16Regular /></span>
+                <span className={s.link}>Open resource</span>
               </Link>
             );
           })}
@@ -100,3 +106,4 @@ export function InsightsResourceNav({ active }: InsightsResourceNavProps) {
     </section>
   );
 }
+

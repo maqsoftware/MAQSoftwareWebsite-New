@@ -102,13 +102,13 @@ const useStyles = makeStyles({
     marginTop: "auto",
   },
   more: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-    fontWeight: 600,
-  },
+    textDecoration: "none",
+    },
 });
 
 interface Product {
@@ -212,3 +212,4 @@ export function Products() {
     </section>
   );
 }
+

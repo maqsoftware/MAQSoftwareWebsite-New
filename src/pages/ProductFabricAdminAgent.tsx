@@ -211,20 +211,13 @@ const useStyles = makeStyles({
     marginBottom: "14px",
   },
   caseLink: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-    minHeight: "36px",
-    minWidth: "152px",
-    padding: "0 12px",
-    border: "1px solid var(--maq-red)",
-    borderRadius: "8px",
-    whiteSpace: "nowrap",
-  },
+    textDecoration: "none",
+    },
   seeAll: {
     marginTop: "20px",
     textAlign: "right",
@@ -283,8 +276,10 @@ const useStyles = makeStyles({
   // Marketplace -----------------------------------------------------------
   mktGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     gap: "16px",
+    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
+    "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
   mktCard: {
     background: "#fff",
@@ -325,15 +320,14 @@ const useStyles = makeStyles({
   mktArrow: { color: "var(--maq-red)", flexShrink: 0, marginTop: "2px" },
   mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
   mktRead: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
+    textDecoration: "none",
     marginTop: "4px",
   },
-
   // Featured marketplace banner -------------------------------------------
   banner: {
     display: "grid",
@@ -368,6 +362,8 @@ const useStyles = makeStyles({
 // ---------------------------------------------------------------------------
 // Data
 // ---------------------------------------------------------------------------
+const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.fabricadminagent-preview?tab=Overview&flightCodes=f7b20ceffeeb4e1fab33185d0cd74d08";
+
 const impact = [
   { metric: "60%", label: "Fewer capacity incidents after enabling autonomous monitoring", source: "Enterprise Fabric tenant" },
   { metric: "24/7", label: "Autonomous coverage across capacities, workspaces, and items", source: "Always-on agent" },
@@ -477,6 +473,7 @@ export function ProductFabricAdminAgent() {
               >
                 Contact Us
               </Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Get it now</Button>
             </div>
           </div>
 
@@ -498,46 +495,25 @@ export function ProductFabricAdminAgent() {
       {/* ---------------------- Impact ---------------------- */}
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
+          <div className={s.headLeft}>
             <span className={s.secEyebrow}>Proven outcomes</span>
-            <h2 className={s.title}>Real impact for Microsoft Fabric platform owners</h2>
-            <p className={s.sub} style={{ margin: "0 auto" }}>
+            <h2 className={s.titleLg}>Real impact for Microsoft Fabric platform owners</h2>
+            <p className={s.sub}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
               enterprise tenants.
             </p>
           </div>
           <div className={s.impactGrid}>
-            {impact.map((i) => (
-              <div key={i.label} className={s.impactCard}>
-                <div className={s.impactMetric}>{i.metric}</div>
-                <div className={s.impactLabel}>{i.label}</div>
-                <span className={s.impactSource}>{i.source}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------------- Features ---------------------- */}
-      <section className={s.sectionAlt} id="fabric-admin-features">
-        <div className={s.inner}>
-          <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Capabilities</span>
-            <h2 className={s.titleLg}>What the Fabric Admin Agent does for you</h2>
-          </div>
-          <div className={s.featGrid}>
-            {features.map((f) => (
-              <div key={f.title} className={s.feat}>
-                <div className={s.featHead}>
-                  <span className={s.featIconBox}>{f.icon}</span>
-                  <div className={s.featTitle}>{f.title}</div>
+              {impact.map((i) => (
+                <div key={i.label} className={s.impactCard}>
+                  <div className={s.impactMetric}>{i.metric}</div>
+                  <div className={s.impactLabel}>{i.label}</div>
+                  <span className={s.impactSource}>{i.source}</span>
                 </div>
-                <p className={s.featDesc}>{f.desc}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ---------------------- Case studies ---------------------- */}
       <section className={s.section}>
@@ -558,7 +534,7 @@ export function ProductFabricAdminAgent() {
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
-                  Read full story <ArrowRight16Regular />
+                  Read full story
                 </span>
               </a>
             ))}
@@ -587,7 +563,7 @@ export function ProductFabricAdminAgent() {
           </div>
 
           {/* Featured banner */}
-          <div className={s.banner}>
+          {/* <div className={s.banner}>
             <div>
               <h3 className={s.bannerTitle}>
                 Get Fabric Admin Agent on Microsoft Marketplace
@@ -622,7 +598,7 @@ export function ProductFabricAdminAgent() {
                 Browse all marketplace offers
               </Button>
             </div>
-          </div>
+          </div> */}
 
           {/* Resource grid */}
           <div className={s.mktGrid}>
@@ -639,7 +615,7 @@ export function ProductFabricAdminAgent() {
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>
-                    Read more <ArrowRight20Regular fontSize={14} />
+                    Read more
                   </span>
                 </div>
               </a>
@@ -673,3 +649,4 @@ export function ProductFabricAdminAgent() {
     </>
   );
 }
+

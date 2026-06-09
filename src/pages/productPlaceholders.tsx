@@ -1,4 +1,3 @@
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useProductPageStyles } from "./productPageStyles";
 
 export interface ProductCaseStudy {
@@ -62,22 +61,15 @@ export function ProductCaseStudies({
             </div>
             <span
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "6px",
-                fontSize: "12.5px",
+                display: "inline-block",
+                fontSize: "13px",
                 color: "var(--maq-red)",
-                fontWeight: 600,
-                minHeight: "36px",
-                minWidth: "152px",
-                padding: "0 12px",
-                border: "1px solid var(--maq-red)",
-                borderRadius: "8px",
-                whiteSpace: "nowrap",
+                fontWeight: 700,
+                lineHeight: 1.4,
+                textDecoration: "none",
               }}
             >
-              Read full story <ArrowRight16Regular />
+              Read full story
             </span>
           </a>
         ))}

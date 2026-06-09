@@ -1,5 +1,4 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -59,13 +58,13 @@ const useStyles = makeStyles({
   },
   teaser: { fontSize: "13px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
   read: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-  },
+    textDecoration: "none",
+    },
 });
 
 const insights = [
@@ -109,7 +108,7 @@ export function ReportingBIInsights() {
                 <h3 className={s.cardTitle}>{i.title}</h3>
                 <p className={s.teaser}>{i.teaser}</p>
                 <span className={s.read}>
-                  Read more <ArrowRight16Regular />
+                  Read more
                 </span>
               </div>
             </a>
@@ -119,3 +118,4 @@ export function ReportingBIInsights() {
     </section>
   );
 }
+

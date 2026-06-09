@@ -60,7 +60,14 @@ const useStyles = makeStyles({
   category: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 700 },
   cardTitle: { fontSize: "16px", lineHeight: 1.35, color: "var(--maq-black)", margin: 0 },
   teaser: { fontSize: "13px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  read: { display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--maq-red)", fontWeight: 600, fontSize: "13px" },
+  read: {
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+  },
   support: {
     marginTop: "22px",
     border: `1px solid ${tokens.colorNeutralStroke2}`,
@@ -149,7 +156,7 @@ export function InsightsPowerBICustomVisualGuide() {
                 <span className={s.category}>{Array.isArray(item.category) ? item.category.join(", ") : item.category}</span>
                 <h3 className={s.cardTitle}>{item.name}</h3>
                 <p className={s.teaser}>{item.description}</p>
-                <span className={s.read}>View visual <ArrowRight16Regular /></span>
+                <span className={s.read}>View visual</span>
               </Link>
             ))}
           </div>
@@ -181,3 +188,4 @@ export function InsightsPowerBICustomVisualGuide() {
     </>
   );
 }
+
