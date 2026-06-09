@@ -7,6 +7,7 @@ import { useContactAction } from "../lib/contact";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.embedfastpowerbi?tab=PlansAndPrice";
+const EMBEDFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/iwhMYf58SqE?si=aN-dOljFYtGTJBke";
 
 const benefits = [
   { icon: <PlugConnected24Regular />, title: "Seamless integration", desc: "Easily integrate our API into your applications. Embed Power BI without the time or resource complexities." },
@@ -18,8 +19,8 @@ const benefits = [
 ];
 
 const plans = [
-  { name: "Subscription — API Only", price: "$2,500", term: "per month + $10,000 setup", items: ["Single instance with API", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Get it now" },
-  { name: "Subscription — API + UI", price: "$3,500", term: "per month + $10,000 setup", items: ["Single instance with API and UI", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Get it now" },
+  { name: "Subscription — API Only", price: "$2,500", term: "per month + $10,000 setup", items: ["Single instance with API", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Explore Marketplace" },
+  { name: "Subscription — API + UI", price: "$3,500", term: "per month + $10,000 setup", items: ["Single instance with API and UI", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Explore Marketplace" },
   { name: "Code Share — API + UI", price: "$250,000", term: "fixed one-time", items: ["Shared solution IP with API and UI", "4-week consulting service to integrate", "Code walkthrough and handover", "Personalized technical documentation", "Additional features on demand"], href: "mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20EmbedFAST%20Code%20Share", cta: "Talk to us" },
 ];
 
@@ -55,11 +56,20 @@ export function ProductEmbedFAST() {
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Get it now</Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/isv-top-image.jpg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="EmbedFAST demo video"
+                src={EMBEDFAST_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>

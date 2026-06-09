@@ -9,6 +9,7 @@ import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlac
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview";
 const APPSOURCE_PLANS = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=PlansAndPrice";
 const MARKETPLACE_OVERVIEW = "https://marketplace.microsoft.com/en-us/product/maqsoftware.powerbiloadanalyzer?tab=Overview";
+const LOADFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/yAQm1giPHt0?si=zEG1RU_aJKICXGic";
 
 const benefits = [
   { icon: <Server24Regular />, title: "Evaluate Fabric Capacity", desc: "Simulate real-world concurrent user load to understand exactly how much Fabric capacity your reporting workloads need." },
@@ -24,8 +25,8 @@ const steps = [
 ];
 
 const plans = [
-  { name: "Free Plan", price: "$0", term: "+ Azure infrastructure costs", items: ["Perform load tests with up to 50 users", "Free upgrades", "Complete installation setup"], href: APPSOURCE_PLANS, cta: "Get it now" },
-  { name: "Pro Plan", price: "$1,500", term: "per month + Azure infrastructure costs", items: ["No limit on the number of users", "Free upgrades", "Complete installation setup", "First response within 2 business days"], href: APPSOURCE_PLANS, cta: "Get it now" },
+  { name: "Free Plan", price: "$0", term: "+ Azure infrastructure costs", items: ["Perform load tests with up to 50 users", "Free upgrades", "Complete installation setup"], href: APPSOURCE_PLANS, cta: "Marketplace" },
+  { name: "Pro Plan", price: "$1,500", term: "per month + Azure infrastructure costs", items: ["No limit on the number of users", "Free upgrades", "Complete installation setup", "First response within 2 business days"], href: APPSOURCE_PLANS, cta: "Marketplace" },
 ];
 
 const resources = [
@@ -48,11 +49,20 @@ export function ProductLoadFAST() {
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Get it now</Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/img/Microsoft-Fabric/Slider1.png" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="LoadFAST demo video"
+                src={LOADFAST_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -93,25 +103,6 @@ export function ProductLoadFAST() {
                 <p className={s.stepDesc}>{st.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={s.section}>
-        <div className={s.inner}>
-          <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Demo video</span>
-            <h2 className={s.titleLg}>Learn how you can optimize Power BI reports with LoadFAST.</h2>
-          </div>
-          <div style={{ width: "100%", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", marginTop: "8px", background: "#000" }}>
-            <iframe
-              title="LoadFAST demo video"
-              src="https://www.youtube.com/embed/yAQm1giPHt0?si=zEG1RU_aJKICXGic"
-              style={{ width: "100%", height: "100%", border: 0, display: "block" }}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
           </div>
         </div>
       </section>

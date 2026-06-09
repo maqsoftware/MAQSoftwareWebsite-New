@@ -56,8 +56,17 @@ export function ProductMigrateFAST() {
               <Button appearance="primary" size="large" onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact Us</Button>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/migrate-fast.jpg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                src={MIGRATEFAST_VIDEO_EMBED_URL}
+                title="Discover how MigrateFAST automates a Tableau-to-Power BI migration"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -95,27 +104,6 @@ export function ProductMigrateFAST() {
                 <p className={s.stepDesc}>{st.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={s.section}>
-        <div className={s.inner}>
-          <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Demo video</span>
-            <h2 className={s.titleLg}>Learn how you can automate Tableau-to-Power BI migration with MigrateFAST.</h2>
-          </div>
-          <div style={{ width: "100%" }}>
-            <div style={{ position: "relative", width: "100%", paddingTop: "56.25%", borderRadius: "6px", overflow: "hidden", border: "1px solid var(--maq-border)" }}>
-              <iframe
-                src={MIGRATEFAST_VIDEO_EMBED_URL}
-                title="Discover how MigrateFAST automates a Tableau-to-Power BI migration"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
-              />
-            </div>
           </div>
         </div>
       </section>
