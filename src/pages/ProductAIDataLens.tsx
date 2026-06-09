@@ -41,7 +41,7 @@ export function ProductAIDataLens() {
               Transform how users interact with data by enabling natural-language queries and delivering instant, intelligent insights. Unlock a new way to interact with your data.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
+              <Button appearance="primary" size="large" onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
                 Contact Us
               </Button>
             </div>

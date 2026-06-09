@@ -117,7 +117,7 @@ export function ImpactStats({ eyebrow = "Proven outcomes", title, sub, stats }: 
         </div>
         <div className={s.grid}>
           {stats.map((st) => (
-            <a key={st.label} className={s.card} href={st.sourceHref} target="_blank" rel="noreferrer">
+            <a key={st.label} className={s.card} href={st.sourceHref} target="_blank" rel="noopener noreferrer">
               {st.chip && <span className={s.chip}>{st.chip}</span>}
               {st.metric && st.metric !== "____" && (
                 <div className={s.metric}>{st.metric}</div>

@@ -94,7 +94,7 @@ export function PartnershipInsights({
               className={s.card}
               href={b.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className={s.cardTitle}>{b.title}</div>
               <span className={s.cardLink}>

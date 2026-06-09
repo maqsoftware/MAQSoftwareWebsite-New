@@ -108,7 +108,7 @@ export function InsightsHero({
           <h1 className={s.h1}>{title}</h1>
           <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
-            <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick()}>
+            <Button appearance="primary" size="large" onClick={() => handleContactClick()}>
               {ctaLabel}
             </Button>
           </div>

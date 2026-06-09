@@ -163,7 +163,7 @@ export function PartnershipMarketplace({
             as="a"
             href={ctaHref}
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             {ctaLabel}
           </Button>

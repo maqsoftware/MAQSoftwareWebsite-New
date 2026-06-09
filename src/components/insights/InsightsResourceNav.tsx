@@ -77,7 +77,7 @@ export function InsightsResourceNav({ active }: InsightsResourceNavProps) {
                   key={r.key}
                   href={r.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className={`${s.card} ${r.key === active ? s.active : ""}`}
                 >
                   <span className={s.name}>{r.label}</span>

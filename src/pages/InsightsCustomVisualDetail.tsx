@@ -290,7 +290,7 @@ export function InsightsCustomVisualDetail() {
                   as="a"
                   href={appSourceHref}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   Get on Microsoft AppSource
                 </Button>
@@ -303,7 +303,7 @@ export function InsightsCustomVisualDetail() {
                     as="a"
                     href={appSourceHref}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                   >
                     Download sample report
                   </Button>
@@ -406,7 +406,7 @@ export function InsightsCustomVisualDetail() {
                   className={s.contactLink}
                   href="https://maqsoftware.zendesk.com/hc/en-us/community/topics"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   Zendesk
                 </a>

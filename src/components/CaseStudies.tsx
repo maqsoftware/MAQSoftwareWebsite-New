@@ -70,10 +70,17 @@ const useStyles = makeStyles({
   more: {
     display: "inline-flex",
     alignItems: "center",
-    gap: "4px",
+    justifyContent: "center",
+    gap: "6px",
     fontSize: "13px",
     color: "var(--maq-red)",
     fontWeight: 600,
+    minHeight: "36px",
+    minWidth: "152px",
+    padding: "0 12px",
+    border: "1px solid var(--maq-red)",
+    borderRadius: "8px",
+    whiteSpace: "nowrap",
   },
 });
 
@@ -135,7 +142,7 @@ export function CaseStudies() {
               className={s.card}
               href={c.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <div className={s.title2}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>

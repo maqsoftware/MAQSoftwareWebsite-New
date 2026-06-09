@@ -341,7 +341,7 @@ function ProductLink({
 }) {
   if (href.startsWith("http")) {
     return (
-      <a className={className} href={href} target="_blank" rel="noreferrer">
+      <a className={className} href={href} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
     );
@@ -373,7 +373,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 as="a"
                 href={props.registerUrl}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 appearance="primary"
                 size="large"
                 icon={<TicketDiagonal24Regular />}
@@ -433,7 +433,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                   as="a"
                   href={talk.href}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   appearance="subtle"
                   icon={<ArrowRight20Regular />}
                   iconPosition="after"
@@ -519,7 +519,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(props.contactSubject)}`}
                 appearance="primary"
                 size="large"
-                icon={<Mail24Regular />}
+                className="maq-equal-cta"
               >
                 Contact us
               </Button>
@@ -528,6 +528,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 href="/insights/case-studies"
                 appearance="outline"
                 size="large"
+                className="maq-equal-cta"
                 icon={<ArrowRight20Regular />}
                 iconPosition="after"
               >

@@ -65,10 +65,17 @@ const useStyles = makeStyles({
   read: {
     display: "inline-flex",
     alignItems: "center",
-    gap: "4px",
+    justifyContent: "center",
+    gap: "6px",
     fontSize: "13px",
     fontWeight: 600,
     color: "var(--maq-red)",
+    minHeight: "36px",
+    minWidth: "152px",
+    padding: "0 12px",
+    border: "1px solid var(--maq-red)",
+    borderRadius: "8px",
+    whiteSpace: "nowrap",
   },
   footerLink: {
     marginTop: "20px",
@@ -140,7 +147,7 @@ export function ServiceCaseStudiesData({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <a key={c.title} className={s.card} href={c.href} target="_blank" rel="noreferrer">
+            <a key={c.title} className={s.card} href={c.href} target="_blank" rel="noopener noreferrer">
               <h3 className={s.cardTitle}>{c.title}</h3>
               <p className={s.teaser}>{c.teaser ?? ""}</p>
               <span className={s.read}>Read full story <ArrowRight16Regular /></span>

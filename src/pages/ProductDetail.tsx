@@ -264,7 +264,7 @@ export function ProductDetail() {
               <Button
                 appearance="primary"
                 size="large"
-                icon={<Mail24Regular />}
+               
                 onClick={() =>
                   handleContactClick(product.name + " - request a walkthrough")
                 }

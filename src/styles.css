@@ -84,6 +84,15 @@ a {
   color: inherit;
 }
 
+/* Standardize CTA dimensions globally so primary/outline button pairs
+   (e.g., Contact Us + Case Studies/Get it now) align consistently. */
+.maq-equal-cta {
+  width: 110px;
+  min-height: 34px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
 /* Mobile header overrides (hooks for Header.tsx) */
 /* Include 768px so common tablet portrait widths get the mobile header/hamburger */
 @media (max-width: 768px) {

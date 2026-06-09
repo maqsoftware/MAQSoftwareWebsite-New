@@ -123,7 +123,7 @@ export function ServiceHero({
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail24Regular />}
+             
               onClick={() =>
                 handleContactClick(ctaMailSubject)
               }
