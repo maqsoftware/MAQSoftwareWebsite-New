@@ -1,4 +1,5 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useMemo, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
@@ -8,6 +9,8 @@ import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 import { caseStudyFilters, caseStudyItems } from "../data/insights";
+
+const INITIAL_VISIBLE = 9;
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -61,14 +64,19 @@ const useStyles = makeStyles({
   date: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 600 },
   cardTitle: { fontSize: "17px", lineHeight: 1.35, color: "var(--maq-black)", margin: 0 },
   teaser: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  read: {
-    display: "inline-block",
+  read: { display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--maq-red)", fontWeight: 600, fontSize: "13px" },
+  paginationControls: {
+    marginTop: "20px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "wrap",
+  },
+  controlsText: {
     fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
+    color: "var(--maq-gray-700)",
+  },
 });
 
 export function InsightsCaseStudies() {
@@ -99,6 +107,25 @@ useEffect(() => {
     return caseStudyItems.filter((item) => item.service === activeFilter);
   }, [activeFilter]);
 
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE);
+  }, [activeFilter]);
+
+  const total = filtered.length;
+  const halfCount = Math.max(INITIAL_VISIBLE + 1, Math.ceil(total / 2));
+  const visibleItems = filtered.slice(0, visibleCount);
+
+  const handleShowMore = () => {
+    if (visibleCount < halfCount && halfCount < total) {
+      setVisibleCount(halfCount);
+    } else {
+      setVisibleCount(total);
+    }
+  };
+  const handleShowLess = () => setVisibleCount(INITIAL_VISIBLE);
+
   return (
     <>
       <InsightsHero
@@ -115,7 +142,7 @@ useEffect(() => {
             <InsightsFilterBar items={caseStudyFilters} active={activeFilter} onChange={setActiveFilter} />
           </div>
           <div className={s.grid}>
-            {filtered.map((item) => (
+            {visibleItems.map((item) => (
               <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noopener noreferrer">
                 <img className={s.image} src={item.imageUrl} alt={item.title} loading="lazy" />
                 <div className={s.body}>
@@ -129,6 +156,22 @@ useEffect(() => {
               </a>
             ))}
           </div>
+          {total > INITIAL_VISIBLE && (
+            <div className={s.paginationControls}>
+              <span className={s.controlsText}>
+                Showing {visibleItems.length} of {total} case studies
+              </span>
+              {visibleCount < total ? (
+                <Button appearance="subtle" onClick={handleShowMore}>
+                  Show more
+                </Button>
+              ) : (
+                <Button appearance="subtle" onClick={handleShowLess}>
+                  Show less
+                </Button>
+              )}
+            </div>
+          )}
         </div>
       </section>
       <CTA />

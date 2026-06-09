@@ -6,6 +6,8 @@ import { useContactAction } from "../lib/contact";
 import { useProductPageStyles } from "./productPageStyles";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
+const AI_DATALENS_VIDEO_EMBED_URL = "https://www.youtube.com/embed/3NCRlbKKuC8?si=-HXXCu3lYAnlCNbG";
+
 const benefits = [
   { title: "Informed decisions", desc: "Move beyond guesswork — leverage data-backed insights to make informed decisions that reduce risk and accelerate growth." },
   { title: "Streamlined operations", desc: "Automate processes and reduce manual effort with insights that keep your operations running smoothly." },
@@ -46,8 +48,17 @@ export function ProductAIDataLens() {
               </Button>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/ai-datalens-hero-img-2.svg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="AI-DataLens demo video"
+                src={AI_DATALENS_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
