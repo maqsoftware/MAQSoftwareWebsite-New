@@ -1,5 +1,4 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -54,13 +53,13 @@ const useStyles = makeStyles({
     marginBottom: "14px",
   },
   cardLink: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-  },
+    textDecoration: "none",
+    },
 });
 
 export interface InsightCard {
@@ -98,7 +97,7 @@ export function PartnershipInsights({
             >
               <div className={s.cardTitle}>{b.title}</div>
               <span className={s.cardLink}>
-                Read more <ArrowRight16Regular />
+                Read more
               </span>
             </a>
           ))}
@@ -107,3 +106,4 @@ export function PartnershipInsights({
     </section>
   );
 }
+

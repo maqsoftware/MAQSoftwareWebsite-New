@@ -1,6 +1,6 @@
 import { Button } from "@fluentui/react-components";
 // import { TrustBanner } from "../components/TrustBanner";
-import { Mail24Regular, ArrowRight20Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
+import { Mail24Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
 import { useContactAction } from "../lib/contact";
 
 import { useProductPageStyles } from "./productPageStyles";
@@ -117,7 +117,7 @@ export function ProductAIDataLens() {
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>
-                    Read more <ArrowRight20Regular fontSize={14} />
+                    Read more
                   </span>
                 </div>
               </a>

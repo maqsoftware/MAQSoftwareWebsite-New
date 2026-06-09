@@ -1,5 +1,5 @@
 import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
+import { Mail24Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
 
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
@@ -165,7 +165,7 @@ export function ProductEmbedFAST() {
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>
-                    Read more <ArrowRight20Regular fontSize={14} />
+                    Read more
                   </span>
                 </div>
               </a>

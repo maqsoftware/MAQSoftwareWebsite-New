@@ -63,20 +63,13 @@ const useStyles = makeStyles({
   },
   teaser: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
   read: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-    minHeight: "36px",
-    minWidth: "152px",
-    padding: "0 12px",
-    border: "1px solid var(--maq-red)",
-    borderRadius: "8px",
-    whiteSpace: "nowrap",
-  },
+    textDecoration: "none",
+    },
   footerLink: {
     marginTop: "20px",
     display: "inline-flex",
@@ -151,7 +144,7 @@ export function ServiceCloudCaseStudies({
               <h3 className={s.cardTitle}>{c.title}</h3>
               <p className={s.teaser}>{c.teaser}</p>
               <span className={s.read}>
-                Read full story <ArrowRight16Regular />
+                Read full story
               </span>
             </a>
           ))}
@@ -169,3 +162,4 @@ export function ServiceCloudCaseStudies({
     </section>
   );
 }
+

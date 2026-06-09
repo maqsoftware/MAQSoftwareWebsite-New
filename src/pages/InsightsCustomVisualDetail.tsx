@@ -1,5 +1,5 @@
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowLeft16Regular, ArrowRight16Regular, Open16Regular } from "@fluentui/react-icons";
+import { ArrowLeft16Regular, Open16Regular } from "@fluentui/react-icons";
 import { Link, useParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
 import { VisualPbiEmbed } from "../components/insights/VisualPbiEmbed";
@@ -149,13 +149,13 @@ const useStyles = makeStyles({
   cardImg: { width: "100%", aspectRatio: "16/9", objectFit: "contain", background: "#fff" },
   cardTitle: { fontSize: "15px", fontWeight: 600, color: "var(--maq-black)", margin: 0 },
   read: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
-    color: "var(--maq-red)",
-    fontWeight: 600,
+    display: "inline-block",
     fontSize: "13px",
-  },
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    },
   notFound: {
     padding: "80px 32px",
     textAlign: "center",
@@ -445,7 +445,7 @@ export function InsightsCustomVisualDetail() {
                   <img className={s.cardImg} src={other.imageUrl} alt={other.name} loading="lazy" />
                   <h3 className={s.cardTitle}>{other.name}</h3>
                   <span className={s.read}>
-                    View visual <ArrowRight16Regular />
+                    View visual
                   </span>
                 </Link>
               ))}
@@ -458,3 +458,4 @@ export function InsightsCustomVisualDetail() {
     </>
   );
 }
+

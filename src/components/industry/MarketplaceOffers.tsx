@@ -1,5 +1,4 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight20Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -74,12 +73,12 @@ const useStyles = makeStyles({
   arrow: { color: "var(--maq-red)", flexShrink: 0, marginTop: "2px" },
   desc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, flex: 1 },
   read: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
+    textDecoration: "none",
     marginTop: "4px",
   },
 });
@@ -139,7 +138,7 @@ export function MarketplaceOffers({
                   {o.desc}
                 </p>
                 <span className={s.read}>
-                  Read more <ArrowRight20Regular fontSize={14} />
+                  Read more
                 </span>
               </div>
             </a>
@@ -149,3 +148,4 @@ export function MarketplaceOffers({
     </section>
   );
 }
+

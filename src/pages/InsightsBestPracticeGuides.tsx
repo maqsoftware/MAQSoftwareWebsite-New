@@ -1,5 +1,4 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useMemo, useState } from "react";
 import { CTA } from "../components/CTA";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
@@ -56,7 +55,14 @@ const useStyles = makeStyles({
   },
   cardTitle: { fontSize: "17px", lineHeight: 1.35, color: "var(--maq-black)", margin: 0 },
   teaser: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  read: { display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--maq-red)", fontWeight: 600, fontSize: "13px" },
+  read: {
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    },
 });
 
 export function InsightsBestPracticeGuides() {
@@ -88,7 +94,7 @@ export function InsightsBestPracticeGuides() {
                 <span className={s.topic}>{item.topic}</span>
                 <h3 className={s.cardTitle}>{item.title}</h3>
                 <p className={s.teaser}>{item.teaser}</p>
-                <span className={s.read}>Read full article <ArrowRight16Regular /></span>
+                <span className={s.read}>Read full article</span>
               </a>
             ))}
           </div>
@@ -98,3 +104,4 @@ export function InsightsBestPracticeGuides() {
     </>
   );
 }
+

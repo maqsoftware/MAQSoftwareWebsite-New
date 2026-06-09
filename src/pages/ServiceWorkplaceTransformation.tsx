@@ -379,21 +379,13 @@ const useStyles = makeStyles({
         flex: 1,
     },
     caseRead: {
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: "6px",
-        fontSize: "13px",
-        fontWeight: 600,
-        color: "var(--maq-red)",
-        minHeight: "36px",
-        minWidth: "152px",
-        padding: "0 12px",
-        border: "1px solid var(--maq-red)",
-        borderRadius: "8px",
-        whiteSpace: "nowrap",
-    },
-
+      display: "inline-block",
+      fontSize: "13px",
+      fontWeight: 700,
+      lineHeight: 1.4,
+      color: "var(--maq-red)",
+      textDecoration: "none",
+      },
     // Insights
     insGrid: {
         display: "grid",
@@ -757,7 +749,7 @@ export function ServiceWorkplaceTransformation() {
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>
-                                    Read full story <ArrowRight16Regular />
+                                    Read full story
                                 </span>
                             </a>
                         ))}
@@ -799,7 +791,7 @@ export function ServiceWorkplaceTransformation() {
                                     <h3 className={s.insTitle}>{i.title}</h3>
                                     <p className={s.insTeaser}>{i.teaser}</p>
                                     <span className={s.caseRead}>
-                                        Read more <ArrowRight16Regular />
+                                        Read more
                                     </span>
                                 </div>
                             </a>
@@ -815,3 +807,4 @@ export function ServiceWorkplaceTransformation() {
         </>
     );
 }
+

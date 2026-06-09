@@ -80,5 +80,14 @@ export const useProductPageStyles = makeStyles({
   mktTitle: { fontSize: "14px", fontWeight: 700, color: "var(--maq-black)", lineHeight: 1.4, flex: 1 },
   mktArrow: { color: "var(--maq-red)", flexShrink: 0, marginTop: "2px" },
   mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  mktRead: { display: "inline-flex", alignItems: "center", gap: "4px", fontSize: "13px", fontWeight: 600, color: "var(--maq-red)", marginTop: "4px" },
+  mktRead: {
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    marginTop: "4px",
+  },
 });
+

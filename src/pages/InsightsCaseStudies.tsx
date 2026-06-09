@@ -1,5 +1,4 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useMemo, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
@@ -62,7 +61,14 @@ const useStyles = makeStyles({
   date: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 600 },
   cardTitle: { fontSize: "17px", lineHeight: 1.35, color: "var(--maq-black)", margin: 0 },
   teaser: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  read: { display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--maq-red)", fontWeight: 600, fontSize: "13px" },
+  read: {
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    },
 });
 
 export function InsightsCaseStudies() {
@@ -118,7 +124,7 @@ useEffect(() => {
                   </div>
                   <h3 className={s.cardTitle}>{item.title}</h3>
                   <p className={s.teaser}>{item.teaser}</p>
-                  <span className={s.read}>Read full article <ArrowRight16Regular /></span>
+                  <span className={s.read}>Read full article</span>
                 </div>
               </a>
             ))}
@@ -129,3 +135,4 @@ useEffect(() => {
     </>
   );
 }
+

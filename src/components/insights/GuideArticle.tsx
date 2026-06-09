@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular, Mail24Regular } from "@fluentui/react-icons";
+import { Mail24Regular } from "@fluentui/react-icons";
 import { Button } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../../lib/contact";
@@ -137,11 +137,10 @@ const useStyles = makeStyles({
     color: "var(--maq-gray-600)",
     "& a": {
       color: "var(--maq-red)",
-      fontWeight: 600,
+      fontWeight: 700,
       textDecoration: "none",
-      display: "inline-flex",
-      alignItems: "center",
-      gap: "4px",
+      display: "inline-block",
+      lineHeight: 1.4,
     },
   },
   continueCard: {
@@ -199,12 +198,12 @@ const useStyles = makeStyles({
     lineHeight: 1.5,
   },
   continueLink: {
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-    fontWeight: 600,
-    fontSize: "13.5px",
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    textDecoration: "none",
     marginTop: "4px",
   },
 });
@@ -337,7 +336,7 @@ export function GuideArticle({
                 <h3 className={s.continueTitle}>{continueReading.title}</h3>
                 <p className={s.continueDesc}>{continueReading.description}</p>
                 <span className={s.continueLink}>
-                  Read More <ArrowRight16Regular />
+                  Read More
                 </span>
               </div>
             </Link>
@@ -345,7 +344,7 @@ export function GuideArticle({
             <div className={s.upNext}>
               Up next:{" "}
               <Link to={upNext.to}>
-                {upNext.label} <ArrowRight16Regular />
+                {upNext.label}
               </Link>
             </div>
           ) : null}

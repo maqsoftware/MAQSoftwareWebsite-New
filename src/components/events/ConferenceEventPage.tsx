@@ -297,13 +297,13 @@ const useStyles = makeStyles({
     flex: 1,
   },
   more: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "6px",
-    color: "var(--maq-red)",
+    display: "inline-block",
     fontSize: "13px",
     fontWeight: 700,
-  },
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    },
   storyPanel: {
     maxWidth: "1100px",
     margin: "0 auto",
@@ -475,7 +475,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                   <h3 className={s.cardTitle}>{resource.label}</h3>
                   <p className={s.bodyText}>{resource.desc}</p>
                   <span className={s.more}>
-                    Open resource <ArrowRight20Regular fontSize={14} />
+                    Open resource
                   </span>
                 </div>
               </ProductLink>
@@ -496,7 +496,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 <div className={s.productName}>{solution.name}</div>
                 <div className={s.productDesc}>{solution.desc}</div>
                 <span className={s.more}>
-                  Learn more <ArrowRight20Regular fontSize={14} />
+                  Learn more
                 </span>
               </ProductLink>
             ))}
@@ -547,3 +547,4 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
     </>
   );
 }
+

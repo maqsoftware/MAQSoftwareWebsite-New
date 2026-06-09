@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { makeStyles, Button, Spinner } from "@fluentui/react-components";
-import { ArrowRight16Regular, Open16Regular } from "@fluentui/react-icons";
 import { CTA } from "../components/CTA";
 import {
   fetchNews,
@@ -116,8 +115,16 @@ const useStyles = makeStyles({
     color: "var(--maq-gray-700)",
     margin: 0,
   },
-  readMore: { alignSelf: "flex-start", marginTop: "4px" },
-
+  readMore: {
+    alignSelf: "flex-start",
+    marginTop: "4px",
+    display: "inline-block",
+    fontSize: "13px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
+    },
   // ── Loading / error / load-more states ────────────────────────────────────
   centerState: {
     padding: "32px",
@@ -211,14 +218,13 @@ const useStyles = makeStyles({
     flex: 1,
   },
   pressLink: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
     textDecoration: "none",
-  },
+    },
 });
 
 function buildPageList(current: number, totalPages: number): (number | "…")[] {
@@ -334,8 +340,6 @@ export function AboutNews() {
                   <Button
                     className={s.readMore}
                     appearance="subtle"
-                    icon={<ArrowRight16Regular />}
-                    iconPosition="after"
                     as="a"
                     href={a.href}
                     target="_blank"
@@ -408,7 +412,7 @@ export function AboutNews() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Read more <Open16Regular />
+                  Read more
                 </a>
               </div>
             ))}
@@ -420,3 +424,4 @@ export function AboutNews() {
     </>
   );
 }
+

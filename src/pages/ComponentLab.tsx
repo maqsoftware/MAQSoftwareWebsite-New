@@ -722,34 +722,20 @@ const useCaseCard = makeStyles({
   teaser: { fontSize: "13px", color: "var(--maq-text-muted)", lineHeight: 1.55, flex: 1, marginBottom: "16px" },
   teaserLight: { fontSize: "13px", color: "rgba(255,255,255,0.75)", lineHeight: 1.55, flex: 1, marginBottom: "16px" },
   more: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    color: "var(--maq-blue)",
-    fontWeight: 500,
-    minHeight: "36px",
-    minWidth: "152px",
-    padding: "0 12px",
-    border: "1px solid var(--maq-blue)",
-    borderRadius: "8px",
-    whiteSpace: "nowrap",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
   },
   moreLight: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    color: "#fff",
-    fontWeight: 500,
-    minHeight: "36px",
-    minWidth: "152px",
-    padding: "0 12px",
-    border: "1px solid rgba(255,255,255,0.85)",
-    borderRadius: "8px",
-    whiteSpace: "nowrap",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
   },
   tagAlign: { alignSelf: "flex-start", marginBottom: "16px" },
 });
@@ -772,7 +758,7 @@ const CaseCardLab: FC = () => {
               <div className={c.aMetric}>{x.metric}</div>
               <div className={c.title}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+              <span className={c.more}>Read full story</span>
             </article>
           ))}
         </div>
@@ -785,7 +771,7 @@ const CaseCardLab: FC = () => {
               <span className={c.bMetric}>{x.metric}</span>
               <div className={c.title} style={{ fontSize: 17, marginTop: 8 }}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+              <span className={c.more}>Read full story</span>
             </article>
           ))}
         </div>
@@ -804,7 +790,7 @@ const CaseCardLab: FC = () => {
               <div className={c.cBody}>
                 <div className={c.title}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+                <span className={c.more}>Read full story</span>
               </div>
             </article>
           ))}
@@ -818,7 +804,7 @@ const CaseCardLab: FC = () => {
               <div className={c.dMetric}>{x.metric}</div>
               <div className={c.titleLight}>{x.title}</div>
               <div className={c.teaserLight}>{x.teaser}</div>
-              <span className={c.moreLight}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+              <span className={c.moreLight}>Read full story</span>
             </article>
           ))}
         </div>
@@ -835,7 +821,7 @@ const CaseCardLab: FC = () => {
               <div>
                 <div className={c.title} style={{ fontSize: 17 }}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+                <span className={c.more}>Read full story</span>
               </div>
             </article>
           ))}
@@ -1267,7 +1253,7 @@ const CompetitorCardLab: FC = () => {
                 <div className={c.avaTitle}>{x.title}</div>
                 <div className={c.avaDesc}>{x.desc}</div>
                 <span style={{ fontSize: 13, fontWeight: 600, color: "var(--maq-blue)", display: "inline-flex", alignItems: "center", gap: 4 }}>
-                  Learn more <ArrowRight20Regular fontSize={14} />
+                  Learn more
                 </span>
               </div>
               <div className={c.avaStat}>

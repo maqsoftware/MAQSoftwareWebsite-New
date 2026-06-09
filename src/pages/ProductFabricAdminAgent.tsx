@@ -211,20 +211,13 @@ const useStyles = makeStyles({
     marginBottom: "14px",
   },
   caseLink: {
-    display: "inline-flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
-    minHeight: "36px",
-    minWidth: "152px",
-    padding: "0 12px",
-    border: "1px solid var(--maq-red)",
-    borderRadius: "8px",
-    whiteSpace: "nowrap",
-  },
+    textDecoration: "none",
+    },
   seeAll: {
     marginTop: "20px",
     textAlign: "right",
@@ -325,15 +318,14 @@ const useStyles = makeStyles({
   mktArrow: { color: "var(--maq-red)", flexShrink: 0, marginTop: "2px" },
   mktDesc: { fontSize: "12.5px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
   mktRead: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
+    textDecoration: "none",
     marginTop: "4px",
   },
-
   // Featured marketplace banner -------------------------------------------
   banner: {
     display: "grid",
@@ -558,7 +550,7 @@ export function ProductFabricAdminAgent() {
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
-                  Read full story <ArrowRight16Regular />
+                  Read full story
                 </span>
               </a>
             ))}
@@ -639,7 +631,7 @@ export function ProductFabricAdminAgent() {
                   <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
                   <span className={s.mktRead}>
-                    Read more <ArrowRight20Regular fontSize={14} />
+                    Read more
                   </span>
                 </div>
               </a>
@@ -673,3 +665,4 @@ export function ProductFabricAdminAgent() {
     </>
   );
 }
+
