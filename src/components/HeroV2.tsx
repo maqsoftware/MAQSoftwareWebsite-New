@@ -169,7 +169,7 @@ export function Hero() {
               Contact Us
             </Button>
             <Button
-              appearance="outline"
+              appearance="secondary"
               size="large"
               className="maq-secondary-btn maq-equal-cta"
               onClick={() => navigate("/insights/case-studies")}
