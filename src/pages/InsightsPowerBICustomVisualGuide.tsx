@@ -1,12 +1,14 @@
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CTA } from "../components/CTA";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 import { visualGuideFilters, visualGuideItems, visualGuideSlug } from "../data/insights";
+
+const INITIAL_VISIBLE = 9;
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -15,9 +17,9 @@ const useStyles = makeStyles({
   grid: {
     marginTop: "18px",
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
-    "@media (max-width: 1180px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+    "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   card: {
@@ -72,6 +74,18 @@ const useStyles = makeStyles({
     "@media (max-width: 760px)": { flexDirection: "column", alignItems: "flex-start" },
   },
   supportText: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0 },
+  paginationControls: {
+    marginTop: "20px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "wrap",
+  },
+  controlsText: {
+    fontSize: "13px",
+    color: "var(--maq-gray-700)",
+  },
 });
 
 export function InsightsPowerBICustomVisualGuide() {
@@ -86,6 +100,25 @@ export function InsightsPowerBICustomVisualGuide() {
       return categories.includes(activeFilter);
     });
   }, [activeFilter]);
+
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE);
+  }, [activeFilter]);
+
+  const total = filtered.length;
+  const halfCount = Math.max(INITIAL_VISIBLE + 1, Math.ceil(total / 2));
+  const visibleItems = filtered.slice(0, visibleCount);
+
+  const handleShowMore = () => {
+    if (visibleCount < halfCount && halfCount < total) {
+      setVisibleCount(halfCount);
+    } else {
+      setVisibleCount(total);
+    }
+  };
+  const handleShowLess = () => setVisibleCount(INITIAL_VISIBLE);
 
   return (
     <>
@@ -104,7 +137,7 @@ export function InsightsPowerBICustomVisualGuide() {
             </Button>
           </div>
           <div className={s.grid}>
-            {filtered.map((item) => (
+            {visibleItems.map((item) => (
               <Link
                 key={item.name}
                 className={s.card}
@@ -120,6 +153,22 @@ export function InsightsPowerBICustomVisualGuide() {
               </Link>
             ))}
           </div>
+          {total > INITIAL_VISIBLE && (
+            <div className={s.paginationControls}>
+              <span className={s.controlsText}>
+                Showing {visibleItems.length} of {total} visuals
+              </span>
+              {visibleCount < total ? (
+                <Button appearance="subtle" onClick={handleShowMore}>
+                  Show more
+                </Button>
+              ) : (
+                <Button appearance="subtle" onClick={handleShowLess}>
+                  Show less
+                </Button>
+              )}
+            </div>
+          )}
           <div className={s.support}>
             <p className={s.supportText}>If you have questions about our custom visuals, please visit our Power BI page on Zendesk.</p>
             <Button appearance="primary" as="a" href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank" rel="noopener noreferrer">

@@ -1,11 +1,13 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { Button, makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { CTA } from "../components/CTA";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 import { bestPracticeFilters, bestPracticeItems } from "../data/insights";
+
+const INITIAL_VISIBLE = 9;
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -57,6 +59,18 @@ const useStyles = makeStyles({
   cardTitle: { fontSize: "17px", lineHeight: 1.35, color: "var(--maq-black)", margin: 0 },
   teaser: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
   read: { display: "inline-flex", alignItems: "center", gap: "4px", color: "var(--maq-red)", fontWeight: 600, fontSize: "13px" },
+  paginationControls: {
+    marginTop: "20px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    flexWrap: "wrap",
+  },
+  controlsText: {
+    fontSize: "13px",
+    color: "var(--maq-gray-700)",
+  },
 });
 
 export function InsightsBestPracticeGuides() {
@@ -67,6 +81,18 @@ export function InsightsBestPracticeGuides() {
     if (activeFilter === "All") return bestPracticeItems;
     return bestPracticeItems.filter((item) => item.topic === activeFilter);
   }, [activeFilter]);
+
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE);
+
+  useEffect(() => {
+    setVisibleCount(INITIAL_VISIBLE);
+  }, [activeFilter]);
+
+  const total = filtered.length;
+  const visibleItems = filtered.slice(0, visibleCount);
+
+  const handleShowMore = () => setVisibleCount(total);
+  const handleShowLess = () => setVisibleCount(INITIAL_VISIBLE);
 
   return (
     <>
@@ -80,7 +106,7 @@ export function InsightsBestPracticeGuides() {
           <h2 className={s.title}>Technical playbooks</h2>
           <InsightsFilterBar items={bestPracticeFilters} active={activeFilter} onChange={setActiveFilter} />
           <div className={s.grid}>
-            {filtered.map((item) => (
+            {visibleItems.map((item) => (
               <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noopener noreferrer">
                 <div className={s.imageWrap}>
                   <img className={s.image} src={item.imageUrl} alt={item.title} loading="lazy" />
@@ -92,6 +118,22 @@ export function InsightsBestPracticeGuides() {
               </a>
             ))}
           </div>
+          {total > INITIAL_VISIBLE && (
+            <div className={s.paginationControls}>
+              <span className={s.controlsText}>
+                Showing {visibleItems.length} of {total} guides
+              </span>
+              {visibleCount < total ? (
+                <Button appearance="subtle" onClick={handleShowMore}>
+                  Show more
+                </Button>
+              ) : (
+                <Button appearance="subtle" onClick={handleShowLess}>
+                  Show less
+                </Button>
+              )}
+            </div>
+          )}
         </div>
       </section>
       <CTA />
