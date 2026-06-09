@@ -107,7 +107,7 @@ export function ServiceHeroData() {
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail24Regular />}
+             
               onClick={() =>
                 handleContactClick("Data & Analytics - MAQ Software")
               }

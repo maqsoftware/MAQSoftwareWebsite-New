@@ -114,7 +114,7 @@ export function ReportingBIHero() {
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail24Regular />}
+             
               onClick={() =>
                 handleContactClick("Reporting & BI - MAQ Software")
               }

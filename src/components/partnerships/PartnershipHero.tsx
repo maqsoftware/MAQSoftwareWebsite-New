@@ -77,7 +77,7 @@ export function PartnershipHero({
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail24Regular />}
+             
               onClick={() => handleContactClick(ctaHref)}
             >
               {ctaLabel}

@@ -111,7 +111,7 @@ export function ServiceCloudHero() {
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail24Regular />}
+             
               onClick={() =>
                 handleContactClick("Cloud Modernization")
               }

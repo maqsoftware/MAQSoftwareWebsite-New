@@ -519,7 +519,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(props.contactSubject)}`}
                 appearance="primary"
                 size="large"
-                icon={<Mail24Regular />}
+                className="maq-equal-cta"
               >
                 Contact us
               </Button>
@@ -528,6 +528,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 href="/insights/case-studies"
                 appearance="outline"
                 size="large"
+                className="maq-equal-cta"
                 icon={<ArrowRight20Regular />}
                 iconPosition="after"
               >

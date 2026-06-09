@@ -54,8 +54,8 @@ export function ProductEmbedFAST() {
               Effortlessly embed Power BI into your apps without the complexity of writing your own code. Achieve faster time to market, improve operations, and elevate your workflow — all with EmbedFAST.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" as="a" href={APPSOURCE} target="_blank" rel="noreferrer">Get it now</Button>
+              <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noreferrer">Get it now</Button>
             </div>
           </div>
           <div className={s.heroImageWrap} aria-hidden="true">

@@ -596,7 +596,7 @@ export function TechCon365() {
                 }
                 appearance="primary"
                 size="large"
-                icon={<Mail24Regular />}
+                className="maq-equal-cta"
               >
                 Contact Us
               </Button>
@@ -605,6 +605,7 @@ export function TechCon365() {
                 href="/insights/case-studies"
                 appearance="outline"
                 size="large"
+                className="maq-equal-cta"
                 icon={<ArrowRight20Regular />}
                 iconPosition="after"
               >

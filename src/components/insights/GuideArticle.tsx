@@ -316,7 +316,7 @@ export function GuideArticle({
             </p>
             <Button
               appearance="primary"
-              icon={<Mail24Regular />}
+             
               onClick={() => handleContactClick(ctaSubject)}
             >
               Talk to our team
