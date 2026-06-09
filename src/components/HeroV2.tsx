@@ -33,10 +33,10 @@ const useStyles = makeStyles({
   heroGradient: {
     position: "absolute",
     inset: 0,
-    background: "linear-gradient(to right, rgba(255,255,255,1) 30%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%)",
+    background: "linear-gradient(to right, rgba(248,250,252,0.88) 0%, rgba(248,250,252,0.74) 32%, rgba(248,250,252,0.45) 56%, rgba(248,250,252,0.12) 76%, rgba(248,250,252,0) 100%)",
     zIndex: 1,
     "@media (max-width: 768px)": {
-      background: "linear-gradient(to bottom, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.7) 100%)",
+      background: "linear-gradient(to bottom, rgba(248,250,252,0.9) 22%, rgba(248,250,252,0.58) 62%, rgba(248,250,252,0.18) 100%)",
     },
   },
   grid: {
@@ -132,7 +132,7 @@ export function Hero() {
       <img
         alt="Team collaborating in a modern office"
         className={s.bgImage}
-        src="/images/home.png"
+        src="public\images\Home.png"
       />
       <div className={s.heroGradient}></div>
       {/* <svg

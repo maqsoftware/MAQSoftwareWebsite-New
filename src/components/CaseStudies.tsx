@@ -1,5 +1,4 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
@@ -63,7 +62,7 @@ const useStyles = makeStyles({
   },
   teaser: {
     fontSize: "13.5px",
-    color: "var(--maq-text-muted)",
+    color: "var(--maq-text-700)",
     lineHeight: 1.6,
     flex: 1,
     marginBottom: "16px",
@@ -148,7 +147,7 @@ export function CaseStudies() {
               <div className={s.title2}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <span className={s.more}>
-                Read full story <ArrowRight16Regular />
+                Read full story
               </span>
             </a>
           ))}
