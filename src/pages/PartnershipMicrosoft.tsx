@@ -359,7 +359,7 @@ export function PartnershipMicrosoft() {
                 as="a"
                 href="https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 View all marketplace offers
               </Button>

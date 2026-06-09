@@ -381,10 +381,17 @@ const useStyles = makeStyles({
     caseRead: {
         display: "inline-flex",
         alignItems: "center",
-        gap: "4px",
+        justifyContent: "center",
+        gap: "6px",
         fontSize: "13px",
         fontWeight: 600,
         color: "var(--maq-red)",
+        minHeight: "36px",
+        minWidth: "152px",
+        padding: "0 12px",
+        border: "1px solid var(--maq-red)",
+        borderRadius: "8px",
+        whiteSpace: "nowrap",
     },
 
     // Insights
@@ -592,7 +599,7 @@ export function ServiceWorkplaceTransformation() {
                             <Button
                                 appearance="primary"
                                 size="large"
-                                icon={<Mail24Regular />}
+                               
                                 onClick={() =>
                                     handleContactClick(
                                         "Workplace Transformation - MAQ Software"
@@ -745,7 +752,7 @@ export function ServiceWorkplaceTransformation() {
                                 className={s.caseCard}
                                 href={c.href}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
@@ -785,7 +792,7 @@ export function ServiceWorkplaceTransformation() {
                                 className={s.insCard}
                                 href={i.href}
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                             >
                                 <div className={s.insCover} aria-hidden="true" />
                                 <div className={s.insBody}>

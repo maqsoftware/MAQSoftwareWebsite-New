@@ -73,7 +73,7 @@ export const pressCoverage: PressItem[] = [
     logo: "https://maqsoftware.com/images/logos/BW-Business-World-logo.png",
     headline:
       "Many MBA Graduates Lack Context and Experience: Rajeev Agarwal, Founder and CEO, MAQ Software",
-    href: "http://www.businessworld.in/article/Many-MBA-Graduates-Lack-Context-And-Experience-Rajeev-Agarwal-Founder-And-CEO-MAQ-Software/06-12-2017-133919/",
+    href: "https://www.businessworld.in/article/Many-MBA-Graduates-Lack-Context-And-Experience-Rajeev-Agarwal-Founder-And-CEO-MAQ-Software/06-12-2017-133919/",
   },
   {
     outlet: "Business Standard",
@@ -178,6 +178,16 @@ export function mapBloggerEntry(entry: BloggerEntry): NewsArticle {
 let jsonpCounter = 0;
 function fetchJsonp<T>(url: string, timeoutMs = 15000): Promise<T> {
   return new Promise((resolve, reject) => {
+    const parsed = new URL(url);
+    const isTrustedNewsFeed =
+      parsed.protocol === "https:" &&
+      parsed.hostname === "news.maqsoftware.com" &&
+      parsed.pathname === "/feeds/posts/default";
+    if (!isTrustedNewsFeed) {
+      reject(new Error("Blocked untrusted news feed URL"));
+      return;
+    }
+
     const cbName = `__maqNewsCb_${Date.now()}_${jsonpCounter++}`;
     const script = document.createElement("script");
     const cleanup = () => {
@@ -202,6 +212,7 @@ function fetchJsonp<T>(url: string, timeoutMs = 15000): Promise<T> {
     };
     const sep = url.includes("?") ? "&" : "?";
     script.src = `${url}${sep}callback=${cbName}`;
+    script.referrerPolicy = "no-referrer";
     document.head.appendChild(script);
   });
 }

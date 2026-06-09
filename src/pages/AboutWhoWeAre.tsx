@@ -265,7 +265,7 @@ const recognitions = [
   {
     imgSrc: "/logos/Inc5000-2.png" as string | null,
     title: "Twelve-Time Honoree, Inc. 5000, Fastest Growing Companies in America",
-    href: "http://www.inc.com/profile/maq-software",
+    href: "https://www.inc.com/profile/maq-software",
     desc: "Inc. has honored MAQ Software on its prestigious Inc. 5000 list twelve times, a rare achievement. Since 2007, Inc. magazine has recognized more than 35,000 unique companies on its Inc. 5000 list based on the sales growth of the companies. Less than 0.5% of Inc. 5000 companies demonstrate sustained growth by appearing twelve or more times.",
   },
   {
@@ -277,7 +277,7 @@ const recognitions = [
   {
     imgSrc: "/logos/Fastest_Growing_Companies.png" as string | null,
     title: "Puget Sound Business Journal's 100 Fastest-Growing Private Companies in Washington State",
-    href: "http://www.bizjournals.com/seattle/stories/2009/10/19/focus2.html",
+    href: "https://www.bizjournals.com/seattle/stories/2009/10/19/focus2.html",
     desc: "MAQ Software is recognized as one of the fastest growing private companies in Washington State for five consecutive years. Because MAQ Software has earned a spot on the list four or more years, we are featured in the Business Journal Hall of Fame.",
   },
 ];

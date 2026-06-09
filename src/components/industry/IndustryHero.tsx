@@ -79,7 +79,7 @@ export function IndustryHero({
             <Button
               appearance="primary"
               size="large"
-              icon={<Mail24Regular />}
+             
               onClick={() => handleContactClick(mailSubject)}
             >
               Contact Us

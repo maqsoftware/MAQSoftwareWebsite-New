@@ -110,7 +110,7 @@ useEffect(() => {
           </div>
           <div className={s.grid}>
             {filtered.map((item) => (
-              <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noreferrer">
+              <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noopener noreferrer">
                 <img className={s.image} src={item.imageUrl} alt={item.title} loading="lazy" />
                 <div className={s.body}>
                   <div className={s.meta}>

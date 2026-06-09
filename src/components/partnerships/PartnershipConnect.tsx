@@ -45,7 +45,7 @@ export function PartnershipConnect({
         <Button
           appearance="primary"
           size="large"
-          icon={<Mail24Regular />}
+         
           as="a"
           href={ctaHref}
         >

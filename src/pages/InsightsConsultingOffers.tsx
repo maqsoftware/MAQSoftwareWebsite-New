@@ -19,7 +19,7 @@ export function InsightsConsultingOffers() {
     <main style={{ padding: "48px 24px", textAlign: "center" }}>
       <p>Redirecting to Microsoft Marketplace...</p>
       <p>
-        <a href={MARKETPLACE_URL} target="_blank" rel="noreferrer">
+        <a href={MARKETPLACE_URL} target="_blank" rel="noopener noreferrer">
           Open marketplace offers
         </a>
       </p>

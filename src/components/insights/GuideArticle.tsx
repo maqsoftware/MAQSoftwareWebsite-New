@@ -300,7 +300,7 @@ export function GuideArticle({
               <ul className={s.refList}>
                 {references.map((r) => (
                   <li key={r.href}>
-                    <a href={r.href} target="_blank" rel="noreferrer">
+                    <a href={r.href} target="_blank" rel="noopener noreferrer">
                       {r.label}
                     </a>
                     {r.source ? ` — ${r.source}` : null}
@@ -316,7 +316,7 @@ export function GuideArticle({
             </p>
             <Button
               appearance="primary"
-              icon={<Mail24Regular />}
+             
               onClick={() => handleContactClick(ctaSubject)}
             >
               Talk to our team
