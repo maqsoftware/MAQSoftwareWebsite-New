@@ -215,7 +215,7 @@ const services: Svc[] = [
       "Employee Experience & Collaboration",
     ],
     path: "/services/workplace-transformation",
-  }, */
+  }, */ 
 ];
 
 export const Services: FC = () => {

@@ -158,7 +158,7 @@ const products: Product[] = [
     desc: "Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.",
     tags: ["Power BI", "Quality", "Governance"],
   },
-];
+]; 
 
 export function Products() {
   const s = useStyles();
