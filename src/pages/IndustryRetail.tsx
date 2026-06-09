@@ -13,6 +13,7 @@ import { IndustryHero } from "../components/industry/IndustryHero";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
+import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
 import { CTA } from "../components/CTA";
 
 // --- Retail hero visual ---
@@ -183,6 +184,39 @@ const retailTestimonials = [
   },
 ];
 
+const retailOffers = [
+  {
+    pill: "Store Operations",
+    title: "Store Operations & Workforce Intelligence for Retail: 2-Week Assessment",
+    desc: "A 2-week assessment that benchmarks store operations and workforce productivity on Microsoft Fabric, surfacing opportunities to lift throughput and service levels.",
+    href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.retail_storeops_fabric_mp?tab=Overview",
+  },
+  {
+    pill: "Merchandising",
+    title: "Merchandising & Shelf Analytics for Retail: 2-Week Assessment",
+    desc: "A 2-week assessment that connects assortment, planogram, and shelf-execution data on Microsoft Fabric to sharpen merchandising and lift in-store conversion.",
+    href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.retail_merchandising_fabric_mp?tab=Overview",
+  },
+  {
+    pill: "Store Operations",
+    title: "Store Manager Assistant for Retail: 4-Week PoC",
+    desc: "A 4-week proof of concept delivering a Copilot-powered assistant that gives store managers real-time visibility into sales, inventory, and workforce signals, with guided actions to run a smarter store.",
+    href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.retail_storemanager_assistant_mp?tab=Overview",
+  },
+  {
+    pill: "Supply Chain",
+    title: "Supply Chain & Vendor Performance Analytics for Retail: 4-Week PoC",
+    desc: "A 4-week proof of concept that unifies supplier, logistics, and inventory data to expose vendor performance gaps and improve supply chain reliability.",
+    href: "https://portal.azure.com/#view/Microsoft_Azure_Marketplace/GalleryItemDetailsBladeNopdl/preview/undefined/id/maqsoftware.retail_supplychain_poc/resourceGroupId//resourceGroupLocation//dontDiscardJourney~/false/_provisioningContext~/%7B%22initialValues%22%3A%7B%22subscriptionIds%22%3A%5B%5D%2C%22resourceGroupNames%22%3A%5B%5D%2C%22locationNames%22%3A%5B%5D%7D%2C%22telemetryId%22%3A%223900c523-44fd-45bd-bcee-cf5a3545b010%22%2C%22marketplaceItem%22%3A%7B%22categoryIds%22%3A%5B%5D%2C%22id%22%3A%22Microsoft.Portal%22%2C%22itemDisplayName%22%3A%22NoMarketplace%22%2C%22products%22%3A%5B%5D%2C%22version%22%3A%22%22%2C%22productsWithNoPricing%22%3A%5B%5D%2C%22publisherDisplayName%22%3A%22Microsoft.Portal%22%2C%22deploymentName%22%3A%22NoMarketplace%22%2C%22launchingContext%22%3A%7B%22telemetryId%22%3A%223900c523-44fd-45bd-bcee-cf5a3545b010%22%2C%22source%22%3A%5B%5D%2C%22galleryItemId%22%3A%22%22%7D%2C%22deploymentTemplateFileUris%22%3A%7B%7D%2C%22uiMetadata%22%3Anull%7D%7D",
+  },
+  {
+    pill: "Retail Intelligence",
+    title: "Enterprise Knowledge Assistant for Retail",
+    desc: "An AI-powered enterprise knowledge assistant that helps retail teams instantly find answers across policies, playbooks, and operational data to make faster, better-informed decisions.",
+    href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.retail_knowledge_bot_mp?tab=Overview",
+  },
+];
+
 export function IndustryRetail() {
   return (
     <>
@@ -212,6 +246,10 @@ export function IndustryRetail() {
         cases={retailCases}
         seeAllLabel="See all retail case studies"
         seeAllHref="/insights/case-studies"
+      />
+      <MarketplaceOffers
+        sub="Accelerate retail outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning demand planning, customer experience, and real-time intelligence."
+        offers={retailOffers}
       />
       {/* <Testimonials quotes={retailTestimonials} /> */}
       <CTA />
