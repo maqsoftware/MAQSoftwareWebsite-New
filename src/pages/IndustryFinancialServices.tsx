@@ -212,28 +212,24 @@ const fsOffers = [
     title: "MAQ Software consulting services on Azure Marketplace",
     desc: "Full catalog of MAQ's Microsoft-listed marketplace offers, including Fabric assessments and AI workshops tagged for Financial Services.",
     href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software",
-    image: "/images/marketplace-consulting.jpg",
   },
   {
     pill: "Real-Time Intelligence",
     title: "Real-Time Intelligence in Microsoft Fabric: 1-Day Workshop",
     desc: "Hands-on Fabric workshop for streaming, fraud-alerting, and real-time dashboards—listed for Financial Services.",
     href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services/maqsoftware.real_time_intelligence_using_microsoft_fabric",
-    image: "/images/marketplace-realtime.jpg",
   },
   {
     pill: "AI Analytics",
     title: "AI-DataLens",
     desc: "AI-powered conversational analytics that lets risk, finance, and compliance teams query enterprise data in natural language and get governed, source-cited answers.",
     href: "/products/ai-datalens",
-    image: "https://maqsoftware.com/images-new/isv/ai-datalens-hero-img-2.svg",
   },
   {
     pill: "Migration",
     title: "MigrateFAST",
     desc: "AI-assisted migration of legacy banking and reporting platforms—including Snowflake, Teradata, and Synapse—to Microsoft Fabric, cutting migration cost and timeline.",
     href: "/products/migratefast",
-    image: "https://maqsoftware.com/images-new/isv/migrate-fast.jpg",
   },
 ];
 
