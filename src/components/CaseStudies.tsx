@@ -122,11 +122,11 @@ export function CaseStudies() {
           <h2 className={s.title}>
             What clients achieve with MAQ Software
           </h2>
-          <p className={s.sub}>
+          {/* <p className={s.sub}>
             Outcomes from real engagements — agentic AI, multi-platform data
             engineering on Microsoft, Snowflake and Databricks, and migrations
             to Microsoft Fabric &amp; Power BI.
-          </p>
+          </p> */}
         </div>
         <div className={s.grid}>
           {cases.map((c) => (

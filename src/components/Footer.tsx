@@ -119,11 +119,10 @@ const cols: FooterCol[] = [
   {
     title: "Products",
     items: [
-      { label: "All products",       to: "/products" },
       { label: "Fabric Admin Agent", to: "/products/fabric-admin-agent" },
       { label: "MigrateFAST",        to: "/products/migratefast" },
-      { label: "EmbedFAST",          to: "/products/embedfast" },
       { label: "AI-DataLens",        to: "/products/ai-datalens" },
+      { label: "EmbedFAST",          to: "/products/embedfast" },
       { label: "LoadFAST",           to: "/products/loadfast" },
       { label: "CertyFAST",          to: "/products/certyfast" },
     ],
@@ -133,6 +132,7 @@ const cols: FooterCol[] = [
     items: [
       { label: "Case Studies",        to: "/insights/case-studies" },
       { label: "Best practices", to: "/insights/best-practice-guides" },
+      { label: "Events",             to: "/events" },
       { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
       { label: "Power BI custom visual", to: "/insights/power-bi-custom-visual-guide" },
     ],
@@ -142,7 +142,6 @@ const cols: FooterCol[] = [
     items: [
       { label: "Who we are", to: "/who-we-are" },
       { label: "Careers",    to: "/careers" },
-      { label: "Events",     to: "/events" },
       { label: "Sustainability", to: "/sustainability" },
       { label: "Contact Us", to: "/contact" },
     ],

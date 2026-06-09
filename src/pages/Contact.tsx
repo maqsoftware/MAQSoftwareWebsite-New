@@ -4,6 +4,8 @@ import {
   Mail24Regular,
   People24Regular,
   Lightbulb24Regular,
+  Handshake24Regular,
+  Rocket24Regular,
 } from "@fluentui/react-icons";
 
 const MAIL_TO =
@@ -57,8 +59,8 @@ const useStyles = makeStyles({
   },
   proofList: {
     display: "grid",
-    gap: "14px",
-    marginBottom: "28px",
+    gap: "20px",
+    marginBottom: "32px",
   },
   proofItem: {
     display: "grid",
@@ -77,9 +79,9 @@ const useStyles = makeStyles({
     justifyContent: "center",
   },
   proofTitle: {
-    margin: "0 0 4px",
-    fontSize: "22px",
-    lineHeight: 1.2,
+    margin: "0 0 6px",
+    fontSize: "16px",
+    lineHeight: 1.4,
     fontWeight: 700,
     color: "var(--maq-black)",
   },
@@ -87,26 +89,29 @@ const useStyles = makeStyles({
     margin: 0,
     fontSize: "14px",
     lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
+    fontWeight: 400,
+    color: "var(--maq-black)",
   },
   heroRight: {
     backgroundColor: "#fff",
     border: "1px solid var(--maq-border)",
     borderRadius: "16px",
-    padding: "18px",
+    padding: "20px",
     boxShadow: "0 8px 20px rgba(15, 23, 42, 0.06)",
     alignSelf: "start",
     display: "flex",
     flexDirection: "column",
+    gap: "12px",
   },
   rightTitle: {
-    margin: "0 0 10px",
-    fontSize: "18px",
+    margin: "0",
+    fontSize: "16px",
     fontWeight: 700,
     color: "var(--maq-black)",
+    letterSpacing: "-0.01em",
   },
   rightSub: {
-    margin: "0 0 18px",
+    margin: "0 0 10px",
     fontSize: "14px",
     lineHeight: 1.6,
     color: "var(--maq-gray-700)",
@@ -118,11 +123,12 @@ const useStyles = makeStyles({
   miniLocation: {
     display: "grid",
     gridTemplateColumns: "28px 1fr auto",
-    gap: "6px",
+    gap: "7px",
     alignItems: "start",
-    padding: "8px 0",
+    paddingBottom: "9px",
     borderBottom: "1px solid var(--maq-border)",
     ":last-child": {
+      paddingBottom: 0,
       borderBottom: "none",
     },
     "@media (max-width: 980px)": {
@@ -135,15 +141,16 @@ const useStyles = makeStyles({
   },
   miniLocationCity: {
     margin: "0 0 2px",
-    fontSize: "14px",
+    fontSize: "13px",
     fontWeight: 700,
     color: "var(--maq-black)",
+    letterSpacing: "-0.01em",
   },
   miniLocationAddress: {
     margin: 0,
     fontSize: "12px",
-    lineHeight: 1.4,
-    color: "var(--maq-gray-700)",
+    lineHeight: 1.5,
+    color: "var(--maq-black)",
     whiteSpace: "pre-line" as const,
   },
   miniActionColumn: {
@@ -270,7 +277,7 @@ export function Contact() {
 
               <div className={s.proofItem}>
                 <span className={s.proofIcon}>
-                  <People24Regular />
+                  <Handshake24Regular />
                 </span>
                 <div>
                   <p className={s.proofTitle}>Customer-Centric Delivery</p>
@@ -284,7 +291,7 @@ export function Contact() {
 
               <div className={s.proofItem}>
                 <span className={s.proofIcon}>
-                  <Lightbulb24Regular />
+                  <Rocket24Regular />
                 </span>
                 <div>
                   <p className={s.proofTitle}>Innovation at Scale</p>
@@ -300,11 +307,11 @@ export function Contact() {
             <Button
               appearance="primary"
               size="large"
-             
+              className="maq-equal-cta"
               as="a"
               href={MAIL_TO}
             >
-              Get in Touch
+              Contact Us
             </Button>
           </div>
 
@@ -313,9 +320,15 @@ export function Contact() {
             <div className={s.miniLocationList}>
               {offices.map((office) => (
                 <div key={office.city} className={s.miniLocation}>
-                  <span className={s.miniLocationIcon}>
+                  <a
+                    href={office.maps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={s.miniLocationIcon}
+                    style={{ cursor: "pointer", textDecoration: "none" }}
+                  >
                     <Location24Regular />
-                  </span>
+                  </a>
                   <div>
                     <p className={s.miniLocationCity}>{office.city}</p>
                     <p className={s.miniLocationAddress}>
@@ -328,14 +341,6 @@ export function Contact() {
                         {office.phone}
                       </span>
                     )}
-                    <a
-                      className={s.miniDirections}
-                      href={office.maps}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Get directions
-                    </a>
                   </div>
                 </div>
               ))}

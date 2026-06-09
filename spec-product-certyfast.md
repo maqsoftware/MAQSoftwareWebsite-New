@@ -31,7 +31,7 @@
 
 - **Eyebrow:** `POWER BI QUALITY CONTROL`
 - **H1:** `CertyFAST`
-- **Subhead:** `Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices. Ready to revolutionize your data strategy and empower your business with the capabilities of Power BI?`
+- **Subhead:** `CertyFAST helps organizations build and maintain high-quality Power BI semantic models. By automating error detection, DAX standardization, and documentation, it improves consistency, reduces development effort, and ensures adherence to modeling best practices. Ready to revolutionize your data strategy and empower your business with the capabilities of Power BI?`
 - **Primary CTA:** `Download now` → <https://github.com/maqsoftware/CertyFAST>
 - **Secondary CTA:** `Talk to our team` → `mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20CertyFAST`
 - **Hero image:** `https://maqsoftware.com/images-new/isv/who.jpg`
