@@ -360,6 +360,8 @@ const useStyles = makeStyles({
 // ---------------------------------------------------------------------------
 // Data
 // ---------------------------------------------------------------------------
+const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.fabricadminagent-preview?tab=Overview&flightCodes=f7b20ceffeeb4e1fab33185d0cd74d08";
+
 const impact = [
   { metric: "60%", label: "Fewer capacity incidents after enabling autonomous monitoring", source: "Enterprise Fabric tenant" },
   { metric: "24/7", label: "Autonomous coverage across capacities, workspaces, and items", source: "Always-on agent" },
@@ -469,6 +471,7 @@ export function ProductFabricAdminAgent() {
               >
                 Contact Us
               </Button>
+              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Get it now</Button>
             </div>
           </div>
 
@@ -558,7 +561,7 @@ export function ProductFabricAdminAgent() {
           </div>
 
           {/* Featured banner */}
-          <div className={s.banner}>
+          {/* <div className={s.banner}>
             <div>
               <h3 className={s.bannerTitle}>
                 Get Fabric Admin Agent on Microsoft Marketplace
@@ -593,7 +596,7 @@ export function ProductFabricAdminAgent() {
                 Browse all marketplace offers
               </Button>
             </div>
-          </div>
+          </div> */}
 
           {/* Resource grid */}
           <div className={s.mktGrid}>

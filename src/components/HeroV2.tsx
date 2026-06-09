@@ -68,7 +68,7 @@ const useStyles = makeStyles({
   sub: {
     fontSize: "15px",
     lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
+    color: "var(--maq-text-700)",
     marginBottom: "32px",
     maxWidth: "580px",
   },
@@ -132,7 +132,7 @@ export function Hero() {
       <img
         alt="Team collaborating in a modern office"
         className={s.bgImage}
-        src="public\images\Home.png"
+        src="images\Home.png"
       />
       <div className={s.heroGradient}></div>
       {/* <svg
