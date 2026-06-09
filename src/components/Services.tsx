@@ -235,7 +235,7 @@ export const Services: FC = () => {
         <div className={s.head}>
           <span className={s.eyebrow}>What we do</span>
           <h2 className={s.title}>
-            Capabilities That Accelerate Growth.
+            Capabilities That Accelerate Growth
           </h2>
         </div>
         <div className={s.grid}>

@@ -181,9 +181,9 @@ export const products: Product[] = [
     name: "Fabric Admin Agent",
     tagline: "Fabric Workload",
     shortDesc:
-      "AI-powered capacity management for Microsoft Fabric admins. Detects anomalies and spikes in real time, forecasts demand, and recommends actions to reduce throttling, eliminate waste, and optimize cost.",
+      "Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.",
     longDesc:
-      "Fabric Admin Agent gives Microsoft Fabric administrators an AI copilot for capacity. It detects anomalies and usage spikes in real time, forecasts upcoming demand, and recommends concrete actions to reduce throttling, eliminate idle waste, and right-size spend — so platform teams stay ahead of capacity issues instead of firefighting them.",
+      "Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.",
     heroIcon: <Settings24Regular />,
     image: illustration("gauge"),
     tags: ["Fabric Workload"],
@@ -211,7 +211,7 @@ export const products: Product[] = [
     name: "MigrateFAST",
     tagline: "Migration accelerator",
     shortDesc:
-      "AI-powered migration of legacy ETL (Alteryx, Informatica) and BI workloads (Tableau, SAP BO, SAP Crystal, Qlik, Cognos) to Microsoft Fabric and Power BI — up to 70–80% faster.",
+      "MigrateFAST automates the end-to-end migration process—from legacy environment assessment and dependency analysis to report conversion, DAX generation, and validation. Organizations can migrate from Tableau, Cognos, SAP BusinessObjects, SAP Crystal Reports, MicroStrategy, Qlik, Alteryx, and Informatica with greater speed, accuracy, and confidence—reducing migration costs and accelerating time to value on Microsoft Fabric.",
     longDesc:
       "MigrateFAST is an AI-assisted migration factory for enterprises moving off legacy BI and data-prep stacks. It parses your existing estate — Tableau workbooks, SAP BusinessObjects universes and Web Intelligence reports, Crystal Reports, Qlik apps, Alteryx workflows, and Informatica mappings — and generates equivalent Power BI semantic models, Microsoft Fabric pipelines, and Fabric Warehouse objects with traceable lineage and side-by-side validation.",
     heroIcon: <ArrowSwap24Regular />,
@@ -237,41 +237,12 @@ export const products: Product[] = [
     ],
   },
   {
-    slug: "embedfast",
-    initials: "EF",
-    name: "EmbedFAST",
-    tagline: "Power BI embedding",
-    shortDesc:
-      "Seamlessly embed Power BI into your applications with role-based access, unlimited tenant/workspace onboarding, and tailored features — without heavy integration or licensing overhead.",
-    longDesc:
-      "EmbedFAST is a production-grade framework for embedding Power BI into SaaS products. It handles tenant isolation, token lifecycle, theming, and usage telemetry — so your engineering team focuses on product, not on plumbing.",
-    heroIcon: <Code24Regular />,
-    image: illustration("embed"),
-    tags: ["Power BI", "SaaS"],
-    features: [
-      { title: "Multi-tenant security", desc: "RLS, OLS, and workspace partitioning patterns proven across enterprise SaaS deployments." },
-      { title: "Token management", desc: "Automated embed-token rotation and capacity assignment." },
-      { title: "White-label theming", desc: "Match your product's brand without forking Power BI themes." },
-      { title: "Usage telemetry", desc: "Built-in instrumentation for adoption, performance, and feature usage." },
-    ],
-    useCases: [
-      { industry: "SaaS ISVs", scenario: "Ship customer-facing analytics in weeks instead of quarters." },
-      { industry: "Enterprise apps", scenario: "Embed governed Power BI into internal portals at scale." },
-    ],
-    platforms: ["Power BI Embedded", "Azure", "React / .NET"],
-    impact: [
-      { value: "10×", label: "Faster than building embedding from scratch" },
-      { value: "40+", label: "SaaS products shipped" },
-      { value: "99.95%", label: "Embed-token availability SLO" },
-    ],
-  },
-  {
     slug: "ai-datalens",
     initials: "AI",
     name: "AI-DataLens",
     tagline: "Conversational analytics",
     shortDesc:
-      "Interact with enterprise datasets in natural language. No SQL or DAX — ask questions and get instant answers, with row-level security and audit preserved.",
+      "AI Data Lens - Accelerate data-driven decision-making with natural language access to enterprise datasets. Users can ask questions and receive instant answers without technical expertise, while preserving row-level security, governance, and audit compliance.",
     longDesc:
       "AI-DataLens turns Power BI semantic models into a chat interface. Business users ask questions in plain English; the agent returns governed, citation-backed answers — respecting every row-level security rule, workspace permission, and audit policy you already have in place.",
     heroIcon: <Bot24Regular />,
@@ -296,12 +267,41 @@ export const products: Product[] = [
     ],
   },
   {
+    slug: "embedfast",
+    initials: "EF",
+    name: "EmbedFAST",
+    tagline: "Power BI embedding",
+    shortDesc:
+      "EmbedFAST enables organizations to deliver embedded analytics faster and at scale. With role-based access control, unlimited tenant and workspace onboarding, and customizable experiences, it simplifies deployment, reduces licensing overhead, and helps users access insights directly within the applications they use every day.",
+    longDesc:
+      "EmbedFAST is a production-grade framework for embedding Power BI into SaaS products. It handles tenant isolation, token lifecycle, theming, and usage telemetry — so your engineering team focuses on product, not on plumbing.",
+    heroIcon: <Code24Regular />,
+    image: illustration("embed"),
+    tags: ["Power BI", "SaaS"],
+    features: [
+      { title: "Multi-tenant security", desc: "RLS, OLS, and workspace partitioning patterns proven across enterprise SaaS deployments." },
+      { title: "Token management", desc: "Automated embed-token rotation and capacity assignment." },
+      { title: "White-label theming", desc: "Match your product's brand without forking Power BI themes." },
+      { title: "Usage telemetry", desc: "Built-in instrumentation for adoption, performance, and feature usage." },
+    ],
+    useCases: [
+      { industry: "SaaS ISVs", scenario: "Ship customer-facing analytics in weeks instead of quarters." },
+      { industry: "Enterprise apps", scenario: "Embed governed Power BI into internal portals at scale." },
+    ],
+    platforms: ["Power BI Embedded", "Azure", "React / .NET"],
+    impact: [
+      { value: "10×", label: "Faster than building embedding from scratch" },
+      { value: "40+", label: "SaaS products shipped" },
+      { value: "99.95%", label: "Embed-token availability SLO" },
+    ],
+  },
+  {
     slug: "loadfast",
     initials: "LF",
     name: "LoadFAST",
     tagline: "Power BI load testing",
     shortDesc:
-      "Web-based load-testing for Power BI on Microsoft Fabric — simulates real-time user traffic to right-size capacity, prevent slowdowns, and cut over-provisioning.",
+      "LoadFAST gives organizations a scalable way to validate Microsoft Fabric and Power BI performance before deployment. By simulating concurrent users, measuring report and visual load times, and identifying performance bottlenecks, LoadFAST helps teams optimize reports, accurately size Fabric capacity, and deliver a consistent user experience with confidence.",
     longDesc:
       "LoadFAST is a web application that load-tests Power BI environments on Microsoft Fabric. Build collections of reports and pages, simulate concurrent users and real interactions (slicers, filters, RLS), and get capacity-sizing insights — so you avoid both throttling and over-provisioning.",
     heroIcon: <CloudArrowUp24Regular />,
@@ -330,7 +330,7 @@ export const products: Product[] = [
     name: "CertyFAST",
     tagline: "Power BI quality control",
     shortDesc:
-      "Streamlining Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.",
+      "CertyFAST helps organizations build and maintain high-quality Power BI semantic models. By automating error detection, DAX standardization, and documentation, it improves consistency, reduces development effort, and ensures adherence to modeling best practices.",
     longDesc:
       "CertyFAST runs your Power BI certification gate as code. Every promoted report passes through automated lineage, performance, accessibility, and data-quality checks — so certified reports actually mean something.",
     heroIcon: <ShieldCheckmark24Regular />,

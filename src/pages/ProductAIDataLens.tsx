@@ -38,7 +38,7 @@ export function ProductAIDataLens() {
             <span className={s.eyebrow}>Intelligent data interaction</span>
             <h1 className={s.h1}>AI-DataLens</h1>
             <p className={s.heroSub}>
-              Transform how users interact with data by enabling natural-language queries and delivering instant, intelligent insights. Unlock a new way to interact with your data.
+             AI Data Lens - Accelerate data-driven decision-making with natural language access to enterprise datasets. Users can ask questions and receive instant answers without technical expertise, while preserving row-level security, governance, and audit compliance.
             </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
