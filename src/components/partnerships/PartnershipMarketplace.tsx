@@ -162,13 +162,12 @@ export function PartnershipMarketplace({
 
         <div className={s.ctaContainer}>
           <Button
-            appearance="primary"
+            appearance="secondary"
             size="large"
-            icon={<ArrowRight20Regular />}
+            className="maq-equal-cta"
             iconPosition="after"
             as="a"
             href={ctaHref}
-            target="_blank"
             rel="noopener noreferrer"
           >
             {ctaLabel}
