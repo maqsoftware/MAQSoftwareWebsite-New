@@ -321,13 +321,13 @@ export function AboutWhoWeAre() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <h1 className={s.h1}>Who we are</h1>
-          <p className={s.heroSub}>
+          {/* <p className={s.heroSub}>
             We are a Microsoft Fabric Featured Partner who enables leading
             companies to accelerate their business intelligence and analytics
             initiatives. Our solutions enable our clients to improve their
             operations, reduce costs, increase sales, and build stronger
             customer relationships.
-          </p>
+          </p> */}
         </div>
       </section>
 

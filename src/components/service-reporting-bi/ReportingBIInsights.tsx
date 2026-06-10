@@ -96,9 +96,9 @@ export function ReportingBIInsights() {
         <div className={s.head}>
           <span className={s.eyebrow}>Insights</span>
           <h2 className={s.title}>Our insights &amp; analytics insights</h2>
-          <p className={s.sub}>
+          {/* <p className={s.sub}>
             See our research that goes into optimizing our insights &amp; analytics service.
-          </p>
+          </p> */}
         </div>
         <div className={s.grid}>
           {insights.map((i) => (

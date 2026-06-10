@@ -285,9 +285,9 @@ export function AboutEvents() {
         <div className={s.heroInner}>
           <span className={s.eyebrow}>EVENTS</span>
           <h1 className={s.h1}>Connect With MAQ Software</h1>
-          <p className={s.heroSub}>
+          {/* <p className={s.heroSub}>
             Stay informed about upcoming conferences, webinars, workshops, and industry events where MAQ Software experts share insights on Data, AI, Analytics, and Cloud technologies.
-          </p>
+          </p> */}
         </div>
       </section>
 
