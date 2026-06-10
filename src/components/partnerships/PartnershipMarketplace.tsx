@@ -56,7 +56,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: "1px solid var(--maq-red)",
       boxShadow: "0 8px 24px rgba(0,0,0,0.04)",
-      transform: "translateY(-4px)",
     },
   },
   bulletGroupTitle: {

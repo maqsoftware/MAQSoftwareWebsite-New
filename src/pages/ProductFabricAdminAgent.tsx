@@ -193,7 +193,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: `1px solid var(--maq-red)`,
       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-      transform: "translateY(-2px)",
     },
   },
   caseTitle: {
@@ -294,7 +293,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: `1px solid var(--maq-red)`,
       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-      transform: "translateY(-2px)",
     },
   },
   mktImg: {
@@ -648,4 +646,3 @@ export function ProductFabricAdminAgent() {
     </>
   );
 }
-

@@ -1,10 +1,11 @@
 import type { ReactNode } from "react";
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import {
   Lightbulb24Regular,
   Settings24Regular,
   Rocket24Regular,
 } from "@fluentui/react-icons";
+import { FeatureCard } from "../cards/FeatureCard";
 
 export interface OutcomeItem {
   icon: ReactNode;
@@ -45,35 +46,6 @@ const useStyles = makeStyles({
     gap: "16px",
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "10px",
-    padding: "24px",
-    background: "#fff",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
-  },
-  iconBox: {
-    width: "44px",
-    height: "44px",
-    borderRadius: "10px",
-    background: "var(--maq-red-pale)",
-    color: "var(--maq-red)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "14px",
-  },
-  name: {
-    fontSize: "17px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    marginBottom: "8px",
-  },
-  desc: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0 },
 });
 
 interface Outcome {
@@ -116,11 +88,12 @@ export function ServiceOutcomes({
         </div>
         <div className={s.grid}>
           {outcomes.map((o) => (
-            <div key={o.title} className={s.card}>
-              <div className={s.iconBox}>{o.icon}</div>
-              <div className={s.name}>{o.title}</div>
-              <p className={s.desc}>{o.desc}</p>
-            </div>
+            <FeatureCard
+              key={o.title}
+              icon={o.icon}
+              name={o.title}
+              description={o.desc}
+            />
           ))}
         </div>
       </div>

@@ -49,7 +49,7 @@ export const useProductPageStyles = makeStyles({
   featDesc: { fontSize: "13.5px", color: "var(--maq-gray-700)", lineHeight: 1.6, margin: 0 },
 
   caseGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "1fr" } },
-  caseCard: { display: "flex", flexDirection: "column", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "12px", padding: "22px", background: "#fff", minHeight: "160px", transition: "all 0.2s", ":hover": { border: `1px solid var(--maq-red)`, boxShadow: "0 6px 16px rgba(0,0,0,0.06)", transform: "translateY(-2px)" } },
+  caseCard: { display: "flex", flexDirection: "column", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "12px", padding: "22px", background: "#fff", minHeight: "160px", transition: "all 0.2s", ":hover": { border: `1px solid var(--maq-red)`, boxShadow: "0 6px 16px rgba(0,0,0,0.06)" } },
   caseTag: { alignSelf: "flex-start", marginBottom: "12px" },
   casePlaceholderTitle: { fontSize: "14px", fontWeight: 700, color: "var(--maq-gray-600)", marginBottom: "8px" },
   casePlaceholderText: { fontSize: "13px", color: "var(--maq-gray-600)", fontStyle: "italic" },
@@ -72,7 +72,7 @@ export const useProductPageStyles = makeStyles({
   supportTd: { padding: "12px 16px", fontSize: "13px", color: "var(--maq-gray-700)", borderBottom: `1px solid ${tokens.colorNeutralStroke2}` },
 
   mktGrid: { display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" }, "@media (max-width: 640px)": { gridTemplateColumns: "1fr" } },
-  mktCard: { background: "#fff", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "10px", overflow: "hidden", display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", transition: "all 0.2s", ":hover": { border: `1px solid var(--maq-red)`, boxShadow: "0 6px 16px rgba(0,0,0,0.06)", transform: "translateY(-2px)" } },
+  mktCard: { background: "#fff", border: `1px solid ${tokens.colorNeutralStroke2}`, borderRadius: "10px", overflow: "hidden", display: "flex", flexDirection: "column", textDecoration: "none", color: "inherit", transition: "all 0.2s", ":hover": { border: `1px solid var(--maq-red)`, boxShadow: "0 6px 16px rgba(0,0,0,0.06)" } },
   mktImg: { height: "100px", background: "linear-gradient(135deg, var(--maq-red-pale) 0%, var(--maq-off-white) 60%, var(--maq-surface-cream) 100%)", borderBottom: "1px solid var(--maq-border)" },
   mktBody: { padding: "16px 18px 20px", display: "flex", flexDirection: "column", flex: 1, gap: "8px" },
   mktPill: { alignSelf: "flex-start", fontSize: "10px", fontWeight: 700, color: "var(--maq-red)", background: "var(--maq-red-pale)", textTransform: "uppercase", letterSpacing: "0.06em", padding: "3px 8px", borderRadius: "4px", marginBottom: "10px" },
@@ -90,4 +90,3 @@ export const useProductPageStyles = makeStyles({
     marginTop: "4px",
   },
 });
-

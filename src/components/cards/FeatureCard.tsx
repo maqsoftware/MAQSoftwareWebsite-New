@@ -1,0 +1,164 @@
+import type { ReactNode } from "react";
+import { makeStyles, tokens } from "@fluentui/react-components";
+
+const useStyles = makeStyles({
+  card: {
+    backgroundColor: "#fff",
+    border: `1px solid ${tokens.colorNeutralStroke1}`,
+    borderRadius: "12px",
+    padding: "24px",
+    transition: "all 0.2s ease",
+    display: "block",
+    width: "100%",
+    textAlign: "left",
+  },
+  clickable: { cursor: "pointer" },
+  redTone: {
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    },
+  },
+  blueTone: {
+    ":hover": {
+      border: "1px solid var(--maq-blue)",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    },
+  },
+  interactiveBorder: { border: `1px solid ${tokens.colorNeutralStroke2}` },
+  titleRow: {
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+    marginBottom: "12px",
+  },
+  iconBox: {
+    width: "44px",
+    height: "44px",
+    borderRadius: "10px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexShrink: 0,
+  },
+  name: { fontSize: "20px", fontWeight: 700, lineHeight: 1.2, margin: 0 },
+  heading: {
+    fontSize: "12px",
+    fontWeight: 500,
+    marginBottom: "10px",
+    textTransform: "uppercase",
+    letterSpacing: "0.05em",
+    lineHeight: 1.4,
+  },
+  tagline: {
+    fontSize: "13.5px",
+    lineHeight: 1.6,
+    marginBottom: "12px",
+  },
+  desc: { fontSize: "13.5px", lineHeight: 1.6 },
+  bulletList: {
+    margin: "0",
+    paddingLeft: "18px",
+    display: "grid",
+    gap: "6px",
+  },
+  bullet: {
+    fontSize: "13.5px",
+    lineHeight: 1.5,
+  },
+});
+
+export interface FeatureCardProps {
+  icon?: ReactNode;
+  name: string;
+  heading?: string;
+  tagline?: string;
+  description?: string;
+  bullets?: string[];
+  href?: string;
+  onClick?: () => void;
+  className?: string;
+  tone?: "red" | "blue";
+}
+
+export function FeatureCard({
+  icon,
+  name,
+  heading,
+  tagline,
+  description,
+  bullets,
+  href,
+  onClick,
+  className,
+  tone = "red",
+}: FeatureCardProps) {
+  const s = useStyles();
+  const interactive = Boolean(href || onClick);
+  const accent = tone === "blue" ? "var(--maq-blue)" : "var(--maq-red)";
+  const accentPale = tone === "blue" ? "var(--maq-blue-pale)" : "var(--maq-red-pale)";
+  const titleColor = tone === "blue" ? "var(--maq-navy)" : "var(--maq-black)";
+  const textColor = tone === "blue" ? "var(--maq-text-700)" : "var(--maq-gray-600)";
+  const toneClass = tone === "blue" ? s.blueTone : s.redTone;
+  const cardClass = `${s.card}${interactive ? ` ${s.clickable} ${s.interactiveBorder} ${toneClass}` : ""}${className ? ` ${className}` : ""}`;
+
+  const content = (
+    <>
+      <div className={s.titleRow}>
+        {icon ? (
+          <div className={s.iconBox} style={{ backgroundColor: accentPale, color: accent }}>
+            {icon}
+          </div>
+        ) : null}
+        <h3 className={s.name} style={{ color: titleColor }}>
+          {name}
+        </h3>
+      </div>
+      {heading ? (
+        <div className={s.heading} style={{ color: accent }}>
+          {heading}
+        </div>
+      ) : null}
+      {tagline ? (
+        <div className={s.tagline} style={{ color: textColor }}>
+          {tagline}
+        </div>
+      ) : null}
+      {bullets && bullets.length > 0 ? (
+        <ul className={s.bulletList}>
+          {bullets.map((item) => (
+            <li key={item} className={s.bullet} style={{ color: textColor }}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      ) : description ? (
+        <div className={s.desc} style={{ color: textColor }}>
+          {description}
+        </div>
+      ) : null}
+    </>
+  );
+
+  if (href) {
+    return (
+      <a className={cardClass} href={href}>
+        {content}
+      </a>
+    );
+  }
+
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        className={cardClass}
+        onClick={onClick}
+      >
+        {content}
+      </button>
+    );
+  }
+
+  return <div className={cardClass}>{content}</div>;
+}
