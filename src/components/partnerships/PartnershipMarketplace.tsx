@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   },
   headLeft: {
     marginBottom: "32px",
+    textAlign: "center",
   },
   eyebrow: {
     fontSize: "12px",
@@ -38,6 +39,9 @@ const useStyles = makeStyles({
     marginTop: "12px",
     marginBottom: "0",
     maxWidth: "800px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
   },
   grid: {
     display: "grid",
@@ -66,11 +70,13 @@ const useStyles = makeStyles({
     marginBottom: "20px",
     position: "relative",
     paddingBottom: "8px",
+    textAlign: "center",
     "::after": {
       content: '""',
       position: "absolute",
       bottom: 0,
-      left: 0,
+      left: "50%",
+      transform: "translateX(-50%)",
       width: "32px",
       height: "2px",
       backgroundColor: "var(--maq-red)",
@@ -101,7 +107,7 @@ const useStyles = makeStyles({
   },
   ctaContainer: {
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "center",
   },
 });
 

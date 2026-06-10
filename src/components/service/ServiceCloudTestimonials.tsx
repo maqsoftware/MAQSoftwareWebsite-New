@@ -3,7 +3,7 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,

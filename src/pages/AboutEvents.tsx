@@ -58,11 +58,13 @@ const useStyles = makeStyles({
   inner: { maxWidth: "1240px", margin: "0 auto" },
   sectionHead: {
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "end",
+    justifyContent: "center",
+    alignItems: "center",
     gap: "16px",
+    flexDirection: "column",
     marginBottom: "22px",
     flexWrap: "wrap",
+    textAlign: "center",
   },
   sectionTitle: {
     fontSize: "28px",
@@ -76,6 +78,7 @@ const useStyles = makeStyles({
     fontSize: "14px",
     color: "var(--maq-gray-700)",
     margin: 0,
+    textAlign: "center",
   },
   upcomingGrid: {
     display: "grid",
