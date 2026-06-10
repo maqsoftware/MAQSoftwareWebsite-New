@@ -192,8 +192,9 @@ export function ServiceCapabilitiesData() {
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
             <Button
-              appearance="outline"
-              className={s.knowMore}
+              appearance="secondary"
+              size="large"
+              className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
                 handleContactClick(sel.name + " - Data & AI Platforms")
               }
