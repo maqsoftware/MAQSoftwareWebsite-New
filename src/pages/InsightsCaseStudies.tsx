@@ -131,7 +131,7 @@ useEffect(() => {
       <InsightsHero
         title="Case Studies"
         subhead="Explore real-world outcomes across AI, data, reporting, cloud, and security implementations delivered by MAQ Software."
-        ctaLabel="Discuss your project"
+        ctaLabel="Contact Us"
       />
 
       <InsightsResourceNav active="case-studies" />
