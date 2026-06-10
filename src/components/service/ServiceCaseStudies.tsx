@@ -22,7 +22,7 @@ export interface ServiceCaseStudiesProps {
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "24px" },
+  head: { textAlign: "center", marginBottom: "24px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -161,7 +161,7 @@ export function ServiceCaseStudies({
               <h3 className={s.cardTitle}>{c.title}</h3>
               <p className={s.teaser}>{c.teaser}</p>
               <span className={s.read}>
-                Read full story
+                Read full case study
               </span>
             </a>
           ))}

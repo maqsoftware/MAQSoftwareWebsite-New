@@ -140,7 +140,7 @@ export function CaseStudies() {
               <div className={s.title2}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <span className={s.more}>
-                Read full story
+                Read full case study
               </span>
             </a>
           ))}

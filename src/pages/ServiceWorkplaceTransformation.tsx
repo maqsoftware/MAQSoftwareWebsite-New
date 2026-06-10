@@ -45,6 +45,7 @@ const useStyles = makeStyles({
         textTransform: "uppercase",
         marginBottom: "12px",
         display: "block",
+        textAlign: "center",
     },
     h1: {
         fontSize: "40px",
@@ -53,6 +54,7 @@ const useStyles = makeStyles({
         color: "var(--maq-black)",
         letterSpacing: "-0.02em",
         margin: "0 0 16px",
+        textAlign: "center",
     },
     heroSub: {
         fontSize: "15px",
@@ -60,8 +62,11 @@ const useStyles = makeStyles({
         color: "var(--maq-gray-600)",
         marginBottom: "24px",
         maxWidth: "640px",
+        marginLeft: "auto",
+        marginRight: "auto",
+        textAlign: "center",
     },
-    btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
+    btns: { display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" },
 
     // Hero mosaic
     visual: {
@@ -120,7 +125,7 @@ const useStyles = makeStyles({
     section: { padding: "48px 32px", backgroundColor: "#fff" },
     sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
     inner: { maxWidth: "1240px", margin: "0 auto" },
-    head: { marginBottom: "20px" },
+    head: { marginBottom: "20px", textAlign: "center" },
     headCentered: { textAlign: "center", marginBottom: "28px" },
     secEyebrow: {
         fontSize: "12px",
@@ -145,7 +150,7 @@ const useStyles = makeStyles({
         margin: "0 0 6px",
         letterSpacing: "-0.01em",
     },
-    secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "780px" },
+    secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
     // Capabilities — tabbed list + detail
     panel: {
@@ -749,7 +754,7 @@ export function ServiceWorkplaceTransformation() {
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>
-                                    Read full story
+                                    Read full case study
                                 </span>
                             </a>
                         ))}

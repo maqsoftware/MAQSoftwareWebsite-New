@@ -161,6 +161,7 @@ const useStyles = makeStyles({
     color: "var(--maq-gray-700)",
     margin: "0 auto",
     maxWidth: "720px",
+    textAlign: "center",
   },
   talksGrid: {
     display: "grid",

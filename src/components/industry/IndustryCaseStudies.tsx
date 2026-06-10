@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -121,7 +121,7 @@ export function IndustryCaseStudies({
               <div className={s.cardTitle}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>
               <span className={s.link}>
-                Read full story
+                Read full case study
               </span>
             </a>
           ))}
