@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   sub: {
     fontSize: "14px",
     color: "var(--maq-gray-600)",
-    margin: 0,
+    margin: "0 auto",
     maxWidth: "720px",
   },
   grid: {
