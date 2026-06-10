@@ -156,9 +156,9 @@ export function Hero() {
           <h1 className={s.h1}>
             Harness data to drive <em className={s.em}>faster</em> decisions with AI-powered analytics
           </h1>
-          <p className={s.sub}>
+          {/* <p className={s.sub}>
          MAQ Software helps enterprises transform data into decisions and AI into measurable business outcomes. Backed by 26 years of delivery excellence and a global team of certified engineers, we enable organizations to scale AI and agentic automation, modernize data and analytics platforms, and accelerate cloud transformation—delivering results with speed, quality, and confidence.
-          </p>
+          </p> */}
           <div className={s.btns}>
             <Button
               appearance="primary"

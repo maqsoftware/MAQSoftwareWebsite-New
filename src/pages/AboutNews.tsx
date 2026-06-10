@@ -288,10 +288,10 @@ export function AboutNews() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <h1 className={s.h1}>News</h1>
-          <p className={s.heroSub}>
+          {/* <p className={s.heroSub}>
             Updates on events, partnerships, product launches, and what's happening
             across MAQ Software.
-          </p>
+          </p> */}
         </div>
       </section>
 

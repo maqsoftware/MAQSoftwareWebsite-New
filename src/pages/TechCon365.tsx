@@ -189,8 +189,8 @@ const useStyles = makeStyles({
   },
   bodyText: {
     fontSize: "14px",
-    color: "var(--maq-gray-700)",
     lineHeight: 1.65,
+    color: "var(--maq-gray-800)",
     margin: 0,
   },
   talkDetails: {
@@ -432,12 +432,12 @@ export function TechCon365() {
         <div className={s.heroInner}>
           <div>
             <h1 className={s.h1}>Join <em className={s.emText}> MAQ Software</em> at TechCon 365 at Booth #20–21</h1>
-            <p className={s.sub}>
+            {/* <p className={s.sub}>
               Learn how we help organizations modernize
               their data platforms with Microsoft Fabric, Power BI, and
               AI-powered analytics - and connect productivity to insights with
               Power Platform and Copilot.
-            </p>
+            </p> */}
             <div className={s.promo}>
               <TicketDiagonal24Regular />
               Use code "MAQ15" when registering to get 15% off your conference pass.
@@ -586,10 +586,10 @@ export function TechCon365() {
           <div className={s.storyPanel}>
             <span className={s.eyebrow}>Talk to us</span>
             <h2 className={s.title}>Ready to move faster?</h2>
-            <p className={s.sectionSub}>
+            {/* <p className={s.sectionSub}>
               Tell us where you are. We'll show you what's possible in 30
               minutes - no obligation.
-            </p>
+            </p> */}
             <div className={s.storyButtons}>
               <Button
                 onClick={() =>

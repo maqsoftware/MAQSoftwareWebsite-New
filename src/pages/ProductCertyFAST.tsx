@@ -37,9 +37,9 @@ export function ProductCertyFAST() {
           <div>
             <span className={s.eyebrow}>Power BI quality control</span>
             <h1 className={s.h1}>CertyFAST</h1>
-            <p className={s.heroSub}>
+            {/* <p className={s.heroSub}>
               CertyFAST helps organizations build and maintain high-quality Power BI semantic models. By automating error detection, DAX standardization, and documentation, it improves consistency, reduces development effort, and ensures adherence to modeling best practices.
-            </p>
+            </p> */}
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</Button>
               <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</Button>

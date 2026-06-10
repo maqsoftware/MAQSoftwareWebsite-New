@@ -155,7 +155,7 @@ export function ServiceProducts({
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
           <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          {/* <p className={s.sub}>{subhead}</p> */}
         </div>
         <div className={s.grid}>
           {products.map((p) => {

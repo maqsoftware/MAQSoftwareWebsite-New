@@ -44,9 +44,9 @@ export function ProductLoadFAST() {
           <div>
             <span className={s.eyebrow}>Automated Power BI load testing accelerator</span>
             <h1 className={s.h1}>LoadFAST</h1>
-            <p className={s.heroSub}>
+            {/* <p className={s.heroSub}>
               Microsoft Fabric adoption is growing fast, but estimating the right capacity for reporting workloads remains a challenge. LoadFAST automates Power BI load testing by simulating concurrent users, measuring page load time, and identifying slow reports and visuals so teams can validate performance and plan Fabric capacity with confidence.
-            </p>
+            </p> */}
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</Button>
               <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
