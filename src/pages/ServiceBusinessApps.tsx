@@ -550,11 +550,11 @@ export function ServiceBusinessApps() {
                     <div>
                         <span className={s.eyebrow}>Business Applications &amp; Automation</span>
                         <h1 className={s.h1}>AI-native business apps on Microsoft Power Platform</h1>
-                        {/* <p className={s.heroSub}>
+                        <p className={s.heroSub}>
                             Low-code and pro-code apps built on Power Apps, Dynamics 365, and
                             Microsoft 365 — paired with Copilot Studio agents and Power Automate
                             flows that retire manual handoffs and embed AI into everyday operations.
-                        </p> */}
+                        </p>
                         <div className={s.btns}>
                             <Button
                                 appearance="primary"
@@ -631,10 +631,10 @@ export function ServiceBusinessApps() {
                     <div className={s.head}>
                         <span className={s.secEyebrow}>Our expertise</span>
                         <h2 className={s.title}>Our business applications &amp; automation capabilities</h2>
-                        {/* <p className={s.secSub}>
+                        <p className={s.secSub}>
                             Four capability pillars that modernize legacy applications and automate
                             operations across the Microsoft business apps stack.
-                        </p> */}
+                        </p>
                     </div>
                     <div className={s.panel}>
                         <div>
@@ -687,10 +687,10 @@ export function ServiceBusinessApps() {
                     <div className={s.headCentered}>
                         <span className={s.secEyebrow}>Business outcomes</span>
                         <h2 className={s.titleSm}>Your business outcomes</h2>
-                        {/* <p className={s.secSub}>
+                        <p className={s.secSub}>
                             What organizations gain when legacy apps and manual processes are modernized
                             with engineering discipline.
-                        </p> */}
+                        </p>
                     </div>
                     <div className={s.outcomesGrid}>
                         {outcomes.map((o) => (
@@ -744,10 +744,10 @@ export function ServiceBusinessApps() {
                     <div className={s.head}>
                         <span className={s.secEyebrow}>Insights</span>
                         <h2 className={s.titleSm}>Our business apps and process automation insights</h2>
-                        {/* <p className={s.secSub}>
+                        <p className={s.secSub}>
                             See our research that goes into optimizing our business apps and process
                             automation service.
-                        </p> */}
+                        </p>
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (

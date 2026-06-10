@@ -259,7 +259,7 @@ export function ProductDetail() {
             </Link>
             <span className={s.tagline}>{product.tagline}</span>
             <h1 className={s.h1}>{product.name}</h1>
-            {/* <p className={s.sub}>{product.longDesc}</p> */}
+            <p className={s.sub}>{product.longDesc}</p>
             <div className={s.btns}>
               <Button
                 appearance="primary"

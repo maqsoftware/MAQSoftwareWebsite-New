@@ -189,10 +189,10 @@ export function ReportingBICapabilities() {
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
           <h2 className={s.title}>Our insights &amp; analytics capabilities</h2>
-          {/* <p className={s.sub}>
+          <p className={s.sub}>
             Four capability pillars that turn raw data into governed, high-performance Power BI and
             Microsoft Fabric reporting.
-          </p> */}
+          </p>
         </div>
         <div className={s.panel}>
           <div>

@@ -215,7 +215,7 @@ export function ServiceCapabilities({
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
           <h2 className={s.title}>{title}</h2>
-          {/* <p className={s.sub}>{subhead}</p> */}
+          <p className={s.sub}>{subhead}</p>
         </div>
         <div className={s.panel}>
           <div>

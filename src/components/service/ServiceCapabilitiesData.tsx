@@ -182,9 +182,9 @@ export function ServiceCapabilitiesData() {
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
           <h2 className={s.title}>Our data &amp; AI platform capabilities</h2>
-          {/* <p className={s.sub}>
+          <p className={s.sub}>
             Capabilities that turn data into reliable, scalable analytics and real-time decisioning.
-          </p> */}
+          </p>
         </div>
         <div className={s.panel}>
           <div>

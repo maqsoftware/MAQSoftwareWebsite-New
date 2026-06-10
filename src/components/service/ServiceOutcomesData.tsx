@@ -92,9 +92,9 @@ export function ServiceOutcomesData() {
         <div className={s.head}>
           <span className={s.eyebrow}>Business outcomes</span>
           <h2 className={s.title}>Your business outcomes</h2>
-          {/* <p className={s.sub}>
+          <p className={s.sub}>
             What organizations gain when data &amp; analytics are delivered with engineering discipline.
-          </p> */}
+          </p>
         </div>
         <div className={s.grid}>
           {outcomes.map((o) => (

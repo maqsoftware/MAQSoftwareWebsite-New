@@ -49,9 +49,9 @@ export function ProductMigrateFAST() {
           <div>
             <span className={s.eyebrow}>AI-powered Fabric migration accelerator</span>
             <h1 className={s.h1}>MigrateFAST</h1>
-            {/* <p className={s.heroSub}>
+            <p className={s.heroSub}>
               MigrateFAST automates the end-to-end migration process—from legacy environment assessment and dependency analysis to report conversion, DAX generation, and validation. Organizations can migrate from Tableau, Cognos, SAP BusinessObjects, SAP Crystal Reports, MicroStrategy, Qlik, Alteryx, and Informatica with greater speed, accuracy, and confidence—reducing migration costs and accelerating time to value on Microsoft Fabric.
-            </p> */}
+            </p>
             <div className={s.btns}>
               <Button appearance="primary" size="large" onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact Us</Button>
             </div>

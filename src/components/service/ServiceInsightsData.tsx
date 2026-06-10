@@ -93,7 +93,7 @@ export function ServiceInsightsData() {
         <div className={s.head}>
           <span className={s.eyebrow}>Insights</span>
           <h2 className={s.title}>Our data &amp; analytics insights</h2>
-          {/* <p className={s.sub}>See our research that goes into optimizing our data &amp; analytics service.</p> */}
+          <p className={s.sub}>See our research that goes into optimizing our data &amp; analytics service.</p>
         </div>
         <div className={s.grid}>
           {insights.map((i) => (

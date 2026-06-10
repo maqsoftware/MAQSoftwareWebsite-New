@@ -72,7 +72,7 @@ export function PartnershipHero({
       <div className={s.grid}>
         <div>
           <h1 className={s.h1}>{h1}</h1>
-          {/* <p className={s.sub}>{subhead}</p> */}
+          <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
             <Button
               appearance="primary"

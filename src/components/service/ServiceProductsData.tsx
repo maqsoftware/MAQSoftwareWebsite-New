@@ -135,7 +135,7 @@ export function ServiceProductsData() {
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
           <h2 className={s.title}>Data &amp; analytics products</h2>
-          {/* <p className={s.sub}>Solutions designed to improve and streamline your operations.</p> */}
+          <p className={s.sub}>Solutions designed to improve and streamline your operations.</p>
         </div>
         <div className={s.grid}>
           {products.map((p) => {

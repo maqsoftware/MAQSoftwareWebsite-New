@@ -364,7 +364,7 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
           <div>
             <span className={s.eyebrow}>{props.eyebrow}</span>
             <h1 className={s.h1}>{props.title}</h1>
-            {/* <p className={s.sub}>{props.subtitle}</p> */}
+            <p className={s.sub}>{props.subtitle}</p>
             <div className={s.promo}>
               <TicketDiagonal24Regular />
               {props.promo}
@@ -510,10 +510,10 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
           <div className={s.storyPanel}>
             <span className={s.eyebrow}>Talk to us</span>
             <h2 className={s.title}>Ready to move faster?</h2>
-            {/* <p className={s.sectionSub}>
+            <p className={s.sectionSub}>
               Tell us where you are. We'll show you what's possible in 30
               minutes - no obligation.
-            </p> */}
+            </p>
             <div className={s.storyButtons}>
               <Button
                 as="a"

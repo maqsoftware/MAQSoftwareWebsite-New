@@ -241,9 +241,9 @@ export function Contact() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <div className={s.heroLeft}>
-            {/* <p className={s.heroSub}>
+            <p className={s.heroSub}>
            MAQ Software helps organizations unlock the full potential of their data through AI, intelligent automation, analytics, and cloud technologies. From modern data platforms to generative AI and agentic solutions, we enable businesses to transform information into real-time intelligence, accelerate innovation, and drive measurable outcomes at scale.
-            </p> */}
+            </p>
 
             <div className={s.proofList}>
               <div className={s.proofItem}>

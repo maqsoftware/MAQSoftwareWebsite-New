@@ -183,11 +183,11 @@ export function ProductsHome() {
           <h1 className={s.h1}>
             Accelerators that compress months of build into weeks of value
           </h1>
-          {/* <p className={s.sub}>
+          <p className={s.sub}>
             AppSource-listed products built from 26 years of MAQ Software
             customer engagements. Every product is Microsoft-aligned, deployed
             in your tenant, and backed by our delivery teams.
-          </p> */}
+          </p>
         </div>
       </section>
 

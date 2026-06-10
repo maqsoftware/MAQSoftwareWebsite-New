@@ -113,7 +113,7 @@ export function ImpactStats({ eyebrow = "Proven outcomes", title, sub, stats }: 
         <div className={s.head}>
           <span className={s.eyebrow}>{eyebrow}</span>
           <h2 className={s.title}>{title}</h2>
-          {/* <p className={s.sub}>{sub}</p> */}
+          <p className={s.sub}>{sub}</p>
         </div>
         <div className={s.grid}>
           {stats.map((st) => (
