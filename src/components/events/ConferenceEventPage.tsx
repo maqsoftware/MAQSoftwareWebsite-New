@@ -536,12 +536,6 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 Read case studies
               </Button>
             </div>
-            <div className={s.email}>
-              Or email us directly at{" "}
-              <a className={s.emailLink} href="mailto:customersuccess@maqsoftware.com">
-                customersuccess@maqsoftware.com
-              </a>
-            </div>
           </div>
         </div>
       </section>

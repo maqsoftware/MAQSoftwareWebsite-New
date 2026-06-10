@@ -326,7 +326,6 @@ This section is the **source of truth for all rendered text** on the home page. 
 - **Subhead:** `Tell us where you are. We'll show you what's possible in 30 minutes — no obligation.`
 - **Primary button:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software`
 - **Secondary button:** `Read case studies` (arrow icon) → `#case-studies`
-- **Trailing line:** `Or email us directly at ` + link `customersuccess@maqsoftware.com` → `mailto:customersuccess@maqsoftware.com`
 
 ### 8.9 Footer
 - **Brand:** logo mark `M` + name `MAQ Software`

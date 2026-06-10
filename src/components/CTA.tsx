@@ -76,15 +76,6 @@ export function CTA() {
             Contact Us
           </Button>
         </div>
-        <div className={s.email}>
-          Or email us directly at{" "}
-          <a
-            className={s.emailLink}
-            href="mailto:customersuccess@maqsoftware.com"
-          >
-            customersuccess@maqsoftware.com
-          </a>
-        </div>
       </div>
     </section>
   );
