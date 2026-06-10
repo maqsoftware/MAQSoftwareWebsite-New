@@ -481,9 +481,9 @@ export function ProductFabricAdminAgent() {
             <h1 className={s.h1}>
               AI-powered capacity management for Microsoft Fabric
             </h1>
-            <p className={s.heroSub}>
+            {/* <p className={s.heroSub}>
             Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.
-            </p>
+            </p> */}
             <div className={s.btns}>
               <Button
                 appearance="primary"
@@ -545,10 +545,10 @@ export function ProductFabricAdminAgent() {
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Proven outcomes</span>
             <h2 className={s.titleLg}>Real impact for Microsoft Fabric platform owners</h2>
-            <p className={s.sub}>
+            {/* <p className={s.sub}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
               enterprise tenants.
-            </p>
+            </p> */}
           </div>
           <div className={s.impactGrid}>
               {impact.map((i) => (
@@ -603,10 +603,10 @@ export function ProductFabricAdminAgent() {
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Insights</span>
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
-            <p className={s.sub}>
+            {/* <p className={s.sub}>
               Get the agent from Microsoft AppSource, browse Azure Marketplace
               marketplace offers, and explore deeper guidance from MAQ Software.
-            </p>
+            </p> */}
           </div>
 
           {/* Featured banner */}

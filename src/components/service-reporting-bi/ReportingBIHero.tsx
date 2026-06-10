@@ -105,11 +105,11 @@ export function ReportingBIHero() {
         <div>
           <span className={s.eyebrow}>Insights &amp; Analytics</span>
           <h1 className={s.h1}>From legacy BI to real-time Power BI on Microsoft Fabric</h1>
-          <p className={s.sub}>
+          {/* <p className={s.sub}>
             We build, modernize, and migrate enterprise BI — moving Tableau, SAP BO, SAP Crystal,
             Qlik, Cognos, and MicroStrategy estates to Power BI on Microsoft Fabric, with semantic
             models, custom visuals, and a storytelling layer your business actually uses.
-          </p>
+          </p> */}
           <div className={s.btns}>
             <Button
               appearance="primary"

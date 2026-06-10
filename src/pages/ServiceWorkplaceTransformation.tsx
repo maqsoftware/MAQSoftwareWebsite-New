@@ -587,11 +587,11 @@ export function ServiceWorkplaceTransformation() {
                         <h1 className={s.h1}>
                             Microsoft 365 and Copilot rollouts that drive real adoption
                         </h1>
-                        <p className={s.heroSub}>
+                        {/* <p className={s.heroSub}>
                             We deploy Microsoft 365, Teams, SharePoint, Viva, and Microsoft
                             Copilot — paired with structured adoption programs and change
                             management that turn rollouts into measurable usage, not shelfware.
-                        </p>
+                        </p> */}
                         <div className={s.btns}>
                             <Button
                                 appearance="primary"
@@ -660,10 +660,10 @@ export function ServiceWorkplaceTransformation() {
                         <h2 className={s.title}>
                             Our workplace transformation capabilities
                         </h2>
-                        <p className={s.secSub}>
+                        {/* <p className={s.secSub}>
                             Four capability pillars that modernize employee experiences and unlock
                             the full value of your Microsoft 365 investment.
-                        </p>
+                        </p> */}
                     </div>
                     <div className={s.panel}>
                         <div>
@@ -716,10 +716,10 @@ export function ServiceWorkplaceTransformation() {
                     <div className={s.headCentered}>
                         <span className={s.secEyebrow}>Business outcomes</span>
                         <h2 className={s.titleSm}>Your business outcomes</h2>
-                        <p className={s.secSub}>
+                        {/* <p className={s.secSub}>
                             What organizations gain when workplace tools are deployed with
                             adoption-first engineering discipline.
-                        </p>
+                        </p> */}
                     </div>
                     <div className={s.outcomesGrid}>
                         {outcomes.map((o) => (
@@ -777,10 +777,10 @@ export function ServiceWorkplaceTransformation() {
                         <h2 className={s.titleSm}>
                             Our workplace transformation insights
                         </h2>
-                        <p className={s.secSub}>
+                        {/* <p className={s.secSub}>
                             See our research that goes into optimizing workplace productivity and
                             collaboration.
-                        </p>
+                        </p> */}
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (

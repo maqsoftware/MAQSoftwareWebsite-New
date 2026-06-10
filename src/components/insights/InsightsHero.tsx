@@ -106,7 +106,7 @@ export function InsightsHero({
         <div>
           <span className={s.eyebrow}>Insights</span>
           <h1 className={s.h1}>{title}</h1>
-          <p className={s.sub}>{subhead}</p>
+          {/* <p className={s.sub}>{subhead}</p> */}
           <div className={s.btns}>
             <Button appearance="primary" size="large" onClick={() => handleContactClick()}>
               {ctaLabel}

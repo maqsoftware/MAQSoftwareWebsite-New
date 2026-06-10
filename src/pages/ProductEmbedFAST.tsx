@@ -49,9 +49,9 @@ export function ProductEmbedFAST() {
           <div>
             <span className={s.eyebrow}>Automated Power BI embedding accelerator</span>
             <h1 className={s.h1}>EmbedFAST</h1>
-            <p className={s.heroSub}>
+            {/* <p className={s.heroSub}>
               Delivering fast, secure, and scalable analytics inside enterprise applications often comes with complex integrations, licensing overhead, and heavy development effort. EmbedFAST simplifies Power BI embedding with built-in role-based access, unlimited tenant and workspace onboarding, and customizable features so your team delivers insights at scale with minimal development effort.
-            </p>
+            </p> */}
             <div className={s.btns}>
               <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</Button>
               <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
