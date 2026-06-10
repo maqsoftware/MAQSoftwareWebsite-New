@@ -1,7 +1,9 @@
 // Press coverage is static — sourced from the bottom of maqsoftware.com/news.
-// The article list above it is fetched live from the Blogger feed:
-// https://news.maqsoftware.com/feeds/posts/default?alt=json
-// See src/pages/AboutNews.tsx for the fetcher.
+// The article list above it is fetched live from the Blogger feed via a
+// same-origin Netlify Function proxy (see netlify/functions/news-feed.mjs),
+// which returns plain JSON so the browser never executes remote code.
+
+import { safeHttpUrl } from "../lib/url";
 
 export interface NewsArticle {
   id: string;
@@ -123,7 +125,7 @@ function stripHtml(html: string): string {
 function firstImage(html: string): string | null {
   const doc = new DOMParser().parseFromString(html, "text/html");
   const img = doc.querySelector("img");
-  return img?.getAttribute("src") ?? null;
+  return safeHttpUrl(img?.getAttribute("src"));
 }
 
 // Blogger-hosted images (blogspot.com / googleusercontent.com) accept a size
@@ -150,7 +152,7 @@ function publicUrl(entry: BloggerEntry): string {
   const alt = entry.link.find(
     (l) => l.rel === "alternate" && l.type === "text/html",
   );
-  return alt?.href ?? "https://news.maqsoftware.com/";
+  return safeHttpUrl(alt?.href) ?? "https://news.maqsoftware.com/";
 }
 
 function excerpt(html: string, max = 280): string {
@@ -160,8 +162,9 @@ function excerpt(html: string, max = 280): string {
 }
 
 export function mapBloggerEntry(entry: BloggerEntry): NewsArticle {
-  const raw =
-    entry.media$thumbnail?.url ?? firstImage(entry.content.$t);
+  const raw = safeHttpUrl(
+    entry.media$thumbnail?.url ?? firstImage(entry.content.$t),
+  );
   return {
     id: entry.id.$t,
     title: entry.title.$t,
@@ -173,58 +176,24 @@ export function mapBloggerEntry(entry: BloggerEntry): NewsArticle {
   };
 }
 
-// Blogger feeds don't expose CORS headers, so we load them via JSONP
-// (the same technique the original maqsoftware.com/news page uses).
-let jsonpCounter = 0;
-function fetchJsonp<T>(url: string, timeoutMs = 15000): Promise<T> {
-  return new Promise((resolve, reject) => {
-    const parsed = new URL(url);
-    const isTrustedNewsFeed =
-      parsed.protocol === "https:" &&
-      parsed.hostname === "news.maqsoftware.com" &&
-      parsed.pathname === "/feeds/posts/default";
-    if (!isTrustedNewsFeed) {
-      reject(new Error("Blocked untrusted news feed URL"));
-      return;
-    }
-
-    const cbName = `__maqNewsCb_${Date.now()}_${jsonpCounter++}`;
-    const script = document.createElement("script");
-    const cleanup = () => {
-      delete (window as unknown as Record<string, unknown>)[cbName];
-      script.remove();
-      clearTimeout(timer);
-    };
-    const timer = setTimeout(() => {
-      cleanup();
-      reject(new Error("News feed request timed out"));
-    }, timeoutMs);
-
-    (window as unknown as Record<string, (data: T) => void>)[cbName] = (
-      data: T,
-    ) => {
-      cleanup();
-      resolve(data);
-    };
-    script.onerror = () => {
-      cleanup();
-      reject(new Error("Failed to load news feed"));
-    };
-    const sep = url.includes("?") ? "&" : "?";
-    script.src = `${url}${sep}callback=${cbName}`;
-    script.referrerPolicy = "no-referrer";
-    document.head.appendChild(script);
-  });
-}
+// The feed is fetched through a same-origin Netlify Function proxy, which
+// returns plain JSON. Nothing from the remote server is ever executed.
+const NEWS_PROXY_URL = "/.netlify/functions/news-feed";
 
 export async function fetchNews(
   startIndex = 1,
   maxResults = 10,
 ): Promise<{ articles: NewsArticle[]; total: number }> {
-  const url = `${NEWS_FEED_URL}&start-index=${startIndex}&max-results=${maxResults}`;
-  const data = await fetchJsonp<BloggerFeedResponse>(url);
-  const entries = data.feed.entry ?? [];
-  const total = Number(data.feed.openSearch$totalResults?.$t ?? entries.length);
+  const url =
+    `${NEWS_PROXY_URL}?start=${encodeURIComponent(String(startIndex))}` +
+    `&limit=${encodeURIComponent(String(maxResults))}`;
+  const res = await fetch(url, { headers: { Accept: "application/json" } });
+  if (!res.ok) {
+    throw new Error(`News feed request failed (${res.status})`);
+  }
+  const data = (await res.json()) as BloggerFeedResponse;
+  const entries = data.feed?.entry ?? [];
+  const total = Number(data.feed?.openSearch$totalResults?.$t ?? entries.length);
   return { articles: entries.map(mapBloggerEntry), total };
 }
 

@@ -10,6 +10,7 @@
 // automatically on /careers — no code change or deploy needed.
 
 import { sanitizeExternalHtml } from "../lib/sanitizeHtml";
+import { safeHttpUrl } from "../lib/url";
 
 export interface JobOpening {
   id: string;
@@ -30,11 +31,6 @@ export type CareersRegion = "us" | "india";
 
 export const CAREERS_BLOG_ID = "4733689656779828601";
 export const JOBSCORE_URL = "https://careers.jobscore.com/careers/maqsoftware";
-
-const REGION_LABEL: Record<CareersRegion, string> = {
-  us: "Openings - US",
-  india: "Openings - India",
-};
 
 // ── Blogger feed types (minimal) ───────────────────────────────────────────
 interface BloggerText {
@@ -58,48 +54,11 @@ interface BloggerFeedResponse {
   };
 }
 
-// ── JSONP loader ───────────────────────────────────────────────────────────
-let jsonpCounter = 0;
-function fetchJsonp<T>(url: string, timeoutMs = 15000): Promise<T> {
-  return new Promise((resolve, reject) => {
-    const parsed = new URL(url);
-    const isTrustedBloggerFeed =
-      parsed.protocol === "https:" &&
-      parsed.hostname === "www.blogger.com" &&
-      parsed.pathname.startsWith(`/feeds/${CAREERS_BLOG_ID}/posts/default/`);
-    if (!isTrustedBloggerFeed) {
-      reject(new Error("Blocked untrusted careers feed URL"));
-      return;
-    }
-
-    const cbName = `__maqCareersCb_${Date.now()}_${jsonpCounter++}`;
-    const script = document.createElement("script");
-    const cleanup = () => {
-      delete (window as unknown as Record<string, unknown>)[cbName];
-      script.remove();
-      clearTimeout(timer);
-    };
-    const timer = setTimeout(() => {
-      cleanup();
-      reject(new Error("Careers feed request timed out"));
-    }, timeoutMs);
-
-    (window as unknown as Record<string, (data: T) => void>)[cbName] = (
-      data: T,
-    ) => {
-      cleanup();
-      resolve(data);
-    };
-    script.onerror = () => {
-      cleanup();
-      reject(new Error("Failed to load careers feed"));
-    };
-    const sep = url.includes("?") ? "&" : "?";
-    script.src = `${url}${sep}callback=${cbName}`;
-    script.referrerPolicy = "no-referrer";
-    document.head.appendChild(script);
-  });
-}
+// ── Feed loader (via same-origin Netlify Function proxy) ────────────────────
+// The proxy (netlify/functions/careers-feed.mjs) fetches the Blogger feed
+// server-side and returns plain JSON, so nothing from the remote server is
+// ever executed in the browser.
+const CAREERS_PROXY_URL = "/.netlify/functions/careers-feed";
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 function stripHtml(html: string): string {
@@ -117,13 +76,13 @@ function publicUrl(entry: BloggerEntry): string {
   const alt = entry.link.find(
     (l) => l.rel === "alternate" && l.type === "text/html",
   );
-  return alt?.href ?? "https://www.blogger.com/";
+  return safeHttpUrl(alt?.href) ?? "https://www.blogger.com/";
 }
 
 function extractJobScoreUrl(html: string): string | null {
   // JobScore short links look like https://jsco.re/XXXXX (5–8 chars).
   const m = html.match(/https?:\/\/jsco\.re\/[A-Za-z0-9]+/);
-  return m ? m[0] : null;
+  return m ? safeHttpUrl(m[0]) : null;
 }
 
 function mapEntry(entry: BloggerEntry): JobOpening {
@@ -141,12 +100,13 @@ function mapEntry(entry: BloggerEntry): JobOpening {
 
 // ── Public API ─────────────────────────────────────────────────────────────
 export async function fetchOpenings(region: CareersRegion): Promise<JobOpening[]> {
-  const label = encodeURIComponent(REGION_LABEL[region]);
-  const url =
-    `https://www.blogger.com/feeds/${CAREERS_BLOG_ID}/posts/default/-/${label}` +
-    `?alt=json&max-results=999`;
-  const data = await fetchJsonp<BloggerFeedResponse>(url);
-  return (data.feed.entry ?? []).map(mapEntry);
+  const url = `${CAREERS_PROXY_URL}?region=${encodeURIComponent(region)}`;
+  const res = await fetch(url, { headers: { Accept: "application/json" } });
+  if (!res.ok) {
+    throw new Error(`Careers feed request failed (${res.status})`);
+  }
+  const data = (await res.json()) as BloggerFeedResponse;
+  return (data.feed?.entry ?? []).map(mapEntry);
 }
 
 // ── Static "Why MAQ" reasons (mirrors the original /careers hero) ──────────
