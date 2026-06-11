@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { makeStyles, Button, Spinner } from "@fluentui/react-components";
+import { makeStyles, Spinner } from "@fluentui/react-components";
 import { CTA } from "../components/CTA";
+import { TextButton } from "../components/buttons";
 import {
   fetchNews,
   formatPublishedDate,
@@ -307,13 +308,9 @@ export function AboutNews() {
           {error && !loading && (
             <div className={s.centerState}>
               {error}{" "}
-              <Button
-                appearance="subtle"
-                size="small"
-                onClick={() => void loadPage(page)}
-              >
+              <TextButton size="small" onClick={() => void loadPage(page)}>
                 Retry
-              </Button>
+              </TextButton>
             </div>
           )}
 
@@ -337,40 +334,36 @@ export function AboutNews() {
                   </div>
                   <h2 className={s.articleTitle}>{a.title}</h2>
                   <p className={s.articleExcerpt}>{a.excerpt}</p>
-                  <Button
+                  <TextButton
                     className={s.readMore}
-                    appearance="subtle"
-                    as="a"
                     href={a.href}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Read full article
-                  </Button>
+                  </TextButton>
                 </div>
               </article>
             ))}
 
           {!loading && !error && totalPages > 1 && (
             <nav className={s.paginationWrap} aria-label="News pagination">
-              <button
-                type="button"
+              <TextButton
                 className={s.pageBtn}
                 onClick={() => goToPage(page - 1)}
                 disabled={page === 1}
                 aria-label="Previous page"
               >
                 Prev
-              </button>
+              </TextButton>
               {pageList.map((p, idx) =>
                 p === "…" ? (
                   <span key={`e-${idx}`} className={s.pageEllipsis}>
                     …
                   </span>
                 ) : (
-                  <button
+                  <TextButton
                     key={p}
-                    type="button"
                     className={
                       p === page
                         ? `${s.pageBtn} ${s.pageBtnActive}`
@@ -380,18 +373,17 @@ export function AboutNews() {
                     aria-current={p === page ? "page" : undefined}
                   >
                     {p}
-                  </button>
+                  </TextButton>
                 ),
               )}
-              <button
-                type="button"
+              <TextButton
                 className={s.pageBtn}
                 onClick={() => goToPage(page + 1)}
                 disabled={page === totalPages}
                 aria-label="Next page"
               >
                 Next
-              </button>
+              </TextButton>
             </nav>
           )}
         </div>

@@ -1,8 +1,8 @@
-import { Button } from "@fluentui/react-components";
 // import { TrustBanner } from "../components/TrustBanner";
 import { Mail24Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
 import { useContactAction } from "../lib/contact";
 
+import { PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
@@ -43,9 +43,9 @@ export function ProductAIDataLens() {
              AI Data Lens - Accelerate data-driven decision-making with natural language access to enterprise datasets. Users can ask questions and receive instant answers without technical expertise, while preserving row-level security, governance, and audit compliance.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
+              <PrimaryButton size="large" onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
                 Contact Us
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
           <div className={s.heroImageWrap}>

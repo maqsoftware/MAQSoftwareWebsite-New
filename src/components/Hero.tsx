@@ -1,14 +1,11 @@
 import {
-  Button,
   makeStyles,
   tokens,
   Body1,
 } from "@fluentui/react-components";
-import {
-  Mail20Regular,
-} from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton, SecondaryButton } from "./buttons";
 
 const useStyles = makeStyles({
   wrap: {
@@ -134,22 +131,20 @@ export function Hero() {
             accelerators that move you from pilot to production in weeks.
           </Body1>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
               className="maq-equal-cta"
               onClick={() => handleContactClick()}
             >
               Contact Us
-            </Button>
-            <Button
-              appearance="outline"
+            </PrimaryButton>
+            <SecondaryButton
               size="large"
               className="maq-equal-cta"
               onClick={() => navigate("/insights/case-studies")}
             >
               Case Studies
-            </Button>
+            </SecondaryButton>
           </div>
         </div>
 

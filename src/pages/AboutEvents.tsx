@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Button, makeStyles, Spinner, tokens } from "@fluentui/react-components";
+import { makeStyles, Spinner, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 import { CTA } from "../components/CTA";
@@ -13,6 +13,7 @@ import {
   upcomingEvents,
   type EventCard,
 } from "../data/events";
+import { TextButton } from "../components/buttons";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
 
@@ -190,7 +191,7 @@ export function AboutEvents() {
   const loadPrevious = useCallback(async () => {
     try {
       setLoading(true);
-      setError(null);
+          setError(null);
       const data = await fetchPastEventsFromNews(30);
       setPreviousFromNews(data);
     } catch (e) {
@@ -308,13 +309,9 @@ export function AboutEvents() {
           {error && !loading && (
             <div className={s.state}>
               {error}{" "}
-              <Button
-                size="small"
-                appearance="subtle"
-                onClick={() => void loadPrevious()}
-              >
-                Retry
-              </Button>
+                 <TextButton size="small" onClick={() => void loadPrevious()}>
+                   Retry
+                 </TextButton>
             </div>
           )}
 
@@ -361,19 +358,13 @@ export function AboutEvents() {
                     {previousEvents.length} previous events
                   </span>
                   {!showAllPrevious ? (
-                    <Button
-                      appearance="subtle"
-                      onClick={() => setShowAllPrevious(true)}
-                    >
-                      Show more
-                    </Button>
+                       <TextButton onClick={() => setShowAllPrevious(true)}>
+                         Show more
+                       </TextButton>
                   ) : (
-                    <Button
-                      appearance="subtle"
-                      onClick={() => setShowAllPrevious(false)}
-                    >
-                      Show less
-                    </Button>
+                       <TextButton onClick={() => setShowAllPrevious(false)}>
+                         Show less
+                       </TextButton>
                   )}
                 </div>
               )}

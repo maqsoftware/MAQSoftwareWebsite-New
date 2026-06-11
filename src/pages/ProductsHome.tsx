@@ -1,8 +1,9 @@
-import { makeStyles, tokens, Button } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton } from "../components/buttons";
 
 const useStyles = makeStyles({
   hero: {
@@ -240,8 +241,7 @@ export function ProductsHome() {
           {/* <p className={s.ctaSub}>
             Pick any product. We'll show it running on your data.
           </p> */}
-          <Button
-            appearance="primary"
+          <PrimaryButton
             size="large"
            
             onClick={() =>
@@ -249,7 +249,7 @@ export function ProductsHome() {
             }
           >
             Request a walkthrough
-          </Button>
+          </PrimaryButton>
         </div>
       </section>
     </>

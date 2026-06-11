@@ -1,8 +1,9 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton } from "../components/buttons";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -556,10 +557,8 @@ export function ServiceBusinessApps() {
                             flows that retire manual handoffs and embed AI into everyday operations.
                         </p>
                         <div className={s.btns}>
-                            <Button
-                                appearance="primary"
+                            <PrimaryButton
                                 size="large"
-                               
                                 onClick={() =>
                                     handleContactClick(
                                         "Business Applications & Automation - MAQ Software"
@@ -567,7 +566,7 @@ export function ServiceBusinessApps() {
                                 }
                             >
                                 Contact Us
-                            </Button>
+                            </PrimaryButton>
                         </div>
                     </div>
 
@@ -641,8 +640,7 @@ export function ServiceBusinessApps() {
                             <div className={s.iconBox}>{sel.icon}</div>
                             <div className={s.detailName}>{sel.name}</div>
                             <p className={s.detailDesc}>{sel.description}</p>
-                            <Button
-                                appearance="secondary"
+                            <PrimaryButton
                                 size="large"
                                 className="maq-secondary-btn maq-equal-cta"
                                 onClick={() =>
@@ -652,7 +650,7 @@ export function ServiceBusinessApps() {
                                 }
                             >
                                 Know more
-                            </Button>
+                            </PrimaryButton>
                         </div>
                         <div className={s.rail}>
                             {capabilities.map((c, i) => (

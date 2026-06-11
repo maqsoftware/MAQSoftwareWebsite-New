@@ -1,7 +1,7 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useMemo, useState, useEffect } from "react";
 import { CTA } from "../components/CTA";
+import { TextButton } from "../components/buttons";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
@@ -124,13 +124,13 @@ export function InsightsBestPracticeGuides() {
                 Showing {visibleItems.length} of {total} guides
               </span>
               {visibleCount < total ? (
-                <Button appearance="subtle" onClick={handleShowMore}>
+                <TextButton onClick={handleShowMore}>
                   Show more
-                </Button>
+                </TextButton>
               ) : (
-                <Button appearance="subtle" onClick={handleShowLess}>
+                <TextButton onClick={handleShowLess}>
                   Show less
-                </Button>
+                </TextButton>
               )}
             </div>
           )}

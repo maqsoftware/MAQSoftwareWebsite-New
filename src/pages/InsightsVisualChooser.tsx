@@ -1,8 +1,9 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowLeft16Regular } from "@fluentui/react-icons";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { CTA } from "../components/CTA";
+import { PrimaryButton, SecondaryButton } from "../components/buttons";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 import {
@@ -208,14 +209,15 @@ export function InsightsVisualChooser() {
             </div>
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap" }}>
               {["All", "Certified"].map((f) => (
-                <Button
-                  key={f}
-                  appearance={activeFilter === f ? "primary" : "outline"}
-                  size="small"
-                  onClick={() => setActiveFilter(f)}
-                >
-                  {f}
-                </Button>
+                activeFilter === f ? (
+                  <PrimaryButton key={f} size="small" onClick={() => setActiveFilter(f)}>
+                    {f}
+                  </PrimaryButton>
+                ) : (
+                  <SecondaryButton key={f} size="small" onClick={() => setActiveFilter(f)}>
+                    {f}
+                  </SecondaryButton>
+                )
               ))}
             </div>
           </div>
