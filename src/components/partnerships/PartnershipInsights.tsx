@@ -1,4 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { ArticleCard } from "../cards/ArticleCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -28,38 +29,6 @@ const useStyles = makeStyles({
     "@media (max-width: 1200px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
-  card: {
-    display: "flex",
-    flexDirection: "column",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    padding: "22px",
-    background: "#fff",
-    textDecoration: "none",
-    color: "inherit",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-      transform: "translateY(-2px)",
-    },
-  },
-  cardTitle: {
-    fontSize: "14px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    lineHeight: 1.45,
-    flex: 1,
-    marginBottom: "14px",
-  },
-  cardLink: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
 });
 
 export interface InsightCard {
@@ -88,22 +57,15 @@ export function PartnershipInsights({
         </div>
         <div className={s.grid}>
           {items.map((b) => (
-            <a
+            <ArticleCard
               key={b.title}
-              className={s.card}
+              title={b.title}
               href={b.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className={s.cardTitle}>{b.title}</div>
-              <span className={s.cardLink}>
-                Read more
-              </span>
-            </a>
+              ctaLabel="Read more"
+            />
           ))}
         </div>
       </div>
     </section>
   );
 }
-

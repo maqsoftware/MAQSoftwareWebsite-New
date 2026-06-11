@@ -1,8 +1,9 @@
-import { makeStyles, tokens, Button } from "@fluentui/react-components";
+import { makeStyles, Button } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
-import { Link } from "react-router-dom";
 import { products } from "../data/products";
 import { useContactAction } from "../lib/contact";
+import { ProductCard } from "../components/cards/ProductCard";
+import { StatCard } from "../components/cards/StatCard";
 
 const useStyles = makeStyles({
   hero: {
@@ -42,73 +43,6 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "20px",
   },
-  card: {
-    backgroundColor: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "14px",
-    padding: "0",
-    display: "flex",
-    flexDirection: "column",
-    textDecoration: "none",
-    color: "inherit",
-    overflow: "hidden",
-    transition: "all 0.2s",
-    ":hover": {
-      border: `1px solid var(--maq-red)`,
-      transform: "translateY(-3px)",
-      boxShadow: "var(--maq-shadow-sm)",
-    },
-  },
-  thumbWrap: {
-    background: "var(--maq-surface-cream)",
-    borderBottom: "1px solid var(--maq-red-pale)",
-    padding: "16px 16px 0",
-  },
-  thumb: { width: "100%", height: "auto", display: "block", borderRadius: "8px" },
-  cardBody: { padding: "22px 24px 24px", display: "flex", flexDirection: "column", flex: 1 },
-  logo: {
-    width: "52px",
-    height: "52px",
-    borderRadius: "12px",
-    background: "linear-gradient(135deg, var(--maq-red) 0%, #6a0a0e 100%)",
-    color: "#fff",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontWeight: 700,
-    fontSize: "20px",
-    marginBottom: "16px",
-    letterSpacing: "-0.02em",
-  },
-  tagline: {
-    fontSize: "12px",
-    color: "var(--maq-red)",
-    fontWeight: 600,
-    marginBottom: "8px",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-  },
-  name: {
-    fontSize: "18px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    marginBottom: "8px",
-  },
-  desc: {
-    fontSize: "13.5px",
-    color: "var(--maq-gray-700)",
-    lineHeight: 1.6,
-    flex: 1,
-    marginBottom: "16px",
-  },
-  link: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
   cta: { padding: "56px 32px", backgroundColor: "var(--maq-off-white)" },
   ctaInner: {
     maxWidth: "1100px",
@@ -144,25 +78,6 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
   },
-  statCard: {
-    background: "var(--maq-surface-cream)",
-    border: "1px solid var(--maq-red-pale)",
-    borderRadius: "12px",
-    padding: "20px",
-    textAlign: "center",
-  },
-  statValue: {
-    fontSize: "30px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    lineHeight: 1.1,
-    letterSpacing: "-0.02em",
-  },
-  statLabel: {
-    fontSize: "12.5px",
-    color: "var(--maq-gray-700)",
-    marginTop: "4px",
-  },
 });
 
 const aggregateStats = [
@@ -194,10 +109,7 @@ export function ProductsHome() {
       <section className={s.stats} aria-label="MAQ Software product impact">
         <div className={s.statsInner}>
           {aggregateStats.map((st) => (
-            <div key={st.label} className={s.statCard}>
-              <div className={s.statValue}>{st.value}</div>
-              <div className={s.statLabel}>{st.label}</div>
-            </div>
+            <StatCard key={st.label} metric={st.value} label={st.label} centerAlign />
           ))}
         </div>
       </section>
@@ -206,29 +118,16 @@ export function ProductsHome() {
         <div className={s.listInner}>
           <div className={s.grid}>
             {products.map((p) => (
-              <Link
+              <ProductCard
                 key={p.slug}
+                name={p.name}
+                logoInitials={p.initials}
+                tagline={p.tagline}
+                description={p.shortDesc}
+                imageUrl={p.image}
+                imageAlt={`${p.name} preview`}
                 to={`/products/${p.slug}`}
-                className={s.card}
-              >
-                <div className={s.thumbWrap}>
-                  <img
-                    src={p.image}
-                    alt={`${p.name} preview`}
-                    className={s.thumb}
-                    loading="lazy"
-                  />
-                </div>
-                <div className={s.cardBody}>
-                  <div className={s.logo}>{p.initials}</div>
-                  <div className={s.tagline}>{p.tagline}</div>
-                  <div className={s.name}>{p.name}</div>
-                  <div className={s.desc}>{p.shortDesc}</div>
-                  <span className={s.link}>
-                    Learn more
-                  </span>
-                </div>
-              </Link>
+              />
             ))}
           </div>
         </div>
@@ -255,4 +154,3 @@ export function ProductsHome() {
     </>
   );
 }
-

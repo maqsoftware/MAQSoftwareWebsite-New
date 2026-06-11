@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
+import { FeatureCard } from "../cards/FeatureCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -27,35 +28,6 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
   },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    padding: "22px",
-    background: "#fff",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
-  },
-  cardHead: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    marginBottom: "8px",
-  },
-  iconBox: {
-    width: "36px",
-    height: "36px",
-    borderRadius: "8px",
-    background: "var(--maq-red-pale)",
-    color: "var(--maq-red)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  cardTitle: { fontSize: "15px", fontWeight: 700, color: "var(--maq-black)" },
-  cardDesc: { fontSize: "13.5px", color: "var(--maq-gray-700)", lineHeight: 1.6, margin: 0 },
 });
 
 export interface ValueProp {
@@ -85,13 +57,12 @@ export function PartnershipValueProps({
         </div>
         <div className={s.grid}>
           {items.map((w) => (
-            <div key={w.title} className={s.card}>
-              <div className={s.cardHead}>
-                <span className={s.iconBox}>{w.icon}</span>
-                <div className={s.cardTitle}>{w.title}</div>
-              </div>
-              <p className={s.cardDesc}>{w.desc}</p>
-            </div>
+            <FeatureCard
+              key={w.title}
+              icon={w.icon}
+              name={w.title}
+              description={w.desc}
+            />
           ))}
         </div>
       </div>

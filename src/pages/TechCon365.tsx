@@ -249,7 +249,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: "1px solid var(--maq-red)",
       boxShadow: "var(--maq-shadow-sm)",
-      transform: "translateY(-2px)",
     },
   },
   productName: {
@@ -619,4 +618,3 @@ export function TechCon365() {
     </>
   );
 }
-

@@ -1,109 +1,91 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Button, makeStyles, Spinner, tokens } from "@fluentui/react-components";
+import { Button, makeStyles, Spinner } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
-import { CTA } from "../components/CTA";
-import { InsightsHero } from "../components/insights/InsightsHero";
-import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
+import { EventCard as StandardEventCard } from "../components/cards/EventCard";
 import {
   fetchPastEventsFromNews,
   getUpcomingEventTag,
   mapPastUpcomingToCard,
   splitUpcomingAndPast,
   upcomingEvents,
-  type EventCard,
+  type EventCard as EventCardData,
 } from "../data/events";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-  sectionAlt: { padding: "48px 32px", backgroundColor: "#fff" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { textAlign: "center", marginBottom: "18px" },
-  title: {
-    fontSize: "30px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    margin: "0 0 10px",
+  hero: {
+    backgroundColor: "var(--maq-off-white)",
+    padding: "56px 32px 40px",
+    backgroundImage: "url('/logos/wave_dots.svg')",
+    backgroundPosition: "bottom left",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
   },
-  subtitle: {
-    fontSize: "14px",
+  heroInner: { maxWidth: "1240px", margin: "0 auto" },
+  eyebrow: {
+    display: "block",
+    fontSize: "12px",
+    fontWeight: 700,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    color: "var(--maq-red)",
+    marginBottom: "12px",
+  },
+  h1: {
+    fontSize: "40px",
+    fontWeight: 700,
+    lineHeight: 1.15,
+    color: "var(--maq-black)",
+    letterSpacing: "-0.02em",
+    margin: "0 0 12px",
+  },
+  heroSub: {
+    fontSize: "15px",
+    lineHeight: 1.65,
     color: "var(--maq-gray-700)",
+    maxWidth: "760px",
     margin: 0,
   },
-  grid: {
-    marginTop: "18px",
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "16px",
-    "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, 1fr)" },
-    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
+  section: {
+    padding: "40px 32px 64px",
+    backgroundColor: "#fff",
   },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    background: "#fff",
-    padding: "20px",
-    textDecoration: "none",
-    color: "inherit",
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
+  sectionAlt: {
+    padding: "40px 32px 64px",
+    backgroundColor: "var(--maq-off-white)",
   },
-  meta: {
+  inner: { maxWidth: "1240px", margin: "0 auto" },
+  sectionHead: {
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "center",
-    gap: "8px",
+    alignItems: "end",
+    gap: "16px",
+    marginBottom: "22px",
     flexWrap: "wrap",
   },
-  pill: {
-    fontSize: "11px",
+  sectionTitle: {
+    fontSize: "28px",
     fontWeight: 700,
-    color: "var(--maq-red)",
-    background: "var(--maq-red-pale)",
-    padding: "3px 8px",
-    borderRadius: "4px",
-    textTransform: "uppercase",
-    letterSpacing: "0.04em",
-  },
-  date: {
-    fontSize: "12px",
-    color: "var(--maq-gray-500)",
-    fontWeight: 600,
-  },
-  cardTitle: {
-    fontSize: "17px",
-    lineHeight: 1.35,
+    lineHeight: 1.2,
     color: "var(--maq-black)",
     margin: 0,
+    letterSpacing: "-0.01em",
   },
-  location: {
-    fontSize: "13px",
-    color: "var(--maq-ink)",
-    fontWeight: 600,
-    margin: 0,
+  upcomingGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    gap: "16px",
+    "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
+    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
-  teaser: {
-    fontSize: "14px",
-    color: "var(--maq-gray-600)",
-    lineHeight: 1.55,
-    margin: 0,
-    flex: 1,
-  },
-  read: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
-    color: "var(--maq-red)",
-    fontWeight: 600,
-    fontSize: "13px",
+  pastGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    gap: "16px",
+    "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
+    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   state: {
     textAlign: "center",
@@ -130,59 +112,57 @@ const useStyles = makeStyles({
     fontSize: "13px",
     color: "var(--maq-gray-700)",
   },
-  titleClamp: {
-    display: "-webkit-box",
-    WebkitLineClamp: 2,
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
-  },
-  summaryClamp: {
-    display: "-webkit-box",
-    WebkitLineClamp: 3,
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
+  eventLinkAction: {
+    color: "var(--maq-red)",
+    fontWeight: 700,
+    alignSelf: "flex-start",
+    marginTop: "auto",
   },
 });
 
-function EventCardLink({
+function EventLink({
   href,
-  className,
   children,
+  className,
 }: {
   href: string;
-  className?: string;
   children: React.ReactNode;
+  className?: string;
 }) {
   const navigate = useNavigate();
   if (href.startsWith("http")) {
     return (
-      <a
+      <Button
+        as="a"
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        appearance="subtle"
+        icon={<ArrowRight16Regular />}
+        iconPosition="after"
         className={className}
       >
         {children}
-      </a>
+      </Button>
     );
   }
+
   return (
-    <a
-      href={href}
+    <Button
+      appearance="subtle"
+      icon={<ArrowRight16Regular />}
+      iconPosition="after"
+      onClick={() => navigate(href)}
       className={className}
-      onClick={(e) => {
-        e.preventDefault();
-        navigate(href);
-      }}
     >
       {children}
-    </a>
+    </Button>
   );
 }
 
 export function AboutEvents() {
   const s = useStyles();
-  const [previousFromNews, setPreviousFromNews] = useState<EventCard[]>([]);
+  const [previousFromNews, setPreviousFromNews] = useState<EventCardData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showAllPrevious, setShowAllPrevious] = useState(false);
@@ -224,79 +204,56 @@ export function AboutEvents() {
 
   return (
     <>
-      <InsightsHero
-        title="Connect With MAQ Software"
-        subhead="Stay informed about upcoming conferences, webinars, workshops, and industry events where MAQ Software experts share insights on Data, AI, Analytics, and Cloud technologies."
-        ctaLabel="Talk to our team"
-      />
-
-      <InsightsResourceNav active="events" />
-
-      <section className={s.sectionAlt} id="insights-content">
-        <div className={s.inner}>
-          <div className={s.head}>
-            <h2 className={s.title}>Upcoming Events</h2>
-            <p className={s.subtitle}>
-              Meet MAQ Software at upcoming conferences and live sessions.
-            </p>
-          </div>
-
-          {upcoming.length === 0 ? (
-            <div className={s.empty}>
-              No upcoming events right now. Please check back soon.
-            </div>
-          ) : (
-            <div className={s.grid}>
-              {upcoming.map((event) => {
-                const dateLabel = `${new Date(event.startDate).toLocaleDateString(
-                  undefined,
-                  { month: "short", day: "numeric", year: "numeric" },
-                )}${
-                  event.endDate !== event.startDate
-                    ? ` - ${new Date(event.endDate).toLocaleDateString(undefined, {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })}`
-                    : ""
-                }`;
-                const tag = getUpcomingEventTag(event);
-                return (
-                  <EventCardLink
-                    key={event.id}
-                    href={event.href}
-                    className={s.card}
-                  >
-                    <div className={s.meta}>
-                      <span className={s.pill}>{tag}</span>
-                      <span className={s.date}>{dateLabel}</span>
-                    </div>
-                    <h3 className={`${s.cardTitle} ${s.titleClamp}`}>
-                      {event.title}
-                    </h3>
-                    <p className={s.location}>{event.location}</p>
-                    <p className={`${s.teaser} ${s.summaryClamp}`}>
-                      {event.summary}
-                    </p>
-                    <span className={s.read}>
-                      {event.ctaLabel || "View event details"}
-                      <ArrowRight16Regular />
-                    </span>
-                  </EventCardLink>
-                );
-              })}
-            </div>
-          )}
+      <section className={s.hero}>
+        <div className={s.heroInner}>
+          <span className={s.eyebrow}>EVENTS</span>
+          <h1 className={s.h1}>Connect With MAQ Software</h1>
+          <p className={s.heroSub}>
+            Stay informed about upcoming conferences, webinars, workshops, and industry events where MAQ Software experts share insights on Data, AI, Analytics, and Cloud technologies.
+          </p>
         </div>
       </section>
 
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
-            <h2 className={s.title}>Previous Events</h2>
-            <p className={s.subtitle}>
-              Recaps and coverage from past conferences and sessions.
-            </p>
+          <div className={s.sectionHead}>
+            <h2 className={s.sectionTitle}>Upcoming Events</h2>
+          </div>
+
+          {upcoming.length === 0 ? (
+            <div className={s.empty}>No upcoming events right now. Please check back soon.</div>
+          ) : (
+            <div className={s.upcomingGrid}>
+              {upcoming.map((event) => (
+                <StandardEventCard
+                  key={event.id}
+                  tag={getUpcomingEventTag(event) === "Ongoing" ? "Ongoing" : undefined}
+                  date={`${new Date(event.startDate).toLocaleDateString(undefined, {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}${event.endDate !== event.startDate
+                    ? ` - ${new Date(event.endDate).toLocaleDateString(undefined, {
+                        month: "short",
+                        day: "numeric",
+                        year: "numeric",
+                      })}`
+                    : ""}`}
+                  title={event.title}
+                  location={event.location}
+                  summary={event.summary}
+                  actionNode={<EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className={s.sectionAlt}>
+        <div className={s.inner}>
+          <div className={s.sectionHead}>
+            <h2 className={s.sectionTitle}>Previous Events</h2>
           </div>
 
           {loading && (
@@ -308,11 +265,7 @@ export function AboutEvents() {
           {error && !loading && (
             <div className={s.state}>
               {error}{" "}
-              <Button
-                size="small"
-                appearance="subtle"
-                onClick={() => void loadPrevious()}
-              >
+              <Button size="small" appearance="subtle" onClick={() => void loadPrevious()}>
                 Retry
               </Button>
             </div>
@@ -324,54 +277,29 @@ export function AboutEvents() {
 
           {!loading && !error && previousEvents.length > 0 && (
             <>
-              <div className={s.grid}>
+              <div className={s.pastGrid}>
                 {visiblePreviousEvents.map((event) => (
-                  <EventCardLink
+                  <StandardEventCard
                     key={event.id}
-                    href={event.href}
-                    className={s.card}
-                  >
-                    <div className={s.meta}>
-                      {event.tag && (
-                        <span className={s.pill}>{event.tag}</span>
-                      )}
-                      <span className={s.date}>{event.date}</span>
-                    </div>
-                    <h3 className={`${s.cardTitle} ${s.titleClamp}`}>
-                      {event.title}
-                    </h3>
-                    {event.location && (
-                      <p className={s.location}>{event.location}</p>
-                    )}
-                    <p className={`${s.teaser} ${s.summaryClamp}`}>
-                      {event.summary}
-                    </p>
-                    <span className={s.read}>
-                      Read full article
-                      <ArrowRight16Regular />
-                    </span>
-                  </EventCardLink>
+                    date={event.date}
+                    title={event.title}
+                    summary={event.summary}
+                    actionNode={<EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>}
+                  />
                 ))}
               </div>
 
               {previousEvents.length > INITIAL_PREVIOUS_VISIBLE && (
                 <div className={s.paginationControls}>
                   <span className={s.controlsText}>
-                    Showing {visiblePreviousEvents.length} of{" "}
-                    {previousEvents.length} previous events
+                    Showing {visiblePreviousEvents.length} of {previousEvents.length} previous events
                   </span>
                   {!showAllPrevious ? (
-                    <Button
-                      appearance="subtle"
-                      onClick={() => setShowAllPrevious(true)}
-                    >
+                    <Button appearance="subtle" onClick={() => setShowAllPrevious(true)}>
                       Show more
                     </Button>
                   ) : (
-                    <Button
-                      appearance="subtle"
-                      onClick={() => setShowAllPrevious(false)}
-                    >
+                    <Button appearance="subtle" onClick={() => setShowAllPrevious(false)}>
                       Show less
                     </Button>
                   )}
@@ -381,8 +309,6 @@ export function AboutEvents() {
           )}
         </div>
       </section>
-
-      <CTA />
     </>
   );
 }

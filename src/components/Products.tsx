@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import {
   Bot24Regular,
   Cloud24Regular,
@@ -8,7 +8,7 @@ import {
   ShieldCheckmark24Regular,
 } from "@fluentui/react-icons";
 import type { ReactNode } from "react";
-import { useNavigate } from "react-router-dom";
+import { ProductCard } from "./cards/ProductCard";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -47,68 +47,6 @@ const useStyles = makeStyles({
     "@media (max-width: 1120px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
-  card: {
-    backgroundColor: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "14px",
-    padding: "28px",
-    display: "flex",
-    flexDirection: "column",
-    transition: "all 0.2s",
-    ":hover": {
-      border: `1px solid var(--maq-blue)`,
-      transform: "translateY(-3px)",
-      boxShadow: "var(--maq-shadow-sm)",
-    },
-  },
-  titleRow: {
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-    marginBottom: "12px",
-  },
-  logo: {
-    width: "44px",
-    height: "44px",
-    borderRadius: "10px",
-    backgroundColor: "var(--maq-blue-pale)",
-    color: "var(--maq-blue)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexShrink: 0,
-  },
-  name: {
-    fontSize: "18px",
-    fontWeight: 700,
-    color: "var(--maq-navy)",
-    lineHeight: 1.2,
-  },
-  tagline: {
-    fontSize: "12px",
-    color: "var(--maq-blue)",
-    fontWeight: 500,
-    marginBottom: "12px",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-  },
-  desc: {
-    fontSize: "13.5px",
-    color: "var(--maq-text-700)",
-    lineHeight: 1.6,
-    marginBottom: "20px",
-  },
-  footer: {
-    marginTop: "auto",
-  },
-  more: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
 });
 
 interface Product {
@@ -173,7 +111,6 @@ const products: Product[] = [
 
 export function Products() {
   const s = useStyles();
-  const navigate = useNavigate();
   return (
     <section className={s.section} id="products">
       <div className={s.inner}>
@@ -188,28 +125,17 @@ export function Products() {
         </div>
         <div className={s.grid}>
           {products.map((p) => (
-            <article
+            <ProductCard
               key={p.name}
-              className={s.card}
-              onClick={() => navigate(`/products/${p.slug}`)}
-              style={{ cursor: "pointer" }}
-            >
-              <div className={s.titleRow}>
-                <div className={s.logo}>{p.icon}</div>
-                <div className={s.name}>{p.name}</div>
-              </div>
-              <div className={s.tagline}>{p.tagline}</div>
-              <div className={s.desc}>{p.desc}</div>
-              <div className={s.footer}>
-                <span className={s.more}>
-                  Learn more
-                </span>
-              </div>
-            </article>
+              name={p.name}
+              logoNode={p.icon}
+              tagline={p.tagline}
+              description={p.desc}
+              to={`/products/${p.slug}`}
+            />
           ))}
         </div>
       </div>
     </section>
   );
 }
-
