@@ -73,7 +73,7 @@ export interface FeatureCardProps {
   heading?: string;
   tagline?: string;
   description?: string;
-  bullets?: string[];
+  bullets?: ReactNode[];
   href?: string;
   onClick?: () => void;
   className?: string;
@@ -124,8 +124,8 @@ export function FeatureCard({
       ) : null}
       {bullets && bullets.length > 0 ? (
         <ul className={s.bulletList}>
-          {bullets.map((item) => (
-            <li key={item} className={s.bullet} style={{ color: textColor }}>
+          {bullets.map((item, index) => (
+            <li key={index} className={s.bullet} style={{ color: textColor }}>
               {item}
             </li>
           ))}
