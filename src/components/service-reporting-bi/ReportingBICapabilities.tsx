@@ -80,13 +80,6 @@ const useStyles = makeStyles({
     borderRadius: "4px",
     letterSpacing: "0.02em",
   },
-  knowMore: {
-    border: `1px solid var(--maq-red)`,
-    color: "var(--maq-red)",
-    background: "transparent",
-    ":hover": { background: "var(--maq-red-pale)", color: "var(--maq-red)" },
-  },
-
   rail: { display: "flex", flexDirection: "column", gap: "10px" },
   railBtn: {
     display: "flex",
@@ -202,7 +195,7 @@ export function ReportingBICapabilities() {
             <p className={s.detailDesc}>{sel.description}</p>
             <SecondaryButton
               size="large"
-              className="maq-secondary-btn maq-equal-cta"
+              className="maq-equal-cta"
               onClick={() =>
                 handleContactClick(sel.name + " - Insights & Analytics")
               }

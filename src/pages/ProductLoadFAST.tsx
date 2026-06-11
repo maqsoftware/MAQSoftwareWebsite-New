@@ -1,6 +1,6 @@
 import { Mail24Regular, Server24Regular, Money24Regular, ChartMultiple24Regular, Search24Regular } from "@fluentui/react-icons";
 
-import { CardButton, PrimaryButton, SecondaryButton } from "../components/buttons";
+import { Button, CardButton, PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
@@ -49,7 +49,7 @@ export function ProductLoadFAST() {
             </p>
             <div className={s.btns}>
               <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</PrimaryButton>
-              <SecondaryButton size="large" className="maq-equal-cta" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</SecondaryButton>
+              <Button variant="tertiary" size="large" className="maq-equal-cta" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
           <div className={s.heroImageWrap}>

@@ -1,7 +1,7 @@
 // import { TrustBanner } from \"../components/TrustBanner\";
 import { Mail24Regular } from "@fluentui/react-icons";
 
-import { PrimaryButton, SecondaryButton } from "../components/buttons";
+import { Button, PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
@@ -42,7 +42,7 @@ export function ProductCertyFAST() {
             </p>
             <div className={s.btns}>
               <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</PrimaryButton>
-              <SecondaryButton size="large" className="maq-equal-cta" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</SecondaryButton>
+              <Button variant="tertiary" size="large" className="maq-equal-cta" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
           <div className={s.heroImageWrap}>

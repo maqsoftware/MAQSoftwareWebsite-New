@@ -5,7 +5,7 @@ import {
 } from "@fluentui/react-components";
 import { useNavigate } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
-import { PrimaryButton, SecondaryButton } from "./buttons";
+import { Button, PrimaryButton } from "./buttons";
 
 const useStyles = makeStyles({
   wrap: {
@@ -131,20 +131,21 @@ export function Hero() {
             accelerators that move you from pilot to production in weeks.
           </Body1>
           <div className={s.btns}>
-            <PrimaryButton
+              <PrimaryButton
               size="large"
               className="maq-equal-cta"
               onClick={() => handleContactClick()}
             >
               Contact Us
             </PrimaryButton>
-            <SecondaryButton
+              <Button
+                variant="tertiary"
               size="large"
               className="maq-equal-cta"
               onClick={() => navigate("/insights/case-studies")}
             >
               Case Studies
-            </SecondaryButton>
+              </Button>
           </div>
         </div>
 

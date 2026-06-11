@@ -1,7 +1,7 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
-import { PrimaryButton, SecondaryButton } from "../components/buttons";
+import { Button, PrimaryButton, SecondaryButton } from "../components/buttons";
 // import { TrustBanner } from "../components/TrustBanner";
 import {
   Mail24Regular,
@@ -494,7 +494,7 @@ export function ProductFabricAdminAgent() {
               >
                 Contact Us
               </PrimaryButton>
-              <SecondaryButton href={APPSOURCE} target="_blank" rel="noopener noreferrer" size="large" className="maq-equal-cta">Marketplace</SecondaryButton>
+              <Button variant="tertiary" href={APPSOURCE} target="_blank" rel="noopener noreferrer" size="large" className="maq-equal-cta">Marketplace</Button>
             </div>
           </div>
 

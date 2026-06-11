@@ -7,7 +7,7 @@ import {
 } from "@fluentui/react-icons";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { PrimaryButton, SecondaryButton, TextButton } from "../buttons";
+import { Button, PrimaryButton, TextButton } from "../buttons";
 
 export interface EventFeaturedSession {
   label: string;
@@ -518,14 +518,15 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
               >
                 Contact us
               </PrimaryButton>
-              <SecondaryButton
+              <Button
+                variant="tertiary"
                 href="/insights/case-studies"
                 size="large"
                 className="maq-equal-cta"
                 iconAfter={<ArrowRight20Regular />}
               >
                 Read case studies
-              </SecondaryButton>
+              </Button>
             </div>
           </div>
         </div>
