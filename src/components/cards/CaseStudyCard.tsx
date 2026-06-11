@@ -2,7 +2,8 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    fontFamily: "Roboto, system-ui",
+    border: "0.75px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "22px",
     background: "#fff",
@@ -11,7 +12,12 @@ const useStyles = makeStyles({
     gap: "10px",
     textDecoration: "none",
     color: "inherit",
-    transition: "all 0.2s",
+    transition: "box-shadow 0.16s ease, border-color 0.16s ease",
+    ":hover": { border: "0.75px solid var(--maq-red-pale)" },
+  },
+  clickable: {
+    cursor: "pointer",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
     ":hover": {
       border: "1px solid var(--maq-red)",
       boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
@@ -52,15 +58,15 @@ const useStyles = makeStyles({
     margin: 0,
   },
   teaser: {
-    fontSize: "14px",
-    color: "var(--maq-gray-600)",
+    fontSize: "13.5px",
+    color: "var(--maq-gray-700)",
     lineHeight: 1.55,
     margin: 0,
     flex: 1,
   },
   cta: {
     display: "inline-block",
-    fontSize: "13px",
+    fontSize: "13.5px",
     fontWeight: 700,
     lineHeight: 1.4,
     color: "var(--maq-red)",
@@ -97,7 +103,7 @@ export function CaseStudyCard({
 
   return (
     <a
-      className={`${s.card}${className ? ` ${className}` : ""}`}
+      className={`${s.card} ${s.clickable}${className ? ` ${className}` : ""}`}
       href={href}
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}

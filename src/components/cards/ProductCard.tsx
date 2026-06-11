@@ -5,18 +5,16 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   card: {
     backgroundColor: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    fontFamily: "Roboto, system-ui",
+    border: "0.75px solid var(--maq-border)",
     borderRadius: "14px",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     textDecoration: "none",
     color: "inherit",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
-    },
+    transition: "box-shadow 0.16s ease, border-color 0.16s ease",
+    ":hover": { border: "0.75px solid var(--maq-red-pale)" },
   },
   imageWrap: {
     background: "var(--maq-surface-cream)",
@@ -29,9 +27,9 @@ const useStyles = makeStyles({
   logoBox: {
     width: "52px",
     height: "52px",
-    borderRadius: "12px",
-    background: "linear-gradient(135deg, var(--maq-red) 0%, #6a0a0e 100%)",
-    color: "#fff",
+    borderRadius: "10px",
+    backgroundColor: "var(--maq-red-pale)",
+    color: "var(--maq-red)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
@@ -39,6 +37,11 @@ const useStyles = makeStyles({
     fontSize: "20px",
     letterSpacing: "-0.02em",
     flexShrink: 0,
+    "& svg": {
+      width: "24px",
+      height: "24px",
+      color: "inherit",
+    },
   },
   name: { fontSize: "18px", fontWeight: 700, color: "var(--maq-black)" },
   tagline: {
@@ -59,7 +62,7 @@ const useStyles = makeStyles({
   },
   cta: {
     display: "inline-block",
-    fontSize: "13px",
+    fontSize: "13.5px",
     fontWeight: 700,
     lineHeight: 1.4,
     color: "var(--maq-red)",
@@ -70,6 +73,14 @@ const useStyles = makeStyles({
     width: "100%",
     textAlign: "left",
     cursor: "pointer",
+  },
+  clickable: {
+    cursor: "pointer",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    },
   },
 });
 
@@ -105,7 +116,8 @@ export function ProductCard({
   className,
 }: ProductCardProps) {
   const s = useStyles();
-  const rootClass = `${s.card}${onClick ? ` ${s.buttonCard}` : ""}${className ? ` ${className}` : ""}`;
+  const interactive = Boolean(to || href || onClick);
+  const rootClass = `${s.card}${interactive ? ` ${s.clickable}` : ""}${onClick ? ` ${s.buttonCard}` : ""}${className ? ` ${className}` : ""}`;
 
   const content = (
     <>

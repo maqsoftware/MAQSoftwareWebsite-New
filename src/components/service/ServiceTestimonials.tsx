@@ -51,7 +51,7 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     opacity: 0.18,
     lineHeight: 1,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
   },
   body: {
     fontSize: "15px",

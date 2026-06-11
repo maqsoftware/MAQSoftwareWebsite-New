@@ -4,15 +4,23 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 const useStyles = makeStyles({
   card: {
     backgroundColor: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke1}`,
+    fontFamily: "Roboto, system-ui",
+    border: "0.75px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "24px",
-    transition: "all 0.2s ease",
+    transition: "box-shadow 0.16s ease, border-color 0.16s ease",
     display: "block",
     width: "100%",
     textAlign: "left",
   },
-  clickable: { cursor: "pointer" },
+  clickable: { 
+    cursor: "pointer",
+    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    },
+  },
   redTone: {
     ":hover": {
       border: "1px solid var(--maq-red)",
@@ -98,7 +106,7 @@ export function FeatureCard({
   const accent = tone === "blue" ? "var(--maq-blue)" : "var(--maq-red)";
   const accentPale = tone === "blue" ? "var(--maq-blue-pale)" : "var(--maq-red-pale)";
   const titleColor = tone === "blue" ? "var(--maq-navy)" : "var(--maq-black)";
-  const textColor = tone === "blue" ? "var(--maq-text-700)" : "var(--maq-gray-600)";
+  const textColor = "var(--maq-gray-700)";
   const toneClass = tone === "blue" ? s.blueTone : s.redTone;
   const cardClass = `${s.card}${interactive ? ` ${s.clickable} ${s.interactiveBorder} ${toneClass}` : ""}${className ? ` ${className}` : ""}`;
 

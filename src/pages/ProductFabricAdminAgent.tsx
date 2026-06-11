@@ -254,7 +254,7 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     opacity: 0.18,
     lineHeight: 1,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
   },
   quoteBody: {
     fontSize: "15px",

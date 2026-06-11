@@ -2,10 +2,11 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   card: {
+    fontFamily: "Roboto, system-ui",
     padding: "20px",
     borderRadius: "12px",
     backgroundColor: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke1}`,
+    border: "0.75px solid var(--maq-red-pale)",
     display: "flex",
     flexDirection: "column",
     gap: "12px",
@@ -24,7 +25,7 @@ const useStyles = makeStyles({
   },
   link: {
     display: "inline-block",
-    fontSize: "13px",
+    fontSize: "13.5px",
     fontWeight: 700,
     lineHeight: 1.4,
     color: "var(--maq-red)",
