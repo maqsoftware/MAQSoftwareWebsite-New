@@ -11,18 +11,14 @@ const useStyles = makeStyles({
     flexDirection: "column",
     textDecoration: "none",
     color: "inherit",
-    transition: "box-shadow 0.16s ease, border-color 0.16s ease",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
-    },
+    transition: "box-shadow 0.16s ease, border-color 0.16s ease, background-color 0.16s ease",
   },
   clickable: {
     cursor: "pointer",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "1px solid var(--maq-border)",
     ":hover": {
       border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
     },
   },
   image: {
@@ -87,7 +83,7 @@ export function MarketplaceCard({
 
   return (
     <a
-      className={`${s.card}${className ? ` ${className}` : ""}`}
+      className={`${s.card} ${s.clickable}${className ? ` ${className}` : ""}`}
       href={href}
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}

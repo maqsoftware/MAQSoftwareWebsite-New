@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     textDecoration: "none",
     color: "inherit",
-    transition: "border-color 0.16s ease, box-shadow 0.16s ease",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease",
   },
   imageWrap: {
     background: "var(--maq-surface-cream)",
@@ -75,7 +75,7 @@ const useStyles = makeStyles({
   },
   clickable: {
     cursor: "pointer",
-    border: "1px solid var(--maq-red)",
+    border: "1px solid var(--maq-border)",
     ":hover": {
       border: "1px solid var(--maq-red)",
       boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
@@ -83,7 +83,7 @@ const useStyles = makeStyles({
   },
   nonInteractive: {
     ":hover": {
-      border: "0.5px solid rgba(186, 20, 26, 0.35)",
+      border: "0.5px solid rgba(186, 20, 26, 0.5)",
     },
   },
 });
