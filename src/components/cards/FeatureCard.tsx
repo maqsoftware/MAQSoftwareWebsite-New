@@ -1,11 +1,11 @@
 import type { ReactNode } from "react";
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   card: {
     backgroundColor: "#fff",
     fontFamily: "Roboto, system-ui",
-    border: "0.75px solid var(--maq-border)",
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "24px",
     transition: "box-shadow 0.16s ease, border-color 0.16s ease",
@@ -15,25 +15,16 @@ const useStyles = makeStyles({
   },
   clickable: { 
     cursor: "pointer",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "1px solid var(--maq-red)",
     ":hover": {
       border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
     },
   },
-  redTone: {
+  nonInteractive: {
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+      border: "0.5px solid rgba(186, 20, 26, 0.35)",
     },
   },
-  blueTone: {
-    ":hover": {
-      border: "1px solid var(--maq-blue)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
-    },
-  },
-  interactiveBorder: { border: `1px solid ${tokens.colorNeutralStroke2}` },
   titleRow: {
     display: "flex",
     alignItems: "center",
@@ -107,8 +98,7 @@ export function FeatureCard({
   const accentPale = tone === "blue" ? "var(--maq-blue-pale)" : "var(--maq-red-pale)";
   const titleColor = tone === "blue" ? "var(--maq-navy)" : "var(--maq-black)";
   const textColor = "var(--maq-gray-700)";
-  const toneClass = tone === "blue" ? s.blueTone : s.redTone;
-  const cardClass = `${s.card}${interactive ? ` ${s.clickable} ${s.interactiveBorder} ${toneClass}` : ""}${className ? ` ${className}` : ""}`;
+  const cardClass = `${s.card}${interactive ? ` ${s.clickable}` : ` ${s.nonInteractive}`}${className ? ` ${className}` : ""}`;
 
   const content = (
     <>

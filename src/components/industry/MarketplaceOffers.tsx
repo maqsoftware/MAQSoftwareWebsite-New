@@ -1,5 +1,5 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
-import { MarketplaceCard } from "../cards/MarketplaceCard";
+import { makeStyles } from "@fluentui/react-components";
+import { ResourceMarketplaceCard } from "../cards/ResourceMarketplaceCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -56,12 +56,14 @@ export function MarketplaceOffers({
         </div>
         <div className={s.grid}>
           {offers.map((o) => (
-            <MarketplaceCard
+            <ResourceMarketplaceCard
               key={o.title}
               title={o.title}
               description={o.desc}
               href={o.href}
+              eyebrow={o.pill}
               imageUrl={o.image}
+              ctaLabel="Read more"
             />
           ))}
         </div>

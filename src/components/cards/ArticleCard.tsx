@@ -1,9 +1,9 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   card: {
     fontFamily: "Roboto, system-ui",
-    border: "0.75px solid var(--maq-border)",
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "12px",
     overflow: "hidden",
     background: "#fff",
@@ -11,15 +11,18 @@ const useStyles = makeStyles({
     flexDirection: "column",
     textDecoration: "none",
     color: "inherit",
-    transition: "box-shadow 0.16s ease, border-color 0.16s ease",
-    ":hover": { border: "0.75px solid var(--maq-red-pale)" },
+    transition: "border-color 0.16s ease",
   },
   clickable: {
     cursor: "pointer",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "1px solid var(--maq-red)",
     ":hover": {
       border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    },
+  },
+  nonInteractive: {
+    ":hover": {
+      border: "0.5px solid rgba(186, 20, 26, 0.35)",
     },
   },
   image: {

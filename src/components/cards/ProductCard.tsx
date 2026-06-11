@@ -1,20 +1,19 @@
 import type { ReactNode } from "react";
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: {
     backgroundColor: "#fff",
     fontFamily: "Roboto, system-ui",
-    border: "0.75px solid var(--maq-border)",
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "14px",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
     textDecoration: "none",
     color: "inherit",
-    transition: "box-shadow 0.16s ease, border-color 0.16s ease",
-    ":hover": { border: "0.75px solid var(--maq-red-pale)" },
+    transition: "border-color 0.16s ease",
   },
   imageWrap: {
     background: "var(--maq-surface-cream)",
@@ -76,10 +75,14 @@ const useStyles = makeStyles({
   },
   clickable: {
     cursor: "pointer",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "1px solid var(--maq-red)",
     ":hover": {
       border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    },
+  },
+  nonInteractive: {
+    ":hover": {
+      border: "0.5px solid rgba(186, 20, 26, 0.35)",
     },
   },
 });
@@ -117,7 +120,7 @@ export function ProductCard({
 }: ProductCardProps) {
   const s = useStyles();
   const interactive = Boolean(to || href || onClick);
-  const rootClass = `${s.card}${interactive ? ` ${s.clickable}` : ""}${onClick ? ` ${s.buttonCard}` : ""}${className ? ` ${className}` : ""}`;
+  const rootClass = `${s.card}${interactive ? ` ${s.clickable}` : ` ${s.nonInteractive}`}${onClick ? ` ${s.buttonCard}` : ""}${className ? ` ${className}` : ""}`;
 
   const content = (
     <>

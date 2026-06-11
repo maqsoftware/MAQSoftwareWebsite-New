@@ -1,4 +1,4 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
 
 const useStyles = makeStyles({
@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     fontFamily: "Roboto, system-ui",
-    border: "0.75px solid var(--maq-red-pale)",
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "22px",
     background: "#fff",
@@ -15,10 +15,14 @@ const useStyles = makeStyles({
     transition: "all 0.2s",
   },
   clickable: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "1px solid var(--maq-red)",
     ":hover": {
       border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(0,0,0,0.05)",
+    },
+  },
+  nonInteractive: {
+    ":hover": {
+      border: "0.5px solid rgba(186, 20, 26, 0.35)",
     },
   },
   chip: {
@@ -98,7 +102,7 @@ export function StatCard({
 }: StatCardProps) {
   const s = useStyles();
   const showLink = Boolean(href && sourceLabel);
-  const rootClass = `${s.card}${showLink ? ` ${s.clickable}` : ""}${className ? ` ${className}` : ""}`;
+  const rootClass = `${s.card}${showLink ? ` ${s.clickable}` : ` ${s.nonInteractive}`}${className ? ` ${className}` : ""}`;
 
   const content = (
     <>
