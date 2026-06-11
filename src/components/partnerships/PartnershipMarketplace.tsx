@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { makeStyles, tokens } from "@fluentui/react-components";
+import { SecondaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   section: {
@@ -161,17 +161,14 @@ export function PartnershipMarketplace({
         </div>
 
         <div className={s.ctaContainer}>
-          <Button
-            appearance="secondary"
+          <SecondaryButton
             size="large"
             className="maq-equal-cta"
-            iconPosition="after"
-            as="a"
             href={ctaHref}
             rel="noopener noreferrer"
           >
             {ctaLabel}
-          </Button>
+          </SecondaryButton>
         </div>
       </div>
     </section>

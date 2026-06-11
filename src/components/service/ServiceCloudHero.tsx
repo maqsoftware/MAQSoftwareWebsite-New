@@ -1,4 +1,4 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import {
   Mail24Regular,
   Server20Filled,
@@ -6,6 +6,7 @@ import {
   ShieldLock20Filled,
 } from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
+import { PrimaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -108,16 +109,14 @@ export function ServiceCloudHero() {
             30–40% lower run cost on average across enterprise workloads.
           </p>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
-             
               onClick={() =>
                 handleContactClick("Cloud Modernization")
               }
             >
               Contact Us
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
 

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Dismiss20Regular } from "@fluentui/react-icons";
 import { Link as RouterLink, useLocation } from "react-router-dom";
+import { IconButton } from "./buttons";
 
 const useStyles = makeStyles({
   bar: {
@@ -72,12 +73,11 @@ const s = useStyles();
           Learn more
         </RouterLink>
       </div>
-      <Button
-        appearance="subtle"
+      <IconButton
         size="small"
         className={s.dismiss}
-        icon={<Dismiss20Regular />}
-        aria-label="Dismiss announcement"
+        iconBefore={<Dismiss20Regular />}
+        ariaLabel="Dismiss announcement"
         onClick={() => setDismissed(true)}
       />
     </div>

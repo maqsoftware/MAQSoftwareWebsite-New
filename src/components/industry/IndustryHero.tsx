@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
+import { PrimaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -76,14 +77,12 @@ export function IndustryHero({
           <h1 className={s.h1}>{h1}</h1>
           <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
-             
               onClick={() => handleContactClick(mailSubject)}
             >
               Contact Us
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
         {visual && (

@@ -1,4 +1,4 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import {
   ArrowRight20Regular,
   Brain24Regular,
@@ -7,6 +7,7 @@ import {
 } from "@fluentui/react-icons";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { PrimaryButton, SecondaryButton, TextButton } from "../buttons";
 
 export interface EventFeaturedSession {
   label: string;
@@ -370,17 +371,15 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
               {props.promo}
             </div>
             <div className={s.btns}>
-              <Button
-                as="a"
+              <PrimaryButton
                 href={props.registerUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                appearance="primary"
                 size="large"
-                icon={<TicketDiagonal24Regular />}
+                iconBefore={<TicketDiagonal24Regular />}
               >
                 Register now
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
 
@@ -430,17 +429,14 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                     <span key={speaker} className={s.bodyText}>{speaker}</span>
                   ))}
                 </div>
-                <Button
-                  as="a"
+                <TextButton
                   href={talk.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  appearance="subtle"
-                  icon={<ArrowRight20Regular />}
-                  iconPosition="after"
+                  iconAfter={<ArrowRight20Regular />}
                 >
                   Read more
-                </Button>
+                </TextButton>
               </article>
             ))}
           </div>
@@ -515,26 +511,21 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
               minutes - no obligation.
             </p> */}
             <div className={s.storyButtons}>
-              <Button
-                as="a"
+              <PrimaryButton
                 href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(props.contactSubject)}`}
-                appearance="primary"
                 size="large"
                 className="maq-equal-cta"
               >
                 Contact us
-              </Button>
-              <Button
-                as="a"
+              </PrimaryButton>
+              <SecondaryButton
                 href="/insights/case-studies"
-                appearance="outline"
                 size="large"
                 className="maq-equal-cta"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
+                iconAfter={<ArrowRight20Regular />}
               >
                 Read case studies
-              </Button>
+              </SecondaryButton>
             </div>
           </div>
         </div>

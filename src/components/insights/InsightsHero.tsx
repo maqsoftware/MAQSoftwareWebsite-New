@@ -1,6 +1,7 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Mail24Regular, ChartMultiple20Filled } from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
+import { PrimaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -108,9 +109,9 @@ export function InsightsHero({
           <h1 className={s.h1}>{title}</h1>
           <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
-            <Button appearance="primary" size="large" onClick={() => handleContactClick()}>
+            <PrimaryButton size="large" onClick={() => handleContactClick()}>
               {ctaLabel}
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
         <div className={s.visual} aria-hidden="true">

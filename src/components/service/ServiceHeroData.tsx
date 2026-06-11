@@ -1,6 +1,7 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
+import { PrimaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
@@ -104,16 +105,14 @@ export function ServiceHeroData() {
             agents, and decision-making across the enterprise.
           </p>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
-             
               onClick={() =>
                 handleContactClick("Data & Analytics - MAQ Software")
               }
             >
               Contact Us
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
 

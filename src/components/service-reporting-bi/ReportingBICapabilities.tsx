@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../../lib/contact";
 import {
   ChartMultiple24Regular,
@@ -10,6 +10,7 @@ import {
   Gauge24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
+import { SecondaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -199,8 +200,7 @@ export function ReportingBICapabilities() {
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <Button
-              appearance="secondary"
+            <SecondaryButton
               size="large"
               className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
@@ -208,7 +208,7 @@ export function ReportingBICapabilities() {
               }
             >
               Know more
-            </Button>
+            </SecondaryButton>
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (

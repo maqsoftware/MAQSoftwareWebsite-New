@@ -1,9 +1,10 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import {
   Mail20Regular,
 } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton, SecondaryButton } from "./buttons";
 
 const useStyles = makeStyles({
   wrap: {
@@ -160,22 +161,20 @@ export function Hero() {
          MAQ Software helps enterprises transform data into decisions and AI into measurable business outcomes. Backed by 26 years of delivery excellence and a global team of certified engineers, we enable organizations to scale AI and agentic automation, modernize data and analytics platforms, and accelerate cloud transformation—delivering results with speed, quality, and confidence.
           </p>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
               className="maq-equal-cta"
               onClick={() => handleContactClick()}
             >
               Contact Us
-            </Button>
-            <Button
-              appearance="secondary"
+            </PrimaryButton>
+            <SecondaryButton
               size="large"
               className="maq-secondary-btn maq-equal-cta"
               onClick={() => navigate("/insights/case-studies")}
             >
               Case Studies
-            </Button>
+            </SecondaryButton>
           </div>
         </div>
 

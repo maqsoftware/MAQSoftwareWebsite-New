@@ -3,7 +3,6 @@ import { useContactAction } from "../lib/contact";
 import {
   makeStyles,
   tokens,
-  Button,
 } from "@fluentui/react-components";
 import {
   ArrowLeft20Regular,
@@ -11,6 +10,7 @@ import {
   CheckmarkCircle20Filled,
 } from "@fluentui/react-icons";
 import { getProduct, products } from "../data/products";
+import { PrimaryButton } from "../components/buttons";
 
 const useStyles = makeStyles({
   hero: {
@@ -261,16 +261,14 @@ export function ProductDetail() {
             <h1 className={s.h1}>{product.name}</h1>
             <p className={s.sub}>{product.longDesc}</p>
             <div className={s.btns}>
-              <Button
-                appearance="primary"
+              <PrimaryButton
                 size="large"
-               
                 onClick={() =>
                   handleContactClick(product.name + " - request a walkthrough")
                 }
               >
                 Contact Us
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
           <div className={s.visual}>
