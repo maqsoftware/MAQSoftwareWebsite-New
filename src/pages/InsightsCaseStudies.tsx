@@ -1,5 +1,4 @@
 import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useMemo, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
@@ -8,9 +7,38 @@ import { CTA } from "../components/CTA";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
+import { LazyImage } from "../components/insights/LazyImage";
+import {
+  proxyImage,
+  proxyImagePlaceholder,
+  proxyImageSrcSet,
+} from "../lib/imageProxy";
 import { caseStudyFilters, caseStudyItems } from "../data/insights";
 
 const INITIAL_VISIBLE = 9;
+
+// Number of cards above the fold whose proxied image is preloaded
+// via <link rel="preload"> on mount so they appear with the page.
+// Set to the full first page so every initially-visible card is
+// fetched in parallel with the JS bundle.
+const PRELOAD_CARD_COUNT = INITIAL_VISIBLE;
+
+// Card image sizing. Cards top out around 420px wide on desktop
+// (3-col grid inside a 1240px max), 480px on tablet, full width on
+// phones. The sizes attribute mirrors the grid breakpoints in CSS.
+const CARD_IMAGE_SIZES =
+  "(max-width: 700px) 100vw, (max-width: 1080px) 50vw, 420px";
+const CARD_IMAGE_DEFAULT_WIDTH = 480;
+
+// Hosts we want the browser to handshake with up-front: the wsrv
+// image proxy (where every card image actually loads from) plus the
+// origin servers wsrv fetches from.
+const PRECONNECT_HOSTS = [
+  "https://wsrv.nl",
+  "https://maqsoftware.com",
+  "https://www.maqsoftware.com",
+  "https://blogger.googleusercontent.com",
+];
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -39,10 +67,20 @@ const useStyles = makeStyles({
   },
   image: {
     width: "100%",
+    aspectRatio: "16 / 9",
     height: "220px",
     objectFit: "cover",
+    // Cover images often have title overlays anchored to the left of
+    // the source artwork. Anchor cropping there so the text is never
+    // sliced off when the wide source is cropped to card dimensions.
+    objectPosition: "left center",
     display: "block",
     backgroundColor: "var(--maq-surface-cream)",
+  },
+  imageWrap: {
+    width: "100%",
+    height: "220px",
+    display: "block",
   },
   body: {
     padding: "20px",
@@ -102,6 +140,22 @@ useEffect(() => {
   }
 }, []);
 
+  // Preconnect to the image proxy and origin hosts while the page
+  // is mounted so parallel image requests skip DNS/TLS handshake cost.
+  useEffect(() => {
+    const links = PRECONNECT_HOSTS.map((host) => {
+      const link = document.createElement("link");
+      link.rel = "preconnect";
+      link.href = host;
+      link.crossOrigin = "anonymous";
+      document.head.appendChild(link);
+      return link;
+    });
+    return () => {
+      for (const link of links) link.parentNode?.removeChild(link);
+    };
+  }, []);
+
   const filtered = useMemo(() => {
     if (activeFilter === "All") return caseStudyItems;
     return caseStudyItems.filter((item) => item.service === activeFilter);
@@ -116,6 +170,28 @@ useEffect(() => {
   const total = filtered.length;
   const halfCount = Math.max(INITIAL_VISIBLE + 1, Math.ceil(total / 2));
   const visibleItems = filtered.slice(0, visibleCount);
+
+  // Preload the first few proxied images on mount / filter change so
+  // the browser starts fetching them in parallel with the JS-driven
+  // render, making cards appear with the page rather than after.
+  useEffect(() => {
+    const links: HTMLLinkElement[] = [];
+    const toPreload = filtered.slice(0, PRELOAD_CARD_COUNT);
+    for (const item of toPreload) {
+      const link = document.createElement("link");
+      link.rel = "preload";
+      link.as = "image";
+      link.href = proxyImage(item.imageUrl, CARD_IMAGE_DEFAULT_WIDTH);
+      const srcset = proxyImageSrcSet(item.imageUrl);
+      if (srcset) link.setAttribute("imagesrcset", srcset);
+      link.setAttribute("imagesizes", CARD_IMAGE_SIZES);
+      document.head.appendChild(link);
+      links.push(link);
+    }
+    return () => {
+      for (const link of links) link.parentNode?.removeChild(link);
+    };
+  }, [filtered]);
 
   const handleShowMore = () => {
     if (visibleCount < halfCount && halfCount < total) {
@@ -142,19 +218,41 @@ useEffect(() => {
             <InsightsFilterBar items={caseStudyFilters} active={activeFilter} onChange={setActiveFilter} />
           </div>
           <div className={s.grid}>
-            {visibleItems.map((item) => (
-              <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noopener noreferrer">
-                <img className={s.image} src={item.imageUrl} alt={item.title} loading="lazy" />
-                <div className={s.body}>
-                  <div className={s.meta}>
-                    <span className={s.date}>{item.date}</span>
+            {visibleItems.map((item, index) => {
+              const isAboveFold = index < PRELOAD_CARD_COUNT;
+              const proxiedSrc = proxyImage(
+                item.imageUrl,
+                CARD_IMAGE_DEFAULT_WIDTH,
+              );
+              const proxiedSrcSet = proxyImageSrcSet(item.imageUrl);
+              const placeholderSrc = proxyImagePlaceholder(item.imageUrl);
+              return (
+                <a key={item.href} className={s.card} href={item.href} target="_blank" rel="noopener noreferrer">
+                  <LazyImage
+                    src={proxiedSrc}
+                    srcSet={proxiedSrcSet || undefined}
+                    sizes={proxiedSrcSet ? CARD_IMAGE_SIZES : undefined}
+                    fallbackSrc={item.imageUrl}
+                    placeholderSrc={placeholderSrc || undefined}
+                    alt={item.title}
+                    width={600}
+                    height={338}
+                    eager={isAboveFold}
+                    priority={isAboveFold ? "high" : "auto"}
+                    wrapperClassName={s.imageWrap}
+                    className={s.image}
+                  />
+                  <div className={s.body}>
+                    <div className={s.meta}>
+                      <span className={s.date}>{item.date}</span>
+                    </div>
+                    <h3 className={s.cardTitle}>{item.title}</h3>
+                    <p className={s.teaser}>{item.teaser}</p>
+                    <span className={s.read}>Read full article</span>
                   </div>
-                  <h3 className={s.cardTitle}>{item.title}</h3>
-                  <p className={s.teaser}>{item.teaser}</p>
-                  <span className={s.read}>Read full article</span>
-                </div>
-              </a>
-            ))}
+                </a>
+              );
+            })}
           </div>
           {total > INITIAL_VISIBLE && (
             <div className={s.paginationControls}>

@@ -242,7 +242,7 @@ export function Contact() {
         <div className={s.heroInner}>
           <div className={s.heroLeft}>
             <p className={s.heroSub}>
-           MAQ Software helps organizations unlock the full potential of their data through AI, intelligent automation, analytics, and cloud technologies. From modern data platforms to generative AI and agentic solutions, we enable businesses to transform information into real-time intelligence, accelerate innovation, and drive measurable outcomes at scale.
+              MAQ Software accelerates enterprise innovation by turning complex data into real-time, actionable intelligence through AI and cloud technologies.
             </p>
 
             <div className={s.proofList}>
@@ -253,10 +253,9 @@ export function Contact() {
                 <div>
                   <p className={s.proofTitle}>Microsoft Solutions Partner</p>
                   <p className={s.proofDesc}>
-                    Award-winning Power BI expertise recognized by Microsoft with
-                    the 2021 Microsoft Power BI Partner of the Year Award.
-                    Delivered frameworks for thousands of reports across 30 global
-                    companies and accelerated adoption from years to months.
+                    2021 Microsoft Power BI Partner of the Year; delivered
+                    thousands of reports and rapidly accelerated data adoption
+                    across 30 global enterprises.
                   </p>
                 </div>
               </div>
