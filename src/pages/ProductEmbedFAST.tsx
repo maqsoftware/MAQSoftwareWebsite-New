@@ -1,6 +1,6 @@
-import { Button } from "@fluentui/react-components";
 import { Mail24Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
 
+import { Button, CardButton, PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
@@ -53,8 +53,8 @@ export function ProductEmbedFAST() {
               Delivering fast, secure, and scalable analytics inside enterprise applications often comes with complex integrations, licensing overhead, and heavy development effort. EmbedFAST simplifies Power BI embedding with built-in role-based access, unlimited tenant and workspace onboarding, and customizable features so your team delivers insights at scale with minimal development effort.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</PrimaryButton>
+              <Button variant="tertiary" size="large" className="maq-equal-cta" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
           <div className={s.heroImageWrap}>
@@ -115,7 +115,7 @@ export function ProductEmbedFAST() {
                 <ul className={s.priceList}>
                   {p.items.map((i) => <li key={i} className={s.priceItem}>{i}</li>)}
                 </ul>
-                <Button appearance="primary" size="medium" as="a" href={p.href} target="_blank" rel="noopener noreferrer">{p.cta}</Button>
+                <CardButton size="medium" href={p.href} target="_blank" rel="noopener noreferrer">{p.cta}</CardButton>
               </div>
             ))}
           </div>

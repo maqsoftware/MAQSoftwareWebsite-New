@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Button, makeStyles, Spinner } from "@fluentui/react-components";
+import { makeStyles, Spinner } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
 import { EventCard as StandardEventCard } from "../components/cards/EventCard";
@@ -11,6 +11,7 @@ import {
   upcomingEvents,
   type EventCard as EventCardData,
 } from "../data/events";
+import { TextButton } from "../components/buttons";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
 
@@ -132,31 +133,26 @@ function EventLink({
   const navigate = useNavigate();
   if (href.startsWith("http")) {
     return (
-      <Button
-        as="a"
+      <TextButton
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        appearance="subtle"
-        icon={<ArrowRight16Regular />}
-        iconPosition="after"
+        iconAfter={<ArrowRight16Regular />}
         className={className}
       >
         {children}
-      </Button>
+      </TextButton>
     );
   }
 
   return (
-    <Button
-      appearance="subtle"
-      icon={<ArrowRight16Regular />}
-      iconPosition="after"
+    <TextButton
+      iconAfter={<ArrowRight16Regular />}
       onClick={() => navigate(href)}
       className={className}
     >
       {children}
-    </Button>
+    </TextButton>
   );
 }
 
@@ -170,7 +166,7 @@ export function AboutEvents() {
   const loadPrevious = useCallback(async () => {
     try {
       setLoading(true);
-      setError(null);
+          setError(null);
       const data = await fetchPastEventsFromNews(30);
       setPreviousFromNews(data);
     } catch (e) {
@@ -265,9 +261,9 @@ export function AboutEvents() {
           {error && !loading && (
             <div className={s.state}>
               {error}{" "}
-              <Button size="small" appearance="subtle" onClick={() => void loadPrevious()}>
+              <TextButton size="small" onClick={() => void loadPrevious()}>
                 Retry
-              </Button>
+              </TextButton>
             </div>
           )}
 
@@ -295,13 +291,13 @@ export function AboutEvents() {
                     Showing {visiblePreviousEvents.length} of {previousEvents.length} previous events
                   </span>
                   {!showAllPrevious ? (
-                    <Button appearance="subtle" onClick={() => setShowAllPrevious(true)}>
+                    <TextButton onClick={() => setShowAllPrevious(true)}>
                       Show more
-                    </Button>
+                    </TextButton>
                   ) : (
-                    <Button appearance="subtle" onClick={() => setShowAllPrevious(false)}>
+                    <TextButton onClick={() => setShowAllPrevious(false)}>
                       Show less
-                    </Button>
+                    </TextButton>
                   )}
                 </div>
               )}

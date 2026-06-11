@@ -6,7 +6,7 @@ import {
   LockClosed24Regular,
   ScaleFill24Regular,
 } from "@fluentui/react-icons";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
 // import { TrustBanner } from \"../components/TrustBanner\";
 

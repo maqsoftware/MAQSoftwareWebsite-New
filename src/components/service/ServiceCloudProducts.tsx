@@ -85,7 +85,7 @@ export function ServiceCloudProducts() {
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
           <h2 className={s.title}>Cloud modernization products</h2>
-          <p className={s.sub}>Solutions designed to accelerate and streamline your cloud journey.</p>
+          {/* <p className={s.sub}>Solutions designed to accelerate and streamline your cloud journey.</p> */}
         </div>
         <div className={s.grid}>
           {products.map((p) => (

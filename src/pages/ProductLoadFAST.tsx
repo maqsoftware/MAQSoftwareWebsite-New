@@ -1,6 +1,6 @@
-import { Button } from "@fluentui/react-components";
 import { Mail24Regular, Server24Regular, Money24Regular, ChartMultiple24Regular, Search24Regular } from "@fluentui/react-icons";
 
+import { Button, CardButton, PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
@@ -48,8 +48,8 @@ export function ProductLoadFAST() {
               Microsoft Fabric adoption is growing fast, but estimating the right capacity for reporting workloads remains a challenge. LoadFAST automates Power BI load testing by simulating concurrent users, measuring page load time, and identifying slow reports and visuals so teams can validate performance and plan Fabric capacity with confidence.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</PrimaryButton>
+              <Button variant="tertiary" size="large" className="maq-equal-cta" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
           <div className={s.heroImageWrap}>
@@ -126,7 +126,7 @@ export function ProductLoadFAST() {
                 <ul className={s.priceList}>
                   {p.items.map((i) => <li key={i} className={s.priceItem}>{i}</li>)}
                 </ul>
-                <Button appearance="primary" size="medium" as="a" href={p.href} target="_blank" rel="noopener noreferrer">{p.cta}</Button>
+                <CardButton size="medium" href={p.href} target="_blank" rel="noopener noreferrer">{p.cta}</CardButton>
               </div>
             ))}
           </div>

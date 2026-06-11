@@ -1,8 +1,9 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../../lib/contact";
+import { SecondaryButton } from "../buttons";
 import {
   Bot24Regular,
   ChartMultiple24Regular,
@@ -215,15 +216,14 @@ export function ServiceCapabilities({
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
           <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          {/* <p className={s.sub}>{subhead}</p> */}
         </div>
         <div className={s.panel}>
           <div>
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <Button
-              appearance="secondary"
+            <SecondaryButton
               size="large"
               className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
@@ -231,7 +231,7 @@ export function ServiceCapabilities({
               }
             >
               Know more
-            </Button>
+            </SecondaryButton>
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (

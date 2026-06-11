@@ -1,7 +1,7 @@
-import { makeStyles, Button } from "@fluentui/react-components";
-import { Mail24Regular } from "@fluentui/react-icons";
+import { makeStyles } from "@fluentui/react-components";
 import { products } from "../data/products";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton } from "../components/buttons";
 import { ProductCard } from "../components/cards/ProductCard";
 import { StatCard } from "../components/cards/StatCard";
 
@@ -136,19 +136,17 @@ export function ProductsHome() {
       <section className={s.cta}>
         <div className={s.ctaInner}>
           <h2 className={s.ctaTitle}>Want a guided walkthrough?</h2>
-          <p className={s.ctaSub}>
+          {/* <p className={s.ctaSub}>
             Pick any product. We'll show it running on your data.
-          </p>
-          <Button
-            appearance="primary"
+          </p> */}
+          <PrimaryButton
             size="large"
-           
             onClick={() =>
               handleContactClick("Product walkthrough")
             }
           >
             Request a walkthrough
-          </Button>
+          </PrimaryButton>
         </div>
       </section>
     </>

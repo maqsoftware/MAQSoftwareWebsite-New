@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import {
   Mail24Regular,
   Bot20Filled,
@@ -7,6 +7,7 @@ import {
   Sparkle20Filled,
 } from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
+import { PrimaryButton } from "../buttons";
 
 export interface ServiceHeroProps {
   eyebrow?: string;
@@ -120,16 +121,14 @@ export function ServiceHero({
           <h1 className={s.h1}>{heading}</h1>
           <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
-             
               onClick={() =>
                 handleContactClick(ctaMailSubject)
               }
             >
               Contact Us
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
 

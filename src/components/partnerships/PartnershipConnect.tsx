@@ -1,5 +1,6 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
+import { PrimaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   band: {
@@ -42,15 +43,12 @@ export function PartnershipConnect({
       <div className={s.inner}>
         <h2 className={s.title}>{title}</h2>
         <p className={s.desc}>{description}</p>
-        <Button
-          appearance="primary"
+        <PrimaryButton
           size="large"
-         
-          as="a"
           href={ctaHref}
         >
           {ctaLabel}
-        </Button>
+        </PrimaryButton>
       </div>
     </section>
   );

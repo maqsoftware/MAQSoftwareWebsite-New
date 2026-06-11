@@ -1,4 +1,4 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";import {
+import { makeStyles, tokens } from "@fluentui/react-components";import {
   ArrowRight20Regular,
   Brain24Regular,
   Mail24Regular,
@@ -7,6 +7,7 @@ import { Button, makeStyles, tokens } from "@fluentui/react-components";import {
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton, SecondaryButton, TextButton } from "../components/buttons";
 
 const REGISTER_URL = "https://techcon365.com/Chicago/tickets";
 const BROCHURE_URL = "/resources/MAQ%20Software%20Brochure.pdf";
@@ -442,17 +443,15 @@ export function TechCon365() {
               Use code "MAQ15" when registering to get 15% off your conference pass.
             </div>
             <div className={s.btns}>
-              <Button
-                as="a"
+              <PrimaryButton
                 href={REGISTER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                appearance="primary"
                 size="large"
-                icon={<TicketDiagonal24Regular />}
+                iconBefore={<TicketDiagonal24Regular />}
               >
                 Register now
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
 
@@ -505,17 +504,14 @@ export function TechCon365() {
                     <span key={speaker} className={s.bodyText}>{speaker}</span>
                   ))}
                 </div>
-                <Button
-                  as="a"
+                <TextButton
                   href={talk.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  appearance="subtle"
-                  icon={<ArrowRight20Regular />}
-                  iconPosition="after"
+                  iconAfter={<ArrowRight20Regular />}
                 >
                   Read more
-                </Button>
+                </TextButton>
               </article>
             ))}
           </div>
@@ -585,32 +581,28 @@ export function TechCon365() {
           <div className={s.storyPanel}>
             <span className={s.eyebrow}>Talk to us</span>
             <h2 className={s.title}>Ready to move faster?</h2>
-            <p className={s.sectionSub}>
+            {/* <p className={s.sectionSub}>
               Tell us where you are. We'll show you what's possible in 30
               minutes - no obligation.
-            </p>
+            </p> */}
             <div className={s.storyButtons}>
-              <Button
+              <PrimaryButton
                 onClick={() =>
                   handleContactClick("TechCon 365 Chicago 2026 meeting")
                 }
-                appearance="primary"
                 size="large"
                 className="maq-equal-cta"
               >
                 Contact Us
-              </Button>
-              <Button
-                as="a"
+              </PrimaryButton>
+              <SecondaryButton
                 href="/insights/case-studies"
-                appearance="outline"
                 size="large"
                 className="maq-equal-cta"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
+                iconAfter={<ArrowRight20Regular />}
               >
                 Case studies
-              </Button>
+              </SecondaryButton>
             </div>
           </div>
         </div>

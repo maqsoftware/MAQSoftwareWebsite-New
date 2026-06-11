@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
-import { Button, makeStyles } from "@fluentui/react-components";
-import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { makeStyles } from "@fluentui/react-components";
 import { FeatureCard } from "../cards/FeatureCard";
+import { SecondaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   section: {
@@ -88,7 +88,7 @@ export function PartnershipMarketplace({
         <div className={s.headLeft}>
           {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.titleLg}>{title}</h2>
-          {intro && <p className={s.intro}>{intro}</p>}
+          {/* {intro && <p className={s.intro}>{intro}</p>} */}
         </div>
 
         <div className={s.grid}>
@@ -102,17 +102,14 @@ export function PartnershipMarketplace({
         </div>
 
         <div className={s.ctaContainer}>
-          <Button
-            appearance="secondary"
+          <SecondaryButton
             size="large"
             className="maq-equal-cta"
-            iconPosition="after"
-            as="a"
             href={ctaHref}
             rel="noopener noreferrer"
           >
             {ctaLabel}
-          </Button>
+          </SecondaryButton>
         </div>
       </div>
     </section>

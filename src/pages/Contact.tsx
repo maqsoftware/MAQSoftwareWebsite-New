@@ -1,4 +1,4 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import {
   Location24Regular,
   Mail24Regular,
@@ -7,6 +7,7 @@ import {
   Handshake24Regular,
   Rocket24Regular,
 } from "@fluentui/react-icons";
+import { PrimaryButton } from "../components/buttons";
 
 const MAIL_TO =
   "mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.";
@@ -304,15 +305,13 @@ export function Contact() {
               </div>
             </div>
 
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
               className="maq-equal-cta"
-              as="a"
               href={MAIL_TO}
             >
               Contact Us
-            </Button>
+            </PrimaryButton>
           </div>
 
           <aside className={s.heroRight}>

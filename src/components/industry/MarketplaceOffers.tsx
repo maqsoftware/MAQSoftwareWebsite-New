@@ -52,7 +52,7 @@ export function MarketplaceOffers({
       <div className={s.inner}>
         <div className={s.head}>
           <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{sub}</p>
+          {/* <p className={s.sub}>{sub}</p> */}
         </div>
         <div className={s.grid}>
           {offers.map((o) => (

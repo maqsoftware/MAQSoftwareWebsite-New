@@ -1,8 +1,9 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton } from "../components/buttons";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -556,10 +557,8 @@ export function ServiceBusinessApps() {
                             flows that retire manual handoffs and embed AI into everyday operations.
                         </p>
                         <div className={s.btns}>
-                            <Button
-                                appearance="primary"
+                            <PrimaryButton
                                 size="large"
-                               
                                 onClick={() =>
                                     handleContactClick(
                                         "Business Applications & Automation - MAQ Software"
@@ -567,7 +566,7 @@ export function ServiceBusinessApps() {
                                 }
                             >
                                 Contact Us
-                            </Button>
+                            </PrimaryButton>
                         </div>
                     </div>
 
@@ -631,18 +630,17 @@ export function ServiceBusinessApps() {
                     <div className={s.head}>
                         <span className={s.secEyebrow}>Our expertise</span>
                         <h2 className={s.title}>Our business applications &amp; automation capabilities</h2>
-                        <p className={s.secSub}>
+                        {/* <p className={s.secSub}>
                             Four capability pillars that modernize legacy applications and automate
                             operations across the Microsoft business apps stack.
-                        </p>
+                        </p> */}
                     </div>
                     <div className={s.panel}>
                         <div>
                             <div className={s.iconBox}>{sel.icon}</div>
                             <div className={s.detailName}>{sel.name}</div>
                             <p className={s.detailDesc}>{sel.description}</p>
-                            <Button
-                                appearance="secondary"
+                            <PrimaryButton
                                 size="large"
                                 className="maq-secondary-btn maq-equal-cta"
                                 onClick={() =>
@@ -652,7 +650,7 @@ export function ServiceBusinessApps() {
                                 }
                             >
                                 Know more
-                            </Button>
+                            </PrimaryButton>
                         </div>
                         <div className={s.rail}>
                             {capabilities.map((c, i) => (
@@ -688,10 +686,10 @@ export function ServiceBusinessApps() {
                     <div className={s.headCentered}>
                         <span className={s.secEyebrow}>Business outcomes</span>
                         <h2 className={s.titleSm}>Your business outcomes</h2>
-                        <p className={s.secSub}>
+                        {/* <p className={s.secSub}>
                             What organizations gain when legacy apps and manual processes are modernized
                             with engineering discipline.
-                        </p>
+                        </p> */}
                     </div>
                     <div className={s.outcomesGrid}>
                         {outcomes.map((o) => (
@@ -745,10 +743,10 @@ export function ServiceBusinessApps() {
                     <div className={s.head}>
                         <span className={s.secEyebrow}>Insights</span>
                         <h2 className={s.titleSm}>Our business apps and process automation insights</h2>
-                        <p className={s.secSub}>
+                        {/* <p className={s.secSub}>
                             See our research that goes into optimizing our business apps and process
                             automation service.
-                        </p>
+                        </p> */}
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (
