@@ -228,7 +228,7 @@ export function AboutEvents() {
       <InsightsHero
         title="Connect With MAQ Software"
         subhead="Stay informed about upcoming conferences, webinars, workshops, and industry events where MAQ Software experts share insights on Data, AI, Analytics, and Cloud technologies."
-        ctaLabel="Talk to our team"
+        ctaLabel="Contact Us"
       />
 
       <InsightsResourceNav active="events" />
