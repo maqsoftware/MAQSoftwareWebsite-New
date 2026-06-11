@@ -1104,7 +1104,7 @@ const useCompCard = makeStyles({
     fontSize: "56px",
     color: "var(--maq-red)",
     lineHeight: 0.5,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
     fontWeight: 700,
     marginBottom: "8px",
   },

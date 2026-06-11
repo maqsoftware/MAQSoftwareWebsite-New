@@ -68,15 +68,15 @@ function illustration(motif: "chat" | "gauge" | "swap" | "embed" | "shield" | "i
         <rect x="276" y="184" width="240" height="34" rx="17" fill="${CREAM}" stroke="${BORDER}"/>
         <rect x="44" y="232" width="300" height="34" rx="17" fill="${GRAY_100}"/>
         <rect x="44" y="280" width="80" height="34" rx="17" fill="${RED}"/>
-        <text x="84" y="302" text-anchor="middle" fill="#fff" font-family="Segoe UI, system-ui" font-size="13" font-weight="600">Ask</text>
+        <text x="84" y="302" text-anchor="middle" fill="#fff" font-family="Roboto, system-ui" font-size="13" font-weight="600">Ask</text>
       `;
       break;
     case "gauge":
       body = `
         <circle cx="160" cy="200" r="78" fill="none" stroke="${GRAY_100}" stroke-width="14"/>
         <path d="M 160 122 A 78 78 0 0 1 232 244" fill="none" stroke="${RED}" stroke-width="14" stroke-linecap="round"/>
-        <text x="160" y="208" text-anchor="middle" fill="${INK}" font-family="Segoe UI, system-ui" font-size="34" font-weight="700">98%</text>
-        <text x="160" y="232" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="12">Healthy</text>
+        <text x="160" y="208" text-anchor="middle" fill="${INK}" font-family="Roboto, system-ui" font-size="34" font-weight="700">98%</text>
+        <text x="160" y="232" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="12">Healthy</text>
         <rect x="300" y="120" width="220" height="14" rx="7" fill="${GRAY_100}"/>
         <rect x="300" y="120" width="170" height="14" rx="7" fill="${SLATE}"/>
         <rect x="300" y="150" width="220" height="14" rx="7" fill="${GRAY_100}"/>
@@ -89,14 +89,14 @@ function illustration(motif: "chat" | "gauge" | "swap" | "embed" | "shield" | "i
     case "swap":
       body = `
         <rect x="44" y="100" width="180" height="220" rx="12" fill="${CREAM}" stroke="${BORDER}"/>
-        <text x="134" y="128" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="12" font-weight="700">LEGACY</text>
+        <text x="134" y="128" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="12" font-weight="700">LEGACY</text>
         <rect x="60" y="146" width="148" height="10" rx="5" fill="${GRAY_200}"/>
         <rect x="60" y="166" width="120" height="10" rx="5" fill="${GRAY_200}"/>
         <rect x="60" y="186" width="140" height="10" rx="5" fill="${GRAY_200}"/>
         <rect x="60" y="206" width="100" height="10" rx="5" fill="${GRAY_200}"/>
         <rect x="60" y="226" width="130" height="10" rx="5" fill="${GRAY_200}"/>
         <rect x="336" y="100" width="180" height="220" rx="12" fill="#fff" stroke="${BORDER}"/>
-        <text x="426" y="128" text-anchor="middle" fill="${INK}" font-family="Segoe UI, system-ui" font-size="12" font-weight="700">FABRIC</text>
+        <text x="426" y="128" text-anchor="middle" fill="${INK}" font-family="Roboto, system-ui" font-size="12" font-weight="700">FABRIC</text>
         <rect x="352" y="146" width="148" height="10" rx="5" fill="${SLATE}"/>
         <rect x="352" y="166" width="120" height="10" rx="5" fill="${SLATE}"/>
         <rect x="352" y="186" width="140" height="10" rx="5" fill="${SLATE}"/>
@@ -124,7 +124,7 @@ function illustration(motif: "chat" | "gauge" | "swap" | "embed" | "shield" | "i
         <rect x="307" y="162" width="80" height="10" rx="5" fill="${SLATE}"/>
         <circle cx="403" cy="240" r="56" fill="none" stroke="${GRAY_100}" stroke-width="16"/>
         <path d="M 403 184 A 56 56 0 0 1 459 240" fill="none" stroke="${RED}" stroke-width="16" stroke-linecap="round"/>
-        <text x="403" y="246" text-anchor="middle" fill="${INK}" font-family="Segoe UI, system-ui" font-size="20" font-weight="700">62%</text>
+        <text x="403" y="246" text-anchor="middle" fill="${INK}" font-family="Roboto, system-ui" font-size="20" font-weight="700">62%</text>
       `;
       break;
     case "shield":
@@ -141,31 +141,31 @@ function illustration(motif: "chat" | "gauge" | "swap" | "embed" | "shield" | "i
         <circle cx="340" cy="244" r="8" fill="${SLATE}"/>
         <rect x="358" y="238" width="150" height="12" rx="6" fill="${GRAY_200}"/>
         <rect x="320" y="276" width="200" height="40" rx="8" fill="#fff" stroke="${RED}" stroke-width="1.5"/>
-        <text x="420" y="302" text-anchor="middle" fill="${RED}" font-family="Segoe UI, system-ui" font-size="13" font-weight="700">CERTIFIED</text>
+        <text x="420" y="302" text-anchor="middle" fill="${RED}" font-family="Roboto, system-ui" font-size="13" font-weight="700">CERTIFIED</text>
       `;
       break;
     case "ingest":
       body = `
         <rect x="44" y="100" width="100" height="60" rx="8" fill="${CREAM}" stroke="${BORDER}"/>
-        <text x="94" y="136" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="11" font-weight="700">SOURCE</text>
+        <text x="94" y="136" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="11" font-weight="700">SOURCE</text>
         <rect x="44" y="180" width="100" height="60" rx="8" fill="${CREAM}" stroke="${BORDER}"/>
-        <text x="94" y="216" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="11" font-weight="700">SOURCE</text>
+        <text x="94" y="216" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="11" font-weight="700">SOURCE</text>
         <rect x="44" y="260" width="100" height="60" rx="8" fill="${CREAM}" stroke="${BORDER}"/>
-        <text x="94" y="296" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="11" font-weight="700">SOURCE</text>
+        <text x="94" y="296" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="11" font-weight="700">SOURCE</text>
         <path d="M 144 130 C 200 130 200 210 256 210" stroke="${GRAY_200}" stroke-width="2.5" fill="none"/>
         <path d="M 144 210 L 256 210" stroke="${GRAY_200}" stroke-width="2.5" fill="none"/>
         <path d="M 144 290 C 200 290 200 210 256 210" stroke="${GRAY_200}" stroke-width="2.5" fill="none"/>
         <rect x="256" y="160" width="120" height="100" rx="10" fill="#fff" stroke="${RED}" stroke-width="2"/>
-        <text x="316" y="200" text-anchor="middle" fill="${INK}" font-family="Segoe UI, system-ui" font-size="12" font-weight="700">LoadFAST</text>
-        <text x="316" y="218" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="10">metadata-driven</text>
+        <text x="316" y="200" text-anchor="middle" fill="${INK}" font-family="Roboto, system-ui" font-size="12" font-weight="700">LoadFAST</text>
+        <text x="316" y="218" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="10">metadata-driven</text>
         <rect x="276" y="232" width="80" height="14" rx="4" fill="${RED_PALE}"/>
         <path d="M 376 210 L 420 210" stroke="${GRAY_200}" stroke-width="2.5" fill="none"/>
         <rect x="420" y="142" width="96" height="44" rx="8" fill="#fff" stroke="${BORDER}"/>
-        <text x="468" y="170" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="11" font-weight="700">BRONZE</text>
+        <text x="468" y="170" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="11" font-weight="700">BRONZE</text>
         <rect x="420" y="194" width="96" height="44" rx="8" fill="#fff" stroke="${BORDER}"/>
-        <text x="468" y="222" text-anchor="middle" fill="${SLATE}" font-family="Segoe UI, system-ui" font-size="11" font-weight="700">SILVER</text>
+        <text x="468" y="222" text-anchor="middle" fill="${SLATE}" font-family="Roboto, system-ui" font-size="11" font-weight="700">SILVER</text>
         <rect x="420" y="246" width="96" height="44" rx="8" fill="${CREAM}" stroke="${RED}" stroke-width="1.5"/>
-        <text x="468" y="274" text-anchor="middle" fill="${RED}" font-family="Segoe UI, system-ui" font-size="11" font-weight="700">GOLD</text>
+        <text x="468" y="274" text-anchor="middle" fill="${RED}" font-family="Roboto, system-ui" font-size="11" font-weight="700">GOLD</text>
       `;
       break;
   }

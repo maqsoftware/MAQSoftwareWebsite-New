@@ -110,14 +110,13 @@ const useStyles = makeStyles({
     gap: "16px",
   },
   impactCard: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "10px",
     padding: "20px",
     background: "#fff",
-    transition: "all 0.2s",
+    transition: "border-color 0.16s ease",
     ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      border: "0.5px solid rgba(186, 20, 26, 0.5)",
     },
   },
   impactMetric: {
@@ -151,9 +150,13 @@ const useStyles = makeStyles({
   },
   feat: {
     background: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "22px",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "0.5px solid rgba(186, 20, 26, 0.5)",
+    },
   },
   featHead: {
     display: "flex",
@@ -194,7 +197,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: `1px solid var(--maq-red)`,
       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-      transform: "translateY(-2px)",
     },
   },
   caseTitle: {
@@ -256,7 +258,7 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     opacity: 0.18,
     lineHeight: 1,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
   },
   quoteBody: {
     fontSize: "15px",
@@ -295,7 +297,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: `1px solid var(--maq-red)`,
       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-      transform: "translateY(-2px)",
     },
   },
   mktImg: {
@@ -690,4 +691,3 @@ export function ProductFabricAdminAgent() {
     </>
   );
 }
-

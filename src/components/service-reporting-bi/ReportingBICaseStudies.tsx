@@ -1,6 +1,7 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -27,50 +28,6 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
   },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    padding: "22px",
-    background: "#fff",
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
-    color: "inherit",
-    textDecoration: "none",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
-  },
-  pill: {
-    fontSize: "11px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    background: "var(--maq-red-pale)",
-    padding: "3px 8px",
-    borderRadius: "4px",
-    letterSpacing: "0.06em",
-    textTransform: "uppercase",
-    alignSelf: "flex-start",
-  },
-  cardTitle: {
-    fontSize: "17px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    lineHeight: 1.3,
-    margin: 0,
-  },
-  teaser: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  read: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
   footerLink: {
     marginTop: "20px",
     display: "inline-flex",
@@ -141,13 +98,7 @@ export function ReportingBICaseStudies({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <a key={c.title} className={s.card} href={c.href} target="_blank" rel="noopener noreferrer">
-              <h3 className={s.cardTitle}>{c.title}</h3>
-              <p className={s.teaser}>{c.teaser}</p>
-              <span className={s.read}>
-                Read full case study
-              </span>
-            </a>
+            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} />
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
@@ -171,4 +122,3 @@ export function ReportingBICaseStudies({
     </section>
   );
 }
-

@@ -10,6 +10,7 @@ import {
 } from "@fluentui/react-icons";
 import type { FC, ReactNode } from "react";
 import {useNavigate} from "react-router-dom";
+import { FeatureCard } from "./cards/FeatureCard";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
@@ -47,64 +48,6 @@ const useStyles = makeStyles({
     gap: "16px",
     "@media (max-width: 1120px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
-  },
-  card: {
-    backgroundColor: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    padding: "24px",
-    transition: "all 0.2s ease",
-    cursor: "pointer",
-    ":hover": {
-      border: `1px solid var(--maq-blue)`,
-      boxShadow: "var(--maq-shadow-sm)",
-      transform: "translateY(-2px)",
-    },
-  },
-  titleRow: {
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-    marginBottom: "12px",
-  },
-  iconBox: {
-    width: "44px",
-    height: "44px",
-    borderRadius: "10px",
-    backgroundColor: "var(--maq-blue-pale)",
-    color: "var(--maq-blue)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexShrink: 0,
-  },
-  name: { fontSize: "20px", fontWeight: 700, color: "var(--maq-navy)", lineHeight: 1.2 },
-  heading: {
-    fontSize: "12px",
-    color: "var(--maq-blue)",
-    fontWeight: 500,
-    marginBottom: "10px",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-    lineHeight: 1.4,
-  },
-  tagline: {
-    fontSize: "13.5px",
-    color: "var(--maq-text-700)",
-    lineHeight: 1.6,
-    marginBottom: "12px",
-  },
-  desc: { fontSize: "13.5px", color: "var(--maq-text-700)", lineHeight: 1.6 },
-  bulletList: {
-    margin: "0",
-    paddingLeft: "18px",
-    display: "grid",
-    gap: "6px",
-  },
-  bullet: {
-    fontSize: "13.5px",
-    color: "var(--maq-text-700)",
-    lineHeight: 1.5,
   },
 });
 
@@ -240,23 +183,17 @@ export const Services: FC = () => {
         </div>
         <div className={s.grid}>
           {services.map((svc) => (
-            <div key={svc.name} className={s.card} onClick={() => navigate(svc.path)}>
-              <div className={s.titleRow}>
-                <div className={s.iconBox}>{svc.icon}</div>
-                <div className={s.name}>{svc.name}</div>
-              </div>
-              {svc.heading ? <div className={s.heading}>{svc.heading}</div> : null}
-              {svc.tagline ? <div className={s.tagline}>{svc.tagline}</div> : null}
-              {svc.bullets && svc.bullets.length > 0 ? (
-                <ul className={s.bulletList}>
-                  {svc.bullets.map((item) => (
-                    <li key={item} className={s.bullet}>{item}</li>
-                  ))}
-                </ul>
-              ) : svc.desc ? (
-                <div className={s.desc}>{svc.desc}</div>
-              ) : null}
-            </div>
+            <FeatureCard
+              key={svc.name}
+              icon={svc.icon}
+              name={svc.name}
+              heading={svc.heading}
+              tagline={svc.tagline}
+              bullets={svc.bullets}
+              description={svc.desc}
+              tone="blue"
+              onClick={() => navigate(svc.path)}
+            />
           ))}
         </div>
       </div>
