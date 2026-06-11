@@ -236,9 +236,9 @@ export function AboutEvents() {
         <div className={s.inner}>
           <div className={s.head}>
             <h2 className={s.title}>Upcoming Events</h2>
-            <p className={s.subtitle}>
+            {/* <p className={s.subtitle}>
               Meet MAQ Software at upcoming conferences and live sessions.
-            </p>
+            </p> */}
           </div>
 
           {upcoming.length === 0 ? (
@@ -294,9 +294,9 @@ export function AboutEvents() {
         <div className={s.inner}>
           <div className={s.head}>
             <h2 className={s.title}>Previous Events</h2>
-            <p className={s.subtitle}>
+            {/* <p className={s.subtitle}>
               Recaps and coverage from past conferences and sessions.
-            </p>
+            </p> */}
           </div>
 
           {loading && (

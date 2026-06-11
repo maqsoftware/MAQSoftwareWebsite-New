@@ -510,10 +510,10 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
           <div className={s.storyPanel}>
             <span className={s.eyebrow}>Talk to us</span>
             <h2 className={s.title}>Ready to move faster?</h2>
-            <p className={s.sectionSub}>
+            {/* <p className={s.sectionSub}>
               Tell us where you are. We'll show you what's possible in 30
               minutes - no obligation.
-            </p>
+            </p> */}
             <div className={s.storyButtons}>
               <Button
                 as="a"

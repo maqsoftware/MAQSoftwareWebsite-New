@@ -142,7 +142,7 @@ export function PartnershipMarketplace({
         <div className={s.headLeft}>
           {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
           <h2 className={s.titleLg}>{title}</h2>
-          {intro && <p className={s.intro}>{intro}</p>}
+          {/* {intro && <p className={s.intro}>{intro}</p>} */}
         </div>
 
         <div className={s.grid}>

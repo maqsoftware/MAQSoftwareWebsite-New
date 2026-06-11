@@ -237,9 +237,9 @@ export function ProductsHome() {
       <section className={s.cta}>
         <div className={s.ctaInner}>
           <h2 className={s.ctaTitle}>Want a guided walkthrough?</h2>
-          <p className={s.ctaSub}>
+          {/* <p className={s.ctaSub}>
             Pick any product. We'll show it running on your data.
-          </p>
+          </p> */}
           <Button
             appearance="primary"
             size="large"

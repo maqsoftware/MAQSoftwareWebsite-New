@@ -545,10 +545,10 @@ export function ProductFabricAdminAgent() {
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Proven outcomes</span>
             <h2 className={s.titleLg}>Real impact for Microsoft Fabric platform owners</h2>
-            <p className={s.sub}>
+            {/* <p className={s.sub}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
               enterprise tenants.
-            </p>
+            </p> */}
           </div>
           <div className={s.impactGrid}>
               {impact.map((i) => (
@@ -603,10 +603,10 @@ export function ProductFabricAdminAgent() {
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Insights</span>
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
-            <p className={s.sub}>
+            {/* <p className={s.sub}>
               Get the agent from Microsoft AppSource, browse Azure Marketplace
               marketplace offers, and explore deeper guidance from MAQ Software.
-            </p>
+            </p> */}
           </div>
 
           {/* Featured banner */}

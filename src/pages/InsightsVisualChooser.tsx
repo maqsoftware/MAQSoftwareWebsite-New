@@ -192,11 +192,11 @@ export function InsightsVisualChooser() {
           <Link to="/insights/power-bi-custom-visual-guide" className={s.back}>
             <ArrowLeft16Regular /> Back to Power BI custom visual guide
           </Link>
-          <p className={s.intro}>
+          {/* <p className={s.intro}>
             This guide groups our 43 certified custom visuals by analytic intent. Start from the
             question you want your report to answer, then dive into any visual for a detail view
             and AppSource link.
-          </p>
+          </p> */}
 
           <div className={s.filterRow}>
             <div className={s.toc}>
