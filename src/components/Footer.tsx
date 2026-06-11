@@ -138,7 +138,7 @@ const cols: FooterCol[] = [
     ],
   },
   {
-    title: "Company",
+    title: "About",
     items: [
       { label: "Who we are", to: "/who-we-are" },
       { label: "Careers",    to: "/careers" },

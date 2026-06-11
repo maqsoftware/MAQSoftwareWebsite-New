@@ -34,6 +34,8 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     padding: "22px",
     background: "#fff",
+    color: "inherit",
+    textDecoration: "none",
     transition: "all 0.2s",
     ":hover": {
       border: `1px solid var(--maq-red)`,
@@ -116,7 +118,6 @@ export function IndustryCaseStudies({
               href={c.href}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
             >
               <div className={s.cardTitle}>{c.title}</div>
               <div className={s.teaser}>{c.teaser}</div>

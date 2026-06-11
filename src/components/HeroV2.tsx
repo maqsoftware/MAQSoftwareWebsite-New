@@ -68,7 +68,7 @@ const useStyles = makeStyles({
   sub: {
     fontSize: "15px",
     lineHeight: 1.6,
-    color: "var(maq-ink)",
+    color: "var(--maq-ink)",
     marginBottom: "32px",
     maxWidth: "580px",
   },

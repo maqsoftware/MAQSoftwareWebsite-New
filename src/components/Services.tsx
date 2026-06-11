@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     display: "block",
     fontSize: "15px",
     lineHeight: 1.6,
-    color: "var(--maq-text-muted)",
+    color: "var(--maq-gray-700)",
     maxWidth: "640px",
     margin: "0 auto",
   },
