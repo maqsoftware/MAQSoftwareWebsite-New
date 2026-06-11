@@ -18,6 +18,7 @@ const useStyles = makeStyles({
     border: "1px solid var(--maq-red)",
     ":hover": {
       border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
     },
   },
   nonInteractive: {

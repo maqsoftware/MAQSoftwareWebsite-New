@@ -16,7 +16,7 @@ const INITIAL_VISIBLE = 9;
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "18px" },
+  head: { textAlign: "center", marginBottom: "18px" },
   title: { fontSize: "30px", fontWeight: 700, color: "var(--maq-black)", margin: "0 0 10px" },
   grid: {
     marginTop: "18px",
@@ -92,7 +92,7 @@ useEffect(() => {
       <InsightsHero
         title="Case Studies"
         subhead="Explore real-world outcomes across AI, data, reporting, cloud, and security implementations delivered by MAQ Software."
-        ctaLabel="Discuss your project"
+        ctaLabel="Contact Us"
       />
 
       <InsightsResourceNav active="case-studies" />

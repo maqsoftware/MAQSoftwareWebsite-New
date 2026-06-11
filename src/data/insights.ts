@@ -1,5 +1,10 @@
 export interface InsightsResourceLink {
-  key: "case-studies" | "consulting-offers" | "power-bi-custom-visual-guide" | "best-practice-guides";
+  key:
+    | "case-studies"
+    | "consulting-offers"
+    | "power-bi-custom-visual-guide"
+    | "best-practice-guides"
+    | "events";
   label: string;
   href: string;
   description: string;
@@ -17,6 +22,12 @@ export const insightsResourceLinks: InsightsResourceLink[] = [
     label: "Best practices",
     href: "/insights/best-practice-guides",
     description: "Implementation playbooks and technical guidance.",
+  },
+  {
+    key: "events",
+    label: "Events",
+    href: "/events",
+    description: "Conferences, webinars, and workshops with MAQ experts.",
   },
   {
     key: "consulting-offers",

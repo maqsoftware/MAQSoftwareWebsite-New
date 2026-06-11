@@ -758,7 +758,7 @@ const CaseCardLab: FC = () => {
               <div className={c.aMetric}>{x.metric}</div>
               <div className={c.title}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story</span>
+              <span className={c.more}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -771,7 +771,7 @@ const CaseCardLab: FC = () => {
               <span className={c.bMetric}>{x.metric}</span>
               <div className={c.title} style={{ fontSize: 17, marginTop: 8 }}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story</span>
+              <span className={c.more}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -790,7 +790,7 @@ const CaseCardLab: FC = () => {
               <div className={c.cBody}>
                 <div className={c.title}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story</span>
+                <span className={c.more}>Read full case study</span>
               </div>
             </article>
           ))}
@@ -804,7 +804,7 @@ const CaseCardLab: FC = () => {
               <div className={c.dMetric}>{x.metric}</div>
               <div className={c.titleLight}>{x.title}</div>
               <div className={c.teaserLight}>{x.teaser}</div>
-              <span className={c.moreLight}>Read full story</span>
+              <span className={c.moreLight}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -821,7 +821,7 @@ const CaseCardLab: FC = () => {
               <div>
                 <div className={c.title} style={{ fontSize: 17 }}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story</span>
+                <span className={c.more}>Read full case study</span>
               </div>
             </article>
           ))}

@@ -73,11 +73,6 @@ const useStyles = makeStyles({
     margin: 0,
     letterSpacing: "-0.01em",
   },
-  sectionDesc: {
-    fontSize: "14px",
-    color: "var(--maq-gray-700)",
-    margin: 0,
-  },
   upcomingGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
@@ -223,7 +218,6 @@ export function AboutEvents() {
         <div className={s.inner}>
           <div className={s.sectionHead}>
             <h2 className={s.sectionTitle}>Upcoming Events</h2>
-           
           </div>
 
           {upcoming.length === 0 ? (

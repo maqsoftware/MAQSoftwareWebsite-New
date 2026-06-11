@@ -14,6 +14,7 @@ const useStyles = makeStyles({
   },
   headLeft: {
     marginBottom: "32px",
+    textAlign: "center",
   },
   eyebrow: {
     fontSize: "12px",
@@ -39,6 +40,9 @@ const useStyles = makeStyles({
     marginTop: "12px",
     marginBottom: "0",
     maxWidth: "800px",
+    marginLeft: "auto",
+    marginRight: "auto",
+    textAlign: "center",
   },
   grid: {
     display: "grid",
@@ -49,7 +53,7 @@ const useStyles = makeStyles({
   },
   ctaContainer: {
     display: "flex",
-    justifyContent: "flex-start",
+    justifyContent: "center",
   },
 });
 
@@ -99,13 +103,12 @@ export function PartnershipMarketplace({
 
         <div className={s.ctaContainer}>
           <Button
-            appearance="primary"
+            appearance="secondary"
             size="large"
-            icon={<ArrowRight20Regular />}
+            className="maq-equal-cta"
             iconPosition="after"
             as="a"
             href={ctaHref}
-            target="_blank"
             rel="noopener noreferrer"
           >
             {ctaLabel}

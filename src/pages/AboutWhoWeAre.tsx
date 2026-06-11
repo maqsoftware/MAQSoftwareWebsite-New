@@ -82,6 +82,7 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     letterSpacing: "-0.01em",
     margin: "0 0 32px",
+    textAlign: "center",
     "@media (max-width: 560px)": {
       fontSize: "24px",
       lineHeight: 1.2,

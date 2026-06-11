@@ -161,6 +161,7 @@ const useStyles = makeStyles({
     color: "var(--maq-gray-700)",
     margin: "0 auto",
     maxWidth: "720px",
+    textAlign: "center",
   },
   talksGrid: {
     display: "grid",
@@ -610,15 +611,6 @@ export function TechCon365() {
               >
                 Case studies
               </Button>
-            </div>
-            <div className={s.email}>
-              Or email us directly at{" "}
-              <a
-                className={s.emailLink}
-                href="mailto:customersuccess@maqsoftware.com"
-              >
-                customersuccess@maqsoftware.com
-              </a>
             </div>
           </div>
         </div>

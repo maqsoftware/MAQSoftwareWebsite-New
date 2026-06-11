@@ -6,7 +6,7 @@ import { ProductCard } from "../cards/ProductCard";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "24px" },
+  head: { textAlign: "center", marginBottom: "24px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     margin: "0 0 6px",
     letterSpacing: "-0.01em",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0 },
+  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", textAlign: "center" },
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",

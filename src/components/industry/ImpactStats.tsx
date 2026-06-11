@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     margin: "0 0 6px",
     letterSpacing: "-0.01em",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0 },
+  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", textAlign: "center" },
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",

@@ -5,7 +5,7 @@ import { ResourceMarketplaceCard } from "../cards/ResourceMarketplaceCard";
 const useStyles = makeStyles({
   section: { padding: "32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "16px" },
+  head: { textAlign: "center", marginBottom: "16px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,

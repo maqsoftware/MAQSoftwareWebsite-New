@@ -110,7 +110,7 @@ const useStyles = makeStyles({
     section: { padding: "48px 32px", backgroundColor: "#fff" },
     sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
     inner: { maxWidth: "1240px", margin: "0 auto" },
-    head: { marginBottom: "20px" },
+    head: { textAlign: "center", marginBottom: "20px" },
     headCentered: { textAlign: "center", marginBottom: "28px" },
     secEyebrow: {
         fontSize: "12px",
@@ -135,7 +135,7 @@ const useStyles = makeStyles({
         margin: "0 0 6px",
         letterSpacing: "-0.01em",
     },
-    secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "780px" },
+    secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
     // Capabilities — tabbed list + detail
     panel: {
@@ -642,8 +642,9 @@ export function ServiceBusinessApps() {
                             <div className={s.detailName}>{sel.name}</div>
                             <p className={s.detailDesc}>{sel.description}</p>
                             <Button
-                                appearance="outline"
-                                className={s.knowMore}
+                                appearance="secondary"
+                                size="large"
+                                className="maq-secondary-btn maq-equal-cta"
                                 onClick={() =>
                                     handleContactClick(
                                         `${sel.name} - Business Applications & Automation`
@@ -723,7 +724,7 @@ export function ServiceBusinessApps() {
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>
-                                    Read full story
+                                    Read full case study
                                 </span>
                             </a>
                         ))}

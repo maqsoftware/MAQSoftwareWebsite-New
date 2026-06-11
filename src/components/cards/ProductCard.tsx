@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     textDecoration: "none",
     color: "inherit",
-    transition: "border-color 0.16s ease",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease",
   },
   imageWrap: {
     background: "var(--maq-surface-cream)",
@@ -78,6 +78,7 @@ const useStyles = makeStyles({
     border: "1px solid var(--maq-red)",
     ":hover": {
       border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
     },
   },
   nonInteractive: {

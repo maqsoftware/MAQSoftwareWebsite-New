@@ -13,9 +13,10 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "8px",
-    transition: "border-color 0.16s ease",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease",
     ":hover": {
       border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
     },
   },
   active: {

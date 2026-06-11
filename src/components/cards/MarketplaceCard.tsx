@@ -12,7 +12,10 @@ const useStyles = makeStyles({
     textDecoration: "none",
     color: "inherit",
     transition: "box-shadow 0.16s ease, border-color 0.16s ease",
-    ":hover": { border: "0.75px solid var(--maq-red-pale)" },
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
+    },
   },
   clickable: {
     cursor: "pointer",

@@ -4,7 +4,7 @@ import { ResourceMarketplaceCard } from "../cards/ResourceMarketplaceCard";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  head: { textAlign: "center", marginBottom: "20px" },
   title: {
     fontSize: "28px",
     fontWeight: 700,
@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   sub: {
     fontSize: "14px",
     color: "var(--maq-gray-600)",
-    margin: 0,
+    margin: "0 auto",
     maxWidth: "720px",
   },
   grid: {

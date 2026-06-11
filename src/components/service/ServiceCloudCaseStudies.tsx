@@ -1,4 +1,4 @@
-import { makeStyles, tokens, Button } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 import { CaseStudyCard } from "../cards/CaseStudyCard";
@@ -6,7 +6,7 @@ import { CaseStudyCard } from "../cards/CaseStudyCard";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "24px" },
+  head: { textAlign: "center", marginBottom: "24px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,

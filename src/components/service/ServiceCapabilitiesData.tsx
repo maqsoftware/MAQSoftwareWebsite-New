@@ -8,7 +8,7 @@ import { useContactAction } from "../../lib/contact";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -25,7 +25,7 @@ const useStyles = makeStyles({
     margin: "0 0 6px",
     letterSpacing: "-0.01em",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "780px" },
+  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
   panel: {
     marginTop: "20px",
@@ -192,8 +192,9 @@ export function ServiceCapabilitiesData() {
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
             <Button
-              appearance="outline"
-              className={s.knowMore}
+              appearance="secondary"
+              size="large"
+              className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
                 handleContactClick(sel.name + " - Data & AI Platforms")
               }

@@ -74,7 +74,7 @@ const useStyles = makeStyles({
   sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "28px" },
-  headLeft: { marginBottom: "20px" },
+  headLeft: { marginBottom: "20px", textAlign: "center" },
   secEyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -100,7 +100,7 @@ const useStyles = makeStyles({
     margin: "0 0 10px",
     letterSpacing: "-0.01em",
   },
-  sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "720px" },
+  sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "720px", textAlign: "center" },
 
   // Impact ----------------------------------------------------------------
   impactGrid: {
@@ -371,11 +371,37 @@ const impact = [
 ];
 
 
-const features = [
-  { icon: <Pulse24Regular />, title: "24/7 health monitoring", desc: "Capacity utilization, refresh SLAs, and item failures tracked across every workspace and domain in your tenant." },
-  { icon: <Warning24Regular />, title: "Proactive risk alerts", desc: "Surface issues before business users hit broken reports or throttled queries — alerts correlated, not noisy." },
-  { icon: <Wrench24Regular />, title: "One-click remediation", desc: "Suggested fixes (resize capacity, reassign workspace, archive orphaned items) execute with full audit trail." },
-  { icon: <Eye24Regular />, title: "Tenant-wide visibility", desc: "A single pane across capacities, domains, workspaces, lakehouses, warehouses, and semantic models." },
+const benefits = [
+  {
+    icon: <Pulse24Regular />,
+    title: "Always-on monitoring",
+    desc: "Continuously monitors utilization, refresh patterns, and workspace activity across all tenant capacities.",
+  },
+  {
+    icon: <Warning24Regular />,
+    title: "Anomaly and spike detection",
+    desc: "Automatically detects CU spikes, refresh storms, and anomalous workloads with workspace-level impact analysis.",
+  },
+  {
+    icon: <Wrench24Regular />,
+    title: "Actionable insight cards",
+    desc: "Every detection surfaces a specific recommended action, not just an alert. Throttle, shift, reassign, archive, or scale with one click.",
+  },
+  {
+    icon: <Eye24Regular />,
+    title: "SKU right-sizing",
+    desc: "Identifies over and under-provisioned capacities and recommends optimal SKU adjustments.",
+  },
+  {
+    icon: <Pulse24Regular />,
+    title: "Idle capacity detection",
+    desc: "Surfaces underutilized capacities and recommends scheduling optimizations to recover spend.",
+  },
+  {
+    icon: <Warning24Regular />,
+    title: "Full audit trail",
+    desc: "All recommendations and actions are fully logged, governed, and traceable with no shadow changes.",
+  },
 ];
 
 const cases = [
@@ -489,8 +515,30 @@ export function ProductFabricAdminAgent() {
       {/* ---------------------- Trust banner ---------------------- */}
 
 
-      {/* ---------------------- Impact ---------------------- */}
+      {/* ---------------------- Benefits ---------------------- */}
       <section className={s.section}>
+        <div className={s.inner}>
+          <div className={s.headLeft}>
+            <span className={s.secEyebrow}>Why Fabric Admin Agent</span>
+            <h2 className={s.titleLg}>Benefits</h2>
+          </div>
+          <div className={s.featGrid}>
+            {benefits.map((b) => (
+              <div key={b.title} className={s.feat}>
+                <div className={s.featHead}>
+                  <span className={s.featIconBox}>{b.icon}</span>
+                  <div className={s.featTitle}>{b.title}</div>
+                </div>
+                <p className={s.featDesc}>{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* ---------------------- Impact ---------------------- */}
+      <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Proven outcomes</span>
@@ -531,7 +579,7 @@ export function ProductFabricAdminAgent() {
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
-                  Read full story
+                  Read full case study
                 </span>
               </a>
             ))}
@@ -548,7 +596,7 @@ export function ProductFabricAdminAgent() {
       </section>
 
       {/* ---------------------- Insights ---------------------- */}
-      <section className={s.section}>
+      <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Insights</span>

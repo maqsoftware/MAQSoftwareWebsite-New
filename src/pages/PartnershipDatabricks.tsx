@@ -226,7 +226,7 @@ export function PartnershipDatabricks() {
 
       <PartnershipInsights eyebrow="Insights" title="Related blogs and case studies" items={blogs} />
 
-      <PartnershipMarketplace title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Learn more" ctaHref="/insights" />
+      <PartnershipMarketplace title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Case Studies" ctaHref="/insights" />
 
     </>
   );
