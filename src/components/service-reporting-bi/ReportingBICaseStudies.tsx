@@ -37,6 +37,7 @@ const useStyles = makeStyles({
     gap: "10px",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
     color: "inherit",
+    textDecoration: "none",
     transition: "all 0.2s",
     ":hover": {
       border: "1px solid var(--maq-red)",
