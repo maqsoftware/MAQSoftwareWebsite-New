@@ -24,9 +24,9 @@ const useStyles = makeStyles({
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
-    "@media (max-width: 1200px)": { gridTemplateColumns: "repeat(2, 1fr)" },
+    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
 });

@@ -222,7 +222,7 @@ export function ServiceCapabilitiesData() {
         </div>
         <Link
           className={s.footerLink}
-          to="/insights/case-studies?filter=Data%20%26%20analytics#insights-content"
+          to="/insights/case-studies?filter=Data%20%26%20AI%20Platforms#insights-content"
         >
           See data &amp; analytics case studies <ArrowRight16Regular />
         </Link>
