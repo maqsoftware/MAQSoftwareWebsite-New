@@ -2,7 +2,7 @@ import { Hero } from "../components/HeroV2";
 // import { TrustBanner } from "../components/TrustBanner";
 
 import { Services } from "../components/Services";
-import { CaseStudies } from "../components/CaseStudies";
+import { Industries } from "../components/Industries";
 import { Products } from "../components/Products";
 import { CTA } from "../components/CTA";
 
@@ -14,7 +14,7 @@ export function Home() {
 
       <Services />
       <Products />
-      <CaseStudies />
+      <Industries />
       <CTA />
     </>
   );

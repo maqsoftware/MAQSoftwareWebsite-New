@@ -191,6 +191,7 @@ export const Services: FC = () => {
               tagline={svc.tagline}
               bullets={svc.bullets}
               description={svc.desc}
+              ctaLabel="Learn more"
               tone="blue"
               onClick={() => navigate(svc.path)}
             />
