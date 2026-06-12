@@ -419,6 +419,7 @@ export function App() {
             <Route path="/partnerships/snowflake" element={<PartnershipSnowflake />} />
             <Route path="/about/who-we-are" element={<AboutWhoWeAre />} />
             <Route path="/about/sustainability" element={<AboutSustainability />} />
+            <Route path="/events" element={<AboutEvents />} />
             <Route path="/about/events" element={<AboutEvents />} />
             <Route path="/about/careers" element={<AboutCareers />} />
             <Route path="/about/privacy-statement" element={<AboutPrivacyStatement />} />
