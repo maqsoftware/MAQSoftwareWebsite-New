@@ -9,8 +9,10 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     padding: "24px",
     transition: "box-shadow 0.16s ease, border-color 0.16s ease, background-color 0.16s ease",
-    display: "block",
+    display: "flex",
+    flexDirection: "column",
     width: "100%",
+    height: "100%",
     textAlign: "left",
   },
   clickable: { 
@@ -66,6 +68,14 @@ const useStyles = makeStyles({
     fontSize: "13.5px",
     lineHeight: 1.5,
   },
+  cta: {
+    display: "inline-block",
+    fontSize: "13.5px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    marginTop: "auto",
+    paddingTop: "16px",
+  },
 });
 
 export interface FeatureCardProps {
@@ -75,6 +85,7 @@ export interface FeatureCardProps {
   tagline?: string;
   description?: string;
   bullets?: ReactNode[];
+  ctaLabel?: string;
   href?: string;
   onClick?: () => void;
   className?: string;
@@ -88,6 +99,7 @@ export function FeatureCard({
   tagline,
   description,
   bullets,
+  ctaLabel,
   href,
   onClick,
   className,
@@ -135,6 +147,11 @@ export function FeatureCard({
         <div className={s.desc} style={{ color: textColor }}>
           {description}
         </div>
+      ) : null}
+      {ctaLabel ? (
+        <span className={s.cta} style={{ color: accent }}>
+          {ctaLabel}
+        </span>
       ) : null}
     </>
   );
