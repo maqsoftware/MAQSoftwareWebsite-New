@@ -9,7 +9,8 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     padding: "24px",
     transition: "box-shadow 0.16s ease, border-color 0.16s ease, background-color 0.16s ease",
-    display: "block",
+    display: "flex",
+    flexDirection: "column",
     width: "100%",
     textAlign: "left",
   },
@@ -61,10 +62,18 @@ const useStyles = makeStyles({
     paddingLeft: "18px",
     display: "grid",
     gap: "6px",
+    flex: 1,
   },
   bullet: {
     fontSize: "13.5px",
     lineHeight: 1.5,
+  },
+  cta: {
+    display: "inline-block",
+    fontSize: "13.5px",
+    fontWeight: 700,
+    lineHeight: 1.4,
+    marginTop: "16px",
   },
 });
 
@@ -75,6 +84,7 @@ export interface FeatureCardProps {
   tagline?: string;
   description?: string;
   bullets?: ReactNode[];
+  ctaLabel?: string;
   href?: string;
   onClick?: () => void;
   className?: string;
@@ -88,6 +98,7 @@ export function FeatureCard({
   tagline,
   description,
   bullets,
+  ctaLabel = "Learn more",
   href,
   onClick,
   className,
@@ -136,6 +147,9 @@ export function FeatureCard({
           {description}
         </div>
       ) : null}
+      <span className={s.cta} style={{ color: accent }}>
+        {ctaLabel}
+      </span>
     </>
   );
 
