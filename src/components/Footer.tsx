@@ -187,7 +187,7 @@ export function Footer() {
             <div className={s.brand}>
               <Link to="/" aria-label="MAQ Software homepage" className={s.socialLink}>
                 <div className={s.logoMark}>
-                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} />
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} width={196} height={48} />
                 </div>
               </Link>
             </div>
