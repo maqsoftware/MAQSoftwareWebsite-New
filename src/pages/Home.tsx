@@ -1,6 +1,7 @@
 import { lazy, Suspense, type ComponentType } from "react";
 import { makeStyles } from "@fluentui/react-components";
 import { Hero } from "../components/HeroV2";
+// import { TrustBanner } from "../components/TrustBanner";
 import { CTA } from "../components/CTA";
 
 const lazyNamed = (loader: () => Promise<Record<string, ComponentType<any>>>, exportName: string) =>
@@ -12,6 +13,7 @@ const lazyNamed = (loader: () => Promise<Record<string, ComponentType<any>>>, ex
 const Services = lazyNamed(() => import("../components/Services"), "Services");
 const CaseStudies = lazyNamed(() => import("../components/CaseStudies"), "CaseStudies");
 const Products = lazyNamed(() => import("../components/Products"), "Products");
+const Industries = lazyNamed(() => import("../components/Industries"), "Industries");
 
 const useStyles = makeStyles({
   reserveStack: {
@@ -44,11 +46,10 @@ export function Home() {
     <>
       <Hero />
       {/* <TrustBanner /> */}
-      <Suspense fallback={<HomeSectionsFallback />}>
-        <Services />
-        <Products />
-        <CaseStudies />
-      </Suspense>
+
+      <Services />
+      <Products />
+      <Industries />
       <CTA />
     </>
   );

@@ -43,7 +43,12 @@ const useStyles = makeStyles({
 export function InsightsCaseStudies() {
   const s = useStyles();
   const [searchParams] = useSearchParams();
-  const filterParam = searchParams.get("filter") || "All";
+  const rawFilterParam = searchParams.get("filter") || "All";
+  const filterAliases: Record<string, string> = {
+    "Data & analytics": "Data & AI Platforms",
+    "Data & Analytics": "Data & AI Platforms",
+  };
+  const filterParam = filterAliases[rawFilterParam] || rawFilterParam;
   const [activeFilter, setActiveFilter] = useState(filterParam);
 
   useEffect(() => {

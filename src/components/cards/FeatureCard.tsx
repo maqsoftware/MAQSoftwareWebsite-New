@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    height: "100%",
     textAlign: "left",
   },
   clickable: { 
@@ -73,7 +74,8 @@ const useStyles = makeStyles({
     fontSize: "13.5px",
     fontWeight: 700,
     lineHeight: 1.4,
-    marginTop: "16px",
+    marginTop: "auto",
+    paddingTop: "16px",
   },
 });
 
@@ -98,7 +100,7 @@ export function FeatureCard({
   tagline,
   description,
   bullets,
-  ctaLabel = "Learn more",
+  ctaLabel,
   href,
   onClick,
   className,
@@ -147,9 +149,11 @@ export function FeatureCard({
           {description}
         </div>
       ) : null}
-      <span className={s.cta} style={{ color: accent }}>
-        {ctaLabel}
-      </span>
+      {ctaLabel ? (
+        <span className={s.cta} style={{ color: accent }}>
+          {ctaLabel}
+        </span>
+      ) : null}
     </>
   );
 
