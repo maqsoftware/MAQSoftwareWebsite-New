@@ -132,9 +132,9 @@ const cols: FooterCol[] = [
     items: [
       { label: "Case Studies",        to: "/insights/case-studies" },
       { label: "Best practices", to: "/insights/best-practice-guides" },
-      { label: "Events",             to: "/events" },
       { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
       { label: "Power BI custom visual", to: "/insights/power-bi-custom-visual-guide" },
+      { label: "Events",             to: "/events" },
     ],
   },
   {

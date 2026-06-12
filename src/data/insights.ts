@@ -24,12 +24,6 @@ export const insightsResourceLinks: InsightsResourceLink[] = [
     description: "Implementation playbooks and technical guidance.",
   },
   {
-    key: "events",
-    label: "Events",
-    href: "/events",
-    description: "Conferences, webinars, and workshops with MAQ experts.",
-  },
-  {
     key: "consulting-offers",
     label: "Marketplace offers",
     href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software",
@@ -40,6 +34,12 @@ export const insightsResourceLinks: InsightsResourceLink[] = [
     label: "Power BI custom visual",
     href: "/insights/power-bi-custom-visual-guide",
     description: "Certified custom visuals and category-based discovery.",
+  },
+  {
+    key: "events",
+    label: "Events",
+    href: "/events",
+    description: "Conferences, webinars, and workshops with MAQ experts.",
   },
 ];
 

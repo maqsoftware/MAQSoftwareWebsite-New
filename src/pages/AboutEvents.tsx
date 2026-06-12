@@ -12,6 +12,7 @@ import {
   type EventCard as EventCardData,
 } from "../data/events";
 import { TextButton } from "../components/buttons";
+import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
 
@@ -60,8 +61,8 @@ const useStyles = makeStyles({
   inner: { maxWidth: "1240px", margin: "0 auto" },
   sectionHead: {
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "end",
+    justifyContent: "center",
+    alignItems: "center",
     gap: "16px",
     marginBottom: "22px",
     flexWrap: "wrap",
@@ -73,6 +74,7 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     margin: 0,
     letterSpacing: "-0.01em",
+    textAlign: "center",
   },
   upcomingGrid: {
     display: "grid",
@@ -209,6 +211,8 @@ export function AboutEvents() {
           </p>
         </div>
       </section>
+
+      <InsightsResourceNav active="events" />
 
       <section className={s.section}>
         <div className={s.inner}>
