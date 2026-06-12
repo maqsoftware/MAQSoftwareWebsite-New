@@ -1,6 +1,7 @@
-import { makeStyles, tokens, Button } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
@@ -141,13 +142,7 @@ export function ReportingBICaseStudies({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <a key={c.title} className={s.card} href={c.href} target="_blank" rel="noopener noreferrer">
-              <h3 className={s.cardTitle}>{c.title}</h3>
-              <p className={s.teaser}>{c.teaser}</p>
-              <span className={s.read}>
-                Read full case study
-              </span>
-            </a>
+            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} />
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
@@ -171,4 +166,3 @@ export function ReportingBICaseStudies({
     </section>
   );
 }
-

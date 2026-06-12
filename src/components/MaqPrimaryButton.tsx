@@ -1,6 +1,6 @@
 import type { CSSProperties, ReactElement, ReactNode } from "react";
-import { Button } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
+import { PrimaryButton } from "./buttons";
 
 export interface MaqPrimaryButtonProps {
   children: ReactNode;
@@ -41,39 +41,21 @@ export function MaqPrimaryButton({
   className,
   style,
 }: MaqPrimaryButtonProps) {
-  const resolvedIcon =
-    icon === false ? undefined : icon ?? <Mail24Regular />;
-
-  if (href) {
-    return (
-      <Button
-        appearance="primary"
-        size={size}
-        icon={resolvedIcon}
-        iconPosition={iconPosition}
-        className={className}
-        style={style}
-        as="a"
-        href={href}
-        target={target}
-        rel={rel}
-      >
-        {children}
-      </Button>
-    );
-  }
+  const resolvedIcon = icon === false ? undefined : icon ?? <Mail24Regular />;
 
   return (
-    <Button
-      appearance="primary"
+    <PrimaryButton
       size={size}
-      icon={resolvedIcon}
-      iconPosition={iconPosition}
+      iconBefore={iconPosition === "after" ? undefined : resolvedIcon}
+      iconAfter={iconPosition === "after" ? resolvedIcon : undefined}
       className={className}
       style={style}
+      href={href}
+      target={target}
+      rel={rel}
       onClick={onClick}
     >
       {children}
-    </Button>
+    </PrimaryButton>
   );
 }

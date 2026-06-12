@@ -1,6 +1,6 @@
-import { Button } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
 
+import { PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
@@ -53,7 +53,7 @@ export function ProductMigrateFAST() {
               MigrateFAST automates the end-to-end migration process—from legacy environment assessment and dependency analysis to report conversion, DAX generation, and validation. Organizations can migrate from Tableau, Cognos, SAP BusinessObjects, SAP Crystal Reports, MicroStrategy, Qlik, Alteryx, and Informatica with greater speed, accuracy, and confidence—reducing migration costs and accelerating time to value on Microsoft Fabric.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact Us</Button>
+              <PrimaryButton size="large" onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact Us</PrimaryButton>
             </div>
           </div>
           <div className={s.heroImageWrap}>

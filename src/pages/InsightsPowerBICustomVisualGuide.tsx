@@ -1,8 +1,8 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CTA } from "../components/CTA";
+import { PrimaryButton, SecondaryButton, TextButton } from "../components/buttons";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { InsightsHero } from "../components/insights/InsightsHero";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
@@ -139,9 +139,9 @@ export function InsightsPowerBICustomVisualGuide() {
           <h2 className={s.title}>Popular visuals</h2>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
             <InsightsFilterBar items={visualGuideFilters} active={activeFilter} onChange={setActiveFilter} />
-            <Button appearance="outline" size="small" as="a" href="/insights/visual-chooser">
+            <SecondaryButton size="small" href="/insights/visual-chooser">
               Open visual chooser guide
-            </Button>
+            </SecondaryButton>
           </div>
           <div className={s.grid}>
             {visibleItems.map((item) => (
@@ -166,21 +166,21 @@ export function InsightsPowerBICustomVisualGuide() {
                 Showing {visibleItems.length} of {total} visuals
               </span>
               {visibleCount < total ? (
-                <Button appearance="subtle" onClick={handleShowMore}>
+                <TextButton onClick={handleShowMore}>
                   Show more
-                </Button>
+                </TextButton>
               ) : (
-                <Button appearance="subtle" onClick={handleShowLess}>
+                <TextButton onClick={handleShowLess}>
                   Show less
-                </Button>
+                </TextButton>
               )}
             </div>
           )}
           <div className={s.support}>
             <p className={s.supportText}>If you have questions about our custom visuals, please visit our Power BI page on Zendesk.</p>
-            <Button appearance="primary" as="a" href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank" rel="noopener noreferrer">
+            <PrimaryButton href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank" rel="noopener noreferrer">
               Go to Zendesk
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
       </section>

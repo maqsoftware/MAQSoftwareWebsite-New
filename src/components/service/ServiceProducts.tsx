@@ -1,6 +1,7 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { ProductCard } from "../cards/ProductCard";
 
 export interface ProductItem {
   name: string;
@@ -45,57 +46,6 @@ const useStyles = makeStyles({
     "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    padding: "24px",
-    background: "#fff",
-    display: "flex",
-    flexDirection: "column",
-    gap: "12px",
-    textDecoration: "none",
-    color: "inherit",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
-  },
-  logoRow: { display: "flex", alignItems: "center", gap: "12px" },
-  logo: {
-    width: "44px",
-    height: "44px",
-    borderRadius: "10px",
-    background: "linear-gradient(135deg, var(--maq-red) 0%, var(--maq-black) 100%)",
-    color: "#fff",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontWeight: 700,
-    fontSize: "14px",
-    letterSpacing: "0.04em",
-  },
-  name: { fontSize: "16px", fontWeight: 700, color: "var(--maq-black)" },
-  tagline: {
-    fontSize: "11px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    background: "var(--maq-red-pale)",
-    padding: "3px 8px",
-    borderRadius: "4px",
-    letterSpacing: "0.04em",
-    textTransform: "uppercase",
-    alignSelf: "flex-start",
-  },
-  desc: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  link: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
   footerLink: {
     marginTop: "20px",
     display: "inline-flex",
@@ -155,33 +105,20 @@ export function ServiceProducts({
         <div className={s.head}>
           <span className={s.eyebrow}>Our products</span>
           <h2 className={s.title}>{title}</h2>
-          <p className={s.sub}>{subhead}</p>
+          {/* <p className={s.sub}>{subhead}</p> */}
         </div>
         <div className={s.grid}>
-          {products.map((p) => {
-            const inner = (
-              <>
-                <div className={s.logoRow}>
-                  <div className={s.logo} aria-hidden="true">{p.initials}</div>
-                  <div className={s.name}>{p.name}</div>
-                </div>
-                <span className={s.tagline}>{p.tagline}</span>
-                <p className={s.desc}>{p.desc}</p>
-                <span className={s.link}>
-                  Learn more
-                </span>
-              </>
-            );
-            return p.external ? (
-              <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer" className={s.card}>
-                {inner}
-              </a>
-            ) : (
-              <Link key={p.name} to={p.href} className={s.card}>
-                {inner}
-              </Link>
-            );
-          })}
+          {products.map((p) => (
+            <ProductCard
+              key={p.name}
+              name={p.name}
+              logoInitials={p.initials}
+              tagline={p.tagline}
+              description={p.desc}
+              to={p.external ? undefined : p.href}
+              href={p.external ? p.href : undefined}
+            />
+          ))}
         </div>
         <Link className={s.footerLink} to="/products">
           See all products <ArrowRight16Regular />
@@ -190,4 +127,3 @@ export function ServiceProducts({
     </section>
   );
 }
-

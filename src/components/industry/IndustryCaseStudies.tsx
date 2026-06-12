@@ -1,4 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 
@@ -112,19 +113,12 @@ export function IndustryCaseStudies({
         </div>
         <div className={s.grid}>
           {cases.map((c) => (
-            <a
+            <CaseStudyCard
               key={c.title}
-              className={s.card}
+              title={c.title}
+              teaser={c.teaser}
               href={c.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className={s.cardTitle}>{c.title}</div>
-              <div className={s.teaser}>{c.teaser}</div>
-              <span className={s.link}>
-                Read full case study
-              </span>
-            </a>
+            />
           ))}
         </div>
         <div className={s.seeAll}>
@@ -139,4 +133,3 @@ export function IndustryCaseStudies({
     </section>
   );
 }
-

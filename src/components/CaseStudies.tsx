@@ -1,4 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { CaseStudyCard } from "./cards/CaseStudyCard";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
@@ -35,46 +36,6 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
   },
-  card: {
-    backgroundColor: "#fff",
-    borderRadius: "12px",
-    padding: "24px",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    transition: "all 0.2s",
-    cursor: "pointer",
-    display: "flex",
-    flexDirection: "column",
-    textDecoration: "none",
-    color: "inherit",
-    ":hover": {
-      border: `1px solid var(--maq-blue)`,
-      boxShadow: "var(--maq-shadow-sm)",
-      transform: "translateY(-2px)",
-    },
-  },
-  title2: {
-    fontSize: "18px",
-    fontWeight: 700,
-    color: "var(--maq-navy)",
-    marginBottom: "10px",
-    lineHeight: 1.35,
-    letterSpacing: "-0.01em",
-  },
-  teaser: {
-    fontSize: "13.5px",
-    color: "var(--maq-text-700)",
-    lineHeight: 1.6,
-    flex: 1,
-    marginBottom: "16px",
-  },
-  more: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
 });
 
 interface Case {
@@ -130,23 +91,15 @@ export function CaseStudies() {
         </div>
         <div className={s.grid}>
           {cases.map((c) => (
-            <a
+            <CaseStudyCard
               key={c.title}
-              className={s.card}
+              title={c.title}
+              teaser={c.teaser}
               href={c.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <div className={s.title2}>{c.title}</div>
-              <div className={s.teaser}>{c.teaser}</div>
-              <span className={s.more}>
-                Read full case study
-              </span>
-            </a>
+            />
           ))}
         </div>
       </div>
     </section>
   );
 }
-

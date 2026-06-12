@@ -1,7 +1,7 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../../lib/contact";
 import {
   ChartMultiple24Regular,
@@ -10,6 +10,7 @@ import {
   Gauge24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
+import { SecondaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -79,13 +80,6 @@ const useStyles = makeStyles({
     borderRadius: "4px",
     letterSpacing: "0.02em",
   },
-  knowMore: {
-    border: `1px solid var(--maq-red)`,
-    color: "var(--maq-red)",
-    background: "transparent",
-    ":hover": { background: "var(--maq-red-pale)", color: "var(--maq-red)" },
-  },
-
   rail: { display: "flex", flexDirection: "column", gap: "10px" },
   railBtn: {
     display: "flex",
@@ -189,26 +183,25 @@ export function ReportingBICapabilities() {
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
           <h2 className={s.title}>Our insights &amp; analytics capabilities</h2>
-          <p className={s.sub}>
+          {/* <p className={s.sub}>
             Four capability pillars that turn raw data into governed, high-performance Power BI and
             Microsoft Fabric reporting.
-          </p>
+          </p> */}
         </div>
         <div className={s.panel}>
           <div>
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <Button
-              appearance="secondary"
+            <SecondaryButton
               size="large"
-              className="maq-secondary-btn maq-equal-cta"
+              className="maq-equal-cta"
               onClick={() =>
                 handleContactClick(sel.name + " - Insights & Analytics")
               }
             >
               Know more
-            </Button>
+            </SecondaryButton>
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (

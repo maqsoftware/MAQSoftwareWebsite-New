@@ -1,7 +1,8 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowLeft16Regular, Open16Regular } from "@fluentui/react-icons";
 import { Link, useParams } from "react-router-dom";
 import { CTA } from "../components/CTA";
+import { PrimaryButton, SecondaryButton } from "../components/buttons";
 import { VisualPbiEmbed } from "../components/insights/VisualPbiEmbed";
 import {
   findVisualGuideItem,
@@ -282,40 +283,32 @@ export function InsightsCustomVisualDetail() {
               <h1 className={s.h1}>{item.name}</h1>
               <p className={s.description}>{heroDescription}</p>
               <div className={s.ctas}>
-                <Button
-                  appearance="primary"
+                <PrimaryButton
                   size="large"
-                  icon={<Open16Regular />}
-                  iconPosition="after"
-                  as="a"
+                  iconAfter={<Open16Regular />}
                   href={appSourceHref}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   Get on Microsoft AppSource
-                </Button>
+                </PrimaryButton>
                 {content && (
-                  <Button
-                    appearance="outline"
+                  <SecondaryButton
                     size="large"
-                    icon={<Open16Regular />}
-                    iconPosition="after"
-                    as="a"
+                    iconAfter={<Open16Regular />}
                     href={appSourceHref}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Download sample report
-                  </Button>
+                  </SecondaryButton>
                 )}
-                <Button
-                  appearance="outline"
+                <SecondaryButton
                   size="large"
-                  as="a"
                   href="/insights/visual-chooser"
                 >
                   Open visual chooser guide
-                </Button>
+                </SecondaryButton>
               </div>
             </div>
             <div className={s.imageWrap}>

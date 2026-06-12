@@ -1,4 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { ArticleCard } from "../cards/ArticleCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -27,44 +28,6 @@ const useStyles = makeStyles({
     gap: "20px",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    overflow: "hidden",
-    background: "#fff",
-    display: "flex",
-    flexDirection: "column",
-    textDecoration: "none",
-    color: "inherit",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
-  },
-  cover: {
-    height: "100px",
-    background:
-      "linear-gradient(135deg, var(--maq-red-pale) 0%, var(--maq-off-white) 60%, var(--maq-surface-cream) 100%)",
-    borderBottom: "1px solid var(--maq-border)",
-  },
-  body: { padding: "20px", display: "flex", flexDirection: "column", gap: "10px", flex: 1 },
-  cardTitle: {
-    fontSize: "16px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    lineHeight: 1.35,
-    margin: 0,
-  },
-  teaser: { fontSize: "13px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
-  read: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
 });
 
 const insights = [
@@ -93,22 +56,14 @@ export function ServiceInsightsData() {
         <div className={s.head}>
           <span className={s.eyebrow}>Insights</span>
           <h2 className={s.title}>Our data &amp; analytics insights</h2>
-          <p className={s.sub}>See our research that goes into optimizing our data &amp; analytics service.</p>
+          {/* <p className={s.sub}>See our research that goes into optimizing our data &amp; analytics service.</p> */}
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
-            <a key={i.title} className={s.card} href={i.href} target="_blank" rel="noopener noreferrer">
-              <div className={s.cover} aria-hidden="true" />
-              <div className={s.body}>
-                <h3 className={s.cardTitle}>{i.title}</h3>
-                <p className={s.teaser}>{i.teaser}</p>
-                <span className={s.read}>Read more</span>
-              </div>
-            </a>
+            <ArticleCard key={i.title} title={i.title} teaser={i.teaser} href={i.href} />
           ))}
         </div>
       </div>
     </section>
   );
 }
-

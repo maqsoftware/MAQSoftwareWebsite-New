@@ -1,8 +1,8 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Mail24Regular } from "@fluentui/react-icons";
-import { Button } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../../lib/contact";
+import { PrimaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   hero: {
@@ -313,13 +313,9 @@ export function GuideArticle({
             <p className={s.ctaText}>
               {ctaText ?? "Want a tailored review for your environment? MAQ Software's team can help."}
             </p>
-            <Button
-              appearance="primary"
-             
-              onClick={() => handleContactClick(ctaSubject)}
-            >
+            <PrimaryButton onClick={() => handleContactClick(ctaSubject)}>
               Talk to our team
-            </Button>
+            </PrimaryButton>
           </div>
 
           {continueReading ? (
