@@ -5,7 +5,6 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
 import { PrimaryButton, SecondaryButton } from "./buttons";
-
 const useStyles = makeStyles({
   wrap: {
     backgroundColor: "var(--maq-off-white)",
@@ -133,7 +132,12 @@ export function Hero() {
       <img
         alt="Team collaborating in a modern office"
         className={s.bgImage}
-        src="/images/home.png"
+        decoding="async"
+        fetchPriority="high"
+        height={911}
+        loading="eager"
+        src="/images/home-hero.webp"
+        width={1726}
       />
       <div className={s.heroGradient}></div>
       {/* <svg
