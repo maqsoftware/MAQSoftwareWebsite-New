@@ -127,7 +127,7 @@ export function ProductCard({
     <>
       {imageUrl ? (
         <div className={s.imageWrap}>
-          <img className={s.image} src={imageUrl} alt={imageAlt ?? `${name} preview`} loading="lazy" />
+          <img className={s.image} src={imageUrl} alt={imageAlt ?? `${name} preview`} loading="lazy" width={1200} height={675} />
         </div>
       ) : null}
       <div className={s.body}>

@@ -519,7 +519,7 @@ export function Header() {
   return (
     <nav className={`${s.nav} site-header`}>
       <Link to="/" className={s.brand} aria-label="MAQ Software homepage">
-        <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
+        <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} width={196} height={48} />
       </Link>
 
       <button
@@ -569,7 +569,7 @@ export function Header() {
               </button>
               <div className={s.mobileBrand}>
                 <Link to="/" onClick={closeMenu} className={s.brand} aria-label="MAQ Software homepage">
-                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} width={196} height={48} />
                 </Link>
               </div>
 
