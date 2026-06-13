@@ -99,7 +99,7 @@ export function ResourceMarketplaceCard({
   const content = (
     <>
       {imageUrl ? (
-        <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" />
+        <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" width={1200} height={675} />
       ) : null}
       {eyebrow ? <span className={s.eyebrow}>{eyebrow}</span> : null}
       <h3 className={s.title}>{title}</h3>

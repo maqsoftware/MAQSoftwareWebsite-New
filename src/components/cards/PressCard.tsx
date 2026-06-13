@@ -2,7 +2,7 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   card: {
-    fontFamily: "Roboto, system-ui",
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
     padding: "20px",
     borderRadius: "12px",
     backgroundColor: "#fff",
@@ -51,7 +51,7 @@ export function PressCard({
   const s = useStyles();
   return (
     <div className={s.card}>
-      <img className={s.logo} src={logo} alt={outlet} />
+      <img className={s.logo} src={logo} alt={outlet} width={160} height={32} />
       <p className={s.headline}>{headline}</p>
       <a className={s.link} href={href} target="_blank" rel="noopener noreferrer">
         {ctaLabel}

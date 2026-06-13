@@ -85,7 +85,7 @@ export function NewsCard({
   return (
     <article className={s.articleCard}>
       {image ? (
-        <img className={s.articleImage} src={image} alt={title} loading="lazy" />
+        <img className={s.articleImage} src={image} alt={title} loading="lazy" width={1200} height={675} />
       ) : (
         <div className={s.articleImagePlaceholder}>No image</div>
       )}

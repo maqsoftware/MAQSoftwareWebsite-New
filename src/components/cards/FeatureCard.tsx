@@ -63,6 +63,7 @@ const useStyles = makeStyles({
     paddingLeft: "18px",
     display: "grid",
     gap: "6px",
+    flex: 1,
   },
   bullet: {
     fontSize: "13.5px",

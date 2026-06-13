@@ -27,5 +27,5 @@ const maqBrand: BrandVariants = {
 export const maqLightTheme: Theme = {
   ...createLightTheme(maqBrand),
   fontFamilyBase:
-    "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
+    "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
 };

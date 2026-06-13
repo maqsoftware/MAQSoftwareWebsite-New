@@ -121,7 +121,7 @@ export function ArticleCard({
       rel={openInNewTab ? "noopener noreferrer" : undefined}
     >
       {imageUrl ? (
-        <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" />
+        <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" width={1200} height={675} />
       ) : (
         <div className={s.image} aria-hidden="true" />
       )}

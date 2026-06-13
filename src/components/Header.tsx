@@ -248,9 +248,9 @@ const partnerships: NavItem[] = [
 const insights: NavItem[] = [
   { label: "Case Studies", href: "/insights/case-studies" },
   { label: "Best practices", href: "/insights/best-practice-guides" },
-  { label: "Events", href: "/events" },
   { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
   { label: "Power BI custom visual", href: "/insights/power-bi-custom-visual-guide" },
+  { label: "Events", href: "/events" },
 ];
 
 const about: NavItem[] = [
@@ -519,7 +519,7 @@ export function Header() {
   return (
     <nav className={`${s.nav} site-header`}>
       <Link to="/" className={s.brand} aria-label="MAQ Software homepage">
-        <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
+        <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} width={196} height={48} />
       </Link>
 
       <button
@@ -569,7 +569,7 @@ export function Header() {
               </button>
               <div className={s.mobileBrand}>
                 <Link to="/" onClick={closeMenu} className={s.brand} aria-label="MAQ Software homepage">
-                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} width={196} height={48} />
                 </Link>
               </div>
 

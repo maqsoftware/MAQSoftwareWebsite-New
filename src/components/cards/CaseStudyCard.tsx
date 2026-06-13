@@ -99,7 +99,7 @@ export function CaseStudyCard({
   date,
   imageUrl,
   imageAlt,
-  ctaLabel = "Read full story",
+  ctaLabel = "Read full Case Study",
   className,
   openInNewTab = true,
 }: CaseStudyCardProps) {
@@ -112,7 +112,7 @@ export function CaseStudyCard({
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
     >
-      {imageUrl ? <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" /> : null}
+      {imageUrl ? <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" width={1200} height={675} /> : null}
       {tag || date ? (
         <div className={s.meta}>
           {tag ? <span className={s.tag}>{tag}</span> : <span />}
