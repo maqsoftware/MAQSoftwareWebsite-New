@@ -47,7 +47,12 @@ export default async (req) => {
       status: 200,
       headers: {
         "Content-Type": "application/json; charset=utf-8",
+        // Browser cache (per-client) for 5 min.
         "Cache-Control": "public, max-age=300",
+        // Netlify edge/CDN cache: serve identical requests from the edge for
+        // 5 min so repeated/popular requests don't re-invoke this function or
+        // re-hit Blogger. `durable` keeps the entry across deploys/regions.
+        "Netlify-CDN-Cache-Control": "public, s-maxage=300, durable",
       },
     });
   } catch {
