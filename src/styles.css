@@ -17,12 +17,16 @@
   --maq-surface-cream: #f7f8fa;/* alias — replaces former warm sand */
   --maq-surface-soft: #f0f2f5; /* slightly deeper neutral block */
 
-  /* Ink ladder (5 distinct steps) */
+  /* Ink ladder — body copy unified to a single ink for sitewide consistency.
+     Headings, strong body, and regular body copy all share #0f172a; only the
+     muted-label tokens (--maq-gray-500 / --maq-text-muted) stay lighter so
+     captions/eyebrows keep their visual hierarchy. */
   --maq-black: #0f172a;        /* H1 / H2 — slate 900 */
-  --maq-ink: #1f2937;          /* H3 / strong body */
-  --maq-gray-700: #242424;     /* body copy (adjusted for higher contrast) */
+  --maq-ink: #0f172a;          /* strong body / H3 — unified to body ink */
+  --maq-gray-700: #0f172a;     /* body copy — unified to body ink */
+  --maq-text-700: #0f172a;     /* home card body — was undefined, now body ink */
   --maq-gray-600: #0f172a;     /* footer bg alias */
-  --maq-gray-500: #667085;     /* muted / labels */
+  --maq-gray-500: #667085;     /* muted / labels (intentionally lighter) */
   --maq-text-muted: #667085;
 
   /* Chrome */
