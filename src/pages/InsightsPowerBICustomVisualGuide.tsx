@@ -32,8 +32,11 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "10px",
-    transition: "all 0.2s",
-    ":hover": { border: "1px solid var(--maq-red)", boxShadow: "0 6px 16px rgba(0,0,0,0.06)" },
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
+    },
   },
   imageWrap: {
     borderRadius: "10px",

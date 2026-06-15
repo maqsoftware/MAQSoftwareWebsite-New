@@ -29,6 +29,9 @@ const useStyles = makeStyles({
     objectFit: "cover",
     objectPosition: "center",
     zIndex: 0,
+    "@media (max-width: 768px)": {
+      opacity: 0.8,
+    },
   },
   heroGradient: {
     position: "absolute",
@@ -36,7 +39,7 @@ const useStyles = makeStyles({
     background: "linear-gradient(to right, rgba(248,250,252,0.88) 0%, rgba(248,250,252,0.77) 32%, rgba(248,250,252,0.50) 56%, rgba(248,250,252,0.14) 76%, rgba(248,250,252,0) 100%)",
     zIndex: 1,
     "@media (max-width: 768px)": {
-      background: "linear-gradient(to bottom, rgba(248,250,252,0.9) 22%, rgba(248,250,252,0.58) 62%, rgba(248,250,252,0.18) 100%)",
+      background: "linear-gradient(to bottom, rgba(248,250,252,0.72) 0%, rgba(248,250,252,0.45) 50%, rgba(248,250,252,0.10) 100%)",
     },
   },
   grid: {
@@ -129,16 +132,19 @@ export function Hero() {
   const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
-      <img
-        alt="Team collaborating in a modern office"
-        className={s.bgImage}
-        decoding="async"
-        fetchPriority="high"
-        height={911}
-        loading="eager"
-        src="/images/home-hero.webp"
-        width={1726}
-      />
+      <picture>
+        <source media="(max-width: 768px)" srcSet="/images/home_mobile.png" />
+        <img
+          alt="Team collaborating in a modern office"
+          className={s.bgImage}
+          decoding="async"
+          fetchPriority="high"
+          height={911}
+          loading="eager"
+          src="/images/home-hero.webp"
+          width={1726}
+        />
+      </picture>
       <div className={s.heroGradient}></div>
       {/* <svg
         className={s.strands}
