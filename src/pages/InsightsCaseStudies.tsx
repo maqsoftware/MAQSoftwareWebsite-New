@@ -108,7 +108,7 @@ useEffect(() => {
             <InsightsFilterBar items={caseStudyFilters} active={activeFilter} onChange={setActiveFilter} />
           </div>
           <div className={s.grid}>
-            {visibleItems.map((item) => (
+            {visibleItems.map((item, idx) => (
               <CaseStudyCard
                 key={item.href}
                 title={item.title}
@@ -118,6 +118,7 @@ useEffect(() => {
                 imageAlt={item.title}
                 date={item.date}
                 ctaLabel="Read full article"
+                eager={idx < 3}
               />
             ))}
           </div>

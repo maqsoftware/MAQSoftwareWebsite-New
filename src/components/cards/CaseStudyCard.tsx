@@ -31,6 +31,10 @@ const useStyles = makeStyles({
     width: "100%",
     height: "220px",
     objectFit: "cover",
+    // Anchor the crop to the left edge so case-study cover images that have
+    // baked-in titles in the top-left (e.g. "Optimize Power BI with LoadFAST")
+    // are not clipped on narrow cards.
+    objectPosition: "left center",
     display: "block",
     backgroundColor: "var(--maq-surface-cream)",
     borderRadius: "10px",
@@ -89,6 +93,12 @@ export interface CaseStudyCardProps {
   ctaLabel?: string;
   className?: string;
   openInNewTab?: boolean;
+  /**
+   * When true, the image is loaded eagerly with high fetch priority.
+   * Use for above-the-fold cards (e.g. the first row of a grid) to
+   * cut perceived load time. Defaults to lazy/low priority.
+   */
+  eager?: boolean;
 }
 
 export function CaseStudyCard({
@@ -102,6 +112,7 @@ export function CaseStudyCard({
   ctaLabel = "Read full Case Study",
   className,
   openInNewTab = true,
+  eager = false,
 }: CaseStudyCardProps) {
   const s = useStyles();
 
@@ -112,7 +123,18 @@ export function CaseStudyCard({
       target={openInNewTab ? "_blank" : undefined}
       rel={openInNewTab ? "noopener noreferrer" : undefined}
     >
-      {imageUrl ? <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" width={1200} height={675} /> : null}
+      {imageUrl ? (
+        <img
+          className={s.image}
+          src={imageUrl}
+          alt={imageAlt ?? title}
+          loading={eager ? "eager" : "lazy"}
+          fetchPriority={eager ? "high" : "low"}
+          decoding="async"
+          width={1200}
+          height={675}
+        />
+      ) : null}
       {tag || date ? (
         <div className={s.meta}>
           {tag ? <span className={s.tag}>{tag}</span> : <span />}
