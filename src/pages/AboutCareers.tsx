@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
-import { makeStyles, Button, Spinner } from "@fluentui/react-components";
+import { makeStyles, Spinner } from "@fluentui/react-components";
 import {
   Open16Regular,
   ChevronDown20Regular,
   ChevronRight20Regular,
 } from "@fluentui/react-icons";
 import { CTA } from "../components/CTA";
+import { PrimaryButton, TextButton } from "../components/buttons";
 import {
   fetchOpenings,
   careerReasons,
@@ -216,27 +217,22 @@ function JobAccordionItem({ job }: { job: JobOpening }) {
           <div dangerouslySetInnerHTML={{ __html: job.contentHtml }} />
           <div className={s.jobActions}>
             {job.applyUrl && (
-              <Button
-                appearance="primary"
-                as="a"
+              <PrimaryButton
                 href={job.applyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                icon={<Open16Regular />}
-                iconPosition="after"
+                iconAfter={<Open16Regular />}
               >
                 Apply on JobScore
-              </Button>
+              </PrimaryButton>
             )}
-            <Button
-              appearance="subtle"
-              as="a"
+            <TextButton
               href={job.href}
               target="_blank"
               rel="noopener noreferrer"
             >
               View full posting
-            </Button>
+            </TextButton>
           </div>
         </div>
       )}
@@ -310,17 +306,14 @@ export function AboutCareers() {
             <p className={s.jobscoreText}>
               Apply to all open positions on JobScore.
             </p>
-            <Button
-              appearance="primary"
-              as="a"
+            <PrimaryButton
               href={JOBSCORE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              icon={<Open16Regular />}
-              iconPosition="after"
+              iconAfter={<Open16Regular />}
             >
               Go to JobScore
-            </Button>
+            </PrimaryButton>
           </div>
 
           <div className={s.tabBar} role="tablist">
@@ -351,13 +344,9 @@ export function AboutCareers() {
           {error && !loading && (
             <div className={s.centerState}>
               {error}{" "}
-              <Button
-                appearance="subtle"
-                size="small"
-                onClick={() => void load(region)}
-              >
+              <TextButton size="small" onClick={() => void load(region)}>
                 Retry
-              </Button>
+              </TextButton>
             </div>
           )}
 

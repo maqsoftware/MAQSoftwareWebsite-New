@@ -1,4 +1,5 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
+import { Button } from "../buttons";
 
 const useStyles = makeStyles({
   row: {
@@ -43,7 +44,7 @@ export function InsightsFilterBar({ items, active, onChange }: InsightsFilterBar
       {items.map((item) => (
         <Button
           key={item}
-          appearance="subtle"
+          variant="text"
           className={active === item ? s.active : s.chip}
           onClick={() => onChange(item)}
         >

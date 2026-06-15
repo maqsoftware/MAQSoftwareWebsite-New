@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { makeStyles, Button, Spinner } from "@fluentui/react-components";
+import { makeStyles, Spinner } from "@fluentui/react-components";
 import { CTA } from "../components/CTA";
+import { TextButton } from "../components/buttons";
+import { NewsCard } from "../components/cards/NewsCard";
+import { PressCard } from "../components/cards/PressCard";
 import {
   fetchNews,
   formatPublishedDate,
@@ -55,76 +58,6 @@ const useStyles = makeStyles({
     flexDirection: "column",
     gap: "32px",
   },
-  articleCard: {
-    display: "grid",
-    gridTemplateColumns: "320px 1fr",
-    gap: "28px",
-    padding: "24px",
-    borderRadius: "12px",
-    border: "1px solid var(--maq-border)",
-    backgroundColor: "#fff",
-    "@media (max-width: 760px)": { gridTemplateColumns: "1fr" },
-  },
-  articleImage: {
-    width: "100%",
-    height: "180px",
-    objectFit: "cover" as const,
-    borderRadius: "8px",
-    backgroundColor: "var(--maq-off-white)",
-  },
-  articleImagePlaceholder: {
-    width: "100%",
-    height: "180px",
-    borderRadius: "8px",
-    backgroundColor: "var(--maq-off-white)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "var(--maq-gray-700)",
-    fontSize: "12px",
-  },
-  articleBody: { display: "flex", flexDirection: "column", gap: "10px" },
-  articleMeta: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    fontSize: "12px",
-    color: "var(--maq-gray-700)",
-  },
-  tag: {
-    display: "inline-block",
-    padding: "2px 8px",
-    borderRadius: "999px",
-    backgroundColor: "var(--maq-red-pale)",
-    color: "var(--maq-red)",
-    fontWeight: 600,
-    fontSize: "11px",
-    letterSpacing: "0.04em",
-    textTransform: "uppercase" as const,
-  },
-  articleTitle: {
-    fontSize: "20px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    margin: 0,
-    lineHeight: 1.3,
-  },
-  articleExcerpt: {
-    fontSize: "14px",
-    lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
-    margin: 0,
-  },
-  readMore: {
-    alignSelf: "flex-start",
-    marginTop: "4px",
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
   // ── Loading / error / load-more states ────────────────────────────────────
   centerState: {
     padding: "32px",
@@ -196,35 +129,6 @@ const useStyles = makeStyles({
     "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
     "@media (max-width: 560px)": { gridTemplateColumns: "1fr" },
   },
-  pressCard: {
-    padding: "20px",
-    borderRadius: "12px",
-    backgroundColor: "#fff",
-    border: "1px solid var(--maq-border)",
-    display: "flex",
-    flexDirection: "column",
-    gap: "12px",
-  },
-  pressLogo: {
-    height: "32px",
-    objectFit: "contain" as const,
-    alignSelf: "flex-start",
-  },
-  pressHeadline: {
-    fontSize: "14px",
-    lineHeight: 1.5,
-    color: "var(--maq-ink)",
-    margin: 0,
-    flex: 1,
-  },
-  pressLink: {
-    display: "inline-block",
-    fontSize: "13px",
-    fontWeight: 700,
-    lineHeight: 1.4,
-    color: "var(--maq-red)",
-    textDecoration: "none",
-    },
 });
 
 function buildPageList(current: number, totalPages: number): (number | "…")[] {
@@ -307,70 +211,43 @@ export function AboutNews() {
           {error && !loading && (
             <div className={s.centerState}>
               {error}{" "}
-              <Button
-                appearance="subtle"
-                size="small"
-                onClick={() => void loadPage(page)}
-              >
+              <TextButton size="small" onClick={() => void loadPage(page)}>
                 Retry
-              </Button>
+              </TextButton>
             </div>
           )}
 
           {!loading &&
             !error &&
             articles.map((a) => (
-              <article key={a.id} className={s.articleCard}>
-                {a.image ? (
-                  <img
-                    className={s.articleImage}
-                    src={a.image}
-                    alt={a.title}
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className={s.articleImagePlaceholder}>No image</div>
-                )}
-                <div className={s.articleBody}>
-                  <div className={s.articleMeta}>
-                    <span>{formatPublishedDate(a.date)}</span>
-                  </div>
-                  <h2 className={s.articleTitle}>{a.title}</h2>
-                  <p className={s.articleExcerpt}>{a.excerpt}</p>
-                  <Button
-                    className={s.readMore}
-                    appearance="subtle"
-                    as="a"
-                    href={a.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Read full article
-                  </Button>
-                </div>
-              </article>
+              <NewsCard
+                key={a.id}
+                title={a.title}
+                excerpt={a.excerpt}
+                date={formatPublishedDate(a.date)}
+                href={a.href}
+                image={a.image ?? undefined}
+              />
             ))}
 
           {!loading && !error && totalPages > 1 && (
             <nav className={s.paginationWrap} aria-label="News pagination">
-              <button
-                type="button"
+              <TextButton
                 className={s.pageBtn}
                 onClick={() => goToPage(page - 1)}
                 disabled={page === 1}
                 aria-label="Previous page"
               >
                 Prev
-              </button>
+              </TextButton>
               {pageList.map((p, idx) =>
                 p === "…" ? (
                   <span key={`e-${idx}`} className={s.pageEllipsis}>
                     …
                   </span>
                 ) : (
-                  <button
+                  <TextButton
                     key={p}
-                    type="button"
                     className={
                       p === page
                         ? `${s.pageBtn} ${s.pageBtnActive}`
@@ -380,18 +257,17 @@ export function AboutNews() {
                     aria-current={p === page ? "page" : undefined}
                   >
                     {p}
-                  </button>
+                  </TextButton>
                 ),
               )}
-              <button
-                type="button"
+              <TextButton
                 className={s.pageBtn}
                 onClick={() => goToPage(page + 1)}
                 disabled={page === totalPages}
                 aria-label="Next page"
               >
                 Next
-              </button>
+              </TextButton>
             </nav>
           )}
         </div>
@@ -403,18 +279,13 @@ export function AboutNews() {
           <h2 className={s.sectionHeading}>Press Coverage</h2>
           <div className={s.pressGrid}>
             {pressCoverage.map((p) => (
-              <div key={p.headline} className={s.pressCard}>
-                <img className={s.pressLogo} src={p.logo} alt={p.outlet} />
-                <p className={s.pressHeadline}>{p.headline}</p>
-                <a
-                  className={s.pressLink}
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read more
-                </a>
-              </div>
+              <PressCard
+                key={p.headline}
+                logo={p.logo}
+                outlet={p.outlet}
+                headline={p.headline}
+                href={p.href}
+              />
             ))}
           </div>
         </div>
@@ -424,4 +295,3 @@ export function AboutNews() {
     </>
   );
 }
-

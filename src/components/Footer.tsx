@@ -132,17 +132,17 @@ const cols: FooterCol[] = [
     items: [
       { label: "Case Studies",        to: "/insights/case-studies" },
       { label: "Best practices", to: "/insights/best-practice-guides" },
-      { label: "Events",             to: "/events" },
       { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
       { label: "Power BI custom visual", to: "/insights/power-bi-custom-visual-guide" },
+      { label: "Events",             to: "/events" },
     ],
   },
   {
-    title: "Company",
+    title: "About",
     items: [
-      { label: "Who we are", to: "/who-we-are" },
-      { label: "Careers",    to: "/careers" },
-      { label: "Sustainability", to: "/sustainability" },
+      { label: "Who we are", to: "/about/who-we-are" },
+      { label: "Careers",    to: "/about/careers" },
+      { label: "Sustainability", to: "/about/sustainability" },
       { label: "Contact Us", to: "/contact" },
     ],
   },
@@ -187,7 +187,7 @@ export function Footer() {
             <div className={s.brand}>
               <Link to="/" aria-label="MAQ Software homepage" className={s.socialLink}>
                 <div className={s.logoMark}>
-                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} />
+                  <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} width={196} height={48} />
                 </div>
               </Link>
             </div>

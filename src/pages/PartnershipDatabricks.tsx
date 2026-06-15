@@ -6,7 +6,7 @@ import {
   Lightbulb24Regular,
   People24Regular,
 } from "@fluentui/react-icons";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight20Regular } from "@fluentui/react-icons";
 // import { TrustBanner } from \"../components/TrustBanner\";
 
@@ -226,7 +226,7 @@ export function PartnershipDatabricks() {
 
       <PartnershipInsights eyebrow="Insights" title="Related blogs and case studies" items={blogs} />
 
-      <PartnershipMarketplace title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Learn more" ctaHref="/insights" />
+      <PartnershipMarketplace title="Databricks guides" sectionId="databricks-guides" intro="" bulletGroups={guideBulletGroups} ctaLabel="Case Studies" ctaHref="/insights" />
 
     </>
   );

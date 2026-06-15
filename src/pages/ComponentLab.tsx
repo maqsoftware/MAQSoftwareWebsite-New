@@ -1,4 +1,4 @@
-import { makeStyles, tokens, Button } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import {
   ArrowRight20Regular,
   Bot24Regular,
@@ -11,6 +11,7 @@ import {
   Sparkle24Regular,
 } from "@fluentui/react-icons";
 import type { FC, ReactNode } from "react";
+import { PrimaryButton, SecondaryButton, TextButton } from "../components/buttons";
 
 /* ------------------------------------------------------------------ */
 /*  Component Lab                                                      */
@@ -524,9 +525,9 @@ const ProductCardLab: FC = () => {
               <div className={c.name}>{p.name}</div>
               <div className={c.desc}>{p.desc}</div>
               {renderTags()}
-              <Button appearance="subtle" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
+              <TextButton iconAfter={<ArrowRight20Regular />} size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
                 Learn more
-              </Button>
+              </TextButton>
             </article>
           ))}
         </div>
@@ -544,9 +545,9 @@ const ProductCardLab: FC = () => {
                 <div className={c.name}>{p.name}</div>
                 <div className={c.desc}>{p.desc}</div>
                 {renderTags()}
-                <Button appearance="primary" size="small" style={{ alignSelf: "flex-start" }}>
+                <PrimaryButton size="small" style={{ alignSelf: "flex-start" }}>
                   View product
-                </Button>
+                </PrimaryButton>
               </div>
             </article>
           ))}
@@ -561,9 +562,9 @@ const ProductCardLab: FC = () => {
               <div className={c.name} style={{ fontSize: 22 }}>{p.name}</div>
               <div className={c.desc}>{p.desc}</div>
               {renderTags()}
-              <Button appearance="subtle" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
+              <TextButton iconAfter={<ArrowRight20Regular />} size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
                 Learn more
-              </Button>
+              </TextButton>
             </article>
           ))}
         </div>
@@ -577,9 +578,9 @@ const ProductCardLab: FC = () => {
               <div className={c.taglineLight}>{p.tagline}</div>
               <div className={c.nameLight}>{p.name}</div>
               <div className={c.descLight}>{p.desc}</div>
-              <Button appearance="primary" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start" }}>
+              <PrimaryButton iconAfter={<ArrowRight20Regular />} size="small" style={{ alignSelf: "flex-start" }}>
                 Learn more
-              </Button>
+              </PrimaryButton>
             </article>
           ))}
         </div>
@@ -758,7 +759,7 @@ const CaseCardLab: FC = () => {
               <div className={c.aMetric}>{x.metric}</div>
               <div className={c.title}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story</span>
+              <span className={c.more}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -771,7 +772,7 @@ const CaseCardLab: FC = () => {
               <span className={c.bMetric}>{x.metric}</span>
               <div className={c.title} style={{ fontSize: 17, marginTop: 8 }}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story</span>
+              <span className={c.more}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -790,7 +791,7 @@ const CaseCardLab: FC = () => {
               <div className={c.cBody}>
                 <div className={c.title}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story</span>
+                <span className={c.more}>Read full case study</span>
               </div>
             </article>
           ))}
@@ -804,7 +805,7 @@ const CaseCardLab: FC = () => {
               <div className={c.dMetric}>{x.metric}</div>
               <div className={c.titleLight}>{x.title}</div>
               <div className={c.teaserLight}>{x.teaser}</div>
-              <span className={c.moreLight}>Read full story</span>
+              <span className={c.moreLight}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -821,7 +822,7 @@ const CaseCardLab: FC = () => {
               <div>
                 <div className={c.title} style={{ fontSize: 17 }}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story</span>
+                <span className={c.more}>Read full case study</span>
               </div>
             </article>
           ))}
@@ -1103,7 +1104,7 @@ const useCompCard = makeStyles({
     fontSize: "56px",
     color: "var(--maq-red)",
     lineHeight: 0.5,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
     fontWeight: 700,
     marginBottom: "8px",
   },
@@ -1509,8 +1510,8 @@ const HeroLab: FC = () => {
             <h3 className={h.h}>Govern Fabric like an enterprise.</h3>
             <p className={h.s}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
             <div className={h.btns}>
-              <Button appearance="primary" size="large">Book a demo</Button>
-              <Button appearance="outline" size="large">Read docs</Button>
+              <PrimaryButton size="large">Book a demo</PrimaryButton>
+              <SecondaryButton size="large">Read docs</SecondaryButton>
             </div>
           </div>
           <div className={h.aImg} />
@@ -1525,8 +1526,8 @@ const HeroLab: FC = () => {
             Automated controls, policy and observability — purpose-built for Fabric admins.
           </p>
           <div className={h.btns} style={{ justifyContent: "center" }}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large">Read docs</Button>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large">Read docs</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1537,8 +1538,8 @@ const HeroLab: FC = () => {
           <h3 className={h.h}>Govern Fabric like an enterprise.</h3>
           <p className={h.s}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
           <div className={h.btns}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large">Read docs</Button>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large">Read docs</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1549,10 +1550,10 @@ const HeroLab: FC = () => {
           <h3 className={h.hLight}>Govern Fabric like an enterprise.</h3>
           <p className={h.sLight}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
           <div className={h.btns}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
               Read docs
-            </Button>
+            </SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1563,8 +1564,8 @@ const HeroLab: FC = () => {
           <h3 className={h.h}>Govern Fabric like an enterprise.</h3>
           <p className={h.s}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
           <div className={h.btns}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large">Read docs</Button>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large">Read docs</SecondaryButton>
           </div>
           <div className={h.statsRow}>
             <div>
@@ -1667,8 +1668,8 @@ const CtaLab: FC = () => {
           <h3 className={c.h}>Ready to start your modernization?</h3>
           <p className={c.s}>Talk to an engineer — no sales pitch.</p>
           <div className={c.btns}>
-            <Button appearance="primary" size="large">Book a meeting</Button>
-            <Button appearance="outline" size="large">Email us</Button>
+            <PrimaryButton size="large">Book a meeting</PrimaryButton>
+            <SecondaryButton size="large">Email us</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1680,8 +1681,8 @@ const CtaLab: FC = () => {
             <p className={c.s} style={{ marginTop: 6 }}>Talk to an engineer — no sales pitch.</p>
           </div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <Button appearance="primary" size="large">Book a meeting</Button>
-            <Button appearance="outline" size="large">Email us</Button>
+            <PrimaryButton size="large">Book a meeting</PrimaryButton>
+            <SecondaryButton size="large">Email us</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1691,10 +1692,10 @@ const CtaLab: FC = () => {
           <h3 className={c.hL}>Ready to start your modernization?</h3>
           <p className={c.sL}>Talk to an engineer — no sales pitch.</p>
           <div className={c.btns}>
-            <Button appearance="primary" size="large">Book a meeting</Button>
-            <Button appearance="outline" size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
+            <PrimaryButton size="large">Book a meeting</PrimaryButton>
+            <SecondaryButton size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
               Email us
-            </Button>
+            </SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1704,9 +1705,9 @@ const CtaLab: FC = () => {
           <h3 className={c.hL}>Ready to start your modernization?</h3>
           <p className={c.sL}>Talk to an engineer — no sales pitch.</p>
           <div className={c.btns}>
-            <Button appearance="primary" size="large" style={{ backgroundColor: "#fff", color: "var(--maq-blue)" }}>
+            <PrimaryButton size="large" style={{ backgroundColor: "#fff", color: "var(--maq-blue)" }}>
               Book a meeting <ArrowRight20Regular />
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
       </Variant>
@@ -1719,7 +1720,7 @@ const CtaLab: FC = () => {
           </div>
           <div className={c.inputRow}>
             <input className={c.input} placeholder="you@company.com" />
-            <Button appearance="primary" size="large">Subscribe</Button>
+            <PrimaryButton size="large">Subscribe</PrimaryButton>
           </div>
         </div>
       </Variant>
@@ -1952,7 +1953,7 @@ const PriceLab: FC = () => {
                   <li key={f} className={p.li}><Checkmark20Filled className={p.check} />{f}</li>
                 ))}
               </ul>
-              <Button appearance="outline" size="large" style={{ width: "100%" }}>Choose {t.name}</Button>
+              <SecondaryButton size="large" style={{ width: "100%" }}>Choose {t.name}</SecondaryButton>
             </div>
           ))}
         </div>
@@ -1970,13 +1971,15 @@ const PriceLab: FC = () => {
                   <li key={f} className={p.li}><Checkmark20Filled className={p.check} />{f}</li>
                 ))}
               </ul>
-              <Button
-                appearance={i === 1 ? "primary" : "outline"}
-                size="large"
-                style={{ width: "100%" }}
-              >
-                Choose {t.name}
-              </Button>
+              {i === 1 ? (
+                <PrimaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </PrimaryButton>
+              ) : (
+                <SecondaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </SecondaryButton>
+              )}
             </div>
           ))}
         </div>
@@ -1997,13 +2000,15 @@ const PriceLab: FC = () => {
                   </li>
                 ))}
               </ul>
-              <Button
-                appearance={i === 2 ? "primary" : "outline"}
-                size="large"
-                style={{ width: "100%" }}
-              >
-                Choose {t.name}
-              </Button>
+              {i === 2 ? (
+                <PrimaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </PrimaryButton>
+              ) : (
+                <SecondaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </SecondaryButton>
+              )}
             </div>
           ))}
         </div>
@@ -2021,9 +2026,15 @@ const PriceLab: FC = () => {
                   <li key={f} className={p.li}><Checkmark20Filled className={p.check} />{f}</li>
                 ))}
               </ul>
-              <Button appearance={i === 1 ? "primary" : "outline"} size="large" style={{ width: "100%" }}>
-                Choose {t.name}
-              </Button>
+              {i === 1 ? (
+                <PrimaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </PrimaryButton>
+              ) : (
+                <SecondaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </SecondaryButton>
+              )}
             </div>
           ))}
         </div>
@@ -2050,7 +2061,7 @@ const PriceLab: FC = () => {
               </div>
             </div>
           ))}
-          <Button appearance="primary" size="large">Compare all</Button>
+          <PrimaryButton size="large">Compare all</PrimaryButton>
         </div>
       </Variant>
     </>

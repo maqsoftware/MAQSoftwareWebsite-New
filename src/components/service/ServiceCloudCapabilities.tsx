@@ -1,8 +1,9 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../../lib/contact";
+import { SecondaryButton } from "../buttons";
 import {
   CloudArrowUp24Regular,
   ShieldLock24Regular,
@@ -14,7 +15,7 @@ import {
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -31,7 +32,7 @@ const useStyles = makeStyles({
     margin: "0 0 6px",
     letterSpacing: "-0.01em",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "780px" },
+  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
   panel: {
     marginTop: "20px",
@@ -189,25 +190,25 @@ export function ServiceCloudCapabilities() {
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
           <h2 className={s.title}>Our cloud modernization capabilities</h2>
-          <p className={s.sub}>
+          {/* <p className={s.sub}>
             Four capability pillars that replatform on-premises workloads to Azure with
             FinOps discipline — scalable, secure, and cost-controlled.
-          </p>
+          </p> */}
         </div>
         <div className={s.panel}>
           <div>
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <Button
-              appearance="outline"
-              className={s.knowMore}
+            <SecondaryButton
+              size="large"
+              className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
                 handleContactClick(sel.name + " - Cloud Modernization")
               }
             >
               Know more
-            </Button>
+            </SecondaryButton>
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (

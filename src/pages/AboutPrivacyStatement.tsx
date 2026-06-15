@@ -1,4 +1,5 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
+import { PrimaryButton } from "../components/buttons";
 // import { TrustBanner } from "../components/TrustBanner";
 
 
@@ -98,9 +99,9 @@ export function AboutPrivacyStatement() {
           <p className={styles.intro}>
             MAQ Software (“we”, “us”, or “our”) offers applications, visualizations & services in the AI, data analytics, cloud transformation, and Power BI spaces. We are committed to protecting your personal information. This Privacy Statement explains the personal data we process, how we process it, and for what purpose. Privacy Statement applies to the applications published by MAQ Software via Microsoft Azure Marketplace, Microsoft App Source, other Microsoft Office stores, or any other means. Visualizations refer to custom Power BI visuals & template apps developed and published by MAQ Software either to the Office 365 store or Power BI gallery.
           </p>
-          <Button href="mailto:Support@MAQSoftware.com" appearance="primary">
+          <PrimaryButton href="mailto:Support@MAQSoftware.com">
             Contact support
-          </Button>
+          </PrimaryButton>
         </div>
       </section>
 

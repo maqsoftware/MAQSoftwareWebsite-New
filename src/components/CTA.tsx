@@ -1,9 +1,8 @@
 import {
   makeStyles,
-  Button,
 } from "@fluentui/react-components";
-import { Mail24Regular } from "@fluentui/react-icons";
 import { useContactAction } from "../lib/contact";
+import { PrimaryButton } from "./buttons";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: "var(--maq-surface-cream)" },
@@ -67,23 +66,12 @@ export function CTA() {
           Ready to move faster?
         </h2>
         <div className={s.btns}>
-          <Button
-            appearance="primary"
+          <PrimaryButton
             size="large"
-           
             onClick={() => handleContactClick()}
           >
             Contact Us
-          </Button>
-        </div>
-        <div className={s.email}>
-          Or email us directly at{" "}
-          <a
-            className={s.emailLink}
-            href="mailto:customersuccess@maqsoftware.com"
-          >
-            customersuccess@maqsoftware.com
-          </a>
+          </PrimaryButton>
         </div>
       </div>
     </section>

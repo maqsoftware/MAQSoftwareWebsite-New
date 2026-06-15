@@ -1,9 +1,10 @@
 import { ArrowRight20Regular } from "@fluentui/react-icons";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
+import { PrimaryButton } from "../components/buttons";
 
 // ---------------------------------------------------------------------------
 // Styles for custom sections (Overview + Marketplace)
@@ -309,16 +310,13 @@ export function PartnershipMicrosoft() {
                   </li>
                 </ul>
               </div>
-              <Button
-                appearance="primary"
+              <PrimaryButton
                 size="large"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
-                as="a"
+                iconAfter={<ArrowRight20Regular />}
                 href="/insights/power-bi-custom-visual-guide"
               >
                 Explore custom visuals
-              </Button>
+              </PrimaryButton>
             </div>
 
             {/* Panel B — Consulting Services */}
@@ -351,18 +349,15 @@ export function PartnershipMicrosoft() {
                   </tbody>
                 </table>
               </div>
-              <Button
-                appearance="primary"
+              <PrimaryButton
                 size="large"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
-                as="a"
+                iconAfter={<ArrowRight20Regular />}
                 href="https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View all marketplace offers
-              </Button>
+              </PrimaryButton>
             </div>
           </div>
         </div>

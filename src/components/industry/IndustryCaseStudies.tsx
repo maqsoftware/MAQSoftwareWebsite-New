@@ -1,11 +1,12 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -34,6 +35,8 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     padding: "22px",
     background: "#fff",
+    color: "inherit",
+    textDecoration: "none",
     transition: "all 0.2s",
     ":hover": {
       border: `1px solid var(--maq-red)`,
@@ -110,20 +113,12 @@ export function IndustryCaseStudies({
         </div>
         <div className={s.grid}>
           {cases.map((c) => (
-            <a
+            <CaseStudyCard
               key={c.title}
-              className={s.card}
+              title={c.title}
+              teaser={c.teaser}
               href={c.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <div className={s.cardTitle}>{c.title}</div>
-              <div className={s.teaser}>{c.teaser}</div>
-              <span className={s.link}>
-                Read full story
-              </span>
-            </a>
+            />
           ))}
         </div>
         <div className={s.seeAll}>
@@ -138,4 +133,3 @@ export function IndustryCaseStudies({
     </section>
   );
 }
-

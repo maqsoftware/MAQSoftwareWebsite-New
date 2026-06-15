@@ -1,15 +1,18 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Button, makeStyles, Spinner } from "@fluentui/react-components";
+import { makeStyles, Spinner } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useNavigate } from "react-router-dom";
+import { EventCard as StandardEventCard } from "../components/cards/EventCard";
 import {
   fetchPastEventsFromNews,
   getUpcomingEventTag,
   mapPastUpcomingToCard,
   splitUpcomingAndPast,
   upcomingEvents,
-  type EventCard,
+  type EventCard as EventCardData,
 } from "../data/events";
+import { TextButton } from "../components/buttons";
+import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
 
@@ -58,8 +61,8 @@ const useStyles = makeStyles({
   inner: { maxWidth: "1240px", margin: "0 auto" },
   sectionHead: {
     display: "flex",
-    justifyContent: "space-between",
-    alignItems: "end",
+    justifyContent: "center",
+    alignItems: "center",
     gap: "16px",
     marginBottom: "22px",
     flexWrap: "wrap",
@@ -71,11 +74,7 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     margin: 0,
     letterSpacing: "-0.01em",
-  },
-  sectionDesc: {
-    fontSize: "14px",
-    color: "var(--maq-gray-700)",
-    margin: 0,
+    textAlign: "center",
   },
   upcomingGrid: {
     display: "grid",
@@ -90,64 +89,6 @@ const useStyles = makeStyles({
     gap: "16px",
     "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
-  },
-  card: {
-    border: "1px solid var(--maq-border)",
-    borderRadius: "12px",
-    padding: "24px",
-    backgroundColor: "#fff",
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
-    gap: "10px",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      transform: "translateY(-3px)",
-      boxShadow: "var(--maq-shadow-sm)",
-    },
-  },
-  metaRow: {
-    display: "flex",
-    alignItems: "center",
-    gap: "8px",
-    flexWrap: "wrap",
-  },
-  tag: {
-    display: "inline-block",
-    padding: "2px 8px",
-    borderRadius: "999px",
-    backgroundColor: "var(--maq-red-pale)",
-    color: "var(--maq-red)",
-    fontWeight: 600,
-    fontSize: "11px",
-    letterSpacing: "0.04em",
-    textTransform: "uppercase",
-  },
-  date: {
-    fontSize: "12px",
-    color: "var(--maq-gray-700)",
-    fontWeight: 600,
-  },
-  title: {
-    margin: 0,
-    fontSize: "20px",
-    lineHeight: 1.3,
-    fontWeight: 700,
-    color: "var(--maq-black)",
-  },
-  body: {
-    margin: 0,
-    fontSize: "14px",
-    lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
-    flex: 1,
-  },
-  location: {
-    margin: 0,
-    fontSize: "13px",
-    color: "var(--maq-ink)",
-    fontWeight: 600,
   },
   state: {
     textAlign: "center",
@@ -180,18 +121,6 @@ const useStyles = makeStyles({
     alignSelf: "flex-start",
     marginTop: "auto",
   },
-  titleClamp: {
-    display: "-webkit-box",
-    WebkitLineClamp: 2,
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
-  },
-  summaryClamp: {
-    display: "-webkit-box",
-    WebkitLineClamp: 3,
-    WebkitBoxOrient: "vertical",
-    overflow: "hidden",
-  },
 });
 
 function EventLink({
@@ -206,37 +135,32 @@ function EventLink({
   const navigate = useNavigate();
   if (href.startsWith("http")) {
     return (
-      <Button
-        as="a"
+      <TextButton
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        appearance="subtle"
-        icon={<ArrowRight16Regular />}
-        iconPosition="after"
+        iconAfter={<ArrowRight16Regular />}
         className={className}
       >
         {children}
-      </Button>
+      </TextButton>
     );
   }
 
   return (
-    <Button
-      appearance="subtle"
-      icon={<ArrowRight16Regular />}
-      iconPosition="after"
+    <TextButton
+      iconAfter={<ArrowRight16Regular />}
       onClick={() => navigate(href)}
       className={className}
     >
       {children}
-    </Button>
+    </TextButton>
   );
 }
 
 export function AboutEvents() {
   const s = useStyles();
-  const [previousFromNews, setPreviousFromNews] = useState<EventCard[]>([]);
+  const [previousFromNews, setPreviousFromNews] = useState<EventCardData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showAllPrevious, setShowAllPrevious] = useState(false);
@@ -244,7 +168,7 @@ export function AboutEvents() {
   const loadPrevious = useCallback(async () => {
     try {
       setLoading(true);
-      setError(null);
+          setError(null);
       const data = await fetchPastEventsFromNews(30);
       setPreviousFromNews(data);
     } catch (e) {
@@ -288,11 +212,12 @@ export function AboutEvents() {
         </div>
       </section>
 
+      <InsightsResourceNav active="events" />
+
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.sectionHead}>
             <h2 className={s.sectionTitle}>Upcoming Events</h2>
-           
           </div>
 
           {upcoming.length === 0 ? (
@@ -300,31 +225,25 @@ export function AboutEvents() {
           ) : (
             <div className={s.upcomingGrid}>
               {upcoming.map((event) => (
-                <article key={event.id} className={s.card}>
-                  <div className={s.metaRow}>
-                    {getUpcomingEventTag(event) === "Ongoing" && (
-                      <span className={s.tag}>Ongoing</span>
-                    )}
-                    <span className={s.date}>
-                      {new Date(event.startDate).toLocaleDateString(undefined, {
+                <StandardEventCard
+                  key={event.id}
+                  tag={getUpcomingEventTag(event) === "Ongoing" ? "Ongoing" : undefined}
+                  date={`${new Date(event.startDate).toLocaleDateString(undefined, {
+                    month: "short",
+                    day: "numeric",
+                    year: "numeric",
+                  })}${event.endDate !== event.startDate
+                    ? ` - ${new Date(event.endDate).toLocaleDateString(undefined, {
                         month: "short",
                         day: "numeric",
                         year: "numeric",
-                      })}
-                      {event.endDate !== event.startDate
-                        ? ` - ${new Date(event.endDate).toLocaleDateString(undefined, {
-                            month: "short",
-                            day: "numeric",
-                            year: "numeric",
-                          })}`
-                        : ""}
-                    </span>
-                  </div>
-                  <h3 className={`${s.title} ${s.titleClamp}`}>{event.title}</h3>
-                  <p className={s.location}>{event.location}</p>
-                  <p className={`${s.body} ${s.summaryClamp}`}>{event.summary}</p>
-                  <EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>
-                </article>
+                      })}`
+                    : ""}`}
+                  title={event.title}
+                  location={event.location}
+                  summary={event.summary}
+                  actionNode={<EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>}
+                />
               ))}
             </div>
           )}
@@ -346,9 +265,9 @@ export function AboutEvents() {
           {error && !loading && (
             <div className={s.state}>
               {error}{" "}
-              <Button size="small" appearance="subtle" onClick={() => void loadPrevious()}>
+              <TextButton size="small" onClick={() => void loadPrevious()}>
                 Retry
-              </Button>
+              </TextButton>
             </div>
           )}
 
@@ -360,14 +279,13 @@ export function AboutEvents() {
             <>
               <div className={s.pastGrid}>
                 {visiblePreviousEvents.map((event) => (
-                  <article key={event.id} className={s.card}>
-                    <div className={s.metaRow}>
-                      <span className={s.date}>{event.date}</span>
-                    </div>
-                    <h3 className={`${s.title} ${s.titleClamp}`}>{event.title}</h3>
-                    <p className={`${s.body} ${s.summaryClamp}`}>{event.summary}</p>
-                    <EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>
-                  </article>
+                  <StandardEventCard
+                    key={event.id}
+                    date={event.date}
+                    title={event.title}
+                    summary={event.summary}
+                    actionNode={<EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>}
+                  />
                 ))}
               </div>
 
@@ -377,13 +295,13 @@ export function AboutEvents() {
                     Showing {visiblePreviousEvents.length} of {previousEvents.length} previous events
                   </span>
                   {!showAllPrevious ? (
-                    <Button appearance="subtle" onClick={() => setShowAllPrevious(true)}>
+                    <TextButton onClick={() => setShowAllPrevious(true)}>
                       Show more
-                    </Button>
+                    </TextButton>
                   ) : (
-                    <Button appearance="subtle" onClick={() => setShowAllPrevious(false)}>
+                    <TextButton onClick={() => setShowAllPrevious(false)}>
                       Show less
-                    </Button>
+                    </TextButton>
                   )}
                 </div>
               )}

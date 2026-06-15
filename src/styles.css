@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
-
 :root {
   /* MAQ Software brand palette — "Editorial Red" (v3)
      Inspired by Databricks / Hitachi Solutions / Insight: a single brand
@@ -19,12 +17,16 @@
   --maq-surface-cream: #f7f8fa;/* alias — replaces former warm sand */
   --maq-surface-soft: #f0f2f5; /* slightly deeper neutral block */
 
-  /* Ink ladder (5 distinct steps) */
+  /* Ink ladder — body copy unified to a single ink for sitewide consistency.
+     Headings, strong body, and regular body copy all share #0f172a; only the
+     muted-label tokens (--maq-gray-500 / --maq-text-muted) stay lighter so
+     captions/eyebrows keep their visual hierarchy. */
   --maq-black: #0f172a;        /* H1 / H2 — slate 900 */
-  --maq-ink: #1f2937;          /* H3 / strong body */
-  --maq-gray-700: #475467;     /* body copy */
+  --maq-ink: #0f172a;          /* strong body / H3 — unified to body ink */
+  --maq-gray-700: #0f172a;     /* body copy — unified to body ink */
+  --maq-text-700: #0f172a;     /* home card body — was undefined, now body ink */
   --maq-gray-600: #0f172a;     /* footer bg alias */
-  --maq-gray-500: #667085;     /* muted / labels */
+  --maq-gray-500: #667085;     /* muted / labels (intentionally lighter) */
   --maq-text-muted: #667085;
 
   /* Chrome */
@@ -52,7 +54,7 @@ body,
   padding: 0;
   background: #fff;
   color: var(--maq-gray-700);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";

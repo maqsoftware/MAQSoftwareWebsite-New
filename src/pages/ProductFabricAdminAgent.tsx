@@ -1,6 +1,7 @@
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
+import { Button, PrimaryButton, SecondaryButton } from "../components/buttons";
 // import { TrustBanner } from "../components/TrustBanner";
 import {
   Mail24Regular,
@@ -74,7 +75,7 @@ const useStyles = makeStyles({
   sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "28px" },
-  headLeft: { marginBottom: "20px" },
+  headLeft: { marginBottom: "20px", textAlign: "center" },
   secEyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -100,7 +101,7 @@ const useStyles = makeStyles({
     margin: "0 0 10px",
     letterSpacing: "-0.01em",
   },
-  sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "720px" },
+  sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "720px", textAlign: "center" },
 
   // Impact ----------------------------------------------------------------
   impactGrid: {
@@ -109,14 +110,13 @@ const useStyles = makeStyles({
     gap: "16px",
   },
   impactCard: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "10px",
     padding: "20px",
     background: "#fff",
-    transition: "all 0.2s",
+    transition: "border-color 0.16s ease",
     ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      border: "0.5px solid rgba(186, 20, 26, 0.5)",
     },
   },
   impactMetric: {
@@ -150,9 +150,13 @@ const useStyles = makeStyles({
   },
   feat: {
     background: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
+    border: "0.5px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "22px",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "0.5px solid rgba(186, 20, 26, 0.5)",
+    },
   },
   featHead: {
     display: "flex",
@@ -193,7 +197,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: `1px solid var(--maq-red)`,
       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-      transform: "translateY(-2px)",
     },
   },
   caseTitle: {
@@ -255,7 +258,7 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     opacity: 0.18,
     lineHeight: 1,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
   },
   quoteBody: {
     fontSize: "15px",
@@ -294,7 +297,6 @@ const useStyles = makeStyles({
     ":hover": {
       border: `1px solid var(--maq-red)`,
       boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-      transform: "translateY(-2px)",
     },
   },
   mktImg: {
@@ -373,11 +375,37 @@ const impact = [
 ];
 
 
-const features = [
-  { icon: <Pulse24Regular />, title: "24/7 health monitoring", desc: "Capacity utilization, refresh SLAs, and item failures tracked across every workspace and domain in your tenant." },
-  { icon: <Warning24Regular />, title: "Proactive risk alerts", desc: "Surface issues before business users hit broken reports or throttled queries — alerts correlated, not noisy." },
-  { icon: <Wrench24Regular />, title: "One-click remediation", desc: "Suggested fixes (resize capacity, reassign workspace, archive orphaned items) execute with full audit trail." },
-  { icon: <Eye24Regular />, title: "Tenant-wide visibility", desc: "A single pane across capacities, domains, workspaces, lakehouses, warehouses, and semantic models." },
+const benefits = [
+  {
+    icon: <Pulse24Regular />,
+    title: "Always-on monitoring",
+    desc: "Continuously monitors utilization, refresh patterns, and workspace activity across all tenant capacities.",
+  },
+  {
+    icon: <Warning24Regular />,
+    title: "Anomaly and spike detection",
+    desc: "Automatically detects CU spikes, refresh storms, and anomalous workloads with workspace-level impact analysis.",
+  },
+  {
+    icon: <Wrench24Regular />,
+    title: "Actionable insight cards",
+    desc: "Every detection surfaces a specific recommended action, not just an alert. Throttle, shift, reassign, archive, or scale with one click.",
+  },
+  {
+    icon: <Eye24Regular />,
+    title: "SKU right-sizing",
+    desc: "Identifies over and under-provisioned capacities and recommends optimal SKU adjustments.",
+  },
+  {
+    icon: <Pulse24Regular />,
+    title: "Idle capacity detection",
+    desc: "Surfaces underutilized capacities and recommends scheduling optimizations to recover spend.",
+  },
+  {
+    icon: <Warning24Regular />,
+    title: "Full audit trail",
+    desc: "All recommendations and actions are fully logged, governed, and traceable with no shadow changes.",
+  },
 ];
 
 const cases = [
@@ -459,17 +487,15 @@ export function ProductFabricAdminAgent() {
             Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.
             </p>
             <div className={s.btns}>
-              <Button
-                appearance="primary"
+              <PrimaryButton
                 size="large"
-               
                 onClick={() =>
                   handleContactClick("Fabric Admin Agent - Walkthrough")
                 }
               >
                 Contact Us
-              </Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
+              </PrimaryButton>
+              <Button variant="tertiary" href={APPSOURCE} target="_blank" rel="noopener noreferrer" size="large" className="maq-equal-cta">Marketplace</Button>
             </div>
           </div>
 
@@ -491,16 +517,38 @@ export function ProductFabricAdminAgent() {
       {/* ---------------------- Trust banner ---------------------- */}
 
 
-      {/* ---------------------- Impact ---------------------- */}
+      {/* ---------------------- Benefits ---------------------- */}
       <section className={s.section}>
+        <div className={s.inner}>
+          <div className={s.headLeft}>
+            <span className={s.secEyebrow}>Why Fabric Admin Agent</span>
+            <h2 className={s.titleLg}>Benefits</h2>
+          </div>
+          <div className={s.featGrid}>
+            {benefits.map((b) => (
+              <div key={b.title} className={s.feat}>
+                <div className={s.featHead}>
+                  <span className={s.featIconBox}>{b.icon}</span>
+                  <div className={s.featTitle}>{b.title}</div>
+                </div>
+                <p className={s.featDesc}>{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* ---------------------- Impact ---------------------- */}
+      <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Proven outcomes</span>
             <h2 className={s.titleLg}>Real impact for Microsoft Fabric platform owners</h2>
-            <p className={s.sub}>
+            {/* <p className={s.sub}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
               enterprise tenants.
-            </p>
+            </p> */}
           </div>
           <div className={s.impactGrid}>
               {impact.map((i) => (
@@ -533,7 +581,7 @@ export function ProductFabricAdminAgent() {
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
-                  Read full story
+                  Read full case study
                 </span>
               </a>
             ))}
@@ -550,15 +598,15 @@ export function ProductFabricAdminAgent() {
       </section>
 
       {/* ---------------------- Insights ---------------------- */}
-      <section className={s.section}>
+      <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
             <span className={s.secEyebrow}>Insights</span>
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
-            <p className={s.sub}>
+            {/* <p className={s.sub}>
               Get the agent from Microsoft AppSource, browse Azure Marketplace
               marketplace offers, and explore deeper guidance from MAQ Software.
-            </p>
+            </p> */}
           </div>
 
           {/* Featured banner */}
@@ -574,28 +622,23 @@ export function ProductFabricAdminAgent() {
               </p>
             </div>
             <div className={s.bannerBtns}>
-              <Button
-                appearance="primary"
+              <PrimaryButton
                 size="large"
-                icon={<ArrowRight20Regular />}
-                iconPosition="after"
-                as="a"
+                iconAfter={<ArrowRight20Regular />}
                 href="https://marketplace.microsoft.com/en-us/product/maqsoftware.fabricadminagent-preview?tab=Overview&flightCodes=f7b20ceffeeb4e1fab33185d0cd74d08"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Marketplace
-              </Button>
-              <Button
-                appearance="outline"
-                size="large"
-                as="a"
+              </PrimaryButton>
+              <SecondaryButton
                 href="https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software"
                 target="_blank"
                 rel="noopener noreferrer"
+                size="large"
               >
                 Browse all marketplace offers
-              </Button>
+              </SecondaryButton>
             </div>
           </div> */}
 
@@ -648,4 +691,3 @@ export function ProductFabricAdminAgent() {
     </>
   );
 }
-

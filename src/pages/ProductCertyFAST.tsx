@@ -1,7 +1,7 @@
-import { Button } from "@fluentui/react-components";
 // import { TrustBanner } from \"../components/TrustBanner\";
 import { Mail24Regular } from "@fluentui/react-icons";
 
+import { Button, PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
@@ -41,8 +41,8 @@ export function ProductCertyFAST() {
               CertyFAST helps organizations build and maintain high-quality Power BI semantic models. By automating error detection, DAX standardization, and documentation, it improves consistency, reduces development effort, and ensures adherence to modeling best practices.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</Button>
-              <Button appearance="outline" size="large" className="maq-equal-cta" as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</Button>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</PrimaryButton>
+              <Button variant="tertiary" size="large" className="maq-equal-cta" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
           <div className={s.heroImageWrap}>

@@ -1,4 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { StatCard } from "../cards/StatCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
@@ -25,32 +26,6 @@ const useStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-  },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "10px",
-    padding: "20px",
-    background: "#fff",
-    textAlign: "center",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
-  },
-  metric: {
-    fontSize: "36px",
-    fontWeight: 800,
-    color: "var(--maq-red)",
-    lineHeight: 1.1,
-    marginBottom: "8px",
-    letterSpacing: "-0.02em",
-  },
-  label: {
-    fontSize: "14px",
-    fontWeight: 600,
-    color: "var(--maq-black)",
-    lineHeight: 1.4,
   },
 });
 
@@ -81,10 +56,7 @@ export function PartnershipHighlights({
         </div>
         <div className={s.grid}>
           {stats.map((h) => (
-            <div key={h.label} className={s.card}>
-              <div className={s.metric}>{h.metric}</div>
-              <div className={s.label}>{h.label}</div>
-            </div>
+            <StatCard key={h.label} metric={h.metric} label={h.label} centerAlign />
           ))}
         </div>
       </div>

@@ -1,199 +1,322 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import {
-  Location24Regular,
-  Mail24Regular,
-  People24Regular,
+  ArrowRight16Regular,
+  ChartMultiple24Regular,
+  DataPie24Regular,
   Lightbulb24Regular,
-  Handshake24Regular,
-  Rocket24Regular,
+  Location24Regular,
+  Shield24Regular,
 } from "@fluentui/react-icons";
+import { PrimaryButton } from "../components/buttons";
 
 const MAIL_TO =
   "mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.";
 
 const useStyles = makeStyles({
-  // ── Hero ──────────────────────────────────────────────────────────────────
+  page: {
+    backgroundColor: "var(--maq-gray-50)",
+  },
   hero: {
-    backgroundColor: "var(--maq-off-white)",
-    padding: "64px 32px 72px",
-    backgroundImage: "url('/logos/wave_dots.svg')",
-    backgroundPosition: "bottom left",
+    backgroundColor: "#f7f8fb",
+    backgroundImage: "url('/images/ContactUs/bg.png')",
     backgroundRepeat: "no-repeat",
+    backgroundPosition: "center 50%",
     backgroundSize: "cover",
+    borderBottom: "1px solid var(--maq-border)",
+    "@media (max-width: 960px)": {
+      backgroundPosition: "center 50%",
+    },
   },
   heroInner: {
     maxWidth: "1240px",
     margin: "0 auto",
-    display: "grid",
-    gridTemplateColumns: "1.05fr 0.95fr",
-    gap: "40px",
-    alignItems: "start",
-    "@media (max-width: 980px)": {
-      gridTemplateColumns: "1fr",
-      gap: "28px",
+    padding: "18px 32px 28px",
+    "@media (max-width: 960px)": {
+      padding: "16px 20px 24px",
     },
   },
-  heroLeft: {
-    maxWidth: "700px",
+  heroContent: {
+    maxWidth: "720px",
   },
-  h1: {
-    display: "block",
-    fontSize: "50px",
+  eyebrow: {
+    margin: "0 0 10px",
+    fontSize: "12px",
     fontWeight: 700,
-    lineHeight: 1.15,
-    color: "var(--maq-black)",
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    color: "var(--maq-red)",
+  },
+  title: {
+    margin: "0 0 10px",
+    fontSize: "58px",
+    lineHeight: 1.03,
     letterSpacing: "-0.02em",
-    margin: "0 0 18px",
-    "@media (max-width: 980px)": {
-      fontSize: "38px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+    "@media (max-width: 1080px)": {
+      fontSize: "50px",
+    },
+    "@media (max-width: 960px)": {
+      fontSize: "42px",
+      lineHeight: 1.08,
+    },
+    "@media (max-width: 560px)": {
+      fontSize: "34px",
     },
   },
-  heroSub: {
-    display: "block",
-    fontSize: "16px",
-    lineHeight: 1.2,
-    fontWeight: 400,
-    color: "var(--maq-black)",
-    margin: "0 0 26px",
-    maxWidth: "620px",
-  },
-  proofList: {
-    display: "grid",
-    gap: "20px",
-    marginBottom: "32px",
-  },
-  proofItem: {
-    display: "grid",
-    gridTemplateColumns: "44px 1fr",
-    gap: "12px",
-    alignItems: "start",
-  },
-  proofIcon: {
+  titleAccent: {
     color: "var(--maq-red)",
-    backgroundColor: "var(--maq-red-pale)",
-    width: "44px",
-    height: "44px",
-    borderRadius: "10px",
+  },
+  summary: {
+    margin: "0 0 14px",
+    fontSize: "18px",
+    lineHeight: 1.5,
+    color: "#2f3a4f",
+    maxWidth: "640px",
+    "@media (max-width: 960px)": {
+      fontSize: "17px",
+      lineHeight: 1.6,
+    },
+  },
+  cta: {
+    minHeight: "38px",
+    width: "122px",
+    justifyContent: "center",
+    whiteSpace: "nowrap",
+  },
+
+  featureShell: {
+    maxWidth: "1240px",
+    margin: "10px auto 0",
+    padding: "0 32px",
+    "@media (max-width: 960px)": {
+      marginTop: "8px",
+      padding: "0 20px",
+    },
+  },
+  featureRow: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+    backgroundColor: "#fff",
+    border: "1px solid var(--maq-border)",
+    borderRadius: "12px",
+    overflow: "hidden",
+    boxShadow: "0 8px 20px rgba(15, 23, 42, 0.08)",
+    "@media (max-width: 1000px)": {
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+    },
+    "@media (max-width: 560px)": {
+      gridTemplateColumns: "1fr",
+    },
+  },
+  featureItem: {
+    display: "grid",
+    gridTemplateColumns: "34px 1fr",
+    alignItems: "center",
+    gap: "10px",
+    padding: "8px 14px",
+    borderRight: "1px solid var(--maq-border)",
+    ":last-child": {
+      borderRight: "none",
+    },
+    "@media (max-width: 1000px)": {
+      ":nth-child(2n)": {
+        borderRight: "none",
+      },
+      ":nth-child(-n + 2)": {
+        borderBottom: "1px solid var(--maq-border)",
+      },
+    },
+    "@media (max-width: 560px)": {
+      borderRight: "none",
+      borderBottom: "1px solid var(--maq-border)",
+      ":last-child": {
+        borderBottom: "none",
+      },
+    },
+  },
+  featureIconWrap: {
+    width: "30px",
+    height: "30px",
+    borderRadius: "999px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    color: "var(--maq-red)",
+    backgroundColor: "#fff5f7",
+    border: "1px solid rgba(200, 16, 46, 0.18)",
   },
-  proofTitle: {
-    margin: "0 0 6px",
-    fontSize: "16px",
-    lineHeight: 1.4,
+  featureTitle: {
+    margin: "0 0 1px",
+    fontSize: "14px",
+    fontWeight: 700,
+    lineHeight: 1.2,
+    color: "var(--maq-black)",
+  },
+  featureDesc: {
+    margin: 0,
+    fontSize: "12px",
+    lineHeight: 1.3,
+    color: "var(--maq-ink)",
+  },
+
+  officesSection: {
+    maxWidth: "1240px",
+    margin: "0 auto",
+    padding: "12px 32px 16px",
+    "@media (max-width: 960px)": {
+      padding: "18px 20px 20px",
+    },
+  },
+  officesTitle: {
+    margin: "0 0 10px",
+    fontSize: "36px",
+    lineHeight: 1.1,
+    letterSpacing: "-0.02em",
     fontWeight: 700,
     color: "var(--maq-black)",
+    "@media (max-width: 960px)": {
+      fontSize: "28px",
+      marginBottom: "12px",
+    },
   },
-  proofDesc: {
-    margin: 0,
-    fontSize: "14px",
-    lineHeight: 1.6,
-    fontWeight: 400,
-    color: "var(--maq-black)",
+  officeGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
+    gap: "10px",
+    "@media (max-width: 1100px)": {
+      gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+      gap: "12px",
+    },
+    "@media (max-width: 860px)": {
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+    },
+    "@media (max-width: 620px)": {
+      gridTemplateColumns: "1fr",
+    },
   },
-  heroRight: {
+  officeCard: {
     backgroundColor: "#fff",
     border: "1px solid var(--maq-border)",
-    borderRadius: "16px",
-    padding: "20px",
-    boxShadow: "0 8px 20px rgba(15, 23, 42, 0.06)",
-    alignSelf: "start",
+    borderRadius: "10px",
+    boxShadow: "0 2px 8px rgba(15, 23, 42, 0.05)",
+    overflow: "hidden",
     display: "flex",
     flexDirection: "column",
-    gap: "12px",
+    minHeight: "238px",
   },
-  rightTitle: {
-    margin: "0",
-    fontSize: "16px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    letterSpacing: "-0.01em",
+  officeMedia: {
+    height: "74px",
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    position: "relative",
   },
-  rightSub: {
-    margin: "0 0 10px",
-    fontSize: "14px",
-    lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
-  },
-  miniLocationList: {
-    display: "grid",
-    gap: "8px",
-  },
-  miniLocation: {
-    display: "grid",
-    gridTemplateColumns: "28px 1fr auto",
-    gap: "7px",
-    alignItems: "start",
-    paddingBottom: "9px",
-    borderBottom: "1px solid var(--maq-border)",
-    ":last-child": {
-      paddingBottom: 0,
-      borderBottom: "none",
-    },
-    "@media (max-width: 980px)": {
-      gridTemplateColumns: "28px 1fr",
-    },
-  },
-  miniLocationIcon: {
+  locationPin: {
+    position: "absolute",
+    top: "7px",
+    left: "7px",
+    width: "20px",
+    height: "20px",
+    borderRadius: "50%",
+    backgroundColor: "#fff",
     color: "var(--maq-red)",
-    marginTop: "2px",
+    border: "1px solid rgba(200, 16, 46, 0.18)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    boxShadow: "0 2px 5px rgba(15, 23, 42, 0.18)",
   },
-  miniLocationCity: {
-    margin: "0 0 2px",
-    fontSize: "13px",
+  officeBody: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "6px",
+    padding: "8px 10px 9px",
+    flex: 1,
+  },
+  officeCity: {
+    margin: 0,
+    fontSize: "12.5px",
+    lineHeight: 1.25,
     fontWeight: 700,
     color: "var(--maq-black)",
-    letterSpacing: "-0.01em",
   },
-  miniLocationAddress: {
+  officeAddress: {
     margin: 0,
     fontSize: "12px",
-    lineHeight: 1.5,
-    color: "var(--maq-black)",
+    lineHeight: 1.4,
     whiteSpace: "pre-line" as const,
+    color: "var(--maq-ink)",
   },
-  miniActionColumn: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "flex-end",
-    gap: "6px",
-    minWidth: "150px",
-    paddingLeft: "12px",
-    "@media (max-width: 980px)": {
-      gridColumnStart: 2,
-      alignItems: "flex-start",
-      minWidth: "auto",
-      paddingLeft: 0,
-      marginTop: "6px",
-    },
+  officePhone: {
+    margin: 0,
+    fontSize: "11px",
+    lineHeight: 1.3,
+    color: "var(--maq-gray-500)",
   },
-  miniLocationPhone: {
-    display: "flex",
+  directionsLink: {
+    marginTop: "auto",
+    display: "inline-flex",
     alignItems: "center",
-    gap: "6px",
+    gap: "3px",
     fontSize: "12px",
-    lineHeight: 1.4,
-    color: "var(--maq-gray-700)",
-  },
-  miniDirections: {
-    display: "flex",
-    alignItems: "center",
-    fontFamily: "inherit",
-    fontSize: "13px",
-    lineHeight: 1.4,
-    fontWeight: 600,
+    lineHeight: 1.2,
+    fontWeight: 700,
     color: "var(--maq-red)",
     textDecoration: "none",
+    ":hover": {
+      color: "var(--maq-red-dark)",
+    },
+  },
+  hiddenText: {
+    position: "absolute",
+    width: "1px",
+    height: "1px",
+    padding: 0,
+    margin: "-1px",
+    overflow: "hidden",
+    clip: "rect(0, 0, 0, 0)",
+    whiteSpace: "nowrap",
+    border: 0,
   },
 });
 
-interface Office {
+type Capability = {
+  title: string;
+  description: string;
+  icon: JSX.Element;
+};
+
+type Office = {
   city: string;
   address: string;
   phone?: string;
   maps: string;
-}
+  image: string;
+};
+
+const capabilities: Capability[] = [
+  {
+    title: "Customer-Centric Delivery",
+    description: "Trusted by global enterprises for measurable outcomes",
+    icon: <Lightbulb24Regular />,
+  },
+  {
+    title: "Innovation at Scale",
+    description: "Modernizing legacy BI and driving AI-powered insights",
+    icon: <ChartMultiple24Regular />,
+  },
+  {
+    title: "Data & AI Expertise",
+    description: "End-to-end capabilities across analytics, AI and cloud",
+    icon: <DataPie24Regular />,
+  },
+  {
+    title: "Security & Compliance",
+    description: "Enterprise-grade security with global compliance standards",
+    icon: <Shield24Regular />,
+  },
+];
 
 const offices: Office[] = [
   {
@@ -201,6 +324,7 @@ const offices: Office[] = [
     address: "2027 152nd Avenue NE\nRedmond, WA 98052",
     phone: "+1 425-526-5399",
     maps: "https://maps.app.goo.gl/Bu9iNvKvn7m9Wvkb6",
+    image: "/images/ContactUs/redmond.jpg",
   },
   {
     city: "Plano, Texas, USA",
@@ -208,27 +332,31 @@ const offices: Office[] = [
       "Lincoln Legacy Two\n5810 Tennyson Parkway, Suite 100\nPlano, TX 75024",
     phone: "+1 425-526-5399",
     maps: "https://maps.app.goo.gl/bipnas8wN2V8Uqst5",
+    image: "/images/ContactUs/plano.jpg",
   },
   {
     city: "Noida, Uttar Pradesh, India",
     address:
-      "A3, Sector 145\nNear Metro Station\nNoida\nG. B. Nagar, UP 201 301",
+      "A3, Sector 145, Near Metro Station\nNoida\nG. B. Nagar, UP 201 301",
     phone: "+91 908 256 1327",
     maps: "https://maps.app.goo.gl/GZT67ZkYkp1ajCux6",
+    image: "/images/ContactUs/noida.webp",
   },
   {
     city: "Hyderabad, Telangana, India",
     address:
-      "Level 7, Astro, aVance Business Hub\nBehind Dell Campus\nHITEC City 2, Madhapur\nHyderabad 500 081",
+      "Level 7, Astro, aVance Business Hub\nBehind Dell Campus\nHITEC City, Madhapur\nHyderabad 500 081",
     phone: "+91 40 4010 0570",
     maps: "https://maps.app.goo.gl/oUZoswcXNcEiiBmk8",
+    image: "/images/ContactUs/Hyderabad.jpg",
   },
   {
     city: "Mumbai, Maharashtra, India",
     address:
-      "201, Meadows Building\nSahar Plaza on Andheri Kurla Road\nAndheri East\nMumbai 400 059",
+      "201, Meadows Building\nSahar Plaza, Andheri Kurla Road\nAndheri East\nMumbai 400 059",
     phone: "+91 908 256 1327",
     maps: "https://maps.app.goo.gl/dnkW8CJhJF9fbZWT9",
+    image: "/images/ContactUs/mumbai.jpg",
   },
 ];
 
@@ -236,118 +364,80 @@ export function Contact() {
   const s = useStyles();
 
   return (
-    <>
-      {/* Hero */}
+    <main className={s.page}>
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <div className={s.heroLeft}>
-            <p className={s.heroSub}>
-           MAQ Software helps organizations unlock the full potential of their data through AI, intelligent automation, analytics, and cloud technologies. From modern data platforms to generative AI and agentic solutions, we enable businesses to transform information into real-time intelligence, accelerate innovation, and drive measurable outcomes at scale.
+          <div className={s.heroContent}>
+            <p className={s.eyebrow}>Contact Us</p>
+            <h1 className={s.title}>
+              Let&apos;s build what&apos;s next,
+              <br />
+              <span className={s.titleAccent}>together.</span>
+            </h1>
+            <p className={s.summary}>
+              MAQ Software helps organizations unlock the full potential of data
+              and AI to drive intelligent decisions and measurable business
+              outcomes.
             </p>
-
-            <div className={s.proofList}>
-              <div className={s.proofItem}>
-                <span className={s.proofIcon}>
-                  <Lightbulb24Regular />
-                </span>
-                <div>
-                  <p className={s.proofTitle}>Microsoft Solutions Partner</p>
-                  <p className={s.proofDesc}>
-                    Award-winning Power BI expertise recognized by Microsoft with
-                    the 2021 Microsoft Power BI Partner of the Year Award.
-                    Delivered frameworks for thousands of reports across 30 global
-                    companies and accelerated adoption from years to months.
-                  </p>
-                </div>
-              </div>
-
-              <div className={s.proofItem}>
-                <span className={s.proofIcon}>
-                  <People24Regular />
-                </span>
-                <div>
-                  <p className={s.proofTitle}>Commitment to Your Success</p>
-                  <p className={s.proofDesc}>
-                    End-to-end partnership from modernization and migration
-                    planning to implementation, optimization, and scalable
-                    analytics adoption.
-                  </p>
-                </div>
-              </div>
-
-              <div className={s.proofItem}>
-                <span className={s.proofIcon}>
-                  <Handshake24Regular />
-                </span>
-                <div>
-                  <p className={s.proofTitle}>Customer-Centric Delivery</p>
-                  <p className={s.proofDesc}>
-                    Trusted to modernize legacy BI platforms, improve report
-                    performance by up to 90%, and enable self-service reporting and
-                    embedded Power BI for ISVs.
-                  </p>
-                </div>
-              </div>
-
-              <div className={s.proofItem}>
-                <span className={s.proofIcon}>
-                  <Rocket24Regular />
-                </span>
-                <div>
-                  <p className={s.proofTitle}>Innovation at Scale</p>
-                  <p className={s.proofDesc}>
-                    Published 33 certified Power BI custom visuals with 2.3M+
-                    downloads and expanded community expertise through best-practice
-                    guides and training.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <Button
-              appearance="primary"
-              size="large"
-              className="maq-equal-cta"
-              as="a"
-              href={MAIL_TO}
-            >
+            <PrimaryButton size="large" className={s.cta} href={MAIL_TO}>
               Contact Us
-            </Button>
+            </PrimaryButton>
           </div>
-
-          <aside className={s.heroRight}>
-            <h2 className={s.rightTitle}>Our global locations</h2>
-            <div className={s.miniLocationList}>
-              {offices.map((office) => (
-                <div key={office.city} className={s.miniLocation}>
-                  <a
-                    href={office.maps}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={s.miniLocationIcon}
-                    style={{ cursor: "pointer", textDecoration: "none" }}
-                  >
-                    <Location24Regular />
-                  </a>
-                  <div>
-                    <p className={s.miniLocationCity}>{office.city}</p>
-                    <p className={s.miniLocationAddress}>
-                      {office.address}
-                    </p>
-                  </div>
-                  <div className={s.miniActionColumn}>
-                    {office.phone && (
-                      <span className={s.miniLocationPhone}>
-                        {office.phone}
-                      </span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </aside>
         </div>
       </section>
-    </>
+
+      <div className={s.featureShell}>
+        <section className={s.featureRow} aria-label="Core capabilities">
+          {capabilities.map((capability) => (
+            <article key={capability.title} className={s.featureItem}>
+              <span className={s.featureIconWrap} aria-hidden="true">
+                {capability.icon}
+              </span>
+              <div>
+                <p className={s.featureTitle}>{capability.title}</p>
+                <p className={s.featureDesc}>{capability.description}</p>
+              </div>
+            </article>
+          ))}
+        </section>
+      </div>
+
+      <section className={s.officesSection} aria-labelledby="global-offices-heading">
+        <h2 id="global-offices-heading" className={s.officesTitle}>
+          Our Global Offices
+        </h2>
+        <div className={s.officeGrid}>
+          {offices.map((office) => (
+            <article className={s.officeCard} key={office.city}>
+              <div
+                className={s.officeMedia}
+                style={{ backgroundImage: `url('${office.image}')` }}
+                aria-hidden="true"
+              >
+                <span className={s.locationPin}>
+                  <Location24Regular fontSize={13} />
+                  <span className={s.hiddenText}>Location</span>
+                </span>
+              </div>
+
+              <div className={s.officeBody}>
+                <h3 className={s.officeCity}>{office.city}</h3>
+                <p className={s.officeAddress}>{office.address}</p>
+                {office.phone && <p className={s.officePhone}>{office.phone}</p>}
+                <a
+                  className={s.directionsLink}
+                  href={office.maps}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get Directions
+                  <ArrowRight16Regular fontSize={12} />
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

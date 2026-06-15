@@ -1,14 +1,15 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
+import { SecondaryButton } from "../buttons";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -25,7 +26,7 @@ const useStyles = makeStyles({
     margin: "0 0 6px",
     letterSpacing: "-0.01em",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "780px" },
+  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
   panel: {
     marginTop: "20px",
@@ -182,24 +183,24 @@ export function ServiceCapabilitiesData() {
         <div className={s.head}>
           <span className={s.eyebrow}>Our expertise</span>
           <h2 className={s.title}>Our data &amp; AI platform capabilities</h2>
-          <p className={s.sub}>
+          {/* <p className={s.sub}>
             Capabilities that turn data into reliable, scalable analytics and real-time decisioning.
-          </p>
+          </p> */}
         </div>
         <div className={s.panel}>
           <div>
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <Button
-              appearance="outline"
-              className={s.knowMore}
+            <SecondaryButton
+              size="large"
+              className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
                 handleContactClick(sel.name + " - Data & AI Platforms")
               }
             >
               Know more
-            </Button>
+            </SecondaryButton>
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (
@@ -221,7 +222,7 @@ export function ServiceCapabilitiesData() {
         </div>
         <Link
           className={s.footerLink}
-          to="/insights/case-studies?filter=Data%20%26%20analytics#insights-content"
+          to="/insights/case-studies?filter=Data%20%26%20AI%20Platforms#insights-content"
         >
           See data &amp; analytics case studies <ArrowRight16Regular />
         </Link>
