@@ -20,17 +20,41 @@ const useStyles = makeStyles({
     backgroundColor: "#f7f8fb",
     backgroundImage: "url('/images/ContactUs/bg.png')",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center 50%",
+    backgroundPosition: "center 30%",
     backgroundSize: "cover",
+    position: "relative",
+    overflow: "hidden",
     borderBottom: "1px solid var(--maq-border)",
     "@media (max-width: 960px)": {
-      backgroundPosition: "center 50%",
+      backgroundImage: "url('/images/ContactUs/bg.png')",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center 60%",
+      backgroundSize: "cover",
+    },
+    "@media (max-width: 424px)": {
+      backgroundImage: "none",
+    },
+  },
+  heroMobileBg: {
+    display: "none",
+    "@media (max-width: 424px)": {
+      display: "block",
+      position: "absolute",
+      inset: 0,
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center 74%",
+      opacity: 0.95,
+      zIndex: 0,
     },
   },
   heroInner: {
     maxWidth: "1240px",
     margin: "0 auto",
     padding: "18px 32px 28px",
+    position: "relative",
+    zIndex: 1,
     "@media (max-width: 960px)": {
       padding: "16px 20px 24px",
     },
@@ -366,6 +390,14 @@ export function Contact() {
   return (
     <main className={s.page}>
       <section className={s.hero}>
+        <img
+          aria-hidden="true"
+          className={s.heroMobileBg}
+          decoding="async"
+          loading="eager"
+          src="/images/ContactUs/bg_mobile.png"
+          alt=""
+        />
         <div className={s.heroInner}>
           <div className={s.heroContent}>
             <p className={s.eyebrow}>Contact Us</p>

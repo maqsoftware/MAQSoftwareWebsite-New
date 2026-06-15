@@ -5,7 +5,7 @@ import { ArrowRight16Regular } from "@fluentui/react-icons";
 const useStyles = makeStyles({
   card: {
     fontFamily: "Roboto, system-ui",
-    border: "0.75px solid var(--maq-border)",
+    border: "1px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "24px",
     backgroundColor: "#fff",
@@ -13,8 +13,11 @@ const useStyles = makeStyles({
     flexDirection: "column",
     height: "100%",
     gap: "10px",
-    transition: "transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease",
-    ":hover": { border: "0.75px solid var(--maq-red-pale)" },
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-red)",
+      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
+    },
   },
   metaRow: {
     display: "flex",
