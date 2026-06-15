@@ -138,11 +138,11 @@ const cols: FooterCol[] = [
     ],
   },
   {
-    title: "Company",
+    title: "About",
     items: [
-      { label: "Who we are", to: "/who-we-are" },
-      { label: "Careers",    to: "/careers" },
-      { label: "Sustainability", to: "/sustainability" },
+      { label: "Who we are", to: "/about/who-we-are" },
+      { label: "Careers",    to: "/about/careers" },
+      { label: "Sustainability", to: "/about/sustainability" },
       { label: "Contact Us", to: "/contact" },
     ],
   },
