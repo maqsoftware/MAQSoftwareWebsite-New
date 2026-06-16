@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     borderBottom: "1px solid var(--maq-border)",
     "@media (min-width: 1441px)": {
       backgroundPosition: "center 20%",
-      backgroundSize: "70% auto",
+      backgroundSize: "cover",
     },
     "@media (max-width: 960px)": {
       backgroundImage: "url('/images/ContactUs/bg.png')",
