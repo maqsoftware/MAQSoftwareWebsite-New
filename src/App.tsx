@@ -253,7 +253,8 @@ export function App() {
       {/* <AnnouncementRibbon /> */}
         <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomeV2 />} />
+            <Route path="/homev1" element={<Home />} />
             <Route path="/homev2" element={<HomeV2 />} />
             <Route path="/industries/retail" element={<IndustryRetail />} />
             <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
