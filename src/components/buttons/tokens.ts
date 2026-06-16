@@ -21,7 +21,7 @@ export const buttonSizeTokens = {
 
 export const buttonStateTokens = {
   transition: "background-color 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 120ms ease",
-  focusRing: "0 0 0 3px rgba(200, 16, 46, 0.22)",
+  focusRing: "0 0 0 3px rgba(186, 20, 26, 0.22)",
 } as const;
 
 export type ButtonSize = keyof typeof buttonSizeTokens;

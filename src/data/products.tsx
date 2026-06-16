@@ -42,8 +42,8 @@ export interface Product {
 // Theme-aligned inline SVG illustration (no external assets). Cool neutral
 // dominant with red used as a single accent — matches Editorial Red palette.
 function illustration(motif: "chat" | "gauge" | "swap" | "embed" | "shield" | "ingest") {
-  const RED = "#c8102e";
-  const RED_PALE = "#fde7ea";
+  const RED = "#ba141a";
+  const RED_PALE = "#fbe3e4";
   const CREAM = "#f7f8fa";
   const SLATE = "#475467";
   const GRAY_100 = "#eef0f3";
