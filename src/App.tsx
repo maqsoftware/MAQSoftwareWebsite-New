@@ -3,7 +3,9 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 // import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
 import { Header } from "./components/Header";
+import { HeaderV2 } from "./components/HeaderV2";
 import { Footer } from "./components/Footer";
+import { FooterV2 } from "./components/FooterV2";
 import { CTA } from "./components/CTA";
 import { Home } from "./pages/Home";
 
@@ -13,6 +15,7 @@ const lazyNamed = (loader: () => Promise<Record<string, ComponentType<any>>>, ex
     return { default: module[exportName] as ComponentType<any> };
   });
 
+const HomeV2 = lazyNamed(() => import("./pages/HomeV2"), "HomeV2");
 const IndustryRetail = lazyNamed(() => import("./pages/IndustryRetail"), "IndustryRetail");
 const IndustryFinancialServices = lazyNamed(
   () => import("./pages/IndustryFinancialServices"),
@@ -162,6 +165,21 @@ function ScrollToTop() {
   return null;
 }
 
+// Picks the header/footer per route: the bento exploration (/homev2) uses the
+// new HeaderV2 + light footer; every other route keeps the standard Header +
+// navy footer.
+const isExplorationRoute = (pathname: string) => pathname === "/homev2";
+
+function SiteHeader() {
+  const { pathname } = useLocation();
+  return isExplorationRoute(pathname) ? <HeaderV2 /> : <Header />;
+}
+
+function SiteFooter() {
+  const { pathname } = useLocation();
+  return isExplorationRoute(pathname) ? <FooterV2 /> : <Footer />;
+}
+
 export function App() {
   const s = useStyles();
   // Ensure SPA responds immediately when the viewport changes (device toolbar or resize).
@@ -231,11 +249,12 @@ export function App() {
   return (
     <div className={s.root}>
       <ScrollToTop />
-      <Header />
+      <SiteHeader />
       {/* <AnnouncementRibbon /> */}
         <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/homev2" element={<HomeV2 />} />
             <Route path="/industries/retail" element={<IndustryRetail />} />
             <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
             <Route path="/industries/healthcare-life-sciences" element={<IndustryHealthcareLifeSciences />} />
@@ -441,7 +460,7 @@ export function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
-      <Footer />
+      <SiteFooter />
     </div>
   );
 }
