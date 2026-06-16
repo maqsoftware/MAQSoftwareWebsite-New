@@ -31,7 +31,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     startDate: "2026-06-17",
     endDate: "2026-06-18",
     location: "Chicago, IL",
-    href: "/techcon365",
+    href: "/events/techcon365",
     ctaLabel: "View event details",
   },
   {
@@ -42,7 +42,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     startDate: "2026-08-24",
     endDate: "2026-08-28",
     location: "Seattle, WA",
-    href: "/techcon365-seattle",
+    href: "/events/techcon365/seattle",
     ctaLabel: "View event details",
   },
   {
@@ -53,7 +53,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     startDate: "2026-11-02",
     endDate: "2026-11-06",
     location: "Dallas, TX",
-    href: "/techcon365-dallas",
+    href: "/events/techcon365/dallas",
     ctaLabel: "View event details",
   },
   {
@@ -64,7 +64,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     startDate: "2027-03-08",
     endDate: "2027-03-12",
     location: "Atlanta, GA",
-    href: "/fabcon-2027",
+    href: "/events/fabcon2027",
     ctaLabel: "View event details",
   },
 ];

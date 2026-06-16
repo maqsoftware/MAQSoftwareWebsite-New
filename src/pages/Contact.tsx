@@ -25,6 +25,10 @@ const useStyles = makeStyles({
     position: "relative",
     overflow: "hidden",
     borderBottom: "1px solid var(--maq-border)",
+    "@media (min-width: 1441px)": {
+      backgroundPosition: "center 20%",
+      backgroundSize: "cover",
+    },
     "@media (max-width: 960px)": {
       backgroundImage: "url('/images/ContactUs/bg.png')",
       backgroundRepeat: "no-repeat",
