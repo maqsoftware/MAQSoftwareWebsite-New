@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
+
 :root {
   /* MAQ Software brand palette — "Editorial Red" (v3)
      Inspired by Databricks / Hitachi Solutions / Insight: a single brand
@@ -5,29 +7,40 @@
      no near-black-pure-black. Red carries the brand; neutrals carry the
      content. */
 
-  /* Brand */
-  --maq-red: #c8102e;          /* MAQ logo red (slightly bolder than v2) */
-  --maq-red-dark: #9b0c24;     /* hover / pressed */
-  --maq-red-pale: #fde7ea;     /* soft wash for borders / hover tints */
-  --maq-red-50: #fff5f6;       /* pale-red surface (sparingly) */
+  /* Brand — single source of truth for MAQ red.
+     Matches the Fluent theme brand ramp (theme.ts slot 80) and the logo.
+     Hover/tint/wash steps are derived from the same hue (~358°). */
+  --maq-red: #ba141a;          /* MAQ logo / primary brand red */
+  --maq-red-dark: #981016;     /* hover / pressed (darker step of --maq-red) */
+  --maq-red-pale: #fbe3e4;     /* soft wash for borders / hover tints */
+  --maq-red-50: #fef6f6;       /* pale-red surface (sparingly) */
 
   /* Surfaces */
   --maq-white: #ffffff;
   --maq-off-white: #f7f8fa;    /* cool light gray section bg */
   --maq-surface-cream: #f7f8fa;/* alias — replaces former warm sand */
   --maq-surface-soft: #f0f2f5; /* slightly deeper neutral block */
+  --maq-surface-ink: #262626;     /* dark surface (capability/product icon tiles) */
 
-  /* Ink ladder — body copy unified to a single ink for sitewide consistency.
-     Headings, strong body, and regular body copy all share #0f172a; only the
-     muted-label tokens (--maq-gray-500 / --maq-text-muted) stay lighter so
-     captions/eyebrows keep their visual hierarchy. */
+  /* Ink ladder (5 distinct steps) */
   --maq-black: #0f172a;        /* H1 / H2 — slate 900 */
-  --maq-ink: #0f172a;          /* strong body / H3 — unified to body ink */
-  --maq-gray-700: #0f172a;     /* body copy — unified to body ink */
-  --maq-text-700: #0f172a;     /* home card body — was undefined, now body ink */
+  --maq-ink: #1f2937;          /* H3 / strong body */
+  --maq-gray-700: #242424;     /* body copy (adjusted for higher contrast) */
   --maq-gray-600: #0f172a;     /* footer bg alias */
-  --maq-gray-500: #667085;     /* muted / labels (intentionally lighter) */
+  --maq-gray-500: #667085;     /* muted / labels */
   --maq-text-muted: #667085;
+  --maq-text-soft: #605e5c;    /* muted warm-gray body copy */
+  --maq-text-faint: #797775;   /* tertiary labels / link rest state */
+
+  /* ── Surface-aware text roles ───────────────────────────────────
+     Components reference these roles (not the raw palette above) for
+     text color. They default to the light-surface values; a dark
+     surface (components/DarkSection.tsx) overrides them on its subtree
+     so all text flips to light with no per-element override. */
+  --maq-heading-color: var(--maq-black);     /* headings */
+  --maq-body-color: var(--maq-gray-700);     /* primary body copy */
+  --maq-muted-color: var(--maq-text-soft);   /* secondary / muted copy */
+  --maq-faint-color: var(--maq-text-faint);  /* tertiary labels */
 
   /* Chrome */
   --maq-gray-50: #f7f8fa;
@@ -36,7 +49,13 @@
   --maq-border-strong: #cdd2da;
   --maq-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.06);
   --maq-shadow-md: 0 4px 8px rgba(15, 23, 42, 0.05), 0 12px 32px rgba(15, 23, 42, 0.08);
-  --maq-radius-md: 8px;
+  --maq-shadow-lift: 0 14px 30px rgba(0, 0, 0, 0.12); /* card hover lift */
+
+  /* Layout — content widths. --maq-container is the app standard;
+     --maq-container-wide is the wider column used by the V2 homepage
+     exploration (HomeV2 + FooterV2). */
+  --maq-container: 1240px;
+  --maq-container-wide: 1440px;
 
   /* Aliases — keep legacy component code working */
   --maq-navy: var(--maq-black);
@@ -53,7 +72,7 @@ body,
   margin: 0;
   padding: 0;
   background: #fff;
-  color: var(--maq-gray-700);
+  color: var(--maq-body-color);
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -65,13 +84,33 @@ body,
 h1, h2, h3, h4, h5, h6 {
   display: block;
   line-height: 1.18;
-  color: var(--maq-black);
+  color: var(--maq-heading-color);
   letter-spacing: -0.01em;
   margin: 0;
 }
 h1 { line-height: 1.1; letter-spacing: -0.02em; }
 h2 { line-height: 1.15; letter-spacing: -0.015em; }
 p  { display: block; line-height: 1.6; margin: 0; }
+
+/* ──────────────────────────────────────────────────────────────
+   Canonical type scale — shared heading classes.
+   Opt-in via className (e.g. <h2 className="maq-h2">) so existing
+   per-page makeStyles sizes are unaffected. These are the app's
+   reference heading sizes; adopt them on new pages for app-wide
+   consistency. Color/weight/spacing live here so they can be tuned
+   in one place. Pair with a layout class for page-specific margins.
+   ────────────────────────────────────────────────────────────── */
+.maq-h1 { font-size: 3.5rem;   font-weight: 700; line-height: 1.05; letter-spacing: -0.022em; color: var(--maq-heading-color); margin: 0; }
+.maq-h2 { font-size: 2.5rem;   font-weight: 700; line-height: 1.08; letter-spacing: -0.02em;  color: var(--maq-heading-color); margin: 0; }
+.maq-h3 { font-size: 1.375rem; font-weight: 600; line-height: 1.2;  letter-spacing: -0.01em;  color: var(--maq-heading-color); margin: 0; }
+@media (max-width: 720px) {
+  .maq-h1 { font-size: 2.5rem; letter-spacing: -0.01em; }
+  .maq-h2 { font-size: 1.875rem; }
+}
+
+/* Canonical centered content column. Adopt on new pages for a
+   consistent max-width; pages may override --maq-container locally. */
+.maq-container { max-width: var(--maq-container); margin-inline: auto; }
 
 * {
   box-sizing: border-box;
@@ -105,7 +144,7 @@ a {
 
   /* Position hamburger toggle at top-right on mobile for visual parity */
   .site-header { position: relative; }
-  .site-header .nav-toggle { position: absolute !important; right: 12px !important; top: 12px !important; margin-left: 0 !important; z-index: 1300 !important; }
+  .site-header .nav-toggle { position: absolute !important; right: 16px !important; top: 12px !important; margin-left: 0 !important; z-index: 1300 !important; }
 
   .mobile-overlay { display: none; }
   .mobile-overlay.open {
@@ -155,7 +194,7 @@ a {
 .is-mobile .site-header .nav-toggle { display: inline-flex !important; }
 .is-mobile .site-header .header-right { display: none !important; }
 .is-mobile .site-header { position: relative; }
-.is-mobile .site-header .nav-toggle { position: absolute !important; right: 12px !important; top: 12px !important; margin-left: 0 !important; z-index: 1300 !important; }
+.is-mobile .site-header .nav-toggle { position: absolute !important; right: 16px !important; top: 12px !important; margin-left: 0 !important; z-index: 1300 !important; }
 .is-mobile .mobile-overlay { display: none; }
 .is-mobile .mobile-overlay.open { display: block; }
 
@@ -178,7 +217,7 @@ a {
   }
 
   /* Reduce header padding so hamburger fits */
-  .site-header { padding: 0 12px !important; }
+  .site-header { padding: 0 16px !important; }
   .site-header .brand { font-size: 18px !important; }
 }
 
@@ -189,8 +228,8 @@ a {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 !important;
-    padding-left: 12px !important;
-    padding-right: 12px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     background-clip: border-box !important;
@@ -201,7 +240,7 @@ a {
   footer {
     background: var(--maq-gray-600) !important;
     color: #fff !important;
-    padding: 32px 12px !important;
+    padding: 32px 16px !important;
     box-shadow: none !important;
     border-radius: 0 !important;
     width: 100% !important;
@@ -226,5 +265,5 @@ a {
   }
 
   /* Make sure hero text is readable and not clipped */
-  h1 { font-size: 40px !important; line-height: 1.08 !important; }
+  h1 { font-size: 2.5rem !important; line-height: 1.08 !important; }
 }
