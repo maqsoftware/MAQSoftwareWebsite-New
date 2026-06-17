@@ -32,16 +32,16 @@ const useStyles = makeStyles({
     "@media (max-width: 960px)": {
       backgroundImage: "url('/images/ContactUs/bg.png')",
       backgroundRepeat: "no-repeat",
-      backgroundPosition: "center 60%",
+      backgroundPosition: "center 46%",
       backgroundSize: "cover",
     },
-    "@media (max-width: 424px)": {
+    "@media (max-width: 560px)": {
       backgroundImage: "none",
     },
   },
   heroMobileBg: {
     display: "none",
-    "@media (max-width: 424px)": {
+    "@media (max-width: 560px)": {
       display: "block",
       position: "absolute",
       inset: 0,
