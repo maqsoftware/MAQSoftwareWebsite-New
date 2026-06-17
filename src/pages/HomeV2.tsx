@@ -139,9 +139,9 @@ interface Industry { label: string; sub?: string; to: string; icon: ReactNode; }
 const INDUSTRIES: Industry[] = [
   { label: "Retail & consumer goods", sub: "Stores, e-commerce & consumer brands", to: "/industries/retail", icon: <ShoppingBag24Regular /> },
   { label: "Financial services", sub: "Banking, insurance & capital markets", to: "/industries/financial-services", icon: <BuildingBank24Regular /> },
-  { label: "Healthcare & life sciences", sub: "Providers, payers & life sciences", to: "/industries/healthcare-life-sciences", icon: <HeartPulse24Regular /> },
-  { label: "Manufacturing", sub: "Industrial & supply chain", to: "/industries/manufacturing", icon: <Wrench24Regular /> },
   { label: "Technology", sub: "Software & digital natives", to: "/industries/technology", icon: <Laptop24Regular /> },
+  { label: "Manufacturing", sub: "Industrial & supply chain", to: "/industries/manufacturing", icon: <Wrench24Regular /> },
+  { label: "Healthcare & life sciences", sub: "Providers, payers & life sciences", to: "/industries/healthcare-life-sciences", icon: <HeartPulse24Regular /> },
   { label: "Public sector", sub: "Government & mission", to: "/industries/public-sector", icon: <BuildingGovernment24Regular /> },
 ];
 /* Per-variant color scheme for capability tiles (applied inline). */
