@@ -9,6 +9,8 @@ import {
   Database24Regular,
   LockClosed24Regular,
   ArrowTrendingLines24Regular,
+  BuildingBank24Regular,
+  ReceiptMoney24Regular,
 } from "@fluentui/react-icons";
 // import { TrustBanner } from "../components/TrustBanner";
 
@@ -146,39 +148,32 @@ const fsStats = [
 
 const fsAgents = [
   {
-    name: "Invoice Processing Agent",
-    tagline: "Close the accounts-payable cycle without manual keying",
+    name: "Loan Underwriting Agent",
+    tagline: "Automated credit decisioning",
+    icon: <BuildingBank24Regular />,
+    description:
+      "AI-powered loan underwriting platform built with Microsoft Agent Framework and Azure OpenAI. Uses a coordinated team of specialized underwriting agents to evaluate creditworthiness, verify income, assess collateral risk, enforce lending policies, calculate financial ratios, and generate final loan approval recommendations through an auditable multi-step workflow.",
+  },
+  {
+    name: "POE Scanner",
+    tagline: "Expense document automation",
+    icon: <ReceiptMoney24Regular />,
+    description:
+      "AI-powered Proof of Expense (POE) document processor that automates receipt data extraction, validation, and categorization using a multi-agent Semantic Kernel pipeline. Accepts PDF uploads, file paths, or raw receipt text — running them through a configurable sequence of DocumentProcessor, FieldExtractor, DataValidator, and ResultFormatter agents backed by FAISS vector search for intelligent vendor recognition and expense categorization.",
+  },
+  {
+    name: "Invoice PO Matching Agent",
+    tagline: "Procurement validation",
     icon: <DocumentBulletList24Regular />,
     description:
-      "Manual invoice entry slows finance operations, introduces errors, and weakens audit readiness. MAQ Software builds an agent that extracts key fields from invoice PDFs, validates them against your vendor master data, and posts results with a complete audit trail—on Azure AI Document Intelligence and Microsoft Fabric. Your AP team clears clean invoices in seconds and reviews only true exceptions, cutting processing time, duplicate payments, and overpayment leakage.",
+      "AI-powered procurement validation solution that automatically matches supplier invoices against purchase orders to identify discrepancies, assess financial risk, and generate actionable recommendations. Built using a multi-agent workflow with Microsoft Agent Framework and Azure OpenAI, with a deterministic fallback engine for offline execution.",
   },
   {
-    name: "Close Acceleration Agent",
-    tagline: "Shorten month-end close with automated reconciliation",
-    icon: <Money24Regular />,
+    name: "Expense Trend Analyzer",
+    tagline: "Spending analytics & insights",
+    icon: <ArrowTrendingLines24Regular />,
     description:
-      "Month-end close depends on repetitive, manual reconciliation across disconnected systems. MAQ Software builds an agent that compares ledgers, identifies mismatches, and generates reconciliation summaries with full lineage—on Microsoft Fabric with OneLake and Microsoft Purview, layered over Databricks Delta tables for scale. Your controllers close faster with less manual effort and hand auditors repeatable, traceable reconciliation every period.",
-  },
-  {
-    name: "Loan Underwriting Agent",
-    tagline: "Faster, defensible credit decisions without adding underwriting headcount",
-    icon: <Chat24Regular />,
-    description:
-      "Loan decisions that take days slow your lending business and frustrate applicants. MAQ Software builds an agent that ingests application data, bureau signals, and historical loan performance to assess credit risk and pre-qualify applicants before they reach a human underwriter—on Databricks with Spark-based feature pipelines and Azure ML, with explainable scorecards your compliance team can sign off on. Your lending team approves more good applicants faster, documents every decision for audit, and manages a stronger portfolio without scaling headcount.",
-  },
-  {
-    name: "Policy & Compliance Agent",
-    tagline: "Make policy and regulatory checks consistent and audit-ready",
-    icon: <ShieldCheckmark24Regular />,
-    description:
-      "Policy and compliance checks are manual, inconsistent across business units, and hard to evidence under examination. MAQ Software builds an agent that validates claims and submissions against your policy rules, flags missing evidence, and standardizes the check—on Microsoft Fabric with Purview governance and Azure OpenAI reasoning. Your risk and compliance leaders reduce violations, improve audit outcomes, and extend the same governed approach to regulatory reporting across the enterprise.",
-  },
-  {
-    name: "Fraud & Anomaly Detection Agent",
-    tagline: "Catch irregular spend and suspicious transactions in real time",
-    icon: <Search24Regular />,
-    description:
-      "Fraud and irregular spend are detected too late, and rules-based systems bury analysts in false positives. MAQ Software builds an agent that monitors expense and transaction data, flags anomalies with confidence scoring, and routes only high-confidence alerts for review—using anomaly and graph models on Snowflake and Azure ML, extensible to card, wire, and ACH monitoring for AML. Your financial-crime and finance teams cut false positives, reduce chargeback and leakage exposure, and focus investigation effort on genuine threats.",
+      "AI-powered expense analytics platform built on Microsoft Agent Framework (MAF). Uses specialized agents for financial metrics computation, spending trend analysis, anomaly detection, category breakdowns, and recommendation generation. Combines statistical analysis with Azure OpenAI-powered insights through an interactive Streamlit dashboard.",
   },
 ];
 
