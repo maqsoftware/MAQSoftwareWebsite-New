@@ -245,7 +245,7 @@ export function IndustryFinancialServices() {
       <IndustryHero
         eyebrow="Financial Services"
         h1="Deliver Smarter, Safer Financial Services with AI"
-        subhead="Massive datasets, tightening regulation, and rising fraud demand more than incremental fixes. Leading banks, insurers, and capital markets firms are deploying AI agents that underwrite credit, close the books, monitor transactions, and keep compliance audit-ready—all on a governed data foundation. At MAQ Software, we build and deploy those agents on Microsoft Fabric, Snowflake, and Databricks—so your institution acts on decisions in hours, not days. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, we bring the partnerships, the platform expertise, and the production-grade delivery your finance transformation requires."
+        subhead="Massive datasets, tightening regulation, and rising fraud demand more than incremental fixes. Leading banks, insurers, and capital markets firms are deploying AI agents that underwrite credit, close the books, monitor transactions, and keep compliance audit-ready with all on a governed data foundation. At MAQ Software, we build and deploy those agents on Microsoft Fabric, Snowflake, and Databricks so your institution acts on decisions in hours, not days. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, we bring the partnerships, the platform expertise, and the production-grade delivery your finance transformation requires."
         mailSubject="Financial Services - MAQ Software"
         visual={<FinancialHeroVisual />}
       />
