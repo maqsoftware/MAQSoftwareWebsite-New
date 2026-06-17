@@ -76,12 +76,12 @@ const industries: Industry[] = [
     path: "/industries/financial-services",
   },
   {
-    icon: <Heart24Regular />,
-    name: "Healthcare & life sciences",
-    heading: "Providers, payers & life sciences",
+    icon: <Laptop24Regular />,
+    name: "Technology",
+    heading: "Software & digital natives",
     tagline:
-      "Healthcare and life sciences organizations face mounting pressure to improve outcomes, accelerate research, and modernize fragmented data estates — all while honoring HIPAA, 21 CFR Part 11, and other regulatory commitments. At MAQ Software, we help providers, payers, and life-sciences firms embed AI across the care continuum and the research lifecycle — from grounded clinical Copilots and care-coordination agents to population-health analytics and trial-data unification. Built on Microsoft Fabric, Databricks, and Snowflake, our solutions turn sensitive health data into safer decisions and faster discovery.",
-    path: "/industries/healthcare-life-sciences",
+      "AI is reshaping how technology organizations build, test, and ship software. At MAQ Software, we help ISVs, cloud-native teams, and enterprise software organizations embed intelligence across the SDLC — from agentic code review to embedded analytics — so engineering teams spend less time on rework and more time on innovation.",
+    path: "/industries/technology",
   },
   {
     icon: <BuildingFactory24Regular />,
@@ -92,12 +92,12 @@ const industries: Industry[] = [
     path: "/industries/manufacturing",
   },
   {
-    icon: <Laptop24Regular />,
-    name: "Technology",
-    heading: "Software & digital natives",
+    icon: <Heart24Regular />,
+    name: "Healthcare & life sciences",
+    heading: "Providers, payers & life sciences",
     tagline:
-      "AI is reshaping how technology organizations build, test, and ship software. At MAQ Software, we help ISVs, cloud-native teams, and enterprise software organizations embed intelligence across the SDLC — from agentic code review to embedded analytics — so engineering teams spend less time on rework and more time on innovation.",
-    path: "/industries/technology",
+      "Healthcare and life sciences organizations face mounting pressure to improve outcomes, accelerate research, and modernize fragmented data estates — all while honoring HIPAA, 21 CFR Part 11, and other regulatory commitments. At MAQ Software, we help providers, payers, and life-sciences firms embed AI across the care continuum and the research lifecycle — from grounded clinical Copilots and care-coordination agents to population-health analytics and trial-data unification. Built on Microsoft Fabric, Databricks, and Snowflake, our solutions turn sensitive health data into safer decisions and faster discovery.",
+    path: "/industries/healthcare-life-sciences",
   },
   {
     icon: <BuildingGovernment24Regular />,

@@ -219,9 +219,9 @@ interface NavItem {
 const industries: NavItem[] = [
   { label: "Retail & consumer goods", href: "/industries/retail" },
   { label: "Financial services", href: "/industries/financial-services" },
-  { label: "Healthcare & life sciences", href: "/industries/healthcare-life-sciences" },
-  { label: "Manufacturing", href: "/industries/manufacturing" },
   { label: "Technology", href: "/industries/technology" },
+    { label: "Manufacturing", href: "/industries/manufacturing" },
+    { label: "Healthcare & life sciences", href: "/industries/healthcare-life-sciences" },
   { label: "Public sector", href: "/industries/public-sector" },
 ];
 
