@@ -243,6 +243,7 @@ export function PartnershipSnowflake() {
         bulletGroups={dataValidatorBullets}
         ctaLabel="Learn more"
         ctaHref="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
+        ctaOpenInNewTab
       />
     </>
   );
