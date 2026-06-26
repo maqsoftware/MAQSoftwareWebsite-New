@@ -6,9 +6,11 @@ import { useContactAction } from "../../lib/contact";
 import { SecondaryButton } from "../buttons";
 import {
   CloudArrowUp24Regular,
-  ShieldLock24Regular,
   Cube24Regular,
   Server24Regular,
+  ArrowSwap24Regular,
+  CurrencyDollarEuro24Regular,
+  Code24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
 
@@ -146,36 +148,52 @@ interface Capability {
 
 const capabilities: Capability[] = [
   {
-    name: "Migration & modernization",
-    tagline: "Transform with cloud migration",
+    name: "Microsoft Azure",
+    tagline: "Secure and scalable cloud infrastructure",
     icon: <CloudArrowUp24Regular />,
     description:
-      "Migrate your workloads to the cloud with ease. We handle every step, from planning to execution, ensuring your systems are modernized and optimized for the cloud environment. End-to-end cloud migration with minimal downtime and risk.",
-    tags: ["Azure Migration", "Workload optimization", "Data modernization", "Zero-downtime"],
+      "Modernize enterprise infrastructure by leveraging Azure cloud services for scalable, secure, and resilient application deployment.",
+    tags: ["Microsoft Azure", "Cloud Infrastructure", "Scalability"],
   },
   {
-    name: "Cloud security",
-    tagline: "Protect at every layer",
-    icon: <ShieldLock24Regular />,
-    description:
-      "Ensure robust cloud security with defense-in-depth strategies covering identity, network, data, and compliance. We help you implement security controls, manage access policies, and meet regulatory requirements across your cloud environment.",
-    tags: ["IAM", "Network security", "Data encryption", "Compliance"],
-  },
-  {
-    name: "Cloud native applications",
-    tagline: "Build apps for the cloud",
+    name: "Azure Kubernetes Service (AKS)",
+    tagline: "Kubernetes simplified for the enterprise",
     icon: <Cube24Regular />,
     description:
-      "Design and deploy cloud-native applications using containerization, microservices, and serverless architectures. We help you build scalable, resilient applications that leverage the full potential of cloud infrastructure.",
-    tags: ["Kubernetes", "Docker", "Microservices", "Serverless"],
+      "Deploy and manage containerized applications using Kubernetes with enterprise-grade scalability, security, and operational efficiency.",
+    tags: ["AKS", "Kubernetes", "Containerization"],
   },
   {
-    name: "Infrastructure services",
-    tagline: "Manage cloud operations",
-    icon: <Server24Regular />,
+    name: "Cloud-Native Application Development",
+    tagline: "Modern applications built for the cloud",
+    icon: <Code24Regular />,
     description:
-      "Optimize your cloud infrastructure with cost management, performance tuning, and operational best practices. We design and manage cloud platforms that scale with your business while controlling costs and ensuring high availability.",
-    tags: ["IaC", "Cost optimization", "Performance", "HA/DR"],
+      "Develop modern cloud-native applications using microservices, containers, APIs, and DevOps best practices.",
+    tags: ["Microservices", "Containers", "APIs", "DevOps"],
+  },
+  {
+    name: "Application & Data Platform Migration",
+    tagline: "Seamless migration to modern platforms",
+    icon: <ArrowSwap24Regular />,
+    description:
+      "Migrate enterprise applications and data platforms to the cloud with minimal disruption while improving performance and scalability.",
+    tags: ["Application Migration", "Data Migration", "Modern Platforms"],
+  },
+  {
+    name: "Infrastructure Modernization",
+    tagline: "Future-ready enterprise infrastructure",
+    icon: <CloudArrowUp24Regular />,
+    description:
+      "Transform legacy infrastructure into secure, scalable, cloud-first environments optimized for modern workloads.",
+    tags: ["Infrastructure Modernization", "Cloud-First", "Legacy Transformation"],
+  },
+  {
+    name: "FinOps & Cloud Cost Optimization",
+    tagline: "Maximize cloud value and efficiency",
+    icon: <CurrencyDollarEuro24Regular />,
+    description:
+      "Optimize cloud investments through governance, cost monitoring, resource optimization, and financial accountability.",
+    tags: ["FinOps", "Cost Optimization", "Cloud Governance"],
   },
 ];
 
