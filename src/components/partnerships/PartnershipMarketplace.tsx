@@ -70,6 +70,7 @@ export interface PartnershipMarketplaceProps {
   bulletGroups: BulletGroup[];
   ctaLabel: string;
   ctaHref: string;
+  ctaOpenInNewTab?: boolean;
 }
 
 export function PartnershipMarketplace({
@@ -80,6 +81,7 @@ export function PartnershipMarketplace({
   bulletGroups,
   ctaLabel,
   ctaHref,
+  ctaOpenInNewTab = false,
 }: PartnershipMarketplaceProps) {
   const s = useStyles();
   return (
@@ -106,7 +108,8 @@ export function PartnershipMarketplace({
             size="large"
             className="maq-equal-cta"
             href={ctaHref}
-            rel="noopener noreferrer"
+            target={ctaOpenInNewTab ? "_blank" : undefined}
+            rel={ctaOpenInNewTab ? "noopener noreferrer" : undefined}
           >
             {ctaLabel}
           </SecondaryButton>

@@ -189,13 +189,6 @@ const technologyCases = [
       "Adopt GitHub Copilot at scale to lift dev productivity and quality.",
     href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
   },
-  {
-    tag: "AI scaling",
-    title: "Scaling AI for every customer and every developer with MAQ Software",
-    teaser:
-      "A reference architecture and delivery model for scaling agentic AI and Copilot adoption to every developer in the enterprise.",
-    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
-  },
 ];
 
 export function IndustryTechnology() {
