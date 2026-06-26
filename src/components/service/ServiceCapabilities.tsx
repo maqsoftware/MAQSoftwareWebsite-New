@@ -9,6 +9,8 @@ import {
   ChartMultiple24Regular,
   Sparkle24Regular,
   BranchFork24Regular,
+  AppFolder24Regular,
+  ShieldCheckmark24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
 
@@ -164,43 +166,59 @@ interface CapabilityInternal {
 
 const defaultCapabilities: CapabilityInternal[] = [
   {
-    name: "Foundry agents",
-    tagline: "Production agents on Microsoft Foundry",
+    name: "Azure AI Foundry",
+    tagline: "Production AI on Azure Foundry",
     icon: <Bot24Regular />,
     description:
-      "Design, build, and operate GenAI agents on Microsoft Foundry and the Microsoft Agent Framework. Multi-agent orchestration with grounded RAG, plugin actions, full observability, governance, and human-in-the-loop controls — ready for production on day one.",
-    tags: ["Microsoft Foundry", "Agent Framework", "Multi-agent", "RAG"],
+      "Design, build, and manage production-ready AI applications and intelligent agents using Azure AI Foundry with enterprise governance and scalability.",
+    tags: ["Azure AI Foundry", "Production AI", "Governance"],
   },
   {
-    name: "Advanced analytics",
-    tagline: "Decisions backed by predictive models",
-    icon: <ChartMultiple24Regular />,
-    description:
-      "Move from descriptive dashboards to predictive and prescriptive insight. We design feature stores, forecasting models, and recommendation engines tuned to your data and operating reality.",
-    tags: ["Forecasting", "Recommendation", "Feature stores", "Azure ML"],
-  },
-  {
-    name: "Intelligent automation",
-    tagline: "Automate the busywork, not the judgment",
+    name: "Azure OpenAI Service",
+    tagline: "Enterprise generative AI applications",
     icon: <Sparkle24Regular />,
     description:
-      "Embed AI inside the workflows your teams already live in — Power Platform, Microsoft 365 Copilot, custom apps — so repetitive work disappears and people focus on decisions.",
-    tags: ["Copilot Studio", "Power Automate", "M365 Copilot", "Custom agents"],
+      "Develop secure generative AI applications powered by OpenAI models with enterprise-grade security, compliance, and Azure integration.",
+    tags: ["Azure OpenAI", "Generative AI", "Enterprise Security"],
   },
   {
-    name: "AgentOps & evaluation",
-    tagline: "Production-grade agent lifecycle",
+    name: "Microsoft Copilot Studio",
+    tagline: "Custom copilots for business workflows",
+    icon: <AppFolder24Regular />,
+    description:
+      "Create custom copilots and AI assistants that automate business processes and deliver conversational experiences across enterprise applications.",
+    tags: ["Copilot Studio", "Custom Copilots", "Workflow Automation"],
+  },
+  {
+    name: "Agentic AI & Multi-Agent Systems",
+    tagline: "Autonomous agents for complex workflows",
     icon: <BranchFork24Regular />,
     description:
-      "End-to-end AgentOps so agents stay accurate, safe, and cost-controlled in production — CI/CD, drift detection, Foundry continuous evaluation, and responsible AI guardrails wired into every release.",
-    tags: ["Foundry evals", "Continuous Evaluation", "AgentOps", "Responsible AI"],
+      "Build autonomous AI systems that coordinate specialized agents to execute complex workflows, make decisions, and accomplish business objectives.",
+    tags: ["Agentic AI", "Multi-Agent", "Autonomous Workflows"],
+  },
+  {
+    name: "Retrieval-Augmented Generation (RAG)",
+    tagline: "Grounded AI with enterprise knowledge",
+    icon: <ChartMultiple24Regular />,
+    description:
+      "Enhance AI responses by grounding large language models with enterprise knowledge using secure retrieval from structured and unstructured data.",
+    tags: ["RAG", "Knowledge Grounding", "LLM"],
+  },
+  {
+    name: "AI Governance & Responsible AI",
+    tagline: "Trusted, secure, and compliant AI",
+    icon: <ShieldCheckmark24Regular />,
+    description:
+      "Implement governance frameworks that ensure AI systems remain secure, compliant, transparent, explainable, and aligned with responsible AI principles.",
+    tags: ["Responsible AI", "AI Governance", "Compliance"],
   },
 ];
 
 export function ServiceCapabilities({
   sectionId = "ai-capabilities",
   title = "Our agentic AI capabilities",
-  subhead = "Four capability pillars that turn Microsoft Foundry and the Agent Framework into governed, production-grade business automation.",
+  subhead = "Capabilities that help you design, deploy, and govern enterprise AI systems at scale.",
   capabilities = defaultCapabilities,
   footerLabel = "See agentic AI case studies",
   footerHref = "/insights/case-studies?filter=Agentic%20AI%20%26%20Machine%20Learning#insights-content",
