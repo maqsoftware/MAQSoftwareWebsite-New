@@ -26,6 +26,9 @@ const useStyles = makeStyles({
       border: "0.5px solid rgba(186, 20, 26, 0.5)",
     },
   },
+  centeredCard: {
+    alignItems: "center",
+  },
   chip: {
     alignSelf: "flex-start",
     fontSize: "10px",
@@ -45,6 +48,9 @@ const useStyles = makeStyles({
     lineHeight: 1.1,
     marginBottom: "8px",
     letterSpacing: "-0.02em",
+  },
+  centeredMetric: {
+    textAlign: "center",
   },
   title: {
     fontSize: "15px",
@@ -103,12 +109,12 @@ export function StatCard({
 }: StatCardProps) {
   const s = useStyles();
   const showLink = Boolean(href && sourceLabel);
-  const rootClass = `${s.card}${showLink ? ` ${s.clickable}` : ` ${s.nonInteractive}`}${className ? ` ${className}` : ""}`;
+  const rootClass = `${s.card}${showLink ? ` ${s.clickable}` : ` ${s.nonInteractive}`}${centerAlign ? ` ${s.centeredCard}` : ""}${className ? ` ${className}` : ""}`;
 
   const content = (
     <>
       {chip ? <span className={s.chip}>{chip}</span> : null}
-      {metric ? <div className={s.metric}>{metric}</div> : null}
+      {metric ? <div className={`${s.metric}${centerAlign ? ` ${s.centeredMetric}` : ""}`}>{metric}</div> : null}
       {title ? <div className={s.title}>{title}</div> : null}
       <div className={centerAlign ? s.centeredLabel : s.label}>{label}</div>
       {showLink ? (
