@@ -16,6 +16,17 @@ const useStyles = makeStyles({
   relative: { position: "relative" },
   center: { textAlign: "center" },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
+  heading: {
+    margin: "0 0 24px",
+    textAlign: "center",
+  },
+  headingLeft: {
+    textAlign: "left",
+  },
+  cardGrid: {
+    display: "grid",
+    gap: "24px",
+  },
 });
 
 export type SectionTone = "default" | "gray";
@@ -62,4 +73,51 @@ export function Section({
 export function Container({ className, children }: { className?: string; children: ReactNode }) {
   const s = useStyles();
   return <div className={mergeClasses(s.inner, className)}>{children}</div>;
+}
+
+export function SectionHeading({
+  title,
+  align = "center",
+  className,
+}: {
+  title: string;
+  align?: "center" | "left";
+  className?: string;
+}) {
+  const s = useStyles();
+  return (
+    <h2 className={mergeClasses("maq-h2", s.heading, align === "left" && s.headingLeft, className)}>
+      {title}
+    </h2>
+  );
+}
+
+export function CardGrid({
+  columns,
+  minRowHeight,
+  className,
+  style,
+  children,
+}: {
+  columns?: number;
+  minRowHeight?: string;
+  className?: string;
+  style?: CSSProperties;
+  children: ReactNode;
+}) {
+  const s = useStyles();
+  return (
+    <div
+      className={mergeClasses(s.cardGrid, className)}
+      style={{
+        gridTemplateColumns: columns
+          ? `repeat(${columns}, minmax(0, 1fr))`
+          : "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+        gridAutoRows: minRowHeight ? `minmax(${minRowHeight}, auto)` : undefined,
+        ...style,
+      }}
+    >
+      {children}
+    </div>
+  );
 }
