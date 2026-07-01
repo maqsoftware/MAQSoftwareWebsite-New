@@ -100,6 +100,69 @@ function SiteFooter() {
 
 export function App() {
   const s = useStyles();
+
+  // Warm key route chunks after initial paint so first navigation feels instant.
+  useEffect(() => {
+    const prefetchKeyRoutes = () => {
+      void import("./pages/IndustryRetail");
+      void import("./pages/IndustryFinancialServices");
+      void import("./pages/IndustryHealthcareLifeSciences");
+      void import("./pages/IndustryTechnology");
+      void import("./pages/IndustryManufacturing");
+      void import("./pages/IndustryPublicSector");
+
+      void import("./pages/ServiceDataAndAnalytics");
+      void import("./pages/ServiceAgenticAI");
+      void import("./pages/ServiceReportingBI");
+      void import("./pages/ServiceBusinessApps");
+      void import("./pages/ServiceCloud");
+      void import("./pages/ServiceSecurityCompliance");
+
+      void import("./pages/ProductFabricAdminAgent");
+      void import("./pages/ProductAIDataLens");
+      void import("./pages/ProductEmbedFAST");
+      void import("./pages/ProductCertyFAST");
+      void import("./pages/ProductLoadFAST");
+      void import("./pages/ProductMigrateFAST");
+
+      void import("./pages/InsightsCaseStudies");
+      void import("./pages/InsightsBestPracticeGuides");
+      void import("./pages/InsightsPowerBICustomVisualGuide");
+
+      void import("./pages/PartnershipMicrosoft");
+      void import("./pages/PartnershipSnowflake");
+      void import("./pages/PartnershipDatabricks");
+
+      void import("./pages/AboutWhoWeAre");
+      void import("./pages/AboutCareers");
+      void import("./pages/AboutSustainability");
+      void import("./pages/Contact");
+    };
+
+    let timeoutId: number | undefined;
+    let idleId: number | undefined;
+
+    const ric = (window as Window & {
+      requestIdleCallback?: (callback: () => void, options?: { timeout: number }) => number;
+      cancelIdleCallback?: (handle: number) => void;
+    }).requestIdleCallback;
+
+    if (ric) {
+      idleId = ric(prefetchKeyRoutes, { timeout: 2000 });
+    } else {
+      timeoutId = window.setTimeout(prefetchKeyRoutes, 1200);
+    }
+
+    return () => {
+      if (timeoutId !== undefined) {
+        window.clearTimeout(timeoutId);
+      }
+      if (idleId !== undefined) {
+        (window as Window & { cancelIdleCallback?: (handle: number) => void }).cancelIdleCallback?.(idleId);
+      }
+    };
+  }, []);
+
   // Ensure SPA responds immediately when the viewport changes (device toolbar or resize).
   // Some browsers/devtools don't always force a repaint that re-applies CSS-in-JS styles
   // or media-query-dependent layout; keeping a body class in sync with matchMedia
