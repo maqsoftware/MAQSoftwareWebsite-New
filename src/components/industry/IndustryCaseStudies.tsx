@@ -29,12 +29,9 @@ const useStyles = makeStyles({
     gap: "16px",
   },
   gridUniform: {
-    width: "100%",
-    maxWidth: "824px",
-    margin: "0 auto",
-    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     "@media (max-width: 960px)": {
-      maxWidth: "100%",
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
     },
     "@media (max-width: 640px)": {
       gridTemplateColumns: "1fr",
