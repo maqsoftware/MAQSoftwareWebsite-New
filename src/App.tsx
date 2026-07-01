@@ -83,10 +83,10 @@ function ScrollToTop() {
   return null;
 }
 
-// Picks the header/footer per route: the bento exploration (/homev3) uses the
-// new HeaderV2 + light footer; every other route keeps the standard Header +
-// navy footer.
-const isExplorationRoute = (pathname: string) => pathname === "/homev3";
+// Picks the header/footer per route: the bento exploration (/ and /homev3)
+// uses the new HeaderV2 + light footer; every other route keeps the standard
+// Header + navy footer.
+const isExplorationRoute = (pathname: string) => pathname === "/" || pathname === "/homev3";
 
 function SiteHeader() {
   const { pathname } = useLocation();
@@ -170,7 +170,7 @@ export function App() {
       <SiteHeader />
       {/* <AnnouncementRibbon /> */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomeV3 />} />
         <Route path="/homev3" element={<HomeV3 />} />
         <Route path="/industries/retail" element={<IndustryRetail />} />
         <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
