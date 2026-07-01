@@ -17,6 +17,8 @@ import {
 } from "@fluentui/react-icons";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { products } from "../data/products";
+import { PrimaryButton } from "./buttonsV2";
+import { useContactAction } from "../lib/contact";
 
 /* ==================================================================
    HeaderV2 — top-nav variant for the bento homepage exploration.
@@ -46,6 +48,23 @@ const useStyles = makeStyles({
     "--maq-ink": tokens.colorNeutralForeground1,
     "--maq-border": tokens.colorNeutralStroke2,
   },
+  // Inner row — keeps the bar full-bleed but aligns content to the page width (matches HomeV5's 1600px).
+  navInner: {
+    display: "flex",
+    alignItems: "center",
+    gap: "32px",
+    width: "100%",
+    maxWidth: "var(--maq-container-wide)",
+    margin: "0 auto",
+  },
+  // Right-aligned Contact us CTA (hidden on mobile via the global .header-right hook).
+  navCta: { flexShrink: 0, display: "flex", alignItems: "center" },
+  // Brand-red CTA.
+  navCtaBtn: {
+    backgroundColor: "var(--maq-red)", color: "#fff", border: "1px solid var(--maq-red)",
+    ":hover": { backgroundColor: "var(--maq-red-dark)", color: "#fff", border: "1px solid var(--maq-red-dark)" },
+    ":hover:active": { backgroundColor: "var(--maq-red-dark)", color: "#fff", border: "1px solid var(--maq-red-dark)" },
+  },
   navToggle: {
     display: "none",
     background: "transparent",
@@ -63,7 +82,7 @@ const useStyles = makeStyles({
     textDecoration: "none",
   },
   brandLogo: {
-    height: "22px",
+    height: "20px",
     width: "auto",
     display: "block",
     flexShrink: 0,
@@ -76,7 +95,7 @@ const useStyles = makeStyles({
     marginLeft: "16px",
   },
   link: {
-    fontSize: "14px",
+    fontSize: "0.9375rem",
     color: "var(--maq-ink)",
   },
   right: {
@@ -86,6 +105,7 @@ const useStyles = makeStyles({
   },
   navBtn: {
     color: "var(--maq-ink)",
+    fontSize: "0.9375rem",
     fontWeight: 500,
     whiteSpace: "nowrap",
     minWidth: "auto",
@@ -442,6 +462,7 @@ function MobileSection({
 
 export function HeaderV2() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   const [open, setOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
   const toggleRef = useRef<HTMLButtonElement | null>(null);
@@ -533,30 +554,36 @@ export function HeaderV2() {
 
   return (
     <nav className={`${s.nav} site-header`}>
-      <Link to="/" className={s.brand} aria-label="MAQ Software homepage">
-        <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
-      </Link>
+      <div className={s.navInner}>
+        <Link to="/" className={s.brand} aria-label="MAQ Software homepage">
+          <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.brandLogo} />
+        </Link>
 
-      <button
-        ref={(el) => (toggleRef.current = el)}
-        className={`${s.navToggle} nav-toggle`}
-        aria-controls="mobile-nav"
-        aria-expanded={open}
-        aria-label={open ? "Close navigation" : "Open navigation"}
-        onClick={() => (open ? closeMenu() : openMenu())}
-      >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
-          <path d="M3 6h18M3 12h18M3 18h18" stroke="#333" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      </button>
+        <button
+          ref={(el) => (toggleRef.current = el)}
+          className={`${s.navToggle} nav-toggle`}
+          aria-controls="mobile-nav"
+          aria-expanded={open}
+          aria-label={open ? "Close navigation" : "Open navigation"}
+          onClick={() => (open ? closeMenu() : openMenu())}
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="#333" strokeWidth="2" strokeLinecap="round" />
+          </svg>
+        </button>
 
-      <div className={`${s.links} site-nav-links`}>
-        <MegaMenu label="Services" items={services} btnClass={s.navBtn} />
-        <MegaMenu label="Products" items={productNav} btnClass={s.navBtn} />
-        <MegaMenu label="Industries" items={industries} btnClass={s.navBtn} />
-        <MegaMenu label="Partnerships" items={partnerships} btnClass={s.navBtn} />
-        <MegaMenu label="Insights" items={insights} btnClass={s.navBtn} />
-        <MegaMenu label="About" items={about} btnClass={s.navBtn} />
+        <div className={`${s.links} site-nav-links`}>
+          <MegaMenu label="Services" items={services} btnClass={s.navBtn} />
+          <MegaMenu label="Products" items={productNav} btnClass={s.navBtn} />
+          <MegaMenu label="Industries" items={industries} btnClass={s.navBtn} />
+          <MegaMenu label="Partnerships" items={partnerships} btnClass={s.navBtn} />
+          <MegaMenu label="Insights" items={insights} btnClass={s.navBtn} />
+          <MegaMenu label="About" items={about} btnClass={s.navBtn} />
+        </div>
+
+        <div className={`${s.navCta} header-right`}>
+          <PrimaryButton className={s.navCtaBtn} onClick={() => handleContactClick()}>Contact us</PrimaryButton>
+        </div>
       </div>
 
       {/* Mobile overlay rendered as a portal to avoid clipping by ancestor styles */}

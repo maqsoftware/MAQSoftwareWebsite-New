@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, type ComponentType } from "react";
+import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 // import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
@@ -8,147 +8,65 @@ import { Footer } from "./components/Footer";
 import { FooterV2 } from "./components/FooterV2";
 import { CTA } from "./components/CTA";
 import { Home } from "./pages/Home";
-
-const lazyNamed = (loader: () => Promise<Record<string, ComponentType<any>>>, exportName: string) =>
-  lazy(async () => {
-    const module = await loader();
-    return { default: module[exportName] as ComponentType<any> };
-  });
-
-const HomeV2 = lazyNamed(() => import("./pages/HomeV2"), "HomeV2");
-const IndustryRetail = lazyNamed(() => import("./pages/IndustryRetail"), "IndustryRetail");
-const IndustryFinancialServices = lazyNamed(
-  () => import("./pages/IndustryFinancialServices"),
-  "IndustryFinancialServices"
-);
-const IndustryHealthcareLifeSciences = lazyNamed(
-  () => import("./pages/IndustryHealthcareLifeSciences"),
-  "IndustryHealthcareLifeSciences"
-);
-const IndustryTechnology = lazyNamed(() => import("./pages/IndustryTechnology"), "IndustryTechnology");
-const IndustryPublicSector = lazyNamed(() => import("./pages/IndustryPublicSector"), "IndustryPublicSector");
-const IndustryManufacturing = lazyNamed(() => import("./pages/IndustryManufacturing"), "IndustryManufacturing");
-const ProductsHome = lazyNamed(() => import("./pages/ProductsHome"), "ProductsHome");
-const ProductDetail = lazyNamed(() => import("./pages/ProductDetail"), "ProductDetail");
-const ProductFabricAdminAgent = lazyNamed(
-  () => import("./pages/ProductFabricAdminAgent"),
-  "ProductFabricAdminAgent"
-);
-const ProductAIDataLens = lazyNamed(() => import("./pages/ProductAIDataLens"), "ProductAIDataLens");
-const ProductEmbedFAST = lazyNamed(() => import("./pages/ProductEmbedFAST"), "ProductEmbedFAST");
-const ProductCertyFAST = lazyNamed(() => import("./pages/ProductCertyFAST"), "ProductCertyFAST");
-const ProductLoadFAST = lazyNamed(() => import("./pages/ProductLoadFAST"), "ProductLoadFAST");
-const ProductMigrateFAST = lazyNamed(() => import("./pages/ProductMigrateFAST"), "ProductMigrateFAST");
-const ComponentLab = lazyNamed(() => import("./pages/ComponentLab"), "ComponentLab");
-const ServiceAgenticAI = lazyNamed(() => import("./pages/ServiceAgenticAI"), "ServiceAgenticAI");
-const ServiceCloud = lazyNamed(() => import("./pages/ServiceCloud"), "ServiceCloud");
-const ServiceReportingBI = lazyNamed(() => import("./pages/ServiceReportingBI"), "ServiceReportingBI");
-const ServiceBusinessApps = lazyNamed(() => import("./pages/ServiceBusinessApps"), "ServiceBusinessApps");
-const ServiceSecurityCompliance = lazyNamed(
-  () => import("./pages/ServiceSecurityCompliance"),
-  "ServiceSecurityCompliance"
-);
-const ServiceDataAndAnalytics = lazyNamed(
-  () => import("./pages/ServiceDataAndAnalytics"),
-  "ServiceDataAndAnalytics"
-);
-const ServiceWorkplaceTransformation = lazyNamed(
-  () => import("./pages/ServiceWorkplaceTransformation"),
-  "ServiceWorkplaceTransformation"
-);
-const PartnershipSnowflake = lazyNamed(() => import("./pages/PartnershipSnowflake"), "PartnershipSnowflake");
-const PartnershipDatabricks = lazyNamed(() => import("./pages/PartnershipDatabricks"), "PartnershipDatabricks");
-const InsightsCaseStudies = lazyNamed(() => import("./pages/InsightsCaseStudies"), "InsightsCaseStudies");
-const InsightsConsultingOffers = lazyNamed(
-  () => import("./pages/InsightsConsultingOffers"),
-  "InsightsConsultingOffers"
-);
-const InsightsPowerBICustomVisualGuide = lazyNamed(
-  () => import("./pages/InsightsPowerBICustomVisualGuide"),
-  "InsightsPowerBICustomVisualGuide"
-);
-const InsightsCustomVisualDetail = lazyNamed(
-  () => import("./pages/InsightsCustomVisualDetail"),
-  "InsightsCustomVisualDetail"
-);
-const InsightsVisualChooser = lazyNamed(() => import("./pages/InsightsVisualChooser"), "InsightsVisualChooser");
-const InsightsBestPracticeGuides = lazyNamed(
-  () => import("./pages/InsightsBestPracticeGuides"),
-  "InsightsBestPracticeGuides"
-);
-const InsightsDatabricksBestPractices = lazyNamed(
-  () => import("./pages/InsightsDatabricksBestPractices"),
-  "InsightsDatabricksBestPractices"
-);
-const InsightsAzureDatabricksBestPractices = lazyNamed(
-  () => import("./pages/InsightsAzureDatabricksBestPractices"),
-  "InsightsAzureDatabricksBestPractices"
-);
-const InsightsGitHubCopilotBestPractices = lazyNamed(
-  () => import("./pages/InsightsGitHubCopilotBestPractices"),
-  "InsightsGitHubCopilotBestPractices"
-);
-const InsightsPowerBICopilotBestPractices = lazyNamed(
-  () => import("./pages/InsightsPowerBICopilotBestPractices"),
-  "InsightsPowerBICopilotBestPractices"
-);
-const InsightsPowerBIBestPractices = lazyNamed(
-  () => import("./pages/InsightsPowerBIBestPractices"),
-  "InsightsPowerBIBestPractices"
-);
-const InsightsSnowflakePowerBIBestPractices = lazyNamed(
-  () => import("./pages/InsightsSnowflakePowerBIBestPractices"),
-  "InsightsSnowflakePowerBIBestPractices"
-);
-const InsightsKnowledgeBotBestPractices = lazyNamed(
-  () => import("./pages/InsightsKnowledgeBotBestPractices"),
-  "InsightsKnowledgeBotBestPractices"
-);
-const InsightsDAXBestPractices = lazyNamed(() => import("./pages/InsightsDAXBestPractices"), "InsightsDAXBestPractices");
-const InsightsAzureDevOpsBestPractices = lazyNamed(
-  () => import("./pages/InsightsAzureDevOpsBestPractices"),
-  "InsightsAzureDevOpsBestPractices"
-);
-const InsightsAzureArchitectureBestPractices = lazyNamed(
-  () => import("./pages/InsightsAzureArchitectureBestPractices"),
-  "InsightsAzureArchitectureBestPractices"
-);
-const InsightsAzureSecurityBestPractices = lazyNamed(
-  () => import("./pages/InsightsAzureSecurityBestPractices"),
-  "InsightsAzureSecurityBestPractices"
-);
-const InsightsDataValidationBestPractices = lazyNamed(
-  () => import("./pages/InsightsDataValidationBestPractices"),
-  "InsightsDataValidationBestPractices"
-);
-const InsightsDynamics365DevelopmentBestPractices = lazyNamed(
-  () => import("./pages/InsightsDynamics365DevelopmentBestPractices"),
-  "InsightsDynamics365DevelopmentBestPractices"
-);
-const InsightsDynamics365DeploymentBestPractices = lazyNamed(
-  () => import("./pages/InsightsDynamics365DeploymentBestPractices"),
-  "InsightsDynamics365DeploymentBestPractices"
-);
-const InsightsPowerAppsBestPractices = lazyNamed(
-  () => import("./pages/InsightsPowerAppsBestPractices"),
-  "InsightsPowerAppsBestPractices"
-);
-const InsightsDataverseSecurityBestPractices = lazyNamed(
-  () => import("./pages/InsightsDataverseSecurityBestPractices"),
-  "InsightsDataverseSecurityBestPractices"
-);
-const PartnershipMicrosoft = lazyNamed(() => import("./pages/PartnershipMicrosoft"), "PartnershipMicrosoft");
-const AboutWhoWeAre = lazyNamed(() => import("./pages/AboutWhoWeAre"), "AboutWhoWeAre");
-const AboutSustainability = lazyNamed(() => import("./pages/AboutSustainability"), "AboutSustainability");
-const AboutEvents = lazyNamed(() => import("./pages/AboutEvents"), "AboutEvents");
-const AboutCareers = lazyNamed(() => import("./pages/AboutCareers"), "AboutCareers");
-const AboutPrivacyStatement = lazyNamed(() => import("./pages/AboutPrivacyStatement"), "AboutPrivacyStatement");
-const Contact = lazyNamed(() => import("./pages/Contact"), "Contact");
-const TermsOfService = lazyNamed(() => import("./pages/TermsOfService"), "TermsOfService");
-const TechCon365 = lazyNamed(() => import("./pages/TechCon365"), "TechCon365");
-const TechCon365Dallas = lazyNamed(() => import("./pages/TechCon365Dallas"), "TechCon365Dallas");
-const TechCon365Seattle = lazyNamed(() => import("./pages/TechCon365Seattle"), "TechCon365Seattle");
-const FabCon2027 = lazyNamed(() => import("./pages/FabCon2027"), "FabCon2027");
+import { HomeV3 } from "./pages/HomeV3";
+import { IndustryRetail } from "./pages/IndustryRetail";
+import { IndustryFinancialServices } from "./pages/IndustryFinancialServices";
+import { IndustryHealthcareLifeSciences } from "./pages/IndustryHealthcareLifeSciences";
+import { IndustryTechnology } from "./pages/IndustryTechnology";
+import { IndustryPublicSector } from "./pages/IndustryPublicSector";
+import { IndustryManufacturing } from "./pages/IndustryManufacturing";
+import { ProductsHome } from "./pages/ProductsHome";
+import { ProductDetail } from "./pages/ProductDetail";
+import { ProductFabricAdminAgent } from "./pages/ProductFabricAdminAgent";
+import { ProductAIDataLens } from "./pages/ProductAIDataLens";
+import { ProductEmbedFAST } from "./pages/ProductEmbedFAST";
+import { ProductCertyFAST } from "./pages/ProductCertyFAST";
+import { ProductLoadFAST } from "./pages/ProductLoadFAST";
+import { ProductMigrateFAST } from "./pages/ProductMigrateFAST";
+import { ComponentLab } from "./pages/ComponentLab";
+import { ServiceAgenticAI } from "./pages/ServiceAgenticAI";
+import { ServiceCloud } from "./pages/ServiceCloud";
+import { ServiceReportingBI } from "./pages/ServiceReportingBI";
+import { ServiceBusinessApps } from "./pages/ServiceBusinessApps";
+import { ServiceSecurityCompliance } from "./pages/ServiceSecurityCompliance";
+import { ServiceDataAndAnalytics } from "./pages/ServiceDataAndAnalytics";
+import { ServiceWorkplaceTransformation } from "./pages/ServiceWorkplaceTransformation";
+import { PartnershipSnowflake } from "./pages/PartnershipSnowflake";
+import { PartnershipDatabricks } from "./pages/PartnershipDatabricks";
+import { InsightsCaseStudies } from "./pages/InsightsCaseStudies";
+import { InsightsConsultingOffers } from "./pages/InsightsConsultingOffers";
+import { InsightsPowerBICustomVisualGuide } from "./pages/InsightsPowerBICustomVisualGuide";
+import { InsightsCustomVisualDetail } from "./pages/InsightsCustomVisualDetail";
+import { InsightsVisualChooser } from "./pages/InsightsVisualChooser";
+import { InsightsBestPracticeGuides } from "./pages/InsightsBestPracticeGuides";
+import { InsightsDatabricksBestPractices } from "./pages/InsightsDatabricksBestPractices";
+import { InsightsAzureDatabricksBestPractices } from "./pages/InsightsAzureDatabricksBestPractices";
+import { InsightsGitHubCopilotBestPractices } from "./pages/InsightsGitHubCopilotBestPractices";
+import { InsightsPowerBICopilotBestPractices } from "./pages/InsightsPowerBICopilotBestPractices";
+import { InsightsPowerBIBestPractices } from "./pages/InsightsPowerBIBestPractices";
+import { InsightsSnowflakePowerBIBestPractices } from "./pages/InsightsSnowflakePowerBIBestPractices";
+import { InsightsKnowledgeBotBestPractices } from "./pages/InsightsKnowledgeBotBestPractices";
+import { InsightsDAXBestPractices } from "./pages/InsightsDAXBestPractices";
+import { InsightsAzureDevOpsBestPractices } from "./pages/InsightsAzureDevOpsBestPractices";
+import { InsightsAzureArchitectureBestPractices } from "./pages/InsightsAzureArchitectureBestPractices";
+import { InsightsAzureSecurityBestPractices } from "./pages/InsightsAzureSecurityBestPractices";
+import { InsightsDataValidationBestPractices } from "./pages/InsightsDataValidationBestPractices";
+import { InsightsDynamics365DevelopmentBestPractices } from "./pages/InsightsDynamics365DevelopmentBestPractices";
+import { InsightsDynamics365DeploymentBestPractices } from "./pages/InsightsDynamics365DeploymentBestPractices";
+import { InsightsPowerAppsBestPractices } from "./pages/InsightsPowerAppsBestPractices";
+import { InsightsDataverseSecurityBestPractices } from "./pages/InsightsDataverseSecurityBestPractices";
+import { PartnershipMicrosoft } from "./pages/PartnershipMicrosoft";
+import { AboutWhoWeAre } from "./pages/AboutWhoWeAre";
+import { AboutSustainability } from "./pages/AboutSustainability";
+import { AboutEvents } from "./pages/AboutEvents";
+import { AboutCareers } from "./pages/AboutCareers";
+import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
+import { Contact } from "./pages/Contact";
+import { TermsOfService } from "./pages/TermsOfService";
+import { TechCon365 } from "./pages/TechCon365";
+import { TechCon365Dallas } from "./pages/TechCon365Dallas";
+import { TechCon365Seattle } from "./pages/TechCon365Seattle";
+import { FabCon2027 } from "./pages/FabCon2027";
 
 const useStyles = makeStyles({
   root: {
@@ -165,10 +83,10 @@ function ScrollToTop() {
   return null;
 }
 
-// Picks the header/footer per route: the bento exploration (/homev2) uses the
+// Picks the header/footer per route: the bento exploration (/homev3) uses the
 // new HeaderV2 + light footer; every other route keeps the standard Header +
 // navy footer.
-const isExplorationRoute = (pathname: string) => pathname === "/homev2";
+const isExplorationRoute = (pathname: string) => pathname === "/homev3";
 
 function SiteHeader() {
   const { pathname } = useLocation();
@@ -251,216 +169,308 @@ export function App() {
       <ScrollToTop />
       <SiteHeader />
       {/* <AnnouncementRibbon /> */}
-        <Suspense fallback={<div style={{ minHeight: "400px" }} />}>
-          <Routes>
-            <Route path="/" element={<HomeV2 />} />
-            <Route path="/homev1" element={<Home />} />
-            <Route path="/homev2" element={<HomeV2 />} />
-            <Route path="/industries/retail" element={<IndustryRetail />} />
-            <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
-            <Route path="/industries/healthcare-life-sciences" element={<IndustryHealthcareLifeSciences />} />
-            <Route path="/industries/technology" element={<IndustryTechnology />} />
-            <Route path="/industries/manufacturing" element={<IndustryManufacturing />} />
-            <Route path="/industries/public-sector" element={<IndustryPublicSector />} />
-            <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
-            <Route path="/services/cloud" element={<ServiceCloud />} />
-            <Route path="/services/reporting-bi" element={<ServiceReportingBI />} />
-            <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
-            <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
-            <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
-            <Route path="/services/workplace-transformation" element={<ServiceWorkplaceTransformation />} />
-            <Route
-              path="/partnerships/microsoft"
-              element={
-                <>
-                  <PartnershipMicrosoft />
-                  <CTA />
-                </>
-              }
-            />
-            <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
-            <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
-            <Route path="/insights/consulting-offers" element={<InsightsConsultingOffers />} />
-            <Route
-              path="/insights/power-bi-custom-visual-guide"
-              element={<InsightsPowerBICustomVisualGuide />}
-            />
-            <Route
-              path="/insights/power-bi-custom-visual-guide/:slug"
-              element={<InsightsCustomVisualDetail />}
-            />
-            <Route path="/insights/visual-chooser" element={<InsightsVisualChooser />} />
-            <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
-            <Route
-              path="/insights/databricks-best-practices"
-              element={
-                <>
-                  <InsightsDatabricksBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/azure-databricks-best-practices"
-              element={
-                <>
-                  <InsightsAzureDatabricksBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/github-copilot-best-practices"
-              element={
-                <>
-                  <InsightsGitHubCopilotBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/power-bi-copilot-best-practices"
-              element={
-                <>
-                  <InsightsPowerBICopilotBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/power-bi-best-practices"
-              element={
-                <>
-                  <InsightsPowerBIBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/snowflake-and-power-bi-best-practices"
-              element={
-                <>
-                  <InsightsSnowflakePowerBIBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/knowledge-bot-best-practices"
-              element={
-                <>
-                  <InsightsKnowledgeBotBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/dax-best-practices"
-              element={
-                <>
-                  <InsightsDAXBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/azure-devops-best-practices"
-              element={
-                <>
-                  <InsightsAzureDevOpsBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/azure-architecture-best-practices"
-              element={
-                <>
-                  <InsightsAzureArchitectureBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/azure-security-best-practices"
-              element={
-                <>
-                  <InsightsAzureSecurityBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/data-validation-best-practices"
-              element={
-                <>
-                  <InsightsDataValidationBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/dynamics365-development-best-practices"
-              element={
-                <>
-                  <InsightsDynamics365DevelopmentBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/dynamics365-deployment-best-practices"
-              element={
-                <>
-                  <InsightsDynamics365DeploymentBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/powerapps-best-practices"
-              element={
-                <>
-                  <InsightsPowerAppsBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route
-              path="/insights/dataverse-security-best-practices"
-              element={
-                <>
-                  <InsightsDataverseSecurityBestPractices />
-                  <CTA />
-                </>
-              }
-            />
-            <Route path="/partnerships/databricks" element={<PartnershipDatabricks />} />
-            <Route path="/partnerships/snowflake" element={<PartnershipSnowflake />} />
-            <Route path="/about/who-we-are" element={<AboutWhoWeAre />} />
-            <Route path="/about/sustainability" element={<AboutSustainability />} />
-            <Route path="/events" element={<AboutEvents />} />
-            <Route path="/about/events" element={<AboutEvents />} />
-            <Route path="/about/careers" element={<AboutCareers />} />
-            <Route path="/about/privacy-statement" element={<AboutPrivacyStatement />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="/events/techcon365" element={<TechCon365 />} />
-            <Route path="/events/techcon365/dallas" element={<TechCon365Dallas />} />
-            <Route path="/events/techcon365/seattle" element={<TechCon365Seattle />} />
-            <Route path="/events/fabcon2027" element={<FabCon2027 />} />
-            <Route path="/products" element={<ProductsHome />} />
-            <Route path="/products/:slug" element={<ProductDetail />} />
-            <Route path="/products/ai-datalens" element={<ProductAIDataLens />} />
-            <Route path="/products/fabricadminagent" element={<ProductFabricAdminAgent />} />
-            <Route path="/products/embedFAST" element={<ProductEmbedFAST />} />
-            <Route path="/products/certyFAST" element={<ProductCertyFAST />} />
-            <Route path="/products/loadFAST" element={<ProductLoadFAST />} />
-            <Route path="/products/migrateFAST" element={<ProductMigrateFAST />} />
-            <Route path="/lab" element={<ComponentLab />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
-        </Suspense>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/homev3" element={<HomeV3 />} />
+        <Route path="/industries/retail" element={<IndustryRetail />} />
+        <Route path="/industries/financial-services" element={<IndustryFinancialServices />} />
+        <Route path="/industries/healthcare-life-sciences" element={<IndustryHealthcareLifeSciences />} />
+        <Route path="/industries/technology" element={<IndustryTechnology />} />
+        <Route path="/industries/manufacturing" element={<IndustryManufacturing />} />
+        <Route path="/industries/public-sector" element={<IndustryPublicSector />} />
+        <Route path="/services/agentic-ai" element={<ServiceAgenticAI />} />
+        <Route path="/services/cloud" element={<ServiceCloud />} />
+        <Route path="/services/reporting-bi" element={<ServiceReportingBI />} />
+        <Route path="/services/business-apps" element={<ServiceBusinessApps />} />
+        <Route path="/services/security-compliance" element={<ServiceSecurityCompliance />} />
+        <Route path="/services/data-and-analytics" element={<ServiceDataAndAnalytics />} />
+        <Route path="/services/workplace-transformation" element={<ServiceWorkplaceTransformation />} />
+        <Route
+          path="/partnerships/microsoft"
+          element={
+            <>
+              <PartnershipMicrosoft />
+              <CTA />
+            </>
+          }
+        />
+        <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
+        <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
+        <Route path="/insights/consulting-offers" element={<InsightsConsultingOffers />} />
+        <Route
+          path="/insights/power-bi-custom-visual-guide"
+          element={<InsightsPowerBICustomVisualGuide />}
+        />
+        <Route
+          path="/insights/power-bi-custom-visual-guide/:slug"
+          element={<InsightsCustomVisualDetail />}
+        />
+        <Route path="/insights/visual-chooser" element={<InsightsVisualChooser />} />
+        <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
+        <Route
+          path="/insights/databricks-best-practices"
+          element={
+            <>
+              <InsightsDatabricksBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-databricks-best-practices"
+          element={
+            <>
+              <InsightsAzureDatabricksBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/github-copilot-best-practices"
+          element={
+            <>
+              <InsightsGitHubCopilotBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/power-bi-copilot-best-practices"
+          element={
+            <>
+              <InsightsPowerBICopilotBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/power-bi-best-practices"
+          element={
+            <>
+              <InsightsPowerBIBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/snowflake-and-power-bi-best-practices"
+          element={
+            <>
+              <InsightsSnowflakePowerBIBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/knowledge-bot-best-practices"
+          element={
+            <>
+              <InsightsKnowledgeBotBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dax-best-practices"
+          element={
+            <>
+              <InsightsDAXBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-dev-ops-best-practices-guide"
+          element={
+            <>
+              <InsightsAzureDevOpsBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-architecture-best-practices"
+          element={
+            <>
+              <InsightsAzureArchitectureBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/azure-security-best-practices"
+          element={
+            <>
+              <InsightsAzureSecurityBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/data-validation-best-practices"
+          element={
+            <>
+              <InsightsDataValidationBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dynamics-365-development-best-practices"
+          element={
+            <>
+              <InsightsDynamics365DevelopmentBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dynamics-365-deployment-best-practices"
+          element={
+            <>
+              <InsightsDynamics365DeploymentBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/power-apps-best-practices"
+          element={
+            <>
+              <InsightsPowerAppsBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/insights/dataverse-security-best-practices"
+          element={
+            <>
+              <InsightsDataverseSecurityBestPractices />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/partnerships/snowflake"
+          element={
+            <>
+              <PartnershipSnowflake />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/partnerships/databricks"
+          element={
+            <>
+              <PartnershipDatabricks />
+              <CTA />
+            </>
+          }
+        />
+        <Route path="/products" element={<ProductsHome />} />
+        <Route
+          path="/products/fabric-admin-agent"
+          element={
+            <>
+              <ProductFabricAdminAgent />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/products/ai-datalens"
+          element={
+            <>
+              <ProductAIDataLens />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/products/embedfast"
+          element={
+            <>
+              <ProductEmbedFAST />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/products/certyfast"
+          element={
+            <>
+              <ProductCertyFAST />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/products/loadfast"
+          element={
+            <>
+              <ProductLoadFAST />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/products/migratefast"
+          element={
+            <>
+              <ProductMigrateFAST />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/products/:slug"
+          element={
+            <>
+              <ProductDetail />
+              <CTA />
+            </>
+          }
+        />
+        <Route path="/lab" element={<ComponentLab />} />
+        <Route
+          path="/who-we-are"
+          element={
+            <>
+              <AboutWhoWeAre />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/sustainability"
+          element={
+            <>
+              <AboutSustainability />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/privacystatement"
+          element={
+            <>
+              <AboutPrivacyStatement />
+              <CTA />
+            </>
+          }
+        />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/events" element={<AboutEvents />} />
+        <Route path="/news" element={<Navigate to="/events" replace />} />
+        <Route path="/careers" element={<AboutCareers />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/techcon365" element={<TechCon365 />} />
+        <Route path="/techcon365-dallas" element={<TechCon365Dallas />} />
+        <Route path="/techcon365-seattle" element={<TechCon365Seattle />} />
+        <Route path="/fabcon-2027" element={<FabCon2027 />} />
+      </Routes>
       <SiteFooter />
     </div>
   );
