@@ -221,6 +221,7 @@ export function IndustryTechnology() {
         cases={technologyCases}
         seeAllLabel="See all technology case studies"
         seeAllHref="/insights/case-studies"
+        uniformCardWidth
       />
       <CTA />
     </>

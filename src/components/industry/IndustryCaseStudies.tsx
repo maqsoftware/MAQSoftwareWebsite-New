@@ -28,6 +28,15 @@ const useStyles = makeStyles({
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
   },
+  gridUniform: {
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    "@media (max-width: 960px)": {
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+    },
+    "@media (max-width: 640px)": {
+      gridTemplateColumns: "1fr",
+    },
+  },
   card: {
     display: "flex",
     flexDirection: "column",
@@ -94,6 +103,7 @@ interface IndustryCaseStudiesProps {
   cases: IndustryCase[];
   seeAllLabel?: string;
   seeAllHref?: string;
+  uniformCardWidth?: boolean;
 }
 
 export function IndustryCaseStudies({
@@ -102,6 +112,7 @@ export function IndustryCaseStudies({
   cases,
   seeAllLabel = "See all case studies",
   seeAllHref = "/insights/case-studies",
+  uniformCardWidth = false,
 }: IndustryCaseStudiesProps) {
   const s = useStyles();
   return (
@@ -111,7 +122,7 @@ export function IndustryCaseStudies({
           <span className={s.eyebrow}>{eyebrow}</span>
           <h2 className={s.title}>{title}</h2>
         </div>
-        <div className={s.grid}>
+        <div className={`${s.grid}${uniformCardWidth ? ` ${s.gridUniform}` : ""}`}>
           {cases.map((c) => (
             <CaseStudyCard
               key={c.title}

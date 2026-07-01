@@ -233,6 +233,7 @@ export function IndustryManufacturing() {
         cases={manufacturingCases}
         seeAllLabel="See all manufacturing case studies"
         seeAllHref="/insights/case-studies"
+        uniformCardWidth
       />
       <MarketplaceOffers
         sub="Accelerate manufacturing outcomes with ready-to-deploy Microsoft Azure Marketplace offerings \u2014 spanning AI strategy, real-time intelligence, and data platform modernization."

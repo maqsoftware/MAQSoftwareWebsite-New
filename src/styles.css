@@ -53,9 +53,40 @@
 
   /* Layout — content widths. --maq-container is the app standard;
      --maq-container-wide is the wider column used by the V2 homepage
-     exploration (HomeV2 + FooterV2). */
+     exploration (HomeV2 + FooterV2). Wide is set so content spans a full
+     laptop edge-to-edge and only begins to contain on larger external
+     monitors (1920px+). */
   --maq-container: 1240px;
   --maq-container-wide: 1440px;
+
+  /* ─────────────────────────────────────────────────────────────
+     Marketing type ramp — single source of truth. Body anchors at 18px;
+     ~1.25 ratio with a stretched hero. Fluid via clamp() (desktop → mobile
+     targets in comments). Optimized for scanning, not long-form reading.
+     ───────────────────────────────────────────────────────────── */
+  --fs-hero:    clamp(2.75rem,   8.0vw, 5rem);      /* 80 → 44  hero headline */
+  --fs-h1:      clamp(2.25rem,   5.5vw, 3.5rem);    /* 56 → 36 */
+  --fs-h2:      clamp(1.875rem,  4.5vw, 3rem);      /* 48 → 30 */
+  --fs-h3:      clamp(1.625rem,  3.4vw, 2.25rem);   /* 36 → 26 */
+  --fs-h4:      clamp(1.375rem,  2.6vw, 1.75rem);   /* 28 → 22 */
+  --fs-lead:    clamp(1.125rem,  2.05vw, 1.375rem); /* 22 → 18  intro / sub-head */
+  --fs-body:    clamp(1rem,      1.65vw, 1.125rem); /* 18 → 16  body default */
+  --fs-small:   clamp(0.875rem,  1.4vw, 0.9375rem); /* 15 → 14 */
+  --fs-eyebrow: clamp(0.8125rem, 1.3vw, 0.875rem);  /* 14 → 13  eyebrow / label */
+
+  /* Back-compat aliases — existing components still reference these names;
+     each points at the nearest token in the ramp above. */
+  --fs-display: var(--fs-hero);
+  --fs-h5:      var(--fs-lead);
+  --fs-body-lg: var(--fs-body);
+  --fs-body-sm: var(--fs-small);
+  --fs-caption: var(--fs-eyebrow);
+
+  /* Section padding — single source of truth for the vertical rhythm and
+     horizontal gutters of full-bleed bands. One value so every section
+     breathes identically (overridden smaller on phones below). */
+  --section-pad-y: 96px;
+  --section-pad-x: 32px;
 
   /* Aliases — keep legacy component code working */
   --maq-navy: var(--maq-black);
@@ -64,6 +95,11 @@
   --maq-blue-pale: var(--maq-red-pale);
   --maq-teal: var(--maq-red);
   --maq-surface-blush: var(--maq-red-50);
+}
+
+/* Tighter section padding on phones. */
+@media (max-width: 720px) {
+  :root { --section-pad-y: 64px; --section-pad-x: 22px; }
 }
 
 html,
@@ -100,13 +136,12 @@ p  { display: block; line-height: 1.6; margin: 0; }
    consistency. Color/weight/spacing live here so they can be tuned
    in one place. Pair with a layout class for page-specific margins.
    ────────────────────────────────────────────────────────────── */
-.maq-h1 { font-size: 3.5rem;   font-weight: 700; line-height: 1.05; letter-spacing: -0.022em; color: var(--maq-heading-color); margin: 0; }
-.maq-h2 { font-size: 2.5rem;   font-weight: 700; line-height: 1.08; letter-spacing: -0.02em;  color: var(--maq-heading-color); margin: 0; }
-.maq-h3 { font-size: 1.375rem; font-weight: 600; line-height: 1.2;  letter-spacing: -0.01em;  color: var(--maq-heading-color); margin: 0; }
-@media (max-width: 720px) {
-  .maq-h1 { font-size: 2.5rem; letter-spacing: -0.01em; }
-  .maq-h2 { font-size: 1.875rem; }
-}
+.maq-h1 { font-size: var(--fs-h1); font-weight: 600; line-height: 1.05; letter-spacing: -0.02em;  color: var(--maq-heading-color); margin: 0; }
+.maq-h2 { font-size: var(--fs-h2); font-weight: 600; line-height: 1.1;  letter-spacing: -0.015em; color: var(--maq-heading-color); margin: 0; }
+.maq-h3 { font-size: var(--fs-h3); font-weight: 600; line-height: 1.2;  letter-spacing: -0.01em;  color: var(--maq-heading-color); margin: 0; }
+/* Eyebrow / kicker label above a heading — sentence case, faint gray. */
+.maq-eyebrow { font-size: var(--fs-eyebrow); font-weight: 500; letter-spacing: 0; color: var(--colorNeutralForeground4); margin: 0 0 12px; }
+/* Responsiveness is handled by the clamp() in the --fs-* tokens. */
 
 /* Canonical centered content column. Adopt on new pages for a
    consistent max-width; pages may override --maq-container locally. */
