@@ -72,7 +72,9 @@ export function PosterCard({
   return (
     <MotionLink to={to} className={s.card} {...(motionProps ?? {})}>
       <div className={s.imgWrap} style={{ aspectRatio }} aria-hidden>
-        {img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} style={{ objectFit: imgFit }} />}
+        {
+          img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} style={{ objectFit: imgFit }} loading="lazy" decoding="async" />
+        }
       </div>
       <div className={s.text}>
         {eyebrow ? <p className={s.eyebrow}>{eyebrow}</p> : null}

@@ -86,7 +86,7 @@ export function SplitCard({
         {children ? <div className={s.cta}>{children}</div> : null}
       </div>
       <div className={s.imgWrap} aria-hidden>
-        {img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} />}
+        {img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} loading="lazy" decoding="async" />}
       </div>
     </>
   );
