@@ -33,7 +33,7 @@ const useStyles = makeStyles({
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   top: {
     display: "grid",
-    gridTemplateColumns: "repeat(6, 1fr)",
+    gridTemplateColumns: "1.4fr repeat(5, 1fr)",
     gap: "24px",
     marginBottom: "44px",
     // Extra breathing room on the right of every column container.
