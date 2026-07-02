@@ -26,6 +26,7 @@ const useStyles = makeStyles({
   cardGrid: {
     display: "grid",
     gap: "24px",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
   },
 });
 
@@ -112,7 +113,7 @@ export function CardGrid({
       style={{
         gridTemplateColumns: columns
           ? `repeat(${columns}, minmax(0, 1fr))`
-          : "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+          : undefined,
         gridAutoRows: minRowHeight ? `minmax(${minRowHeight}, auto)` : undefined,
         ...style,
       }}

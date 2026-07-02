@@ -273,6 +273,21 @@ const useStyles = makeStyles({
   // Consistent card gaps across the Resources / What-we-deliver grids.
   cardGap: { gap: "24px" },
   prodGrid: { gridAutoRows: "1fr", gap: "24px" },
+  deliverGrid: {
+    display: "grid",
+    gap: "24px",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
+    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
+  },
+  industriesGrid: {
+    display: "grid",
+    gap: "24px",
+    gridAutoRows: "minmax(172px, auto)",
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
+    "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
+  },
 
   /* Featured case study — large image left, text right. */
   featRow: {
@@ -335,7 +350,7 @@ export function HomeV3() {
             className={s.prodHead}
           />
         </motion.div>
-        <CardGrid className={s.prodGrid}>
+        <div className={s.deliverGrid}>
           {BUILD.map((b, i) => (
             <PosterCard
               key={b.title}
@@ -348,7 +363,7 @@ export function HomeV3() {
               motionProps={onScroll(i)}
             />
           ))}
-        </CardGrid>
+        </div>
       </Section>
 
       {/* FEATURED CASE STUDY — image left, text right (first case study) */}
@@ -407,11 +422,11 @@ export function HomeV3() {
         <motion.div {...fadeUp}>
           <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
         </motion.div>
-        <CardGrid minRowHeight="172px" className={s.cardGap}>
+        <div className={s.industriesGrid}>
           {INDUSTRIES.map((ind, i) => (
             <IconCard key={ind.label} label={ind.label} desc={ind.desc} to={ind.to} icon={ind.icon} stacked motionProps={onScroll(i)} />
           ))}
-        </CardGrid>
+        </div>
       </Section>
 
       {/* RESOURCES — title above, 3 cards (image top, text below) */}
