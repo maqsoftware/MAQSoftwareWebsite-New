@@ -280,8 +280,8 @@ const useStyles = makeStyles({
     minHeight: "150px",
     transition: "all 0.2s",
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "var(--maq-shadow-sm)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
     },
   },
   productName: {

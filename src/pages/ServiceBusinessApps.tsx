@@ -203,12 +203,12 @@ const useStyles = makeStyles({
         cursor: "pointer",
         textAlign: "left",
         transition: "all 0.15s",
-        ":hover": { border: `1px solid var(--maq-red)` },
+        ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
     },
     railBtnActive: {
-        border: `1px solid var(--maq-red)`,
+        border: "1px solid var(--maq-card-hover-border)",
         borderLeftWidth: "3px",
-        boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+        boxShadow: "var(--maq-shadow-sm)",
     },
     railIcon: {
         width: "36px",
@@ -257,8 +257,8 @@ const useStyles = makeStyles({
         background: "#fff",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
         },
     },
     outcomeIcon: {
@@ -298,8 +298,8 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
         },
     },
     pill: {
@@ -353,8 +353,8 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
         },
     },
     insCover: {

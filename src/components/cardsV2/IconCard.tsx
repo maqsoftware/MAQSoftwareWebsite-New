@@ -17,17 +17,17 @@ const useStyles = makeStyles({
     backgroundColor: tokens.colorNeutralBackground1, borderRadius: tokens.borderRadiusXLarge, border: "1px solid var(--maq-border)", padding: tokens.spacingHorizontalXXL,
     display: "flex", alignItems: "center", gap: "16px",
     textDecoration: "none", color: "inherit", cursor: "pointer",
-    transition: "transform .25s ease",
-    ":hover": { transform: "scale(1.02)" },
+    transition: "border-color .2s ease, box-shadow .2s ease, transform .2s ease",
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   cardCentered: { flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center", gap: "14px", "& h3": { fontSize: "1.45rem" }, "& svg": { width: "44px", height: "44px" } },
   // Icon pinned top-left, label pinned bottom-left (fills the card height).
   // The icon sits in a padded rounded chip.
   cardStacked: {
     flexDirection: "column", alignItems: "flex-start", justifyContent: "space-between", textAlign: "left", gap: "16px",
-    transition: "border-color .2s ease",
+    transition: "border-color .2s ease, box-shadow .2s ease, transform .2s ease",
     // Match the content cards: light border-highlight on hover, no scale.
-    ":hover": { transform: "none", border: "1px solid #c7c7c7" },
+    ":hover": { transform: "translateY(-2px)", border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)" },
     "& svg": { width: "40px", height: "40px", strokeWidth: 1 },
   },
   icon: {
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
   },
   // Padding around the icon in the stacked layout (no background); brand red.
-  iconChip: { padding: "12px", color: "var(--maq-red)" },
+  iconChip: { padding: "12px", color: tokens.colorNeutralForeground4 },
   text: { display: "flex", flexDirection: "column", gap: "6px" },
   title: { fontSize: "1.125rem", fontWeight: 600, letterSpacing: "-.3px", color: "var(--maq-heading-color)", lineHeight: 1.25, margin: 0 },
   desc: { fontSize: "var(--fs-small)", lineHeight: 1.5, color: "var(--maq-muted-color)", margin: 0 },
