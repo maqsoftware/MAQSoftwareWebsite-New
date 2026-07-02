@@ -94,8 +94,7 @@ function SiteHeader() {
 }
 
 function SiteFooter() {
-  const { pathname } = useLocation();
-  return isExplorationRoute(pathname) ? <FooterV2 /> : <Footer />;
+  return <FooterV2 />;
 }
 
 export function App() {
