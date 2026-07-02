@@ -160,6 +160,16 @@ a {
   color: inherit;
 }
 
+/* Global section banding: white/gray alternation for all routed page sections.
+   The App shell assigns data-band-tone in DOM order after each route render. */
+.site-main section[data-band-tone="white"] {
+  background-color: var(--maq-white) !important;
+}
+
+.site-main section[data-band-tone="gray"] {
+  background-color: var(--maq-gray-50) !important;
+}
+
 /* Standardize CTA dimensions globally so primary/outline button pairs
    (e.g., Contact Us + Case Studies/Get it now) align consistently. */
 .maq-equal-cta {

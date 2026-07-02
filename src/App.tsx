@@ -100,6 +100,7 @@ function SiteFooter() {
 
 export function App() {
   const s = useStyles();
+  const { pathname } = useLocation();
 
   // Warm key route chunks after initial paint so first navigation feels instant.
   useEffect(() => {
@@ -227,11 +228,37 @@ export function App() {
       }
     };
   }, []);
+
+  // Apply a consistent white/gray band rhythm to all content sections.
+  useEffect(() => {
+    const applySectionBanding = () => {
+      const main = document.querySelector("main.site-main");
+      if (!main) return;
+
+      const sections = Array.from(main.querySelectorAll("section"));
+      let bandIndex = 0;
+
+      for (const section of sections) {
+        if (section.hasAttribute("data-no-band-alternate")) {
+          section.removeAttribute("data-band-tone");
+          continue;
+        }
+
+        section.setAttribute("data-band-tone", bandIndex % 2 === 0 ? "white" : "gray");
+        bandIndex += 1;
+      }
+    };
+
+    const rafId = window.requestAnimationFrame(applySectionBanding);
+    return () => window.cancelAnimationFrame(rafId);
+  }, [pathname]);
+
   return (
     <div className={s.root}>
       <ScrollToTop />
       <SiteHeader />
       {/* <AnnouncementRibbon /> */}
+      <main className="site-main">
       <Routes>
         <Route path="/" element={<HomeV3 />} />
         <Route path="/homev3" element={<HomeV3 />} />
@@ -534,6 +561,7 @@ export function App() {
         <Route path="/techcon365-seattle" element={<TechCon365Seattle />} />
         <Route path="/fabcon-2027" element={<FabCon2027 />} />
       </Routes>
+      </main>
       <SiteFooter />
     </div>
   );
