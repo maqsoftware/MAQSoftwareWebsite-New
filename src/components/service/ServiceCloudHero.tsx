@@ -1,10 +1,4 @@
 import { makeStyles } from "@fluentui/react-components";
-import {
-  Mail24Regular,
-  Server20Filled,
-  Cloud20Filled,
-  ShieldLock20Filled,
-} from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
 import { PrimaryButton } from "../buttons";
 
@@ -46,14 +40,7 @@ const useStyles = makeStyles({
   btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
 
   visual: {
-    background: "var(--maq-surface-cream)",
-    border: "1px solid var(--maq-red-pale)",
-    borderRadius: "16px",
-    padding: "20px",
-    display: "grid",
-    gap: "12px",
-    boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-    color: "var(--maq-ink)",
+    display: "block",
   },
   tile: {
     background: "#fff",
@@ -92,6 +79,11 @@ const useStyles = makeStyles({
     color: "var(--maq-ink)",
     marginTop: "4px",
   },
+  heroImage: {
+    width: "100%",
+    display: "block",
+    borderRadius: "16px",
+  },
 });
 
 export function ServiceCloudHero() {
@@ -120,43 +112,12 @@ export function ServiceCloudHero() {
           </div>
         </div>
 
-        <div className={s.visual} aria-hidden="true">
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Cloud20Filled /> Cloud infrastructure
-            </div>
-            <div className={s.statusRow}>
-              <span className={s.check} />
-              <span className={s.check} />
-              <span className={s.check} />
-              <span className={s.statusLabel}>All systems online</span>
-            </div>
-          </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Server20Filled /> Uptime status
-            </div>
-            <div className={s.statusRow}>
-              <span style={{ fontSize: "14px", fontWeight: 700, color: "var(--maq-red)" }}>
-                99.99%
-              </span>
-              <span className={s.statusLabel}>SLA compliance</span>
-            </div>
-          </div>
-          <div className={s.tile}>
-              <div className={s.tileTitle}>
-              <ShieldLock20Filled /> Cost optimization
-            </div>
-            <div className={s.costRow}>
-              <span className={s.costLabel}>Saved</span>
-              <div className={s.costTrack}>
-                <div className={s.costFill} />
-              </div>
-            </div>
-            <div className={s.deployRow}>
-              <span>35% reduction</span>
-            </div>
-          </div>
+        <div className={s.visual}>
+          <img
+            className={s.heroImage}
+            src="/images/Service%20cards/Cloud.png"
+            alt="Cloud Modernization"
+          />
         </div>
       </div>
     </section>
