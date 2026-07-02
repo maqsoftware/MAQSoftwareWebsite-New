@@ -21,8 +21,8 @@ const useStyles = makeStyles({
     borderRadius: tokens.borderRadiusXLarge,
     overflow: "hidden",
     textDecoration: "none", color: "inherit",
-    transition: "border-color .2s ease",
-    ":hover": { border: "1px solid #c7c7c7" },
+    transition: "border-color .2s ease, box-shadow .2s ease, transform .2s ease",
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
     ":hover .zoom-img": { transform: "scale(1.06)" },
     ":hover .sc-foot": { color: "var(--maq-red-dark)" },
     ":hover .sc-foot-arrow": { transform: "translateX(4px)" },
@@ -86,7 +86,7 @@ export function SplitCard({
         {children ? <div className={s.cta}>{children}</div> : null}
       </div>
       <div className={s.imgWrap} aria-hidden>
-        {img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} />}
+        {img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} loading="lazy" decoding="async" />}
       </div>
     </>
   );

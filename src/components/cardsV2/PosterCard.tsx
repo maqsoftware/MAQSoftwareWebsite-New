@@ -23,8 +23,8 @@ const useStyles = makeStyles({
     border: "1px solid var(--maq-border)",
     borderRadius: tokens.borderRadiusXLarge,
     textDecoration: "none", color: "inherit", cursor: "pointer",
-    transition: "border-color .2s ease",
-    ":hover": { border: "1px solid #c7c7c7" },
+    transition: "border-color .2s ease, box-shadow .2s ease, transform .2s ease",
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
     ":hover .zoom-img": { transform: "scale(1.06)" },
     ":hover .sc-foot": { color: "var(--maq-red-dark)" },
     ":hover .sc-foot-arrow": { transform: "translateX(4px)" },
@@ -72,7 +72,9 @@ export function PosterCard({
   return (
     <MotionLink to={to} className={s.card} {...(motionProps ?? {})}>
       <div className={s.imgWrap} style={{ aspectRatio }} aria-hidden>
-        {img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} style={{ objectFit: imgFit }} />}
+        {
+          img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} style={{ objectFit: imgFit }} loading="lazy" decoding="async" />
+        }
       </div>
       <div className={s.text}>
         {eyebrow ? <p className={s.eyebrow}>{eyebrow}</p> : null}

@@ -68,14 +68,7 @@ const useStyles = makeStyles({
 
     // Hero mosaic
     visual: {
-        background: "var(--maq-surface-cream)",
-        border: "1px solid var(--maq-red-pale)",
-        borderRadius: "16px",
-        padding: "20px",
-        display: "grid",
-        gap: "12px",
-        boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-        color: "var(--maq-ink)",
+        display: "block",
     },
     tile: {
         background: "#fff",
@@ -106,6 +99,11 @@ const useStyles = makeStyles({
         fontSize: "12px",
         color: "var(--maq-ink)",
         marginTop: "4px",
+    },
+    heroImage: {
+        width: "100%",
+        display: "block",
+        borderRadius: "16px",
     },
 
     // Section commons
@@ -205,12 +203,12 @@ const useStyles = makeStyles({
         cursor: "pointer",
         textAlign: "left",
         transition: "all 0.15s",
-        ":hover": { border: `1px solid var(--maq-red)` },
+        ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
     },
     railBtnActive: {
-        border: `1px solid var(--maq-red)`,
+        border: "1px solid var(--maq-card-hover-border)",
         borderLeftWidth: "3px",
-        boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+        boxShadow: "var(--maq-shadow-sm)",
     },
     railIcon: {
         width: "36px",
@@ -259,8 +257,8 @@ const useStyles = makeStyles({
         background: "#fff",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
         },
     },
     outcomeIcon: {
@@ -300,8 +298,8 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
         },
     },
     pill: {
@@ -355,8 +353,8 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
         },
     },
     insCover: {
@@ -587,54 +585,12 @@ export function ServiceBusinessApps() {
                         </div>
                     </div>
 
-                    <div className={s.visual} aria-hidden="true">
-                        <div className={s.tile}>
-                            <div className={s.tileTitle}>
-                                <Flow20Filled /> Workflow status
-                            </div>
-                            <div className={s.perfRow}>
-                                <span className={s.perfLabel}>Approvals</span>
-                                <div className={s.perfTrack}>
-                                    <div className={s.perfFill} style={{ width: "78%" }} />
-                                </div>
-                            </div>
-                            <div className={s.perfRow}>
-                                <span className={s.perfLabel}>Onboarding</span>
-                                <div className={s.perfTrack}>
-                                    <div className={s.perfFill} style={{ width: "64%" }} />
-                                </div>
-                            </div>
-                            <div className={s.perfRow}>
-                                <span className={s.perfLabel}>Field service</span>
-                                <div className={s.perfTrack}>
-                                    <div className={s.perfFill} style={{ width: "91%" }} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.tile}>
-                            <div className={s.tileTitle}>
-                                <CheckmarkCircle20Filled /> Active automations
-                            </div>
-                            <div className={s.pulseRow}>
-                                <span className={s.dot} />
-                                <span className={s.dot} />
-                                <span className={s.dot} />
-                                <span className={s.pulseLabel}>42 flows running · 0 failed in 24h</span>
-                            </div>
-                        </div>
-                        <div className={s.tile}>
-                            <div className={s.tileTitle}>
-                                <Sparkle20Filled /> Today&apos;s impact
-                            </div>
-                            <div className={s.autoRow}>
-                                <span>Cases auto-routed</span>
-                                <span>2,118</span>
-                            </div>
-                            <div className={s.autoRow}>
-                                <span>Hours saved this week</span>
-                                <span>946</span>
-                            </div>
-                        </div>
+                    <div className={s.visual}>
+                        <img
+                            className={s.heroImage}
+                            src="/images/Service%20cards/Apps.png"
+                            alt="Business Applications and Automation"
+                        />
                     </div>
                 </div>
             </section>

@@ -96,12 +96,12 @@ const useStyles = makeStyles({
     cursor: "pointer",
     textAlign: "left",
     transition: "all 0.15s",
-    ":hover": { border: `1px solid var(--maq-red)` },
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   railBtnActive: {
-    border: `1px solid var(--maq-red)`,
+    border: "1px solid var(--maq-card-hover-border)",
     borderLeftWidth: "3px",
-    boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+    boxShadow: "var(--maq-shadow-sm)",
   },
   railIcon: {
     width: "36px",
