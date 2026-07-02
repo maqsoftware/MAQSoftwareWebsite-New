@@ -190,10 +190,10 @@ const useStyles = makeStyles({
     // text + landscape image floating in whitespace.
     display: "flex", flexDirection: "column", justifyContent: "center",
     // Left and right edges both align to the centered container gutter.
-    paddingTop: "72px", paddingBottom: "72px",
+    paddingTop: "8px", paddingBottom: "8px",
     paddingLeft: "max(32px, calc((100vw - var(--maq-container-wide)) / 2))",
     paddingRight: "max(32px, calc((100vw - var(--maq-container-wide)) / 2))",
-    "@media (max-width: 1024px)": { padding: "40px 32px" }, "@media (max-width: 720px)": { padding: "28px 22px" },
+    "@media (max-width: 1024px)": { paddingTop: "5px", paddingBottom: "5px", paddingLeft: "32px", paddingRight: "32px" }, "@media (max-width: 720px)": { paddingTop: "4px", paddingBottom: "4px", paddingLeft: "22px", paddingRight: "22px" },
   },
   heroArt: {
     display: "block", width: "100%", height: "auto", objectFit: "contain",
@@ -405,7 +405,7 @@ export function HomeV3() {
       {/* INDUSTRIES */}
       <Section tone="gray">
         <motion.div {...fadeUp}>
-          <SectionHeading title="Industries we serve" align="left" className={s.indHead} />
+          <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
         </motion.div>
         <CardGrid minRowHeight="172px" className={s.cardGap}>
           {INDUSTRIES.map((ind, i) => (
