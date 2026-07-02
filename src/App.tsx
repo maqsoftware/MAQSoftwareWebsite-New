@@ -534,7 +534,25 @@ export function App() {
           }
         />
         <Route
+          path="/about/who-we-are"
+          element={
+            <>
+              <AboutWhoWeAre />
+              <CTA />
+            </>
+          }
+        />
+        <Route
           path="/sustainability"
+          element={
+            <>
+              <AboutSustainability />
+              <CTA />
+            </>
+          }
+        />
+        <Route
+          path="/about/sustainability"
           element={
             <>
               <AboutSustainability />
@@ -555,6 +573,7 @@ export function App() {
         <Route path="/events" element={<AboutEvents />} />
         <Route path="/news" element={<Navigate to="/events" replace />} />
         <Route path="/careers" element={<AboutCareers />} />
+        <Route path="/about/careers" element={<AboutCareers />} />
         <Route path="/terms-of-service" element={<TermsOfService />} />
         <Route path="/techcon365" element={<TechCon365 />} />
         <Route path="/techcon365-dallas" element={<TechCon365Dallas />} />
