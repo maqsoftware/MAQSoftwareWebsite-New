@@ -335,7 +335,7 @@ export function HomeV3() {
             className={s.prodHead}
           />
         </motion.div>
-        <CardGrid columns={3} className={s.prodGrid}>
+        <CardGrid className={s.prodGrid}>
           {BUILD.map((b, i) => (
             <PosterCard
               key={b.title}
@@ -422,7 +422,7 @@ export function HomeV3() {
             className={s.prodHead}
           />
         </motion.div>
-        <CardGrid columns={3} className={s.cardGap}>
+        <CardGrid className={s.cardGap}>
           {RESOURCES.map((r, i) => (
             <PosterCard
               key={r.title}
