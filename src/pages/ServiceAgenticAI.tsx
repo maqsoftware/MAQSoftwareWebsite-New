@@ -17,7 +17,25 @@ const SERVICE_CASE_STUDIES_CONFIG = {
 export function ServiceAgenticAI() {
   return (
     <>
-      <ServiceHero />
+      <ServiceHero
+        visual={
+          <div
+            style={{
+              background: "var(--maq-surface-cream)",
+              border: "1px solid var(--maq-red-pale)",
+              borderRadius: "16px",
+              padding: "20px",
+              boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+            }}
+          >
+            <img
+              src="/images/Service%20cards/Conversational AI.png"
+              alt="AI Solutions and Agents"
+              style={{ width: "100%", display: "block", borderRadius: "10px" }}
+            />
+          </div>
+        }
+      />
 
       <ServiceCapabilities />
       <ServiceOutcomes />
