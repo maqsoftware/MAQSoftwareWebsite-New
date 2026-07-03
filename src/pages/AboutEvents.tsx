@@ -15,6 +15,7 @@ import { TextButton } from "../components/buttons";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
+const INITIAL_NEWS_FETCH = 12;
 
 const useStyles = makeStyles({
   hero: {
@@ -168,8 +169,8 @@ export function AboutEvents() {
   const loadPrevious = useCallback(async () => {
     try {
       setLoading(true);
-          setError(null);
-      const data = await fetchPastEventsFromNews(30);
+      setError(null);
+      const data = await fetchPastEventsFromNews(INITIAL_NEWS_FETCH);
       setPreviousFromNews(data);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to load previous events.");
@@ -279,9 +280,9 @@ export function AboutEvents() {
           {hasPreviousEvents && (
             <>
               <div className={s.pastGrid}>
-                {visiblePreviousEvents.map((event) => (
+                {visiblePreviousEvents.map((event, idx) => (
                   <StandardEventCard
-                    key={event.id}
+                    key={`${event.source}-${event.id}-${idx}`}
                     date={event.date}
                     title={event.title}
                     summary={event.summary}
@@ -290,9 +291,18 @@ export function AboutEvents() {
                 ))}
               </div>
 
-              {loading && (
+              {loading && previousFromNews.length === 0 && (
                 <div className={s.state}>
                   <Spinner label="Loading more previous events..." />
+                </div>
+              )}
+
+              {error && (
+                <div className={s.state}>
+                  Could not load additional previous events. {" "}
+                  <TextButton size="small" onClick={() => void loadPrevious()}>
+                    Retry
+                  </TextButton>
                 </div>
               )}
 
