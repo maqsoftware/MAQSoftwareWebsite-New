@@ -115,7 +115,6 @@ const useStyles = makeStyles({
     transition: "border-color 0.16s ease, box-shadow 0.16s ease",
     ":hover": {
       border: "1px solid var(--maq-card-hover-border)",
-      boxShadow: "var(--maq-shadow-lift)",
     },
   },
   impactValue: {
@@ -223,6 +222,7 @@ const useStyles = makeStyles({
     ":hover": {
       border: "1px solid var(--maq-card-hover-border)",
       boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   relatedName: { fontSize: "15px", fontWeight: 700, color: "var(--maq-black)" },

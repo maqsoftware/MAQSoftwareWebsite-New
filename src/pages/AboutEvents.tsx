@@ -15,6 +15,7 @@ import { TextButton } from "../components/buttons";
 import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
+const INITIAL_NEWS_FETCH = 12;
 
 const useStyles = makeStyles({
   hero: {
@@ -168,8 +169,8 @@ export function AboutEvents() {
   const loadPrevious = useCallback(async () => {
     try {
       setLoading(true);
-          setError(null);
-      const data = await fetchPastEventsFromNews(30);
+      setError(null);
+      const data = await fetchPastEventsFromNews(INITIAL_NEWS_FETCH);
       setPreviousFromNews(data);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to load previous events.");
@@ -199,6 +200,7 @@ export function AboutEvents() {
         : previousEvents.slice(0, INITIAL_PREVIOUS_VISIBLE),
     [previousEvents, showAllPrevious],
   );
+  const hasPreviousEvents = previousEvents.length > 0;
 
   return (
     <>
@@ -256,13 +258,13 @@ export function AboutEvents() {
             <h2 className={s.sectionTitle}>Previous Events</h2>
           </div>
 
-          {loading && (
+          {loading && !hasPreviousEvents && (
             <div className={s.state}>
               <Spinner label="Loading previous events..." />
             </div>
           )}
 
-          {error && !loading && (
+          {error && !loading && !hasPreviousEvents && (
             <div className={s.state}>
               {error}{" "}
               <TextButton size="small" onClick={() => void loadPrevious()}>
@@ -271,16 +273,16 @@ export function AboutEvents() {
             </div>
           )}
 
-          {!loading && !error && previousEvents.length === 0 && (
+          {!loading && !error && !hasPreviousEvents && (
             <div className={s.empty}>No previous events found.</div>
           )}
 
-          {!loading && !error && previousEvents.length > 0 && (
+          {hasPreviousEvents && (
             <>
               <div className={s.pastGrid}>
-                {visiblePreviousEvents.map((event) => (
+                {visiblePreviousEvents.map((event, idx) => (
                   <StandardEventCard
-                    key={event.id}
+                    key={`${event.source}-${event.id}-${idx}`}
                     date={event.date}
                     title={event.title}
                     summary={event.summary}
@@ -288,6 +290,21 @@ export function AboutEvents() {
                   />
                 ))}
               </div>
+
+              {loading && previousFromNews.length === 0 && (
+                <div className={s.state}>
+                  <Spinner label="Loading more previous events..." />
+                </div>
+              )}
+
+              {error && (
+                <div className={s.state}>
+                  Could not load additional previous events. {" "}
+                  <TextButton size="small" onClick={() => void loadPrevious()}>
+                    Retry
+                  </TextButton>
+                </div>
+              )}
 
               {previousEvents.length > INITIAL_PREVIOUS_VISIBLE && (
                 <div className={s.paginationControls}>

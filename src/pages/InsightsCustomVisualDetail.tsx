@@ -145,7 +145,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     gap: "8px",
     transition: "all 0.2s",
-    ":hover": { border: "1px solid var(--maq-red)", boxShadow: "0 6px 16px rgba(0,0,0,0.06)" },
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   cardImg: { width: "100%", aspectRatio: "16/9", objectFit: "contain", background: "#fff" },
   cardTitle: { fontSize: "15px", fontWeight: 600, color: "var(--maq-black)", margin: 0 },

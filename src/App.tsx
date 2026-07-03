@@ -578,6 +578,14 @@ export function App() {
         <Route path="/techcon365-dallas" element={<TechCon365Dallas />} />
         <Route path="/techcon365-seattle" element={<TechCon365Seattle />} />
         <Route path="/fabcon-2027" element={<FabCon2027 />} />
+        <Route path="/events/techcon365" element={<TechCon365 />} />
+        <Route path="/events/techcon365/dallas" element={<TechCon365Dallas />} />
+        <Route path="/events/techcon365/seattle" element={<TechCon365Seattle />} />
+        <Route path="/events/fabcon2027" element={<FabCon2027 />} />
+        <Route path="/events/fabcon-2027" element={<FabCon2027 />} />
+        <Route path="/techcon" element={<Navigate to="/techcon365" replace />} />
+        <Route path="/fabcon" element={<Navigate to="/fabcon-2027" replace />} />
+        <Route path="/fabcon2027" element={<Navigate to="/fabcon-2027" replace />} />
       </Routes>
       </main>
       <SiteFooter />

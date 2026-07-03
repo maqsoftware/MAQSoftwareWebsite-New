@@ -116,8 +116,7 @@ const useStyles = makeStyles({
     background: "#fff",
     transition: "border-color 0.16s ease, box-shadow 0.16s ease",
     ":hover": {
-      border: "0.5px solid var(--maq-card-hover-border)",
-      boxShadow: "var(--maq-shadow-lift)",
+      border: "1px solid var(--maq-card-hover-border)",
     },
   },
   impactMetric: {
@@ -156,8 +155,7 @@ const useStyles = makeStyles({
     padding: "22px",
     transition: "border-color 0.16s ease, box-shadow 0.16s ease",
     ":hover": {
-      border: "0.5px solid var(--maq-card-hover-border)",
-      boxShadow: "var(--maq-shadow-lift)",
+      border: "1px solid var(--maq-card-hover-border)",
     },
   },
   featHead: {
@@ -199,6 +197,7 @@ const useStyles = makeStyles({
     ":hover": {
       border: "1px solid var(--maq-card-hover-border)",
       boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   caseTitle: {
@@ -299,6 +298,7 @@ const useStyles = makeStyles({
     ":hover": {
       border: "1px solid var(--maq-card-hover-border)",
       boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   mktImg: {

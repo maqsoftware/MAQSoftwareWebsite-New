@@ -202,10 +202,49 @@ const useStyles = makeStyles({
   },
   heroTop: {
     display: "grid", gridTemplateColumns: "minmax(0, 1.5fr) minmax(0, 1fr)", gap: "24px", alignItems: "center", position: "relative", zIndex: 1,
-    "@media (max-width: 1024px)": { gridTemplateColumns: "1fr", gap: "40px", alignItems: "start" },
+    "@media (max-width: 1024px)": { gridTemplateColumns: "1fr", gap: "16px", alignItems: "start" },
   },
-  heroText: { minWidth: 0, display: "flex", flexDirection: "column", justifyContent: "center" },
-  heroImageCol: { minWidth: 0, "@media (max-width: 1024px)": { display: "none" } },
+  heroText: {
+    minWidth: 0,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    "@media (max-width: 1024px)": {
+      order: 1,
+    },
+  },
+  heroImageCol: {
+    minWidth: 0,
+    "@media (max-width: 1024px)": {
+      order: 2,
+      width: "100%",
+      maxWidth: "560px",
+      margin: "0 auto",
+    },
+    "@media (max-width: 768px)": {
+      maxWidth: "460px",
+    },
+    "@media (max-width: 425px)": {
+      maxWidth: "100%",
+    },
+  },
+  heroArtMobile: {
+    "@media (max-width: 1024px)": {
+      maxHeight: "320px",
+    },
+    "@media (max-width: 768px)": {
+      maxHeight: "260px",
+    },
+    "@media (max-width: 425px)": {
+      maxHeight: "220px",
+    },
+    "@media (max-width: 375px)": {
+      maxHeight: "200px",
+    },
+    "@media (max-width: 320px)": {
+      maxHeight: "180px",
+    },
+  },
   heroH1: { margin: "0 0 28px", fontSize: "var(--fs-h1)", fontWeight: 600, lineHeight: 1.05, letterSpacing: "-0.02em" },
   h1em: { fontStyle: "normal", color: "var(--maq-red)" },
   hbr: { display: "none", "@media (min-width: 1120px)": { display: "inline" } },
@@ -274,16 +313,11 @@ const useStyles = makeStyles({
   cardGap: { gap: "24px" },
   prodGrid: { gridAutoRows: "1fr", gap: "24px" },
   deliverGrid: {
-    display: "grid",
-    gap: "24px",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   industriesGrid: {
-    display: "grid",
-    gap: "24px",
-    gridAutoRows: "minmax(172px, auto)",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
@@ -337,7 +371,7 @@ export function HomeV3() {
               </motion.div>
             </motion.div>
             <motion.div className={s.heroImageCol} initial={{ opacity: 0, x: 44, scale: 0.96 }} animate={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.8, ease: EASE, delay: 0.35 }}>
-              <img className={s.heroArt} src="/images/home-banner.png" alt="" aria-hidden />
+              <img className={`${s.heroArt} ${s.heroArtMobile}`} src="/images/home-banner.png" alt="" aria-hidden />
             </motion.div>
           </div>
       </header>
@@ -350,7 +384,7 @@ export function HomeV3() {
             className={s.prodHead}
           />
         </motion.div>
-        <div className={s.deliverGrid}>
+        <CardGrid className={`${s.prodGrid} ${s.deliverGrid}`}>
           {BUILD.map((b, i) => (
             <PosterCard
               key={b.title}
@@ -363,7 +397,7 @@ export function HomeV3() {
               motionProps={onScroll(i)}
             />
           ))}
-        </div>
+        </CardGrid>
       </Section>
 
       {/* FEATURED CASE STUDY — image left, text right (first case study) */}
@@ -422,11 +456,11 @@ export function HomeV3() {
         <motion.div {...fadeUp}>
           <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
         </motion.div>
-        <div className={s.industriesGrid}>
+        <CardGrid minRowHeight="172px" className={`${s.cardGap} ${s.industriesGrid}`}>
           {INDUSTRIES.map((ind, i) => (
             <IconCard key={ind.label} label={ind.label} desc={ind.desc} to={ind.to} icon={ind.icon} stacked motionProps={onScroll(i)} />
           ))}
-        </div>
+        </CardGrid>
       </Section>
 
       {/* RESOURCES — title above, 3 cards (image top, text below) */}

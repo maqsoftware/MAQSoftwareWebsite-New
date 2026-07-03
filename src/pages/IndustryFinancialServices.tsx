@@ -27,6 +27,8 @@ const useVisualStyles = makeStyles({
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
     gap: "12px",
+    pointerEvents: "none",
+    userSelect: "none",
   },
   card: {
     background: "#fff",
@@ -38,11 +40,6 @@ const useVisualStyles = makeStyles({
     alignItems: "center",
     textAlign: "center",
     gap: "10px",
-    transition: "all 0.2s",
-    ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 4px 12px rgba(186,20,26,0.08)",
-    },
   },
   iconWrap: {
     width: "44px",
@@ -88,7 +85,7 @@ const useVisualStyles = makeStyles({
 function FinancialHeroVisual() {
   const v = useVisualStyles();
   return (
-    <div className={v.grid}>
+    <div className={v.grid} aria-hidden="true">
       <div className={v.card}>
         <div className={v.iconWrap}><Brain24Regular /></div>
         <span className={v.label}>AI Agents</span>
