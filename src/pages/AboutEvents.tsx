@@ -199,6 +199,7 @@ export function AboutEvents() {
         : previousEvents.slice(0, INITIAL_PREVIOUS_VISIBLE),
     [previousEvents, showAllPrevious],
   );
+  const hasPreviousEvents = previousEvents.length > 0;
 
   return (
     <>
@@ -256,13 +257,13 @@ export function AboutEvents() {
             <h2 className={s.sectionTitle}>Previous Events</h2>
           </div>
 
-          {loading && (
+          {loading && !hasPreviousEvents && (
             <div className={s.state}>
               <Spinner label="Loading previous events..." />
             </div>
           )}
 
-          {error && !loading && (
+          {error && !loading && !hasPreviousEvents && (
             <div className={s.state}>
               {error}{" "}
               <TextButton size="small" onClick={() => void loadPrevious()}>
@@ -271,11 +272,11 @@ export function AboutEvents() {
             </div>
           )}
 
-          {!loading && !error && previousEvents.length === 0 && (
+          {!loading && !error && !hasPreviousEvents && (
             <div className={s.empty}>No previous events found.</div>
           )}
 
-          {!loading && !error && previousEvents.length > 0 && (
+          {hasPreviousEvents && (
             <>
               <div className={s.pastGrid}>
                 {visiblePreviousEvents.map((event) => (
@@ -288,6 +289,12 @@ export function AboutEvents() {
                   />
                 ))}
               </div>
+
+              {loading && (
+                <div className={s.state}>
+                  <Spinner label="Loading more previous events..." />
+                </div>
+              )}
 
               {previousEvents.length > INITIAL_PREVIOUS_VISIBLE && (
                 <div className={s.paginationControls}>

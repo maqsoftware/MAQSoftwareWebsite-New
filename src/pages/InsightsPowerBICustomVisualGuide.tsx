@@ -36,6 +36,7 @@ const useStyles = makeStyles({
     ":hover": {
       border: "1px solid var(--maq-card-hover-border)",
       boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   imageWrap: {

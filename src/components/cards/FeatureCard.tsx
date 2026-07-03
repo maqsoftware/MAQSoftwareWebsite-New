@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   },
   nonInteractive: {
     ":hover": {
-      border: "0.5px solid var(--maq-card-hover-border)",
+      border: "1px solid var(--maq-card-hover-border)",
     },
   },
   titleRow: {
