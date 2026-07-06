@@ -1,5 +1,7 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
+import { PrimaryButton } from "./buttons";
+import { useContactAction } from "../lib/contact";
 
 /* ==================================================================
    FooterV2 — light footer (design exploration)
@@ -51,6 +53,9 @@ const useStyles = makeStyles({
     lineHeight: 1.6,
     marginTop: "16px",
     maxWidth: "30ch",
+  },
+  contactCta: {
+    marginTop: "12px",
   },
   colTitle: {
     fontSize: "0.875rem",
@@ -167,6 +172,7 @@ function FooterLink({ item, linkClass, disabledClass }: { item: FooterItem; link
 
 export function FooterV2() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   // One group per column: Services; Products; Insights; Company; Support.
   const byTitle = (t: string) => cols.find((c) => c.title === t)!;
   const linkColumns: FooterCol[][] = [
@@ -189,6 +195,13 @@ export function FooterV2() {
                 We help enterprises transform data and AI into measurable impact.
               </p>
               <p className={s.about}>2027 152nd Avenue NE, Redmond, WA 98052</p>
+              <PrimaryButton
+                size="large"
+                className={`maq-equal-cta ${s.contactCta}`}
+                onClick={() => handleContactClick()}
+              >
+                Contact Us
+              </PrimaryButton>
             </div>
             {linkColumns.map((groups, ci) => (
               <div key={ci} className={s.linkCol}>

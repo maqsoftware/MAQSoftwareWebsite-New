@@ -1,5 +1,7 @@
 import { makeStyles } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
+import { PrimaryButton } from "./buttons";
+import { useContactAction } from "../lib/contact";
 
 type FooterItem = {
   label: string;
@@ -42,6 +44,9 @@ const useStyles = makeStyles({
     fontSize: "13px",
     color: "rgba(255,255,255,0.55)",
     lineHeight: 1.6,
+  },
+  contactCta: {
+    marginTop: "12px",
   },
   colTitle: {
     fontSize: "12px",
@@ -179,6 +184,7 @@ function FooterLink({ item, linkClass, disabledClass }: { item: FooterItem; link
 
 export function Footer() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <footer className={s.footer}>
       <div className={s.inner}>
@@ -197,6 +203,13 @@ export function Footer() {
             <p className={s.about} style={{ marginTop: 12 }}>
               2027 152nd Avenue NE, Redmond, WA 98052
             </p>
+            <PrimaryButton
+              size="large"
+              className={`maq-equal-cta ${s.contactCta}`}
+              onClick={() => handleContactClick()}
+            >
+              Contact Us
+            </PrimaryButton>
           </div>
           {cols.map((c) => (
             <div key={c.title}>
