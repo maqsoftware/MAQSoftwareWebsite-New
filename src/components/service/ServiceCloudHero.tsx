@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     background: "var(--maq-surface-cream)",
     border: "1px solid var(--maq-red-pale)",
     borderRadius: "16px",
-    padding: "20px",
+    padding: "10px",
     display: "grid",
     gap: "12px",
     boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
@@ -91,7 +91,7 @@ const useStyles = makeStyles({
     aspectRatio: "16 / 10",
     display: "block",
     borderRadius: "10px",
-    objectFit: "cover",
+    objectFit: "contain",
   },
 });
 
