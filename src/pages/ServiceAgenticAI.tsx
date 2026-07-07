@@ -31,7 +31,13 @@ export function ServiceAgenticAI() {
             <img
               src="/images/Service%20cards/Conversational AI.png"
               alt="AI Solutions and Agents"
-              style={{ width: "100%", display: "block", borderRadius: "10px" }}
+              style={{
+                width: "100%",
+                aspectRatio: "16 / 10",
+                objectFit: "contain",
+                display: "block",
+                borderRadius: "10px",
+              }}
             />
           </div>
         }

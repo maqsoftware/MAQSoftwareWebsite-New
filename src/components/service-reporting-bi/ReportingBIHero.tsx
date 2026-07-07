@@ -91,8 +91,10 @@ const useStyles = makeStyles({
   perfFill: { height: "100%", background: "var(--maq-red)", borderRadius: "3px" },
   heroImage: {
     width: "100%",
+    aspectRatio: "16 / 10",
     display: "block",
     borderRadius: "10px",
+    objectFit: "contain",
   },
 });
 

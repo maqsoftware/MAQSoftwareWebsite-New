@@ -145,12 +145,28 @@ const heroItemV = {
 
 // Clickable image that zooms on hover — same scale/timing as the card images.
 function ZoomImage({ src, frameClass, imgClass, onClick }: { src: string; frameClass: string; imgClass: string; onClick: () => void }) {
+  const isPng = /\.png(?=($|\?))/i.test(src);
+  const avifSrc = isPng ? src.replace(/\.png(?=($|\?))/i, ".avif") : undefined;
+  const webpSrc = isPng ? src.replace(/\.png(?=($|\?))/i, ".webp") : undefined;
   return (
     <div className={frameClass} aria-hidden onClick={onClick} style={{ cursor: "pointer" }}>
-      <motion.img
-        src={src} alt="" className={imgClass} draggable={false}
-        whileHover={{ scale: 1.06 }} transition={{ duration: 0.35, ease: "easeOut" }}
-      />
+      <motion.picture
+        whileHover={{ scale: 1.06 }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
+        style={{ display: "block", width: "100%", height: "100%" }}
+      >
+        {avifSrc ? <source srcSet={avifSrc} type="image/avif" /> : null}
+        {webpSrc ? <source srcSet={webpSrc} type="image/webp" /> : null}
+        <img
+          src={src}
+          alt=""
+          className={imgClass}
+          draggable={false}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+        />
+      </motion.picture>
     </div>
   );
 }
@@ -313,11 +329,16 @@ const useStyles = makeStyles({
   cardGap: { gap: "24px" },
   prodGrid: { gridAutoRows: "1fr", gap: "24px" },
   deliverGrid: {
+    display: "grid",
+    gap: "24px",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   industriesGrid: {
+    display: "grid",
+    gap: "24px",
+    gridAutoRows: "minmax(172px, auto)",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
@@ -344,6 +365,9 @@ export function HomeV3() {
   const s = useStyles();
   const navigate = useNavigate();
   const handleContactClick = useContactAction();
+  // Regression note: keep "What we deliver" and "Industries we serve"
+  // on explicit div grids (not CardGrid). CardGrid's shared auto-fit defaults
+  // can expand these sections to 4 columns on wide screens.
   // Products tab-list — active product changes on tab select.
   const [activeProd, setActiveProd] = useState(0);
   const prod = PRODUCTS[activeProd];
@@ -371,7 +395,19 @@ export function HomeV3() {
               </motion.div>
             </motion.div>
             <motion.div className={s.heroImageCol} initial={{ opacity: 0, x: 44, scale: 0.96 }} animate={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.8, ease: EASE, delay: 0.35 }}>
-              <img className={`${s.heroArt} ${s.heroArtMobile}`} src="/images/home-banner.png" alt="" aria-hidden />
+              <picture>
+                <source srcSet="/images/home-banner.avif" type="image/avif" />
+                <source srcSet="/images/home-banner.webp" type="image/webp" />
+                <img
+                  className={`${s.heroArt} ${s.heroArtMobile}`}
+                  src="/images/home-banner.png"
+                  alt=""
+                  aria-hidden
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+              </picture>
             </motion.div>
           </div>
       </header>
@@ -384,7 +420,7 @@ export function HomeV3() {
             className={s.prodHead}
           />
         </motion.div>
-        <CardGrid className={`${s.prodGrid} ${s.deliverGrid}`}>
+        <div className={s.deliverGrid}>
           {BUILD.map((b, i) => (
             <PosterCard
               key={b.title}
@@ -397,7 +433,7 @@ export function HomeV3() {
               motionProps={onScroll(i)}
             />
           ))}
-        </CardGrid>
+        </div>
       </Section>
 
       {/* FEATURED CASE STUDY — image left, text right (first case study) */}
@@ -456,11 +492,11 @@ export function HomeV3() {
         <motion.div {...fadeUp}>
           <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
         </motion.div>
-        <CardGrid minRowHeight="172px" className={`${s.cardGap} ${s.industriesGrid}`}>
+        <div className={s.industriesGrid}>
           {INDUSTRIES.map((ind, i) => (
             <IconCard key={ind.label} label={ind.label} desc={ind.desc} to={ind.to} icon={ind.icon} stacked motionProps={onScroll(i)} />
           ))}
-        </CardGrid>
+        </div>
       </Section>
 
       {/* RESOURCES — title above, 3 cards (image top, text below) */}

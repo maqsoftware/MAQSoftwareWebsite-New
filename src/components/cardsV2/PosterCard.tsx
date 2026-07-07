@@ -69,11 +69,20 @@ export function PosterCard({
   motionProps?: any;
 }) {
   const s = useStyles();
+  const isPng = Boolean(img && /\.png(?=($|\?))/i.test(img));
+  const avifSrc = isPng ? img!.replace(/\.png(?=($|\?))/i, ".avif") : undefined;
+  const webpSrc = isPng ? img!.replace(/\.png(?=($|\?))/i, ".webp") : undefined;
   return (
     <MotionLink to={to} className={s.card} {...(motionProps ?? {})}>
       <div className={s.imgWrap} style={{ aspectRatio }} aria-hidden>
         {
-          img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} style={{ objectFit: imgFit }} loading="lazy" decoding="async" />
+          img && (
+            <picture style={{ display: "block", width: "100%", height: "100%" }}>
+              {avifSrc ? <source srcSet={avifSrc} type="image/avif" /> : null}
+              {webpSrc ? <source srcSet={webpSrc} type="image/webp" /> : null}
+              <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} style={{ objectFit: imgFit }} loading="lazy" decoding="async" />
+            </picture>
+          )
         }
       </div>
       <div className={s.text}>

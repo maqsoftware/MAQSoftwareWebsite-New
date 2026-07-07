@@ -72,6 +72,9 @@ export function SplitCard({
   children?: ReactNode;
 }) {
   const s = useStyles();
+  const isPng = Boolean(img && /\.png(?=($|\?))/i.test(img));
+  const avifSrc = isPng ? img!.replace(/\.png(?=($|\?))/i, ".avif") : undefined;
+  const webpSrc = isPng ? img!.replace(/\.png(?=($|\?))/i, ".webp") : undefined;
   const inner = (
     <>
       <div className={s.text}>
@@ -86,7 +89,13 @@ export function SplitCard({
         {children ? <div className={s.cta}>{children}</div> : null}
       </div>
       <div className={s.imgWrap} aria-hidden>
-        {img && <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} loading="lazy" decoding="async" />}
+        {img && (
+          <picture style={{ display: "block", width: "100%", height: "100%" }}>
+            {avifSrc ? <source srcSet={avifSrc} type="image/avif" /> : null}
+            {webpSrc ? <source srcSet={webpSrc} type="image/webp" /> : null}
+            <img src={img} alt={imgAlt} className={`${s.img} zoom-img`} loading="lazy" decoding="async" />
+          </picture>
+        )}
       </div>
     </>
   );
