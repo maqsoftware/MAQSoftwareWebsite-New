@@ -313,11 +313,16 @@ const useStyles = makeStyles({
   cardGap: { gap: "24px" },
   prodGrid: { gridAutoRows: "1fr", gap: "24px" },
   deliverGrid: {
+    display: "grid",
+    gap: "24px",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
   },
   industriesGrid: {
+    display: "grid",
+    gap: "24px",
+    gridAutoRows: "minmax(172px, auto)",
     gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
     "@media (max-width: 1080px)": { gridTemplateColumns: "repeat(2, minmax(0, 1fr))" },
     "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
@@ -344,6 +349,9 @@ export function HomeV3() {
   const s = useStyles();
   const navigate = useNavigate();
   const handleContactClick = useContactAction();
+  // Regression note: keep "What we deliver" and "Industries we serve"
+  // on explicit div grids (not CardGrid). CardGrid's shared auto-fit defaults
+  // can expand these sections to 4 columns on wide screens.
   // Products tab-list — active product changes on tab select.
   const [activeProd, setActiveProd] = useState(0);
   const prod = PRODUCTS[activeProd];
@@ -384,7 +392,7 @@ export function HomeV3() {
             className={s.prodHead}
           />
         </motion.div>
-        <CardGrid className={`${s.prodGrid} ${s.deliverGrid}`}>
+        <div className={s.deliverGrid}>
           {BUILD.map((b, i) => (
             <PosterCard
               key={b.title}
@@ -397,7 +405,7 @@ export function HomeV3() {
               motionProps={onScroll(i)}
             />
           ))}
-        </CardGrid>
+        </div>
       </Section>
 
       {/* FEATURED CASE STUDY — image left, text right (first case study) */}
@@ -456,11 +464,11 @@ export function HomeV3() {
         <motion.div {...fadeUp}>
           <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
         </motion.div>
-        <CardGrid minRowHeight="172px" className={`${s.cardGap} ${s.industriesGrid}`}>
+        <div className={s.industriesGrid}>
           {INDUSTRIES.map((ind, i) => (
             <IconCard key={ind.label} label={ind.label} desc={ind.desc} to={ind.to} icon={ind.icon} stacked motionProps={onScroll(i)} />
           ))}
-        </CardGrid>
+        </div>
       </Section>
 
       {/* RESOURCES — title above, 3 cards (image top, text below) */}
