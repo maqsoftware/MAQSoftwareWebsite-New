@@ -140,7 +140,6 @@ const cols: FooterCol[] = [
       { label: "Who we are", to: "/who-we-are" },
       { label: "Careers", to: "/careers" },
       { label: "Sustainability", to: "/sustainability" },
-      { label: "Contact Us", to: "/contact" },
     ],
   },
   {

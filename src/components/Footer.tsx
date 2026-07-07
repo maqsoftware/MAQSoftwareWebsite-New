@@ -148,7 +148,6 @@ const cols: FooterCol[] = [
       { label: "Who we are", to: "/about/who-we-are" },
       { label: "Careers",    to: "/about/careers" },
       { label: "Sustainability", to: "/about/sustainability" },
-      { label: "Contact Us", to: "/contact" },
     ],
   },
   {
