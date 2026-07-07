@@ -89,8 +89,10 @@ const useStyles = makeStyles({
   autoRow: { display: "flex", justifyContent: "space-between", fontSize: "12px", color: "var(--maq-ink)", marginTop: "4px" },
   heroImage: {
     width: "100%",
+    aspectRatio: "16 / 10",
     display: "block",
     borderRadius: "10px",
+    objectFit: "contain",
   },
 });
 
