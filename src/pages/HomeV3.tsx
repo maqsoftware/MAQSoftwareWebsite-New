@@ -145,12 +145,28 @@ const heroItemV = {
 
 // Clickable image that zooms on hover — same scale/timing as the card images.
 function ZoomImage({ src, frameClass, imgClass, onClick }: { src: string; frameClass: string; imgClass: string; onClick: () => void }) {
+  const isPng = /\.png(?=($|\?))/i.test(src);
+  const avifSrc = isPng ? src.replace(/\.png(?=($|\?))/i, ".avif") : undefined;
+  const webpSrc = isPng ? src.replace(/\.png(?=($|\?))/i, ".webp") : undefined;
   return (
     <div className={frameClass} aria-hidden onClick={onClick} style={{ cursor: "pointer" }}>
-      <motion.img
-        src={src} alt="" className={imgClass} draggable={false}
-        whileHover={{ scale: 1.06 }} transition={{ duration: 0.35, ease: "easeOut" }}
-      />
+      <motion.picture
+        whileHover={{ scale: 1.06 }}
+        transition={{ duration: 0.35, ease: "easeOut" }}
+        style={{ display: "block", width: "100%", height: "100%" }}
+      >
+        {avifSrc ? <source srcSet={avifSrc} type="image/avif" /> : null}
+        {webpSrc ? <source srcSet={webpSrc} type="image/webp" /> : null}
+        <img
+          src={src}
+          alt=""
+          className={imgClass}
+          draggable={false}
+          loading="lazy"
+          decoding="async"
+          fetchPriority="low"
+        />
+      </motion.picture>
     </div>
   );
 }
@@ -379,7 +395,19 @@ export function HomeV3() {
               </motion.div>
             </motion.div>
             <motion.div className={s.heroImageCol} initial={{ opacity: 0, x: 44, scale: 0.96 }} animate={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.8, ease: EASE, delay: 0.35 }}>
-              <img className={`${s.heroArt} ${s.heroArtMobile}`} src="/images/home-banner.png" alt="" aria-hidden />
+              <picture>
+                <source srcSet="/images/home-banner.avif" type="image/avif" />
+                <source srcSet="/images/home-banner.webp" type="image/webp" />
+                <img
+                  className={`${s.heroArt} ${s.heroArtMobile}`}
+                  src="/images/home-banner.png"
+                  alt=""
+                  aria-hidden
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+              </picture>
             </motion.div>
           </div>
       </header>
