@@ -1,4 +1,3 @@
-import { makeStyles } from "@fluentui/react-components";
 import {
   Shield24Regular,
   Globe24Regular,
@@ -6,55 +5,13 @@ import {
   ArrowReset24Regular,
   ArrowSync24Regular,
 } from "@fluentui/react-icons";
-import { ServiceHero } from "../components/service/ServiceHero";
+import type { Capability } from "../../components/service/ServiceCapabilities";
+import type { OutcomeItem } from "../../components/service/ServiceOutcomes";
+import type { CaseStudyItem } from "../../components/service/ServiceCaseStudies";
+import type { InsightItem } from "../../components/service/ServiceInsights";
+import type { TestimonialItem } from "../../components/service/ServiceTestimonials";
 
-import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
-import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
-import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
-import { ServiceInsights } from "../components/service/ServiceInsights";
-// import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
-import { CTA } from "../components/CTA";
-// import { TrustBanner } from "../components/TrustBanner";
-import type { Capability } from "../components/service/ServiceCapabilities";
-import type { OutcomeItem } from "../components/service/ServiceOutcomes";
-import type { CaseStudyItem } from "../components/service/ServiceCaseStudies";
-import type { InsightItem } from "../components/service/ServiceInsights";
-import type { TestimonialItem } from "../components/service/ServiceTestimonials";
-
-const useVisualStyles = makeStyles({
-  visual: {
-    background: "var(--maq-surface-cream)",
-    border: "1px solid var(--maq-red-pale)",
-    borderRadius: "16px",
-    padding: "20px",
-    display: "grid",
-    gap: "12px",
-    boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
-    color: "var(--maq-ink)",
-  },
-  heroImage: {
-    width: "100%",
-    aspectRatio: "16 / 10",
-    display: "block",
-    borderRadius: "10px",
-    objectFit: "cover",
-  },
-});
-
-function SecurityVisual() {
-  const s = useVisualStyles();
-  return (
-    <div className={s.visual}>
-      <img
-        className={s.heroImage}
-        src="/images/Service%20cards/Security.png"
-        alt="Security and Governance"
-      />
-    </div>
-  );
-}
-
-const capabilities: Capability[] = [
+export const capabilities: Capability[] = [
   {
     name: "Microsoft Purview",
     tagline: "Unified governance across enterprise data",
@@ -105,7 +62,7 @@ const capabilities: Capability[] = [
   },
 ];
 
-const outcomes: OutcomeItem[] = [
+export const outcomes: OutcomeItem[] = [
   {
     icon: <Shield24Regular />,
     title: "Increased threat protection",
@@ -123,7 +80,7 @@ const outcomes: OutcomeItem[] = [
   },
 ];
 
-const caseStudies: CaseStudyItem[] = [
+export const caseStudies: CaseStudyItem[] = [
   {
     tag: "Secure Copilot",
     title: "Building a secure Copilot: Addressing key security challenges",
@@ -147,7 +104,7 @@ const caseStudies: CaseStudyItem[] = [
   },
 ];
 
-const insights: InsightItem[] = [
+export const insights: InsightItem[] = [
   {
     title: "Strengthen your cloud security and protect your assets with 19 security best practices",
     teaser:
@@ -168,7 +125,7 @@ const insights: InsightItem[] = [
   },
 ];
 
-const testimonials: TestimonialItem[] = [
+export const testimonials: TestimonialItem[] = [
   {
     body: "MAQ Software implemented a zero-trust architecture across our Azure tenant in under six weeks — our compliance audit passed with zero findings for the first time.",
     cite: "CISO — Enterprise financial services",
@@ -178,46 +135,3 @@ const testimonials: TestimonialItem[] = [
     cite: "VP of IT Security — Global retailer",
   },
 ];
-
-export function ServiceSecurityCompliance() {
-  return (
-    <>
-      <ServiceHero
-        eyebrow="Security & Governance"
-        heading="Zero Trust security and AI governance, end to end"
-        subhead="ISO 27001 / 27701 / 27018 certified delivery. We implement Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape and Microsoft security stack."
-        ctaMailSubject="Security & Compliance - MAQ Software"
-        visual={<SecurityVisual />}
-      />
-
-      <ServiceCapabilities
-        sectionId="security-capabilities"
-        title="Our security & governance capabilities"
-        subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
-        capabilities={capabilities}
-        footerLabel="See security case studies"
-        footerHref="/insights/case-studies?filter=Security#insights-content"
-        mailSubjectSuffix="Security & Governance"
-      />
-      <ServiceOutcomes
-        title="Your business outcomes"
-        subhead="What organizations gain when security and compliance are delivered with engineering discipline."
-        outcomes={outcomes}
-      />
-      <ServiceCaseStudies
-        title="How clients are strengthening their security posture"
-        studies={caseStudies}
-        serviceFilter="Security"
-        allCasesLabel="See all case studies"
-        serviceSpecificLabel="See security case studies"
-      />
-      <ServiceInsights
-        title="Our security insights"
-        subhead="See our research that goes into optimizing our security service."
-        insights={insights}
-      />
-      {/* <ServiceTestimonials quotes={testimonials} /> */}
-      <CTA />
-    </>
-  );
-}
