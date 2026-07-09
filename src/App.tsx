@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 // import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
-import { Header } from "./components/Header";
 import { HeaderV2 } from "./components/HeaderV2";
 import { Footer } from "./components/Footer";
 import { FooterV2 } from "./components/FooterV2";
@@ -83,14 +82,8 @@ function ScrollToTop() {
   return null;
 }
 
-// Picks the header/footer per route: the bento exploration (/ and /homev3)
-// uses the new HeaderV2 + light footer; every other route keeps the standard
-// Header + navy footer.
-const isExplorationRoute = (pathname: string) => pathname === "/" || pathname === "/homev3";
-
 function SiteHeader() {
-  const { pathname } = useLocation();
-  return isExplorationRoute(pathname) ? <HeaderV2 /> : <Header />;
+  return <HeaderV2 />;
 }
 
 function SiteFooter() {
