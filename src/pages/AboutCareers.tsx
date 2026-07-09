@@ -5,7 +5,6 @@ import {
   ChevronDown20Regular,
   ChevronRight20Regular,
 } from "@fluentui/react-icons";
-import { CTA } from "../components/CTA";
 import { PrimaryButton, TextButton } from "../components/buttons";
 import {
   fetchOpenings,
@@ -378,7 +377,6 @@ export function AboutCareers() {
         </div>
       </section>
 
-      <CTA />
     </>
   );
 }

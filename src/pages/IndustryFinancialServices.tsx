@@ -19,7 +19,6 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { CTA } from "../components/CTA";
 
 // --- Financial services hero visual ---
 const useVisualStyles = makeStyles({
@@ -271,8 +270,6 @@ export function IndustryFinancialServices() {
         sub="Accelerate financial outcomes with ready-to-deploy Microsoft Azure Marketplace offerings and MAQ Software products—spanning consulting services, real-time intelligence, AI analytics, and migration."
         offers={fsOffers}
       />
-      {/* <Testimonials quotes={fsTestimonials} /> */}
-      <CTA />
     </>
   );
 }

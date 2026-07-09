@@ -13,7 +13,6 @@ import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
 // import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
-import { CTA } from "../components/CTA";
 // import { TrustBanner } from "../components/TrustBanner";
 import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
@@ -217,7 +216,6 @@ export function ServiceSecurityCompliance() {
         insights={insights}
       />
       {/* <ServiceTestimonials quotes={testimonials} /> */}
-      <CTA />
     </>
   );
 }

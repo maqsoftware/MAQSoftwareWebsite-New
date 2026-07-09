@@ -6,7 +6,6 @@ import { ServiceOutcomesData } from "../components/service/ServiceOutcomesData";
 import { ServiceCaseStudiesData } from "../components/service/ServiceCaseStudiesData";
 import { ServiceInsightsData } from "../components/service/ServiceInsightsData";
 // import { ServiceTestimonialsData } from "../components/service/ServiceTestimonialsData";
-import { CTA } from "../components/CTA";
 
 const DATA_ANALYTICS_CASE_STUDIES_CONFIG = {
   serviceFilter: "Data & AI Platforms",
@@ -24,7 +23,6 @@ export function ServiceDataAndAnalytics() {
       <ServiceCaseStudiesData {...DATA_ANALYTICS_CASE_STUDIES_CONFIG} />
       <ServiceInsightsData />
       {/* <ServiceTestimonialsData /> */}
-      <CTA />
     </>
   );
 }

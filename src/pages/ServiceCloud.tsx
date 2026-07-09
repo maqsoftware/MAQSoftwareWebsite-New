@@ -6,7 +6,6 @@ import { ServiceCloudOutcomes } from "../components/service/ServiceCloudOutcomes
 import { ServiceCloudCaseStudies } from "../components/service/ServiceCloudCaseStudies";
 import { ServiceCloudInsights } from "../components/service/ServiceCloudInsights";
 // import { ServiceCloudTestimonials } from "../components/service/ServiceCloudTestimonials";
-import { CTA } from "../components/CTA";
 
 const CLOUD_CASE_STUDIES_CONFIG = {
   serviceFilter: "Cloud Modernization",
@@ -24,7 +23,6 @@ export function ServiceCloud() {
       <ServiceCloudCaseStudies {...CLOUD_CASE_STUDIES_CONFIG} />
       <ServiceCloudInsights />
       {/* <ServiceCloudTestimonials /> */}
-      <CTA />
     </>
   );
 }
