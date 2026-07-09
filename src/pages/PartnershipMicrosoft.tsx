@@ -78,6 +78,9 @@ const useStyles = makeStyles({
     textDecoration: "none",
     color: "inherit",
     display: "block",
+    ":hover > div": {
+      border: "1px solid var(--maq-card-hover-border-interactive)",
+    },
   },
   panel: {
     display: "flex",
