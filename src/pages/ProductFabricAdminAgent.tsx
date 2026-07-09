@@ -224,7 +224,7 @@ const useStyles = makeStyles({
     },
   seeAll: {
     marginTop: "20px",
-    textAlign: "right",
+    textAlign: "left",
     fontSize: "13px",
     fontWeight: 600,
   },
