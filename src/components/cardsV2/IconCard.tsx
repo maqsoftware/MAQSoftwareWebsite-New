@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   // Icon pinned top-left, label pinned bottom-left (fills the card height).
   // The icon sits in a padded rounded chip.
   cardStacked: {
-    flexDirection: "column", alignItems: "flex-start", justifyContent: "space-between", textAlign: "left", gap: "16px",
+    flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start", textAlign: "left", gap: "16px",
     transition: "border-color .2s ease, box-shadow .2s ease, transform .2s ease",
     // Match the content cards: light border-highlight on hover, no scale.
     ":hover": { transform: "translateY(-2px)", border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)" },
