@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
   },
   // Padding around the icon in the stacked layout (no background); brand red.
-  iconChip: { padding: "12px", color: tokens.colorNeutralForeground4 },
+  iconChip: { padding: "12px", color: "var(--maq-red)" },
   text: { display: "flex", flexDirection: "column", gap: "6px" },
   title: { fontSize: "1.125rem", fontWeight: 600, letterSpacing: "-.3px", color: "var(--maq-heading-color)", lineHeight: 1.25, margin: 0 },
   desc: { fontSize: "var(--fs-small)", lineHeight: 1.5, color: "var(--maq-muted-color)", margin: 0 },
