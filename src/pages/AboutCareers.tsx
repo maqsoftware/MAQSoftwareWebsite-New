@@ -153,11 +153,9 @@ const useStyles = makeStyles({
     borderRadius: "10px",
     backgroundColor: "#fff",
     overflow: "hidden",
-    transition: "border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease",
+    transition: "border-color 0.16s ease",
     ":hover": {
-      border: "1px solid var(--maq-card-hover-border)",
-      boxShadow: "var(--maq-shadow-lift)",
-      transform: "translateY(-2px)",
+      border: "1px solid var(--maq-border-strong)",
     },
   },
   jobHeader: {
@@ -174,11 +172,10 @@ const useStyles = makeStyles({
     fontSize: "15px",
     fontWeight: 600,
     color: "var(--maq-black)",
-    ":hover": { backgroundColor: "var(--maq-red-pale)" },
   },
   jobTitleText: { flex: 1 },
   jobBody: {
-    padding: "0 20px 20px 52px",
+    padding: "10px 20px 20px 52px",
     fontSize: "14px",
     lineHeight: 1.65,
     color: "var(--maq-gray-700)",

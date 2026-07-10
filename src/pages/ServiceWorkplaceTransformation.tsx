@@ -4,6 +4,8 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
 import { PrimaryButton, SecondaryButton } from "../components/buttons";
+import { PosterCard } from "../components/cardsV2/PosterCard";
+import { getServiceInsightImage } from "../data/serviceInsightImages";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -396,7 +398,7 @@ const useStyles = makeStyles({
     insGrid: {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "20px",
+        gap: "24px",
         "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
     },
     insCard: {
@@ -544,6 +546,7 @@ interface Insight {
     title: string;
     teaser: string;
     href: string;
+    img?: string;
 }
 
 const insights: Insight[] = [
@@ -583,9 +586,9 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.hero}>
                 <div className={s.heroGrid}>
                     <div>
-                        <span className={s.eyebrow}>
+                        {/* <span className={s.eyebrow}>
                             Workplace transformation &amp; productivity
-                        </span>
+                        </span> */}
                         <h1 className={s.h1}>
                             Microsoft 365 and Copilot rollouts that drive real adoption
                         </h1>
@@ -656,7 +659,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.section} id="workplace-capabilities">
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Our expertise</span>
+                        {/* <span className={s.secEyebrow}>Our expertise</span> */}
                         <h2 className={s.title}>
                             Our workplace transformation capabilities
                         </h2>
@@ -713,7 +716,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.headCentered}>
-                        <span className={s.secEyebrow}>Business outcomes</span>
+                        {/* <span className={s.secEyebrow}>Business outcomes</span> */}
                         <h2 className={s.titleSm}>Your business outcomes</h2>
                         {/* <p className={s.secSub}>
                             What organizations gain when workplace tools are deployed with
@@ -736,7 +739,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Related case studies</span>
+                        {/* <span className={s.secEyebrow}>Related case studies</span> */}
                         <h2 className={s.titleSm}>
                             How clients are transforming their digital workplace
                         </h2>
@@ -772,7 +775,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.section}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Insights</span>
+                        {/* <span className={s.secEyebrow}>Insights</span> */}
                         <h2 className={s.titleSm}>
                             Our workplace transformation insights
                         </h2>
@@ -783,22 +786,16 @@ export function ServiceWorkplaceTransformation() {
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (
-                            <a
+                            <PosterCard
                                 key={i.title}
-                                className={s.insCard}
-                                href={i.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <div className={s.insCover} aria-hidden="true" />
-                                <div className={s.insBody}>
-                                    <h3 className={s.insTitle}>{i.title}</h3>
-                                    <p className={s.insTeaser}>{i.teaser}</p>
-                                    <span className={s.caseRead}>
-                                        Read more
-                                    </span>
-                                </div>
-                            </a>
+                                to={i.href}
+                                img={i.img ?? getServiceInsightImage(i.href)}
+                                deriveFormats={false}
+                                imgFit="cover"
+                                aspectRatio="16 / 10"
+                                title={i.title}
+                                desc={i.teaser}
+                            />
                         ))}
                     </div>
                 </div>

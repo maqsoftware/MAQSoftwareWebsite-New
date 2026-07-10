@@ -20,7 +20,7 @@ export function ProductCaseStudies({
   return (
     <div className={s.inner}>
       <div className={s.headLeft}>
-        <span className={s.secEyebrow}>{eyebrow}</span>
+        {/* <span className={s.secEyebrow}>{eyebrow}</span> */}
         <h2 className={s.titleLg}>{heading}</h2>
       </div>
       <div className={s.caseGrid}>
@@ -83,7 +83,7 @@ export function CaseStudiesPlaceholder({ count = 3, heading = "Case studies", ey
   return (
     <div className={s.inner}>
       <div className={s.headLeft}>
-        <span className={s.secEyebrow}>{eyebrow}</span>
+        {/* <span className={s.secEyebrow}>{eyebrow}</span> */}
         <h2 className={s.titleLg}>{heading}</h2>
       </div>
       <div className={s.caseGrid}>
@@ -103,7 +103,7 @@ export function TestimonialsPlaceholder({ count = 2, heading = "What our clients
   return (
     <div className={s.inner}>
       <div className={s.headLeft}>
-        <span className={s.secEyebrow}>{eyebrow}</span>
+        {/* <span className={s.secEyebrow}>{eyebrow}</span> */}
         <h2 className={s.titleLg}>{heading}</h2>
       </div>
       <div className={s.quoteGrid}>

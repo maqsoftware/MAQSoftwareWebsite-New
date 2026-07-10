@@ -115,7 +115,7 @@ export function Products() {
     <section className={s.section} id="products">
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Our products</span>
+          {/* <span className={s.eyebrow}>Our products</span> */}
           <h2 className={s.title}>
             Acceleration that compresses months into weeks
           </h2>

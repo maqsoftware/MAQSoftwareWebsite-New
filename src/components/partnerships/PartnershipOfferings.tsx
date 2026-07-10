@@ -54,7 +54,7 @@ export function PartnershipOfferings({
     <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.headLeft}>
-          {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
+          {/* eyebrow hidden intentionally */}
           <h2 className={s.titleLg}>{title}</h2>
         </div>
         <div className={s.list}>

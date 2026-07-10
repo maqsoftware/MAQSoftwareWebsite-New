@@ -78,7 +78,7 @@ export function ServiceCloudTestimonials() {
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Testimonials</span>
+          {/* <span className={s.eyebrow}>Testimonials</span> */}
           <h2 className={s.title}>What our clients have to say</h2>
         </div>
         <div className={s.grid}>

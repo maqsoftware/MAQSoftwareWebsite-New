@@ -272,7 +272,7 @@ export function GuideArticle({
             <Link to="/insights/best-practice-guides">Best practice guides</Link> /{" "}
             <span>{eyebrow}</span>
           </div>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
           <h1 className={s.title}>{title}</h1>
           <p className={s.intro}>{intro}</p>
           {lastUpdated ? <div className={s.meta}>Last updated: {lastUpdated}</div> : null}

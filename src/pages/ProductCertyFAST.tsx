@@ -35,7 +35,7 @@ export function ProductCertyFAST() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Power BI quality control</span>
+            {/* <span className={s.eyebrow}>Power BI quality control</span> */}
             <h1 className={s.h1}>CertyFAST</h1>
             <p className={s.heroSub}>
               CertyFAST helps organizations build and maintain high-quality Power BI semantic models. By automating error detection, DAX standardization, and documentation, it improves consistency, reduces development effort, and ensures adherence to modeling best practices.
@@ -65,7 +65,7 @@ export function ProductCertyFAST() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Why CertyFAST</span>
+            {/* <span className={s.secEyebrow}>Why CertyFAST</span> */}
             <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
@@ -82,7 +82,7 @@ export function ProductCertyFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>How it works</span>
+            {/* <span className={s.secEyebrow}>How it works</span> */}
             <h2 className={s.titleLg}>Three steps to certified Power BI reports</h2>
           </div>
           <div className={s.stepGrid}>
@@ -106,7 +106,7 @@ export function ProductCertyFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Insights</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>

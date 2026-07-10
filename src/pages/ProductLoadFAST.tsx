@@ -42,7 +42,7 @@ export function ProductLoadFAST() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Automated Power BI load testing accelerator</span>
+            {/* <span className={s.eyebrow}>Automated Power BI load testing accelerator</span> */}
             <h1 className={s.h1}>LoadFAST</h1>
             <p className={s.heroSub}>
               Microsoft Fabric adoption is growing fast, but estimating the right capacity for reporting workloads remains a challenge. LoadFAST automates Power BI load testing by simulating concurrent users, measuring page load time, and identifying slow reports and visuals so teams can validate performance and plan Fabric capacity with confidence.
@@ -72,7 +72,7 @@ export function ProductLoadFAST() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Why LoadFAST</span>
+            {/* <span className={s.secEyebrow}>Why LoadFAST</span> */}
             <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.featGrid}>
@@ -92,7 +92,7 @@ export function ProductLoadFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>How it works</span>
+            {/* <span className={s.secEyebrow}>How it works</span> */}
             <h2 className={s.titleLg}>3 step process</h2>
           </div>
           <div className={s.stepGrid}>
@@ -114,7 +114,7 @@ export function ProductLoadFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Pricing</span>
+            {/* <span className={s.secEyebrow}>Pricing</span> */}
             <h2 className={s.titleLg}>Pick the plan that fits your scale</h2>
           </div>
           <div className={s.priceGrid2}>
@@ -136,7 +136,7 @@ export function ProductLoadFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Insights</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>

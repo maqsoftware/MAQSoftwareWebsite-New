@@ -37,7 +37,7 @@ export function ProductAIDataLens() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Intelligent data interaction</span>
+            {/* <span className={s.eyebrow}>Intelligent data interaction</span> */}
             <h1 className={s.h1}>AI-DataLens</h1>
             <p className={s.heroSub}>
              AI Data Lens - Accelerate data-driven decision-making with natural language access to enterprise datasets. Users can ask questions and receive instant answers without technical expertise, while preserving row-level security, governance, and audit compliance.
@@ -68,7 +68,7 @@ export function ProductAIDataLens() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Why AI-DataLens</span>
+            {/* <span className={s.secEyebrow}>Why AI-DataLens</span> */}
             <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
@@ -85,7 +85,7 @@ export function ProductAIDataLens() {
       <section className={s.sectionAlt} id="ai-datalens-features">
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Capabilities</span>
+            {/* <span className={s.secEyebrow}>Capabilities</span> */}
             <h2 className={s.titleLg}>Key features</h2>
           </div>
           <div className={s.featGrid}>
@@ -111,7 +111,7 @@ export function ProductAIDataLens() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Insights</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>

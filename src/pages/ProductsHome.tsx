@@ -94,7 +94,7 @@ export function ProductsHome() {
     <>
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <span className={s.eyebrow}>Our products</span>
+          {/* <span className={s.eyebrow}>Our products</span> */}
           <h1 className={s.h1}>
             Accelerators that compress months of build into weeks of value
           </h1>

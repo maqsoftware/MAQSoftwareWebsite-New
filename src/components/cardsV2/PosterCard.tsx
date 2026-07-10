@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
    ================================================================== */
 
 const MotionLink = motion.create(Link);
+const MotionA = motion.a;
 
 const useStyles = makeStyles({
   card: {
@@ -49,6 +50,7 @@ export function PosterCard({
   title,
   desc,
   cta,
+  deriveFormats = true,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   motionProps,
 }: {
@@ -64,16 +66,18 @@ export function PosterCard({
   desc: string;
   /** Optional "Learn more"-style foot label. */
   cta?: string;
+  /** When true, tries sibling .avif/.webp for .png paths. Disable if those files do not exist. */
+  deriveFormats?: boolean;
   /** Framer-motion props (e.g. a scroll-reveal) spread onto the card. */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   motionProps?: any;
 }) {
   const s = useStyles();
-  const isPng = Boolean(img && /\.png(?=($|\?))/i.test(img));
+  const isPng = Boolean(deriveFormats && img && /\.png(?=($|\?))/i.test(img));
   const avifSrc = isPng ? img!.replace(/\.png(?=($|\?))/i, ".avif") : undefined;
   const webpSrc = isPng ? img!.replace(/\.png(?=($|\?))/i, ".webp") : undefined;
-  return (
-    <MotionLink to={to} className={s.card} {...(motionProps ?? {})}>
+  const content = (
+    <>
       <div className={s.imgWrap} style={{ aspectRatio }} aria-hidden>
         {
           img && (
@@ -86,7 +90,7 @@ export function PosterCard({
         }
       </div>
       <div className={s.text}>
-        {eyebrow ? <p className={s.eyebrow}>{eyebrow}</p> : null}
+        {/* eyebrow hidden intentionally */}
         <h3 className={s.title}>{title}</h3>
         <p className={s.desc}>{desc}</p>
         {cta ? (
@@ -95,6 +99,21 @@ export function PosterCard({
           </span>
         ) : null}
       </div>
+    </>
+  );
+
+  const isExternal = /^https?:\/\//i.test(to);
+  if (isExternal) {
+    return (
+      <MotionA href={to} target="_blank" rel="noopener noreferrer" className={s.card} {...(motionProps ?? {})}>
+        {content}
+      </MotionA>
+    );
+  }
+
+  return (
+    <MotionLink to={to} className={s.card} {...(motionProps ?? {})}>
+      {content}
     </MotionLink>
   );
 }
