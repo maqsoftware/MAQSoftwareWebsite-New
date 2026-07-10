@@ -19,13 +19,13 @@ const useStyles = makeStyles({
     cursor: "pointer",
     border: "1px solid var(--maq-border)",
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
     },
   },
   nonInteractive: {
     ":hover": {
-      border: "0.5px solid rgba(186, 20, 26, 0.5)",
+      border: "1px solid var(--maq-card-hover-border)",
     },
   },
   titleRow: {

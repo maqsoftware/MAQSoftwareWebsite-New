@@ -1,10 +1,5 @@
 import { makeStyles } from "@fluentui/react-components";
 import {
-  Shield20Filled,
-  LockClosed20Filled,
-  ShieldCheckmark20Filled,
-} from "@fluentui/react-icons";
-import {
   Shield24Regular,
   Globe24Regular,
   LockClosed24Regular,
@@ -18,7 +13,6 @@ import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
 import { ServiceCaseStudies } from "../components/service/ServiceCaseStudies";
 import { ServiceInsights } from "../components/service/ServiceInsights";
 // import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
-import { CTA } from "../components/CTA";
 // import { TrustBanner } from "../components/TrustBanner";
 import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
@@ -37,121 +31,76 @@ const useVisualStyles = makeStyles({
     boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
     color: "var(--maq-ink)",
   },
-  tile: {
-    background: "#fff",
-    border: "1px solid var(--maq-border)",
+  heroImage: {
+    width: "100%",
+    aspectRatio: "16 / 10",
+    display: "block",
     borderRadius: "10px",
-    padding: "14px 16px",
+    objectFit: "cover",
   },
-  tileTitle: {
-    fontSize: "11px",
-    textTransform: "uppercase",
-    letterSpacing: "0.08em",
-    color: "var(--maq-gray-500)",
-    marginBottom: "8px",
-    display: "flex",
-    alignItems: "center",
-    gap: "6px",
-  },
-  metricRow: {
-    display: "flex",
-    justifyContent: "space-between",
-    fontSize: "12px",
-    color: "var(--maq-ink)",
-    marginTop: "4px",
-  },
-  bigNumber: {
-    fontSize: "28px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    lineHeight: 1.2,
-  },
-  statusRow: {
-    display: "flex",
-    gap: "8px",
-    alignItems: "center",
-    marginTop: "4px",
-  },
-  dot: {
-    width: "8px",
-    height: "8px",
-    borderRadius: "50%",
-    background: "#22c55e",
-  },
-  statusLabel: { fontSize: "12px", color: "var(--maq-gray-600)" },
 });
 
 function SecurityVisual() {
   const s = useVisualStyles();
   return (
-    <div className={s.visual} aria-hidden="true">
-      <div className={s.tile}>
-        <div className={s.tileTitle}>
-          <Shield20Filled /> Threat alerts
-        </div>
-        <div className={s.metricRow}>
-          <span>Blocked today</span>
-          <span className={s.bigNumber}>2,847</span>
-        </div>
-      </div>
-      <div className={s.tile}>
-        <div className={s.tileTitle}>
-          <ShieldCheckmark20Filled /> Compliance score
-        </div>
-        <div className={s.bigNumber}>98%</div>
-        <div className={s.metricRow}>
-          <span>ISO 27001 · SOC 2 · HIPAA</span>
-        </div>
-      </div>
-      <div className={s.tile}>
-        <div className={s.tileTitle}>
-          <LockClosed20Filled /> Active policies
-        </div>
-        <div className={s.statusRow}>
-          <span className={s.dot} />
-          <span className={s.statusLabel}>142 policies enforced</span>
-        </div>
-        <div className={s.statusRow}>
-          <span className={s.dot} />
-          <span className={s.statusLabel}>Zero drift detected</span>
-        </div>
-      </div>
+    <div className={s.visual}>
+      <img
+        className={s.heroImage}
+        src="/images/Service%20cards/Security.png"
+        alt="Security and Governance"
+      />
     </div>
   );
 }
 
 const capabilities: Capability[] = [
   {
-    name: "Threat detection",
-    tagline: "Detect and respond to threats in real-time",
-    icon: <Shield24Regular />,
-    description:
-      "Protect your business with advanced threat detection solutions. Our rapid response capabilities ensure swift action to mitigate security incidents and breaches, keeping your assets and data secure. Leverage Microsoft Sentinel and Defender for Cloud to correlate signals across endpoints, identity, and cloud workloads.",
-    tags: ["Microsoft Sentinel", "Defender for Cloud", "XDR", "SIEM"],
-  },
-  {
-    name: "Network security",
-    tagline: "Harden your perimeter and internal traffic",
-    icon: <Globe24Regular />,
-    description:
-      "Design and enforce zero-trust network architectures with Azure Firewall, NSGs, and private endpoints. Segment workloads, inspect traffic, and prevent lateral movement — whether your estate is hybrid or cloud-native.",
-    tags: ["Azure Firewall", "NSG", "Private Link", "Zero Trust"],
-  },
-  {
-    name: "Data protection & AI governance",
-    tagline: "Safeguard data and govern AI usage end to end",
+    name: "Microsoft Purview",
+    tagline: "Unified governance across enterprise data",
     icon: <LockClosed24Regular />,
     description:
-      "Classify, label, and encrypt sensitive data with Microsoft Purview and Azure Key Vault — and extend governance to GenAI with Purview AI Hub, monitoring prompt content, sensitivity, and DLP across Copilot and custom agents to meet GDPR, HIPAA, and SOC 2 obligations.",
-    tags: ["Microsoft Purview", "Purview AI Hub", "Azure Key Vault", "DLP"],
+      "Enable enterprise-wide data governance with comprehensive data cataloging, lineage, classification, and compliance management.",
+    tags: ["Microsoft Purview", "Data Catalog", "Lineage", "Compliance"],
   },
   {
-    name: "Incident management and recovery",
-    tagline: "Respond, contain, and recover without data loss",
+    name: "Microsoft Defender",
+    tagline: "Intelligent protection against cyber threats",
+    icon: <Shield24Regular />,
+    description:
+      "Protect enterprise environments with advanced threat detection, endpoint security, identity protection, and automated incident response.",
+    tags: ["Microsoft Defender", "Threat Detection", "Endpoint Security", "Incident Response"],
+  },
+  {
+    name: "Microsoft Entra",
+    tagline: "Modern identity and access security",
+    icon: <Globe24Regular />,
+    description:
+      "Secure digital identities and access through modern identity management, authentication, and Zero Trust security practices.",
+    tags: ["Microsoft Entra", "Identity Management", "Authentication", "Zero Trust"],
+  },
+  {
+    name: "Unity Catalog (Databricks)",
+    tagline: "Centralized governance for data and AI",
+    icon: <ArrowSync24Regular />,
+    description:
+      "Govern data and AI assets centrally with fine-grained access control, lineage tracking, and unified metadata management.",
+    tags: ["Unity Catalog", "Databricks", "Access Control", "Metadata"],
+  },
+  {
+    name: "Data Governance & Compliance",
+    tagline: "Govern data with confidence",
     icon: <ArrowReset24Regular />,
     description:
-      "Build playbooks and automated response workflows in Microsoft Sentinel and Defender XDR. When incidents strike, our runbooks orchestrate containment, forensics, communication, and recovery — minimizing downtime and preserving evidence for compliance audits.",
-    tags: ["Sentinel SOAR", "Incident playbooks", "Azure Backup", "Disaster Recovery"],
+      "Establish governance frameworks that ensure enterprise data remains secure, compliant, discoverable, and trusted.",
+    tags: ["Data Governance", "Compliance", "Data Security", "Trust"],
+  },
+  {
+    name: "Identity, Access & AI Governance",
+    tagline: "Secure identities. Govern intelligent systems.",
+    icon: <Shield24Regular />,
+    description:
+      "Implement identity management and AI governance controls that safeguard enterprise assets while enabling responsible AI adoption.",
+    tags: ["Identity", "Access Control", "AI Governance", "Responsible AI"],
   },
 ];
 
@@ -267,7 +216,6 @@ export function ServiceSecurityCompliance() {
         insights={insights}
       />
       {/* <ServiceTestimonials quotes={testimonials} /> */}
-      <CTA />
     </>
   );
 }

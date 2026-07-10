@@ -11,7 +11,6 @@ const lazyNamed = (loader: () => Promise<Record<string, ComponentType<any>>>, ex
   });
 
 const Services = lazyNamed(() => import("../components/Services"), "Services");
-const CaseStudies = lazyNamed(() => import("../components/CaseStudies"), "CaseStudies");
 const Products = lazyNamed(() => import("../components/Products"), "Products");
 const Industries = lazyNamed(() => import("../components/Industries"), "Industries");
 

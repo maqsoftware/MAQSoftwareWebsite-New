@@ -5,7 +5,6 @@ import { ReportingBIOutcomes } from "../components/service-reporting-bi/Reportin
 import { ReportingBICaseStudies } from "../components/service-reporting-bi/ReportingBICaseStudies";
 import { ReportingBIInsights } from "../components/service-reporting-bi/ReportingBIInsights";
 // import { ReportingBITestimonials } from "../components/service-reporting-bi/ReportingBITestimonials";
-import { CTA } from "../components/CTA";
 // import { TrustBanner } from "../components/TrustBanner";
 
 const REPORTING_BI_CASE_STUDIES_CONFIG = {
@@ -24,7 +23,6 @@ export function ServiceReportingBI() {
       <ReportingBICaseStudies {...REPORTING_BI_CASE_STUDIES_CONFIG} />
       <ReportingBIInsights />
       {/* <ReportingBITestimonials /> */}
-      <CTA />
     </>
   );
 }

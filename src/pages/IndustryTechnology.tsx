@@ -14,7 +14,6 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { CTA } from "../components/CTA";
 const useVisualStyles = makeStyles({
   tile: {
     background: "#fff",
@@ -146,31 +145,31 @@ const technologyStats = [
 const technologyAgents = [
   {
     name: "DevelopFAST",
-    tagline: "From feature idea to production-ready code",
+    tagline: "SDLC accelerator",
     icon: <Lightbulb24Regular />,
     description:
-      "Transforms raw feature inputs into structured user stories, technical plans, test cases, and code using generative AI. A reflection phase interprets requirements, proposes three solution approaches, and auto-generates pseudocode and production-grade code. Bug resolution planning reduced from 5 hours to 30 minutes (~90% improvement). Test case creation achieves ~50% time savings.",
+      "SDLC accelerator that combines Azure OpenAI with Azure Search Services to intelligently interpret requirements and generate complete development artifacts. Fetches project context, code context, and wiki documentation to produce user stories, architecture recommendations, best practices, test cases, multiple approaches, pseudocode, and code files.",
   },
   {
-    name: "EmbedFAST",
-    tagline: "Enterprise-grade Power BI embedding in weeks",
+    name: "Demomate (Video generator agent)",
+    tagline: "Marketing demo video automation",
     icon: <ChartMultiple24Regular />,
     description:
-      "Production-ready accelerator for Power BI embedded analytics. Ships export, bookmark, subscription, paginated reporting, and admin-level controls for managing subscriptions and report authoring. Reduced implementation timeline from 12 months to 3 months for a global software company. Minimizes custom development through prebuilt, scalable components.",
+      "Multi-agent system that automates creation of marketing demo videos from user-provided scripts. Executes application workflows via Playwright, records the session, generates context-aware narration using vision models and TTS, and produces finalized synchronized video.",
   },
   {
-    name: "PR Review & Coding Standards Agent",
-    tagline: "Consistent quality across every commit",
-    icon: <Search24Regular />,
-    description:
-      "Evaluates PRs, flags style violations, detects anti-patterns, and drafts review comments. Improves code quality and reduces review effort across teams. Part of MAQ Software's agentic AI suite for accelerating software development workflows.",
-  },
-  {
-    name: "Test Case Generation Agent",
-    tagline: "Automated test design from requirements",
+    name: "Test case generator",
+    tagline: "AI-assisted test scenario recommendation",
     icon: <Bot24Regular />,
     description:
-      "Generates test cases from requirements and code changes, and links them to user stories. Improves coverage and reduces test planning time. Integrated into CI/CD workflows to speed up releases by ~30%.",
+      "Streamlines the software development process by recommending test cases. Uses AI to analyze code and suggest relevant test scenarios, improving coverage and reducing manual testing effort.",
+  },
+  {
+    name: "Code reviewer agent",
+    tagline: "Multi-agent Python code review",
+    icon: <Search24Regular />,
+    description:
+      "AI-powered code review platform that runs a three-stage multi-agent pipeline - Static Analyst, Remediation Specialist, and Senior Architect - to automatically detect issues, generate actionable fixes, and deliver architectural feedback on Python source code. Static analysis (ruff, bandit, radon) feeds findings to the Remediation and Senior Architect agents running in parallel via asyncio, with results surfaced through a React + Vite frontend featuring a real-time agent activity feed, health score ring, and tabbed results view.",
   },
 ];
 
@@ -188,13 +187,6 @@ const technologyCases = [
     teaser:
       "Adopt GitHub Copilot at scale to lift dev productivity and quality.",
     href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
-  },
-  {
-    tag: "AI scaling",
-    title: "Scaling AI for every customer and every developer with MAQ Software",
-    teaser:
-      "A reference architecture and delivery model for scaling agentic AI and Copilot adoption to every developer in the enterprise.",
-    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
   },
 ];
 
@@ -228,8 +220,8 @@ export function IndustryTechnology() {
         cases={technologyCases}
         seeAllLabel="See all technology case studies"
         seeAllHref="/insights/case-studies"
+        uniformCardWidth
       />
-      <CTA />
     </>
   );
 }

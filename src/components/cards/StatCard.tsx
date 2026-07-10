@@ -17,14 +17,18 @@ const useStyles = makeStyles({
   clickable: {
     border: "1px solid var(--maq-border)",
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   nonInteractive: {
     ":hover": {
-      border: "0.5px solid rgba(186, 20, 26, 0.5)",
+      border: "1px solid var(--maq-card-hover-border)",
     },
+  },
+  centeredCard: {
+    alignItems: "center",
   },
   chip: {
     alignSelf: "flex-start",
@@ -45,6 +49,9 @@ const useStyles = makeStyles({
     lineHeight: 1.1,
     marginBottom: "8px",
     letterSpacing: "-0.02em",
+  },
+  centeredMetric: {
+    textAlign: "center",
   },
   title: {
     fontSize: "15px",
@@ -103,12 +110,12 @@ export function StatCard({
 }: StatCardProps) {
   const s = useStyles();
   const showLink = Boolean(href && sourceLabel);
-  const rootClass = `${s.card}${showLink ? ` ${s.clickable}` : ` ${s.nonInteractive}`}${className ? ` ${className}` : ""}`;
+  const rootClass = `${s.card}${showLink ? ` ${s.clickable}` : ` ${s.nonInteractive}`}${centerAlign ? ` ${s.centeredCard}` : ""}${className ? ` ${className}` : ""}`;
 
   const content = (
     <>
       {chip ? <span className={s.chip}>{chip}</span> : null}
-      {metric ? <div className={s.metric}>{metric}</div> : null}
+      {metric ? <div className={`${s.metric}${centerAlign ? ` ${s.centeredMetric}` : ""}`}>{metric}</div> : null}
       {title ? <div className={s.title}>{title}</div> : null}
       <div className={centerAlign ? s.centeredLabel : s.label}>{label}</div>
       {showLink ? (

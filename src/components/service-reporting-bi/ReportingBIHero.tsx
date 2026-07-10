@@ -1,10 +1,4 @@
 import { makeStyles } from "@fluentui/react-components";
-import {
-  Mail24Regular,
-  ChartMultiple20Filled,
-  Gauge20Filled,
-  Window20Filled,
-} from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
 import { PrimaryButton } from "../buttons";
 
@@ -95,6 +89,13 @@ const useStyles = makeStyles({
   perfLabel: { fontSize: "11px", width: "78px", color: "var(--maq-gray-500)" },
   perfTrack: { flex: 1, height: "6px", background: "var(--maq-gray-100)", borderRadius: "3px" },
   perfFill: { height: "100%", background: "var(--maq-red)", borderRadius: "3px" },
+  heroImage: {
+    width: "100%",
+    aspectRatio: "16 / 10",
+    display: "block",
+    borderRadius: "10px",
+    objectFit: "contain",
+  },
 });
 
 export function ReportingBIHero() {
@@ -123,63 +124,12 @@ export function ReportingBIHero() {
           </div>
         </div>
 
-        <div className={s.visual} aria-hidden="true">
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <ChartMultiple20Filled /> Sales by region
-            </div>
-            <div className={s.barRow}>
-              <span className={s.bar} style={{ height: "30%" }} />
-              <span className={s.bar} style={{ height: "55%" }} />
-              <span className={s.bar} style={{ height: "70%" }} />
-              <span className={s.barMuted} style={{ height: "45%" }} />
-              <span className={s.bar} style={{ height: "85%" }} />
-              <span className={s.barMuted} style={{ height: "60%" }} />
-              <span className={s.bar} style={{ height: "92%" }} />
-            </div>
-          </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Gauge20Filled /> Report performance
-            </div>
-            <div className={s.kpiGrid}>
-              <div className={s.kpi}>
-                <div className={s.kpiVal}>1.2s</div>
-                <div className={s.kpiLbl}>Load</div>
-              </div>
-              <div className={s.kpi}>
-                <div className={s.kpiVal}>99.8%</div>
-                <div className={s.kpiLbl}>Refresh</div>
-              </div>
-              <div className={s.kpi}>
-                <div className={s.kpiVal}>-38%</div>
-                <div className={s.kpiLbl}>DAX cost</div>
-              </div>
-            </div>
-          </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Window20Filled /> Embedded view
-            </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Tenant A</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "78%" }} />
-              </div>
-            </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Tenant B</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "62%" }} />
-              </div>
-            </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Tenant C</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "91%" }} />
-              </div>
-            </div>
-          </div>
+        <div className={s.visual}>
+          <img
+            className={s.heroImage}
+            src="/images/Service%20cards/Visualization.png"
+            alt="Insights and Analytics"
+          />
         </div>
       </div>
     </section>

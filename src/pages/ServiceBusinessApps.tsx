@@ -9,8 +9,9 @@ import {
     ArrowRight16Regular,
     Flow24Regular,
     PeopleSearch24Regular,
-    Headset24Regular,
     AppFolder24Regular,
+    Grid24Regular,
+    Code24Regular,
     ShieldTask24Regular,
     ArrowTrendingLines24Regular,
     PersonHeart24Regular,
@@ -19,7 +20,6 @@ import {
     CheckmarkCircle20Filled,
 } from "@fluentui/react-icons";
 
-import { CTA } from "../components/CTA";
 // import { TrustBanner } from \"../components/TrustBanner\";
 
 // ---------------------------------------------------------------------------
@@ -105,6 +105,13 @@ const useStyles = makeStyles({
         fontSize: "12px",
         color: "var(--maq-ink)",
         marginTop: "4px",
+    },
+    heroImage: {
+        width: "100%",
+        aspectRatio: "16 / 10",
+        display: "block",
+        borderRadius: "10px",
+        objectFit: "cover",
     },
 
     // Section commons
@@ -206,12 +213,12 @@ const useStyles = makeStyles({
         cursor: "pointer",
         textAlign: "left",
         transition: "all 0.15s",
-        ":hover": { border: `1px solid var(--maq-red)` },
+        ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
     },
     railBtnActive: {
-        border: `1px solid var(--maq-red)`,
+        border: "1px solid var(--maq-card-hover-border)",
         borderLeftWidth: "3px",
-        boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+        boxShadow: "var(--maq-shadow-sm)",
     },
     railIcon: {
         width: "36px",
@@ -260,8 +267,7 @@ const useStyles = makeStyles({
         background: "#fff",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
         },
     },
     outcomeIcon: {
@@ -301,8 +307,9 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
+            transform: "translateY(-2px)",
         },
     },
     pill: {
@@ -356,8 +363,9 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
+            transform: "translateY(-2px)",
         },
     },
     insCover: {
@@ -397,46 +405,62 @@ interface Capability {
 
 const capabilities: Capability[] = [
     {
-        name: "Workflow automation using Power Platform",
-        tagline: "Automate business workflows",
-        icon: <Flow24Regular />,
-        description:
-            "Transform your operations with Power Platform. We create custom workflows that automate repetitive tasks, integrate seamlessly with your systems, and improve overall productivity.",
-        tags: ["Power Automate", "Power Apps", "Dataverse", "Connectors"],
-    },
-    {
-        name: "Customer insights using Dynamics 365",
-        tagline: "Unified 360° customer view",
-        icon: <PeopleSearch24Regular />,
-        description:
-            "Unify customer signals from sales, service, marketing, and operational systems into a single profile with Dynamics 365 Customer Insights. We build identity resolution, segmentation, and predictive scoring on top of Microsoft Fabric so every team works from the same view of the customer.",
-        tags: [
-            "Dynamics 365 Customer Insights",
-            "Microsoft Fabric",
-            "Customer Voice",
-            "Power BI",
-        ],
-    },
-    {
-        name: "Digital sales and customer service using Dynamics 365",
-        tagline: "Modernize sales and service",
-        icon: <Headset24Regular />,
-        description:
-            "Replace fragmented CRM and ticketing tools with Dynamics 365 Sales and Customer Service. We design omnichannel case routing, AI-assisted next-best-action, and Copilot for Sales experiences so reps and agents resolve work faster with less swivel-chair effort.",
-        tags: [
-            "Dynamics 365 Sales",
-            "Dynamics 365 Customer Service",
-            "Omnichannel",
-            "Copilot for Sales",
-        ],
-    },
-    {
-        name: "Custom copilot development",
-        tagline: "Domain-specific copilots for your apps",
+        name: "Dynamics 365",
+        tagline: "Intelligent applications for modern business",
         icon: <AppFolder24Regular />,
         description:
-            "Build secure, domain-specific copilots that plug directly into your business applications. We design conversational flows, RAG over enterprise content, plugin actions, and Microsoft 365 / Dynamics surfacing so users can ask, decide, and act in natural language.",
-        tags: ["Copilot Studio", "Azure OpenAI", "M365 Copilot", "Plugins"],
+            "Implement intelligent business applications that streamline customer engagement, finance, operations, sales, and service management.",
+        tags: ["Dynamics 365", "Sales", "Service", "Operations"],
+    },
+    {
+        name: "Microsoft Power Platform",
+        tagline: "Low-code solutions for rapid innovation",
+        icon: <Grid24Regular />,
+        description:
+            "Accelerate digital transformation using low-code solutions for application development, workflow automation, analytics, and virtual agents.",
+        tags: [
+            "Power Platform",
+            "Low-Code",
+            "Automation",
+            "Virtual Agents",
+        ],
+    },
+    {
+        name: "Power Apps",
+        tagline: "Build enterprise apps with low code",
+        icon: <Code24Regular />,
+        description:
+            "Develop secure low-code business applications that improve operational efficiency and connect seamlessly with enterprise data sources.",
+        tags: [
+            "Power Apps",
+            "Low-Code Apps",
+            "Enterprise Data",
+            "Operational Efficiency",
+        ],
+    },
+    {
+        name: "Power Automate",
+        tagline: "Intelligent workflow automation at scale",
+        icon: <AppFolder24Regular />,
+        description:
+            "Automate repetitive business processes through intelligent workflows that improve productivity and reduce manual effort.",
+        tags: ["Power Automate", "Workflows", "Process Automation", "Productivity"],
+    },
+    {
+        name: "Customer 360",
+        tagline: "Unified customer insights across channels",
+        icon: <PeopleSearch24Regular />,
+        description:
+            "Create unified customer profiles by integrating enterprise data to deliver personalized experiences and informed business decisions.",
+        tags: ["Customer 360", "Unified Profiles", "Personalization", "Insights"],
+    },
+    {
+        name: "Workflow Automation & Process Optimization",
+        tagline: "Streamlined processes through automation",
+        icon: <ArrowTrendingLines24Regular />,
+        description:
+            "Optimize end-to-end business processes through intelligent automation, approvals, integrations, and operational efficiency improvements.",
+        tags: ["Process Optimization", "Approvals", "Integrations", "Automation"],
     },
 ];
 
@@ -532,7 +556,7 @@ const insights: Insight[] = [
 //
 // Testimonials section: awaiting signed quotes. When ready, define
 //   const testimonials = [{ body: "...", cite: "..." }, ...];
-// and render a Testimonials section immediately before <CTA /> (site-wide rule).
+// and render a Testimonials section at the page end.
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
@@ -572,54 +596,12 @@ export function ServiceBusinessApps() {
                         </div>
                     </div>
 
-                    <div className={s.visual} aria-hidden="true">
-                        <div className={s.tile}>
-                            <div className={s.tileTitle}>
-                                <Flow20Filled /> Workflow status
-                            </div>
-                            <div className={s.perfRow}>
-                                <span className={s.perfLabel}>Approvals</span>
-                                <div className={s.perfTrack}>
-                                    <div className={s.perfFill} style={{ width: "78%" }} />
-                                </div>
-                            </div>
-                            <div className={s.perfRow}>
-                                <span className={s.perfLabel}>Onboarding</span>
-                                <div className={s.perfTrack}>
-                                    <div className={s.perfFill} style={{ width: "64%" }} />
-                                </div>
-                            </div>
-                            <div className={s.perfRow}>
-                                <span className={s.perfLabel}>Field service</span>
-                                <div className={s.perfTrack}>
-                                    <div className={s.perfFill} style={{ width: "91%" }} />
-                                </div>
-                            </div>
-                        </div>
-                        <div className={s.tile}>
-                            <div className={s.tileTitle}>
-                                <CheckmarkCircle20Filled /> Active automations
-                            </div>
-                            <div className={s.pulseRow}>
-                                <span className={s.dot} />
-                                <span className={s.dot} />
-                                <span className={s.dot} />
-                                <span className={s.pulseLabel}>42 flows running · 0 failed in 24h</span>
-                            </div>
-                        </div>
-                        <div className={s.tile}>
-                            <div className={s.tileTitle}>
-                                <Sparkle20Filled /> Today&apos;s impact
-                            </div>
-                            <div className={s.autoRow}>
-                                <span>Cases auto-routed</span>
-                                <span>2,118</span>
-                            </div>
-                            <div className={s.autoRow}>
-                                <span>Hours saved this week</span>
-                                <span>946</span>
-                            </div>
-                        </div>
+                    <div className={s.visual}>
+                        <img
+                            className={s.heroImage}
+                            src="/images/Service%20cards/Apps.png"
+                            alt="Business Applications and Automation"
+                        />
                     </div>
                 </div>
             </section>
@@ -773,10 +755,8 @@ export function ServiceBusinessApps() {
                 </div>
             </section>
 
-            {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
-          When ready, render immediately before <CTA /> (site-wide rule). */}
-
-            <CTA />
+                        {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
+                    When ready, render this section at the page end. */}
         </>
     );
 }

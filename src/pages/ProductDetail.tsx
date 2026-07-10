@@ -112,6 +112,10 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "6px",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
   },
   impactValue: {
     fontSize: "38px",
@@ -216,8 +220,9 @@ const useStyles = makeStyles({
     color: "inherit",
     transition: "all 0.2s",
     ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "var(--maq-shadow-sm)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   relatedName: { fontSize: "15px", fontWeight: 700, color: "var(--maq-black)" },

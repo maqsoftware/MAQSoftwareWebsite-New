@@ -13,10 +13,12 @@ const useStyles = makeStyles({
     flexDirection: "column",
     height: "100%",
     gap: "10px",
+    contain: "layout paint",
     transition: "border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease",
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0, 0, 0, 0.08)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   metaRow: {

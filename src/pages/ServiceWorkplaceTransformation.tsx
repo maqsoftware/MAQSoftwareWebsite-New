@@ -18,7 +18,6 @@ import {
     ArrowTrending20Filled,
 } from "@fluentui/react-icons";
 
-import { CTA } from "../components/CTA";
 // import { TrustBanner } from "../components/TrustBanner";
 
 // ---------------------------------------------------------------------------
@@ -221,7 +220,7 @@ const useStyles = makeStyles({
         cursor: "pointer",
         textAlign: "left",
         transition: "all 0.15s",
-        ":hover": { border: `1px solid var(--maq-red)` },
+        ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
     },
     railBtnActive: {
         border: `1px solid var(--maq-red)`,
@@ -275,8 +274,7 @@ const useStyles = makeStyles({
         background: "#fff",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
         },
     },
     outcomeIcon: {
@@ -318,8 +316,9 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
+            transform: "translateY(-2px)",
         },
     },
     prodLogo: {
@@ -357,8 +356,9 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
+            transform: "translateY(-2px)",
         },
     },
     pill: {
@@ -412,8 +412,9 @@ const useStyles = makeStyles({
         color: "inherit",
         transition: "all 0.2s",
         ":hover": {
-            border: "1px solid var(--maq-red)",
-            boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+            border: "1px solid var(--maq-card-hover-border)",
+            boxShadow: "var(--maq-shadow-lift)",
+            transform: "translateY(-2px)",
         },
     },
     insCover: {
@@ -805,10 +806,8 @@ export function ServiceWorkplaceTransformation() {
                 </div>
             </section>
 
-            {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
-          When ready, render immediately before <CTA /> (site-wide rule). */}
-
-            <CTA />
+                        {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
+                    When ready, render this section at the page end. */}
         </>
     );
 }

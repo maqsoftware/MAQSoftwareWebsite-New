@@ -90,6 +90,10 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     backgroundColor: "var(--maq-off-white)",
     border: "1px solid var(--maq-border)",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
   },
   statValue: {
     display: "block",
@@ -137,6 +141,10 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "12px",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
   },
   achievementIcon: {
     color: "var(--maq-red)",

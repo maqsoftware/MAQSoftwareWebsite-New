@@ -2,10 +2,11 @@ import { makeStyles } from "@fluentui/react-components";
 import {
   ArrowTrendingLines20Filled,
   ThumbLike20Filled,
-  ArrowTrendingLines24Regular,
   Clock24Regular,
   Chat24Regular,
   BuildingShop24Regular,
+  Search24Regular,
+  Tag24Regular,
 } from "@fluentui/react-icons";
 // import { TrustBanner } from "../components/TrustBanner";
 
@@ -14,7 +15,6 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { CTA } from "../components/CTA";
 
 // --- Retail hero visual ---
 const useVisualStyles = makeStyles({
@@ -120,32 +120,39 @@ const retailStats = [
 
 const retailAgents = [
   {
-    name: "What-If Pricing Agent",
-    tagline: "Pricing simulation",
-    icon: <ArrowTrendingLines24Regular />,
-    description:
-      "Simulate pricing decisions before execution using multi-agent AI. Explore the power of pricing without the risk. Our agent simulates real-world pricing shifts, demand patterns, competitive moves, and procurement scenarios before you make a single change. See how each decision impacts revenue, margins, and supplier costs in seconds.",
-  },
-  {
-    name: "Monday Morning Intel",
-    tagline: "Weekly briefings",
+    name: "Monday Morning Agent",
+    tagline: "Automated BI briefings",
     icon: <Clock24Regular />,
     description:
-      "Start every week with a curated executive briefing. The agent consolidates weekend sales, inventory movement, supply alerts, and competitive news into a one-page digest delivered before 9 a.m. Monday.",
-  },
-  {
-    name: "FindFAST",
-    tagline: "Chat with your data",
-    icon: <Chat24Regular />,
-    description:
-      "Natural-language interface over your Microsoft Fabric estate. Ask retail questions the way you'd ask a colleague — basket mix, regional shrink, vendor performance — and get governed, citation-backed answers in seconds.",
+      "Intelligent business intelligence agent that delivers automated weekly metric reports and real-time data insights to user inboxes. Enables executives and teams to subscribe to custom business questions, receive schedulable reports (daily, weekly, monthly) with professional formatting, and query metrics on-demand in plain English. Integrates with Microsoft 365 Copilot, Teams, and Outlook to provide instant data-driven insights without manual report preparation.",
   },
   {
     name: "Smart Store Agent",
-    tagline: "Connected store operations",
+    tagline: "Supply chain intelligence",
     icon: <BuildingShop24Regular />,
     description:
-      "Copilot-powered assistant for store managers. Surfaces live sales, inventory, and workforce signals, then suggests guided next actions — from re-merchandising slow movers to re-routing labor.",
+      "Multi-stage supply chain intelligence platform orchestrating shipment tracking, driver location intelligence, route optimization, and supplier performance analysis. Combines classification, data retrieval, and conversational response generation in a specialized graph architecture. Monitors real-time logistics operations, predicts delivery risks, and optimizes fleet efficiency.",
+  },
+  {
+    name: "Automated Customer Service",
+    tagline: "24/7 service automation",
+    icon: <Chat24Regular />,
+    description:
+      "Virtual assistant that answers customer queries and resolves common service requests (order status, return policy, store hours) automatically.",
+  },
+  {
+    name: "Product Discovery Bot",
+    tagline: "Guided product exploration",
+    icon: <Search24Regular />,
+    description:
+      "Website chatbot that helps customers explore products (ratings, reviews, launch dates, trending items).",
+  },
+  {
+    name: "Automated Product Tag Generator",
+    tagline: "Discoverability automation",
+    icon: <Tag24Regular />,
+    description:
+      "AI agent that auto-generates meaningful product tags (e.g., Organic, Gluten-Free, Vegan) from product descriptions to improve discoverability.",
   },
 ];
 
@@ -252,7 +259,6 @@ export function IndustryRetail() {
         offers={retailOffers}
       />
       {/* <Testimonials quotes={retailTestimonials} /> */}
-      <CTA />
     </>
   );
 }

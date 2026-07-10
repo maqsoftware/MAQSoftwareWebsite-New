@@ -5,7 +5,6 @@ import {
   ChevronDown20Regular,
   ChevronRight20Regular,
 } from "@fluentui/react-icons";
-import { CTA } from "../components/CTA";
 import { PrimaryButton, TextButton } from "../components/buttons";
 import {
   fetchOpenings,
@@ -76,6 +75,10 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "10px",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
   },
   whyTitle: {
     fontSize: "16px",
@@ -150,6 +153,12 @@ const useStyles = makeStyles({
     borderRadius: "10px",
     backgroundColor: "#fff",
     overflow: "hidden",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
+    },
   },
   jobHeader: {
     width: "100%",
@@ -368,7 +377,6 @@ export function AboutCareers() {
         </div>
       </section>
 
-      <CTA />
     </>
   );
 }

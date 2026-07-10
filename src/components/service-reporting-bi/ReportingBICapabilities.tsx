@@ -5,9 +5,11 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../../lib/contact";
 import {
   ChartMultiple24Regular,
-  ArrowSwap24Regular,
+  Pulse24Regular,
   Window24Regular,
   Gauge24Regular,
+  DataPie24Regular,
+  People24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
 import { SecondaryButton } from "../buttons";
@@ -95,12 +97,12 @@ const useStyles = makeStyles({
     cursor: "pointer",
     textAlign: "left",
     transition: "all 0.15s",
-    ":hover": { border: `1px solid var(--maq-red)` },
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   railBtnActive: {
-    border: `1px solid var(--maq-red)`,
+    border: "1px solid var(--maq-card-hover-border)",
     borderLeftWidth: "3px",
-    boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+    boxShadow: "var(--maq-shadow-sm)",
   },
   railIcon: {
     width: "36px",
@@ -140,36 +142,52 @@ interface Capability {
 
 const capabilities: Capability[] = [
   {
-    name: "Data visualization",
-    tagline: "Bring data to life",
+    name: "Power BI",
+    tagline: "Interactive business intelligence dashboards",
     icon: <ChartMultiple24Regular />,
     description:
-      "Transform raw data into compelling visuals. Our data visualization services help you communicate complex insights clearly, making data accessible and actionable for all stakeholders — across Power BI, custom visuals, and Fabric semantic models.",
-    tags: ["Power BI", "Custom visuals", "Fabric semantic models", "Storytelling"],
+      "Create interactive dashboards and business intelligence solutions that transform enterprise data into actionable insights and informed decisions.",
+    tags: ["Power BI", "Dashboards", "Business Intelligence"],
   },
   {
-    name: "Migration to Power BI",
-    tagline: "Modernize legacy reporting estates",
-    icon: <ArrowSwap24Regular />,
+    name: "Microsoft Fabric Real-Time Intelligence",
+    tagline: "Real-time insights from streaming data",
+    icon: <Pulse24Regular />,
     description:
-      "AI-assisted migration of legacy BI estates — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, and MicroStrategy — to Power BI and Microsoft Fabric. We rebuild semantic models, RLS, and pixel-perfect layouts with our MigrateFAST accelerator.",
-    tags: ["MigrateFAST", "Tableau", "SAP BO", "Qlik", "Cognos", "MicroStrategy"],
+      "Monitor streaming data and operational events in real time to enable faster business decisions and proactive responses.",
+    tags: ["Microsoft Fabric", "Real-Time", "Streaming Analytics"],
   },
   {
-    name: "Power BI embedding",
-    tagline: "Reporting inside the apps your users live in",
-    icon: <Window24Regular />,
+    name: "Databricks SQL",
+    tagline: "High-performance analytics with SQL",
+    icon: <DataPie24Regular />,
     description:
-      "Embed governed Power BI reports inside your SaaS product, customer portal, or internal app with row-level security, tenant isolation, and a one-click deployment path via EmbedFAST.",
-    tags: ["EmbedFAST", "Power BI Embedded", "Multi-tenant", "RLS"],
+      "Deliver high-performance SQL analytics for enterprise reporting, dashboards, and collaborative data exploration on large-scale datasets.",
+    tags: ["Databricks SQL", "Enterprise Reporting", "Large-Scale Analytics"],
   },
   {
-    name: "Performance optimization",
-    tagline: "Faster refreshes, lower capacity cost",
+    name: "Executive Dashboards & KPI Reporting",
+    tagline: "Executive visibility into business performance",
     icon: <Gauge24Regular />,
     description:
-      "Diagnose and fix slow reports, refresh failures, and capacity overruns. Our LoadFAST and CertyFAST tools surface DAX, model, and capacity bottlenecks with prioritized remediations.",
-    tags: ["LoadFAST", "CertyFAST", "DAX tuning", "Capacity optimization"],
+      "Design executive dashboards that provide clear visibility into business performance through meaningful KPIs and operational metrics.",
+    tags: ["Executive Dashboards", "KPI Reporting", "Business Performance"],
+  },
+  {
+    name: "Self-Service Analytics",
+    tagline: "Analytics accessible to every business user",
+    icon: <People24Regular />,
+    description:
+      "Empower business users with governed self-service analytics to explore data, build reports, and generate insights independently.",
+    tags: ["Self-Service", "Governed Analytics", "Business Users"],
+  },
+  {
+    name: "Predictive & Prescriptive Analytics",
+    tagline: "Forecast outcomes. Optimize decisions.",
+    icon: <Gauge24Regular />,
+    description:
+      "Apply machine learning and statistical models to forecast outcomes, optimize decisions, and recommend business actions.",
+    tags: ["Predictive Analytics", "Prescriptive Analytics", "Optimization"],
   },
 ];
 

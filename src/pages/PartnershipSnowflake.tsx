@@ -69,8 +69,9 @@ const useStyles = makeStyles({
     transition: "all 0.2s",
     width: "100%",
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   panelContent: {
@@ -243,6 +244,7 @@ export function PartnershipSnowflake() {
         bulletGroups={dataValidatorBullets}
         ctaLabel="Learn more"
         ctaHref="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
+        ctaOpenInNewTab
       />
     </>
   );

@@ -1,5 +1,6 @@
 import {
   createLightTheme,
+  createDarkTheme,
   type BrandVariants,
   type Theme,
 } from "@fluentui/react-components";
@@ -24,8 +25,19 @@ const maqBrand: BrandVariants = {
   160: "#FCE0E1",
 };
 
+const fontFamilyBase =
+  "Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif";
+
 export const maqLightTheme: Theme = {
   ...createLightTheme(maqBrand),
-  fontFamilyBase:
-    "-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif",
+  fontFamilyBase,
+};
+
+// Dark counterpart for inverse-surface regions (e.g. the homepage CTA
+// band) via a nested FluentProvider — see components/DarkSection.tsx.
+// Fluent remaps the neutral ramp to light-on-dark and brightens the
+// brand step so primary buttons stay legible on a dark background.
+export const maqDarkTheme: Theme = {
+  ...createDarkTheme(maqBrand),
+  fontFamilyBase,
 };

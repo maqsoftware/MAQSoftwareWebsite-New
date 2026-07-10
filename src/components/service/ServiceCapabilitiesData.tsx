@@ -2,7 +2,15 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
+import {
+  ArrowRight16Regular,
+  Layer24Regular,
+  ArrowSwap24Regular,
+  DataPie24Regular,
+  ShieldCheckmark24Regular,
+  Database24Regular,
+  Cloud24Regular,
+} from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
 import { SecondaryButton } from "../buttons";
 
@@ -96,12 +104,12 @@ const useStyles = makeStyles({
     cursor: "pointer",
     textAlign: "left",
     transition: "all 0.15s",
-    ":hover": { border: `1px solid var(--maq-red)` },
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   railBtnActive: {
-    border: `1px solid var(--maq-red)`,
+    border: "1px solid var(--maq-card-hover-border)",
     borderLeftWidth: "3px",
-    boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+    boxShadow: "var(--maq-shadow-sm)",
   },
   railIcon: {
     width: "36px",
@@ -141,35 +149,52 @@ interface Capability {
 
 const capabilities: Capability[] = [
   {
-    name: "Data strategy & governance",
-    tagline: "Craft a winning data strategy",
+    name: "Microsoft Fabric",
+    tagline: "Unified analytics for enterprise AI",
+    icon: <Layer24Regular />,
     description:
-      "Develop a comprehensive data strategy that aligns with your business goals. Our experts help you identify key data sources, establish governance frameworks, and create a roadmap for data-driven success.",
-    tags: ["Strategy", "Governance", "Roadmap"],
+      "Build unified analytics platforms using Microsoft Fabric to integrate data engineering, warehousing, real-time analytics, and business intelligence in a single AI-ready environment.",
+    tags: ["Microsoft Fabric", "Analytics", "Enterprise AI"],
   },
   {
-    name: "Lakehouse modernization on Fabric, Snowflake, and Databricks",
-    tagline: "Medallion lakehouses on your platform of choice",
-    description: "Modernize data estates with governed medallion lakehouses on Microsoft Fabric, Snowflake, or Databricks — unified storage, semantic models, and a single source of truth ready for Copilot and AI agents.",
-    tags: ["Microsoft Fabric", "Snowflake", "Databricks", "Lakehouse"],
+    name: "Azure Databricks",
+    tagline: "Scalable data engineering and AI",
+    icon: <Database24Regular />,
+    description:
+      "Develop scalable data engineering and AI solutions using Azure Databricks for advanced analytics, machine learning, collaborative notebooks, and enterprise data processing.",
+    tags: ["Azure Databricks", "Data Engineering", "AI"],
   },
   {
-    name: "Real-time Intelligence using Microsoft Fabric",
-    tagline: "Make decisions in the moment",
-    description: "Build streaming and event-driven architectures on Fabric to deliver real-time insights and actions.",
-    tags: ["Real-time", "Streaming", "Fabric"],
+    name: "Snowflake AI Data Cloud",
+    tagline: "Cloud-native data sharing and analytics",
+    icon: <Cloud24Regular />,
+    description:
+      "Modernize enterprise data ecosystems with Snowflake, enabling secure data sharing, scalable analytics, AI workloads, and cross-cloud collaboration.",
+    tags: ["Snowflake", "Data Cloud", "Cross-cloud"],
   },
   {
-    name: "Data migration",
-    tagline: "Lift & shift with intelligence",
-    description: "Migrate legacy ETL and warehouses to modern cloud platforms with automated tooling and validation.",
-    tags: ["Migration", "ETL", "Lift-and-shift"],
+    name: "Azure Data Factory",
+    tagline: "Automated enterprise data integration",
+    icon: <ArrowSwap24Regular />,
+    description:
+      "Design and automate reliable data integration pipelines that ingest, transform, and orchestrate enterprise data across hybrid and cloud environments.",
+    tags: ["Azure Data Factory", "Pipelines", "Integration"],
   },
   {
-    name: "Platform optimization",
-    tagline: "Cost and performance tuning",
-    description: "Optimize platform costs, query performance, and operational reliability for large-scale analytics.",
-    tags: ["Optimization", "Cost", "Performance"],
+    name: "Lakehouse & Data Warehouse Modernization",
+    tagline: "Modern data architectures for AI",
+    icon: <DataPie24Regular />,
+    description:
+      "Modernize legacy data platforms by implementing scalable lakehouse and warehouse architectures optimized for analytics, governance, and AI.",
+    tags: ["Lakehouse", "Data Warehouse", "Modernization"],
+  },
+  {
+    name: "Master Data Management (MDM)",
+    tagline: "Trusted enterprise data foundation",
+    icon: <ShieldCheckmark24Regular />,
+    description:
+      "Establish trusted enterprise data by centralizing, governing, and maintaining consistent master records across business systems.",
+    tags: ["MDM", "Governance", "Master Data"],
   },
 ];
 

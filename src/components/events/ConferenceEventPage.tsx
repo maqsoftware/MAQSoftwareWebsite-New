@@ -2,7 +2,6 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import {
   ArrowRight20Regular,
   Brain24Regular,
-  Mail24Regular,
   TicketDiagonal24Regular,
 } from "@fluentui/react-icons";
 import type { ReactNode } from "react";
@@ -280,8 +279,9 @@ const useStyles = makeStyles({
     minHeight: "150px",
     transition: "all 0.2s",
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      boxShadow: "var(--maq-shadow-sm)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   productName: {
@@ -305,30 +305,6 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     textDecoration: "none",
     },
-  storyPanel: {
-    maxWidth: "1100px",
-    margin: "0 auto",
-    padding: "32px 32px",
-    color: "var(--maq-ink)",
-    textAlign: "center",
-  },
-  storyButtons: {
-    display: "flex",
-    gap: "12px",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    marginTop: "20px",
-  },
-  email: {
-    marginTop: "12px",
-    fontSize: "13px",
-    color: "var(--maq-gray-700)",
-  },
-  emailLink: {
-    color: "var(--maq-red)",
-    fontWeight: 600,
-    textDecoration: "underline",
-  },
 });
 
 function ProductLink({
@@ -496,37 +472,6 @@ export function ConferenceEventPage(props: ConferenceEventPageProps) {
                 </span>
               </ProductLink>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={s.section}>
-        <div className={s.inner}>
-          <div className={s.storyPanel}>
-            <span className={s.eyebrow}>Talk to us</span>
-            <h2 className={s.title}>Ready to move faster?</h2>
-            {/* <p className={s.sectionSub}>
-              Tell us where you are. We'll show you what's possible in 30
-              minutes - no obligation.
-            </p> */}
-            <div className={s.storyButtons}>
-              <PrimaryButton
-                href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(props.contactSubject)}`}
-                size="large"
-                className="maq-equal-cta"
-              >
-                Contact us
-              </PrimaryButton>
-              <Button
-                variant="tertiary"
-                href="/insights/case-studies"
-                size="large"
-                className="maq-equal-cta"
-                iconAfter={<ArrowRight20Regular />}
-              >
-                Read case studies
-              </Button>
-            </div>
           </div>
         </div>
       </section>

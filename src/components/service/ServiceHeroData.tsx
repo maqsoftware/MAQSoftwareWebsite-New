@@ -1,5 +1,4 @@
 import { makeStyles } from "@fluentui/react-components";
-import { Mail24Regular } from "@fluentui/react-icons";
 import { useContactAction } from "../../lib/contact";
 import { PrimaryButton } from "../buttons";
 
@@ -88,6 +87,13 @@ const useStyles = makeStyles({
   perfFill: { height: "100%", background: "var(--maq-red)", borderRadius: "3px" },
 
   autoRow: { display: "flex", justifyContent: "space-between", fontSize: "12px", color: "var(--maq-ink)", marginTop: "4px" },
+  heroImage: {
+    width: "100%",
+    aspectRatio: "16 / 10",
+    display: "block",
+    borderRadius: "10px",
+    objectFit: "contain",
+  },
 });
 
 export function ServiceHeroData() {
@@ -116,42 +122,12 @@ export function ServiceHeroData() {
           </div>
         </div>
 
-        <div className={s.visual} aria-hidden="true">
-          <div className={s.tile}>
-            <div className={s.tileTitle}>Data throughput</div>
-            <div className={s.pulseRow}>
-              <span className={s.dot} />
-              <span className={s.dot} />
-              <span className={s.dotMuted} />
-              <span className={s.pulseLabel}>streams · 128k events/min</span>
-            </div>
-          </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>Query latency</div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>P99</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "18%" }} />
-              </div>
-            </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Median</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "75%" }} />
-              </div>
-            </div>
-          </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>Active dashboards</div>
-            <div className={s.autoRow}>
-              <span>Power BI reports</span>
-              <span>432</span>
-            </div>
-            <div className={s.autoRow}>
-              <span>Embedded sessions</span>
-              <span>1,028</span>
-            </div>
-          </div>
+        <div className={s.visual}>
+          <img
+            className={s.heroImage}
+            src="/images/Service%20cards/Platforms.png"
+            alt="Data and AI Platforms"
+          />
         </div>
       </div>
     </section>

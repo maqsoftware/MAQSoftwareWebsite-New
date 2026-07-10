@@ -103,6 +103,10 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "10px",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
   },
   whyIconWrap: {
     width: "40px",
@@ -141,6 +145,10 @@ const useStyles = makeStyles({
     background: "#fff",
     border: "1px solid var(--maq-border)",
     borderRadius: "12px",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
     "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
   recognitionImgWrap: {
@@ -199,6 +207,10 @@ const useStyles = makeStyles({
     background: "#fff",
     border: "1px solid var(--maq-border)",
     borderRadius: "12px",
+    transition: "border-color 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
     "@media (max-width: 640px)": { gridTemplateColumns: "1fr" },
   },
   certIconWrap: {

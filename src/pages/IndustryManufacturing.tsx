@@ -12,7 +12,6 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { CTA } from "../components/CTA";
 
 // --- Manufacturing hero visual ---
 const useVisualStyles = makeStyles({
@@ -142,19 +141,17 @@ const manufacturingStats = [
 const manufacturingAgents = [
   {
     name: "Inventory Overview Agent",
-    tagline:
-      "Real-time inventory visibility across warehouses, lines, and suppliers",
+    tagline: "Conversational inventory management",
     icon: <BoxMultiple24Regular />,
     description:
-      "Inventory blind spots across warehouses and production lines lead to costly stockouts, line stoppages, and excess safety stock. MAQ Software builds an agent that consolidates inventory data across locations, monitors stock levels against demand signals, and alerts operations teams to shortfalls before they disrupt production\u2014on Microsoft Fabric with real-time data feeds and Power BI dashboards. Your supply chain and plant operations teams gain a single view of inventory across the enterprise, so replenishment decisions are made on current data rather than yesterday\u2019s report.",
+      "AI-powered multi-agent inventory management system built on the Microsoft Agent Framework (MAF). A top-level InventoryOrchestrator routes natural language queries to three specialized sub-agents — StockAgent, ProcurementAgent, and AnalyticsAgent — each equipped with tool-decorated functions that query a live Supabase PostgreSQL backend. Surfaced through a Streamlit chat UI with persistent in-session conversation memory.",
   },
   {
     name: "Vendor Receipt Scanner",
-    tagline:
-      "Automated goods receipt processing from vendor delivery to ERP entry",
+    tagline: "Automated invoice & receipt processing",
     icon: <DocumentSearch24Regular />,
     description:
-      "Manual goods receipt processing slows procurement cycles, introduces keying errors, and delays the three-way match between purchase orders, delivery notes, and invoices. MAQ Software builds an agent that scans vendor receipts, extracts delivery and quantity data using Azure AI Document Intelligence, validates against open purchase orders, and posts matched receipts into your ERP\u2014on Microsoft Fabric with a full audit trail. Your procurement and warehouse teams close the goods receipt cycle in minutes rather than hours, reducing processing backlogs and duplicate-payment risk.",
+      "AI-powered invoice and receipt processing pipeline built on the Microsoft Agent Framework. Implements a four-node typed workflow — ExtractNode, ParseNode, ValidateNode, StorageNode — where each node is a dedicated MAF agent with registered tools. Processed receipts are persisted in SQLite and indexed in a FAISS vector store for semantic search, with a separate ProcurementValidationAgent cross-checking invoices against purchase order data. Surfaced through a FastAPI backend and a React + Vite frontend.",
   },
 ];
 
@@ -211,7 +208,7 @@ export function IndustryManufacturing() {
       <IndustryHero
         eyebrow="Manufacturing"
         h1="Powering Smarter Manufacturing with AI-Driven Operations"
-        subhead="Supply chain disruptions and manual vendor receipt processing are costing manufacturers time and margin they cannot afford to lose. Leading industrial organizations are deploying AI agents that monitor inventory in real time and automate goods receipt processing from delivery to ERP entry\u2014all on a governed data foundation. At MAQ Software, we build and deploy those agents on Microsoft Fabric, Snowflake, and Databricks\u2014connecting plant operations, supply chain, and procurement on a single platform. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, we take you from AI experimentation to enterprise-scale production\u2014with governance, security, and measurable ROI built in."
+        subhead="Supply chain disruptions and manual vendor receipt processing are costing manufacturers time and margin they cannot afford to lose. Leading industrial organizations are deploying AI agents that monitor inventory in real time and automate goods receipt processing from delivery to ERP entry, all on a governed data foundation. At MAQ Software, we build and deploy those agents on Microsoft Fabric, Snowflake, and Databricks to connect plant operations, supply chain, and procurement on a single platform. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, we take you from AI experimentation to enterprise-scale production with governance, security, and measurable ROI built in."
         mailSubject="Manufacturing - MAQ Software"
         visual={<ManufacturingHeroVisual />}
       />
@@ -235,13 +232,13 @@ export function IndustryManufacturing() {
         cases={manufacturingCases}
         seeAllLabel="See all manufacturing case studies"
         seeAllHref="/insights/case-studies"
+        uniformCardWidth
       />
       <MarketplaceOffers
         sub="Accelerate manufacturing outcomes with ready-to-deploy Microsoft Azure Marketplace offerings \u2014 spanning AI strategy, real-time intelligence, and data platform modernization."
         offers={manufacturingOffers}
       />
       {/* <Testimonials quotes={manufacturingTestimonials} /> */}
-      <CTA />
     </>
   );
 }

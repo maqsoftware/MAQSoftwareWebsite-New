@@ -114,9 +114,9 @@ const useStyles = makeStyles({
     borderRadius: "10px",
     padding: "20px",
     background: "#fff",
-    transition: "border-color 0.16s ease",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease",
     ":hover": {
-      border: "0.5px solid rgba(186, 20, 26, 0.5)",
+      border: "1px solid var(--maq-card-hover-border)",
     },
   },
   impactMetric: {
@@ -153,9 +153,9 @@ const useStyles = makeStyles({
     border: "0.5px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "22px",
-    transition: "border-color 0.16s ease",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease",
     ":hover": {
-      border: "0.5px solid rgba(186, 20, 26, 0.5)",
+      border: "1px solid var(--maq-card-hover-border)",
     },
   },
   featHead: {
@@ -195,8 +195,9 @@ const useStyles = makeStyles({
     color: "inherit",
     transition: "all 0.2s",
     ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   caseTitle: {
@@ -223,7 +224,7 @@ const useStyles = makeStyles({
     },
   seeAll: {
     marginTop: "20px",
-    textAlign: "right",
+    textAlign: "left",
     fontSize: "13px",
     fontWeight: 600,
   },
@@ -295,8 +296,9 @@ const useStyles = makeStyles({
     color: "inherit",
     transition: "all 0.2s",
     ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   mktImg: {
