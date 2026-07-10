@@ -1,10 +1,12 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { ArticleCard } from "../cards/ArticleCard";
+import { PosterCard } from "../cardsV2/PosterCard";
+import { getServiceInsightImage } from "../../data/serviceInsightImages";
 
 export interface InsightItem {
   title: string;
   teaser: string;
   href: string;
+  img?: string;
 }
 
 export interface ServiceInsightsProps {
@@ -37,7 +39,7 @@ const useStyles = makeStyles({
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "20px",
+    gap: "24px",
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
 });
@@ -77,7 +79,16 @@ export function ServiceInsights({
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
-            <ArticleCard key={i.title} title={i.title} teaser={i.teaser} href={i.href} />
+            <PosterCard
+              key={i.title}
+              to={i.href}
+              img={i.img ?? getServiceInsightImage(i.href)}
+              deriveFormats={false}
+              imgFit="cover"
+              aspectRatio="16 / 10"
+              title={i.title}
+              desc={i.teaser}
+            />
           ))}
         </div>
       </div>

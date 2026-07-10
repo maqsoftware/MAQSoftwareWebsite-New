@@ -4,6 +4,8 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
 import { PrimaryButton, SecondaryButton } from "../components/buttons";
+import { PosterCard } from "../components/cardsV2/PosterCard";
+import { getServiceInsightImage } from "../data/serviceInsightImages";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -396,7 +398,7 @@ const useStyles = makeStyles({
     insGrid: {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "20px",
+        gap: "24px",
         "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
     },
     insCard: {
@@ -544,6 +546,7 @@ interface Insight {
     title: string;
     teaser: string;
     href: string;
+    img?: string;
 }
 
 const insights: Insight[] = [
@@ -783,22 +786,16 @@ export function ServiceWorkplaceTransformation() {
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (
-                            <a
+                            <PosterCard
                                 key={i.title}
-                                className={s.insCard}
-                                href={i.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <div className={s.insCover} aria-hidden="true" />
-                                <div className={s.insBody}>
-                                    <h3 className={s.insTitle}>{i.title}</h3>
-                                    <p className={s.insTeaser}>{i.teaser}</p>
-                                    <span className={s.caseRead}>
-                                        Read more
-                                    </span>
-                                </div>
-                            </a>
+                                to={i.href}
+                                img={i.img ?? getServiceInsightImage(i.href)}
+                                deriveFormats={false}
+                                imgFit="cover"
+                                aspectRatio="16 / 10"
+                                title={i.title}
+                                desc={i.teaser}
+                            />
                         ))}
                     </div>
                 </div>
