@@ -20,7 +20,6 @@ import {
     CheckmarkCircle20Filled,
 } from "@fluentui/react-icons";
 
-import { CTA } from "../components/CTA";
 // import { TrustBanner } from \"../components/TrustBanner\";
 
 // ---------------------------------------------------------------------------
@@ -555,7 +554,7 @@ const insights: Insight[] = [
 //
 // Testimonials section: awaiting signed quotes. When ready, define
 //   const testimonials = [{ body: "...", cite: "..." }, ...];
-// and render a Testimonials section immediately before <CTA /> (site-wide rule).
+// and render a Testimonials section at the page end.
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
@@ -754,10 +753,8 @@ export function ServiceBusinessApps() {
                 </div>
             </section>
 
-            {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
-          When ready, render immediately before <CTA /> (site-wide rule). */}
-
-            <CTA />
+                        {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
+                    When ready, render this section at the page end. */}
         </>
     );
 }

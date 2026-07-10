@@ -13,7 +13,6 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { CTA } from "../components/CTA";
 const useVisualStyles = makeStyles({
   tile: {
     background: "#fff",
@@ -228,7 +227,6 @@ export function IndustryPublicSector() {
         seeAllLabel="See all public sector case studies"
         seeAllHref="/insights/case-studies"
       />
-      <CTA />
     </>
   );
 }

@@ -1,7 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";import {
   ArrowRight20Regular,
   Brain24Regular,
-  Mail24Regular,
   TicketDiagonal24Regular,
 } from "@fluentui/react-icons";
 import type { ReactNode } from "react";
@@ -274,30 +273,6 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     textDecoration: "none",
     },
-  storyPanel: {
-    maxWidth: "1100px",
-    margin: "0 auto",
-    padding: "32px 32px",
-    color: "var(--maq-ink)",
-    textAlign: "center",
-  },
-  storyButtons: {
-    display: "flex",
-    gap: "12px",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    marginTop: "20px",
-  },
-  email: {
-    marginTop: "12px",
-    fontSize: "13px",
-    color: "var(--maq-gray-700)",
-  },
-  emailLink: {
-    color: "var(--maq-red)",
-    fontWeight: 600,
-    textDecoration: "underline",
-  },
 });
 
 const talks = [
@@ -573,38 +548,6 @@ export function TechCon365() {
                 </span>
               </ProductLink>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={s.section}>
-        <div className={s.inner}>
-          <div className={s.storyPanel}>
-            <span className={s.eyebrow}>Talk to us</span>
-            <h2 className={s.title}>Ready to move faster?</h2>
-            {/* <p className={s.sectionSub}>
-              Tell us where you are. We'll show you what's possible in 30
-              minutes - no obligation.
-            </p> */}
-            <div className={s.storyButtons}>
-              <PrimaryButton
-                onClick={() =>
-                  handleContactClick("TechCon 365 Chicago 2026 meeting")
-                }
-                size="large"
-                className="maq-equal-cta"
-              >
-                Contact Us
-              </PrimaryButton>
-              <SecondaryButton
-                href="/insights/case-studies"
-                size="large"
-                className="maq-equal-cta"
-                iconAfter={<ArrowRight20Regular />}
-              >
-                Case studies
-              </SecondaryButton>
-            </div>
           </div>
         </div>
       </section>

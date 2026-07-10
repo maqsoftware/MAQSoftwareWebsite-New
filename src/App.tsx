@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 // import { Announcement as AnnouncementRibbon } from "./components/Announcement2";
-import { Header } from "./components/Header";
 import { HeaderV2 } from "./components/HeaderV2";
 import { Footer } from "./components/Footer";
 import { FooterV2 } from "./components/FooterV2";
@@ -83,14 +82,8 @@ function ScrollToTop() {
   return null;
 }
 
-// Picks the header/footer per route: the bento exploration (/ and /homev3)
-// uses the new HeaderV2 + light footer; every other route keeps the standard
-// Header + navy footer.
-const isExplorationRoute = (pathname: string) => pathname === "/" || pathname === "/homev3";
-
 function SiteHeader() {
-  const { pathname } = useLocation();
-  return isExplorationRoute(pathname) ? <HeaderV2 /> : <Header />;
+  return <HeaderV2 />;
 }
 
 function SiteFooter() {
@@ -276,12 +269,7 @@ export function App() {
         <Route path="/services/workplace-transformation" element={<ServiceWorkplaceTransformation />} />
         <Route
           path="/partnerships/microsoft"
-          element={
-            <>
-              <PartnershipMicrosoft />
-              <CTA />
-            </>
-          }
+          element={<PartnershipMicrosoft />}
         />
         <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
         <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
@@ -442,131 +430,61 @@ export function App() {
         />
         <Route
           path="/partnerships/snowflake"
-          element={
-            <>
-              <PartnershipSnowflake />
-              <CTA />
-            </>
-          }
+          element={<PartnershipSnowflake />}
         />
         <Route
           path="/partnerships/databricks"
-          element={
-            <>
-              <PartnershipDatabricks />
-              <CTA />
-            </>
-          }
+          element={<PartnershipDatabricks />}
         />
         <Route path="/products" element={<ProductsHome />} />
         <Route
           path="/products/fabric-admin-agent"
-          element={
-            <>
-              <ProductFabricAdminAgent />
-              <CTA />
-            </>
-          }
+          element={<ProductFabricAdminAgent />}
         />
         <Route
           path="/products/ai-datalens"
-          element={
-            <>
-              <ProductAIDataLens />
-              <CTA />
-            </>
-          }
+          element={<ProductAIDataLens />}
         />
         <Route
           path="/products/embedfast"
-          element={
-            <>
-              <ProductEmbedFAST />
-              <CTA />
-            </>
-          }
+          element={<ProductEmbedFAST />}
         />
         <Route
           path="/products/certyfast"
-          element={
-            <>
-              <ProductCertyFAST />
-              <CTA />
-            </>
-          }
+          element={<ProductCertyFAST />}
         />
         <Route
           path="/products/loadfast"
-          element={
-            <>
-              <ProductLoadFAST />
-              <CTA />
-            </>
-          }
+          element={<ProductLoadFAST />}
         />
         <Route
           path="/products/migratefast"
-          element={
-            <>
-              <ProductMigrateFAST />
-              <CTA />
-            </>
-          }
+          element={<ProductMigrateFAST />}
         />
         <Route
           path="/products/:slug"
-          element={
-            <>
-              <ProductDetail />
-              <CTA />
-            </>
-          }
+          element={<ProductDetail />}
         />
         <Route path="/lab" element={<ComponentLab />} />
         <Route
           path="/who-we-are"
-          element={
-            <>
-              <AboutWhoWeAre />
-              <CTA />
-            </>
-          }
+          element={<AboutWhoWeAre />}
         />
         <Route
           path="/about/who-we-are"
-          element={
-            <>
-              <AboutWhoWeAre />
-              <CTA />
-            </>
-          }
+          element={<AboutWhoWeAre />}
         />
         <Route
           path="/sustainability"
-          element={
-            <>
-              <AboutSustainability />
-              <CTA />
-            </>
-          }
+          element={<AboutSustainability />}
         />
         <Route
           path="/about/sustainability"
-          element={
-            <>
-              <AboutSustainability />
-              <CTA />
-            </>
-          }
+          element={<AboutSustainability />}
         />
         <Route
           path="/privacystatement"
-          element={
-            <>
-              <AboutPrivacyStatement />
-              <CTA />
-            </>
-          }
+          element={<AboutPrivacyStatement />}
         />
         <Route path="/contact" element={<Contact />} />
         <Route path="/events" element={<AboutEvents />} />

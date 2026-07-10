@@ -1,10 +1,10 @@
 import { ArrowRight20Regular } from "@fluentui/react-icons";
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { Link } from "react-router-dom";
 import { PartnershipHero } from "../components/partnerships/PartnershipHero";
 import { PartnershipHighlights } from "../components/partnerships/PartnershipHighlights";
 import { PartnershipOfferings } from "../components/partnerships/PartnershipOfferings";
 import { PartnershipInsights } from "../components/partnerships/PartnershipInsights";
-import { PrimaryButton } from "../components/buttons";
 
 // ---------------------------------------------------------------------------
 // Styles for custom sections (Overview + Marketplace)
@@ -74,6 +74,14 @@ const useStyles = makeStyles({
       gridTemplateColumns: "1fr",
     },
   },
+  panelLink: {
+    textDecoration: "none",
+    color: "inherit",
+    display: "block",
+    ":hover > div": {
+      border: "1px solid var(--maq-card-hover-border-interactive)",
+    },
+  },
   panel: {
     display: "flex",
     flexDirection: "column",
@@ -82,6 +90,7 @@ const useStyles = makeStyles({
     padding: "28px",
     background: "#fff",
     transition: "all 0.2s",
+    height: "100%",
     ":hover": {
       border: "1px solid var(--maq-card-hover-border)",
       boxShadow: "var(--maq-shadow-lift)",
@@ -135,6 +144,15 @@ const useStyles = makeStyles({
     padding: "8px 8px 8px 0",
     borderBottom: `1px solid ${tokens.colorNeutralStroke2}`,
     lineHeight: 1.45,
+  },
+  panelAction: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+    fontSize: "14px",
+    fontWeight: 700,
+    color: "var(--maq-red)",
+    marginTop: "8px",
   },
 });
 
@@ -286,80 +304,86 @@ export function PartnershipMicrosoft() {
 
           <div className={s.panelGrid}>
             {/* Panel A — Power BI Custom Visuals */}
-            <div className={s.panel}>
-              <div className={s.panelContent}>
-                <h3 className={s.panelSubhead}>Power BI Custom Visuals</h3>
-                <p className={s.panelDesc}>
-                  Expand your reporting capabilities with our 43 certified Power BI
-                  custom visuals—the largest 3rd party publisher of certified Power
-                  BI custom visuals worldwide. Our visuals have been downloaded
-                  millions of times and include multiple Microsoft Editor's Picks.
-                </p>
-                <ul className={s.bulletList}>
-                  <li className={s.bulletItem}>
-                    43 certified Power BI custom visuals
-                  </li>
-                  <li className={s.bulletItem}>
-                    Largest 3rd party publisher of certified Power BI custom visuals
-                  </li>
-                  <li className={s.bulletItem}>
-                    Multiple Editor's Pick selections by Microsoft Power BI team
-                  </li>
-                  <li className={s.bulletItem}>
-                    Categories: Change Over Time, Comparison, Distribution, KPI,
-                    Part-to-Whole, Ranking, and more
-                  </li>
-                </ul>
+            <Link
+              className={s.panelLink}
+              to="/insights/power-bi-custom-visual-guide"
+              aria-label="Explore custom visuals"
+            >
+              <div className={s.panel}>
+                <div className={s.panelContent}>
+                  <h3 className={s.panelSubhead}>Power BI Custom Visuals</h3>
+                  <p className={s.panelDesc}>
+                    Expand your reporting capabilities with our 43 certified Power BI
+                    custom visuals—the largest 3rd party publisher of certified Power
+                    BI custom visuals worldwide. Our visuals have been downloaded
+                    millions of times and include multiple Microsoft Editor's Picks.
+                  </p>
+                  <ul className={s.bulletList}>
+                    <li className={s.bulletItem}>
+                      43 certified Power BI custom visuals
+                    </li>
+                    <li className={s.bulletItem}>
+                      Largest 3rd party publisher of certified Power BI custom visuals
+                    </li>
+                    <li className={s.bulletItem}>
+                      Multiple Editor's Pick selections by Microsoft Power BI team
+                    </li>
+                    <li className={s.bulletItem}>
+                      Categories: Change Over Time, Comparison, Distribution, KPI,
+                      Part-to-Whole, Ranking, and more
+                    </li>
+                  </ul>
+                </div>
+                <div className={s.panelAction}>
+                  Explore custom visuals
+                  <ArrowRight20Regular />
+                </div>
               </div>
-              <PrimaryButton
-                size="large"
-                iconAfter={<ArrowRight20Regular />}
-                href="/insights/power-bi-custom-visual-guide"
-              >
-                Explore custom visuals
-              </PrimaryButton>
-            </div>
+            </Link>
 
             {/* Panel B — Consulting Services */}
-            <div className={s.panel}>
-              <div className={s.panelContent}>
-                <h3 className={s.panelSubhead}>
-                  Consulting Services on Azure Marketplace
-                </h3>
-                <p className={s.panelDesc}>
-                  Access 100+ marketplace offers across Microsoft Fabric, Power BI,
-                  Azure AI, Copilot, Power Platform, and Dynamics 365—ranging from
-                  free assessments and briefings to full migration engagements.
-                </p>
-                <table className={s.offerTable}>
-                  <thead>
-                    <tr>
-                      <th className={s.offerTh}>Offer</th>
-                      <th className={s.offerTh}>Duration</th>
-                      <th className={s.offerTh}>Price</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {featuredOffers.map((o) => (
-                      <tr key={o.name}>
-                        <td className={s.offerTd}>{o.name}</td>
-                        <td className={s.offerTd}>{o.duration}</td>
-                        <td className={s.offerTd}>{o.price}</td>
+            <a
+              className={s.panelLink}
+              href="https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View all marketplace offers"
+            >
+              <div className={s.panel}>
+                <div className={s.panelContent}>
+                  <h3 className={s.panelSubhead}>
+                    Consulting Services on Azure Marketplace
+                  </h3>
+                  <p className={s.panelDesc}>
+                    Access 100+ marketplace offers across Microsoft Fabric, Power BI,
+                    Azure AI, Copilot, Power Platform, and Dynamics 365—ranging from
+                    free assessments and briefings to full migration engagements.
+                  </p>
+                  <table className={s.offerTable}>
+                    <thead>
+                      <tr>
+                        <th className={s.offerTh}>Offer</th>
+                        <th className={s.offerTh}>Duration</th>
+                        <th className={s.offerTh}>Price</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {featuredOffers.map((o) => (
+                        <tr key={o.name}>
+                          <td className={s.offerTd}>{o.name}</td>
+                          <td className={s.offerTd}>{o.duration}</td>
+                          <td className={s.offerTd}>{o.price}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <div className={s.panelAction}>
+                  View all marketplace offers
+                  <ArrowRight20Regular />
+                </div>
               </div>
-              <PrimaryButton
-                size="large"
-                iconAfter={<ArrowRight20Regular />}
-                href="https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View all marketplace offers
-              </PrimaryButton>
-            </div>
+            </a>
           </div>
         </div>
       </section>

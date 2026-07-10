@@ -11,7 +11,6 @@ import { IndustryHero } from "../components/industry/IndustryHero";
 import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
-import { CTA } from "../components/CTA";
 
 // --- Healthcare & Life Sciences hero visual ---
 const useVisualStyles = makeStyles({
@@ -240,7 +239,6 @@ export function IndustryHealthcareLifeSciences() {
         seeAllHref="/insights/case-studies"
       />
       {/* <Testimonials quotes={hlsTestimonials} /> */}
-      <CTA />
     </>
   );
 }

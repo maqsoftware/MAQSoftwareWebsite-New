@@ -49,8 +49,9 @@
   --maq-border-strong: #cdd2da;
   --maq-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.06);
   --maq-shadow-md: 0 4px 8px rgba(15, 23, 42, 0.05), 0 12px 32px rgba(15, 23, 42, 0.08);
-  --maq-shadow-lift: 0 14px 30px rgba(0, 0, 0, 0.12); /* card hover lift */
-  --maq-card-hover-border: #c7c7c7;
+  --maq-shadow-lift: none; /* no hover lift shadow */
+  --maq-card-hover-border: var(--maq-border); /* keep border stable on hover for non-clickable cards */
+  --maq-card-hover-border-interactive: #6b7280; /* clickable-card hover outline */
 
   /* Layout — content widths. --maq-container is the app standard;
      --maq-container-wide is the wider column used by the V2 homepage
@@ -159,6 +160,18 @@ img {
 
 a {
   color: inherit;
+}
+
+/* Interactive card behavior: clickable elements keep a darker outline only.
+   Non-clickable cards should show no hover animation/effect. */
+.site-main :is(a, button, [role="button"]):hover {
+  box-shadow: none !important;
+  transform: none !important;
+  border-color: var(--maq-card-hover-border-interactive) !important;
+}
+
+.site-main :is(a, button, [role="button"]):focus-visible {
+  border-color: var(--maq-card-hover-border-interactive) !important;
 }
 
 /* Global section banding: white/gray alternation for all routed page sections.

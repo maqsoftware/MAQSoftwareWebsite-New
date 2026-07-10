@@ -18,7 +18,6 @@ import {
     ArrowTrending20Filled,
 } from "@fluentui/react-icons";
 
-import { CTA } from "../components/CTA";
 // import { TrustBanner } from "../components/TrustBanner";
 
 // ---------------------------------------------------------------------------
@@ -805,10 +804,8 @@ export function ServiceWorkplaceTransformation() {
                 </div>
             </section>
 
-            {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
-          When ready, render immediately before <CTA /> (site-wide rule). */}
-
-            <CTA />
+                        {/* TESTIMONIALS — placeholder, hidden until signed quotes are available.
+                    When ready, render this section at the page end. */}
         </>
     );
 }

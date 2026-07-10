@@ -12,7 +12,6 @@ import { ImpactStats } from "../components/industry/ImpactStats";
 import { SolutionShowcase } from "../components/industry/SolutionShowcase";
 import { IndustryCaseStudies } from "../components/industry/IndustryCaseStudies";
 import { MarketplaceOffers } from "../components/industry/MarketplaceOffers";
-import { CTA } from "../components/CTA";
 
 // --- Manufacturing hero visual ---
 const useVisualStyles = makeStyles({
@@ -240,7 +239,6 @@ export function IndustryManufacturing() {
         offers={manufacturingOffers}
       />
       {/* <Testimonials quotes={manufacturingTestimonials} /> */}
-      <CTA />
     </>
   );
 }

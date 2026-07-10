@@ -24,7 +24,7 @@ const useStyles = makeStyles({
   // Icon pinned top-left, label pinned bottom-left (fills the card height).
   // The icon sits in a padded rounded chip.
   cardStacked: {
-    flexDirection: "column", alignItems: "flex-start", justifyContent: "space-between", textAlign: "left", gap: "16px",
+    flexDirection: "column", alignItems: "flex-start", justifyContent: "flex-start", textAlign: "left", gap: "16px",
     transition: "border-color .2s ease, box-shadow .2s ease, transform .2s ease",
     // Match the content cards: light border-highlight on hover, no scale.
     ":hover": { transform: "translateY(-2px)", border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)" },
@@ -35,7 +35,7 @@ const useStyles = makeStyles({
     display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
   },
   // Padding around the icon in the stacked layout (no background); brand red.
-  iconChip: { padding: "12px", color: tokens.colorNeutralForeground4 },
+  iconChip: { padding: "12px", color: "var(--maq-red)" },
   text: { display: "flex", flexDirection: "column", gap: "6px" },
   title: { fontSize: "1.125rem", fontWeight: 600, letterSpacing: "-.3px", color: "var(--maq-heading-color)", lineHeight: 1.25, margin: 0 },
   desc: { fontSize: "var(--fs-small)", lineHeight: 1.5, color: "var(--maq-muted-color)", margin: 0 },
