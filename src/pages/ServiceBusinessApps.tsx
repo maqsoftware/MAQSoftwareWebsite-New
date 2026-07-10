@@ -67,13 +67,13 @@ const useStyles = makeStyles({
 
     // Hero mosaic
     visual: {
-        background: "var(--maq-surface-cream)",
-        border: "1px solid var(--maq-red-pale)",
-        borderRadius: "16px",
-        padding: "20px",
+        background: "transparent",
+        border: "none",
+        borderRadius: "0",
+        padding: "0",
         display: "grid",
-        gap: "12px",
-        boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+        gap: "0",
+        boxShadow: "none",
         color: "var(--maq-ink)",
     },
     tile: {
@@ -110,7 +110,7 @@ const useStyles = makeStyles({
         width: "100%",
         aspectRatio: "16 / 10",
         display: "block",
-        borderRadius: "10px",
+        borderRadius: "0",
         objectFit: "cover",
     },
 
