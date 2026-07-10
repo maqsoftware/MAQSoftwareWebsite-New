@@ -3,7 +3,7 @@ import { makeStyles } from "@fluentui/react-components";
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   grid: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1fr",

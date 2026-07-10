@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
     padding: "64px 32px 48px",
   },
-  heroInner: { maxWidth: "1240px", margin: "0 auto" },
+  heroInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -37,7 +37,7 @@ const useStyles = makeStyles({
     lineHeight: 1.6,
   },
   list: { padding: "64px 32px", backgroundColor: "#fff" },
-  listInner: { maxWidth: "1240px", margin: "0 auto" },
+  listInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   grid: {
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
@@ -72,7 +72,7 @@ const useStyles = makeStyles({
     borderBottom: "1px solid var(--maq-border)",
   },
   statsInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",

@@ -23,7 +23,7 @@ const useStyles = makeStyles({
     backgroundSize: "cover",
   },
   heroInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
   },
   eyebrow: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
   },
   inner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
   },
   sectionEyebrow: {
@@ -76,11 +76,11 @@ const useStyles = makeStyles({
   },
   h2: {
     display: "block",
-    fontSize: "30px",
+    fontSize: "36px",
     fontWeight: 700,
     lineHeight: 1.15,
-    color: "var(--maq-black)",
-    letterSpacing: "-0.01em",
+    color: "var(--maq-navy)",
+    letterSpacing: "-0.02em",
     margin: "0 0 32px",
     textAlign: "center",
     "@media (max-width: 560px)": {

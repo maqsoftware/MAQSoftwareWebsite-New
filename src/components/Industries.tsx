@@ -13,7 +13,7 @@ import { FeatureCard } from "./cards/FeatureCard";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",

@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     backgroundSize: "cover",
   },
   heroInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
@@ -67,7 +67,7 @@ const useStyles = makeStyles({
     backgroundColor: "#fff",
   },
   statsInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
   },
   statsHeading: {
@@ -115,14 +115,15 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
   },
   achievementsInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
   },
   sectionHeading: {
-    fontSize: "32px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
-    letterSpacing: "-0.01em",
+    color: "var(--maq-navy)",
+    letterSpacing: "-0.02em",
     margin: "0 0 48px",
     textAlign: "center" as const,
   },
@@ -169,7 +170,7 @@ const useStyles = makeStyles({
     backgroundColor: "#fff",
   },
   leadershipInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
@@ -194,10 +195,11 @@ const useStyles = makeStyles({
     flexDirection: "column",
   },
   leadershipHeading: {
-    fontSize: "32px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
-    letterSpacing: "-0.01em",
+    color: "var(--maq-navy)",
+    letterSpacing: "-0.02em",
     margin: "0 0 24px",
   },
   quoteText: {

@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     overflow: "hidden",
   },
   heroInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.05fr 0.95fr",
@@ -140,7 +140,7 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
   },
   inner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
   },
   head: {

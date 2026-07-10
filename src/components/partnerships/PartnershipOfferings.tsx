@@ -3,7 +3,7 @@ import { FeatureCard } from "../cards/FeatureCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   headLeft: { marginBottom: "20px", textAlign: "center" as const },
   eyebrow: {
     fontSize: "12px",

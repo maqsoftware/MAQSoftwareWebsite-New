@@ -8,7 +8,7 @@ const useStyles = makeStyles({
     padding: "12px 32px",
   },
   inner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "flex",
     flexWrap: "wrap",

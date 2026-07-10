@@ -3,7 +3,7 @@ import { ArticleCard } from "../cards/ArticleCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "24px" },
   eyebrow: {
     fontSize: "12px",

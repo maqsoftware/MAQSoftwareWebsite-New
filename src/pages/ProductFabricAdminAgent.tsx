@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   // Hero --------------------------------------------------------------------
   hero: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px 56px" },
   heroGrid: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
@@ -73,7 +73,7 @@ const useStyles = makeStyles({
   // Section commons --------------------------------------------------------
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "28px" },
   headLeft: { marginBottom: "20px", textAlign: "center" },
   secEyebrow: {
@@ -87,19 +87,21 @@ const useStyles = makeStyles({
   },
   title: {
     display: "block",
-    fontSize: "28px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 6px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   titleLg: {
     display: "block",
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 10px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "720px", textAlign: "center" },
 

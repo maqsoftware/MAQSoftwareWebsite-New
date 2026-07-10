@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
   },
   marketInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
   },
   marketHead: {
@@ -46,11 +46,12 @@ const useStyles = makeStyles({
   },
   marketTitle: {
     display: "block",
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: 0,
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
     textAlign: "center" as const,
   },
   panelGrid: {

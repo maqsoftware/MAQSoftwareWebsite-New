@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     padding: "48px 32px 56px",
   },
   heroInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
@@ -97,7 +97,7 @@ const useStyles = makeStyles({
   visualSub: { fontSize: "12px", color: "var(--maq-red)", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 600 },
 
   impact: { padding: "40px 32px", backgroundColor: "#fff", borderBottom: "1px solid var(--maq-border)" },
-  impactInner: { maxWidth: "1240px", margin: "0 auto" },
+  impactInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   impactGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
@@ -128,7 +128,7 @@ const useStyles = makeStyles({
 
   section: { padding: "64px 32px", backgroundColor: "#fff" },
   sectionAlt: { padding: "64px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -139,11 +139,12 @@ const useStyles = makeStyles({
     display: "block",
   },
   h2: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 28px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   featGrid: {
     display: "grid",

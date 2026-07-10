@@ -32,6 +32,8 @@ const useStyles = makeStyles({
     padding: "56px 32px 32px",
     "@media (max-width: 720px)": { padding: "48px 22px 28px" },
   },
+  // Match the home page's wide container (1440px) so the footer aligns with the
+  // landing-page content width.
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   top: {
     display: "grid",

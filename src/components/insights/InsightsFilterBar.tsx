@@ -1,32 +1,44 @@
-import { makeStyles } from "@fluentui/react-components";
-import { Button } from "../buttons";
+import { makeStyles, tokens, mergeClasses, ToggleButton } from "@fluentui/react-components";
 
+// Styled to match the home page's `PillTabs` slicer: neutral rounded pills,
+// 40px tall, gray fill when selected, white with a light stroke when not.
 const useStyles = makeStyles({
-  row: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "8px",
-  },
+  row: { display: "flex", flexWrap: "wrap", gap: tokens.spacingHorizontalS },
   chip: {
-    border: "1px solid var(--maq-border)",
-    color: "var(--maq-ink)",
-    background: "#fff",
-    transition: "all 0.2s ease-in-out",
+    height: "40px",
+    paddingInline: tokens.spacingHorizontalXL,
+    borderRadius: tokens.borderRadiusCircular,
+    border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralStroke2}`,
+    backgroundColor: tokens.colorNeutralBackground1,
+    color: tokens.colorNeutralForeground2,
+    fontSize: tokens.fontSizeBase300,
+    lineHeight: tokens.lineHeightBase300,
+    transitionProperty: "background-color, border-color, color",
+    transitionDuration: tokens.durationFaster,
+    transitionTimingFunction: tokens.curveEasyEase,
     ":hover": {
-      border: "1px solid var(--maq-red)",
-      color: "var(--maq-red)",
-      background: "var(--maq-red-pale)",
+      backgroundColor: tokens.colorNeutralBackground1Hover,
+      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralStroke1Hover}`,
+      color: tokens.colorNeutralForeground1,
+    },
+    ":active": {
+      backgroundColor: tokens.colorNeutralBackground1Pressed,
+      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralStroke1Pressed}`,
     },
   },
   active: {
-    border: "2px solid var(--maq-red)",
-    color: "var(--maq-red)",
-    background: "var(--maq-red-pale)",
-    fontWeight: 600,
+    backgroundColor: tokens.colorNeutralBackground3,
+    border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3}`,
+    color: tokens.colorNeutralForeground1,
+    fontWeight: tokens.fontWeightSemibold,
     ":hover": {
-      border: "2px solid var(--maq-red)",
-      color: "var(--maq-red)",
-      background: "var(--maq-red-pale)",
+      backgroundColor: tokens.colorNeutralBackground3Hover,
+      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3Hover}`,
+      color: tokens.colorNeutralForeground1,
+    },
+    ":active": {
+      backgroundColor: tokens.colorNeutralBackground3Pressed,
+      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3Pressed}`,
     },
   },
 });
@@ -40,17 +52,24 @@ interface InsightsFilterBarProps {
 export function InsightsFilterBar({ items, active, onChange }: InsightsFilterBarProps) {
   const s = useStyles();
   return (
-    <div className={s.row}>
-      {items.map((item) => (
-        <Button
-          key={item}
-          variant="text"
-          className={active === item ? s.active : s.chip}
-          onClick={() => onChange(item)}
-        >
-          {item}
-        </Button>
-      ))}
+    <div className={s.row} role="tablist">
+      {items.map((item) => {
+        const selected = active === item;
+        return (
+          <ToggleButton
+            key={item}
+            role="tab"
+            aria-selected={selected}
+            checked={selected}
+            shape="circular"
+            appearance="subtle"
+            className={mergeClasses(s.chip, selected && s.active)}
+            onClick={() => onChange(item)}
+          >
+            {item}
+          </ToggleButton>
+        );
+      })}
     </div>
   );
 }

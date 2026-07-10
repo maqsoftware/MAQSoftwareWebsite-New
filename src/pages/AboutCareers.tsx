@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   },
-  heroInner: { maxWidth: "1240px", margin: "0 auto" },
+  heroInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   eyebrow: {
     display: "block",
     fontSize: "12px",
@@ -52,12 +52,13 @@ const useStyles = makeStyles({
 
   // ── Why MAQ ───────────────────────────────────────────────────────────────
   whySection: { padding: "48px 32px", backgroundColor: "#fff" },
-  whyInner: { maxWidth: "1240px", margin: "0 auto" },
+  whyInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   sectionHeading: {
-    fontSize: "28px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
-    letterSpacing: "-0.01em",
+    color: "var(--maq-navy)",
+    letterSpacing: "-0.02em",
     margin: "0 0 24px",
     textAlign: "center" as const,
   },
@@ -99,7 +100,7 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
   },
   openingsInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "flex",
     flexDirection: "column",

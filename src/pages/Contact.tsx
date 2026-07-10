@@ -54,9 +54,9 @@ const useStyles = makeStyles({
     },
   },
   heroInner: {
-    // 1304 = 1240 content + 32px gutter each side (border-box), so the inner
-    // content column is 1240px wide and left-aligns with the footer/other pages.
-    maxWidth: "1304px",
+    // 1504 = 1440 content + 32px gutter each side (border-box), so the inner
+    // content column is 1440px wide and left-aligns with the footer/home page.
+    maxWidth: "1504px",
     margin: "0 auto",
     padding: "18px 32px 28px",
     position: "relative",
@@ -116,8 +116,8 @@ const useStyles = makeStyles({
   },
 
   featureShell: {
-    // 1304 = 1240 content + 32px gutter each side (border-box) to match the footer.
-    maxWidth: "1304px",
+    // 1504 = 1440 content + 32px gutter each side (border-box) to match the footer.
+    maxWidth: "1504px",
     margin: "10px auto 0",
     padding: "0 32px",
     "@media (max-width: 960px)": {
@@ -192,8 +192,8 @@ const useStyles = makeStyles({
   },
 
   officesSection: {
-    // 1304 = 1240 content + 32px gutter each side (border-box) to match the footer.
-    maxWidth: "1304px",
+    // 1504 = 1440 content + 32px gutter each side (border-box) to match the footer.
+    maxWidth: "1504px",
     margin: "0 auto",
     padding: "12px 32px 16px",
     "@media (max-width: 960px)": {
