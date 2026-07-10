@@ -13,7 +13,7 @@ const INITIAL_VISIBLE = 9;
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "1240px", margin: "0 auto" },
-  title: { fontSize: "30px", fontWeight: 700, color: "var(--maq-black)", margin: "0 0 10px" },
+  title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 10px", letterSpacing: "-0.02em" },
   grid: {
     marginTop: "18px",
     display: "grid",
@@ -78,7 +78,7 @@ export function InsightsBestPracticeGuides() {
                 imageUrl={item.imageUrl}
                 imageAlt={item.title}
                 tag={item.topic}
-                ctaLabel="Read full article"
+                ctaLabel="Read full story"
               />
             ))}
           </div>

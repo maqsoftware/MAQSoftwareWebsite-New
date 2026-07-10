@@ -17,11 +17,12 @@ const useStyles = makeStyles({
   },
   titleLg: {
     display: "block",
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: 0,
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
     textAlign: "center" as const,
   },
   list: {

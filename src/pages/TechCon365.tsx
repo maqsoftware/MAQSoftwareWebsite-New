@@ -149,10 +149,10 @@ const useStyles = makeStyles({
     marginBottom: "28px",
   },
   title: {
-    fontSize: "34px",
-    lineHeight: 1.18,
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     letterSpacing: "-0.02em",
     margin: "0 0 10px",
   },

@@ -123,18 +123,20 @@ const useStyles = makeStyles({
         marginBottom: "6px",
     },
     title: {
-        fontSize: "30px",
+        fontSize: "36px",
+        lineHeight: 1.15,
         fontWeight: 700,
-        color: "var(--maq-black)",
+        color: "var(--maq-navy)",
         margin: "0 0 6px",
-        letterSpacing: "-0.01em",
+        letterSpacing: "-0.02em",
     },
     titleSm: {
-        fontSize: "28px",
+        fontSize: "36px",
+        lineHeight: 1.15,
         fontWeight: 700,
-        color: "var(--maq-black)",
+        color: "var(--maq-navy)",
         margin: "0 0 6px",
-        letterSpacing: "-0.01em",
+        letterSpacing: "-0.02em",
     },
     secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
@@ -722,7 +724,7 @@ export function ServiceBusinessApps() {
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>
-                                    Read full case study
+                                    Read full story
                                 </span>
                             </a>
                         ))}

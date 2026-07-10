@@ -6,11 +6,12 @@ const useStyles = makeStyles({
   inner: { maxWidth: "1240px", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "20px" },
   title: {
-    fontSize: "28px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 6px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   sub: {
     fontSize: "14px",

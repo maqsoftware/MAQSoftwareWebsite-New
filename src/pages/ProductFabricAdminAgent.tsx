@@ -581,7 +581,7 @@ export function ProductFabricAdminAgent() {
                 <div className={s.caseTitle}>{c.title}</div>
                 <div className={s.caseTeaser}>{c.teaser}</div>
                 <span className={s.caseLink}>
-                  Read full case study
+                  Read full story
                 </span>
               </a>
             ))}

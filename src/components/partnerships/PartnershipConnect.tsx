@@ -10,11 +10,12 @@ const useStyles = makeStyles({
   },
   inner: { maxWidth: "720px", margin: "0 auto" },
   title: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
     color: "#fff",
     margin: "0 0 16px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   desc: {
     fontSize: "15px",

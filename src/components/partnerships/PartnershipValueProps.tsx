@@ -17,11 +17,12 @@ const useStyles = makeStyles({
   },
   title: {
     display: "block",
-    fontSize: "28px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 6px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   grid: {
     display: "grid",

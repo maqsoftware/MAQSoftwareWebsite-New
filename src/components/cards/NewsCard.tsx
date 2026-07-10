@@ -78,7 +78,7 @@ export function NewsCard({
   date,
   href,
   image,
-  readMoreLabel = "Read full article",
+  readMoreLabel = "Read full story",
 }: NewsCardProps) {
   const s = useStyles();
 
