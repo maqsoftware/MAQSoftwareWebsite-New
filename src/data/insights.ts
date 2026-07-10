@@ -170,7 +170,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2022-06",
     "teaser": "Case study: Real-time reporting for an organic supermarket chain.",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBEIqfVElginQBBg8Fh2YfoF95hICj-XGOmvXvtCtZaTObO2XCm5HT0rott12MpvPpcye5K1q_zBl7T3uJj1Ib7-nIJsjqO-ON7YDSQDOIPYNhaGgZsqUoVaOOJAbYxIprFpjrDdv9uFaWR6taFMTCwrwSkY-68FnmBudwTkxr7S-XmJfw9_3W74fj0g/s1600/Shopper2.png"
+    "imageUrl": "/images/case-studies/external/shopper2.png"
   },
   {
     "title": "Accurately Forecast Customer Sales with Machine Learning (ML)",

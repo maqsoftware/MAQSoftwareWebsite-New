@@ -83,6 +83,26 @@ useEffect(() => {
   const halfCount = Math.max(INITIAL_VISIBLE + 1, Math.ceil(total / 2));
   const visibleItems = filtered.slice(0, visibleCount);
 
+  useEffect(() => {
+    const preloadItems = visibleItems.slice(0, 3);
+    const links = preloadItems
+      .map((item) => item.imageUrl)
+      .filter((href, index, values) => Boolean(href) && values.indexOf(href) === index)
+      .map((href) => {
+        const link = document.createElement("link");
+        link.rel = "preload";
+        link.as = "image";
+        link.href = href;
+        link.setAttribute("fetchpriority", "high");
+        document.head.appendChild(link);
+        return link;
+      });
+
+    return () => {
+      links.forEach((link) => link.remove());
+    };
+  }, [visibleItems]);
+
   const handleShowMore = () => {
     if (visibleCount < halfCount && halfCount < total) {
       setVisibleCount(halfCount);
