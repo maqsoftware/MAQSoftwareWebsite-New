@@ -103,7 +103,7 @@ export function ServiceHeroData() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Data &amp; AI Platforms</span>
+          {/* <span className={s.eyebrow}>Data &amp; AI Platforms</span> */}
           <h1 className={s.h1}>Medallion lakehouses, built for scale and trust</h1>
           <p className={s.sub}>
             Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed

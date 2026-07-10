@@ -583,9 +583,9 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.hero}>
                 <div className={s.heroGrid}>
                     <div>
-                        <span className={s.eyebrow}>
+                        {/* <span className={s.eyebrow}>
                             Workplace transformation &amp; productivity
-                        </span>
+                        </span> */}
                         <h1 className={s.h1}>
                             Microsoft 365 and Copilot rollouts that drive real adoption
                         </h1>
@@ -656,7 +656,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.section} id="workplace-capabilities">
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Our expertise</span>
+                        {/* <span className={s.secEyebrow}>Our expertise</span> */}
                         <h2 className={s.title}>
                             Our workplace transformation capabilities
                         </h2>
@@ -713,7 +713,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.headCentered}>
-                        <span className={s.secEyebrow}>Business outcomes</span>
+                        {/* <span className={s.secEyebrow}>Business outcomes</span> */}
                         <h2 className={s.titleSm}>Your business outcomes</h2>
                         {/* <p className={s.secSub}>
                             What organizations gain when workplace tools are deployed with
@@ -736,7 +736,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Related case studies</span>
+                        {/* <span className={s.secEyebrow}>Related case studies</span> */}
                         <h2 className={s.titleSm}>
                             How clients are transforming their digital workplace
                         </h2>
@@ -772,7 +772,7 @@ export function ServiceWorkplaceTransformation() {
             <section className={s.section}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Insights</span>
+                        {/* <span className={s.secEyebrow}>Insights</span> */}
                         <h2 className={s.titleSm}>
                             Our workplace transformation insights
                         </h2>

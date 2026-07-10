@@ -199,7 +199,7 @@ export function ReportingBICapabilities() {
     <section className={s.section} id="bi-capabilities">
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Our expertise</span>
+          {/* <span className={s.eyebrow}>Our expertise</span> */}
           <h2 className={s.title}>Our insights &amp; analytics capabilities</h2>
           {/* <p className={s.sub}>
             Four capability pillars that turn raw data into governed, high-performance Power BI and

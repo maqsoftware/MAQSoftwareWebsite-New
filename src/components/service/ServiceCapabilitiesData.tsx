@@ -206,7 +206,7 @@ export function ServiceCapabilitiesData() {
     <section className={s.section} id="data-analytics-capabilities">
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Our expertise</span>
+          {/* <span className={s.eyebrow}>Our expertise</span> */}
           <h2 className={s.title}>Our data &amp; AI platform capabilities</h2>
           {/* <p className={s.sub}>
             Capabilities that turn data into reliable, scalable analytics and real-time decisioning.

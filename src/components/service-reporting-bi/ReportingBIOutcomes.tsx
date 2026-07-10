@@ -66,7 +66,7 @@ export function ReportingBIOutcomes() {
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Business outcomes</span>
+          {/* <span className={s.eyebrow}>Business outcomes</span> */}
           <h2 className={s.title}>Your business outcomes</h2>
           {/* <p className={s.sub}>
             What organizations gain when reporting is delivered with engineering discipline.

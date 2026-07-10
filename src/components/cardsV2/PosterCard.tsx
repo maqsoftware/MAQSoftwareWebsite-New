@@ -86,7 +86,7 @@ export function PosterCard({
         }
       </div>
       <div className={s.text}>
-        {eyebrow ? <p className={s.eyebrow}>{eyebrow}</p> : null}
+        {/* eyebrow hidden intentionally */}
         <h3 className={s.title}>{title}</h3>
         <p className={s.desc}>{desc}</p>
         {cta ? (

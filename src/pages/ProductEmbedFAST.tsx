@@ -47,7 +47,7 @@ export function ProductEmbedFAST() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Automated Power BI embedding accelerator</span>
+            {/* <span className={s.eyebrow}>Automated Power BI embedding accelerator</span> */}
             <h1 className={s.h1}>EmbedFAST</h1>
             <p className={s.heroSub}>
               Delivering fast, secure, and scalable analytics inside enterprise applications often comes with complex integrations, licensing overhead, and heavy development effort. EmbedFAST simplifies Power BI embedding with built-in role-based access, unlimited tenant and workspace onboarding, and customizable features so your team delivers insights at scale with minimal development effort.
@@ -77,7 +77,7 @@ export function ProductEmbedFAST() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Why EmbedFAST</span>
+            {/* <span className={s.secEyebrow}>Why EmbedFAST</span> */}
             <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.featGrid}>
@@ -103,7 +103,7 @@ export function ProductEmbedFAST() {
       <section className={s.section} id="embedfast-pricing">
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Pricing</span>
+            {/* <span className={s.secEyebrow}>Pricing</span> */}
             <h2 className={s.titleLg}>Choose the plan that fits your team</h2>
           </div>
           <div className={s.priceGrid}>
@@ -125,7 +125,7 @@ export function ProductEmbedFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Support plans</span>
+            {/* <span className={s.secEyebrow}>Support plans</span> */}
             <h2 className={s.titleLg}>Choose your support tier</h2>
           </div>
           <div style={{ overflowX: "auto" }}>
@@ -156,7 +156,7 @@ export function ProductEmbedFAST() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Insights</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>

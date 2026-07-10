@@ -462,7 +462,7 @@ export function TechCon365() {
       <section className={s.section} id="talks-section">
         <div className={s.inner}>
           <div className={s.head}>
-            <span className={s.eyebrow}>Our featured talks</span>
+            {/* <span className={s.eyebrow}>Our featured talks</span> */}
             <h2 className={s.title}>Sessions from MAQ Software leaders</h2>
           </div>
           <div className={s.talksGrid}>
@@ -497,7 +497,7 @@ export function TechCon365() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.head}>
-            <span className={s.eyebrow}>Our key services and offerings</span>
+            {/* <span className={s.eyebrow}>Our key services and offerings</span> */}
             <h2 className={s.title}>Modernize Microsoft 365, Power Platform, Copilot, and AI</h2>
           </div>
           <div className={s.grid}>
@@ -513,7 +513,7 @@ export function TechCon365() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.head}>
-            <span className={s.eyebrow}>For more information</span>
+            {/* <span className={s.eyebrow}>For more information</span> */}
             <h2 className={s.title}>Explore MAQ Software resources</h2>
           </div>
           <div className={s.resourcesGrid}>
@@ -535,7 +535,7 @@ export function TechCon365() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.head}>
-            <span className={s.eyebrow}>Our solutions and accelerators</span>
+            {/* <span className={s.eyebrow}>Our solutions and accelerators</span> */}
             <h2 className={s.title}>Solutions designed to improve and streamline your operations</h2>
           </div>
           <div className={s.grid}>

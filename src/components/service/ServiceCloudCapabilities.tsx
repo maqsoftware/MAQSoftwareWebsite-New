@@ -206,7 +206,7 @@ export function ServiceCloudCapabilities() {
     <section className={s.section} id="cloud-capabilities">
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Our expertise</span>
+          {/* <span className={s.eyebrow}>Our expertise</span> */}
           <h2 className={s.title}>Our cloud modernization capabilities</h2>
           {/* <p className={s.sub}>
             Four capability pillars that replatform on-premises workloads to Azure with

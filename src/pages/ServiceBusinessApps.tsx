@@ -573,7 +573,7 @@ export function ServiceBusinessApps() {
             <section className={s.hero}>
                 <div className={s.heroGrid}>
                     <div>
-                        <span className={s.eyebrow}>Business Applications &amp; Automation</span>
+                        {/* <span className={s.eyebrow}>Business Applications &amp; Automation</span> */}
                         <h1 className={s.h1}>AI-native business apps on Microsoft Power Platform</h1>
                         <p className={s.heroSub}>
                             Low-code and pro-code apps built on Power Apps, Dynamics 365, and
@@ -610,7 +610,7 @@ export function ServiceBusinessApps() {
             <section className={s.section} id="business-apps-capabilities">
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Our expertise</span>
+                        {/* <span className={s.secEyebrow}>Our expertise</span> */}
                         <h2 className={s.title}>Our business applications &amp; automation capabilities</h2>
                         {/* <p className={s.secSub}>
                             Four capability pillars that modernize legacy applications and automate
@@ -666,7 +666,7 @@ export function ServiceBusinessApps() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.headCentered}>
-                        <span className={s.secEyebrow}>Business outcomes</span>
+                        {/* <span className={s.secEyebrow}>Business outcomes</span> */}
                         <h2 className={s.titleSm}>Your business outcomes</h2>
                         {/* <p className={s.secSub}>
                             What organizations gain when legacy apps and manual processes are modernized
@@ -689,7 +689,7 @@ export function ServiceBusinessApps() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Related case studies</span>
+                        {/* <span className={s.secEyebrow}>Related case studies</span> */}
                         <h2 className={s.titleSm}>How clients are modernizing their business apps</h2>
                     </div>
                     <div className={s.caseGrid}>
@@ -723,7 +723,7 @@ export function ServiceBusinessApps() {
             <section className={s.section}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Insights</span>
+                        {/* <span className={s.secEyebrow}>Insights</span> */}
                         <h2 className={s.titleSm}>Our business apps and process automation insights</h2>
                         {/* <p className={s.secSub}>
                             See our research that goes into optimizing our business apps and process

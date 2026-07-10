@@ -71,7 +71,7 @@ export function ServiceInsights({
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Insights</span>
+          {/* <span className={s.eyebrow}>Insights</span> */}
           <h2 className={s.title}>{title}</h2>
           {/* <p className={s.sub}>{subhead}</p> */}
         </div>

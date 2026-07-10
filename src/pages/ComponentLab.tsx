@@ -1199,7 +1199,7 @@ const CompetitorCardLab: FC = () => {
             <article key={x.title} className={c.acnStory}>
               <div data-acn-img="" className={c.acnImg} />
               <div className={c.acnStoryBody}>
-                <div className={c.acnEyebrow}>{x.eyebrow}</div>
+                {/* <div className={c.acnEyebrow}>{x.eyebrow}</div> */}
                 <div className={c.acnStoryTitle}>{x.title}</div>
               </div>
             </article>
@@ -1362,7 +1362,7 @@ const HeaderLab: FC = () => {
     <>
       <Variant label="A · Centered eyebrow + title + sub (current default)">
         <div className={h.base}>
-          <span className={h.eyebrow}>Our Services</span>
+          {/* <span className={h.eyebrow}>Our Services</span> */}
           <h3 className={h.title}>Engineered to deliver outcomes</h3>
           <p className={h.sub}>From AI agents to enterprise data platforms — we ship measurable business value.</p>
         </div>
@@ -1396,7 +1396,7 @@ const HeaderLab: FC = () => {
       <Variant label="E · Split row — title left, description right" notes="Long marketing copy">
         <div className={h.splitRow}>
           <div>
-            <span className={h.eyebrow}>Our Services</span>
+            {/* <span className={h.eyebrow}>Our Services</span> */}
             <h3 className={h.title} style={{ margin: 0 }}>
               Engineered to deliver outcomes
             </h3>
@@ -2133,7 +2133,7 @@ export function ComponentLab() {
   return (
     <div className={s.page}>
       <header className={s.hero}>
-        <span className={s.kicker}>Internal · Design Lab</span>
+        {/* <span className={s.kicker}>Internal · Design Lab</span> */}
         <h1 className={s.pageTitle}>Component playground</h1>
         <p className={s.pageSub}>
           Every recurring building block on the site, with 5–6 design variants each. Pick a winner per

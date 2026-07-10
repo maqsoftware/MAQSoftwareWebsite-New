@@ -116,7 +116,7 @@ export const Industries: FC = () => {
     <section className={s.section} id="industries">
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Industries</span>
+          {/* <span className={s.eyebrow}>Industries</span> */}
           <h2 className={s.title}>Built for data-intensive industries</h2>
         </div>
         <div className={s.grid}>

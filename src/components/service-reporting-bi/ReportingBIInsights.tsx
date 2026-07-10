@@ -57,7 +57,7 @@ export function ReportingBIInsights() {
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Insights</span>
+          {/* <span className={s.eyebrow}>Insights</span> */}
           <h2 className={s.title}>Our insights &amp; analytics insights</h2>
           {/* <p className={s.sub}>
             See our research that goes into optimizing our insights &amp; analytics service.

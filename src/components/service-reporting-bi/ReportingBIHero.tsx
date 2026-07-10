@@ -105,7 +105,7 @@ export function ReportingBIHero() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Insights &amp; Analytics</span>
+          {/* <span className={s.eyebrow}>Insights &amp; Analytics</span> */}
           <h1 className={s.h1}>From legacy BI to real-time Power BI on Microsoft Fabric</h1>
           <p className={s.sub}>
             We build, modernize, and migrate enterprise BI — moving Tableau, SAP BO, SAP Crystal,

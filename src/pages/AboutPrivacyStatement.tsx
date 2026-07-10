@@ -109,7 +109,7 @@ export function AboutPrivacyStatement() {
 
       <section className={styles.section}>
         <div className={styles.sectionInner}>
-          <span className={styles.eyebrow}>PRIVACY COMMITMENTS</span>
+          {/* <span className={styles.eyebrow}>PRIVACY COMMITMENTS</span> */}
           <h2 className={styles.sectionTitle}>What this privacy statement means for your data</h2>
           <ul className={styles.list}>
             <li>

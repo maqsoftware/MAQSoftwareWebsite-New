@@ -54,7 +54,7 @@ export function ServiceInsightsData() {
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Insights</span>
+          {/* <span className={s.eyebrow}>Insights</span> */}
           <h2 className={s.title}>Our data &amp; analytics insights</h2>
           {/* <p className={s.sub}>See our research that goes into optimizing our data &amp; analytics service.</p> */}
         </div>

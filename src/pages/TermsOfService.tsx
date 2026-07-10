@@ -82,7 +82,7 @@ export function TermsOfService() {
     <>
       <section className={s.hero}>
         <div className={s.heroInner}>
-          <span className={s.eyebrow}>Legal</span>
+          {/* <span className={s.eyebrow}>Legal</span> */}
           <h1 className={s.h1}>Terms of Service</h1>
           <span className={s.updated}>Last Updated: May 18, 2020</span>
         </div>

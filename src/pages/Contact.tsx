@@ -410,7 +410,7 @@ export function Contact() {
         />
         <div className={s.heroInner}>
           <div className={s.heroContent}>
-            <p className={s.eyebrow}>Contact Us</p>
+            {/* <p className={s.eyebrow}>Contact Us</p> */}
             <h1 className={s.title}>
               Let&apos;s build what&apos;s next,
               <br />

@@ -308,7 +308,7 @@ export function ProductDetail() {
 
       <section className={s.section}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>What it does</span>
+          {/* <span className={s.eyebrow}>What it does</span> */}
           <h2 className={s.h2}>Key capabilities</h2>
           <div className={s.featGrid}>
             {product.features.map((f) => (
@@ -326,7 +326,7 @@ export function ProductDetail() {
 
       <section className={s.sectionAlt}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>Where teams use it</span>
+          {/* <span className={s.eyebrow}>Where teams use it</span> */}
           <h2 className={s.h2}>Common use cases</h2>
           <div className={s.useGrid}>
             {product.useCases.map((u) => (
@@ -341,7 +341,7 @@ export function ProductDetail() {
 
       <section className={s.section}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>Built on</span>
+          {/* <span className={s.eyebrow}>Built on</span> */}
           <h2 className={s.h2}>Microsoft-aligned platforms</h2>
           <div className={s.platformsRow}>
             {product.platforms.map((p) => (
@@ -355,7 +355,7 @@ export function ProductDetail() {
 
       <section className={s.related}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>More from MAQ Software</span>
+          {/* <span className={s.eyebrow}>More from MAQ Software</span> */}
           <h2 className={s.h2}>Related products</h2>
           <div className={s.relatedGrid}>
             {related.map((r) => (
