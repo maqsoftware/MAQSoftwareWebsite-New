@@ -42,7 +42,7 @@ export const useProductPageStyles = makeStyles({
   benDesc: { fontSize: "13.5px", color: "var(--maq-gray-700)", lineHeight: 1.6, margin: 0 },
 
   stepGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", "@media (max-width: 960px)": { gridTemplateColumns: "1fr" } },
-  stepGrid6: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "20px" },
+  stepGrid6: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" }, "@media (max-width: 640px)": { gridTemplateColumns: "1fr" } },
   stepCard: {
     background: "#fff",
     border: "0.5px solid var(--maq-border)",
