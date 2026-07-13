@@ -53,7 +53,7 @@ export function ImpactStats({ eyebrow = "Proven outcomes", title, sub, stats }: 
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
           <h2 className={s.title}>{title}</h2>
           {/* <p className={s.sub}>{sub}</p> */}
         </div>

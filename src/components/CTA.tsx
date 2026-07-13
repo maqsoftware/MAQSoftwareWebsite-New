@@ -62,7 +62,7 @@ export function CTA() {
   return (
     <section className={s.section} id="contact">
       <div className={s.inner}>
-        <span className={s.eyebrow}>Talk to us</span>
+        {/* <span className={s.eyebrow}>Talk to us</span> */}
         <h2 className={s.title}>
           Ready to move faster?
         </h2>

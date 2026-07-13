@@ -167,7 +167,7 @@ export const Services: FC = () => {
     <section className={s.section} id="services">
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>What we do</span>
+          {/* <span className={s.eyebrow}>What we do</span> */}
           <h2 className={s.title}>
             Capabilities That Accelerate Growth
           </h2>

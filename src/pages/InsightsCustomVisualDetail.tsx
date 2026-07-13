@@ -279,7 +279,7 @@ export function InsightsCustomVisualDetail() {
           </Link>
           <div className={s.layout}>
             <div>
-              <span className={s.eyebrow}>Power BI custom visual</span>
+              {/* <span className={s.eyebrow}>Power BI custom visual</span> */}
               <h1 className={s.h1}>{item.name}</h1>
               <p className={s.description}>{heroDescription}</p>
               <div className={s.ctas}>

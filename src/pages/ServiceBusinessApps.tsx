@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../lib/contact";
 import { PrimaryButton } from "../components/buttons";
+import { PosterCard } from "../components/cardsV2/PosterCard";
+import { getServiceInsightImage } from "../data/serviceInsightImages";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -67,13 +69,13 @@ const useStyles = makeStyles({
 
     // Hero mosaic
     visual: {
-        background: "var(--maq-surface-cream)",
-        border: "1px solid var(--maq-red-pale)",
-        borderRadius: "16px",
-        padding: "20px",
+        background: "transparent",
+        border: "none",
+        borderRadius: "0",
+        padding: "0",
         display: "grid",
-        gap: "12px",
-        boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+        gap: "0",
+        boxShadow: "none",
         color: "var(--maq-ink)",
     },
     tile: {
@@ -110,7 +112,7 @@ const useStyles = makeStyles({
         width: "100%",
         aspectRatio: "16 / 10",
         display: "block",
-        borderRadius: "10px",
+        borderRadius: "0",
         objectFit: "cover",
     },
 
@@ -349,7 +351,7 @@ const useStyles = makeStyles({
     insGrid: {
         display: "grid",
         gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "20px",
+        gap: "24px",
         "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
     },
     insCard: {
@@ -525,6 +527,7 @@ interface Insight {
     title: string;
     teaser: string;
     href: string;
+    img?: string;
 }
 
 const insights: Insight[] = [
@@ -575,7 +578,7 @@ export function ServiceBusinessApps() {
             <section className={s.hero}>
                 <div className={s.heroGrid}>
                     <div>
-                        <span className={s.eyebrow}>Business Applications &amp; Automation</span>
+                        {/* <span className={s.eyebrow}>Business Applications &amp; Automation</span> */}
                         <h1 className={s.h1}>AI-native business apps on Microsoft Power Platform</h1>
                         <p className={s.heroSub}>
                             Low-code and pro-code apps built on Power Apps, Dynamics 365, and
@@ -612,7 +615,7 @@ export function ServiceBusinessApps() {
             <section className={s.section} id="business-apps-capabilities">
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Our expertise</span>
+                        {/* <span className={s.secEyebrow}>Our expertise</span> */}
                         <h2 className={s.title}>Our business applications &amp; automation capabilities</h2>
                         {/* <p className={s.secSub}>
                             Four capability pillars that modernize legacy applications and automate
@@ -668,7 +671,7 @@ export function ServiceBusinessApps() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.headCentered}>
-                        <span className={s.secEyebrow}>Business outcomes</span>
+                        {/* <span className={s.secEyebrow}>Business outcomes</span> */}
                         <h2 className={s.titleSm}>Your business outcomes</h2>
                         {/* <p className={s.secSub}>
                             What organizations gain when legacy apps and manual processes are modernized
@@ -691,7 +694,7 @@ export function ServiceBusinessApps() {
             <section className={s.sectionAlt}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Related case studies</span>
+                        {/* <span className={s.secEyebrow}>Related case studies</span> */}
                         <h2 className={s.titleSm}>How clients are modernizing their business apps</h2>
                     </div>
                     <div className={s.caseGrid}>
@@ -725,7 +728,7 @@ export function ServiceBusinessApps() {
             <section className={s.section}>
                 <div className={s.inner}>
                     <div className={s.head}>
-                        <span className={s.secEyebrow}>Insights</span>
+                        {/* <span className={s.secEyebrow}>Insights</span> */}
                         <h2 className={s.titleSm}>Our business apps and process automation insights</h2>
                         {/* <p className={s.secSub}>
                             See our research that goes into optimizing our business apps and process
@@ -734,22 +737,16 @@ export function ServiceBusinessApps() {
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (
-                            <a
+                            <PosterCard
                                 key={i.title}
-                                className={s.insCard}
-                                href={i.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <div className={s.insCover} aria-hidden="true" />
-                                <div className={s.insBody}>
-                                    <h3 className={s.insTitle}>{i.title}</h3>
-                                    <p className={s.insTeaser}>{i.teaser}</p>
-                                    <span className={s.caseRead}>
-                                        Read more
-                                    </span>
-                                </div>
-                            </a>
+                                to={i.href}
+                                img={i.img ?? getServiceInsightImage(i.href)}
+                                deriveFormats={false}
+                                imgFit="cover"
+                                aspectRatio="16 / 10"
+                                title={i.title}
+                                desc={i.teaser}
+                            />
                         ))}
                     </div>
                 </div>

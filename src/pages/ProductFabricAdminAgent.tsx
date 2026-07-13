@@ -483,7 +483,7 @@ export function ProductFabricAdminAgent() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Fabric Workload</span>
+            {/* <span className={s.eyebrow}>Fabric Workload</span> */}
             <h1 className={s.h1}>
               AI-powered capacity management for Microsoft Fabric
             </h1>
@@ -525,7 +525,7 @@ export function ProductFabricAdminAgent() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Why Fabric Admin Agent</span>
+            {/* <span className={s.secEyebrow}>Why Fabric Admin Agent</span> */}
             <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.featGrid}>
@@ -547,7 +547,7 @@ export function ProductFabricAdminAgent() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Proven outcomes</span>
+            {/* <span className={s.secEyebrow}>Proven outcomes</span> */}
             <h2 className={s.titleLg}>Real impact for Microsoft Fabric platform owners</h2>
             {/* <p className={s.sub}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
@@ -570,7 +570,7 @@ export function ProductFabricAdminAgent() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Fabric case studies</span>
+            {/* <span className={s.secEyebrow}>Fabric case studies</span> */}
             <h2 className={s.titleLg}>How platform teams ship Fabric faster with MAQ Software</h2>
           </div>
           <div className={s.caseGrid}>
@@ -605,7 +605,7 @@ export function ProductFabricAdminAgent() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Insights</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
             {/* <p className={s.sub}>
               Get the agent from Microsoft AppSource, browse Azure Marketplace

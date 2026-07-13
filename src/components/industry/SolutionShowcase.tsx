@@ -131,7 +131,7 @@ export function SolutionShowcase({ sectionId, eyebrow = "Agentic AI", title, age
     <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
           <h2 className={s.title}>{title}</h2>
         </div>
         <div className={s.panel}>

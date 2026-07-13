@@ -40,13 +40,13 @@ const useStyles = makeStyles({
   btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
 
   visual: {
-    background: "var(--maq-surface-cream)",
-    border: "1px solid var(--maq-red-pale)",
-    borderRadius: "16px",
-    padding: "10px",
+    background: "transparent",
+    border: "none",
+    borderRadius: "0",
+    padding: "0",
     display: "grid",
-    gap: "12px",
-    boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+    gap: "0",
+    boxShadow: "none",
     color: "var(--maq-ink)",
   },
   tile: {
@@ -90,7 +90,7 @@ const useStyles = makeStyles({
     width: "100%",
     aspectRatio: "16 / 10",
     display: "block",
-    borderRadius: "10px",
+    borderRadius: "0",
     objectFit: "contain",
   },
 });
@@ -102,7 +102,7 @@ export function ServiceCloudHero() {
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Cloud Modernization</span>
+          {/* <span className={s.eyebrow}>Cloud Modernization</span> */}
           <h1 className={s.h1}>Modernize from on-premises to cloud-native on Azure</h1>
           <p className={s.sub}>
             MAQ Software replatforms on-premises workloads to Azure — from lift-and-shift

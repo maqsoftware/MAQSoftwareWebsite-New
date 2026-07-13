@@ -83,7 +83,7 @@ export function ServiceOutcomes({
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Business outcomes</span>
+          {/* <span className={s.eyebrow}>Business outcomes</span> */}
           <h2 className={s.title}>{title}</h2>
           {/* <p className={s.sub}>{subhead}</p> */}
         </div>

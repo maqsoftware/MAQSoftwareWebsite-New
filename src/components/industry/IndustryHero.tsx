@@ -73,7 +73,7 @@ export function IndustryHero({
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
           <h1 className={s.h1}>{h1}</h1>
           <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>

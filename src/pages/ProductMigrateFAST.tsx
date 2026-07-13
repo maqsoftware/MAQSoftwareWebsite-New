@@ -47,7 +47,7 @@ export function ProductMigrateFAST() {
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>AI-powered Fabric migration accelerator</span>
+            {/* <span className={s.eyebrow}>AI-powered Fabric migration accelerator</span> */}
             <h1 className={s.h1}>MigrateFAST</h1>
             <p className={s.heroSub}>
               MigrateFAST automates the end-to-end migration process—from legacy environment assessment and dependency analysis to report conversion, DAX generation, and validation. Organizations can migrate from Tableau, Cognos, SAP BusinessObjects, SAP Crystal Reports, MicroStrategy, Qlik, Alteryx, and Informatica with greater speed, accuracy, and confidence—reducing migration costs and accelerating time to value on Microsoft Fabric.
@@ -76,7 +76,7 @@ export function ProductMigrateFAST() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Why MigrateFAST</span>
+            {/* <span className={s.secEyebrow}>Why MigrateFAST</span> */}
             <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
@@ -93,7 +93,7 @@ export function ProductMigrateFAST() {
       <section className={s.sectionAlt} id="migratefast-process">
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>How it works</span>
+            {/* <span className={s.secEyebrow}>How it works</span> */}
             <h2 className={s.titleLg}>Our 6-step migration process</h2>
           </div>
           <div className={s.stepGrid6}>
@@ -118,7 +118,7 @@ export function ProductMigrateFAST() {
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Insights</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div

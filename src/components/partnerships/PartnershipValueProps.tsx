@@ -53,7 +53,7 @@ export function PartnershipValueProps({
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          {eyebrow && <span className={s.eyebrow}>{eyebrow}</span>}
+          {/* eyebrow hidden intentionally */}
           <h2 className={s.title}>{title}</h2>
         </div>
         <div className={s.grid}>

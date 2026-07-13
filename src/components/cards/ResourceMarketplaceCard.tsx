@@ -102,7 +102,7 @@ export function ResourceMarketplaceCard({
       {imageUrl ? (
         <img className={s.image} src={imageUrl} alt={imageAlt ?? title} loading="lazy" width={1200} height={675} />
       ) : null}
-      {eyebrow ? <span className={s.eyebrow}>{eyebrow}</span> : null}
+      {/* eyebrow hidden intentionally */}
       <h3 className={s.title}>{title}</h3>
       <p className={s.desc}>{description}</p>
       <span className={s.cta}>{ctaLabel}</span>

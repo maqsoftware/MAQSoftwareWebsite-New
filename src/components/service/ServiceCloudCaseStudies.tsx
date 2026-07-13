@@ -94,7 +94,7 @@ export function ServiceCloudCaseStudies({
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Related case studies</span>
+          {/* <span className={s.eyebrow}>Related case studies</span> */}
           <h2 className={s.title}>How clients are accelerating cloud transformation</h2>
         </div>
         <div className={s.grid}>

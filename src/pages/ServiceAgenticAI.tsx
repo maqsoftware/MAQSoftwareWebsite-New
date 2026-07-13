@@ -20,11 +20,11 @@ export function ServiceAgenticAI() {
         visual={
           <div
             style={{
-              background: "var(--maq-surface-cream)",
-              border: "1px solid var(--maq-red-pale)",
-              borderRadius: "16px",
-              padding: "20px",
-              boxShadow: "0 12px 32px rgba(15, 23, 42, 0.06)",
+              background: "transparent",
+              border: "none",
+              borderRadius: "0",
+              padding: "0",
+              boxShadow: "none",
             }}
           >
             <img
@@ -35,7 +35,7 @@ export function ServiceAgenticAI() {
                 aspectRatio: "16 / 10",
                 objectFit: "contain",
                 display: "block",
-                borderRadius: "10px",
+                borderRadius: "0",
               }}
             />
           </div>

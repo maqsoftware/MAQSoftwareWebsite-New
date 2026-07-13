@@ -233,7 +233,7 @@ export function ServiceCapabilities({
     <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Our expertise</span>
+          {/* <span className={s.eyebrow}>Our expertise</span> */}
           <h2 className={s.title}>{title}</h2>
           {/* <p className={s.sub}>{subhead}</p> */}
         </div>

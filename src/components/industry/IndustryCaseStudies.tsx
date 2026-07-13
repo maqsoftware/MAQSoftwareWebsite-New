@@ -120,7 +120,7 @@ export function IndustryCaseStudies({
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>{eyebrow}</span>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
           <h2 className={s.title}>{title}</h2>
         </div>
         <div className={`${s.grid}${uniformCardWidth ? ` ${s.gridUniform}` : ""}`}>

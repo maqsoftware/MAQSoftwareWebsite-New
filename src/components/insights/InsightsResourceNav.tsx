@@ -42,7 +42,7 @@ export function InsightsResourceNav({ active }: InsightsResourceNavProps) {
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Resources</span>
+          {/* <span className={s.eyebrow}>Resources</span> */}
           <h2 className={s.title}>Explore all insights resources</h2>
         </div>
         <div className={s.grid}>
