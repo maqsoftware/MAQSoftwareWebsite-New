@@ -1,7 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { makeStyles, Spinner } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
-import { useNavigate } from "react-router-dom";
 import { EventCard as StandardEventCard } from "../components/cards/EventCard";
 import {
   fetchPastEventsFromNews,
@@ -116,48 +114,7 @@ const useStyles = makeStyles({
     fontSize: "13px",
     color: "var(--maq-gray-700)",
   },
-  eventLinkAction: {
-    color: "var(--maq-red)",
-    fontWeight: 700,
-    alignSelf: "flex-start",
-    marginTop: "auto",
-  },
 });
-
-function EventLink({
-  href,
-  children,
-  className,
-}: {
-  href: string;
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const navigate = useNavigate();
-  if (href.startsWith("http")) {
-    return (
-      <TextButton
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        iconAfter={<ArrowRight16Regular />}
-        className={className}
-      >
-        {children}
-      </TextButton>
-    );
-  }
-
-  return (
-    <TextButton
-      iconAfter={<ArrowRight16Regular />}
-      onClick={() => navigate(href)}
-      className={className}
-    >
-      {children}
-    </TextButton>
-  );
-}
 
 export function AboutEvents() {
   const s = useStyles();
@@ -244,7 +201,7 @@ export function AboutEvents() {
                   title={event.title}
                   location={event.location}
                   summary={event.summary}
-                  actionNode={<EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>}
+                  href={event.href}
                 />
               ))}
             </div>
@@ -286,7 +243,7 @@ export function AboutEvents() {
                     date={event.date}
                     title={event.title}
                     summary={event.summary}
-                    actionNode={<EventLink href={event.href} className={s.eventLinkAction}>View details</EventLink>}
+                    href={event.href}
                   />
                 ))}
               </div>

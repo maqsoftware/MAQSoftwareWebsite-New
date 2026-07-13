@@ -71,7 +71,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2026-02",
     "teaser": "Case study: Reshaping retail with Agentic AI solutions.",
-    "imageUrl": "/images/case-studies/external/man-checking-stock-inventory.svg"
+    "imageUrl": "/images/case-studies/external/man-checking-stock-inventory.webp"
   },
   {
     "title": "Modernizing retail business intelligence with Microsoft Fabric and Power BI",
@@ -80,7 +80,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-12",
     "teaser": "Case study: Modernizing retail business intelligence with Microsoft Fabric and Power BI.",
-    "imageUrl": "/images/case-studies/external/retail-report-stock-image.svg"
+    "imageUrl": "/images/case-studies/external/retail-report-stock-image.webp"
   },
   {
     "title": "Building scalable e-commerce product recommendations with Microsoft Fabric SQL",
@@ -89,7 +89,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-09",
     "teaser": "Case study: Building scalable e-commerce product recommendations with Microsoft Fabric SQL.",
-    "imageUrl": "/images/case-studies/external/product_recommendations_cover.svg"
+    "imageUrl": "/images/case-studies/external/product_recommendations_cover.webp"
   },
   {
     "title": "Transforming grocery retail analytics with Microsoft Fabric",
@@ -98,7 +98,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Transforming grocery retail analytics with Microsoft Fabric.",
-    "imageUrl": "/images/case-studies/external/Grocery_retailer_report.svg"
+    "imageUrl": "/images/case-studies/external/Grocery_retailer_report.webp"
   },
   {
     "title": "Enhancing retail sales reporting by migrating from MicroStrategy to Power BI",
@@ -107,7 +107,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Enhancing retail sales reporting by migrating from MicroStrategy to Power BI.",
-    "imageUrl": "/images/case-studies/external/Computer-with-report.svg"
+    "imageUrl": "/images/case-studies/external/Computer-with-report.webp"
   },
   {
     "title": "Transforming supply chain analytics with Power BI on Snowflake for a specialty retailer",
@@ -116,7 +116,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-03",
     "teaser": "Case study: Transforming supply chain analytics with Power BI on Snowflake for a specialty retailer.",
-    "imageUrl": "/images/case-studies/external/AdobeStock_305928424.svg"
+    "imageUrl": "/images/case-studies/external/AdobeStock_305928424.webp"
   },
   {
     "title": "Enhancing demand forecasting and planning with AI foundation model on Microsoft Azure",
@@ -125,7 +125,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2025-03",
     "teaser": "Case study: Enhancing demand forecasting and planning with AI foundation model on Microsoft Azure.",
-    "imageUrl": "/images/case-studies/external/Demand-forecasting-office-supplies.svg"
+    "imageUrl": "/images/case-studies/external/Demand-forecasting-office-supplies.webp"
   },
   {
     "title": "Revolutionizing demand forecasting and planning with AI foundation model on Microsoft Azure",
@@ -134,7 +134,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2025-03",
     "teaser": "Case study: Revolutionizing demand forecasting and planning with AI foundation model on Microsoft Azure.",
-    "imageUrl": "/images/case-studies/external/Conveyor-belt.svg"
+    "imageUrl": "/images/case-studies/external/Conveyor-belt.webp"
   },
   {
     "title": "Enabling real-time visibility: How a retail leader transformed Direct Store Delivery with Microsoft Fabric",
@@ -143,7 +143,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-05",
     "teaser": "Case study: Enabling real-time visibility: How a retail leader transformed Direct Store Delivery with Microsoft Fabric.",
-    "imageUrl": "/images/case-studies/external/CS076-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS076-banner.webp"
   },
   {
     "title": "Empowering retail growth with an optimized loyalty program",
@@ -152,7 +152,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-02",
     "teaser": "Case study: Empowering retail growth with an optimized loyalty program.",
-    "imageUrl": "/images/case-studies/external/CS074-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS074-banner.webp"
   },
   {
     "title": "Microsoft Fabric: Powering Real-Time Analytics for Retailers",
@@ -161,7 +161,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2023-11",
     "teaser": "Case study: Microsoft Fabric: Powering Real-Time Analytics for Retailers.",
-    "imageUrl": "/images/case-studies/external/B025_MSFabric_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B025_MSFabric_Banner.webp"
   },
   {
     "title": "Real-time reporting for an organic supermarket chain",
@@ -170,7 +170,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2022-06",
     "teaser": "Case study: Real-time reporting for an organic supermarket chain.",
-    "imageUrl": "/images/case-studies/external/shopper2.png"
+    "imageUrl": "/images/case-studies/external/shopper2.webp"
   },
   {
     "title": "Accurately Forecast Customer Sales with Machine Learning (ML)",
@@ -179,7 +179,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2021-12",
     "teaser": "Case study: Accurately Forecast Customer Sales with Machine Learning (ML).",
-    "imageUrl": "/images/case-studies/external/CS002-main.svg"
+    "imageUrl": "/images/case-studies/external/CS002-main.webp"
   },
   {
     "title": "Accurately Forecast Inventory Needs Using a Custom Plug-in",
@@ -188,7 +188,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2020-10",
     "teaser": "Case study: Accurately Forecast Inventory Needs Using a Custom Plug-in.",
-    "imageUrl": "/images/case-studies/external/CS042-mainv3.svg"
+    "imageUrl": "/images/case-studies/external/CS042-mainv3.webp"
   },
   {
     "title": "Boosting Black Friday Sales with AI",
@@ -197,7 +197,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-11",
     "teaser": "Case study: Boosting Black Friday Sales with AI.",
-    "imageUrl": "/images/case-studies/external/black-friday-banner-Copy.svg"
+    "imageUrl": "/images/case-studies/external/black-friday-banner-Copy.webp"
   },
   {
     "title": "AI Recommendation System Streamlines Purchases",
@@ -206,7 +206,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-08",
     "teaser": "Case study: AI Recommendation System Streamlines Purchases.",
-    "imageUrl": "/images/case-studies/external/recommendation-engine-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/recommendation-engine-case-study-main.webp"
   },
   {
     "title": "Retailer Reduces Costs by Automating Customer Feedback",
@@ -215,7 +215,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-07",
     "teaser": "Case study: Retailer Reduces Costs by Automating Customer Feedback.",
-    "imageUrl": "/images/case-studies/external/customer-returns-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/customer-returns-case-study-main.webp"
   },
   {
     "title": "Transforming finance with agentic AI solutions",
@@ -224,7 +224,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2026-02",
     "teaser": "Case study: Transforming finance with agentic AI solutions.",
-    "imageUrl": "/images/case-studies/external/analysis-strategy-planning.svg"
+    "imageUrl": "/images/case-studies/external/analysis-strategy-planning.webp"
   },
   {
     "title": "Enhancing fintech analytics to provide millions of borrowers with better loan options",
@@ -233,7 +233,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2022-06",
     "teaser": "Case study: Enhancing fintech analytics to provide millions of borrowers with better loan options.",
-    "imageUrl": "/images/case-studies/external/CS0065-Banner-image.svg"
+    "imageUrl": "/images/case-studies/external/CS0065-Banner-image.webp"
   },
   {
     "title": "Reinventing legal operations with agentic AI solutions",
@@ -242,7 +242,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2026-02",
     "teaser": "Case study: Reinventing legal operations with agentic AI solutions.",
-    "imageUrl": "/images/case-studies/external/analyzing-market-situation.svg"
+    "imageUrl": "/images/case-studies/external/analyzing-market-situation.webp"
   },
   {
     "title": "Automating product feature categorization with AI for an automotive components manufacturer",
@@ -251,7 +251,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-10",
     "teaser": "Case study: Automating product feature categorization with AI for an automotive components manufacturer.",
-    "imageUrl": "/images/case-studies/external/CS086-banner-V2.svg"
+    "imageUrl": "/images/case-studies/external/CS086-banner-V2.webp"
   },
   {
     "title": "Simplifying Power BI integration for the automotive industry using EmbedFAST",
@@ -260,7 +260,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2024-10",
     "teaser": "Case study: Simplifying Power BI integration for the automotive industry using EmbedFAST.",
-    "imageUrl": "/images/case-studies/external/CS085-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS085-banner.webp"
   },
   {
     "title": "Transforming data management in manufacturing with an AI-driven chatbot solution",
@@ -269,7 +269,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-09",
     "teaser": "Case study: Transforming data management in manufacturing with an AI-driven chatbot solution.",
-    "imageUrl": "/images/case-studies/external/CS084-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS084-banner.webp"
   },
   {
     "title": "Accelerating software development with agentic AI solutions",
@@ -278,7 +278,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2026-02",
     "teaser": "Case study: Accelerating software development with agentic AI solutions.",
-    "imageUrl": "/images/case-studies/external/software-developer-stock.svg"
+    "imageUrl": "/images/case-studies/external/software-developer-stock.webp"
   },
   {
     "title": "Modernizing the software development lifecycle with GitHub Copilot",
@@ -287,7 +287,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2025-11",
     "teaser": "Case study: Modernizing the software development lifecycle with GitHub Copilot.",
-    "imageUrl": "/images/case-studies/external/6Dv3pe-JnSg-unsplash.svg"
+    "imageUrl": "/images/case-studies/external/6Dv3pe-JnSg-unsplash.webp"
   },
   {
     "title": "Scaling AI for every customer and every developer with MAQ Software",
@@ -296,7 +296,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2025-08",
     "teaser": "Case study: Scaling AI for every customer and every developer with MAQ Software.",
-    "imageUrl": "/images/case-studies/external/boardroom_AI_stock.svg"
+    "imageUrl": "/images/case-studies/external/boardroom_AI_stock.webp"
   },
   {
     "title": "Delivering embedded Power BI reporting with EmbedFAST",
@@ -305,7 +305,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-07",
     "teaser": "Case study: Delivering embedded Power BI reporting with EmbedFAST.",
-    "imageUrl": "/images/case-studies/external/EmbedFASTUI-blurred.svg"
+    "imageUrl": "/images/case-studies/external/EmbedFASTUI-blurred.webp"
   },
   {
     "title": "Get ideas to code from months to hours with DevelopFAST",
@@ -314,7 +314,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Get ideas to code from months to hours with DevelopFAST.",
-    "imageUrl": "/images/case-studies/external/macbook-pro-displaying-computer-icons.svg"
+    "imageUrl": "/images/case-studies/external/macbook-pro-displaying-computer-icons.webp"
   },
   {
     "title": "Empowering self-service using Custom Copilot agent with Power BI Embedded",
@@ -323,7 +323,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-03",
     "teaser": "Case study: Empowering self-service using Custom Copilot agent with Power BI Embedded.",
-    "imageUrl": "/images/case-studies/external/Copilot-computer-screen.svg"
+    "imageUrl": "/images/case-studies/external/Copilot-computer-screen.webp"
   },
   {
     "title": "Transforming data operations with Microsoft Fabric and CI/CD for ISVs",
@@ -332,7 +332,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-11",
     "teaser": "Case study: Transforming data operations with Microsoft Fabric and CI/CD for ISVs.",
-    "imageUrl": "/images/case-studies/external/CS088-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS088-banner.webp"
   },
   {
     "title": "Real-Time Intelligence in Microsoft Fabric for ISVs",
@@ -341,7 +341,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-11",
     "teaser": "Case study: Real-Time Intelligence in Microsoft Fabric for ISVs.",
-    "imageUrl": "/images/case-studies/external/CS089-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS089-banner.webp"
   },
   {
     "title": "Transforming customer support with AIOps-driven Power BI embedding",
@@ -350,7 +350,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2023-02",
     "teaser": "Case study: Transforming customer support with AIOps-driven Power BI embedding.",
-    "imageUrl": "/images/case-studies/external/CS070-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS070-banner.webp"
   },
   {
     "title": "ADX implementation for a global Cloud Management Software Provider",
@@ -359,7 +359,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2022-11",
     "teaser": "Case study: ADX implementation for a global Cloud Management Software Provider.",
-    "imageUrl": "/images/case-studies/external/CS068-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS068-banner.webp"
   },
   {
     "title": "Resolve Support Tickets Faster with Predictive Risk Algorithms",
@@ -368,7 +368,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2020-12",
     "teaser": "Case study: Resolve Support Tickets Faster with Predictive Risk Algorithms.",
-    "imageUrl": "/images/case-studies/external/CS028-Main.svg"
+    "imageUrl": "/images/case-studies/external/CS028-Main.webp"
   },
   {
     "title": "Simplify Software Health Checks with a Downloadable Application",
@@ -377,7 +377,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2019-11",
     "teaser": "Case study: Simplify Software Health Checks with a Downloadable Application.",
-    "imageUrl": "/images/case-studies/external/WPF-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/WPF-case-study-main.webp"
   },
   {
     "title": "Easily Search Through Large Data Collections With Azure Architecture",
@@ -386,7 +386,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2019-09",
     "teaser": "Case study: Easily Search Through Large Data Collections With Azure Architecture.",
-    "imageUrl": "/images/case-studies/external/Azure-Search-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Azure-Search-case-study-main.webp"
   },
   {
     "title": "Data Validation Framework Reduces Support Tickets",
@@ -395,7 +395,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2019-06",
     "teaser": "Case study: Data Validation Framework Reduces Support Tickets.",
-    "imageUrl": "/images/case-studies/external/Data-Validation-Framework-main.svg"
+    "imageUrl": "/images/case-studies/external/Data-Validation-Framework-main.webp"
   },
   {
     "title": "Machine Learning Drives Support Ticket Prioritization",
@@ -404,7 +404,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2019-06",
     "teaser": "Case study: Machine Learning Drives Support Ticket Prioritization.",
-    "imageUrl": "/images/case-studies/external/ML-support-tickets-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/ML-support-tickets-case-study-main.webp"
   },
   {
     "title": "Software Company Monitors Global Affairs via Cloud-Based Policy Portal",
@@ -413,7 +413,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-07",
     "teaser": "Case study: Software Company Monitors Global Affairs via Cloud-Based Policy Portal.",
-    "imageUrl": "/images/case-studies/external/Global-Policy-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Global-Policy-case-study-main.webp"
   },
   {
     "title": "Millions of Arizona Citizens Receive Benefits With the Help of an AI-powered Chatbot",
@@ -422,7 +422,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2021-05",
     "teaser": "Case study: Millions of Arizona Citizens Receive Benefits With the Help of an AI-powered Chatbot.",
-    "imageUrl": "/images/case-studies/external/Arizona-Chatbot-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Arizona-Chatbot-case-study-main.webp"
   },
   {
     "title": "ADX implementation in the Energy and Utilities industry",
@@ -431,7 +431,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2023-06",
     "teaser": "Case study: ADX implementation in the Energy and Utilities industry.",
-    "imageUrl": "/images/case-studies/external/CS071-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS071-banner.webp"
   },
   {
     "title": "ADX implementation in the Real Estate industry",
@@ -440,7 +440,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2022-11",
     "teaser": "Case study: ADX implementation in the Real Estate industry.",
-    "imageUrl": "/images/case-studies/external/CS069-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS069-banner.webp"
   },
   {
     "title": "Custom Visual Allows Travel Company to Analyze Flight Performance",
@@ -449,7 +449,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2018-09",
     "teaser": "Case study: Custom Visual Allows Travel Company to Analyze Flight Performance.",
-    "imageUrl": "/images/case-studies/external/Flight-Route-Visual-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Flight-Route-Visual-case-study-main.webp"
   },
   {
     "title": "Delivering personalization intelligence with MLOps and Databricks CI/CD framework",
@@ -458,7 +458,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-08",
     "teaser": "Case study: Delivering personalization intelligence with MLOps and Databricks CI/CD framework.",
-    "imageUrl": "/images/case-studies/external/MLOps-Databricks-framework.svg"
+    "imageUrl": "/images/case-studies/external/MLOps-Databricks-framework.webp"
   },
   {
     "title": "Enabling sales insights for global operations with Power BI and Snowflake",
@@ -467,7 +467,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Enabling sales insights for global operations with Power BI and Snowflake.",
-    "imageUrl": "/images/case-studies/external/Person-typing-on-report.svg"
+    "imageUrl": "/images/case-studies/external/Person-typing-on-report.webp"
   },
   {
     "title": "Improving sales insights with a migration from SAP BOBJ to Power BI",
@@ -476,7 +476,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Improving sales insights with a migration from SAP BOBJ to Power BI.",
-    "imageUrl": "/images/case-studies/external/Convenience-store-counter.svg"
+    "imageUrl": "/images/case-studies/external/Convenience-store-counter.webp"
   },
   {
     "title": "Harnessing generative AI for tailored marketing: Personalized content clusters for every account",
@@ -485,7 +485,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-07",
     "teaser": "Case study: Harnessing generative AI for tailored marketing: Personalized content clusters for every account.",
-    "imageUrl": "/images/case-studies/external/CS078-banner-V2.svg"
+    "imageUrl": "/images/case-studies/external/CS078-banner-V2.webp"
   },
   {
     "title": "Improving lead management and campaign optimization with Microsoft technologies",
@@ -494,7 +494,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-02",
     "teaser": "Case study: Improving lead management and campaign optimization with Microsoft technologies.",
-    "imageUrl": "/images/case-studies/external/CS073-banner-V2.svg"
+    "imageUrl": "/images/case-studies/external/CS073-banner-V2.webp"
   },
   {
     "title": "Save Time with an Integrated Marketing Campaign Platform",
@@ -503,7 +503,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-11",
     "teaser": "Case study: Save Time with an Integrated Marketing Campaign Platform.",
-    "imageUrl": "/images/case-studies/external/dynamics-main.svg"
+    "imageUrl": "/images/case-studies/external/dynamics-main.webp"
   },
   {
     "title": "Generating Sales Leads with AI",
@@ -512,7 +512,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-08",
     "teaser": "Case study: Generating Sales Leads with AI.",
-    "imageUrl": "/images/case-studies/external/sales-leads-machine-learning-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/sales-leads-machine-learning-case-study-main.webp"
   },
   {
     "title": "Reducing Customer Support Time with Machine Learning",
@@ -521,7 +521,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-11",
     "teaser": "Case study: Reducing Customer Support Time with Machine Learning.",
-    "imageUrl": "/images/case-studies/external/Reducing-Customer-Support-Time-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Reducing-Customer-Support-Time-case-study-main.webp"
   },
   {
     "title": "Improving event experience for thousands using AI Agents",
@@ -530,7 +530,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-08",
     "teaser": "Case study: Improving event experience for thousands using AI Agents.",
-    "imageUrl": "/images/case-studies/external/CS081-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS081-banner.webp"
   },
   {
     "title": "Ease Event Management with Power Apps",
@@ -539,7 +539,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Application modernization",
     "date": "2020-04",
     "teaser": "Case study: Ease Event Management with Power Apps.",
-    "imageUrl": "/images/case-studies/external/CS003-main.svg"
+    "imageUrl": "/images/case-studies/external/CS003-main.webp"
   },
   {
     "title": "Events Management Software Tracks Conference Performance",
@@ -548,7 +548,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2018-11",
     "teaser": "Case study: Events Management Software Tracks Conference Performance.",
-    "imageUrl": "/images/case-studies/external/Events-management-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Events-management-case-study-main.webp"
   },
   {
     "title": "Strengthening cybersecurity with Managed Identity and RBAC",
@@ -557,7 +557,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Security",
     "date": "2024-08",
     "teaser": "Case study: Strengthening cybersecurity with Managed Identity and RBAC.",
-    "imageUrl": "/images/case-studies/external/B035_Cybersecurity_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B035_Cybersecurity_Banner.webp"
   },
   {
     "title": "Building a secure Copilot: Addressing key security challenges",
@@ -566,7 +566,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Security",
     "date": "2024-08",
     "teaser": "Case study: Building a secure Copilot: Addressing key security challenges.",
-    "imageUrl": "/images/case-studies/external/B034_CopilotSecurity_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B034_CopilotSecurity_Banner.webp"
   },
   {
     "title": "Reduce Costs by Automating Privacy Matters",
@@ -575,7 +575,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Security",
     "date": "2019-07",
     "teaser": "Case study: Reduce Costs by Automating Privacy Matters.",
-    "imageUrl": "/images/case-studies/external/Automating-Privacy-Matters-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Automating-Privacy-Matters-case-study-main.webp"
   },
   {
     "title": "Transforming AI interest into adoption by establishing an AI Center of Excellence",
@@ -584,7 +584,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2026-02",
     "teaser": "Case study: Transforming AI interest into adoption by establishing an AI Center of Excellence.",
-    "imageUrl": "/images/case-studies/external/company-managers-stock.svg"
+    "imageUrl": "/images/case-studies/external/company-managers-stock.webp"
   },
   {
     "title": "Reshaping industries with agentic AI solutions",
@@ -593,7 +593,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2025-08",
     "teaser": "Case study: Reshaping industries with agentic AI solutions.",
-    "imageUrl": "/images/case-studies/external/ai-chatbox.svg"
+    "imageUrl": "/images/case-studies/external/ai-chatbox.webp"
   },
   {
     "title": "Accelerating data-driven decisions with AI-DataLens",
@@ -602,7 +602,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2025-07",
     "teaser": "Case study: Accelerating data-driven decisions with AI-DataLens.",
-    "imageUrl": "/images/case-studies/external/magnifying-glass-with-data.svg"
+    "imageUrl": "/images/case-studies/external/magnifying-glass-with-data.webp"
   },
   {
     "title": "Empowering businesses with AI: Frameworks that deliver results",
@@ -611,7 +611,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-08",
     "teaser": "Case study: Empowering businesses with AI: Frameworks that deliver results.",
-    "imageUrl": "/images/case-studies/external/B032_Frameworks_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B032_Frameworks_Banner.webp"
   },
   {
     "title": "Streamlining information retrieval with AI Copilots",
@@ -620,7 +620,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-07",
     "teaser": "Case study: Streamlining information retrieval with AI Copilots.",
-    "imageUrl": "/images/case-studies/external/CS080-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS080-banner.webp"
   },
   {
     "title": "Designing UI for Copilot: Key principles and practices",
@@ -629,7 +629,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2024-08",
     "teaser": "Case study: Designing UI for Copilot: Key principles and practices.",
-    "imageUrl": "/images/case-studies/external/B033_CopilotUI_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B033_CopilotUI_Banner.webp"
   },
   {
     "title": "Harnessing real-time data insights with a versatile bot application",
@@ -638,7 +638,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2023-09",
     "teaser": "Case study: Harnessing real-time data insights with a versatile bot application.",
-    "imageUrl": "/images/case-studies/external/CS072-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS072-banner.webp"
   },
   {
     "title": "AI Video Analysis Evaluates Real-Time Emotions From Facial Expressions",
@@ -647,7 +647,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Agentic AI & Machine Learning",
     "date": "2018-07",
     "teaser": "Case study: AI Video Analysis Evaluates Real-Time Emotions From Facial Expressions.",
-    "imageUrl": "/images/case-studies/external/emotion-analyzer-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/emotion-analyzer-case-study-main.webp"
   },
   {
     "title": "Master Data Management (MDM) Improves Customer Relationships with Machine Learning",
@@ -656,7 +656,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2018-11",
     "teaser": "Case study: Master Data Management (MDM) Improves Customer Relationships with Machine Learning.",
-    "imageUrl": "/images/case-studies/external/Master-Data-Management-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Master-Data-Management-case-study-main.webp"
   },
   {
     "title": "Unifying disconnected data systems using Microsoft Fabric and OneLake",
@@ -665,7 +665,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2026-01",
     "teaser": "Case study: Unifying disconnected data systems using Microsoft Fabric and OneLake.",
-    "imageUrl": "/images/case-studies/external/person-analyzing-report.svg"
+    "imageUrl": "/images/case-studies/external/person-analyzing-report.webp"
   },
   {
     "title": "Delivering accurate business intelligence insights with a Fabric data agent",
@@ -674,7 +674,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2026-01",
     "teaser": "Case study: Delivering accurate business intelligence insights with a Fabric data agent.",
-    "imageUrl": "/images/case-studies/external/Sales-data-agent-on-laptop.svg"
+    "imageUrl": "/images/case-studies/external/Sales-data-agent-on-laptop.webp"
   },
   {
     "title": "Optimizing data refresh by integrating Snowflake iceberg tables with Microsoft Fabric",
@@ -683,7 +683,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-08",
     "teaser": "Case study: Optimizing data refresh by integrating Snowflake iceberg tables with Microsoft Fabric.",
-    "imageUrl": "/images/case-studies/external/snowflake-iceberg-cover.svg"
+    "imageUrl": "/images/case-studies/external/snowflake-iceberg-cover.webp"
   },
   {
     "title": "Unlocking business insights: Integrating Databricks with Power BI",
@@ -692,7 +692,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-08",
     "teaser": "Case study: Unlocking business insights: Integrating Databricks with Power BI.",
-    "imageUrl": "/images/case-studies/external/unlocking-business-insights-integrating-databricks-with-power-bi.svg"
+    "imageUrl": "/images/case-studies/external/unlocking-business-insights-integrating-databricks-with-power-bi.webp"
   },
   {
     "title": "Unlocking advanced analytics with Databricks",
@@ -701,7 +701,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Unlocking advanced analytics with Databricks.",
-    "imageUrl": "/images/case-studies/external/unlocking-advanced-analytics-with-databricks.svg"
+    "imageUrl": "/images/case-studies/external/unlocking-advanced-analytics-with-databricks.webp"
   },
   {
     "title": "Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT)",
@@ -710,7 +710,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-07",
     "teaser": "Case study: Migrating to Microsoft Fabric to Unlock One Source of Truth (OSOT).",
-    "imageUrl": "/images/case-studies/external/corporate-buildings.svg"
+    "imageUrl": "/images/case-studies/external/corporate-buildings.webp"
   },
   {
     "title": "Optimizing data management by integrating Snowflake and Microsoft Fabric",
@@ -719,7 +719,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2025-03",
     "teaser": "Case study: Optimizing data management by integrating Snowflake and Microsoft Fabric.",
-    "imageUrl": "/images/case-studies/external/Laptop-data-report.svg"
+    "imageUrl": "/images/case-studies/external/Laptop-data-report.webp"
   },
   {
     "title": "Enabling self-service for supply chain analytics with Microsoft Fabric and Direct Lake",
@@ -728,7 +728,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-11",
     "teaser": "Case study: Enabling self-service for supply chain analytics with Microsoft Fabric and Direct Lake.",
-    "imageUrl": "/images/case-studies/external/CS090-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS090-banner.webp"
   },
   {
     "title": "Unifying data management with a centralized framework",
@@ -737,7 +737,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-08",
     "teaser": "Case study: Unifying data management with a centralized framework.",
-    "imageUrl": "/images/case-studies/external/CS082-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS082-banner.webp"
   },
   {
     "title": "Increasing efficiency by switching from batch processing to real-time streaming",
@@ -746,7 +746,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-07",
     "teaser": "Case study: Increasing efficiency by switching from batch processing to real-time streaming.",
-    "imageUrl": "/images/case-studies/external/CS079-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS079-banner.webp"
   },
   {
     "title": "Microsoft Fabric Features for Real-Time Analytics",
@@ -755,7 +755,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-05",
     "teaser": "Case study: Microsoft Fabric Features for Real-Time Analytics.",
-    "imageUrl": "/images/case-studies/external/B031_MSFabric_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B031_MSFabric_Banner.webp"
   },
   {
     "title": "Simplifying Data Ingestion with IngestFAST",
@@ -764,7 +764,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2024-04",
     "teaser": "Case study: Simplifying Data Ingestion with IngestFAST.",
-    "imageUrl": "/images/case-studies/external/B030_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B030_Banner.webp"
   },
   {
     "title": "Embracing the Future of Data Management with Microsoft Fabric: A Setup Guide",
@@ -773,7 +773,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2023-11",
     "teaser": "Case study: Embracing the Future of Data Management with Microsoft Fabric: A Setup Guide.",
-    "imageUrl": "/images/case-studies/external/B026_MSFabric_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B026_MSFabric_Banner.webp"
   },
   {
     "title": "Microsoft Fabric: Empowering All Personas",
@@ -782,7 +782,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2023-09",
     "teaser": "Case study: Microsoft Fabric: Empowering All Personas.",
-    "imageUrl": "/images/case-studies/external/B024_MSFabric_Banner_V2.svg"
+    "imageUrl": "/images/case-studies/external/B024_MSFabric_Banner_V2.webp"
   },
   {
     "title": "Modern Data Analytics using Microsoft Fabric",
@@ -791,7 +791,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2023-06",
     "teaser": "Case study: Modern Data Analytics using Microsoft Fabric.",
-    "imageUrl": "/images/case-studies/external/B023_MSFabric_Banner_V2.svg"
+    "imageUrl": "/images/case-studies/external/B023_MSFabric_Banner_V2.webp"
   },
   {
     "title": "Improving insights and reducing costs through unified reporting",
@@ -800,7 +800,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2022-07",
     "teaser": "Case study: Improving insights and reducing costs through unified reporting.",
-    "imageUrl": "/images/case-studies/external/CS066_banner_2.svg"
+    "imageUrl": "/images/case-studies/external/CS066_banner_2.webp"
   },
   {
     "title": "Enabling Fast-Paced BI and Analytics",
@@ -809,7 +809,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2020-11",
     "teaser": "Case study: Enabling Fast-Paced BI and Analytics.",
-    "imageUrl": "/images/case-studies/external/CS043-main.svg"
+    "imageUrl": "/images/case-studies/external/CS043-main.webp"
   },
   {
     "title": "Modernize Data Systems by Migrating to the Cloud",
@@ -818,7 +818,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Cloud Modernization",
     "date": "2020-09",
     "teaser": "Case study: Modernize Data Systems by Migrating to the Cloud.",
-    "imageUrl": "/images/case-studies/external/Data-Migration-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Data-Migration-case-study-main.webp"
   },
   {
     "title": "Transitioning legacy reports from Qlik to Power BI",
@@ -827,7 +827,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-06",
     "teaser": "Case study: Transitioning legacy reports from Qlik to Power BI.",
-    "imageUrl": "/images/case-studies/external/warehouse-inventory.svg"
+    "imageUrl": "/images/case-studies/external/warehouse-inventory.webp"
   },
   {
     "title": "Accelerate your Tableau to Power BI (Fabric) migration with MigrateFAST",
@@ -836,7 +836,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2025-03",
     "teaser": "Case study: Accelerate your Tableau to Power BI (Fabric) migration with MigrateFAST.",
-    "imageUrl": "/images/case-studies/external/B028_MigrateFAST_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B028_MigrateFAST_Banner.webp"
   },
   {
     "title": "Modernizing reporting platforms through AI-driven SQL Migration",
@@ -845,7 +845,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2024-08",
     "teaser": "Case study: Modernizing reporting platforms through AI-driven SQL Migration.",
-    "imageUrl": "/images/case-studies/external/CS083-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS083-banner.webp"
   },
   {
     "title": "Optimize your Power BI Reports and Usage with LoadFAST",
@@ -854,7 +854,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2024-03",
     "teaser": "Case study: Optimize your Power BI Reports and Usage with LoadFAST.",
-    "imageUrl": "/images/case-studies/external/B029_Banner.svg"
+    "imageUrl": "/images/case-studies/external/B029_Banner.webp"
   },
   {
     "title": "Building a Powerful Foundation: The Ultimate Guide to Power BI Center of Excellence",
@@ -863,7 +863,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2023-12",
     "teaser": "Case study: Building a Powerful Foundation: The Ultimate Guide to Power BI Center of Excellence.",
-    "imageUrl": "/images/case-studies/external/B027_CoE_Banner_V4.svg"
+    "imageUrl": "/images/case-studies/external/B027_CoE_Banner_V4.webp"
   },
   {
     "title": "Everything You Need to Know About Migrating to Power BI",
@@ -872,7 +872,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2020-06",
     "teaser": "Case study: Everything You Need to Know About Migrating to Power BI.",
-    "imageUrl": "/images/case-studies/external/B010-main.svg"
+    "imageUrl": "/images/case-studies/external/B010-main.webp"
   },
   {
     "title": "Modernize Reporting with Power BI: A Cost-Effective, Scalable Solution",
@@ -881,7 +881,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2020-07",
     "teaser": "Case study: Modernize Reporting with Power BI: A Cost-Effective, Scalable Solution.",
-    "imageUrl": "/images/case-studies/external/CS008-main.svg"
+    "imageUrl": "/images/case-studies/external/CS008-main.webp"
   },
   {
     "title": "Improve Power BI Premium Report Performance and Eliminate Data Refresh Failures",
@@ -890,7 +890,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Insights & Analytics",
     "date": "2019-07",
     "teaser": "Case study: Improve Power BI Premium Report Performance and Eliminate Data Refresh Failures.",
-    "imageUrl": "/images/case-studies/external/Improve-Power-BI-Premium-Report-Performance-and-Eliminate-Data-Refresh-Failures-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Improve-Power-BI-Premium-Report-Performance-and-Eliminate-Data-Refresh-Failures-case-study-main.webp"
   },
   {
     "title": "Maximizing the power of Dynamics 365: User interface & user experience redesigned",
@@ -899,7 +899,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Application modernization",
     "date": "2024-03",
     "teaser": "Case study: Maximizing the power of Dynamics 365: User interface & user experience redesigned.",
-    "imageUrl": "/images/case-studies/external/CS075-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS075-banner.webp"
   },
   {
     "title": "Optimizing task management with smart recommendations",
@@ -908,7 +908,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Application modernization",
     "date": "2024-06",
     "teaser": "Case study: Optimizing task management with smart recommendations.",
-    "imageUrl": "/images/case-studies/external/CS077-banner.svg"
+    "imageUrl": "/images/case-studies/external/CS077-banner.webp"
   },
   {
     "title": "Create a Single Source of Truth with Dynamics 365",
@@ -917,7 +917,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Application modernization",
     "date": "2020-12",
     "teaser": "Case study: Create a Single Source of Truth with Dynamics 365.",
-    "imageUrl": "/images/case-studies/external/CS050-main.svg"
+    "imageUrl": "/images/case-studies/external/CS050-main.webp"
   },
   {
     "title": "Complete Tasks Faster with a Custom Dynamic Checklist in Dynamics 365",
@@ -926,7 +926,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Application modernization",
     "date": "2020-10",
     "teaser": "Case study: Complete Tasks Faster with a Custom Dynamic Checklist in Dynamics 365.",
-    "imageUrl": "/images/case-studies/external/CS034-MainRev2.svg"
+    "imageUrl": "/images/case-studies/external/CS034-MainRev2.webp"
   },
   {
     "title": "Connect High-Impact Service Opportunities with Underutilized Support Team Resources",
@@ -935,7 +935,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2020-10",
     "teaser": "Case study: Connect High-Impact Service Opportunities with Underutilized Support Team Resources.",
-    "imageUrl": "/images/case-studies/external/CS029-main.svg"
+    "imageUrl": "/images/case-studies/external/CS029-main.webp"
   },
   {
     "title": "Digitize Rhythm of Business (ROB) with a Power BI to PowerPoint Tool",
@@ -944,7 +944,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Application modernization",
     "date": "2020-10",
     "teaser": "Case study: Digitize Rhythm of Business (ROB) with a Power BI to PowerPoint Tool.",
-    "imageUrl": "/images/case-studies/external/CS018-mainV2.svg"
+    "imageUrl": "/images/case-studies/external/CS018-mainV2.webp"
   },
   {
     "title": "Ensure Business Continuity Through Covid-19 Remote Work",
@@ -953,7 +953,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2020-07",
     "teaser": "Case study: Ensure Business Continuity Through Covid-19 Remote Work.",
-    "imageUrl": "/images/case-studies/external/CS006-main.svg"
+    "imageUrl": "/images/case-studies/external/CS006-main.webp"
   },
   {
     "title": "Custom Gantt Chart Improves B2B Communication",
@@ -962,7 +962,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Data & AI Platforms",
     "date": "2019-03",
     "teaser": "Case study: Custom Gantt Chart Improves B2B Communication.",
-    "imageUrl": "/images/case-studies/external/Custom-Gantt-Chart-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Custom-Gantt-Chart-case-study-main.webp"
   },
   {
     "title": "Integrating SharePoint Portals",
@@ -971,7 +971,7 @@ export const caseStudyItems: CaseStudyItem[] = [
     "service": "Application modernization",
     "date": "2018-11",
     "teaser": "Case study: Integrating SharePoint Portals.",
-    "imageUrl": "/images/case-studies/external/Sharepoint-Portals-case-study-main.svg"
+    "imageUrl": "/images/case-studies/external/Sharepoint-Portals-case-study-main.webp"
   }
 ];
 
@@ -1100,7 +1100,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/AdvancedLinear.svg"
+    "imageUrl": "/images/case-studies/external/AdvancedLinear.webp"
   },
   {
     "name": "Bowtie Chart",
@@ -1111,7 +1111,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/BowtieChart.svg"
+    "imageUrl": "/images/case-studies/external/BowtieChart.webp"
   },
   {
     "name": "Box and Whisker Chart",
@@ -1122,7 +1122,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/BoxandWhiskers.svg"
+    "imageUrl": "/images/case-studies/external/BoxandWhiskers.webp"
   },
   {
     "name": "Brick Chart",
@@ -1133,7 +1133,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/BrickChart.svg"
+    "imageUrl": "/images/case-studies/external/BrickChart.webp"
   },
   {
     "name": "Calendar",
@@ -1144,7 +1144,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Featured"
     ],
-    "imageUrl": "/images/case-studies/external/Calendar.svg"
+    "imageUrl": "/images/case-studies/external/Calendar.webp"
   },
   {
     "name": "Circular Gauge",
@@ -1154,7 +1154,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/CircularGauge.svg"
+    "imageUrl": "/images/case-studies/external/CircularGauge.webp"
   },
   {
     "name": "Cylindrical Gauge",
@@ -1164,7 +1164,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/CylindricalGauge.svg"
+    "imageUrl": "/images/case-studies/external/CylindricalGauge.webp"
   },
   {
     "name": "Data Insights",
@@ -1174,7 +1174,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/DataInsights.svg"
+    "imageUrl": "/images/case-studies/external/DataInsights.webp"
   },
   {
     "name": "Dot Plot",
@@ -1185,7 +1185,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Featured"
     ],
-    "imageUrl": "/images/case-studies/external/DotPlot.svg"
+    "imageUrl": "/images/case-studies/external/DotPlot.webp"
   },
   {
     "name": "Dynamic Tooltip",
@@ -1195,7 +1195,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/DynamicTooltip.svg"
+    "imageUrl": "/images/case-studies/external/DynamicTooltip.webp"
   },
   {
     "name": "Funnel with Source",
@@ -1205,7 +1205,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/FunnelwithSource.svg"
+    "imageUrl": "/images/case-studies/external/FunnelwithSource.webp"
   },
   {
     "name": "Gantt Chart",
@@ -1216,7 +1216,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/GanttChart.svg"
+    "imageUrl": "/images/case-studies/external/GanttChart.webp"
   },
   {
     "name": "Grid",
@@ -1226,7 +1226,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/Grid.svg"
+    "imageUrl": "/images/case-studies/external/Grid.webp"
   },
   {
     "name": "Hierarchy Chart",
@@ -1236,7 +1236,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/HierarchyChart.svg"
+    "imageUrl": "/images/case-studies/external/HierarchyChart.webp"
   },
   {
     "name": "Histogram With Points",
@@ -1246,7 +1246,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/HistogramwithPoints.svg"
+    "imageUrl": "/images/case-studies/external/HistogramwithPoints.webp"
   },
   {
     "name": "Horizontal Funnel",
@@ -1256,7 +1256,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/HorizontalFunnel.svg"
+    "imageUrl": "/images/case-studies/external/HorizontalFunnel.webp"
   },
   {
     "name": "Hourglass Chart",
@@ -1267,7 +1267,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Featured"
     ],
-    "imageUrl": "/images/case-studies/external/Hourglass.svg"
+    "imageUrl": "/images/case-studies/external/Hourglass.webp"
   },
   {
     "name": "Image Carousel",
@@ -1277,7 +1277,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/ImageCarousel.svg"
+    "imageUrl": "/images/case-studies/external/ImageCarousel.webp"
   },
   {
     "name": "Journey Chart",
@@ -1288,7 +1288,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/JourneyChart.svg"
+    "imageUrl": "/images/case-studies/external/JourneyChart.webp"
   },
   {
     "name": "KPI Column",
@@ -1298,7 +1298,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/KPIColumn.svg"
+    "imageUrl": "/images/case-studies/external/KPIColumn.webp"
   },
   {
     "name": "KPI Grid",
@@ -1308,7 +1308,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/KPIGrid.svg"
+    "imageUrl": "/images/case-studies/external/KPIGrid.webp"
   },
   {
     "name": "KPI Ticker",
@@ -1319,7 +1319,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/KPITicker.svg"
+    "imageUrl": "/images/case-studies/external/KPITicker.webp"
   },
   {
     "name": "Linear Gauge",
@@ -1329,7 +1329,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/LinearGauge.svg"
+    "imageUrl": "/images/case-studies/external/LinearGauge.webp"
   },
   {
     "name": "Organization Chart",
@@ -1339,7 +1339,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/Organizationchart.svg"
+    "imageUrl": "/images/case-studies/external/Organizationchart.webp"
   },
   {
     "name": "Quadrant Chart",
@@ -1349,7 +1349,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/QuadrantChart.svg"
+    "imageUrl": "/images/case-studies/external/QuadrantChart.webp"
   },
   {
     "name": "Radar Chart",
@@ -1360,7 +1360,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/Radarchart.svg"
+    "imageUrl": "/images/case-studies/external/Radarchart.webp"
   },
   {
     "name": "Ratings",
@@ -1371,7 +1371,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/Ratings.svg"
+    "imageUrl": "/images/case-studies/external/Ratings.webp"
   },
   {
     "name": "Ring Chart",
@@ -1381,7 +1381,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/RingChart.svg"
+    "imageUrl": "/images/case-studies/external/RingChart.webp"
   },
   {
     "name": "Rotating Chart",
@@ -1391,7 +1391,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/RotatingChart.svg"
+    "imageUrl": "/images/case-studies/external/RotatingChart.webp"
   },
   {
     "name": "Rotating Tile",
@@ -1401,7 +1401,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/RotatingTiles.svg"
+    "imageUrl": "/images/case-studies/external/RotatingTiles.webp"
   },
   {
     "name": "Sunburst",
@@ -1412,7 +1412,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/SunburstChart.svg"
+    "imageUrl": "/images/case-studies/external/SunburstChart.webp"
   },
   {
     "name": "Text Enhancer",
@@ -1422,7 +1422,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/TextEnhancer.svg"
+    "imageUrl": "/images/case-studies/external/TextEnhancer.webp"
   },
   {
     "name": "Text Wrapper",
@@ -1432,7 +1432,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/TextWrap.svg"
+    "imageUrl": "/images/case-studies/external/TextWrap.webp"
   },
   {
     "name": "Thermometer",
@@ -1442,7 +1442,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/Thermometer.svg"
+    "imageUrl": "/images/case-studies/external/Thermometer.webp"
   },
   {
     "name": "Trading Chart",
@@ -1453,7 +1453,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/StockChart.svg"
+    "imageUrl": "/images/case-studies/external/StockChart.webp"
   },
   {
     "name": "Treemap Bar Chart",
@@ -1463,7 +1463,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/TreeMap.svg"
+    "imageUrl": "/images/case-studies/external/TreeMap.webp"
   },
   {
     "name": "Venn Diagram",
@@ -1473,7 +1473,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/VennDiagram.svg"
+    "imageUrl": "/images/case-studies/external/VennDiagram.webp"
   },
   {
     "name": "Violin Plot",
@@ -1483,7 +1483,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/ViolinPlot.svg"
+    "imageUrl": "/images/case-studies/external/ViolinPlot.webp"
   }
 ];
 
@@ -1513,111 +1513,111 @@ export const bestPracticeItems: BestPracticeItem[] = [
     "href": "/insights/github-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Maximize developer productivity with GitHub Copilot.",
-    "imageUrl": "/images/case-studies/external/GitHub-Copilot-Best-Practices.svg"
+    "imageUrl": "/images/case-studies/external/GitHub-Copilot-Best-Practices.webp"
   },
   {
     "title": "Build AI-ready semantic models with Power BI Copilot",
     "href": "/insights/power-bi-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Build AI-ready semantic models with Power BI Copilot.",
-    "imageUrl": "/images/case-studies/external/Power-BI-Copilot-best-practice-guide.svg"
+    "imageUrl": "/images/case-studies/external/Power-BI-Copilot-best-practice-guide.webp"
   },
   {
     "title": "Improve your Power BI performance and security with our best practices",
     "href": "/insights/power-bi-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve your Power BI performance and security with our best practices.",
-    "imageUrl": "/images/case-studies/external/BPG006-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG006-main.webp"
   },
   {
     "title": "Improve job speed and save storage with our 18 Azure Databricks best practices",
     "href": "/insights/azure-databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Improve job speed and save storage with our 18 Azure Databricks best practices.",
-    "imageUrl": "/images/case-studies/external/BPG007-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG007-main.webp"
   },
   {
     "title": "Optimizing Performance, Collaboration, and Security on Databricks",
     "href": "/insights/databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Optimizing Performance, Collaboration, and Security on Databricks.",
-    "imageUrl": "/images/case-studies/external/databricks-best-practice-guide.svg"
+    "imageUrl": "/images/case-studies/external/databricks-best-practice-guide.webp"
   },
   {
     "title": "Optimize Snowflake storage for efficient Power BI data extraction",
     "href": "/insights/snowflake-and-power-bi-best-practices",
     "topic": "Snowflake",
     "teaser": "Best practice guide: Optimize Snowflake storage for efficient Power BI data extraction.",
-    "imageUrl": "/images/case-studies/external/snowflake-best-practices.svg"
+    "imageUrl": "/images/case-studies/external/snowflake-best-practices.webp"
   },
   {
     "title": "Explore best practices for creating enterprise-wide knowledge bots",
     "href": "/insights/knowledge-bot-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Explore best practices for creating enterprise-wide knowledge bots.",
-    "imageUrl": "/images/case-studies/external/BPG010-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG010-main.webp"
   },
   {
     "title": "Improve Power BI speed and functionality with our 22 DAX best practices",
     "href": "/insights/dax-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve Power BI speed and functionality with our 22 DAX best practices.",
-    "imageUrl": "/images/case-studies/external/BPG005-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG005-main.webp"
   },
   {
     "title": "Optimize your DevOps strategies with our 9 essential best practices",
     "href": "/insights/azure-dev-ops-best-practices-guide",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize your DevOps strategies with our 9 essential best practices.",
-    "imageUrl": "/images/case-studies/external/AzureDevOpsBestPracticeguide.svg"
+    "imageUrl": "/images/case-studies/external/AzureDevOpsBestPracticeguide.webp"
   },
   {
     "title": "Optimize costs for your Azure platforms with our 10 best practices",
     "href": "/insights/azure-architecture-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize costs for your Azure platforms with our 10 best practices.",
-    "imageUrl": "/images/case-studies/external/BPG004-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG004-main.webp"
   },
   {
     "title": "Strengthen your cloud security and protect your assets with 19 security best practices",
     "href": "/insights/azure-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: Strengthen your cloud security and protect your assets with 19 security best practices.",
-    "imageUrl": "/images/case-studies/external/BPG003-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG003-main.webp"
   },
   {
     "title": "Ensure quality data on demand with our 7 data validation best practices",
     "href": "/insights/data-validation-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Ensure quality data on demand with our 7 data validation best practices.",
-    "imageUrl": "/images/case-studies/external/BPG002-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG002-main.webp"
   },
   {
     "title": "Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more",
     "href": "/insights/dynamics-365-development-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more.",
-    "imageUrl": "/images/case-studies/external/BPG008-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG008-main.webp"
   },
   {
     "title": "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices",
     "href": "/insights/dynamics-365-deployment-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Deploy Dynamics 365 faster with minimal downtime using our 8 best practices.",
-    "imageUrl": "/images/case-studies/external/BPG001-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG001-main.webp"
   },
   {
     "title": "This guide covers the 11 best practices you need to optimize your canvas apps",
     "href": "/insights/power-apps-best-practices",
     "topic": "Power Apps",
     "teaser": "Best practice guide: This guide covers the 11 best practices you need to optimize your canvas apps.",
-    "imageUrl": "/images/case-studies/external/BPG009-main.svg"
+    "imageUrl": "/images/case-studies/external/BPG009-main.webp"
   },
   {
     "title": "This guide covers the 7 best practices you need to secure dataverse",
     "href": "/insights/dataverse-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: This guide covers the 7 best practices you need to secure dataverse.",
-    "imageUrl": "/images/case-studies/external/dataverse-best-practices.svg"
+    "imageUrl": "/images/case-studies/external/dataverse-best-practices.webp"
   }
 ];
