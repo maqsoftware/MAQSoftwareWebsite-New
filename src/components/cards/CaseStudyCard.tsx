@@ -110,7 +110,7 @@ export function CaseStudyCard({
   date,
   imageUrl,
   imageAlt,
-  ctaLabel = "Read full Case Study",
+  ctaLabel = "Read full story",
   className,
   openInNewTab = true,
   eager = false,

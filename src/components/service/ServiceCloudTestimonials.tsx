@@ -2,7 +2,7 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
@@ -14,11 +14,12 @@ const useStyles = makeStyles({
     marginBottom: "6px",
   },
   title: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: 0,
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   grid: {
     display: "grid",

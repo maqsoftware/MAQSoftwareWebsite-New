@@ -3,7 +3,7 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 export const useProductPageStyles = makeStyles({
   hero: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px 56px" },
   heroGrid: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
@@ -20,12 +20,12 @@ export const useProductPageStyles = makeStyles({
 
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "28px" },
   headLeft: { marginBottom: "20px", textAlign: "center" },
   secEyebrow: { fontSize: "12px", fontWeight: 700, color: "var(--maq-red)", letterSpacing: "0.08em", textTransform: "uppercase", display: "block", marginBottom: "8px" },
-  title: { display: "block", fontSize: "28px", fontWeight: 700, color: "var(--maq-black)", margin: "0 0 6px", letterSpacing: "-0.01em" },
-  titleLg: { display: "block", fontSize: "30px", fontWeight: 700, color: "var(--maq-black)", margin: "0 0 10px", letterSpacing: "-0.01em" },
+  title: { display: "block", fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 6px", letterSpacing: "-0.02em" },
+  titleLg: { display: "block", fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 10px", letterSpacing: "-0.02em" },
   sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "720px", textAlign: "center" },
 
   benGrid3: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "1fr" } },

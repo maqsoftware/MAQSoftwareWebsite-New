@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     // Hero
     hero: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
     heroGrid: {
-        maxWidth: "1240px",
+        maxWidth: "var(--maq-container-wide)",
         margin: "0 auto",
         display: "grid",
         gridTemplateColumns: "1.3fr 1fr",
@@ -126,7 +126,7 @@ const useStyles = makeStyles({
     // Section commons
     section: { padding: "48px 32px", backgroundColor: "#fff" },
     sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-    inner: { maxWidth: "1240px", margin: "0 auto" },
+    inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
     head: { marginBottom: "20px", textAlign: "center" },
     headCentered: { textAlign: "center", marginBottom: "28px" },
     secEyebrow: {
@@ -139,18 +139,20 @@ const useStyles = makeStyles({
         marginBottom: "6px",
     },
     title: {
-        fontSize: "30px",
+        fontSize: "36px",
+        lineHeight: 1.15,
         fontWeight: 700,
-        color: "var(--maq-black)",
+        color: "var(--maq-navy)",
         margin: "0 0 6px",
-        letterSpacing: "-0.01em",
+        letterSpacing: "-0.02em",
     },
     titleSm: {
-        fontSize: "28px",
+        fontSize: "36px",
+        lineHeight: 1.15,
         fontWeight: 700,
-        color: "var(--maq-black)",
+        color: "var(--maq-navy)",
         margin: "0 0 6px",
-        letterSpacing: "-0.01em",
+        letterSpacing: "-0.02em",
     },
     secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
@@ -756,7 +758,7 @@ export function ServiceWorkplaceTransformation() {
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>
-                                    Read full case study
+                                    Read full story
                                 </span>
                             </a>
                         ))}

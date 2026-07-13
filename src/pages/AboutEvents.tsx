@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
   },
-  heroInner: { maxWidth: "1240px", margin: "0 auto" },
+  heroInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   eyebrow: {
     display: "block",
     fontSize: "12px",
@@ -57,7 +57,7 @@ const useStyles = makeStyles({
     padding: "40px 32px 64px",
     backgroundColor: "var(--maq-off-white)",
   },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   sectionHead: {
     display: "flex",
     justifyContent: "center",
@@ -67,12 +67,12 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
   },
   sectionTitle: {
-    fontSize: "28px",
+    fontSize: "36px",
     fontWeight: 700,
-    lineHeight: 1.2,
-    color: "var(--maq-black)",
+    lineHeight: 1.15,
+    color: "var(--maq-navy)",
     margin: 0,
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
     textAlign: "center",
   },
   upcomingGrid: {

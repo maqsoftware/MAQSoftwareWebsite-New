@@ -43,7 +43,7 @@ const useStyles = makeStyles({
     },
   },
   grid: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.1fr 1fr",

@@ -15,9 +15,9 @@ const INITIAL_VISIBLE = 9;
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "18px" },
-  title: { fontSize: "30px", fontWeight: 700, color: "var(--maq-black)", margin: "0 0 10px" },
+  title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 10px", letterSpacing: "-0.02em" },
   grid: {
     marginTop: "18px",
     display: "grid",
@@ -137,7 +137,7 @@ useEffect(() => {
                 imageUrl={item.imageUrl}
                 imageAlt={item.title}
                 date={item.date}
-                ctaLabel="Read full article"
+                ctaLabel="Read full story"
                 eager={idx < 3}
               />
             ))}

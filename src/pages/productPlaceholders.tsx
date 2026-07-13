@@ -69,7 +69,7 @@ export function ProductCaseStudies({
                 textDecoration: "none",
               }}
             >
-              Read full case study
+              Read full story
             </span>
           </a>
         ))}

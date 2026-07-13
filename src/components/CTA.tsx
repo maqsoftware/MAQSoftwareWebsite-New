@@ -23,9 +23,10 @@ const useStyles = makeStyles({
     display: "block",
   },
   title: {
-    fontSize: "32px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 8px",
     letterSpacing: "-0.02em",
   },

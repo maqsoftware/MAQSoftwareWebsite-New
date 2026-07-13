@@ -20,7 +20,7 @@ export interface ServiceHeroProps {
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
   grid: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
