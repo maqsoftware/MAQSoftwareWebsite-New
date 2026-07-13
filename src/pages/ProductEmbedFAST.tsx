@@ -1,6 +1,6 @@
 import { Mail24Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
 
-import { Button, CardButton, PrimaryButton } from "../components/buttons";
+import { Button, PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 // import { TrustBanner } from "../components/TrustBanner";
@@ -108,15 +108,15 @@ export function ProductEmbedFAST() {
           </div>
           <div className={s.priceGrid}>
             {plans.map((p) => (
-              <div key={p.name} className={s.priceCard}>
+              <a key={p.name} className={s.priceCard} href={p.href} target="_blank" rel="noopener noreferrer">
                 <div className={s.priceName}>{p.name}</div>
                 <div className={s.priceAmount}>{p.price}</div>
                 <div className={s.priceTerm}>{p.term}</div>
                 <ul className={s.priceList}>
                   {p.items.map((i) => <li key={i} className={s.priceItem}>{i}</li>)}
                 </ul>
-                <CardButton size="medium" href={p.href} target="_blank" rel="noopener noreferrer">{p.cta}</CardButton>
-              </div>
+                <div className={s.priceCta}>{p.cta}</div>
+              </a>
             ))}
           </div>
         </div>
