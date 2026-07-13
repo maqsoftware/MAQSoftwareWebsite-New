@@ -51,7 +51,7 @@ interface InsightsFilterBarProps {
 
 export function InsightsFilterBar({ items, active, onChange }: InsightsFilterBarProps) {
   const activeIndex = Math.max(0, items.indexOf(active));
-
+  const s = useStyles();
   return (
     <div className={s.row} role="tablist">
       {items.map((item) => {
