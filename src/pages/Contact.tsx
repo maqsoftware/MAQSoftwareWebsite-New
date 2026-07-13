@@ -18,25 +18,38 @@ const useStyles = makeStyles({
   },
   hero: {
     backgroundColor: "#f7f8fb",
+    position: "relative",
+    overflow: "hidden",
+    borderBottom: "1px solid var(--maq-border)",
+  },
+  // Decorative hero background image, constrained to the 1440px content column
+  // (centered) so it aligns with the page content and footer width instead of
+  // bleeding out to the viewport's right edge.
+  heroBg: {
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: "50%",
+    transform: "translateX(-50%)",
+    // Match the content column exactly at every width: 32px gutter each side
+    // (like the section padding), capped at the 1440px container.
+    width: "calc(100% - 64px)",
+    maxWidth: "var(--maq-container-wide)",
     backgroundImage: "url('/images/ContactUs/bg.png')",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center 30%",
     backgroundSize: "cover",
-    position: "relative",
-    overflow: "hidden",
-    borderBottom: "1px solid var(--maq-border)",
+    zIndex: 0,
     "@media (min-width: 1441px)": {
       backgroundPosition: "center 20%",
-      backgroundSize: "cover",
     },
     "@media (max-width: 960px)": {
-      backgroundImage: "url('/images/ContactUs/bg.png')",
-      backgroundRepeat: "no-repeat",
       backgroundPosition: "center 46%",
-      backgroundSize: "cover",
+      // Content sections use a 20px gutter below 960px — match it.
+      width: "calc(100% - 40px)",
     },
     "@media (max-width: 560px)": {
-      backgroundImage: "none",
+      display: "none",
     },
   },
   heroMobileBg: {
@@ -404,6 +417,7 @@ export function Contact() {
   return (
     <main className={s.page}>
       <section className={s.hero}>
+        <div className={s.heroBg} aria-hidden="true" />
         <img
           aria-hidden="true"
           className={s.heroMobileBg}

@@ -11,34 +11,25 @@ import {
 import type { FC, ReactNode } from "react";
 import {useNavigate} from "react-router-dom";
 import { FeatureCard } from "./cards/FeatureCard";
+import { textStyles } from "../textStyles";
 
 const useStyles = makeStyles({
   section: { padding: "32px 32px", backgroundColor: tokens.colorNeutralBackground1 },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
-    fontSize: "12px",
-    fontWeight: 700,
-    color: "var(--maq-blue)",
-    letterSpacing: "0.08em",
-    textTransform: "uppercase",
+    ...textStyles.eyebrow,
     marginBottom: "12px",
     display: "block",
   },
   title: {
+    ...textStyles.sectionHeading,
     display: "block",
-    fontSize: "36px",
-    lineHeight: 1.15,
-    fontWeight: 700,
-    color: "var(--maq-navy)",
     margin: "0 0 12px",
-    letterSpacing: "-0.02em",
   },
   sub: {
+    ...textStyles.body,
     display: "block",
-    fontSize: "15px",
-    lineHeight: 1.6,
-    color: "var(--maq-gray-700)",
     maxWidth: "640px",
     margin: "0 auto",
   },
