@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
-import { makeStyles, tokens, Button } from "@fluentui/react-components";
-import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { makeStyles, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   card: {
@@ -14,7 +13,10 @@ const useStyles = makeStyles({
     height: "100%",
     gap: "10px",
     contain: "layout paint",
-    transition: "border-color 0.16s ease, box-shadow 0.16s ease, background-color 0.16s ease",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease",
+    textDecoration: "none",
+    color: "inherit",
+    cursor: "pointer",
     ":hover": {
       border: "1px solid var(--maq-card-hover-border)",
       boxShadow: "var(--maq-shadow-lift)",
@@ -80,6 +82,10 @@ const useStyles = makeStyles({
     fontWeight: 700,
     alignSelf: "flex-start",
     marginTop: "auto",
+    fontSize: "13px",
+    display: "inline-block",
+    textDecoration: "none",
+    paddingTop: "8px",
   },
 });
 
@@ -89,8 +95,8 @@ export interface EventCardProps {
   summary: string;
   location?: string;
   tag?: string;
+  href?: string;
   actionLabel?: string;
-  actionHref?: string;
   actionNode?: ReactNode;
 }
 
@@ -100,14 +106,14 @@ export function EventCard({
   summary,
   location,
   tag,
+  href,
   actionLabel = "View details",
-  actionHref,
   actionNode,
 }: EventCardProps) {
   const s = useStyles();
 
-  return (
-    <article className={s.card}>
+  const content = (
+    <>
       <div className={s.metaRow}>
         {tag ? <span className={s.tag}>{tag}</span> : null}
         <span className={s.date}>{date}</span>
@@ -115,22 +121,26 @@ export function EventCard({
       <h3 className={`${s.title} ${s.titleClamp}`}>{title}</h3>
       {location ? <p className={s.location}>{location}</p> : null}
       <p className={`${s.summary} ${s.summaryClamp}`}>{summary}</p>
-      {actionNode ?? (
-        actionHref ? (
-          <Button
-            as="a"
-            href={actionHref}
-            target={actionHref.startsWith("http") ? "_blank" : undefined}
-            rel={actionHref.startsWith("http") ? "noopener noreferrer" : undefined}
-            appearance="subtle"
-            icon={<ArrowRight16Regular />}
-            iconPosition="after"
-            className={s.action}
-          >
-            {actionLabel}
-          </Button>
-        ) : null
+      {actionNode ? (
+        <div className={s.action}>{actionNode}</div>
+      ) : (
+        <div className={s.action}>{actionLabel}</div>
       )}
-    </article>
+    </>
   );
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target={href.startsWith("http") ? "_blank" : undefined}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        className={s.card}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  return <article className={s.card}>{content}</article>;
 }
