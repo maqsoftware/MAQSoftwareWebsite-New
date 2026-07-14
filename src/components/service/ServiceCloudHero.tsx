@@ -126,6 +126,10 @@ export function ServiceCloudHero() {
             className={s.heroImage}
             src="/images/Service%20cards/Cloud.png"
             alt="Cloud Modernization"
+            loading="eager"
+            decoding="async"
+            width={560}
+            height={420}
           />
         </div>
       </div>
