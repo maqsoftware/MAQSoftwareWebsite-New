@@ -72,7 +72,7 @@ export function ReportingBIInsights() {
               to={i.href}
               img={getServiceInsightImage(i.href)}
               deriveFormats={false}
-              imgFit="cover"
+              imgFit="contain"
               aspectRatio="16 / 10"
               title={i.title}
               desc={i.teaser}
