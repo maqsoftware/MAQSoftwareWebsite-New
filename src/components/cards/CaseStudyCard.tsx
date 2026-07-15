@@ -49,7 +49,7 @@ const useStyles = makeStyles({
   },
   date: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 600 },
   tag: {
-    fontSize: "11px",
+    fontSize: "12px",
     fontWeight: 700,
     color: "var(--maq-red)",
     background: "var(--maq-red-pale)",
@@ -60,7 +60,7 @@ const useStyles = makeStyles({
     alignSelf: "flex-start",
   },
   title: {
-    fontSize: "17px",
+    fontSize: "20px",
     fontWeight: 700,
     color: "var(--maq-black)",
     lineHeight: 1.3,

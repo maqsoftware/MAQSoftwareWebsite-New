@@ -72,7 +72,7 @@ const useVisualStyles = makeStyles({
     opacity: 0.3,
   },
   connectorLabel: {
-    fontSize: "9px",
+    fontSize: "12px",
     fontWeight: 700,
     textTransform: "uppercase",
     letterSpacing: "0.1em",

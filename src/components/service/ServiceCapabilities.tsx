@@ -53,7 +53,7 @@ const useStyles = makeStyles({
     margin: "0 0 6px",
     letterSpacing: "-0.02em",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
+  sub: { fontSize: "15px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
   panel: {
     marginTop: "20px",

@@ -12,7 +12,7 @@ export const useProductPageStyles = makeStyles({
     "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
   },
   eyebrow: { fontSize: "12px", fontWeight: 700, color: "var(--maq-red)", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "12px", display: "block" },
-  h1: { display: "block", fontSize: "40px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-black)", letterSpacing: "-0.02em", margin: "0 0 16px" },
+  h1: { display: "block", fontSize: "var(--fs-h1)", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-black)", letterSpacing: "-0.02em", margin: "0 0 16px" },
   heroSub: { display: "block", fontSize: "15px", lineHeight: 1.6, color: "var(--maq-gray-600)", marginBottom: "24px", maxWidth: "640px" },
   btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
   heroImageWrap: { display: "flex", alignItems: "center", justifyContent: "center", padding: "8px" },
@@ -26,7 +26,7 @@ export const useProductPageStyles = makeStyles({
   secEyebrow: { fontSize: "12px", fontWeight: 700, color: "var(--maq-red)", letterSpacing: "0.08em", textTransform: "uppercase", display: "block", marginBottom: "8px" },
   title: { display: "block", fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 6px", letterSpacing: "-0.02em" },
   titleLg: { display: "block", fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 10px", letterSpacing: "-0.02em" },
-  sub: { display: "block", fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "720px", textAlign: "center" },
+  sub: { display: "block", fontSize: "15px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "720px", textAlign: "center" },
 
   benGrid3: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "1fr" } },
   benGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "16px", "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" }, "@media (max-width: 640px)": { gridTemplateColumns: "1fr" } },
