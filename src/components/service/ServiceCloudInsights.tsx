@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { PosterCard } from "../cardsV2/PosterCard";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
 import { getServiceInsightImage } from "../../data/serviceInsightImages";
 
 const useStyles = makeStyles({
@@ -26,9 +26,8 @@ const useStyles = makeStyles({
   sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", textAlign: "center" },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "24px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+    gap: "16px",
   },
 });
 
@@ -37,17 +36,20 @@ const insights = [
     title: "Optimize your DevOps strategies with our 9 essential best practices",
     teaser: "Essential DevOps practices for efficient cloud deployment and operations.",
     href: "https://maqsoftware.com/insights/azure-dev-ops-best-practices-guide.html",
+    imageUrl: "/images/insights/service/azure-dev-ops-best-practices-guide.jpg",
   },
   {
     title: "Strengthen your cloud security and protect your assets with 19 security best practices",
     teaser: "Comprehensive security best practices for protecting your cloud infrastructure and data.",
     href: "https://maqsoftware.com/insights/azure-security-best-practices.html",
+    imageUrl: "/images/insights/service/azure-security-best-practices.jpg",
   },
   {
     title: "This guide covers the 7 best practices you need to secure Dataverse",
     teaser:
       "Essential security controls for protecting data in Microsoft Dataverse cloud environment.",
     href: "https://maqsoftware.com/insights/dataverse-security-best-practices.html",
+    imageUrl: "/images/insights/service/dataverse-security-best-practices.jpg",
   },
 ];
 
@@ -65,15 +67,12 @@ export function ServiceCloudInsights() {
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
-            <PosterCard
+            <CaseStudyCard
               key={i.title}
-              to={i.href}
-              img={getServiceInsightImage(i.href)}
-              deriveFormats={false}
-              imgFit="contain"
-              aspectRatio="16 / 10"
+              href={i.href}
+              imageUrl={i.imageUrl}
               title={i.title}
-              desc={i.teaser}
+              teaser={i.teaser}
             />
           ))}
         </div>

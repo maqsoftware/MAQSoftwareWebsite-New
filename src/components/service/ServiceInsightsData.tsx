@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { PosterCard } from "../cardsV2/PosterCard";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
 import { getServiceInsightImage } from "../../data/serviceInsightImages";
 
 const useStyles = makeStyles({
@@ -26,9 +26,8 @@ const useStyles = makeStyles({
   sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", textAlign: "center" },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "24px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+    gap: "16px",
   },
 });
 
@@ -37,16 +36,19 @@ const insights = [
     title: "Microsoft Fabric Feature for Real-time Analytics",
     teaser: "Explore Fabric features that enable real-time analytics and streaming.",
     href: "https://blog.maqsoftware.com/2024/05/microsoft-fabric-features-for-real-time.html",
+    imageUrl: "/images/insights/service/microsoft-fabric-features-for-real-time.png",
   },
   {
     title: "Embracing the Future of Data Management with Microsoft Fabric: A Setup Guide",
     teaser: "Guidance for setting up Fabric-based data platforms.",
     href: "https://blog.maqsoftware.com/2023/11/embracing-future-of-data-management.html",
+    imageUrl: "/images/insights/service/embracing-future-of-data-management.png",
   },
   {
     title: "Optimize your Power BI Reports and Usage with LoadFAST",
     teaser: "Best practices to get better performance and higher usage from Power BI.",
     href: "https://blog.maqsoftware.com/2024/03/transform-your-power-bi.html",
+    imageUrl: "/images/insights/service/transform-your-power-bi.png",
   },
 ];
 
@@ -62,15 +64,12 @@ export function ServiceInsightsData() {
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
-            <PosterCard
+            <CaseStudyCard
               key={i.title}
-              to={i.href}
-              img={getServiceInsightImage(i.href)}
-              deriveFormats={false}
-              imgFit="contain"
-              aspectRatio="16 / 10"
+              href={i.href}
+              imageUrl={i.imageUrl}
               title={i.title}
-              desc={i.teaser}
+              teaser={i.teaser}
             />
           ))}
         </div>
