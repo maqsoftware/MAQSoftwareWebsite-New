@@ -117,7 +117,7 @@ interface ResourceItem { title: string; desc: string; to: string; img: string }
 const RESOURCES: ResourceItem[] = [
   { title: "Power BI Visual Guides", desc: "Custom Power BI visuals built and maintained by the team.", to: "/insights", img: "/images/power-bi-visuals.png" },
   { title: "Webinars", desc: "Technical sessions on data platforms, AI, and the work itself.", to: "/insights", img: "/images/webinar.png" },
-  { title: "Best Practice Guides", desc: "Writing from MAQ engineers on patterns, pitfalls, and platform decisions.", to: "/insights", img: "/images/best-practice-guides.png" },
+  { title: "Best Practice Guides", desc: "Writing from MAQ software engineers on patterns, pitfalls, and platform decisions.", to: "/insights", img: "/images/best-practice-guides.png" },
 ];
 
 // "Industries we serve" data + icons are shared across the home explorations

@@ -39,7 +39,7 @@ export const insightsResourceLinks: InsightsResourceLink[] = [
     key: "events",
     label: "Events",
     href: "/events",
-    description: "Conferences, webinars, and workshops with MAQ experts.",
+    description: "Conferences, webinars, and workshops with MAQ Software's experts.",
   },
 ];
 
