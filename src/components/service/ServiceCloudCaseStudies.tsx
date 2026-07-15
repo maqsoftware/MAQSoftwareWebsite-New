@@ -54,6 +54,7 @@ interface Study {
   title: string;
   teaser: string;
   href: string;
+  imageUrl?: string;
 }
 
 const studies: Study[] = [
@@ -63,6 +64,7 @@ const studies: Study[] = [
     teaser:
       "Consolidating fragmented data estates onto Microsoft Fabric to unlock a single, governed source of truth across the enterprise.",
     href: "https://blog.maqsoftware.com/2025/07/migrating-to-microsoft-fabric-to-unlock.html",
+    imageUrl: "/images/case-studies/external/B025_MSFabric_Banner.webp",
   },
   {
     tag: "Snowflake · Fabric",
@@ -70,6 +72,7 @@ const studies: Study[] = [
     teaser:
       "Bridging Snowflake and Microsoft Fabric to streamline data movement, governance, and cost — without rewriting existing pipelines.",
     href: "https://blog.maqsoftware.com/2025/03/optimizing-data-management-by.html",
+    imageUrl: "/images/case-studies/external/snowflake-best-practices.webp",
   },
   {
     tag: "SQL migration",
@@ -77,6 +80,7 @@ const studies: Study[] = [
     teaser:
       "AI-assisted SQL conversion accelerates legacy reporting platform migration while preserving security and compliance.",
     href: "https://blog.maqsoftware.com/2024/08/modernizing-reporting-platforms-through.html",
+    imageUrl: "/images/case-studies/external/Laptop-data-report.webp",
   },
 ];
 
@@ -99,7 +103,7 @@ export function ServiceCloudCaseStudies({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} />
+            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} imageUrl={c.imageUrl} tag={c.tag} />
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (

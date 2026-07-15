@@ -8,6 +8,7 @@ export interface CaseStudyItem {
   title: string;
   teaser: string;
   href: string;
+  imageUrl?: string;
 }
 
 export interface ServiceCaseStudiesProps {
@@ -71,6 +72,7 @@ interface Study {
   title: string;
   teaser: string;
   href: string;
+  imageUrl?: string;
 }
 
 const defaultStudies: Study[] = [
@@ -80,6 +82,7 @@ const defaultStudies: Study[] = [
     teaser:
       "A proven CoE blueprint that moves enterprise AI from pilot interest to repeatable, governed production adoption.",
     href: "https://blog.maqsoftware.com/2026/02/transforming-ai-interest-into-adoption.html",
+    imageUrl: "/images/case-studies/external/B027_CoE_Banner_V4.webp",
   },
   {
     tag: "Agentic AI",
@@ -87,6 +90,7 @@ const defaultStudies: Study[] = [
     teaser:
       "How agentic AI is reshaping retail, financial services, healthcare and manufacturing workflows in production.",
     href: "https://blog.maqsoftware.com/2025/08/reshaping-industries-with-agentic-ai.html",
+    imageUrl: "/images/case-studies/external/boardroom_AI_stock.webp",
   },
   {
     tag: "Scaling AI",
@@ -94,6 +98,7 @@ const defaultStudies: Study[] = [
     teaser:
       "A reference architecture and delivery model for scaling agentic AI to every customer and every developer in the enterprise.",
     href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
+    imageUrl: "/images/case-studies/external/Sales-data-agent-on-laptop.webp",
   },
 ];
 
@@ -116,7 +121,7 @@ export function ServiceCaseStudies({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} />
+            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} imageUrl={c.imageUrl} tag={c.tag} />
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (

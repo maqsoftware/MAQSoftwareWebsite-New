@@ -314,6 +314,16 @@ const useStyles = makeStyles({
             transform: "translateY(-2px)",
         },
     },
+    caseImage: {
+        width: "100%",
+        height: "220px",
+        objectFit: "cover",
+        objectPosition: "left center",
+        display: "block",
+        backgroundColor: "var(--maq-surface-cream)",
+        borderRadius: "10px",
+        marginBottom: "4px",
+    },
     pill: {
         fontSize: "11px",
         fontWeight: 700,
@@ -495,6 +505,7 @@ interface CaseStudy {
     title: string;
     teaser: string;
     href: string;
+    imageUrl?: string;
 }
 
 const caseStudies: CaseStudy[] = [
@@ -505,6 +516,7 @@ const caseStudies: CaseStudy[] = [
         teaser:
             "Modernizing a Direct Store Delivery operation with Microsoft Fabric so the field team gets real-time visibility into orders, stock, and exceptions.",
         href: "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
+        imageUrl: "/images/case-studies/external/Convenience-store-counter.webp",
     },
     {
         tag: "Dynamics 365 · UX",
@@ -513,6 +525,7 @@ const caseStudies: CaseStudy[] = [
         teaser:
             "Redesigning the Dynamics 365 UI/UX so frontline users complete core tasks in fewer clicks with measurably higher adoption.",
         href: "https://blog.maqsoftware.com/2024/03/maximizing-power-of-dynamics-365-user.html",
+        imageUrl: "/images/case-studies/external/dynamics-main.webp",
     },
     {
         tag: "Dynamics 365 · Productivity",
@@ -520,6 +533,7 @@ const caseStudies: CaseStudy[] = [
         teaser:
             "A custom dynamic checklist control inside Dynamics 365 that guides users through complex multi-step processes without leaving the record.",
         href: "https://blog.maqsoftware.com/2020/10/dynamic-checklist-dynamics-365.html",
+        imageUrl: "/images/case-studies/external/Computer-with-report.webp",
     },
 ];
 
@@ -706,6 +720,16 @@ export function ServiceBusinessApps() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
+                                {c.imageUrl ? (
+                                    <img
+                                        className={s.caseImage}
+                                        src={c.imageUrl}
+                                        alt={c.title}
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                ) : null}
+                                {c.tag ? <span className={s.pill}>{c.tag}</span> : null}
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>
