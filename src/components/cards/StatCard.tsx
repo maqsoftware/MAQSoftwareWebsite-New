@@ -31,8 +31,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   chip: {
-    alignSelf: "flex-start",
-    fontSize: "10px",
+    fontSize: "12px",
     fontWeight: 700,
     color: "var(--maq-red)",
     background: "var(--maq-red-pale)",
@@ -54,7 +53,7 @@ const useStyles = makeStyles({
     textAlign: "center",
   },
   title: {
-    fontSize: "15px",
+    fontSize: "20px",
     fontWeight: 700,
     color: "var(--maq-black)",
     lineHeight: 1.4,

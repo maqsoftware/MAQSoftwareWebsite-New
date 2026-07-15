@@ -51,7 +51,7 @@ const useVisualStyles = makeStyles({
     alignItems: "center",
     gap: "8px",
   },
-  statusLabel: { fontSize: "10px", color: "var(--maq-gray-500)", width: "60px" },
+  statusLabel: { fontSize: "11px", color: "var(--maq-gray-500)", width: "60px" },
   statusDot: {
     width: "8px",
     height: "8px",

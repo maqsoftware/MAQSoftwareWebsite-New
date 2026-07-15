@@ -59,7 +59,7 @@ const useStyles = makeStyles({
     margin: "0 0 16px",
   },
   description: {
-    fontSize: "16px",
+    fontSize: "15px",
     lineHeight: 1.6,
     color: "var(--maq-gray-600)",
     marginBottom: "20px",
@@ -99,7 +99,7 @@ const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   sectionTitle: {
-    fontSize: "24px",
+    fontSize: "36px",
     fontWeight: 700,
     color: "var(--maq-black)",
     margin: "0 0 16px",
@@ -148,7 +148,7 @@ const useStyles = makeStyles({
     ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   cardImg: { width: "100%", aspectRatio: "16/9", objectFit: "contain", background: "#fff" },
-  cardTitle: { fontSize: "15px", fontWeight: 600, color: "var(--maq-black)", margin: 0 },
+  cardTitle: { fontSize: "20px", fontWeight: 600, color: "var(--maq-black)", margin: 0 },
   read: {
     display: "inline-block",
     fontSize: "13px",
@@ -186,7 +186,7 @@ const useStyles = makeStyles({
     padding: "22px",
   },
   blockTitle: {
-    fontSize: "16px",
+    fontSize: "20px",
     fontWeight: 700,
     color: "var(--maq-black)",
     margin: "0 0 12px",

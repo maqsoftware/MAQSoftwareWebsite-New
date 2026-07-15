@@ -1100,7 +1100,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/AdvancedLinear.webp"
+    "imageUrl": "/images/case-studies/external/AdvancedLinear.svg"
   },
   {
     "name": "Bowtie Chart",
@@ -1122,7 +1122,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/BoxandWhiskers.webp"
+    "imageUrl": "/images/case-studies/external/BoxandWhiskers.svg"
   },
   {
     "name": "Brick Chart",
@@ -1133,7 +1133,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/BrickChart.webp"
+    "imageUrl": "/images/case-studies/external/BrickChart.svg"
   },
   {
     "name": "Calendar",
@@ -1174,7 +1174,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/DataInsights.webp"
+    "imageUrl": "/images/case-studies/external/DataInsights.svg"
   },
   {
     "name": "Dot Plot",
@@ -1195,7 +1195,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/DynamicTooltip.webp"
+    "imageUrl": "/images/case-studies/external/DynamicTooltip.svg"
   },
   {
     "name": "Funnel with Source",
@@ -1205,7 +1205,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/FunnelwithSource.webp"
+    "imageUrl": "/images/case-studies/external/FunnelwithSource.svg"
   },
   {
     "name": "Gantt Chart",
@@ -1216,7 +1216,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/GanttChart.webp"
+    "imageUrl": "/images/case-studies/external/GanttChart.svg"
   },
   {
     "name": "Grid",
@@ -1226,7 +1226,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/Grid.webp"
+    "imageUrl": "/images/case-studies/external/Grid.svg"
   },
   {
     "name": "Hierarchy Chart",
@@ -1236,7 +1236,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/HierarchyChart.webp"
+    "imageUrl": "/images/case-studies/external/HierarchyChart.svg"
   },
   {
     "name": "Histogram With Points",
@@ -1256,7 +1256,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/HorizontalFunnel.webp"
+    "imageUrl": "/images/case-studies/external/HorizontalFunnel.svg"
   },
   {
     "name": "Hourglass Chart",
@@ -1298,7 +1298,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/KPIColumn.webp"
+    "imageUrl": "/images/case-studies/external/KPIColumn.svg"
   },
   {
     "name": "KPI Grid",
@@ -1308,7 +1308,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/KPIGrid.webp"
+    "imageUrl": "/images/case-studies/external/KPIGrid.svg"
   },
   {
     "name": "KPI Ticker",
@@ -1319,7 +1319,7 @@ export const visualGuideItems: VisualGuideItem[] = [
       "Certified",
       "Editor's Pick"
     ],
-    "imageUrl": "/images/case-studies/external/KPITicker.webp"
+    "imageUrl": "/images/case-studies/external/KPITicker.svg"
   },
   {
     "name": "Linear Gauge",
@@ -1329,7 +1329,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/LinearGauge.webp"
+    "imageUrl": "/images/case-studies/external/LinearGauge.svg"
   },
   {
     "name": "Organization Chart",
@@ -1339,7 +1339,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/Organizationchart.webp"
+    "imageUrl": "/images/case-studies/external/Organizationchart.svg"
   },
   {
     "name": "Quadrant Chart",
@@ -1391,7 +1391,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/RotatingChart.webp"
+    "imageUrl": "/images/case-studies/external/RotatingChart.svg"
   },
   {
     "name": "Rotating Tile",
@@ -1401,7 +1401,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/RotatingTiles.webp"
+    "imageUrl": "/images/case-studies/external/RotatingTiles.svg"
   },
   {
     "name": "Sunburst",
@@ -1432,7 +1432,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/TextWrap.webp"
+    "imageUrl": "/images/case-studies/external/TextWrap.svg"
   },
   {
     "name": "Thermometer",
@@ -1442,7 +1442,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/Thermometer.webp"
+    "imageUrl": "/images/case-studies/external/Thermometer.svg"
   },
   {
     "name": "Trading Chart",
@@ -1463,7 +1463,7 @@ export const visualGuideItems: VisualGuideItem[] = [
     "badges": [
       "Certified"
     ],
-    "imageUrl": "/images/case-studies/external/TreeMap.webp"
+    "imageUrl": "/images/case-studies/external/TreeMap.svg"
   },
   {
     "name": "Venn Diagram",
