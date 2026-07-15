@@ -34,42 +34,42 @@ interface BuildArea { tab: string; title: string; desc: string; to: string; img?
 const BUILD: BuildArea[] = [
   {
     tab: "Data & AI",
-    title: "Data & AI platforms",
+    title: "Data & AI Platforms",
     desc: "Build data foundations across Microsoft Fabric, Databricks, and Snowflake — lakehouses, warehouses, and pipelines designed to scale with the business.",
     to: "/services/data-and-analytics",
     img: "/images/Service%20cards/Platforms.png"
   },
   {
-    tab: "AI agents",
-    title: "AI solutions & agents",
+    tab: "AI Agents",
+    title: "AI Solutions & Agents",
     desc: "Deploy production-grade copilots and agents on Microsoft Foundry, Azure OpenAI, and Copilot Studio — grounded in your data, governed for compliance, and ready for production scale.",
     to: "/services/agentic-ai",
     img: "/images/Service%20cards/Conversational AI.png"
   },
   {
     tab: "Insights",
-    title: "Insights & analytics",
+    title: "Insights & Analytics",
     desc: "Design analytics across Power BI, Microsoft Fabric Real-Time Intelligence, and Databricks SQL — dashboards, self-service models, and predictive analytics that scale across the organization.",
     to: "/services/reporting-bi",
     img: "/images/Service%20cards/Visualization.png"
   },
   {
-    tab: "Business apps",
-    title: "Business applications & automation",
+    tab: "Business Apps",
+    title: "Business Applications & Automation",
     desc: "Modernize operations on Microsoft Power Platform, Dynamics 365, Power Apps, and Power Automate, with Copilot agents embedded in the workflows that warrant them.",
     to: "/services/business-apps",
     img: "/images/Service%20cards/Apps.png"
   },
   {
     tab: "Cloud",
-    title: "Cloud modernization",
+    title: "Cloud Modernization",
     desc: "Migrate to Microsoft Azure with run costs typically 30-40% lower after deployment, across re-architecture, AKS, and FinOps optimization.",
     to: "/services/cloud",
     img: "/images/Service%20cards/Cloud.png"
   },
   {
     tab: "Security",
-    title: "Security & governance",
+    title: "Security & Governance",
     desc: "Implement Zero Trust security on Microsoft Defender, Entra, Purview, and Unity Catalog — aligned to ISO 27001, 27701, and 27018, and built for audit from day one.",
     to: "/services/security-compliance",
     img: "/images/Service%20cards/Security.png"
@@ -115,9 +115,9 @@ const CASES = caseStudyItems.slice(0, 3);
 
 interface ResourceItem { title: string; desc: string; to: string; img: string }
 const RESOURCES: ResourceItem[] = [
-  { title: "Power BI visual guides", desc: "Custom Power BI visuals built and maintained by the team.", to: "/insights", img: "/images/power-bi-visuals.png" },
+  { title: "Power BI Visual Guides", desc: "Custom Power BI visuals built and maintained by the team.", to: "/insights", img: "/images/power-bi-visuals.png" },
   { title: "Webinars", desc: "Technical sessions on data platforms, AI, and the work itself.", to: "/insights", img: "/images/webinar.png" },
-  { title: "Best practice guides", desc: "Writing from MAQ engineers on patterns, pitfalls, and platform decisions.", to: "/insights", img: "/images/best-practice-guides.png" },
+  { title: "Best Practice Guides", desc: "Writing from MAQ engineers on patterns, pitfalls, and platform decisions.", to: "/insights", img: "/images/best-practice-guides.png" },
 ];
 
 // "Industries we serve" data + icons are shared across the home explorations
@@ -386,10 +386,10 @@ export function HomeV3() {
               </motion.p>
               <motion.div className={s.heroCta} variants={heroItemV}>
                 <PrimaryButton size="large" onClick={() => handleContactClick()}>
-                  Contact us
+                  Contact Us
                 </PrimaryButton>
                 <SecondaryButton size="large" onClick={() => navigate("/insights/case-studies")}>
-                  Case studies
+                  Case Studies
                 </SecondaryButton>
               </motion.div>
             </motion.div>
@@ -415,7 +415,7 @@ export function HomeV3() {
       <Section style={{ paddingTop: 80 }}>
         <motion.div {...fadeUp}>
           <SectionHeading
-            title="What we deliver"
+            title="What We Deliver"
             className={s.prodHead}
           />
         </motion.div>
@@ -449,7 +449,7 @@ export function HomeV3() {
             <p className={s.featSub}>Replaced manual workflows across forecasting, pricing, targeting, and store operations with agentic AI that acts in real time.</p>
             <div className={s.featCta}>
               <SecondaryButton onClick={() => window.open(CASES[0].href, "_blank", "noopener,noreferrer")}>
-                Read the story
+                Read the Story
               </SecondaryButton>
             </div>
           </div>
@@ -489,7 +489,7 @@ export function HomeV3() {
       {/* INDUSTRIES */}
       <Section tone="gray">
         <motion.div {...fadeUp}>
-          <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
+          <SectionHeading title="Industries We Serve" align="center" className={s.indHead} />
         </motion.div>
         <div className={s.industriesGrid}>
           {INDUSTRIES.map((ind, i) => (
