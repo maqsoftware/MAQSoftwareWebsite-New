@@ -10,60 +10,26 @@ import {
   type EventCard as EventCardData,
 } from "../data/events";
 import { TextButton } from "../components/buttons";
-import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 
 const INITIAL_PREVIOUS_VISIBLE = 9;
 const INITIAL_NEWS_FETCH = 12;
 
 const useStyles = makeStyles({
-  hero: {
-    backgroundColor: "var(--maq-off-white)",
-    padding: "56px 32px 40px",
-    backgroundImage: "url('/logos/wave_dots.svg')",
-    backgroundPosition: "bottom left",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-  },
-  heroInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
-  eyebrow: {
-    display: "block",
-    fontSize: "12px",
-    fontWeight: 700,
-    letterSpacing: "0.08em",
-    textTransform: "uppercase",
-    color: "var(--maq-red)",
-    marginBottom: "12px",
-  },
-  h1: {
-    fontSize: "40px",
-    fontWeight: 700,
-    lineHeight: 1.15,
-    color: "var(--maq-black)",
-    letterSpacing: "-0.02em",
-    margin: "0 0 12px",
-  },
-  heroSub: {
-    fontSize: "15px",
-    lineHeight: 1.65,
-    color: "var(--maq-gray-700)",
-    maxWidth: "760px",
-    margin: 0,
-  },
   section: {
-    padding: "40px 32px 64px",
+    padding: "56px 32px",
     backgroundColor: "#fff",
   },
   sectionAlt: {
-    padding: "40px 32px 64px",
+    padding: "56px 32px",
     backgroundColor: "var(--maq-off-white)",
   },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   sectionHead: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     gap: "16px",
-    marginBottom: "22px",
+    marginBottom: "40px",
     flexWrap: "wrap",
   },
   sectionTitle: {
@@ -73,7 +39,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     margin: 0,
     letterSpacing: "-0.02em",
-    textAlign: "center",
+    textAlign: "left",
   },
   upcomingGrid: {
     display: "grid",
@@ -161,22 +127,10 @@ export function AboutEvents() {
 
   return (
     <>
-      <section className={s.hero}>
-        <div className={s.heroInner}>
-          {/* <span className={s.eyebrow}>EVENTS</span> */}
-          <h1 className={s.h1}>Connect With MAQ Software</h1>
-          <p className={s.heroSub}>
-            Stay informed about upcoming conferences, webinars, workshops, and industry events where MAQ Software experts share insights on Data, AI, Analytics, and Cloud technologies.
-          </p>
-        </div>
-      </section>
-
-      <InsightsResourceNav active="events" />
-
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.sectionHead}>
-            <h2 className={s.sectionTitle}>Upcoming Events</h2>
+            <h2 className={s.sectionTitle}>Upcoming events</h2>
           </div>
 
           {upcoming.length === 0 ? (
@@ -212,7 +166,7 @@ export function AboutEvents() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.sectionHead}>
-            <h2 className={s.sectionTitle}>Previous Events</h2>
+            <h2 className={s.sectionTitle}>Previous events</h2>
           </div>
 
           {loading && !hasPreviousEvents && (

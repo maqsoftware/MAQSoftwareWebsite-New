@@ -186,7 +186,8 @@ const useStyles = makeStyles({
     // cool-tinted brand grays. Scoped here, so other pages keep the brand
     // palette. Cascades through the heading/muted/faint roles too.
     "--maq-black": tokens.colorNeutralForeground1,
-    "--maq-gray-50": tokens.colorNeutralBackground2,
+    // --maq-gray-50 intentionally inherits the global standard (#f3f4f6) so the
+    // home page's gray bands match the rest of the site and the footer.
     "--maq-gray-100": tokens.colorNeutralBackground3,
     "--maq-border": tokens.colorNeutralStroke2,
     "--maq-text-soft": tokens.colorNeutralForeground3,
@@ -489,7 +490,7 @@ export function HomeV3() {
       {/* INDUSTRIES */}
       <Section tone="gray">
         <motion.div {...fadeUp}>
-          <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
+          <SectionHeading title="Industries we serve" align="left" className={s.indHead} />
         </motion.div>
         <div className={s.industriesGrid}>
           {INDUSTRIES.map((ind, i) => (

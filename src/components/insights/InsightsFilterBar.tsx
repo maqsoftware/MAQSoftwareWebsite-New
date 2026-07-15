@@ -1,7 +1,7 @@
 import { makeStyles, tokens, mergeClasses, ToggleButton } from "@fluentui/react-components";
 
-// Styled to match the home page's `PillTabs` slicer: neutral rounded pills,
-// 40px tall, gray fill when selected, white with a light stroke when not.
+// Styled to match the home page's `PillTabs` slicer: rounded pills, 40px tall,
+// soft brand-red fill when selected, white with a light stroke when not.
 const useStyles = makeStyles({
   row: { display: "flex", flexWrap: "wrap", gap: tokens.spacingHorizontalS },
   chip: {
@@ -27,18 +27,19 @@ const useStyles = makeStyles({
     },
   },
   active: {
-    backgroundColor: tokens.colorNeutralBackground3,
-    border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3}`,
-    color: tokens.colorNeutralForeground1,
+    backgroundColor: "var(--maq-red-pale)",
+    border: `${tokens.strokeWidthThin} solid var(--maq-red-pale)`,
+    color: "var(--maq-red)",
     fontWeight: tokens.fontWeightSemibold,
     ":hover": {
-      backgroundColor: tokens.colorNeutralBackground3Hover,
-      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3Hover}`,
-      color: tokens.colorNeutralForeground1,
+      backgroundColor: "var(--maq-red-pale)",
+      border: `${tokens.strokeWidthThin} solid var(--maq-red-pale)`,
+      color: "var(--maq-red)",
     },
     ":active": {
-      backgroundColor: tokens.colorNeutralBackground3Pressed,
-      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3Pressed}`,
+      backgroundColor: "var(--maq-red-pale)",
+      border: `${tokens.strokeWidthThin} solid var(--maq-red-pale)`,
+      color: "var(--maq-red)",
     },
   },
 });

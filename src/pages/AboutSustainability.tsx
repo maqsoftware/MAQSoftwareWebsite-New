@@ -12,7 +12,8 @@ const useStyles = makeStyles({
   // ── Hero ──────────────────────────────────────────────────────────────────
   hero: {
     backgroundColor: "var(--maq-off-white)",
-    padding: "64px 32px 72px",
+    // Consistent About-page hero padding (see AboutWhoWeAre for the pattern).
+    padding: "40px 32px",
     backgroundImage: "url('/logos/wave_dots.svg')",
     backgroundPosition: "bottom left",
     backgroundRepeat: "no-repeat",
@@ -88,7 +89,7 @@ const useStyles = makeStyles({
     textAlign: "center" as const,
     padding: "24px",
     borderRadius: "12px",
-    backgroundColor: "var(--maq-off-white)",
+    backgroundColor: "#fff",
     border: "1px solid var(--maq-border)",
     transition: "border-color 0.16s ease",
     ":hover": {
@@ -125,7 +126,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     letterSpacing: "-0.02em",
     margin: "0 0 48px",
-    textAlign: "center" as const,
+    textAlign: "left" as const,
   },
   achievementsGrid: {
     display: "grid",
@@ -282,9 +283,9 @@ export function AboutSustainability() {
       {/* Stats */}
       <section className={s.statsSection}>
         <div className={s.statsInner}>
-          <p className={s.statsHeading}>
+          <h2 className={s.sectionHeading}>
             Discover our commitment to building a sustainable tomorrow
-          </p>
+          </h2>
           <div className={s.statsGrid}>
             <div className={s.statCard}>
               <span className={s.statValue}>Carbon Net Zero</span>

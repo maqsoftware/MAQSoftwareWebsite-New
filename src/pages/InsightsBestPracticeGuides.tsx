@@ -1,21 +1,18 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { useMemo, useState, useEffect } from "react";
-import { CTA } from "../components/CTA";
 import { TextButton } from "../components/buttons";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
-import { InsightsHero } from "../components/insights/InsightsHero";
-import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 import { ArticleCard } from "../components/cards/ArticleCard";
 import { bestPracticeFilters, bestPracticeItems } from "../data/insights";
 
 const INITIAL_VISIBLE = 9;
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
+  section: { padding: "56px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
-  title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 10px", letterSpacing: "-0.02em" },
+  title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 40px", letterSpacing: "-0.02em" },
   grid: {
-    marginTop: "18px",
+    marginTop: "44px",
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
@@ -59,14 +56,9 @@ export function InsightsBestPracticeGuides() {
 
   return (
     <>
-      <InsightsHero
-        title="Best practice guides"
-        subhead="Learn implementation patterns and guardrails across GitHub Copilot, Power BI, Databricks, Snowflake, Azure architecture, Dynamics 365, and Power Platform."
-      />
-      <InsightsResourceNav active="best-practice-guides" />
       <section className={s.section} id="insights-content">
         <div className={s.inner}>
-          <h2 className={s.title}>Technical playbooks</h2>
+          <h2 className={s.title}>Best practice guides</h2>
           <InsightsFilterBar items={bestPracticeFilters} active={activeFilter} onChange={setActiveFilter} />
           <div className={s.grid}>
             {visibleItems.map((item) => (
@@ -100,7 +92,6 @@ export function InsightsBestPracticeGuides() {
           )}
         </div>
       </section>
-      <CTA />
     </>
   );
 }

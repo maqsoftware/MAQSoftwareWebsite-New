@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     margin: 0,
     letterSpacing: "-0.02em",
+    textAlign: "left",
   },
   grid: {
     display: "grid",

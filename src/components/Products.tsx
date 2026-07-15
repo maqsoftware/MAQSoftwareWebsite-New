@@ -31,6 +31,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     margin: "0 0 12px",
     letterSpacing: "-0.02em",
+    textAlign: "left",
   },
   sub: {
     display: "block",

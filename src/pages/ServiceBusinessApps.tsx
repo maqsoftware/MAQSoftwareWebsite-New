@@ -137,6 +137,7 @@ const useStyles = makeStyles({
         color: "var(--maq-navy)",
         margin: "0 0 6px",
         letterSpacing: "-0.02em",
+        textAlign: "left",
     },
     titleSm: {
         fontSize: "36px",
@@ -145,6 +146,7 @@ const useStyles = makeStyles({
         color: "var(--maq-navy)",
         margin: "0 0 6px",
         letterSpacing: "-0.02em",
+        textAlign: "left",
     },
     secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 

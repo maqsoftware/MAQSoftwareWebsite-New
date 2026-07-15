@@ -1,11 +1,7 @@
 import { makeStyles } from "@fluentui/react-components";
 import {
   ArrowRight16Regular,
-  ChartMultiple24Regular,
-  DataPie24Regular,
-  Lightbulb24Regular,
   Location24Regular,
-  Shield24Regular,
 } from "@fluentui/react-icons";
 import { PrimaryButton } from "../components/buttons";
 
@@ -22,60 +18,17 @@ const useStyles = makeStyles({
     overflow: "hidden",
     borderBottom: "1px solid var(--maq-border)",
   },
-  // Decorative hero background image, constrained to the 1440px content column
-  // (centered) so it aligns with the page content and footer width instead of
-  // bleeding out to the viewport's right edge.
-  heroBg: {
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: "50%",
-    transform: "translateX(-50%)",
-    // Match the content column exactly at every width: 32px gutter each side
-    // (like the section padding), capped at the 1440px container.
-    width: "calc(100% - 64px)",
-    maxWidth: "var(--maq-container-wide)",
-    backgroundImage: "url('/images/ContactUs/bg.png')",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center 30%",
-    backgroundSize: "cover",
-    zIndex: 0,
-    "@media (min-width: 1441px)": {
-      backgroundPosition: "center 20%",
-    },
-    "@media (max-width: 960px)": {
-      backgroundPosition: "center 46%",
-      // Content sections use a 20px gutter below 960px — match it.
-      width: "calc(100% - 40px)",
-    },
-    "@media (max-width: 560px)": {
-      display: "none",
-    },
-  },
-  heroMobileBg: {
-    display: "none",
-    "@media (max-width: 560px)": {
-      display: "block",
-      position: "absolute",
-      inset: 0,
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      objectPosition: "center 74%",
-      opacity: 0.95,
-      zIndex: 0,
-    },
-  },
   heroInner: {
     // 1504 = 1440 content + 32px gutter each side (border-box), so the inner
     // content column is 1440px wide and left-aligns with the footer/home page.
     maxWidth: "1504px",
     margin: "0 auto",
-    padding: "18px 32px 28px",
+    // Match the other About heroes' 40px top/bottom padding.
+    padding: "40px 32px",
     position: "relative",
     zIndex: 1,
     "@media (max-width: 960px)": {
-      padding: "16px 20px 24px",
+      padding: "40px 20px",
     },
   },
   heroContent: {
@@ -114,91 +67,18 @@ const useStyles = makeStyles({
     whiteSpace: "nowrap",
   },
 
-  featureShell: {
-    // 1504 = 1440 content + 32px gutter each side (border-box) to match the footer.
-    maxWidth: "1504px",
-    margin: "10px auto 0",
-    padding: "0 32px",
-    "@media (max-width: 960px)": {
-      marginTop: "8px",
-      padding: "0 20px",
-    },
-  },
-  featureRow: {
-    display: "grid",
-    gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
-    backgroundColor: "#fff",
-    border: "1px solid var(--maq-border)",
-    borderRadius: "12px",
-    overflow: "hidden",
-    boxShadow: "0 8px 20px rgba(15, 23, 42, 0.08)",
-    "@media (max-width: 1000px)": {
-      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-    },
-    "@media (max-width: 560px)": {
-      gridTemplateColumns: "1fr",
-    },
-  },
-  featureItem: {
-    display: "grid",
-    gridTemplateColumns: "34px 1fr",
-    alignItems: "center",
-    gap: "10px",
-    padding: "8px 14px",
-    borderRight: "1px solid var(--maq-border)",
-    ":last-child": {
-      borderRight: "none",
-    },
-    "@media (max-width: 1000px)": {
-      ":nth-child(2n)": {
-        borderRight: "none",
-      },
-      ":nth-child(-n + 2)": {
-        borderBottom: "1px solid var(--maq-border)",
-      },
-    },
-    "@media (max-width: 560px)": {
-      borderRight: "none",
-      borderBottom: "1px solid var(--maq-border)",
-      ":last-child": {
-        borderBottom: "none",
-      },
-    },
-  },
-  featureIconWrap: {
-    width: "30px",
-    height: "30px",
-    borderRadius: "999px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "var(--maq-red)",
-    backgroundColor: "#fff5f7",
-    border: "1px solid rgba(200, 16, 46, 0.18)",
-  },
-  featureTitle: {
-    margin: "0 0 1px",
-    fontSize: "14px",
-    fontWeight: 700,
-    lineHeight: 1.2,
-    color: "var(--maq-black)",
-  },
-  featureDesc: {
-    margin: 0,
-    fontSize: "12px",
-    lineHeight: 1.3,
-    color: "var(--maq-ink)",
-  },
-
+  // Full-bleed section band (matches the rest of the site); content is capped
+  // by the inner container below.
   officesSection: {
-    // Match the hero section visual width by using var(--maq-container-wide)
-    maxWidth: "var(--maq-container-wide)",
-    margin: "10px auto 0",
-    padding: "12px 32px 16px",
+    padding: "56px 32px",
+    backgroundColor: "#fff",
     "@media (max-width: 960px)": {
-      margin: "8px auto 0",
-      padding: "18px 20px 20px",
+      padding: "40px 20px",
     },
+  },
+  officesInner: {
+    maxWidth: "var(--maq-container-wide)",
+    margin: "0 auto",
   },
   officesTitle: {
     margin: "0 0 10px",
@@ -319,12 +199,6 @@ const useStyles = makeStyles({
   },
 });
 
-type Capability = {
-  title: string;
-  description: string;
-  icon: JSX.Element;
-};
-
 type Office = {
   city: string;
   address: string;
@@ -332,29 +206,6 @@ type Office = {
   maps: string;
   image: string;
 };
-
-const capabilities: Capability[] = [
-  {
-    title: "Customer-Centric Delivery",
-    description: "Trusted by global enterprises for measurable outcomes",
-    icon: <Lightbulb24Regular />,
-  },
-  {
-    title: "Innovation at Scale",
-    description: "Modernizing legacy BI and driving AI-powered insights",
-    icon: <ChartMultiple24Regular />,
-  },
-  {
-    title: "Data & AI Expertise",
-    description: "End-to-end capabilities across analytics, AI and cloud",
-    icon: <DataPie24Regular />,
-  },
-  {
-    title: "Security & Compliance",
-    description: "Enterprise-grade security with global compliance standards",
-    icon: <Shield24Regular />,
-  },
-];
 
 const offices: Office[] = [
   {
@@ -404,15 +255,6 @@ export function Contact() {
   return (
     <main className={s.page}>
       <section className={s.hero}>
-        <div className={s.heroBg} aria-hidden="true" />
-        <img
-          aria-hidden="true"
-          className={s.heroMobileBg}
-          decoding="async"
-          loading="eager"
-          src="/images/ContactUs/bg_mobile.png"
-          alt=""
-        />
         <div className={s.heroInner}>
           <div className={s.heroContent}>
             {/* <p className={s.eyebrow}>Contact Us</p> */}
@@ -433,56 +275,42 @@ export function Contact() {
         </div>
       </section>
 
-      <div className={s.featureShell}>
-        <section className={s.featureRow} aria-label="Core capabilities">
-          {capabilities.map((capability) => (
-            <article key={capability.title} className={s.featureItem}>
-              <span className={s.featureIconWrap} aria-hidden="true">
-                {capability.icon}
-              </span>
-              <div>
-                <p className={s.featureTitle}>{capability.title}</p>
-                <p className={s.featureDesc}>{capability.description}</p>
-              </div>
-            </article>
-          ))}
-        </section>
-      </div>
-
       <section className={s.officesSection} aria-labelledby="global-offices-heading">
-        <h2 id="global-offices-heading" className={s.officesTitle}>
-          Our Global Offices
-        </h2>
-        <div className={s.officeGrid}>
-          {offices.map((office) => (
-            <article className={s.officeCard} key={office.city}>
-              <div
-                className={s.officeMedia}
-                style={{ backgroundImage: `url('${office.image}')` }}
-                aria-hidden="true"
-              >
-                <span className={s.locationPin}>
-                  <Location24Regular fontSize={13} />
-                  <span className={s.hiddenText}>Location</span>
-                </span>
-              </div>
-
-              <div className={s.officeBody}>
-                <h3 className={s.officeCity}>{office.city}</h3>
-                <p className={s.officeAddress}>{office.address}</p>
-                {office.phone && <p className={s.officePhone}>{office.phone}</p>}
-                <a
-                  className={s.directionsLink}
-                  href={office.maps}
-                  target="_blank"
-                  rel="noopener noreferrer"
+        <div className={s.officesInner}>
+          <h2 id="global-offices-heading" className={s.officesTitle}>
+            Our Global Offices
+          </h2>
+          <div className={s.officeGrid}>
+            {offices.map((office) => (
+              <article className={s.officeCard} key={office.city}>
+                <div
+                  className={s.officeMedia}
+                  style={{ backgroundImage: `url('${office.image}')` }}
+                  aria-hidden="true"
                 >
-                  Get Directions
-                  <ArrowRight16Regular fontSize={12} />
-                </a>
-              </div>
-            </article>
-          ))}
+                  <span className={s.locationPin}>
+                    <Location24Regular fontSize={13} />
+                    <span className={s.hiddenText}>Location</span>
+                  </span>
+                </div>
+
+                <div className={s.officeBody}>
+                  <h3 className={s.officeCity}>{office.city}</h3>
+                  <p className={s.officeAddress}>{office.address}</p>
+                  {office.phone && <p className={s.officePhone}>{office.phone}</p>}
+                  <a
+                    className={s.directionsLink}
+                    href={office.maps}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Directions
+                    <ArrowRight16Regular fontSize={12} />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
     </main>
