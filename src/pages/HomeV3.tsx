@@ -115,9 +115,9 @@ const CASES = caseStudyItems.slice(0, 3);
 
 interface ResourceItem { title: string; desc: string; to: string; img: string }
 const RESOURCES: ResourceItem[] = [
-  { title: "Power BI Visual Guides", desc: "Custom Power BI visuals built and maintained by the team.", to: "/insights", img: "/images/power-bi-visuals.png" },
-  { title: "Webinars", desc: "Technical sessions on data platforms, AI, and the work itself.", to: "/insights", img: "/images/webinar.png" },
-  { title: "Best Practice Guides", desc: "Writing from MAQ software engineers on patterns, pitfalls, and platform decisions.", to: "/insights", img: "/images/best-practice-guides.png" },
+  { title: "Power BI Custom Visuals", desc: "Custom Power BI visuals built and maintained by the team.", to: "/insights/power-bi-custom-visual-guide", img: "/images/power-bi-visuals.png" },
+  { title: "Best Practice Guides", desc: "Writing from MAQ software engineers on patterns, pitfalls, and platform decisions.", to: "/insights/best-practice-guides", img: "/images/best-practice-guides.png" },
+  { title: "Webinars", desc: "Technical sessions on data platforms, AI, and the work itself.", to: "/insights/events", img: "/images/webinar.png" },
 ];
 
 // "Industries we serve" data + icons are shared across the home explorations
