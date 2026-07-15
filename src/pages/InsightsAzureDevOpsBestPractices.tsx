@@ -49,8 +49,8 @@ export function InsightsAzureDevOpsBestPractices() {
       ]}
       continueReading={{
         image: "https://maqsoftware.com/img/blog/BPG007-main.jpg",
-        title: "Azure Databricks Best Practice Guide",
-        description: "Improve job speed and reduce storage costs with our Azure Databricks optimization best practices.",
+        title: "Databricks Best Practice Guide",
+        description: "Improve job speed and reduce storage costs with our Databricks optimization best practices.",
         to: "/insights/azure-databricks-best-practices",
       }}
     />

@@ -163,7 +163,7 @@ const offerings = [
 const guides = [
   { title: "Explore Mosaic AI on Databricks for enterprise-ready generative AI", href: "https://blog.maqsoftware.com/2026/02/explore-mosaic-ai-on-databricks-for.html" },
   { title: "Databricks best practice guide", href: "/insights/databricks-best-practices" },
-  { title: "Azure Databricks best practice guide", href: "/insights/azure-databricks-best-practices" },
+  { title: "Databricks best practice guide", href: "/insights/azure-databricks-best-practices" },
   { title: "Unlocking advanced analytics with Databricks", href: "https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html" },
   { title: "Integrating Databricks with Power BI", href: "https://blog.maqsoftware.com/2025/08/unlocking-business-insights-integrating.html" },
   { title: "Real-time structured streaming in Databricks: Powering modern data applications", href: "https://blog.maqsoftware.com/2025/09/real-time-structured-streaming-in.html" },

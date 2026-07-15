@@ -1530,10 +1530,10 @@ export const bestPracticeItems: BestPracticeItem[] = [
     "imageUrl": "/images/case-studies/external/BPG006-main.webp"
   },
   {
-    "title": "Improve job speed and save storage with our 18 Azure Databricks best practices",
+    "title": "Improve job speed and save storage with our 18 Databricks best practices",
     "href": "/insights/azure-databricks-best-practices",
     "topic": "Databricks",
-    "teaser": "Best practice guide: Improve job speed and save storage with our 18 Azure Databricks best practices.",
+    "teaser": "Best practice guide: Improve job speed and save storage with our 18 Databricks best practices.",
     "imageUrl": "/images/case-studies/external/BPG007-main.webp"
   },
   {

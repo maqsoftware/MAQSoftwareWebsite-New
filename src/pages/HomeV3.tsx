@@ -35,7 +35,7 @@ const BUILD: BuildArea[] = [
   {
     tab: "Data & AI",
     title: "Data & AI platforms",
-    desc: "Build data foundations across Microsoft Fabric, Azure Databricks, and Snowflake — lakehouses, warehouses, and pipelines designed to scale with the business.",
+    desc: "Build data foundations across Microsoft Fabric, Databricks, and Snowflake — lakehouses, warehouses, and pipelines designed to scale with the business.",
     to: "/services/data-and-analytics",
     img: "/images/Service%20cards/Platforms.png"
   },

@@ -3,11 +3,11 @@ import { GuideArticle } from "../components/insights/GuideArticle";
 export function InsightsAzureDatabricksBestPractices() {
   return (
     <GuideArticle
-      eyebrow="Azure Databricks"
+      eyebrow="Databricks"
       title="ADB optimization best practice guide"
-      intro="Azure Databricks (ADB) processes terabytes of data while running heavy data science workloads. As data input and workloads grow, job performance can decline. These practices help you optimize cost, performance, governance, and operations across your ADB environment."
+      intro="Databricks (ADB) processes terabytes of data while running heavy data science workloads. As data input and workloads grow, job performance can decline. These practices help you optimize cost, performance, governance, and operations across your ADB environment."
       lastUpdated="December 2025"
-      ctaSubject="Azure Databricks best practices - MAQ Software"
+      ctaSubject="Databricks best practices - MAQ Software"
       sections={[
         {
           title: "Cost optimization",
