@@ -362,16 +362,6 @@ const useStyles = makeStyles({
             transform: "translateY(-2px)",
         },
     },
-    caseImage: {
-        width: "100%",
-        height: "220px",
-        objectFit: "cover",
-        objectPosition: "left center",
-        display: "block",
-        backgroundColor: "var(--maq-surface-cream)",
-        borderRadius: "10px",
-        marginBottom: "4px",
-    },
     pill: {
         fontSize: "11px",
         fontWeight: 700,
@@ -527,7 +517,6 @@ interface CaseStudy {
     title: string;
     teaser: string;
     href: string;
-    imageUrl?: string;
 }
 
 const caseStudies: CaseStudy[] = [
@@ -537,7 +526,6 @@ const caseStudies: CaseStudy[] = [
         teaser:
             "Embedding GitHub Copilot across the SDLC with adoption playbooks, governance, and outcome telemetry — delivering ~70% faster prototyping and ~55% faster refactoring.",
         href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
-        imageUrl: "/images/case-studies/external/software-developer-stock.webp",
     },
     {
         tag: "AI adoption",
@@ -545,7 +533,6 @@ const caseStudies: CaseStudy[] = [
         teaser:
             "A reference architecture and delivery model for scaling agentic AI and Copilot adoption to every developer in the enterprise.",
         href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
-        imageUrl: "/images/case-studies/external/Sales-data-agent-on-laptop.webp",
     },
     {
         tag: "Knowledge management",
@@ -553,7 +540,6 @@ const caseStudies: CaseStudy[] = [
         teaser:
             "Enterprise AI Copilots that ground answers in organizational content — dramatically improving information retrieval productivity for knowledge workers.",
         href: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html",
-        imageUrl: "/images/case-studies/external/Copilot-computer-screen.webp",
     },
 ];
 
@@ -771,16 +757,6 @@ export function ServiceWorkplaceTransformation() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                {c.imageUrl ? (
-                                    <img
-                                        className={s.caseImage}
-                                        src={c.imageUrl}
-                                        alt={c.title}
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                ) : null}
-                                {c.tag ? <span className={s.pill}>{c.tag}</span> : null}
                                 <h3 className={s.caseTitle}>{c.title}</h3>
                                 <p className={s.caseTeaser}>{c.teaser}</p>
                                 <span className={s.caseRead}>

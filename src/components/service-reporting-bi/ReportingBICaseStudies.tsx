@@ -98,7 +98,6 @@ interface Study {
   title: string;
   teaser: string;
   href: string;
-  imageUrl?: string;
 }
 
 const studies: Study[] = [
@@ -108,7 +107,6 @@ const studies: Study[] = [
     teaser:
       "A Microsoft Fabric data agent that answers business questions with citation-backed accuracy, replacing brittle hand-built dashboards.",
     href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
-    imageUrl: "/images/case-studies/external/B023_MSFabric_Banner_V2.webp",
   },
   {
     tag: "Retail BI",
@@ -116,7 +114,6 @@ const studies: Study[] = [
     teaser:
       "Re-platforming a global retailer's reporting estate onto Microsoft Fabric and Power BI with a unified semantic model.",
     href: "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
-    imageUrl: "/images/case-studies/external/retail-report-stock-image.webp",
   },
   {
     tag: "Migration",
@@ -124,7 +121,6 @@ const studies: Study[] = [
     teaser:
       "AI-assisted Qlik to Power BI migration rebuilding semantic models, RLS, and pixel-perfect layouts on Fabric.",
     href: "https://blog.maqsoftware.com/2025/06/transitioning-legacy-reports-from-qlik.html",
-    imageUrl: "/images/case-studies/external/Person-typing-on-report.webp",
   },
 ];
 
@@ -147,7 +143,7 @@ export function ReportingBICaseStudies({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} imageUrl={c.imageUrl} tag={c.tag} />
+            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser} href={c.href} />
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (

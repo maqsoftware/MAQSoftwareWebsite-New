@@ -54,7 +54,6 @@ interface Study {
   title: string;
   teaser?: string;
   href: string;
-  imageUrl?: string;
 }
 
 const studies: Study[] = [
@@ -64,7 +63,6 @@ const studies: Study[] = [
     teaser:
       "Siloed enterprise data unified on OneLake for a single governed surface powering analytics, reporting and AI.",
     href: "https://blog.maqsoftware.com/2026/01/unifying-disconnected-data-systems.html",
-    imageUrl: "/images/case-studies/external/B023_MSFabric_Banner_V2.webp",
   },
   {
     tag: "Snowflake · Iceberg",
@@ -72,7 +70,6 @@ const studies: Study[] = [
     teaser:
       "Snowflake Iceberg tables integrated with Microsoft Fabric to dramatically reduce data refresh latency and storage cost.",
     href: "https://blog.maqsoftware.com/2025/08/optimizing-data-refresh-by-integrating.html",
-    imageUrl: "/images/case-studies/external/snowflake-iceberg-cover.webp",
   },
   {
     tag: "Databricks",
@@ -80,7 +77,6 @@ const studies: Study[] = [
     teaser:
       "Building an advanced analytics platform on Databricks to support ML, streaming, and large-scale data engineering workloads.",
     href: "https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html",
-    imageUrl: "/images/case-studies/external/unlocking-advanced-analytics-with-databricks.webp",
   },
 ];
 
@@ -103,7 +99,7 @@ export function ServiceCaseStudiesData({
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
-            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser ?? ""} href={c.href} imageUrl={c.imageUrl} tag={c.tag} />
+            <CaseStudyCard key={c.title} title={c.title} teaser={c.teaser ?? ""} href={c.href} />
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (

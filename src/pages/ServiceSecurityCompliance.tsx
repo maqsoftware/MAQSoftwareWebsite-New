@@ -129,7 +129,6 @@ const caseStudies: CaseStudyItem[] = [
     teaser:
       "Reference design for shipping enterprise Copilots safely — patterns, guardrails, and identity controls for production deployment.",
     href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
-    imageUrl: "/images/case-studies/external/B033_CopilotUI_Banner.webp",
   },
   {
     tag: "Cybersecurity",
@@ -137,7 +136,6 @@ const caseStudies: CaseStudyItem[] = [
     teaser:
       "Eliminating credential sprawl with Azure Managed Identity and enforcing least-privilege access using RBAC across the cloud estate.",
     href: "https://blog.maqsoftware.com/2024/08/strengthening-cybersecurity.html",
-    imageUrl: "/images/case-studies/external/B035_Cybersecurity_Banner.webp",
   },
   {
     tag: "Data governance",
@@ -145,7 +143,6 @@ const caseStudies: CaseStudyItem[] = [
     teaser:
       "Establishing centralized data governance and access controls across distributed systems for improved compliance posture.",
     href: "https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html",
-    imageUrl: "/images/case-studies/external/Data-Validation-Framework-main.webp",
   },
 ];
 
