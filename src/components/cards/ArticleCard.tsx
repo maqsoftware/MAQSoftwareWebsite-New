@@ -62,7 +62,7 @@ const useStyles = makeStyles({
   },
   date: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 600 },
   title: {
-    fontSize: "16px",
+    fontSize: "20px",
     fontWeight: 700,
     color: "var(--maq-black)",
     lineHeight: 1.35,

@@ -41,7 +41,7 @@ const useVisualStyles = makeStyles({
     alignItems: "center",
     gap: "8px",
   },
-  pipelineLabel: { fontSize: "10px", color: "var(--maq-gray-500)", width: "50px" },
+  pipelineLabel: { fontSize: "11px", color: "var(--maq-gray-500)", width: "50px" },
   pipelineTrack: { flex: 1, height: "8px", background: "var(--maq-gray-100)", borderRadius: "4px" },
   pipelineFill: { height: "100%", borderRadius: "4px" },
   spark: { display: "flex", alignItems: "flex-end", gap: "4px", height: "36px" },
@@ -59,7 +59,7 @@ const useVisualStyles = makeStyles({
     color: "var(--maq-red)",
     lineHeight: 1,
   },
-  scoreLabel: { fontSize: "10px", color: "var(--maq-gray-500)" },
+  scoreLabel: { fontSize: "11px", color: "var(--maq-gray-500)" },
 });
 
 const sparkHeights = [35, 55, 45, 70, 60, 85, 75, 92];

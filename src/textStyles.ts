@@ -127,7 +127,7 @@ export const textStyles = {
      Reusable text roles inside cards / buttons / links. */
   cardTitle: {
     fontFamily,
-    fontSize: "17px",
+    fontSize: "20px",
     fontWeight: 700,
     lineHeight: 1.3,
     letterSpacing: "-0.01em",

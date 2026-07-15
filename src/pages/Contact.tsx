@@ -91,35 +91,21 @@ const useStyles = makeStyles({
   },
   title: {
     margin: "0 0 10px",
-    fontSize: "58px",
+    fontSize: "40px",
     lineHeight: 1.03,
     letterSpacing: "-0.02em",
     fontWeight: 700,
     color: "var(--maq-black)",
-    "@media (max-width: 1080px)": {
-      fontSize: "50px",
-    },
-    "@media (max-width: 960px)": {
-      fontSize: "42px",
-      lineHeight: 1.08,
-    },
-    "@media (max-width: 560px)": {
-      fontSize: "34px",
-    },
   },
   titleAccent: {
     color: "var(--maq-red)",
   },
   summary: {
     margin: "0 0 14px",
-    fontSize: "18px",
+    fontSize: "15px",
     lineHeight: 1.5,
     color: "#2f3a4f",
     maxWidth: "640px",
-    "@media (max-width: 960px)": {
-      fontSize: "17px",
-      lineHeight: 1.6,
-    },
   },
   cta: {
     minHeight: "38px",

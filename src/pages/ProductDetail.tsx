@@ -46,7 +46,7 @@ const useStyles = makeStyles({
     display: "block",
   },
   h1: {
-    fontSize: "44px",
+    fontSize: "40px",
     fontWeight: 700,
     color: "var(--maq-black)",
     margin: "0 0 16px",
@@ -54,7 +54,7 @@ const useStyles = makeStyles({
     lineHeight: 1.12,
   },
   sub: {
-    fontSize: "16px",
+    fontSize: "15px",
     color: "var(--maq-gray-700)",
     lineHeight: 1.65,
     marginBottom: "24px",

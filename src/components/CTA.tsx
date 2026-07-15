@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     letterSpacing: "-0.02em",
   },
   sub: {
-    fontSize: "16px",
+    fontSize: "15px",
     color: "var(--maq-gray-700)",
     marginBottom: "20px",
     maxWidth: "640px",

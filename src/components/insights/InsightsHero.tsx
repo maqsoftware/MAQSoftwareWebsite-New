@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     display: "block",
   },
   h1: {
-    fontSize: "var(--fs-h1)",
+    fontSize: "40px",
     lineHeight: 1.15,
     fontWeight: 700,
     color: "var(--maq-black)",

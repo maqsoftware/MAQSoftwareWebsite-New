@@ -83,7 +83,7 @@ const useStyles = makeStyles({
     textAlign: "center",
   },
   kpiVal: { fontSize: "16px", fontWeight: 700, color: "var(--maq-red)" },
-  kpiLbl: { fontSize: "10px", color: "var(--maq-gray-500)", textTransform: "uppercase", letterSpacing: "0.04em" },
+  kpiLbl: { fontSize: "12px", color: "var(--maq-gray-500)", textTransform: "uppercase", letterSpacing: "0.04em" },
 
   perfRow: { display: "flex", alignItems: "center", gap: "10px", marginTop: "6px" },
   perfLabel: { fontSize: "11px", width: "78px", color: "var(--maq-gray-500)" },

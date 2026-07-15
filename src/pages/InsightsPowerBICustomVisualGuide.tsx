@@ -62,7 +62,7 @@ const useStyles = makeStyles({
     textTransform: "uppercase",
   },
   category: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 700 },
-  cardTitle: { fontSize: "16px", lineHeight: 1.35, color: "var(--maq-black)", margin: 0 },
+  cardTitle: { fontSize: "20px", lineHeight: 1.35, color: "var(--maq-black)", margin: 0 },
   teaser: { fontSize: "13px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0, flex: 1 },
   read: {
     display: "inline-block",
