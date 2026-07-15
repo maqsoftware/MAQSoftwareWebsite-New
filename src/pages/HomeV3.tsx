@@ -379,11 +379,10 @@ export function HomeV3() {
           <div className={s.heroTop}>
             <motion.div className={s.heroText} variants={heroContainerV} initial="initial" animate="animate">
               <motion.h1 className={`maq-h1 ${s.heroH1}`} variants={heroItemV}>
-                Harness your data to drive faster, <br /><em className={s.h1em}>AI-powered</em> decisions.
+                Turn data into decisions faster with<br /><em className={s.h1em}>AI-powered</em> analytics.
               </motion.h1>
               <motion.p className={s.sub} variants={heroItemV}>
-                We help enterprises transform data and AI into measurable impact — with speed,
-                quality, and confidence.
+                We help enterprises scale AI, modernize data platforms, and accelerate cloud transformation — delivered with speed, quality, and confidence.
               </motion.p>
               <motion.div className={s.heroCta} variants={heroItemV}>
                 <PrimaryButton size="large" onClick={() => handleContactClick()}>
