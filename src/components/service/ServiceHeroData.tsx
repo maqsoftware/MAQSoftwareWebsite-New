@@ -127,6 +127,10 @@ export function ServiceHeroData() {
             className={s.heroImage}
             src="/images/Service%20cards/Platforms.png"
             alt="Data and AI Platforms"
+            loading="eager"
+            decoding="async"
+            width={560}
+            height={420}
           />
         </div>
       </div>

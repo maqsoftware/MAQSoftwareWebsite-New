@@ -129,6 +129,10 @@ export function ReportingBIHero() {
             className={s.heroImage}
             src="/images/Service%20cards/Visualization.png"
             alt="Insights and Analytics"
+            loading="eager"
+            decoding="async"
+            width={560}
+            height={420}
           />
         </div>
       </div>
