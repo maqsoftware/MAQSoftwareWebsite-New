@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     display: "block",
   },
   h1: {
-    fontSize: "40px",
+    fontSize: "var(--fs-h1)",
     lineHeight: 1.15,
     fontWeight: 700,
     color: "var(--maq-black)",
@@ -71,7 +71,7 @@ const useStyles = makeStyles({
     padding: "14px 16px",
   },
   tileTitle: {
-    fontSize: "11px",
+    fontSize: "12px",
     textTransform: "uppercase",
     letterSpacing: "0.08em",
     color: "var(--maq-gray-500)",

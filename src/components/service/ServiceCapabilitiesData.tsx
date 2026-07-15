@@ -157,12 +157,12 @@ const capabilities: Capability[] = [
     tags: ["Microsoft Fabric", "Analytics", "Enterprise AI"],
   },
   {
-    name: "Azure Databricks",
+    name: "Databricks",
     tagline: "Scalable data engineering and AI",
     icon: <Database24Regular />,
     description:
-      "Develop scalable data engineering and AI solutions using Azure Databricks for advanced analytics, machine learning, collaborative notebooks, and enterprise data processing.",
-    tags: ["Azure Databricks", "Data Engineering", "AI"],
+      "Develop scalable data engineering and AI solutions using Databricks for advanced analytics, machine learning, collaborative notebooks, and enterprise data processing.",
+    tags: ["Databricks", "Data Engineering", "AI"],
   },
   {
     name: "Snowflake AI Data Cloud",
@@ -218,7 +218,7 @@ export function ServiceCapabilitiesData() {
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <SecondaryButton
+            {/* <SecondaryButton
               size="large"
               className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
@@ -226,7 +226,7 @@ export function ServiceCapabilitiesData() {
               }
             >
               Know more
-            </SecondaryButton>
+            </SecondaryButton> */}
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (

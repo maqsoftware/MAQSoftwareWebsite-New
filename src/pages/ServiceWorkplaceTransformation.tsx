@@ -4,8 +4,7 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
 import { PrimaryButton, SecondaryButton } from "../components/buttons";
-import { PosterCard } from "../components/cardsV2/PosterCard";
-import { getServiceInsightImage } from "../data/serviceInsightImages";
+import { CaseStudyCard } from "../components/cards/CaseStudyCard";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -548,7 +547,7 @@ interface Insight {
     title: string;
     teaser: string;
     href: string;
-    img?: string;
+    imageUrl?: string;
 }
 
 const insights: Insight[] = [
@@ -557,18 +556,21 @@ const insights: Insight[] = [
         teaser:
             "Field-tested frameworks for deploying AI capabilities — from knowledge bots to content generation — that produce measurable business outcomes.",
         href: "https://blog.maqsoftware.com/2024/08/empowering-businesses-with-ai.html",
+        imageUrl: "/images/insights/service/empowering-businesses-with-ai.png",
     },
     {
         title: "Modernizing the software development lifecycle with GitHub Copilot",
         teaser:
             "How a global organization embedded GitHub Copilot across development, testing, and deployment to transform engineering productivity.",
         href: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
+        imageUrl: "/images/insights/service/modernizing-software-development.jpg",
     },
     {
         title: "Building a secure Copilot: Addressing key security challenges",
         teaser:
             "Patterns, guardrails, and identity controls for shipping a secure enterprise Copilot deployment that maintains data governance.",
         href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html",
+        imageUrl: "/images/insights/service/building-secure-copilot-addressing-key.png",
     },
 ];
 
@@ -675,7 +677,7 @@ export function ServiceWorkplaceTransformation() {
                             <div className={s.iconBox}>{sel.icon}</div>
                             <div className={s.detailName}>{sel.name}</div>
                             <p className={s.detailDesc}>{sel.description}</p>
-                            <SecondaryButton
+                            {/* <SecondaryButton
                                 className={s.knowMore}
                                 onClick={() =>
                                     handleContactClick(
@@ -684,7 +686,7 @@ export function ServiceWorkplaceTransformation() {
                                 }
                             >
                                 Know more
-                            </SecondaryButton>
+                            </SecondaryButton> */}
                         </div>
                         <div className={s.rail}>
                             {capabilities.map((c, i) => (
@@ -788,15 +790,12 @@ export function ServiceWorkplaceTransformation() {
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (
-                            <PosterCard
+                            <CaseStudyCard
                                 key={i.title}
-                                to={i.href}
-                                img={i.img ?? getServiceInsightImage(i.href)}
-                                deriveFormats={false}
-                                imgFit="cover"
-                                aspectRatio="16 / 10"
+                                href={i.href}
+                                imageUrl={i.imageUrl}
                                 title={i.title}
-                                desc={i.teaser}
+                                teaser={i.teaser}
                             />
                         ))}
                     </div>

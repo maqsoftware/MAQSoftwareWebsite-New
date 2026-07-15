@@ -42,7 +42,7 @@ const useStyles = makeStyles({
       color: "inherit",
     },
   },
-  name: { fontSize: "18px", fontWeight: 700, color: "var(--maq-black)" },
+  name: { fontSize: "20px", fontWeight: 700, color: "var(--maq-black)" },
   tagline: {
     fontSize: "12px",
     color: "var(--maq-red)",

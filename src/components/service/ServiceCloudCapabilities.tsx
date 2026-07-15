@@ -219,7 +219,7 @@ export function ServiceCloudCapabilities() {
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <SecondaryButton
+            {/* <SecondaryButton
               size="large"
               className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
@@ -227,7 +227,7 @@ export function ServiceCloudCapabilities() {
               }
             >
               Know more
-            </SecondaryButton>
+            </SecondaryButton> */}
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (
@@ -247,7 +247,7 @@ export function ServiceCloudCapabilities() {
             ))}
           </div>
         </div>
-        <Link className={s.footerLink} to="/insights/case-studies?filter=Cloud modernization#insights-content">
+        <Link className={s.footerLink} to="/insights/case-studies?filter=Cloud%20Modernization#insights-content">
           See cloud case studies <ArrowRight16Regular />
         </Link>
       </div>

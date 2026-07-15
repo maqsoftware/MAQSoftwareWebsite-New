@@ -205,11 +205,12 @@ const useStyles = makeStyles({
   },
 
   officesSection: {
-    // 1504 = 1440 content + 32px gutter each side (border-box) to match the footer.
-    maxWidth: "1504px",
-    margin: "0 auto",
+    // Match the hero section visual width by using var(--maq-container-wide)
+    maxWidth: "var(--maq-container-wide)",
+    margin: "10px auto 0",
     padding: "12px 32px 16px",
     "@media (max-width: 960px)": {
+      margin: "8px auto 0",
       padding: "18px 20px 20px",
     },
   },

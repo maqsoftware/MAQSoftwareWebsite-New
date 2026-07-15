@@ -1,5 +1,5 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
-import { PosterCard } from "../cardsV2/PosterCard";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
 import { getServiceInsightImage } from "../../data/serviceInsightImages";
 
 const useStyles = makeStyles({
@@ -26,9 +26,8 @@ const useStyles = makeStyles({
   sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", textAlign: "center" },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "24px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
+    gap: "16px",
   },
 });
 
@@ -38,18 +37,21 @@ const insights = [
     teaser:
       "A practical walk-through of the Microsoft Fabric features that make real-time analytics shippable in production.",
     href: "https://blog.maqsoftware.com/2024/05/microsoft-fabric-features-for-real-time.html",
+    imageUrl: "/images/insights/service/microsoft-fabric-features-for-real-time.png",
   },
   {
     title: "Embracing the future of data management with Microsoft Fabric: A setup guide",
     teaser:
       "A setup guide for adopting Microsoft Fabric end-to-end, from workspace topology to semantic model governance.",
     href: "https://blog.maqsoftware.com/2023/11/embracing-future-of-data-management.html",
+    imageUrl: "/images/insights/service/embracing-future-of-data-management.png",
   },
   {
     title: "Optimize your Power BI reports and usage with LoadFAST",
     teaser:
       "How LoadFAST finds and ranks the highest-impact DAX, model, and capacity fixes in a Power BI estate.",
     href: "https://blog.maqsoftware.com/2024/03/transform-your-power-bi.html",
+    imageUrl: "/images/insights/service/transform-your-power-bi.png",
   },
 ];
 
@@ -67,15 +69,12 @@ export function ReportingBIInsights() {
         </div>
         <div className={s.grid}>
           {insights.map((i) => (
-            <PosterCard
+            <CaseStudyCard
               key={i.title}
-              to={i.href}
-              img={getServiceInsightImage(i.href)}
-              deriveFormats={false}
-              imgFit="cover"
-              aspectRatio="16 / 10"
+              href={i.href}
+              imageUrl={i.imageUrl}
               title={i.title}
-              desc={i.teaser}
+              teaser={i.teaser}
             />
           ))}
         </div>

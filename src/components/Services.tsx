@@ -60,7 +60,7 @@ const services: Svc[] = [
     tagline: "Unify Data. Accelerate AI. Drive Business Value.",
     bullets: [
       "Microsoft Fabric",
-      "Azure Databricks",
+      "Databricks",
       "Snowflake AI Data Cloud",
       "Azure Data Factory",
       "Lakehouse & Data Warehouse Modernization",

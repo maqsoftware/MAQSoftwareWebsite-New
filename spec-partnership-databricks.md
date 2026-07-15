@@ -134,7 +134,7 @@
 **Sample guide links (from source):**
 - `Explore Mosaic AI on Databricks for enterprise-ready generative AI` — https://blog.maqsoftware.com/2026/02/explore-mosaic-ai-on-databricks-for.html
 - `Databricks best practice guide` — https://maqsoftware.com/insights/databricks-best-practices.html
-- `Azure Databricks best practice guide` — https://maqsoftware.com/insights/azure-databricks-best-practices.html
+- `Databricks best practice guide` — https://maqsoftware.com/insights/azure-databricks-best-practices.html
 - `Unlocking advanced analytics with Databricks` — https://blog.maqsoftware.com/2025/07/unlocking-advanced-analytics-with.html
 - `Integrating Databricks with Power BI` — https://blog.maqsoftware.com/2025/08/unlocking-business-insights-integrating.html
 - `Real-time structured streaming in Databricks: Powering modern data applications` — https://blog.maqsoftware.com/2025/09/real-time-structured-streaming-in.html

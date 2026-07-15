@@ -24,7 +24,7 @@ const useStyles = makeStyles({
     display: "block",
   },
   h1: {
-    fontSize: "40px",
+    fontSize: "var(--fs-h1)",
     lineHeight: 1.15,
     fontWeight: 700,
     color: "var(--maq-black)",
@@ -55,7 +55,7 @@ const useStyles = makeStyles({
     padding: "14px 16px",
   },
   tileTitle: {
-    fontSize: "11px",
+    fontSize: "12px",
     textTransform: "uppercase",
     letterSpacing: "0.08em",
     color: "var(--maq-gray-500)",
@@ -76,7 +76,7 @@ const useStyles = makeStyles({
     textAlign: "center",
   },
   kpiVal: { fontSize: "16px", fontWeight: 700, color: "var(--maq-red)" },
-  kpiLbl: { fontSize: "10px", color: "var(--maq-gray-500)", textTransform: "uppercase" },
+  kpiLbl: { fontSize: "12px", color: "var(--maq-gray-500)", textTransform: "uppercase" },
   miniRows: { display: "grid", gap: "8px" },
   miniRow: {
     display: "flex",

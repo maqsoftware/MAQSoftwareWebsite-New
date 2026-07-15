@@ -72,7 +72,7 @@ const useVisualStyles = makeStyles({
     opacity: 0.3,
   },
   connectorLabel: {
-    fontSize: "9px",
+    fontSize: "12px",
     fontWeight: 700,
     textTransform: "uppercase",
     letterSpacing: "0.1em",
@@ -178,7 +178,7 @@ const fsCases = [
     tag: "Finance · Agentic AI",
     title: "Transforming finance with agentic AI solutions",
     teaser:
-      "MAQ's own finance agentic-AI post covering invoice processing, FP&A, expense anomaly detection, close automation, and compliance.",
+      "MAQ Software's own finance agentic-AI post covering invoice processing, FP&A, expense anomaly detection, close automation, and compliance.",
     href: "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
   },
   {
@@ -201,7 +201,7 @@ const fsOffers = [
   {
     pill: "Consulting services",
     title: "MAQ Software consulting services on Azure Marketplace",
-    desc: "Full catalog of MAQ's Microsoft-listed marketplace offers, including Fabric assessments and AI workshops tagged for Financial Services.",
+    desc: "Full catalog of MAQ Software's Microsoft-listed marketplace offers, including Fabric assessments and AI workshops tagged for Financial Services.",
     href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software",
   },
   {

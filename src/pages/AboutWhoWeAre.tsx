@@ -297,16 +297,16 @@ const recognitions = [
 
 const certifications = [
   {
-    imgSrc: "/logos/ISO_27701_27001_Logo.png",
-    title: "ISO/IEC 27701:2019 – Privacy Information Management",
-    href: "https://www.bsigroup.com/en-IN/products-and-services/assessment-and-certification/validation-and-verification/client-directory-certificate/PM%20747130",
-    desc: "MAQ Software is certified ISO 27701:2019 by British Standards Institution. ISO 27701 standards provide guidance for establishing, implementing, maintaining and continually improving a Privacy Information Management System (PIMS). They serve as an extension of ISO/IEC 27001 for privacy management within MAQ Software.",
-  },
-  {
     imgSrc: "/logos/ISO-icon-27001.png",
     title: "ISO 27001:2022 – Information Security",
     href: "https://www.bsigroup.com/en-IN/products-and-services/assessment-and-certification/validation-and-verification/client-directory-certificate/IS%20592346",
     desc: "MAQ Software is certified ISO 27001:2022 by British Standards Institution. ISO 27001 standards, the only auditable international standard, provide an Information Security Management Systems (ISMS) model for adequate and proportionate security controls to protect information assets.",
+  },
+  {
+    imgSrc: "/logos/ISO_27701_27001_Logo.png",
+    title: "ISO/IEC 27701:2019 – Privacy Information Management",
+    href: "https://www.bsigroup.com/en-IN/products-and-services/assessment-and-certification/validation-and-verification/client-directory-certificate/PM%20747130",
+    desc: "MAQ Software is certified ISO 27701:2019 by British Standards Institution. ISO 27701 standards provide guidance for establishing, implementing, maintaining and continually improving a Privacy Information Management System (PIMS). They serve as an extension of ISO/IEC 27001 for privacy management within MAQ Software.",
   },
   {
     imgSrc: "/logos/ISO-icon-27018.png",

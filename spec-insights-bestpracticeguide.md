@@ -80,7 +80,7 @@ Same 4-card nav contract with `Best practice guides` active.
    - https://maqsoftware.com/insights/power-bi-copilot-best-practices
 3. `Improve your Power BI performance and security with our best practices`
    - https://maqsoftware.com/insights/power-bi-best-practices
-4. `Improve job speed and save storage with our 18 Azure Databricks best practices`
+4. `Improve job speed and save storage with our 18 Databricks best practices`
    - https://maqsoftware.com/insights/azure-databricks-best-practices
 5. `Optimizing Performance, Collaboration, and Security on Databricks`
    - https://maqsoftware.com/insights/databricks-best-practices

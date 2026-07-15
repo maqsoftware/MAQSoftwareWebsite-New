@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { useContactAction } from "../lib/contact";
 import { PrimaryButton } from "../components/buttons";
-import { PosterCard } from "../components/cardsV2/PosterCard";
-import { getServiceInsightImage } from "../data/serviceInsightImages";
+import { CaseStudyCard } from "../components/cards/CaseStudyCard";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -527,7 +526,7 @@ interface Insight {
     title: string;
     teaser: string;
     href: string;
-    img?: string;
+    imageUrl?: string;
 }
 
 const insights: Insight[] = [
@@ -536,18 +535,21 @@ const insights: Insight[] = [
         teaser:
             "How Microsoft Fabric reshapes the retail analytics stack to enable real-time operational reporting.",
         href: "https://blog.maqsoftware.com/2023/11/microsoft-fabric-powering-real-time.html",
+        imageUrl: "/images/insights/service/microsoft-fabric-powering-real-time.png",
     },
     {
         title: "Explore Best Practices for Creating Enterprise-Wide Knowledge Bots",
         teaser:
             "Patterns for building enterprise knowledge bots that ground answers in your own content and stay maintainable at scale.",
         href: "https://maqsoftware.com/insights/knowledge-bot-best-practices.html",
+        imageUrl: "/images/insights/service/knowledge-bot-best-practices.jpg",
     },
     {
         title: "Microsoft Fabric: Empowering all personas",
         teaser:
             "How a single Fabric platform serves data engineers, analysts, scientists, and business users with the right tools for each.",
         href: "https://blog.maqsoftware.com/2023/09/microsoft-fabric-empowering.html",
+        imageUrl: "/images/insights/service/microsoft-fabric-empowering.png",
     },
 ];
 
@@ -627,7 +629,7 @@ export function ServiceBusinessApps() {
                             <div className={s.iconBox}>{sel.icon}</div>
                             <div className={s.detailName}>{sel.name}</div>
                             <p className={s.detailDesc}>{sel.description}</p>
-                            <PrimaryButton
+                            {/* <PrimaryButton
                                 size="large"
                                 className="maq-secondary-btn maq-equal-cta"
                                 onClick={() =>
@@ -637,7 +639,7 @@ export function ServiceBusinessApps() {
                                 }
                             >
                                 Know more
-                            </PrimaryButton>
+                            </PrimaryButton> */}
                         </div>
                         <div className={s.rail}>
                             {capabilities.map((c, i) => (
@@ -737,15 +739,12 @@ export function ServiceBusinessApps() {
                     </div>
                     <div className={s.insGrid}>
                         {insights.map((i) => (
-                            <PosterCard
+                            <CaseStudyCard
                                 key={i.title}
-                                to={i.href}
-                                img={i.img ?? getServiceInsightImage(i.href)}
-                                deriveFormats={false}
-                                imgFit="cover"
-                                aspectRatio="16 / 10"
+                                href={i.href}
+                                imageUrl={i.imageUrl}
                                 title={i.title}
-                                desc={i.teaser}
+                                teaser={i.teaser}
                             />
                         ))}
                     </div>
