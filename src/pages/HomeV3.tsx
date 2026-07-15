@@ -415,7 +415,7 @@ export function HomeV3() {
       <Section style={{ paddingTop: 80 }}>
         <motion.div {...fadeUp}>
           <SectionHeading
-            title="What We Deliver"
+            title="What we deliver"
             className={s.prodHead}
           />
         </motion.div>
@@ -489,7 +489,7 @@ export function HomeV3() {
       {/* INDUSTRIES */}
       <Section tone="gray">
         <motion.div {...fadeUp}>
-          <SectionHeading title="Industries We Serve" align="center" className={s.indHead} />
+          <SectionHeading title="Industries we serve" align="center" className={s.indHead} />
         </motion.div>
         <div className={s.industriesGrid}>
           {INDUSTRIES.map((ind, i) => (
