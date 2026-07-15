@@ -218,7 +218,7 @@ export function ServiceCapabilitiesData() {
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <SecondaryButton
+            {/* <SecondaryButton
               size="large"
               className="maq-secondary-btn maq-equal-cta"
               onClick={() =>
@@ -226,7 +226,7 @@ export function ServiceCapabilitiesData() {
               }
             >
               Know more
-            </SecondaryButton>
+            </SecondaryButton> */}
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (

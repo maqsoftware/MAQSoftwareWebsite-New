@@ -675,7 +675,7 @@ export function ServiceWorkplaceTransformation() {
                             <div className={s.iconBox}>{sel.icon}</div>
                             <div className={s.detailName}>{sel.name}</div>
                             <p className={s.detailDesc}>{sel.description}</p>
-                            <SecondaryButton
+                            {/* <SecondaryButton
                                 className={s.knowMore}
                                 onClick={() =>
                                     handleContactClick(
@@ -684,7 +684,7 @@ export function ServiceWorkplaceTransformation() {
                                 }
                             >
                                 Know more
-                            </SecondaryButton>
+                            </SecondaryButton> */}
                         </div>
                         <div className={s.rail}>
                             {capabilities.map((c, i) => (
