@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 /* ==================================================================
    SplitCard (V2) — horizontal card: padded text on the left, image
    filling the right half. When `to` is set the whole card is a link
-   (keyboard-accessible); otherwise it's a plain container.
+  (keyboard-accessible); otherwise it is a plain container.
 
    Inherits the standard card hover states — light border-highlight,
    image zoom (`.zoom-img`), and the "Learn more" foot color/arrow.

@@ -167,7 +167,7 @@ export function App() {
         const matches = mq.matches;
         // diagnostic log to help debug when running in devtools
         // eslint-disable-next-line no-console
-        // also set a DOM attribute so it's easy to inspect in Elements panel
+        // also set a DOM attribute so it is easy to inspect in Elements panel
         try {
           document.body.setAttribute("data-is-mobile", String(matches));
         } catch (e) {
