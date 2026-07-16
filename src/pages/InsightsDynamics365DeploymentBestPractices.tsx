@@ -25,11 +25,11 @@ export function InsightsDynamics365DeploymentBestPractices() {
         },
       ]}
       references={[
-        { label: "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices", href: "https://maqsoftware.com/insights/dynamics-365-deployment-best-practices", source: "MAQ Software" },
+        { label: "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices", href: "/insights/dynamics-365-deployment-best-practices", source: "MAQ Software" },
         { label: "Invoke custom actions from a workflow", href: "https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/invoke-custom-actions-workflow-dialog", source: "Microsoft, last updated February 15, 2022" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG009-main.png",
+        image: "/images/case-studies/external/BPG009-main.webp",
         title: "Power Apps Best Practices",
         description: "Optimize your canvas apps with our 13 best practices.",
         to: "/insights/power-apps-best-practices",

@@ -24,11 +24,11 @@ export function InsightsDataValidationBestPractices() {
         },
       ]}
       references={[
-        { label: "Ensure quality data on demand with our 7 data validation best practices", href: "https://maqsoftware.com/insights/data-validation-best-practices", source: "MAQ Software" },
+        { label: "Ensure quality data on demand with our 7 data validation best practices", href: "/insights/data-validation-best-practices", source: "MAQ Software" },
         { label: "Case Study: Data Validation Framework reduced our client's support tickets", href: "https://blog.maqsoftware.com/2019/06/case-study-data-validation-framework.html", source: "MAQ Software Blog" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG008-main.jpg",
+        image: "/images/case-studies/external/BPG008-main.webp",
         title: "Dynamics 365 Development Best Practices",
         description: "Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more.",
         to: "/insights/dynamics-365-development-best-practices",

@@ -68,14 +68,14 @@ export function InsightsSnowflakePowerBIBestPractices() {
         },
       ]}
       references={[
-        { label: "Optimize Snowflake storage for efficient Power BI data extraction", href: "https://maqsoftware.com/insights/snowflake-and-power-bi-best-practices", source: "MAQ Software" },
+        { label: "Optimize Snowflake storage for efficient Power BI data extraction", href: "/insights/snowflake-and-power-bi-best-practices", source: "MAQ Software" },
         { label: "Snowflake Connector for Power BI", href: "https://learn.microsoft.com/en-us/power-query/connectors/snowflake", source: "Microsoft Corporation" },
         { label: "Mirroring Snowflake in Microsoft Fabric", href: "https://learn.microsoft.com/en-us/fabric/mirroring/snowflake", source: "Microsoft Corporation" },
         { label: "Snowflake Dynamic Tables", href: "https://docs.snowflake.com/en/user-guide/dynamic-tables-about", source: "Snowflake Inc." },
         { label: "Clustering Keys & Micro-partitions", href: "https://docs.snowflake.com/en/user-guide/tables-clustering-keys", source: "Snowflake Inc." },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG010-main.png",
+        image: "/images/case-studies/external/BPG010-main.webp",
         title: "Best practices for creating enterprise-wide knowledge bots",
         description: "Improve your enterprise-wide knowledge bot's performance, security, and design with our best practices.",
         to: "/insights/knowledge-bot-best-practices",

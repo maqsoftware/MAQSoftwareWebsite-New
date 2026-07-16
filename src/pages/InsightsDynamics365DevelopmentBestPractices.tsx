@@ -89,7 +89,7 @@ export function InsightsDynamics365DevelopmentBestPractices() {
         },
       ]}
       references={[
-        { label: "Optimize your Dynamics 365 environment with our 32 best practices", href: "https://maqsoftware.com/insights/dynamics-365-development-best-practices", source: "MAQ Software" },
+        { label: "Optimize your Dynamics 365 environment with our 32 best practices", href: "/insights/dynamics-365-development-best-practices", source: "MAQ Software" },
         { label: "Create a solution in Power Apps", href: "https://docs.microsoft.com/en-us/powerapps/maker/data-platform/create-solution#solution-publisher", source: "Microsoft Docs, last updated June 14, 2023" },
         { label: "Define alternate keys to reference records", href: "https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/define-alternate-keys-reference-records?view=op-9-1", source: "Microsoft Docs, last updated March 30, 2023" },
         { label: "Write and register a plug-in (Microsoft Dataverse) – Power Apps", href: "https://docs.microsoft.com/en-us/powerapps/developer/data-platform/tutorial-write-plug-in", source: "Microsoft Docs, last updated September 8, 2023" },
@@ -102,7 +102,7 @@ export function InsightsDynamics365DevelopmentBestPractices() {
         { label: "Create web resources in Dynamics 365", href: "https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-web-resources?view=op-9-1", source: "Microsoft Docs, last updated February 15, 2022" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG001-main.jpg",
+        image: "/images/case-studies/external/BPG001-main.webp",
         title: "Dynamics 365 Deployment Best Practices",
         description: "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices.",
         to: "/insights/dynamics-365-deployment-best-practices",

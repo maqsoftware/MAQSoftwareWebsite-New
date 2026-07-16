@@ -20,6 +20,7 @@ import { ProductFabricAdminAgent } from "./pages/ProductFabricAdminAgent";
 import { ProductAIDataLens } from "./pages/ProductAIDataLens";
 import { ProductEmbedFAST } from "./pages/ProductEmbedFAST";
 import { ProductCertyFAST } from "./pages/ProductCertyFAST";
+import { ProductCertyFASTInstallationGuide } from "./pages/ProductCertyFASTInstallationGuide";
 import { ProductLoadFAST } from "./pages/ProductLoadFAST";
 import { ProductMigrateFAST } from "./pages/ProductMigrateFAST";
 import { ComponentLab } from "./pages/ComponentLab";
@@ -115,6 +116,7 @@ export function App() {
       void import("./pages/ProductAIDataLens");
       void import("./pages/ProductEmbedFAST");
       void import("./pages/ProductCertyFAST");
+      void import("./pages/ProductCertyFASTInstallationGuide");
       void import("./pages/ProductLoadFAST");
       void import("./pages/ProductMigrateFAST");
 
@@ -452,6 +454,10 @@ export function App() {
         <Route
           path="/products/certyfast"
           element={<ProductCertyFAST />}
+        />
+        <Route
+          path="/products/certyfast/installation-and-usage-guide"
+          element={<ProductCertyFASTInstallationGuide />}
         />
         <Route
           path="/products/loadfast"

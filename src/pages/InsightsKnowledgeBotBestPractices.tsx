@@ -101,13 +101,13 @@ export function InsightsKnowledgeBotBestPractices() {
         },
       ]}
       references={[
-        { label: "Best practices for creating enterprise-wide knowledge bots", href: "https://maqsoftware.com/insights/knowledge-bot-best-practices", source: "MAQ Software" },
+        { label: "Best practices for creating enterprise-wide knowledge bots", href: "/insights/knowledge-bot-best-practices", source: "MAQ Software" },
         { label: "Microsoft Purview overview", href: "https://learn.microsoft.com/en-us/purview/", source: "Microsoft Corporation" },
         { label: "Retrieval-Augmented Generation (RAG) on Azure", href: "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview", source: "Microsoft Corporation" },
         { label: "Azure App Service health checks", href: "https://learn.microsoft.com/en-us/azure/app-service/monitor-instances-health-check", source: "Microsoft Corporation" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG005-main.jpg",
+        image: "/images/case-studies/external/BPG005-main.webp",
         title: "DAX Best Practice Guide",
         description: "Improve your Power BI performance with our 22 DAX best practices.",
         to: "/insights/dax-best-practices",

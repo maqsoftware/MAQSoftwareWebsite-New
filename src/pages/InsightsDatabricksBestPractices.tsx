@@ -82,7 +82,7 @@ export function InsightsDatabricksBestPractices() {
       ]}
       upNext={{ label: "Databricks optimization best practices", to: "/insights/azure-databricks-best-practices" }}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG007-main.jpg",
+        image: "/images/case-studies/external/BPG007-main.webp",
         title: "Databricks Best Practice Guide",
         description: "Improve job speed and reduce storage costs with our Databricks optimization best practices.",
         to: "/insights/azure-databricks-best-practices",

@@ -42,14 +42,14 @@ export function InsightsAzureArchitectureBestPractices() {
         },
       ]}
       references={[
-        { label: "Optimize costs for your Azure platforms with our 10 best practices", href: "https://maqsoftware.com/insights/azure-architecture-best-practices", source: "MAQ Software" },
+        { label: "Optimize costs for your Azure platforms with our 10 best practices", href: "/insights/azure-architecture-best-practices", source: "MAQ Software" },
         { label: "Azure Well-Architected Framework — Cost Optimization", href: "https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/", source: "Microsoft Corporation" },
         { label: "Azure Savings Plans for Compute", href: "https://learn.microsoft.com/en-us/azure/cost-management-billing/savings-plan/savings-plan-compute-overview", source: "Microsoft Corporation" },
         { label: "Azure Reservations", href: "https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations", source: "Microsoft Corporation" },
         { label: "Azure Spot Virtual Machines", href: "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms", source: "Microsoft Corporation" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG003-main.jpg",
+        image: "/images/case-studies/external/BPG003-main.webp",
         title: "Azure Security Best Practices",
         description: "Strengthen your cloud security and protect your assets with 19 security best practices.",
         to: "/insights/azure-security-best-practices",

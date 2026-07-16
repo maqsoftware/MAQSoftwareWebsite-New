@@ -151,7 +151,7 @@ const insights: InsightItem[] = [
     title: "Strengthen your cloud security and protect your assets with 19 security best practices",
     teaser:
       "Field-tested Azure security best practices covering identity, network, data, and operations layers.",
-    href: "https://maqsoftware.com/insights/azure-security-best-practices.html",
+    href: "/insights/azure-security-best-practices",
   },
   {
     title: "Building a secure Copilot: Addressing key security challenges",
