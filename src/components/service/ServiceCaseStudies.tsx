@@ -91,10 +91,10 @@ const defaultStudies: Study[] = [
   },
   {
     tag: "Scaling AI",
-    title: "Scaling AI for every customer and every developer with MAQ Software",
+    title: "Empowering self-service using Custom Copilot agent with Power BI Embedded",
     teaser:
-      "A reference architecture and delivery model for scaling agentic AI to every customer and every developer in the enterprise.",
-    href: "https://blog.maqsoftware.com/2025/08/scaling-ai-for-every-customer-and-every.html",
+      "Enabling secure self-service analytics with a custom Copilot agent and Power BI Embedded.",
+    href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html",
   },
 ];
 
