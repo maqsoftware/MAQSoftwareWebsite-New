@@ -663,7 +663,7 @@ export function ServiceBusinessApps() {
                     </div>
                     <Link
                         className={s.footerLink}
-                        to="/insights/case-studies?filter=Application%20modernization#insights-content"
+                        to="/insights/case-studies?filter=Application%20modernization&scroll=insights-content"
                     >
                         See business applications case studies
                         <ArrowRight16Regular />
@@ -720,7 +720,7 @@ export function ServiceBusinessApps() {
                     </div>
                     <Link
                         className={s.footerLink}
-                        to="/insights/case-studies#insights-content"
+                        to="/insights/case-studies?scroll=insights-content"
                     >
                         See all case studies
                         <ArrowRight16Regular />
@@ -758,4 +758,3 @@ export function ServiceBusinessApps() {
         </>
     );
 }
-

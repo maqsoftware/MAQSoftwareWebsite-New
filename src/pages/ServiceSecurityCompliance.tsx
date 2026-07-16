@@ -195,7 +195,7 @@ export function ServiceSecurityCompliance() {
         subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
         capabilities={capabilities}
         footerLabel="See security case studies"
-        footerHref="/insights/case-studies?filter=Security#insights-content"
+        footerHref="/insights/case-studies?filter=Security&scroll=insights-content"
         mailSubjectSuffix="Security & Governance"
       />
       <ServiceOutcomes

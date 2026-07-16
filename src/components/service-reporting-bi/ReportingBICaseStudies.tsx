@@ -151,7 +151,7 @@ export function ReportingBICaseStudies({
           <div className={s.buttonGroup}>
             <Link
               className={s.footerLink}
-              to="/insights/case-studies#insights-content"
+              to="/insights/case-studies?scroll=insights-content"
             >
               {allCasesLabel} <ArrowRight16Regular />
             </Link>
@@ -159,7 +159,7 @@ export function ReportingBICaseStudies({
         ) : (
           <Link
             className={s.footerLink}
-            to="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
+            to="/insights/case-studies?filter=Reporting%20%26%20visualization&scroll=insights-content"
           >
             See all reporting &amp; BI case studies <ArrowRight16Regular />
           </Link>

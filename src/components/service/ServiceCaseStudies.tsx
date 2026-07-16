@@ -124,7 +124,7 @@ export function ServiceCaseStudies({
           <div className={s.buttonGroup}>
             <Link
               className={s.footerLink}
-              to="/insights/case-studies#insights-content"
+              to="/insights/case-studies?scroll=insights-content"
             >
               {allCasesLabel} <ArrowRight16Regular />
             </Link>

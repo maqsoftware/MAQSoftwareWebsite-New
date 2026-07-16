@@ -223,7 +223,7 @@ export function ServiceCapabilities({
   subhead = "Capabilities that help you design, deploy, and govern enterprise AI systems at scale.",
   capabilities = defaultCapabilities,
   footerLabel = "See agentic AI case studies",
-  footerHref = "/insights/case-studies?filter=Agentic%20AI%20%26%20Machine%20Learning#insights-content",
+  footerHref = "/insights/case-studies?filter=Agentic%20AI%20%26%20Machine%20Learning&scroll=insights-content",
   mailSubjectSuffix = "Agentic AI & ML",
 }: ServiceCapabilitiesProps = {}) {
   const s = useStyles();

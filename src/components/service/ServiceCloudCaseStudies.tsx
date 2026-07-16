@@ -104,11 +104,11 @@ export function ServiceCloudCaseStudies({
           ))}
         </div>
         {serviceFilter && allCasesLabel && serviceSpecificLabel ? (
-          <Link className={s.footerLink} to="/insights/case-studies#insights-content">
+          <Link className={s.footerLink} to="/insights/case-studies?scroll=insights-content">
             See all case studies <ArrowRight16Regular />
           </Link>
         ) : (
-          <Link className={s.footerLink} to="/insights/case-studies#insights-content">
+          <Link className={s.footerLink} to="/insights/case-studies?scroll=insights-content">
             See all case studies <ArrowRight16Regular />
           </Link>
         )}

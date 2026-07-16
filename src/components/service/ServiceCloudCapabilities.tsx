@@ -248,7 +248,7 @@ export function ServiceCloudCapabilities() {
             ))}
           </div>
         </div>
-        <Link className={s.footerLink} to="/insights/case-studies?filter=Cloud%20Modernization#insights-content">
+        <Link className={s.footerLink} to="/insights/case-studies?filter=Cloud%20Modernization&scroll=insights-content">
           See cloud case studies <ArrowRight16Regular />
         </Link>
       </div>

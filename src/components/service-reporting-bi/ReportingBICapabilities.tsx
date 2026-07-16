@@ -243,7 +243,7 @@ export function ReportingBICapabilities() {
         </div>
         <Link
           className={s.footerLink}
-          to="/insights/case-studies?filter=Insights%20%26%20Analytics#insights-content"
+          to="/insights/case-studies?filter=Insights%20%26%20Analytics&scroll=insights-content"
         >
           See Insights &amp; Analytics case studies <ArrowRight16Regular />
         </Link>

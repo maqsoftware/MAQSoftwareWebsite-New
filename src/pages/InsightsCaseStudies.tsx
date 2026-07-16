@@ -56,7 +56,7 @@ const didScroll = useRef(false);
 
 useEffect(() => {
   if (didScroll.current) return;
-  if (window.location.hash !== "#insights-content") return; // ← only scroll if hash present
+  if (searchParams.get("scroll") !== "insights-content") return;
   const el = document.getElementById("insights-content");
   if (el) {
     didScroll.current = true;
