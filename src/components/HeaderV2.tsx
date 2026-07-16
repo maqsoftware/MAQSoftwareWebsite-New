@@ -17,7 +17,7 @@ import {
 } from "@fluentui/react-icons";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { products } from "../data/products";
-import { PrimaryButton } from "./buttonsV2";
+import { PrimaryButton } from "./buttons";
 import { useContactAction } from "../lib/contact";
 
 /* ==================================================================
@@ -59,12 +59,6 @@ const useStyles = makeStyles({
   },
   // Right-aligned Contact us CTA (hidden on mobile via the global .header-right hook).
   navCta: { flexShrink: 0, display: "flex", alignItems: "center" },
-  // Brand-red CTA.
-  navCtaBtn: {
-    backgroundColor: "var(--maq-red)", color: "#fff", border: "1px solid var(--maq-red)",
-    ":hover": { backgroundColor: "var(--maq-red-dark)", color: "#fff", border: "1px solid var(--maq-red-dark)" },
-    ":hover:active": { backgroundColor: "var(--maq-red-dark)", color: "#fff", border: "1px solid var(--maq-red-dark)" },
-  },
   navToggle: {
     display: "none",
     background: "transparent",
@@ -582,7 +576,7 @@ export function HeaderV2() {
         </div>
 
         <div className={`${s.navCta} header-right`}>
-          <PrimaryButton className={s.navCtaBtn} onClick={() => handleContactClick()}>Contact us</PrimaryButton>
+          <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick()}>Contact Us</PrimaryButton>
         </div>
       </div>
 
