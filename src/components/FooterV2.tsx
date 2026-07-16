@@ -227,9 +227,6 @@ export function FooterV2() {
               <span className={s.bottomText}>
                 © {new Date().getFullYear()} MAQ Software. All rights reserved.
               </span>
-              <span className={s.legalText}>
-                Microsoft, Azure, Fabric, and Power BI are trademarks of Microsoft Corporation.
-              </span>
             </div>
             <div className={s.socialRow}>
               <a href="https://x.com/MAQSoftware" target="_blank" rel="noopener noreferrer" className={s.socialLink} aria-label="X (Twitter)">
