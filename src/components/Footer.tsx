@@ -147,6 +147,7 @@ const cols: FooterCol[] = [
     items: [
       { label: "Who we are", to: "/about/who-we-are" },
       { label: "Careers",    to: "/about/careers" },
+      { label: "Social impact", href: "/resources/Social-Impact-Report.pdf.pdf" },
       { label: "Sustainability", to: "/about/sustainability" },
     ],
   },
