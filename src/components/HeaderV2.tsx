@@ -17,7 +17,7 @@ import {
 } from "@fluentui/react-icons";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { products } from "../data/products";
-import { PrimaryButton } from "./buttonsV2";
+import { PrimaryButton } from "./buttons";
 import { useContactAction } from "../lib/contact";
 
 /* ==================================================================
@@ -59,12 +59,6 @@ const useStyles = makeStyles({
   },
   // Right-aligned Contact us CTA (hidden on mobile via the global .header-right hook).
   navCta: { flexShrink: 0, display: "flex", alignItems: "center" },
-  // Brand-red CTA.
-  navCtaBtn: {
-    backgroundColor: "var(--maq-red)", color: "#fff", border: "1px solid var(--maq-red)",
-    ":hover": { backgroundColor: "var(--maq-red-dark)", color: "#fff", border: "1px solid var(--maq-red-dark)" },
-    ":hover:active": { backgroundColor: "var(--maq-red-dark)", color: "#fff", border: "1px solid var(--maq-red-dark)" },
-  },
   navToggle: {
     display: "none",
     background: "transparent",
@@ -291,12 +285,17 @@ const insights: NavItem[] = [
 const about: NavItem[] = [
   { label: "Who we are", href: "/who-we-are" },
   { label: "Careers", href: "/careers" },
+  { label: "Social impact", href: "/resources/Social-Impact-Report.pdf.pdf" },
   { label: "Sustainability", href: "/sustainability" },
   { label: "Contact Us", href: "/contact" },
 ];
 
+function shouldOpenInNewTab(href: string): boolean {
+  return href.startsWith("http") || /\.pdf($|[?#])/i.test(href);
+}
+
 function isItemActive(href: string | undefined, pathname: string): boolean {
-  if (!href || href.startsWith("http") || href === "#") return false;
+  if (!href || shouldOpenInNewTab(href) || href === "#") return false;
   const target = href.split("?")[0].split("#")[0];
   if (target === "/") return pathname === "/";
   return pathname === target || pathname.startsWith(`${target}/`);
@@ -381,7 +380,7 @@ function MegaMenu({
                 if (!i.href) return;
                 cancelClose();
                 setOpen(false);
-                if (i.href.startsWith("http")) {
+                if (shouldOpenInNewTab(i.href)) {
                   window.open(i.href, "_blank", "noopener,noreferrer");
                   return;
                 }
@@ -544,7 +543,7 @@ export function HeaderV2() {
 
   function navigateTo(href?: string) {
     if (!href) return;
-    if (href.startsWith("http")) {
+    if (shouldOpenInNewTab(href)) {
       window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
@@ -582,7 +581,7 @@ export function HeaderV2() {
         </div>
 
         <div className={`${s.navCta} header-right`}>
-          <PrimaryButton className={s.navCtaBtn} onClick={() => handleContactClick()}>Contact us</PrimaryButton>
+          <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick()}>Contact Us</PrimaryButton>
         </div>
       </div>
 

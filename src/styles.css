@@ -187,7 +187,7 @@ a {
 /* Standardize CTA dimensions globally so primary/outline button pairs
    (e.g., Contact Us + Case Studies/Get it now) align consistently. */
 .maq-equal-cta {
-  width: 110px;
+  width: 112.46px;
   min-height: 34px;
   justify-content: center;
   white-space: nowrap;

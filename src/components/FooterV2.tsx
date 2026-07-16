@@ -147,6 +147,7 @@ const cols: FooterCol[] = [
     items: [
       { label: "Who we are", to: "/who-we-are" },
       { label: "Careers", to: "/careers" },
+      { label: "Social impact", href: "/resources/Social-Impact-Report.pdf.pdf" },
       { label: "Sustainability", to: "/sustainability" },
     ],
   },
@@ -232,9 +233,6 @@ export function FooterV2() {
             <div className={s.bottomLeft}>
               <span className={s.bottomText}>
                 © {new Date().getFullYear()} MAQ Software. All rights reserved.
-              </span>
-              <span className={s.legalText}>
-                Microsoft, Azure, Fabric, and Power BI are trademarks of Microsoft Corporation.
               </span>
             </div>
             <div className={s.socialRow}>

@@ -256,12 +256,17 @@ const insights: NavItem[] = [
 const about: NavItem[] = [
   { label: "Who we are", href: "/about/who-we-are" },
   { label: "Careers", href: "/about/careers" },
+  { label: "Social impact", href: "/resources/Social-Impact-Report.pdf.pdf" },
   { label: "Sustainability", href: "/about/sustainability" },
   { label: "Contact Us", href: "/contact" },
 ];
 
+function shouldOpenInNewTab(href: string): boolean {
+  return href.startsWith("http") || /\.pdf($|[?#])/i.test(href);
+}
+
 function isItemActive(href: string | undefined, pathname: string): boolean {
-  if (!href || href.startsWith("http") || href === "#") return false;
+  if (!href || shouldOpenInNewTab(href) || href === "#") return false;
   const target = href.split("?")[0].split("#")[0];
   if (target === "/") return pathname === "/";
   return pathname === target || pathname.startsWith(`${target}/`);
@@ -350,7 +355,7 @@ function MegaMenu({
                 if (!i.href) return;
                 cancelClose();
                 setOpen(false);
-                if (i.href.startsWith("http")) {
+                if (shouldOpenInNewTab(i.href)) {
                   window.open(i.href, "_blank", "noopener,noreferrer");
                   return;
                 }
@@ -508,7 +513,7 @@ export function Header() {
 
   function navigateTo(href?: string) {
     if (!href) return;
-    if (href.startsWith("http")) {
+    if (shouldOpenInNewTab(href)) {
       window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
