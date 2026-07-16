@@ -20,7 +20,13 @@ type FooterCol = { title: string; items: FooterItem[] };
 const useStyles = makeStyles({
   // Full-bleed gray band — distinct from the white page sections above.
   surface: {
-    backgroundColor: tokens.colorNeutralBackground2,
+    backgroundColor: "var(--maq-gray-50)",
+    // Top divider so the footer separates from the content above — needed now
+    // that the footer and the gray section bands share the same #f3f4f6, which
+    // otherwise blend together when the last section is a gray band.
+    borderTopWidth: "1px",
+    borderTopStyle: "solid",
+    borderTopColor: "var(--maq-border-strong)",
     // Pure Fluent neutral grays (match the HomeV2 page), not the cool brand grays.
     "--maq-black": tokens.colorNeutralForeground1,
     "--maq-text-soft": tokens.colorNeutralForeground3,
@@ -129,11 +135,11 @@ const cols: FooterCol[] = [
   {
     title: "Insights",
     items: [
-      { label: "Case Studies", to: "/insights/case-studies" },
-      { label: "Best practices", to: "/insights/best-practice-guides" },
+      { label: "Case studies", to: "/insights/case-studies" },
+      { label: "Best practice guides", to: "/insights/best-practice-guides" },
       { label: "Events", to: "/events" },
       { label: "Marketplace offers", href: "https://marketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=Maq%20software" },
-      { label: "Power BI custom visual", to: "/insights/power-bi-custom-visual-guide" },
+      { label: "Power BI custom visuals", to: "/insights/power-bi-custom-visual-guide" },
     ],
   },
   {

@@ -43,7 +43,7 @@
   --maq-faint-color: var(--maq-text-faint);  /* tertiary labels */
 
   /* Chrome */
-  --maq-gray-50: #f7f8fa;
+  --maq-gray-50: #f3f4f6;      /* standard gray: section bands + footer (higher contrast vs white than the old #f7f8fa) */
   --maq-gray-100: #eef0f3;
   --maq-border: #e4e7ec;       /* cool neutral border */
   --maq-border-strong: #cdd2da;

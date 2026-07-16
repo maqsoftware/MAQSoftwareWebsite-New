@@ -18,7 +18,8 @@ const useStyles = makeStyles({
   // ── Hero ──────────────────────────────────────────────────────────────────
   hero: {
     backgroundColor: "var(--maq-off-white)",
-    padding: "56px 32px 40px",
+    // Consistent About-page hero padding (see AboutWhoWeAre for the pattern).
+    padding: "40px 32px",
     backgroundImage: "url('/logos/wave_dots.svg')",
     backgroundPosition: "bottom left",
     backgroundRepeat: "no-repeat",
@@ -60,7 +61,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     letterSpacing: "-0.02em",
     margin: "0 0 24px",
-    textAlign: "center" as const,
+    textAlign: "left" as const,
   },
   whyGrid: {
     display: "grid",

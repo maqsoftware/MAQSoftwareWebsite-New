@@ -16,7 +16,8 @@ const useStyles = makeStyles({
   // ── Hero ──────────────────────────────────────────────────────────────────
   hero: {
     backgroundColor: "var(--maq-off-white)",
-    padding: "48px 32px 56px",
+    // Consistent About-page hero padding; height scales with the content.
+    padding: "40px 32px",
     backgroundImage: "url('/logos/wave_dots.svg')",
     backgroundPosition: "bottom left",
     backgroundRepeat: "no-repeat",
@@ -82,7 +83,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     letterSpacing: "-0.02em",
     margin: "0 0 32px",
-    textAlign: "center",
+    textAlign: "left",
     "@media (max-width: 560px)": {
       fontSize: "24px",
       lineHeight: 1.2,

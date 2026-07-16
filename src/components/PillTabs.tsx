@@ -2,8 +2,9 @@ import { makeStyles, tokens, mergeClasses, ToggleButton } from "@fluentui/react-
 
 /* ==================================================================
    PillTabs — a horizontal, wrap-friendly pill selector (restyled
-   Fluent ToggleButtons; no indicator bar). Selected = neutral gray
-   fill, unselected = white with a light-gray stroke. Tokens only, so
+   Fluent ToggleButtons; no indicator bar). Selected = soft brand red
+   (--maq-red-pale) fill with red text, unselected = white with a
+   light-gray stroke. Mostly tokens, so
    it inherits the theme. Controlled: pass `activeIndex` + `onSelect`.
    ================================================================== */
 
@@ -31,18 +32,19 @@ const useStyles = makeStyles({
     },
   },
   tabSelected: {
-    backgroundColor: tokens.colorNeutralBackground3,
-    border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3}`,
-    color: tokens.colorNeutralForeground1,
+    backgroundColor: "var(--maq-red-pale)",
+    border: `${tokens.strokeWidthThin} solid var(--maq-red-pale)`,
+    color: "var(--maq-red)",
     fontWeight: tokens.fontWeightSemibold,
     ":hover": {
-      backgroundColor: tokens.colorNeutralBackground3Hover,
-      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3Hover}`,
-      color: tokens.colorNeutralForeground1,
+      backgroundColor: "var(--maq-red-pale)",
+      border: `${tokens.strokeWidthThin} solid var(--maq-red-pale)`,
+      color: "var(--maq-red)",
     },
     ":active": {
-      backgroundColor: tokens.colorNeutralBackground3Pressed,
-      border: `${tokens.strokeWidthThin} solid ${tokens.colorNeutralBackground3Pressed}`,
+      backgroundColor: "var(--maq-red-pale)",
+      border: `${tokens.strokeWidthThin} solid var(--maq-red-pale)`,
+      color: "var(--maq-red)",
     },
   },
 });

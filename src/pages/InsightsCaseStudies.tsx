@@ -1,25 +1,21 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles } from "@fluentui/react-components";
 import { useMemo, useState, useEffect, useRef } from "react";
 import { useSearchParams } from "react-router-dom";
-import { CTA } from "../components/CTA";
-// import { TrustBanner } from \"../components/TrustBanner\";
 
 import { TextButton } from "../components/buttons";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
-import { InsightsHero } from "../components/insights/InsightsHero";
-import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 import { CaseStudyCard } from "../components/cards/CaseStudyCard";
 import { caseStudyFilters, caseStudyItems } from "../data/insights";
 
 const INITIAL_VISIBLE = 9;
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
+  section: { padding: "56px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
-  head: { textAlign: "center", marginBottom: "18px" },
-  title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 10px", letterSpacing: "-0.02em" },
+  head: { textAlign: "left", marginBottom: "44px" },
+  title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 40px", letterSpacing: "-0.02em", textAlign: "left" },
   grid: {
-    marginTop: "18px",
+    marginTop: "0",
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "16px",
@@ -114,17 +110,10 @@ useEffect(() => {
 
   return (
     <>
-      <InsightsHero
-        title="Case Studies"
-        subhead="Explore real-world outcomes across AI, data, reporting, cloud, and security implementations delivered by MAQ Software."
-        ctaLabel="Contact Us"
-      />
-
-      <InsightsResourceNav active="case-studies" />
       <section className={s.section} id="insights-content">
         <div className={s.inner}>
           <div className={s.head}>
-            <h2 className={s.title}>Case studies catalog</h2>
+            <h2 className={s.title}>Case studies</h2>
             <InsightsFilterBar items={caseStudyFilters} active={activeFilter} onChange={setActiveFilter} />
           </div>
           <div className={s.grid}>
@@ -160,7 +149,6 @@ useEffect(() => {
           )}
         </div>
       </section>
-      <CTA />
     </>
   );
 }

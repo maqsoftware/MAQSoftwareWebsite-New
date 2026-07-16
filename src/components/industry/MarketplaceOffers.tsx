@@ -12,6 +12,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     margin: "0 0 6px",
     letterSpacing: "-0.02em",
+    textAlign: "left",
   },
   sub: {
     fontSize: "14px",

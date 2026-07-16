@@ -26,6 +26,7 @@ const useStyles = makeStyles({
     ...textStyles.sectionHeading,
     display: "block",
     margin: "0 0 12px",
+    textAlign: "left",
   },
   sub: {
     ...textStyles.body,

@@ -154,6 +154,7 @@ const useStyles = makeStyles({
     color: "var(--maq-navy)",
     letterSpacing: "-0.02em",
     margin: "0 0 10px",
+    textAlign: "left",
   },
   sectionSub: {
     fontSize: "15px",

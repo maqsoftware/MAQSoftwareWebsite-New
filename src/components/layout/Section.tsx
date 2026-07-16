@@ -78,7 +78,7 @@ export function Container({ className, children }: { className?: string; childre
 
 export function SectionHeading({
   title,
-  align = "center",
+  align = "left",
   className,
 }: {
   title: string;
