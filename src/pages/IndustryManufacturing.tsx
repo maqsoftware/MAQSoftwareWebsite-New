@@ -151,7 +151,7 @@ const manufacturingAgents = [
     tagline: "Automated invoice & receipt processing",
     icon: <DocumentSearch24Regular />,
     description:
-      "AI-powered invoice and receipt processing pipeline built on the Microsoft Agent Framework. Implements a four-node typed workflow — ExtractNode, ParseNode, ValidateNode, StorageNode — where each node is a dedicated MAF agent with registered tools. Processed receipts are persisted in SQLite and indexed in a FAISS vector store for semantic search, with a separate ProcurementValidationAgent cross-checking invoices against purchase order data. Surfaced through a FastAPI backend and a React + Vite frontend.",
+      "AI-powered invoice and receipt processing pipeline built on the Microsoft Agent Framework. Implements a four-node typed workflow — ExtractNode, ParseNode, ValidateNode, StorageNode — where each node is a dedicated Microsoft Agent Framework(MAF) agent with registered tools. Processed receipts are persisted in SQLite and indexed in a FAISS vector store for semantic search, with a separate ProcurementValidationAgent cross-checking invoices against purchase order data. Surfaced through a FastAPI backend and a React + Vite frontend.",
   },
 ];
 

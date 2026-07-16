@@ -151,7 +151,7 @@ const fsAgents = [
       "AI-powered loan underwriting platform built with Microsoft Agent Framework and Azure OpenAI. Uses a coordinated team of specialized underwriting agents to evaluate creditworthiness, verify income, assess collateral risk, enforce lending policies, calculate financial ratios, and generate final loan approval recommendations through an auditable multi-step workflow.",
   },
   {
-    name: "POE Scanner",
+    name: "Proof of Expense Scanner",
     tagline: "Expense document automation",
     icon: <ReceiptMoney24Regular />,
     description:

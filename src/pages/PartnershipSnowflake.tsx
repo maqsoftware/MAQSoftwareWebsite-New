@@ -241,7 +241,7 @@ export function PartnershipSnowflake() {
       <PartnershipMarketplace
         title="Data Validator"
         sectionId="snowflake-marketplace"
-        intro="Begin your RTI journey today"
+        intro="Begin your  Real-Time Intelligence(RTI) journey today"
         bulletGroups={dataValidatorBullets}
         ctaLabel="Learn more"
         ctaHref="https://app.snowflake.com/marketplace/listing/GZ1MBZD8CA9/maq-software-data-validator?originPage=app"
