@@ -113,13 +113,6 @@ function FinancialHeroVisual() {
 // --- Financial services content data ---
 const fsStats = [
   {
-    chip: "Finance Operations",
-    title: "Invoice Processing Agent",
-    label: "Invoices extracted, validated, and posted with a full audit trail for finance operations teams on Azure AI Document Intelligence and Microsoft Fabric",
-    sourceLabel: "Case study",
-    sourceHref: "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
-  },
-  {
     chip: "Reporting & BI",
     title: "Microsoft Fabric Modernization",
     label: "Faster risk and finance reporting for finance controllers — replacing fragmented legacy BI with a unified data platform",
@@ -127,16 +120,9 @@ const fsStats = [
     sourceHref: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
   },
   {
-    chip: "Fraud Detection",
-    title: "Fraud & Anomaly Detection Agent",
-    label: "Fewer false-positive alerts reaching analysts — routing only high-confidence exceptions for review on Snowflake and Azure",
-    sourceLabel: "Case study",
-    sourceHref: "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
-  },
-  {
-    chip: "Month-End Close",
-    title: "Close Acceleration Agent",
-    label: "Shorter month-end close for finance controllers — automating ledger reconciliation across systems on Microsoft Fabric and Databricks",
+    chip: "Financial Services AI",
+    title: "Finance Transformation with Agentic AI",
+    label: "How financial organizations modernize invoice workflows, fraud monitoring, and month-end operations with agentic AI on Microsoft and cloud data platforms.",
     sourceLabel: "Case study",
     sourceHref: "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
   },
