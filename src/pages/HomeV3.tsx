@@ -449,7 +449,7 @@ export function HomeV3() {
             <p className={s.featSub}>Replaced manual workflows across forecasting, pricing, targeting, and store operations with agentic AI that acts in real time.</p>
             <div className={s.featCta}>
               <SecondaryButton onClick={() => window.open(CASES[0].href, "_blank", "noopener,noreferrer")}>
-                Read the Story
+                Read the journey
               </SecondaryButton>
             </div>
           </div>
