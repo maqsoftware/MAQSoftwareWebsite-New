@@ -2137,7 +2137,7 @@ export function ComponentLab() {
         <h1 className={s.pageTitle}>Component playground</h1>
         <p className={s.pageSub}>
           Every recurring building block on the site, with 5–6 design variants each. Pick a winner per
-          component and we'll wire it through the production pages.
+          component and we will wire it through the production pages.
         </p>
         <nav className={s.toc}>
           {groups.map((g) => (

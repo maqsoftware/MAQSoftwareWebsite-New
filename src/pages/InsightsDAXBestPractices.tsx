@@ -68,7 +68,7 @@ export function InsightsDAXBestPractices() {
         },
       ]}
       references={[
-        { label: "Improve Power BI speed and functionality with our 22 DAX best practices", href: "https://maqsoftware.com/insights/dax-best-practices", source: "MAQ Software" },
+        { label: "Improve Power BI speed and functionality with our 22 DAX best practices", href: "/insights/dax-best-practices", source: "MAQ Software" },
         { label: "Visual calculations overview", href: "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-visual-calculations-overview", source: "Microsoft Corporation" },
         { label: "DAX query view", href: "https://learn.microsoft.com/en-us/power-bi/transform-model/dax-query-view", source: "Microsoft Corporation" },
         { label: "Calculation groups", href: "https://learn.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups", source: "Microsoft Corporation" },
@@ -77,7 +77,7 @@ export function InsightsDAXBestPractices() {
         { label: "Optimization guide for Power BI", href: "https://docs.microsoft.com/en-us/power-bi/power-bi-reports-performance", source: "Microsoft Corporation" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/AzureDevOpsBestPracticeguide.png",
+        image: "/images/case-studies/external/AzureDevOpsBestPracticeguide.webp",
         title: "Azure DevOps Best Practice Guide",
         description: "Optimize your DevOps strategies with our 9 essential best practices.",
         to: "/insights/azure-dev-ops-best-practices-guide",

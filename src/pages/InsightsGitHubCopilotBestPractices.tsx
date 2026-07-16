@@ -69,12 +69,12 @@ export function InsightsGitHubCopilotBestPractices() {
         },
       ]}
       references={[
-        { label: "Maximizing Developer Productivity with GitHub Copilot", href: "https://maqsoftware.com/insights/github-copilot-best-practices", source: "MAQ Software" },
+        { label: "Maximizing Developer Productivity with GitHub Copilot", href: "/insights/github-copilot-best-practices", source: "MAQ Software" },
         { label: "GitHub Copilot documentation", href: "https://docs.github.com/en/copilot", source: "GitHub" },
         { label: "GitHub Copilot Chat in your IDE", href: "https://docs.github.com/en/copilot/github-copilot-chat/copilot-chat-in-ides/about-github-copilot-chat-in-your-ide", source: "GitHub" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/images/best-practices/Power%20BI%20Copilot%20best%20practice%20guide.png",
+        image: "/images/case-studies/external/Power-BI-Copilot-best-practice-guide.webp",
         title: "Power BI Copilot Best Practice Guide",
         description: "Build AI-ready semantic models with Power BI Copilot.",
         to: "/insights/power-bi-copilot-best-practices",

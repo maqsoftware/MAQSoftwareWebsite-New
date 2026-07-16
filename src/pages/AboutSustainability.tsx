@@ -274,7 +274,7 @@ export function AboutSustainability() {
           </div>
           <img
             className={s.heroImage}
-            src="https://maqsoftware.com/images-new/isv/sustainability-hero-image.svg"
+            src="/images/external/sustainability/sustainability-hero-image.svg"
             alt="Sustainability hero illustration"
           />
         </div>
@@ -336,7 +336,7 @@ export function AboutSustainability() {
           <div className={s.leadershipImageWrap}>
             <img
               className={s.leadershipImage}
-              src="https://maqsoftware.com/images-new/isv/sustainability-footer-image.svg"
+              src="/images/external/sustainability/sustainability-footer-image.svg"
               alt="Leading by example — sustainable future"
             />
           </div>

@@ -282,7 +282,7 @@ const talks = [
     title:
       "Agentic Spec-Driven Development for Low-Code Power Platform and Copilot Studio Solutions",
     desc:
-      "Explore how Agentic AI is transforming the way low-code solutions are designed, built, and governed using Microsoft Power Platform and Copilot Studio. We'll introduce a Spec-Driven Development approach - covering app generation, workflow orchestration, testing, documentation, and governance - and demonstrate how agentic patterns improve developer productivity and accelerate delivery while maintaining enterprise standards and scalability.",
+      "Explore how Agentic AI is transforming the way low-code solutions are designed, built, and governed using Microsoft Power Platform and Copilot Studio. We will introduce a Spec-Driven Development approach - covering app generation, workflow orchestration, testing, documentation, and governance - and demonstrate how agentic patterns improve developer productivity and accelerate delivery while maintaining enterprise standards and scalability.",
     time: "Wednesday, June 17 at 1:40 PM - 2:50 PM CDT",
     room: "Room S106a",
     tags: ["Copilot/AI", "Power Apps", "Power Automate", "Special Topics"],
@@ -297,7 +297,7 @@ const talks = [
     type: "20 min - Solution Showcase Session",
     title: "M365 Copilot Enablement Best Practices and Learnings",
     desc:
-      "Discover practical best practices and proven strategies for enabling Microsoft 365 Copilot across enterprise organizations. We'll cover the end-to-end enablement journey - from governance, security, and data readiness to change management, user adoption, and measuring success. Real-world examples and lessons learned will help you avoid common pitfalls and drive sustainable business value.",
+      "Discover practical best practices and proven strategies for enabling Microsoft 365 Copilot across enterprise organizations. We will cover the end-to-end enablement journey - from governance, security, and data readiness to change management, user adoption, and measuring success. Real-world examples and lessons learned will help you avoid common pitfalls and drive sustainable business value.",
     time: "Thursday, June 18 at 10:20 AM - 10:40 AM CDT",
     room: "Solution Showcase Stage",
     tags: ["Adoption", "Admin/Implementation", "Security & Governance"],

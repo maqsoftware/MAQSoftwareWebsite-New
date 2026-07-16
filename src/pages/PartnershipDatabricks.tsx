@@ -221,7 +221,7 @@ export function PartnershipDatabricks() {
       <PartnershipOverview
         badgeUrl="/logos/databricks-partner.png"
         badgeAlt="Databricks partner"
-        description="As a Databricks Technology Partner, MAQ Software brings deep expertise in helping organizations unlock the full potential of Databricks. Whether you're looking for guidance on implementing data solutions or optimizing your existing platform, we’re here to support you every step of the way."
+        description="As a Databricks Technology Partner, MAQ Software brings deep expertise in helping organizations unlock the full potential of Databricks. Whether you're looking for guidance on implementing data solutions or optimizing your existing platform, we are here to support you every step of the way."
       />
 
       <PartnershipOfferings title="Our capabilities" sectionId="databricks-offerings" offerings={offerings} />

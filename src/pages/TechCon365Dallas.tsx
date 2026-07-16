@@ -2,7 +2,7 @@ import { ConferenceEventPage } from "../components/events/ConferenceEventPage";
 
 const REGISTER_URL = "https://na.eventscloud.com/techcondallas26";
 const BROCHURE_URL =
-  "https://maqsoftware.com/resources/MAQ%20Software%20Brochure%20%28One%20page%29.pdf";
+  "/resources/MAQ%20Software%20Brochure.pdf";
 const APPSOURCE_URL =
   "https://appsource.microsoft.com/en-us/marketplace/partner-dir/3778db04-784a-4ef7-9eaa-7a9b67cf9e35/overview";
 

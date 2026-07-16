@@ -40,6 +40,7 @@ const useStyles = makeStyles({
     padding: "3px 8px",
     borderRadius: "4px",
     marginBottom: "12px",
+    alignSelf: "flex-start",
   },
   metric: {
     fontSize: "32px",

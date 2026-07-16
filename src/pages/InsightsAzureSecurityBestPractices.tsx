@@ -46,14 +46,14 @@ export function InsightsAzureSecurityBestPractices() {
         },
       ]}
       references={[
-        { label: "Strengthen your cloud security with 19 security best practices", href: "https://maqsoftware.com/insights/azure-security-best-practices", source: "MAQ Software" },
+        { label: "Strengthen your cloud security with 19 security best practices", href: "/insights/azure-security-best-practices", source: "MAQ Software" },
         { label: "Azure security best practices and patterns", href: "https://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns", source: "Microsoft Corporation, published March 22, 2023" },
         { label: "Azure network security best practices", href: "https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices", source: "Microsoft Corporation, published March 16, 2023" },
         { label: "Azure Identity Management and access control security best practices", href: "https://docs.microsoft.com/en-us/azure/security/azure-security-identity-management-best-practices", source: "Microsoft Corporation, published December 19, 2022" },
         { label: "Embrace proactive security with Zero Trust", href: "https://www.microsoft.com/en-us/security/business/zero-trust", source: "Microsoft Corporation" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG002-main.jpg",
+        image: "/images/case-studies/external/BPG002-main.webp",
         title: "Data Validation Best Practices",
         description: "Ensure quality data on demand with our 7 data validation best practices.",
         to: "/insights/data-validation-best-practices",

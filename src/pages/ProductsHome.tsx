@@ -137,7 +137,7 @@ export function ProductsHome() {
         <div className={s.ctaInner}>
           <h2 className={s.ctaTitle}>Want a guided walkthrough?</h2>
           {/* <p className={s.ctaSub}>
-            Pick any product. We'll show it running on your data.
+            Pick any product. We will show it running on your data.
           </p> */}
           <PrimaryButton
             size="large"

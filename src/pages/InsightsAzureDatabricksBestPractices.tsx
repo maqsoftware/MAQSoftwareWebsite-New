@@ -103,7 +103,7 @@ export function InsightsAzureDatabricksBestPractices() {
       ]}
       upNext={{ label: "Best practices in Databricks", to: "/insights/databricks-best-practices" }}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/databricks-best-practice-guide.png",
+        image: "/images/case-studies/external/databricks-best-practice-guide.webp",
         title: "Best practices in Databricks",
         description: "Optimizing performance, collaboration, and security on Databricks.",
         to: "/insights/databricks-best-practices",

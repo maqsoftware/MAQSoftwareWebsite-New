@@ -274,7 +274,7 @@ const useStyles = makeStyles({
   capBand: { backgroundColor: tokens.colorNeutralBackground3 },
   heroBand: { backgroundColor: "#0a0a0c" },
   capHeadA: { marginBottom: "24px" },
-  indHead: { marginBottom: "36px" },  // Subtle translucent backing so a bleeding corner motif can't reduce text
+  indHead: { marginBottom: "36px" },  // Subtle translucent backing so a bleeding corner motif cannot reduce text
   // legibility on narrow cards. Pinned to the card bottom with the text.
   // Feathered translucent backing for the hero headline + sub-text (legibility
   // over the decorative dot grid). Hugs the text; edges fade via a mask.

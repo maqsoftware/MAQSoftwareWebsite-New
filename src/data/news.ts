@@ -26,58 +26,58 @@ export const NEWS_FEED_URL =
 export const pressCoverage: PressItem[] = [
   {
     outlet: "ET CIO",
-    logo: "https://maqsoftware.com/images/logos/ET-CIO-logo.png",
+    logo: "/images/external/news/ET-CIO-logo.png",
     headline: "Three US giants to invest in UP",
     href: "https://cio.economictimes.indiatimes.com/news/corporate-news/three-us-giants-to-invest-in-up/85507016",
   },
   {
     outlet: "Seattle Times",
-    logo: "https://maqsoftware.com/images/logos/SeattleTimes-logo.png",
+    logo: "/images/external/news/SeattleTimes-logo.png",
     headline: "High technology from India is just down the street",
     href: "https://www.seattletimes.com/business/high-technology-from-india-is-just-down-the-street/",
   },
   {
     outlet: "Puget Sound Business Journal",
-    logo: "https://maqsoftware.com/images/logos/PudgetSoundBusinessJournal-logo.png",
+    logo: "/images/external/news/PudgetSoundBusinessJournal-logo.png",
     headline:
       "Sea Change: Overseas Outsourcing Could Pose Problems for Tech Sector",
     href: "https://www.bizjournals.com/seattle/stories/2003/08/11/story3.html",
   },
   {
     outlet: "Puget Sound Business Journal",
-    logo: "https://maqsoftware.com/images/logos/PudgetSoundBusinessJournal-logo.png",
+    logo: "/images/external/news/PudgetSoundBusinessJournal-logo.png",
     headline: "Software Products Being Developed in India",
     href: "https://www.bizjournals.com/seattle/stories/2007/11/05/story1.html?b=1194238800%5e1544578&surround=etf",
   },
   {
     outlet: "Puget Sound Business Journal",
-    logo: "https://maqsoftware.com/images/logos/PudgetSoundBusinessJournal-logo.png",
+    logo: "/images/external/news/PudgetSoundBusinessJournal-logo.png",
     headline: "Migration of Technology Workers from Seattle to India",
     href: "https://www.bizjournals.com/seattle/stories/2006/03/27/story3.html",
   },
   {
     outlet: "BBC News",
-    logo: "https://maqsoftware.com/images/logos/BBC-News-logo.png",
+    logo: "/images/external/news/BBC-News-logo.png",
     headline: "BBC World Business Report — September 2004",
     href: "https://www.youtube.com/watch?v=pwn5-_9c180",
   },
   {
     outlet: "Entrepreneur",
-    logo: "https://maqsoftware.com/images/logos/Entrepreneur-logo.png",
+    logo: "/images/external/news/Entrepreneur-logo.png",
     headline:
       "Why Some Companies Grow Consistently While Others Struggle",
     href: "https://www.entrepreneur.com/article/305605",
   },
   {
     outlet: "BW Business World",
-    logo: "https://maqsoftware.com/images/logos/BW-Business-World-logo.png",
+    logo: "/images/external/news/BW-Business-World-logo.png",
     headline:
       "Many MBA Graduates Lack Context and Experience: Rajeev Agarwal, Founder and CEO, MAQ Software",
     href: "https://www.businessworld.in/article/Many-MBA-Graduates-Lack-Context-And-Experience-Rajeev-Agarwal-Founder-And-CEO-MAQ-Software/06-12-2017-133919/",
   },
   {
     outlet: "Business Standard",
-    logo: "https://maqsoftware.com/images/logos/Business-Standard-logo.png",
+    logo: "/images/external/news/Business-Standard-logo.png",
     headline: "B-schools teach you to be good corporate foot soldiers",
     href: "https://www.business-standard.com/article/management/-b-schools-teach-you-to-be-good-corporate-foot-soldiers-104082401004_1.html",
   },

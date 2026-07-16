@@ -60,13 +60,13 @@ export function InsightsPowerBIBestPractices() {
         },
       ]}
       references={[
-        { label: "Improve your Power BI performance and security with our best practices", href: "https://maqsoftware.com/insights/power-bi-best-practices", source: "MAQ Software" },
+        { label: "Improve your Power BI performance and security with our best practices", href: "/insights/power-bi-best-practices", source: "MAQ Software" },
         { label: "Tips for designing a great Power BI dashboard", href: "https://learn.microsoft.com/en-us/power-bi/create-reports/service-dashboards-design-tips", source: "Microsoft Corporation, published October 20, 2025" },
         { label: "Optimization guide for Power BI", href: "https://learn.microsoft.com/en-us/power-bi/guidance/power-bi-optimization", source: "Microsoft Corporation, published December 30, 2024" },
         { label: "Customize the Visualizations pane in Power BI Desktop and the Power BI service", href: "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-report-visualizations", source: "Microsoft Corporation, published October 1, 2025" },
       ]}
       continueReading={{
-        image: "https://maqsoftware.com/img/blog/BPG005-main.jpg",
+        image: "/images/case-studies/external/BPG005-main.webp",
         title: "DAX Best Practice Guide",
         description: "Improve your Power BI performance with our 22 DAX best practices.",
         to: "/insights/dax-best-practices",
