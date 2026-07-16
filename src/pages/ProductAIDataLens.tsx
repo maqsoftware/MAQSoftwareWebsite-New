@@ -1,8 +1,12 @@
-import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from "../components/TrustBanner";
+import { Mail24Regular, Chat24Regular, Person24Regular, Search24Regular, ChartMultiple24Regular, Lightbulb24Regular, DatabaseSearch24Regular } from "@fluentui/react-icons";
+import { useContactAction } from "../lib/contact";
+
+import { PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
+
+const AI_DATALENS_VIDEO_EMBED_URL = "https://www.youtube.com/embed/3NCRlbKKuC8?si=-HXXCu3lYAnlCNbG";
 
 const benefits = [
   { title: "Informed decisions", desc: "Move beyond guesswork — leverage data-backed insights to make informed decisions that reduce risk and accelerate growth." },
@@ -20,46 +24,52 @@ const features = [
 ];
 
 const resources = [
-  { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace consulting offers from MAQ Software.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "https://maqsoftware.com/case-studies" },
-  { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "https://maqsoftware.com/community/best-practices" },
-  { pill: "Talk to us", title: "Request a personalized demo", desc: "Email customersuccess@maqsoftware.com and we'll set up a tailored walkthrough.", href: "mailto:customersuccess@maqsoftware.com?subject=Demo%20-%20AI-DataLens" },
+  { pill: "Marketplace offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace marketplace offers from MAQ Software.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
+  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "/insights/case-studies" },
+  { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "/insights/best-practice-guides" },
 ];
 
 export function ProductAIDataLens() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Intelligent data interaction</span>
+            {/* <span className={s.eyebrow}>Intelligent data interaction</span> */}
             <h1 className={s.h1}>AI-DataLens</h1>
             <p className={s.heroSub}>
-              Transform how users interact with data by enabling natural-language queries and delivering instant, intelligent insights. Unlock a new way to interact with your data.
+             AI Data Lens - Accelerate data-driven decision-making with natural language access to enterprise datasets. Users can ask questions and receive instant answers without technical expertise, while preserving row-level security, governance, and audit compliance.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Demo%20-%20AI-DataLens&body=Hello,%20I%20would%20like%20to%20request%20a%20demo%20for%20AI-DataLens.">
-                Request a demo
-              </Button>
-              <Button appearance="outline" size="large" icon={<ArrowRight20Regular />} iconPosition="after" onClick={() => document.getElementById("ai-datalens-features")?.scrollIntoView({ behavior: "smooth" })}>
-                See key features
-              </Button>
+              <PrimaryButton size="large" onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
+                Contact Us
+              </PrimaryButton>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/ai-datalens-hero-img-2.svg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="AI-DataLens demo video"
+                src={AI_DATALENS_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
-            <span className={s.secEyebrow}>Why AI-DataLens</span>
-            <h2 className={s.title}>Benefits</h2>
+          <div className={s.headLeft}>
+            {/* <span className={s.secEyebrow}>Why AI-DataLens</span> */}
+            <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
             {benefits.map((b) => (
@@ -75,7 +85,7 @@ export function ProductAIDataLens() {
       <section className={s.sectionAlt} id="ai-datalens-features">
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Capabilities</span>
+            {/* <span className={s.secEyebrow}>Capabilities</span> */}
             <h2 className={s.titleLg}>Key features</h2>
           </div>
           <div className={s.featGrid}>
@@ -92,25 +102,34 @@ export function ProductAIDataLens() {
         </div>
       </section>
 
-      <section className={s.section}><CaseStudiesPlaceholder heading="Real-world AI-DataLens wins" /></section>
+      <section className={s.section}><ProductCaseStudies heading="Real-world AI-DataLens wins" studies={[
+        { tag: "Self-service BI", title: "Empowering self-service using Custom Copilot agent with Power BI Embedded", teaser: "A custom Copilot agent over Power BI Embedded letting business users ask data questions in plain English — reducing report request backlog.", href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html" },
+        { tag: "Fabric data agent", title: "Delivering accurate business intelligence insights with a Fabric data agent", teaser: "A Microsoft Fabric data agent answering business questions with citation-backed accuracy, replacing brittle hand-built dashboards.", href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html" },
+        { tag: "Information retrieval", title: "Streamlining information retrieval with AI Copilots", teaser: "Enterprise AI Copilots that ground answers in organizational content — dramatically improving knowledge worker productivity.", href: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html" },
+      ]} /></section>
 
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>
             {resources.map((o) => (
-              <a key={o.title} className={s.mktCard} href={o.href} target="_blank" rel="noreferrer">
+              <a
+                key={o.title}
+                className={s.mktCard}
+                href={o.href}
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
-                  <span className={s.mktPill}>{o.pill}</span>
-                  <div className={s.mktTitleRow}>
-                    <div className={s.mktTitle}>{o.title}</div>
-                    <ArrowRight20Regular className={s.mktArrow} />
-                  </div>
+                  <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
+                  <span className={s.mktRead}>
+                    Read more
+                  </span>
                 </div>
               </a>
             ))}
@@ -118,7 +137,7 @@ export function ProductAIDataLens() {
         </div>
       </section>
 
-      <section className={s.section}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.section}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

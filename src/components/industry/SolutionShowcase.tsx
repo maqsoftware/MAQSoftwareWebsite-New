@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import {
   ArrowTrendingLines24Regular,
   Clock24Regular,
@@ -10,8 +10,8 @@ import {
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -22,11 +22,13 @@ const useStyles = makeStyles({
     marginBottom: "6px",
   },
   title: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: 0,
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
+    textAlign: "left",
   },
   panel: {
     background: "#fff",
@@ -84,12 +86,12 @@ const useStyles = makeStyles({
     cursor: "pointer",
     textAlign: "left",
     transition: "all 0.15s",
-    ":hover": { border: `1px solid var(--maq-red)` },
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   railBtnActive: {
-    border: `1px solid var(--maq-red)`,
+    border: "1px solid var(--maq-card-hover-border)",
     borderLeftWidth: "3px",
-    boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+    boxShadow: "var(--maq-shadow-sm)",
   },
   railIcon: {
     width: "36px",
@@ -107,72 +109,37 @@ const useStyles = makeStyles({
   railTagline: { fontSize: "12px", color: "var(--maq-gray-600)" },
 });
 
-interface Agent {
+export interface Agent {
   name: string;
   tagline: string;
   description: string;
   icon: ReactNode;
 }
 
-const agents: Agent[] = [
-  {
-    name: "What-If Pricing Agent",
-    tagline: "Pricing simulation",
-    icon: <ArrowTrendingLines24Regular />,
-    description:
-      "Simulate pricing decisions before execution using multi-agent AI. Explore the power of pricing without the risk. Our agent simulates real-world pricing shifts, demand patterns, competitive moves, and procurement scenarios before you make a single change. See how each decision impacts revenue, margins, and supplier costs in seconds.",
-  },
-  {
-    name: "Monday Morning Intel",
-    tagline: "Weekly briefings",
-    icon: <Clock24Regular />,
-    description:
-      "Start every week with a curated executive briefing. The agent consolidates weekend sales, inventory movement, supply alerts, and competitive news into a one-page digest delivered before 9 a.m. Monday.",
-  },
-  {
-    name: "FindFAST",
-    tagline: "Chat with your data",
-    icon: <Chat24Regular />,
-    description:
-      "Natural-language interface over your Microsoft Fabric estate. Ask retail questions the way you'd ask a colleague — basket mix, regional shrink, vendor performance — and get governed, citation-backed answers in seconds.",
-  },
-  {
-    name: "Smart Store Agent",
-    tagline: "Connected store operations",
-    icon: <BuildingShop24Regular />,
-    description:
-      "Copilot-powered assistant for store managers. Surfaces live sales, inventory, and workforce signals, then suggests guided next actions — from re-merchandising slow movers to re-routing labor.",
-  },
-];
+interface SolutionShowcaseProps {
+  sectionId: string;
+  eyebrow?: string;
+  title: string;
+  agents: Agent[];
+  industryLabel?: string;
+}
 
-export function SolutionShowcase() {
+export function SolutionShowcase({ sectionId, eyebrow = "Agentic AI", title, agents, industryLabel = "Retail" }: SolutionShowcaseProps) {
   const s = useStyles();
   const [active, setActive] = useState(0);
   const sel = agents[active];
   return (
-    <section className={s.section} id="retail-solutions">
+    <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Agentic AI</span>
-          <h2 className={s.title}>
-            Make your retail operations smarter with our Retail Agents
-          </h2>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
+          <h2 className={s.title}>{title}</h2>
         </div>
         <div className={s.panel}>
           <div>
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <Button
-              appearance="outline"
-              className={s.knowMore}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Retail"
-              )}`}
-            >
-              Know More
-            </Button>
           </div>
           <div className={s.rail}>
             {agents.map((a, i) => (

@@ -1,75 +1,89 @@
-import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+import { Mail24Regular } from "@fluentui/react-icons";
+
+import { PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { useContactAction } from "../lib/contact";
+// import { TrustBanner } from "../components/TrustBanner";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const benefits = [
-  { title: "Large-scale migration", desc: "Enables large-scale migration of reports from Tableau to Power BI." },
-  { title: "Cost savings", desc: "Reduces the time and resources required to migrate reports using AI, resulting in cost savings of 40%." },
-  { title: "Optimization", desc: "Optimizes the migration process to ensure high-quality and accurate report conversion." },
+  {
+    metric: "~80%",
+    title: "Migration Accuracy",
+    desc: "Automates report conversion, DAX generation, and inventory, cutting what takes months to weeks and reducing manual fixes.",
+  },
+  {
+    metric: "~40%",
+    title: "Cost Savings",
+    desc: "Reduces manual effort and resource overhead across the full migration lifecycle.",
+  },
+  {
+    metric: "500,000+ reports migrated",
+    title: "Proven at Scale",
+    desc: "AI-powered automation handles large, complex BI estates accurately at any volume, across any enterprise.",
+  },
 ];
 
 const steps = [
   { n: 1, title: "Inventory analysis", desc: "Extract metadata, analyze reports, and assess data compatibility for a structured migration plan." },
   { n: 2, title: "Estimation and planning", desc: "Estimate costs, finalize architecture, identify risks, and define roles." },
-  { n: 3, title: "Semantic model and report creation", desc: "Build a Power BI model, optimize data, and replicate report interactions for seamless functionality." },
+  { n: 3, title: "Semantic model and report creation", desc: "Build a Power BI semantic model, optimize data pipelines, convert calculations to DAX, and recreate report behavior to match the original experience." },
   { n: 4, title: "Review", desc: "Optimize performance, ensure uniformity, verify data accuracy, and certify reports." },
   { n: 5, title: "Governance", desc: "Track data lineage, maintain best practices, monitor performance, and set alerts." },
   { n: 6, title: "Center of Excellence (CoE)", desc: "Ongoing support, user training, troubleshooting, and KPI tracking post-migration." },
 ];
 
-const capabilities = [
-  "Upload Tableau reports and auto-extract metadata",
-  "Get timeline estimates for the migration",
-  "Analyze report similarity to remove duplicates",
-  "Auto-convert LOD to DAX and check for errors",
-  "Customize Power BI report UI",
-];
+const MIGRATEFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/NKd92QYRrG4?si=JoLs_S7wMKCaRZFz";
 
 const resources = [
-  { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse migration and Fabric consulting offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "Fabric migration outcomes", desc: "Real customer stories on Tableau-to-Power-BI and platform migration.", href: "https://maqsoftware.com/case-studies" },
-  { pill: "Best practices", title: "Migration patterns and standards", desc: "MAQ Software's authoritative migration guidance.", href: "https://maqsoftware.com/community/best-practices" },
-  { pill: "Talk to us", title: "Get a tailored migration plan", desc: "Email customersuccess@maqsoftware.com to scope your estate.", href: "mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20MigrateFAST" },
+  { pill: "Marketplace offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse migration and Fabric marketplace offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
 ];
 
 export function ProductMigrateFAST() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Microsoft Fabric migration</span>
+            {/* <span className={s.eyebrow}>AI-powered Fabric migration accelerator</span> */}
             <h1 className={s.h1}>MigrateFAST</h1>
             <p className={s.heroSub}>
-              Accelerate your migration journey to Microsoft Fabric. Simplify data and reporting platform migration with AI-powered tools for faster and easier transitions.
+              MigrateFAST automates the end-to-end migration process—from legacy environment assessment and dependency analysis to report conversion, DAX generation, and validation. Organizations can migrate from Tableau, Cognos, SAP BusinessObjects, SAP Crystal Reports, MicroStrategy, Qlik, Alteryx, and Informatica with greater speed, accuracy, and confidence—reducing migration costs and accelerating time to value on Microsoft Fabric.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20MigrateFAST">Contact our team</Button>
-              <Button appearance="outline" size="large" icon={<ArrowRight20Regular />} iconPosition="after" onClick={() => document.getElementById("migratefast-process")?.scrollIntoView({ behavior: "smooth" })}>See the process</Button>
+              <PrimaryButton size="large" onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact Us</PrimaryButton>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/migrate-fast.jpg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                src={MIGRATEFAST_VIDEO_EMBED_URL}
+                title="Discover how MigrateFAST automates a Tableau-to-Power BI migration"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
-            <span className={s.secEyebrow}>Why MigrateFAST</span>
-            <h2 className={s.title}>Benefits</h2>
+          <div className={s.headLeft}>
+            {/* <span className={s.secEyebrow}>Why MigrateFAST</span> */}
+            <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
             {benefits.map((b) => (
               <div key={b.title} className={s.benCard}>
-                <div className={s.benTitle}>{b.title}</div>
-                <p className={s.benDesc}>{b.desc}</p>
+                <div className={s.benTitle}>{b.metric}</div>
+                <p className={s.benDesc}><strong>{b.title}</strong> - {b.desc}</p>
               </div>
             ))}
           </div>
@@ -79,7 +93,7 @@ export function ProductMigrateFAST() {
       <section className={s.sectionAlt} id="migratefast-process">
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>How it works</span>
+            {/* <span className={s.secEyebrow}>How it works</span> */}
             <h2 className={s.titleLg}>Our 6-step migration process</h2>
           </div>
           <div className={s.stepGrid6}>
@@ -94,42 +108,38 @@ export function ProductMigrateFAST() {
         </div>
       </section>
 
-      <section className={s.section}>
-        <div className={s.inner}>
-          <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Automation</span>
-            <h2 className={s.titleLg}>Tableau → Power BI automation capabilities</h2>
-          </div>
-          <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "12px" }}>
-            {capabilities.map((c) => (
-              <li key={c} style={{ fontSize: "14px", color: "var(--maq-gray-700)", lineHeight: 1.6, paddingLeft: "20px", position: "relative" }}>
-                <span style={{ position: "absolute", left: 0, color: "var(--maq-red)", fontWeight: 700 }}>✓</span>
-                {c}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <section className={s.sectionAlt}><CaseStudiesPlaceholder heading="Migration success stories" /></section>
+      <section className={s.sectionAlt}><ProductCaseStudies heading="Migration success stories" studies={[
+        { tag: "Tableau → Power BI", title: "Accelerate your Tableau to Power BI (Fabric) migration with MigrateFAST", teaser: "See how a highly automated 6-step approach reduces manual effort and accelerates Tableau to Power BI migration at enterprise scale.", href: "https://blog.maqsoftware.com/2025/03/accelerate-your-tableau-to-power-bi.html" },
+        { tag: "SAP BOBJ → Power BI", title: "Improving sales insights with a migration from SAP BOBJ to Power BI", teaser: "Learn how migrating 120+ reports and 100M+ rows improved performance, mobile access, and decision-making for global sales teams.", href: "https://blog.maqsoftware.com/2025/06/improving-sales-insights-with-migration.html" },
+        { tag: "MicroStrategy → Power BI", title: "Enhancing retail sales reporting by migrating from MicroStrategy to Power BI", teaser: "Explore how 150+ legacy reports were consolidated into streamlined Power BI reporting with better usability and lower licensing cost.", href: "https://blog.maqsoftware.com/2025/06/improving-retail-sales-reporting-by.html" },
+        { tag: "Qlik → Power BI", title: "Transitioning legacy reports from Qlik to Power BI", teaser: "Discover a phased global migration strategy that preserved legacy functionality while improving report performance and user adoption.", href: "https://blog.maqsoftware.com/2025/06/transitioning-legacy-reports-from-qlik.html" },
+      ]} /></section>
 
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
-          <div className={s.mktGrid}>
+          <div
+            className={s.mktGrid}
+            style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 380px), 380px))" }}
+          >
             {resources.map((o) => (
-              <a key={o.title} className={s.mktCard} href={o.href} target="_blank" rel="noreferrer">
+              <a
+                key={o.title}
+                className={s.mktCard}
+                href={o.href}
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
-                  <span className={s.mktPill}>{o.pill}</span>
-                  <div className={s.mktTitleRow}>
-                    <div className={s.mktTitle}>{o.title}</div>
-                    <ArrowRight20Regular className={s.mktArrow} />
-                  </div>
+                  <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
+                  <span className={s.mktRead}>
+                    Read more
+                  </span>
                 </div>
               </a>
             ))}
@@ -137,7 +147,7 @@ export function ProductMigrateFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.sectionAlt}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

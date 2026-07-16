@@ -71,6 +71,8 @@ Hand this file plus a target URL to any agent (or person) and they can produce a
 > | Route | /<kind>s/<slug> |
 > | Page component | src/pages/<PascalCase>.tsx |
 > | Shared layout | Announcement, Header, Footer, TrustBanner, CTA |
+| Header nav integration | Services mega-menu "<Title>" → /<kind>s/<slug> |
+| Redirect (legacy) | Add server redirect from legacy URL → /<kind>s/<slug> (e.g. Netlify `_redirects` or Vercel rewrite) |
 >
 > ## 2. Page composition (top → bottom)
 > 1. Announcement
@@ -138,6 +140,8 @@ Hand this file plus a target URL to any agent (or person) and they can produce a
 > - Section count and order match the reference spec.
 > - No invented metrics, customers, or quotes.
 > - Brand rules hold.
+ - Header nav integration: the spec includes the Services mega-menu label and the route to add to `Header.tsx` or server navigation configuration.
+ - Redirect guidance: the spec documents any legacy source URL and includes a recommended server redirect/rewrite example (Netlify `_redirects` or Vercel rewrite) to the new route.
 >
 > Return: path to `OUTPUT_FILE`, a 3-line summary of what was extracted, and the reconciliation report (blocks-in vs blocks-out, with reasons for any drops).
 

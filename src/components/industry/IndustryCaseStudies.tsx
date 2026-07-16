@@ -1,10 +1,12 @@
-import { makeStyles, tokens, Badge } from "@fluentui/react-components";
-import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { makeStyles, tokens } from "@fluentui/react-components";
+import { CaseStudyCard } from "../cards/CaseStudyCard";
+import { ArrowRight16Regular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -15,17 +17,27 @@ const useStyles = makeStyles({
     marginBottom: "6px",
   },
   title: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: 0,
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
+    textAlign: "left",
   },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+  },
+  gridUniform: {
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+    "@media (max-width: 960px)": {
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+    },
+    "@media (max-width: 640px)": {
+      gridTemplateColumns: "1fr",
+    },
   },
   card: {
     display: "flex",
@@ -34,14 +46,15 @@ const useStyles = makeStyles({
     borderRadius: "12px",
     padding: "22px",
     background: "#fff",
+    color: "inherit",
+    textDecoration: "none",
     transition: "all 0.2s",
     ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
       transform: "translateY(-2px)",
     },
   },
-  tag: { alignSelf: "flex-start", marginBottom: "12px" },
   cardTitle: {
     fontSize: "15px",
     fontWeight: 700,
@@ -57,17 +70,16 @@ const useStyles = makeStyles({
     marginBottom: "14px",
   },
   link: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    fontWeight: 600,
+    fontWeight: 700,
+    lineHeight: 1.4,
     color: "var(--maq-red)",
     textDecoration: "none",
-  },
+    },
   seeAll: {
     marginTop: "20px",
-    textAlign: "right",
+    textAlign: "left",
     fontSize: "13px",
     fontWeight: 600,
   },
@@ -80,77 +92,55 @@ const useStyles = makeStyles({
   },
 });
 
-interface Case {
+export interface IndustryCase {
   tag: string;
   title: string;
   teaser: string;
   href: string;
 }
 
-const cases: Case[] = [
-  {
-    tag: "Grocery",
-    title: "Transforming grocery retail analytics with Microsoft Fabric",
-    teaser:
-      "Modernize grocery analytics on Fabric for sharper category, basket and supply-chain insights.",
-    href: "https://blog.maqsoftware.com/2025/07/transforming-analytics-with-microsoft.html",
-  },
-  {
-    tag: "Specialty retail",
-    title: "Transforming supply chain analytics with Power BI on Snowflake",
-    teaser:
-      "Replatform a specialty retailer's supply chain analytics on Snowflake + Power BI.",
-    href: "https://blog.maqsoftware.com/2025/03/transforming-supply-chain-analytics.html",
-  },
-  {
-    tag: "Mass retail",
-    title:
-      "Enabling real-time visibility: Direct Store Delivery with Microsoft Fabric",
-    teaser:
-      "Deliver real-time DSD visibility on Fabric so field operations can act on live route and stock data.",
-    href: "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
-  },
-];
+interface IndustryCaseStudiesProps {
+  eyebrow: string;
+  title: string;
+  cases: IndustryCase[];
+  seeAllLabel?: string;
+  seeAllHref?: string;
+  uniformCardWidth?: boolean;
+}
 
-export function IndustryCaseStudies() {
+export function IndustryCaseStudies({
+  eyebrow,
+  title,
+  cases,
+  seeAllLabel = "See all case studies",
+  seeAllHref = "/insights/case-studies",
+  uniformCardWidth = false,
+}: IndustryCaseStudiesProps) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Retail case studies</span>
-          <h2 className={s.title}>How retailers move faster with MAQ Software</h2>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
+          <h2 className={s.title}>{title}</h2>
         </div>
-        <div className={s.grid}>
+        <div className={`${s.grid}${uniformCardWidth ? ` ${s.gridUniform}` : ""}`}>
           {cases.map((c) => (
-            <a
+            <CaseStudyCard
               key={c.title}
-              className={s.card}
+              title={c.title}
+              teaser={c.teaser}
               href={c.href}
-              target="_blank"
-              rel="noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <Badge appearance="tint" color="danger" className={s.tag}>
-                {c.tag}
-              </Badge>
-              <div className={s.cardTitle}>{c.title}</div>
-              <div className={s.teaser}>{c.teaser}</div>
-              <span className={s.link}>
-                Read full story <ArrowRight20Regular fontSize={14} />
-              </span>
-            </a>
+            />
           ))}
         </div>
         <div className={s.seeAll}>
-          <a
+          <Link
             className={s.seeAllLink}
-            href="https://maqsoftware.com/case-studies"
-            target="_blank"
-            rel="noreferrer"
+            to={seeAllHref}
           >
-            See all retail case studies <ArrowRight20Regular fontSize={14} />
-          </a>
+            {seeAllLabel} <ArrowRight16Regular />
+          </Link>
         </div>
       </div>
     </section>

@@ -1,18 +1,41 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
-import { Button, makeStyles, tokens } from "@fluentui/react-components";
+import { Link } from "react-router-dom";
+import { makeStyles, tokens } from "@fluentui/react-components";
+import { useContactAction } from "../../lib/contact";
+import { SecondaryButton } from "../buttons";
 import {
   Bot24Regular,
   ChartMultiple24Regular,
   Sparkle24Regular,
   BranchFork24Regular,
+  AppFolder24Regular,
+  ShieldCheckmark24Regular,
   ArrowRight16Regular,
 } from "@fluentui/react-icons";
 
+export interface Capability {
+  name: string;
+  tagline: string;
+  description: string;
+  icon: ReactNode;
+  tags: string[];
+}
+
+export interface ServiceCapabilitiesProps {
+  sectionId?: string;
+  title?: string;
+  subhead?: string;
+  capabilities?: Capability[];
+  footerLabel?: string;
+  footerHref?: string;
+  mailSubjectSuffix?: string;
+}
+
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -23,13 +46,15 @@ const useStyles = makeStyles({
     marginBottom: "6px",
   },
   title: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 6px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
+    textAlign: "left",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0, maxWidth: "780px" },
+  sub: { fontSize: "15px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
   panel: {
     marginTop: "20px",
@@ -98,12 +123,12 @@ const useStyles = makeStyles({
     cursor: "pointer",
     textAlign: "left",
     transition: "all 0.15s",
-    ":hover": { border: `1px solid var(--maq-red)` },
+    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
   },
   railBtnActive: {
-    border: `1px solid var(--maq-red)`,
+    border: "1px solid var(--maq-card-hover-border)",
     borderLeftWidth: "3px",
-    boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
+    boxShadow: "var(--maq-shadow-sm)",
   },
   railIcon: {
     width: "36px",
@@ -133,7 +158,7 @@ const useStyles = makeStyles({
   },
 });
 
-interface Capability {
+interface CapabilityInternal {
   name: string;
   tagline: string;
   description: string;
@@ -141,78 +166,92 @@ interface Capability {
   tags: string[];
 }
 
-const capabilities: Capability[] = [
+const defaultCapabilities: CapabilityInternal[] = [
   {
-    name: "Agentic AI",
-    tagline: "Innovate with agentic AI",
+    name: "Azure AI Foundry",
+    tagline: "Production AI on Azure Foundry",
     icon: <Bot24Regular />,
     description:
-      "Explore new possibilities with agentic AI. We help you harness advanced LLM models to create innovative solutions, from content generation to automated design and beyond. Multi-agent orchestration on Azure OpenAI with full observability, governance, and human-in-the-loop controls.",
-    tags: ["Azure OpenAI", "Multi-agent", "RAG", "Governance"],
+      "Design, build, and manage production-ready AI applications and intelligent agents using Azure AI Foundry with enterprise governance and scalability.",
+    tags: ["Azure AI Foundry", "Production AI", "Governance"],
   },
   {
-    name: "Advanced analytics",
-    tagline: "Decisions backed by predictive models",
-    icon: <ChartMultiple24Regular />,
-    description:
-      "Move from descriptive dashboards to predictive and prescriptive insight. We design feature stores, forecasting models, and recommendation engines tuned to your data and operating reality.",
-    tags: ["Forecasting", "Recommendation", "Feature stores", "Azure ML"],
-  },
-  {
-    name: "Intelligent automation",
-    tagline: "Automate the busywork, not the judgment",
+    name: "Azure OpenAI Service",
+    tagline: "Enterprise generative AI applications",
     icon: <Sparkle24Regular />,
     description:
-      "Embed AI inside the workflows your teams already live in — Power Platform, Microsoft 365 Copilot, custom apps — so repetitive work disappears and people focus on decisions.",
-    tags: ["Copilot Studio", "Power Automate", "M365 Copilot", "Custom agents"],
+      "Develop secure generative AI applications powered by OpenAI models with enterprise-grade security, compliance, and Azure integration.",
+    tags: ["Azure OpenAI", "Generative AI", "Enterprise Security"],
   },
   {
-    name: "MLOps",
-    tagline: "Production-grade model lifecycle",
+    name: "Microsoft Copilot Studio",
+    tagline: "Custom copilots for business workflows",
+    icon: <AppFolder24Regular />,
+    description:
+      "Create custom copilots and AI assistants that automate business processes and deliver conversational experiences across enterprise applications.",
+    tags: ["Copilot Studio", "Custom Copilots", "Workflow Automation"],
+  },
+  {
+    name: "Agentic AI & Multi-Agent Systems",
+    tagline: "Autonomous agents for complex workflows",
     icon: <BranchFork24Regular />,
     description:
-      "End-to-end MLOps so models stay accurate, compliant, and cost-controlled in production — CI/CD, drift detection, evaluation harnesses, and responsible AI guardrails.",
-    tags: ["Azure ML", "MLflow", "Eval harness", "Responsible AI"],
+      "Build autonomous AI systems that coordinate specialized agents to execute complex workflows, make decisions, and accomplish business objectives.",
+    tags: ["Agentic AI", "Multi-Agent", "Autonomous Workflows"],
+  },
+  {
+    name: "Retrieval-Augmented Generation (RAG)",
+    tagline: "Grounded AI with enterprise knowledge",
+    icon: <ChartMultiple24Regular />,
+    description:
+      "Enhance AI responses by grounding large language models with enterprise knowledge using secure retrieval from structured and unstructured data.",
+    tags: ["RAG", "Knowledge Grounding", "LLM"],
+  },
+  {
+    name: "AI Governance & Responsible AI",
+    tagline: "Trusted, secure, and compliant AI",
+    icon: <ShieldCheckmark24Regular />,
+    description:
+      "Implement governance frameworks that ensure AI systems remain secure, compliant, transparent, explainable, and aligned with responsible AI principles.",
+    tags: ["Responsible AI", "AI Governance", "Compliance"],
   },
 ];
 
-export function ServiceCapabilities() {
+export function ServiceCapabilities({
+  sectionId = "ai-capabilities",
+  title = "Our agentic AI capabilities",
+  subhead = "Capabilities that help you design, deploy, and govern enterprise AI systems at scale.",
+  capabilities = defaultCapabilities,
+  footerLabel = "See agentic AI case studies",
+  footerHref = "/insights/case-studies?filter=Agentic%20AI%20%26%20Machine%20Learning#insights-content",
+  mailSubjectSuffix = "Agentic AI & ML",
+}: ServiceCapabilitiesProps = {}) {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   const [active, setActive] = useState(0);
   const sel = capabilities[active];
   return (
-    <section className={s.section} id="ai-capabilities">
+    <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Our expertise</span>
-          <h2 className={s.title}>Our agentic AI and machine learning capabilities</h2>
-          <p className={s.sub}>
-            Four capability pillars that turn raw data and LLM power into
-            governed, production-grade business automation.
-          </p>
+          {/* <span className={s.eyebrow}>Our expertise</span> */}
+          <h2 className={s.title}>{title}</h2>
+          {/* <p className={s.sub}>{subhead}</p> */}
         </div>
         <div className={s.panel}>
           <div>
             <div className={s.iconBox}>{sel.icon}</div>
             <div className={s.detailName}>{sel.name}</div>
             <p className={s.detailDesc}>{sel.description}</p>
-            <div className={s.tagRow}>
-              {sel.tags.map((t) => (
-                <span key={t} className={s.tag}>
-                  {t}
-                </span>
-              ))}
-            </div>
-            <Button
-              appearance="outline"
-              className={s.knowMore}
-              as="a"
-              href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                sel.name + " - Agentic AI & ML"
-              )}`}
+            {/* <SecondaryButton
+              size="large"
+              className="maq-secondary-btn maq-equal-cta"
+              onClick={() =>
+                handleContactClick(sel.name + " - " + mailSubjectSuffix)
+              }
             >
               Know more
-            </Button>
+            </SecondaryButton> */}
           </div>
           <div className={s.rail}>
             {capabilities.map((c, i) => (
@@ -232,14 +271,12 @@ export function ServiceCapabilities() {
             ))}
           </div>
         </div>
-        <a
+        <Link
           className={s.footerLink}
-          href="https://maqsoftware.com/case-studies.html?filter=gen-ai-and-machine-learning"
-          target="_blank"
-          rel="noreferrer"
+          to={footerHref}
         >
-          See agentic AI case studies <ArrowRight16Regular />
-        </a>
+          {footerLabel} <ArrowRight16Regular />
+        </Link>
       </div>
     </section>
   );

@@ -1,14 +1,14 @@
-import { makeStyles, tokens } from "@fluentui/react-components";
+import { makeStyles, mergeClasses, tokens } from "@fluentui/react-components";
 
 const useStyles = makeStyles({
   wrap: {
     backgroundColor: tokens.colorNeutralBackground1,
     borderTop: `1px solid ${tokens.colorNeutralStroke2}`,
     borderBottom: `1px solid ${tokens.colorNeutralStroke2}`,
-    padding: "20px 32px",
+    padding: "12px 32px",
   },
   inner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "flex",
     flexWrap: "wrap",
@@ -40,11 +40,10 @@ const useStyles = makeStyles({
 });
 
 const items = [
-  { label: "Top 25 Global Microsoft Partner", blue: true },
-  { label: "Microsoft Fabric Featured Partner", blue: true },
-  { label: "Power BI Partner of the Year — Global", blue: true },
+  { label: "Top 25 Global Microsoft Partner" },
+  { label: "Microsoft Fabric Featured Partner" },
+  { label: "Power BI Partner of the Year — Global" },
   { label: "Inc. 5000 — 12 Consecutive Times" },
-  { label: "1,800+ Engineers Globally" },
   { label: "ISO 27001 / 27701 / 27018 Certified" },
   { label: "Partners: Microsoft · Snowflake · Databricks" },
   { label: "Microsoft Preferred Supplier — 26 Years" },
@@ -59,7 +58,7 @@ export function TrustBanner() {
         {items.map((i) => (
           <span
             key={i.label}
-            className={`${s.chip} ${i.blue ? s.chipBlue : ""}`}
+            className={s.chip}
           >
             {i.label}
           </span>

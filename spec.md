@@ -81,16 +81,15 @@ Sourced from the live https://maqsoftware.com (computed styles), **not** from an
 
 Render order is fixed:
 
-1. `<Announcement />`
-2. `<Header />`
-3. `<main>` containing:
+1. `<Header />`
+2. `<main>` containing:
    1. `<Hero />` — anchor: top of page
    2. `<TrustBanner />`
    3. `<Services id="services" />`
    4. `<Products id="products" />`
    5. `<CaseStudies id="case-studies" />`
    6. `<CTA id="contact" />`
-4. `<Footer />`
+3. `<Footer />`
 
 In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `#contact`. Industries currently is a mega-menu (no anchor jump).
 
@@ -98,11 +97,8 @@ In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `
 
 ## 4. Section specs
 
-### 4.1 Announcement (`Announcement.tsx`)
-- Thin top bar above the header.
-- Background: `--maq-black` (navy era → now black).
-- Text: white. Link color: `#ff8e92` (red-tinted on dark).
-- Dismissible is **not** required.
+### 4.1 Announcement (`Announcement.tsx`) — **REMOVED from Home**
+- Component file still exists in `src/components/` but is not rendered. Reserved for future campaign use.
 
 ### 4.2 Header / nav (`Header.tsx`) — sticky
 - Sticky to top, full-width, background `--maq-black`, text white.
@@ -115,7 +111,7 @@ In-page anchors used by header nav: `#services`, `#products`, `#case-studies`, `
   5. **Insights** — scrolls to `#case-studies`
   6. **About Us** — plain button (no anchor yet)
   7. **Contact Us** — `<MegaMenu label="Contact Us" items={contact}>`
-- Right cluster: search icon, "Sign in" (subtle), **"Request a demo"** primary Fluent `Button` that scrolls to `#contact`.
+- Right cluster: **"Request a demo"** primary Fluent `Button` that scrolls to `#contact`.
 - All nav items use a shared `navBtn` Griffel class: white text, transparent bg, transparent-white hover. No borders.
 
 **Mega-menu data (must stay exact):**
@@ -144,8 +140,8 @@ const contact = [
 - Light background; no hero image required (typography-led).
 
 ### 4.4 TrustBanner (`TrustBanner.tsx`)
-- Single-line strip below hero: "Trusted by…" + a row of grayscale logos / textual marks.
-- Background: `--maq-off-white`.
+- Single-line strip below hero: "Trusted credentials:" + a row of credential chips.
+- Background: `--maq-neutral-bg-1` (white). Tight vertical padding (12px) to keep page scroll short.
 
 ### 4.5 Services (`Services.tsx`) — `id="services"`
 - Grid of service cards. The six services mirror maqsoftware.com:
@@ -245,19 +241,15 @@ This section is the **source of truth for all rendered text** on the home page. 
   - `About Us` (no-op)
   - `Contact Us` (mega-menu) — items: `Talk to sales`, `Customer success`, `Partner with us`, `Careers`
 - **Right cluster:**
-  - Search icon (aria-label `Search`)
   - Primary button: `Request a demo` → `#contact`
 
 ### 8.3 Hero
-- **Eyebrow** (with star icon): `Microsoft Fabric Featured Partner · Top 25 Global Microsoft Partner`
+- **Eyebrow:** **REMOVED** (was `Microsoft Fabric Featured Partner · Top 25 Global Microsoft Partner` with star icon).
 - **H1:** `Turn data into decisions ` + `faster` (red) + ` with AI-powered analytics`
-- **Subhead:** `As a Microsoft Fabric Featured Partner and 12-time Inc. 5000 honoree, MAQ Software brings 25 years of enterprise delivery to every engagement. Whether you're modernizing a legacy BI stack, migrating to the cloud, or scaling AI across your organization — our 1,800+ engineers deliver outcomes, not just recommendations.`
+- **Subhead:** `A Microsoft Fabric Featured Partner with deep engineering across Snowflake and Databricks — we modernize legacy BI, migrate workloads to the cloud, and ship production GenAI agents on Microsoft Foundry. One partner across the full data and AI stack, with industry-specific accelerators that move you from pilot to production in weeks.`
 - **Primary CTA:** `Request a demo` (calendar icon) → `#contact`
 - **Secondary CTA:** `View case studies` (arrow icon, right) → `#case-studies`
-- **Stats row (3):**
-  - `1,800+` — `Engineers globally`
-  - `25 yrs` — `Microsoft preferred supplier`
-  - `12×` — `Inc. 5000 honoree`
+- **Stats row:** **REMOVED** (no longer rendered; numbers retained in subhead prose only).
 - **Visual card (right):**
   - Title: `Power BI on Microsoft Fabric` + green `● Live` badge
   - Metric 1: label `Revenue YTD`, value `$42.8M`, delta `↑ +18% vs last year`
@@ -285,12 +277,12 @@ This section is the **source of truth for all rendered text** on the home page. 
 
 | Name | Description |
 |---|---|
-| `AI solutions & agentic automation` | Production GenAI agents, copilots, and ML systems on Azure OpenAI and Databricks — automating high-value workflows from contract review to demand forecasting. |
-| `Data engineering & analytics` | Medallion architectures, governed lakehouses, and high-throughput pipelines on Microsoft Fabric, Synapse, Snowflake, and Databricks — built for scale and trust. |
-| `Reporting & business intelligence` | Microsoft Power BI Partner of the Year. We modernize legacy BI stacks (SSRS, Tableau, Cognos) into real-time Power BI on Fabric — up to 8× faster refresh. |
-| `Business apps & process automation` | Custom apps on .NET, React, and Power Platform that streamline operations — paired with Power Automate flows that retire manual handoffs across teams. |
-| `Cloud infrastructure & modernization` | Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture with zero downtime — and 30–40% lower run cost on average. |
-| `Security & compliance` | ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview implementations aligned to your regulatory landscape. |
+| `AI solutions & agentic automation` | Production GenAI agents and industry-specific solution accelerators built on Microsoft Foundry and the Microsoft Agent Framework — automating high-value business workflows. |
+| `Data engineering & analytics` | Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed lakehouses and real-time analytics that power Copilot, AI agents, and enterprise decision-making. |
+| `Reporting & business intelligence` | Microsoft Power BI Partner of the Year (2021). We build, modernize, and migrate BI stacks — Tableau, SAP BO, SAP Crystal, Qlik, Cognos, MicroStrategy — into real-time Power BI on Microsoft Fabric. |
+| `Business apps & process automation` | Low-code and pro-code apps on Microsoft Power Platform and Dynamics 365 — paired with Copilot Studio agents and Power Automate flows that retire manual handoffs and embed AI into everyday operations. |
+| `Cloud infrastructure & modernization` | Azure architecture, migration, and FinOps. Lift-and-shift to cloud-native re-architecture — delivering 30–40% lower run cost on average across enterprise workloads. |
+| `Security & compliance` | ISO 27001 / 27701 / 27018 certified delivery. Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape. |
 | `Workplace transformation & productivity` | Microsoft 365, Teams, SharePoint, and Copilot rollouts that drive adoption — not just deployment. Change management included. |
 
 > Note: section §4.5 currently lists six service categories matching maqsoftware.com; the rendered card list is seven (adds Workplace transformation). Reconcile to whichever the spec dictates — current implementation = seven.
@@ -332,9 +324,8 @@ This section is the **source of truth for all rendered text** on the home page. 
 - **Eyebrow:** `Talk to us`
 - **Title:** `Ready to move faster?`
 - **Subhead:** `Tell us where you are. We'll show you what's possible in 30 minutes — no obligation.`
-- **Primary button:** `Contact us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software`
+- **Primary button:** `Contact Us` (mail icon) → `mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software`
 - **Secondary button:** `Read case studies` (arrow icon) → `#case-studies`
-- **Trailing line:** `Or email us directly at ` + link `customersuccess@maqsoftware.com` → `mailto:customersuccess@maqsoftware.com`
 
 ### 8.9 Footer
 - **Brand:** logo mark `M` + name `MAQ Software`
@@ -347,7 +338,7 @@ This section is the **source of truth for all rendered text** on the home page. 
 | `Services` | `AI solutions & agentic automation`, `Data engineering & analytics`, `Reporting & business intelligence`, `Cloud infrastructure & modernization`, `Security & compliance` |
 | `Products` | `AI-DataLens`, `Fabric Admin Agent`, `MigrateFAST`, `EmbedFAST`, `CertyFAST`, `LoadFAST` |
 | `Resources` | `Case studies`, `Power BI custom visuals`, `Best practice guides`, `Webinars` |
-| `Company` | `Who we are`, `Careers`, `News`, `Sustainability`, `Contact us` |
+| `Company` | `Who we are`, `Careers`, `News`, `Sustainability`, `Contact Us` |
 
 - **Bottom-left:** `© {year} MAQ Software. All rights reserved.`
 - **Bottom-right:** `Microsoft, Azure, Fabric, and Power BI are trademarks of Microsoft Corporation.`

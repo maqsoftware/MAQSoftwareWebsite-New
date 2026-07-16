@@ -1,9 +1,18 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 
+export interface TestimonialItem {
+  body: string;
+  cite: string;
+}
+
+export interface ServiceTestimonialsProps {
+  quotes?: TestimonialItem[];
+}
+
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
-  head: { marginBottom: "20px" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
+  head: { textAlign: "center", marginBottom: "20px" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -14,11 +23,13 @@ const useStyles = makeStyles({
     marginBottom: "6px",
   },
   title: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: 0,
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
+    textAlign: "left",
   },
   grid: {
     display: "grid",
@@ -42,7 +53,7 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     opacity: 0.18,
     lineHeight: 1,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
   },
   body: {
     fontSize: "15px",
@@ -61,7 +72,7 @@ const useStyles = makeStyles({
   },
 });
 
-const quotes = [
+const defaultQuotes = [
   {
     body: "MAQ Software helped us productionize an Azure OpenAI agent that now resolves the top 40% of support tickets without human handoff — with full audit trail and policy guardrails.",
     cite: "Director, Customer Operations — Enterprise SaaS",
@@ -72,13 +83,15 @@ const quotes = [
   },
 ];
 
-export function ServiceTestimonials() {
+export function ServiceTestimonials({
+  quotes = defaultQuotes,
+}: ServiceTestimonialsProps = {}) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Testimonials</span>
+          {/* <span className={s.eyebrow}>Testimonials</span> */}
           <h2 className={s.title}>What our clients have to say</h2>
         </div>
         <div className={s.grid}>

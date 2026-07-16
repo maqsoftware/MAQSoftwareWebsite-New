@@ -1,21 +1,17 @@
 import {
   makeStyles,
-  Button,
 } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular } from "@fluentui/react-icons";
+import { useContactAction } from "../lib/contact";
+import { PrimaryButton } from "./buttons";
 
 const useStyles = makeStyles({
-  section: { padding: "80px 32px", backgroundColor: "#fff" },
+  section: { padding: "32px 32px", backgroundColor: "var(--maq-surface-cream)" },
   inner: {
     maxWidth: "1100px",
     margin: "0 auto",
-    background: "var(--maq-surface-cream)",
-    border: "1px solid var(--maq-red-pale)",
-    borderRadius: "20px",
-    padding: "56px 48px",
+    padding: "32px 32px",
     color: "var(--maq-ink)",
     textAlign: "center",
-    boxShadow: "0 10px 30px rgba(186, 20, 26, 0.06)",
   },
   eyebrow: {
     fontSize: "12px",
@@ -23,22 +19,23 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     letterSpacing: "0.08em",
     textTransform: "uppercase",
-    marginBottom: "16px",
+    marginBottom: "8px",
     display: "block",
   },
   title: {
     fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
-    margin: "0 0 16px",
+    color: "var(--maq-navy)",
+    margin: "0 0 8px",
     letterSpacing: "-0.02em",
   },
   sub: {
-    fontSize: "16px",
+    fontSize: "15px",
     color: "var(--maq-gray-700)",
-    marginBottom: "32px",
+    marginBottom: "20px",
     maxWidth: "640px",
-    margin: "0 auto 32px",
+    margin: "0 auto 20px",
     display: "block",
   },
   btns: {
@@ -48,7 +45,7 @@ const useStyles = makeStyles({
     flexWrap: "wrap",
   },
   email: {
-    marginTop: "20px",
+    marginTop: "12px",
     fontSize: "13px",
     color: "var(--maq-gray-700)",
   },
@@ -61,49 +58,21 @@ const useStyles = makeStyles({
 
 export function CTA() {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <section className={s.section} id="contact">
       <div className={s.inner}>
-        <span className={s.eyebrow}>Talk to us</span>
+        {/* <span className={s.eyebrow}>Talk to us</span> */}
         <h2 className={s.title}>
           Ready to move faster?
         </h2>
-        <p className={s.sub}>
-          Tell us where you are. We'll show you what's possible in 30 minutes —
-          no obligation.
-        </p>
         <div className={s.btns}>
-          <Button
-            appearance="primary"
+          <PrimaryButton
             size="large"
-            icon={<Mail24Regular />}
-            as="a"
-            href="mailto:customersuccess@maqsoftware.com?subject=Contact%20MAQ%20Software"
+            onClick={() => handleContactClick()}
           >
-            Contact us
-          </Button>
-          <Button
-            appearance="outline"
-            size="large"
-            icon={<ArrowRight20Regular />}
-            iconPosition="after"
-            onClick={() =>
-              document
-                .getElementById("case-studies")
-                ?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            Read case studies
-          </Button>
-        </div>
-        <div className={s.email}>
-          Or email us directly at{" "}
-          <a
-            className={s.emailLink}
-            href="mailto:customersuccess@maqsoftware.com"
-          >
-            customersuccess@maqsoftware.com
-          </a>
+            Contact Us
+          </PrimaryButton>
         </div>
       </div>
     </section>

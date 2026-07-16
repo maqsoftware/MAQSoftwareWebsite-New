@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;800&display=swap");
 
 :root {
   /* MAQ Software brand palette — "Editorial Red" (v3)
@@ -7,34 +7,88 @@
      no near-black-pure-black. Red carries the brand; neutrals carry the
      content. */
 
-  /* Brand */
-  --maq-red: #c8102e;          /* MAQ logo red (slightly bolder than v2) */
-  --maq-red-dark: #9b0c24;     /* hover / pressed */
-  --maq-red-pale: #fde7ea;     /* soft wash for borders / hover tints */
-  --maq-red-50: #fff5f6;       /* pale-red surface (sparingly) */
+  /* Brand — single source of truth for MAQ red.
+     Matches the Fluent theme brand ramp (theme.ts slot 80) and the logo.
+     Hover/tint/wash steps are derived from the same hue (~358°). */
+  --maq-red: #ba141a;          /* MAQ logo / primary brand red */
+  --maq-red-dark: #981016;     /* hover / pressed (darker step of --maq-red) */
+  --maq-red-pale: #fbe3e4;     /* soft wash for borders / hover tints */
+  --maq-red-50: #fef6f6;       /* pale-red surface (sparingly) */
 
   /* Surfaces */
   --maq-white: #ffffff;
   --maq-off-white: #f7f8fa;    /* cool light gray section bg */
   --maq-surface-cream: #f7f8fa;/* alias — replaces former warm sand */
   --maq-surface-soft: #f0f2f5; /* slightly deeper neutral block */
+  --maq-surface-ink: #262626;     /* dark surface (capability/product icon tiles) */
 
   /* Ink ladder (5 distinct steps) */
   --maq-black: #0f172a;        /* H1 / H2 — slate 900 */
   --maq-ink: #1f2937;          /* H3 / strong body */
-  --maq-gray-700: #475467;     /* body copy */
+  --maq-gray-700: #242424;     /* body copy (adjusted for higher contrast) */
   --maq-gray-600: #0f172a;     /* footer bg alias */
   --maq-gray-500: #667085;     /* muted / labels */
   --maq-text-muted: #667085;
+  --maq-text-soft: #605e5c;    /* muted warm-gray body copy */
+  --maq-text-faint: #797775;   /* tertiary labels / link rest state */
+
+  /* ── Surface-aware text roles ───────────────────────────────────
+     Components reference these roles (not the raw palette above) for
+     text color. They default to the light-surface values; a dark
+     surface (components/DarkSection.tsx) overrides them on its subtree
+     so all text flips to light with no per-element override. */
+  --maq-heading-color: var(--maq-black);     /* headings */
+  --maq-body-color: var(--maq-gray-700);     /* primary body copy */
+  --maq-muted-color: var(--maq-text-soft);   /* secondary / muted copy */
+  --maq-faint-color: var(--maq-text-faint);  /* tertiary labels */
 
   /* Chrome */
-  --maq-gray-50: #f7f8fa;
+  --maq-gray-50: #f3f4f6;      /* standard gray: section bands + footer (higher contrast vs white than the old #f7f8fa) */
   --maq-gray-100: #eef0f3;
   --maq-border: #e4e7ec;       /* cool neutral border */
   --maq-border-strong: #cdd2da;
   --maq-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px rgba(15, 23, 42, 0.06);
   --maq-shadow-md: 0 4px 8px rgba(15, 23, 42, 0.05), 0 12px 32px rgba(15, 23, 42, 0.08);
-  --maq-radius-md: 8px;
+  --maq-shadow-lift: none; /* no hover lift shadow */
+  --maq-card-hover-border: var(--maq-border); /* keep border stable on hover for non-clickable cards */
+  --maq-card-hover-border-interactive: #6b7280; /* clickable-card hover outline */
+
+  /* Layout — content widths. --maq-container is the app standard;
+     --maq-container-wide is the wider column used by the V2 homepage
+     exploration (HomeV2 + FooterV2). Wide is set so content spans a full
+     laptop edge-to-edge and only begins to contain on larger external
+     monitors (1920px+). */
+  --maq-container: 1240px;
+  --maq-container-wide: 1440px;
+
+  /* ─────────────────────────────────────────────────────────────
+     Marketing type ramp — single source of truth. Body anchors at 18px;
+     ~1.25 ratio with a stretched hero. Fluid via clamp() (desktop → mobile
+     targets in comments). Optimized for scanning, not long-form reading.
+     ───────────────────────────────────────────────────────────── */
+  --fs-hero:    clamp(2.75rem,   8.0vw, 5rem);      /* 80 → 44  hero headline */
+  --fs-h1:      clamp(2.25rem,   5.5vw, 3.5rem);    /* 56 → 36 */
+  --fs-h2:      clamp(1.875rem,  4.5vw, 3rem);      /* 48 → 30 */
+  --fs-h3:      clamp(1.625rem,  3.4vw, 2.25rem);   /* 36 → 26 */
+  --fs-h4:      clamp(1.375rem,  2.6vw, 1.75rem);   /* 28 → 22 */
+  --fs-lead:    clamp(1.125rem,  2.05vw, 1.375rem); /* 22 → 18  intro / sub-head */
+  --fs-body:    clamp(1rem,      1.65vw, 1.125rem); /* 18 → 16  body default */
+  --fs-small:   clamp(0.875rem,  1.4vw, 0.9375rem); /* 15 → 14 */
+  --fs-eyebrow: clamp(0.8125rem, 1.3vw, 0.875rem);  /* 14 → 13  eyebrow / label */
+
+  /* Back-compat aliases — existing components still reference these names;
+     each points at the nearest token in the ramp above. */
+  --fs-display: var(--fs-hero);
+  --fs-h5:      var(--fs-lead);
+  --fs-body-lg: var(--fs-body);
+  --fs-body-sm: var(--fs-small);
+  --fs-caption: var(--fs-eyebrow);
+
+  /* Section padding — single source of truth for the vertical rhythm and
+     horizontal gutters of full-bleed bands. One value so every section
+     breathes identically (overridden smaller on phones below). */
+  --section-pad-y: 96px;
+  --section-pad-x: 32px;
 
   /* Aliases — keep legacy component code working */
   --maq-navy: var(--maq-black);
@@ -45,14 +99,19 @@
   --maq-surface-blush: var(--maq-red-50);
 }
 
+/* Tighter section padding on phones. */
+@media (max-width: 720px) {
+  :root { --section-pad-y: 64px; --section-pad-x: 22px; }
+}
+
 html,
 body,
 #root {
   margin: 0;
   padding: 0;
   background: #fff;
-  color: var(--maq-gray-700);
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
+  color: var(--maq-body-color);
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
@@ -63,13 +122,32 @@ body,
 h1, h2, h3, h4, h5, h6 {
   display: block;
   line-height: 1.18;
-  color: var(--maq-black);
+  color: var(--maq-heading-color);
   letter-spacing: -0.01em;
   margin: 0;
 }
 h1 { line-height: 1.1; letter-spacing: -0.02em; }
 h2 { line-height: 1.15; letter-spacing: -0.015em; }
 p  { display: block; line-height: 1.6; margin: 0; }
+
+/* ──────────────────────────────────────────────────────────────
+   Canonical type scale — shared heading classes.
+   Opt-in via className (e.g. <h2 className="maq-h2">) so existing
+   per-page makeStyles sizes are unaffected. These are the app's
+   reference heading sizes; adopt them on new pages for app-wide
+   consistency. Color/weight/spacing live here so they can be tuned
+   in one place. Pair with a layout class for page-specific margins.
+   ────────────────────────────────────────────────────────────── */
+.maq-h1 { font-size: var(--fs-h1); font-weight: 600; line-height: 1.05; letter-spacing: -0.02em;  color: var(--maq-heading-color); margin: 0; }
+.maq-h2 { font-size: var(--fs-h2); font-weight: 600; line-height: 1.1;  letter-spacing: -0.015em; color: var(--maq-heading-color); margin: 0; }
+.maq-h3 { font-size: var(--fs-h3); font-weight: 600; line-height: 1.2;  letter-spacing: -0.01em;  color: var(--maq-heading-color); margin: 0; }
+/* Eyebrow / kicker label above a heading — sentence case, faint gray. */
+.maq-eyebrow { font-size: var(--fs-eyebrow); font-weight: 500; letter-spacing: 0; color: var(--colorNeutralForeground4); margin: 0 0 12px; }
+/* Responsiveness is handled by the clamp() in the --fs-* tokens. */
+
+/* Canonical centered content column. Adopt on new pages for a
+   consistent max-width; pages may override --maq-container locally. */
+.maq-container { max-width: var(--maq-container); margin-inline: auto; }
 
 * {
   box-sizing: border-box;
@@ -82,4 +160,169 @@ img {
 
 a {
   color: inherit;
+}
+
+/* Interactive card behavior: clickable elements keep a darker outline only.
+   Non-clickable cards should show no hover animation/effect. */
+.site-main :is(a, button, [role="button"]):hover {
+  box-shadow: none !important;
+  transform: none !important;
+  border-color: var(--maq-card-hover-border-interactive) !important;
+}
+
+.site-main :is(a, button, [role="button"]):focus-visible {
+  border-color: var(--maq-card-hover-border-interactive) !important;
+}
+
+/* Global section banding: white/gray alternation for all routed page sections.
+   The App shell assigns data-band-tone in DOM order after each route render. */
+.site-main section[data-band-tone="white"] {
+  background-color: var(--maq-white) !important;
+}
+
+.site-main section[data-band-tone="gray"] {
+  background-color: var(--maq-gray-50) !important;
+}
+
+/* Standardize CTA dimensions globally so primary/outline button pairs
+   (e.g., Contact Us + Case Studies/Get it now) align consistently. */
+.maq-equal-cta {
+  width: 112.46px;
+  min-height: 34px;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Mobile header overrides (hooks for Header.tsx) */
+/* Include 768px so common tablet portrait widths get the mobile header/hamburger */
+@media (max-width: 768px) {
+  .site-header { padding: 0 12px; }
+  .site-header .site-nav-links { display: none !important; }
+  .site-header .nav-toggle { display: inline-flex !important; }
+  .site-header .header-right { display: none !important; }
+
+  /* Position hamburger toggle at top-right on mobile for visual parity */
+  .site-header { position: relative; }
+  .site-header .nav-toggle { position: absolute !important; right: 16px !important; top: 12px !important; margin-left: 0 !important; z-index: 1300 !important; }
+
+  .mobile-overlay { display: none; }
+  .mobile-overlay.open {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: #2b2b2b;
+    color: #fff;
+    z-index: 1200;
+    padding-top: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow-y: auto;
+    /* Ensure full-viewport coverage on very small devices */
+    /* Use 100% instead of 100vw to avoid horizontal overflow when scrollbars appear */
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+  .mobile-overlay .closeBtn, .mobile-overlay button[aria-label="Close navigation"] {
+    position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; background: transparent; border: none; color: #e33; font-size: 20px; cursor: pointer;
+  }
+  .mobile-overlay a { color: #fff; text-decoration: none; font-size: 16px; }
+
+  /* Prevent overlay children from being constrained by unexpected max-widths */
+  .mobile-overlay, .mobile-overlay * {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+}
+
+/* Prevent horizontal overflow at mobile/tablet portrait widths where the layout switches */
+@media (max-width: 768px) {
+  html, body, #root { overflow-x: hidden; }
+}
+
+/* Fallback: apply key mobile header/layout rules when JS toggles `body.is-mobile`.
+  This ensures the SPA updates immediately in environments where media queries
+  may not re-evaluate promptly (device toolbar toggles, some emulators). */
+.is-mobile .site-header { padding: 0 12px; }
+.is-mobile .site-header .site-nav-links { display: none !important; }
+.is-mobile .site-header .nav-toggle { display: inline-flex !important; }
+.is-mobile .site-header .header-right { display: none !important; }
+.is-mobile .site-header { position: relative; }
+.is-mobile .site-header .nav-toggle { position: absolute !important; right: 16px !important; top: 12px !important; margin-left: 0 !important; z-index: 1300 !important; }
+.is-mobile .mobile-overlay { display: none; }
+.is-mobile .mobile-overlay.open { display: block; }
+
+/* Extra small devices: ensure full-bleed layouts and remove card-like framing */
+@media (max-width: 420px) {
+  html, body, #root {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--maq-off-white);
+  }
+
+  /* Make hero and main grids full width and remove rounding/shadows */
+  .wrap, .grid, .visual, main, .site-root, .site-content {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Reduce header padding so hamburger fits */
+  .site-header { padding: 0 16px !important; }
+  .site-header .brand { font-size: 18px !important; }
+}
+
+/* Aggressive resets for very small devices to avoid any boxed/card layout */
+@media (max-width: 420px) {
+  /* Reset common container elements that may create centered cards */
+  header, section, main, footer, .wrap, .grid, .visual, .site-root, .site-content, .page, .hero, .shell {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background-clip: border-box !important;
+    background: transparent !important;
+  }
+
+  /* Restore footer visuals on extra-small devices so it remains visible */
+  footer {
+    background: var(--maq-gray-600) !important;
+    color: #fff !important;
+    padding: 32px 16px !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+  }
+  footer > div {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  footer a, footer a:visited { color: rgba(255,255,255,0.9) !important; }
+
+  /* Ensure header is full-bleed and sits on top */
+  .site-header {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: var(--maq-white) !important;
+  }
+
+  /* Make sure hero text is readable and not clipped */
+  h1 { font-size: 2.5rem !important; line-height: 1.08 !important; }
 }

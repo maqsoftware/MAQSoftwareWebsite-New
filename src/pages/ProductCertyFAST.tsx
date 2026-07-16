@@ -1,8 +1,12 @@
-import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular, ArrowDownload24Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
+// import { TrustBanner } from \"../components/TrustBanner\";
+import { Mail24Regular } from "@fluentui/react-icons";
+
+import { Button, PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { useContactAction } from "../lib/contact";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
+
+const CERTYFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/KIiI16IKHIY?si=ohsb-fK3J1cylEi4";
 
 const benefits = [
   { title: "Automate the review process", desc: "Save time and effort by easily identifying errors, formatting DAX measures, and creating knowledge base documents." },
@@ -18,41 +22,51 @@ const steps = [
 
 const resources = [
   { pill: "GitHub", title: "CertyFAST on GitHub", desc: "Download the tool from the official MAQ Software repository.", href: "https://github.com/maqsoftware/CertyFAST" },
-  { pill: "Docs", title: "Installation & user guide", desc: "Step-by-step integration, best practices, and troubleshooting.", href: "https://maqsoftware.com/services/Power-BI/InstallationandUsageGuide" },
-  { pill: "Best practices", title: "Power BI development standards", desc: "Authoritative guides from the MAQ Software community.", href: "https://maqsoftware.com/community/best-practices" },
-  { pill: "Case studies", title: "Quality-control case studies", desc: "Real-world Power BI quality wins.", href: "https://maqsoftware.com/case-studies" },
+  { pill: "Docs", title: "Installation & user guide", desc: "Step-by-step integration, best practices, and troubleshooting.", href: "/products/certyfast/installation-and-usage-guide" },
+  { pill: "Best practices", title: "Power BI development standards", desc: "Authoritative guides from the MAQ Software community.", href: "/insights/best-practice-guides" },
+  { pill: "Case studies", title: "Quality-control case studies", desc: "Real-world Power BI quality wins.", href: "/insights/case-studies" },
 ];
 
 export function ProductCertyFAST() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Power BI quality control</span>
+            {/* <span className={s.eyebrow}>Power BI quality control</span> */}
             <h1 className={s.h1}>CertyFAST</h1>
             <p className={s.heroSub}>
-              Streamline Power BI model development with automated error detection, DAX measure formatting, and simplified documentation. Ensure top-quality reports and adherence to best practices.
+              CertyFAST helps organizations build and maintain high-quality Power BI semantic models. By automating error detection, DAX standardization, and documentation, it improves consistency, reduces development effort, and ensures adherence to modeling best practices.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<ArrowDownload24Regular />} as="a" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noreferrer">Download now</Button>
-              <Button appearance="outline" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20CertyFAST">Talk to our team</Button>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</PrimaryButton>
+              <Button variant="tertiary" size="large" className="maq-equal-cta" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/who.jpg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="CertyFAST demo video"
+                src={CERTYFAST_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>
-          <div className={s.head}>
-            <span className={s.secEyebrow}>Why CertyFAST</span>
-            <h2 className={s.title}>Benefits</h2>
+          <div className={s.headLeft}>
+            {/* <span className={s.secEyebrow}>Why CertyFAST</span> */}
+            <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.benGrid3}>
             {benefits.map((b) => (
@@ -68,7 +82,7 @@ export function ProductCertyFAST() {
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>How it works</span>
+            {/* <span className={s.secEyebrow}>How it works</span> */}
             <h2 className={s.titleLg}>Three steps to certified Power BI reports</h2>
           </div>
           <div className={s.stepGrid}>
@@ -83,25 +97,34 @@ export function ProductCertyFAST() {
         </div>
       </section>
 
-      <section className={s.section}><CaseStudiesPlaceholder heading="CertyFAST success stories" /></section>
+      <section className={s.section}><ProductCaseStudies heading="CertyFAST success stories" studies={[
+        { tag: "Cybersecurity", title: "Strengthening cybersecurity with Managed Identity and RBAC", teaser: "Eliminating credential sprawl with Azure Managed Identity and enforcing least-privilege access — the security backbone CertyFAST automates.", href: "https://blog.maqsoftware.com/2024/08/strengthening-cybersecurity.html" },
+        { tag: "Secure Copilot", title: "Building a secure Copilot: Addressing key security challenges", teaser: "Reference design for shipping enterprise Copilots safely — patterns and guardrails CertyFAST helps you continuously enforce.", href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html" },
+        { tag: "Data governance", title: "Unifying data management with a centralized framework", teaser: "Centralized governance and access controls across distributed systems — a model CertyFAST helps certify on an ongoing basis.", href: "https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html" },
+      ]} /></section>
 
       <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>
             {resources.map((o) => (
-              <a key={o.title} className={s.mktCard} href={o.href} target="_blank" rel="noreferrer">
+              <a
+                key={o.title}
+                className={s.mktCard}
+                href={o.href}
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
-                  <span className={s.mktPill}>{o.pill}</span>
-                  <div className={s.mktTitleRow}>
-                    <div className={s.mktTitle}>{o.title}</div>
-                    <ArrowRight20Regular className={s.mktArrow} />
-                  </div>
+                  <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
+                  <span className={s.mktRead}>
+                    Read more
+                  </span>
                 </div>
               </a>
             ))}
@@ -109,7 +132,7 @@ export function ProductCertyFAST() {
         </div>
       </section>
 
-      <section className={s.section}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.section}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

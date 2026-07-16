@@ -1,8 +1,10 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight20Regular } from "@fluentui/react-icons";
+import { StatCard } from "../cards/StatCard";
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "center", marginBottom: "28px" },
   eyebrow: {
     fontSize: "12px",
@@ -14,119 +16,59 @@ const useStyles = makeStyles({
     marginBottom: "8px",
   },
   title: {
-    fontSize: "28px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 6px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
+    textAlign: "left",
   },
-  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0 },
+  sub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", textAlign: "center" },
   grid: {
     display: "grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
     gap: "16px",
-    "@media (max-width: 960px)": { gridTemplateColumns: "repeat(2, 1fr)" },
   },
-  card: {
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "10px",
-    padding: "20px",
-    background: "#fff",
-    transition: "all 0.2s",
-    ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "0 6px 16px rgba(0,0,0,0.06)",
-    },
-  },
-  metric: {
-    fontSize: "32px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    lineHeight: 1.1,
-    marginBottom: "8px",
-    letterSpacing: "-0.02em",
-  },
-  label: {
-    fontSize: "14px",
-    fontWeight: 600,
-    color: "var(--maq-black)",
-    lineHeight: 1.35,
-    marginBottom: "8px",
-  },
-  source: {
-    fontSize: "11px",
-    color: "var(--maq-gray-600)",
-    textTransform: "uppercase",
-    letterSpacing: "0.06em",
-  },
-  link: { color: "var(--maq-red)", textDecoration: "none" },
 });
 
-interface Stat {
-  metric: string;
+export interface ImpactStat {
+  metric?: string;
+  chip?: string;
+  title?: string;
   label: string;
   sourceLabel: string;
   sourceHref: string;
 }
 
-const stats: Stat[] = [
-  {
-    metric: "8×",
-    label: "Faster Power BI refresh for a top-3 US retailer",
-    sourceLabel: "Microsoft Fabric BI modernization",
-    sourceHref:
-      "https://blog.maqsoftware.com/2025/12/modernizing-retail-business.html",
-  },
-  {
-    metric: "Real-time",
-    label: "Direct Store Delivery visibility on Microsoft Fabric",
-    sourceLabel: "Real-time DSD case study",
-    sourceHref:
-      "https://blog.maqsoftware.com/2024/05/enabling-real-time-visibility-how.html",
-  },
-  {
-    metric: "< 1 min",
-    label: "Live KPIs replacing nightly batches at an organic supermarket chain",
-    sourceLabel: "Organic supermarket case study",
-    sourceHref:
-      "https://blog.maqsoftware.com/2022/06/real-time-reporting-for-organic.html",
-  },
-  {
-    metric: "Personalized",
-    label: "Loyalty program lift across millions of members",
-    sourceLabel: "Loyalty program case study",
-    sourceHref:
-      "https://blog.maqsoftware.com/2024/02/empowering-retail-growth-with-optimized.html",
-  },
-];
+interface ImpactStatsProps {
+  eyebrow?: string;
+  title: string;
+  sub: string;
+  stats: ImpactStat[];
+}
 
-export function ImpactStats() {
+export function ImpactStats({ eyebrow = "Proven outcomes", title, sub, stats }: ImpactStatsProps) {
   const s = useStyles();
   return (
     <section className={s.section}>
       <div className={s.inner}>
         <div className={s.head}>
-          <span className={s.eyebrow}>Proven outcomes</span>
-          <h2 className={s.title}>Real impact for retail leaders</h2>
-          <p className={s.sub}>
-            Numbers from MAQ Software engagements with global retailers and CPG
-            brands.
-          </p>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
+          <h2 className={s.title}>{title}</h2>
+          {/* <p className={s.sub}>{sub}</p> */}
         </div>
         <div className={s.grid}>
           {stats.map((st) => (
-            <div key={st.label} className={s.card}>
-              <div className={s.metric}>{st.metric}</div>
-              <div className={s.label}>{st.label}</div>
-              <a
-                className={`${s.source} ${s.link}`}
-                href={st.sourceHref}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {st.sourceLabel} ↗
-              </a>
-            </div>
+            <StatCard
+              key={st.label}
+              chip={st.chip}
+              metric={st.metric && st.metric !== "____" ? st.metric : undefined}
+              title={st.title}
+              label={st.label}
+              href={st.sourceHref}
+              sourceLabel={st.sourceLabel}
+            />
           ))}
         </div>
       </div>

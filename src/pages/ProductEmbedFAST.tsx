@@ -1,23 +1,26 @@
-import { Button } from "@fluentui/react-components";
-import { Mail24Regular, ArrowRight20Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
-import { TrustBanner } from "../components/TrustBanner";
-import { useProductPageStyles } from "./productPageStyles";
-import { CaseStudiesPlaceholder, TestimonialsPlaceholder } from "./productPlaceholders";
+import { Mail24Regular, PlugConnected24Regular, Color24Regular, Money24Regular, ShieldKeyhole24Regular, CloudArrowUp24Regular, ArrowSync24Regular } from "@fluentui/react-icons";
 
-const APPSOURCE = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.embedfastpowerbi?tab=PlansAndPrice";
+import { Button, PrimaryButton } from "../components/buttons";
+import { useProductPageStyles } from "./productPageStyles";
+import { useContactAction } from "../lib/contact";
+// import { TrustBanner } from "../components/TrustBanner";
+import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
+
+const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.embedfastpowerbi";
+const EMBEDFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/iwhMYf58SqE?si=aN-dOljFYtGTJBke";
 
 const benefits = [
-  { icon: <PlugConnected24Regular />, title: "Seamless integration", desc: "Easily integrate our API into your applications. Embed Power BI without the time or resource complexities." },
-  { icon: <Color24Regular />, title: "Fully customizable", desc: "Adapt EmbedFAST to your unique requirements, ensuring features that align perfectly with your workflows." },
-  { icon: <Money24Regular />, title: "Cut licensing cost", desc: "No need for individual Power BI user licenses — only capacity licenses (F SKUs). Save costs without assigning user licenses." },
-  { icon: <ShieldKeyhole24Regular />, title: "Simplified access control", desc: "Effortlessly control user permissions and secure data with built-in role-based access." },
-  { icon: <CloudArrowUp24Regular />, title: "Scalable and secure", desc: "Onboard unlimited tenants/workspaces with privacy and scalable growth built-in." },
-  { icon: <ArrowSync24Regular />, title: "Automatic updates", desc: "Enjoy automatic updates, ensuring you're always on the latest version without manual effort." },
+  { icon: <PlugConnected24Regular />, title: "Seamless integration", desc: "Embed Power BI into any application via API without complex setup or development overhead." },
+  { icon: <Money24Regular />, title: "Cut licensing costs", desc: "No individual Power BI user licenses needed, only capacity licenses (F SKUs), saving costs at any scale." },
+  { icon: <CloudArrowUp24Regular />, title: "Scalable and secure", desc: "Onboard unlimited tenants and workspaces with privacy, security, and scalable growth built in." },
+  { icon: <Color24Regular />, title: "Fully customizable", desc: "Adapt EmbedFAST to your workflows and configure features to match your exact business requirements." },
+  { icon: <ShieldKeyhole24Regular />, title: "Simplified access control", desc: "Manage user permissions and secure data access with built-in role-based controls without extra configuration." },
+  { icon: <ArrowSync24Regular />, title: "Always up to date", desc: "Automatic updates ensure you are always on the latest version with no manual upgrades or maintenance required." },
 ];
 
 const plans = [
-  { name: "Subscription — API Only", price: "$2,500", term: "per month + $10,000 setup", items: ["Single instance with API", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Get it now" },
-  { name: "Subscription — API + UI", price: "$3,500", term: "per month + $10,000 setup", items: ["Single instance with API and UI", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Get it now" },
+  { name: "Subscription — API Only", price: "$2,500", term: "per month + $10,000 setup", items: ["Single instance with API", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Explore Marketplace" },
+  { name: "Subscription — API + UI", price: "$3,500", term: "per month + $10,000 setup", items: ["Single instance with API and UI", "Complete installation setup", "No limit on the number of users", "Free upgrades"], href: APPSOURCE, cta: "Explore Marketplace" },
   { name: "Code Share — API + UI", price: "$250,000", term: "fixed one-time", items: ["Shared solution IP with API and UI", "4-week consulting service to integrate", "Code walkthrough and handover", "Personalized technical documentation", "Additional features on demand"], href: "mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20EmbedFAST%20Code%20Share", cta: "Talk to us" },
 ];
 
@@ -32,41 +35,49 @@ const supportRows = [
 ];
 
 const resources = [
-  { pill: "AppSource", title: "EmbedFAST on Azure Marketplace", desc: "Purchase plans and licensing.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.embedfastpowerbi" },
-  { pill: "Consulting offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace consulting offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "Power BI embedding outcomes", desc: "Real-world wins from EmbedFAST customers.", href: "https://maqsoftware.com/case-studies" },
-  { pill: "Best practices", title: "Power BI embedding best practices", desc: "Authoritative guidance from MAQ Software engineers.", href: "https://maqsoftware.com/community/best-practices" },
+  { pill: "Marketplace", title: "EmbedFAST on Microsoft Marketplace", desc: "Explore EmbedFAST listing, plans, and licensing options.", href: "https://marketplace.microsoft.com/en-us/product/maqsoftware.embedfastpowerbi" },
+  { pill: "Docs", title: "EmbedFAST: Technical Documentation", desc: "Implementation and usage reference for EmbedFAST.", href: "https://maqsoftware.gitbook.io/embedfast-technical-documentation" },
 ];
 
 export function ProductEmbedFAST() {
   const s = useProductPageStyles();
+  const handleContactClick = useContactAction();
   return (
     <>
       <section className={s.hero}>
         <div className={s.heroGrid}>
           <div>
-            <span className={s.eyebrow}>Power BI embedding</span>
+            {/* <span className={s.eyebrow}>Automated Power BI embedding accelerator</span> */}
             <h1 className={s.h1}>EmbedFAST</h1>
             <p className={s.heroSub}>
-              Effortlessly embed Power BI into your apps without the complexity of writing your own code. Achieve faster time to market, improve operations, and elevate your workflow — all with EmbedFAST.
+              Delivering fast, secure, and scalable analytics inside enterprise applications often comes with complex integrations, licensing overhead, and heavy development effort. EmbedFAST simplifies Power BI embedding with built-in role-based access, unlimited tenant and workspace onboarding, and customizable features so your team delivers insights at scale with minimal development effort.
             </p>
             <div className={s.btns}>
-              <Button appearance="primary" size="large" icon={<ArrowRight20Regular />} iconPosition="after" as="a" href={APPSOURCE} target="_blank" rel="noreferrer">Get it now</Button>
-              <Button appearance="outline" size="large" icon={<Mail24Regular />} as="a" href="mailto:customersuccess@maqsoftware.com?subject=Contact%20Us%20-%20EmbedFAST">Talk to our team</Button>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</PrimaryButton>
+              <Button variant="tertiary" size="large" className="maq-equal-cta" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
-          <div className={s.heroImageWrap} aria-hidden="true">
-            <img className={s.heroImage} src="https://maqsoftware.com/images-new/isv/isv-top-image.jpg" alt="" loading="eager" decoding="async" />
+          <div className={s.heroImageWrap}>
+            <div style={{ width: "100%", maxWidth: "560px", aspectRatio: "16 / 9", overflow: "hidden", borderRadius: "12px", background: "#000", border: "1px solid var(--maq-border)" }}>
+              <iframe
+                title="EmbedFAST demo video"
+                src={EMBEDFAST_VIDEO_EMBED_URL}
+                style={{ width: "100%", height: "100%", border: 0, display: "block" }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <TrustBanner />
+
 
       <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Why EmbedFAST</span>
+            {/* <span className={s.secEyebrow}>Why EmbedFAST</span> */}
             <h2 className={s.titleLg}>Benefits</h2>
           </div>
           <div className={s.featGrid}>
@@ -83,34 +94,38 @@ export function ProductEmbedFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><CaseStudiesPlaceholder heading="Embedding success stories" /></section>
+      <section className={s.sectionAlt}><ProductCaseStudies heading="Embedding success stories" studies={[
+        { tag: "Power BI Embedded", title: "Delivering embedded Power BI reporting with EmbedFAST", teaser: "An ISV embeds Power BI into its SaaS product using the EmbedFAST accelerator — shipping multi-tenant analytics months faster.", href: "https://blog.maqsoftware.com/2025/07/delivering-embedded-power-bi-reporting.html" },
+        { tag: "Self-service BI", title: "Empowering self-service using Custom Copilot agent with Power BI Embedded", teaser: "A custom Copilot agent over Power BI Embedded letting users ask data questions in plain English — reducing report request backlog.", href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html" },
+        { tag: "Integration", title: "Simplifying Power BI integration for enterprise applications", teaser: "Learn how EmbedFAST streamlines integration with secure embedding, governance controls, and faster implementation timelines.", href: "https://blog.maqsoftware.com/2024/10/simplifying-power-bi-integration-for.html" },
+      ]} /></section>
 
       <section className={s.section} id="embedfast-pricing">
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Pricing</span>
+            {/* <span className={s.secEyebrow}>Pricing</span> */}
             <h2 className={s.titleLg}>Choose the plan that fits your team</h2>
           </div>
           <div className={s.priceGrid}>
             {plans.map((p) => (
-              <div key={p.name} className={s.priceCard}>
+              <a key={p.name} className={s.priceCard} href={p.href} target="_blank" rel="noopener noreferrer">
                 <div className={s.priceName}>{p.name}</div>
                 <div className={s.priceAmount}>{p.price}</div>
                 <div className={s.priceTerm}>{p.term}</div>
                 <ul className={s.priceList}>
                   {p.items.map((i) => <li key={i} className={s.priceItem}>{i}</li>)}
                 </ul>
-                <Button appearance="primary" size="medium" as="a" href={p.href} target="_blank" rel="noreferrer">{p.cta}</Button>
-              </div>
+                <div className={s.priceCta}>{p.cta}</div>
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      <section className={s.section}>
+      <section className={s.sectionAlt}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Support plans</span>
+            {/* <span className={s.secEyebrow}>Support plans</span> */}
             <h2 className={s.titleLg}>Choose your support tier</h2>
           </div>
           <div style={{ overflowX: "auto" }}>
@@ -138,23 +153,28 @@ export function ProductEmbedFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}>
+      <section className={s.section}>
         <div className={s.inner}>
           <div className={s.headLeft}>
-            <span className={s.secEyebrow}>Resources & marketplace</span>
+            {/* <span className={s.secEyebrow}>Insights</span> */}
             <h2 className={s.titleLg}>Resources & Marketplace</h2>
           </div>
           <div className={s.mktGrid}>
             {resources.map((o) => (
-              <a key={o.title} className={s.mktCard} href={o.href} target="_blank" rel="noreferrer">
+              <a
+                key={o.title}
+                className={s.mktCard}
+                href={o.href}
+                target={o.href.startsWith("http") ? "_blank" : undefined}
+                rel={o.href.startsWith("http") ? "noreferrer" : undefined}
+              >
                 <div className={s.mktImg} aria-hidden="true" />
                 <div className={s.mktBody}>
-                  <span className={s.mktPill}>{o.pill}</span>
-                  <div className={s.mktTitleRow}>
-                    <div className={s.mktTitle}>{o.title}</div>
-                    <ArrowRight20Regular className={s.mktArrow} />
-                  </div>
+                  <div className={s.mktTitle}>{o.title}</div>
                   <p className={s.mktDesc}>{o.desc}</p>
+                  <span className={s.mktRead}>
+                    Read more
+                  </span>
                 </div>
               </a>
             ))}
@@ -162,7 +182,7 @@ export function ProductEmbedFAST() {
         </div>
       </section>
 
-      <section className={s.section}><TestimonialsPlaceholder /></section>
+      {/* <section className={s.section}><TestimonialsPlaceholder /></section> */}
     </>
   );
 }

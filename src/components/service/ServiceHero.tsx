@@ -1,16 +1,26 @@
-import { Button, makeStyles } from "@fluentui/react-components";
+import type { ReactNode } from "react";
+import { makeStyles } from "@fluentui/react-components";
 import {
   Mail24Regular,
-  ArrowRight20Regular,
   Bot20Filled,
   ChartMultiple20Filled,
   Sparkle20Filled,
 } from "@fluentui/react-icons";
+import { useContactAction } from "../../lib/contact";
+import { PrimaryButton } from "../buttons";
+
+export interface ServiceHeroProps {
+  eyebrow?: string;
+  heading?: string;
+  subhead?: string;
+  ctaMailSubject?: string;
+  visual?: ReactNode;
+}
 
 const useStyles = makeStyles({
   wrap: { backgroundColor: "var(--maq-off-white)", padding: "48px 32px" },
   grid: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
@@ -61,7 +71,7 @@ const useStyles = makeStyles({
     padding: "14px 16px",
   },
   tileTitle: {
-    fontSize: "11px",
+    fontSize: "12px",
     textTransform: "uppercase",
     letterSpacing: "0.08em",
     color: "var(--maq-gray-500)",
@@ -94,95 +104,85 @@ const useStyles = makeStyles({
   autoRow: { display: "flex", justifyContent: "space-between", fontSize: "12px", color: "var(--maq-ink)", marginTop: "4px" },
 });
 
-export function ServiceHero() {
+export function ServiceHero({
+  eyebrow = "AI Solutions & Agents",
+  heading = "Build production-ready AI agents on Microsoft Foundry",
+  subhead = "MAQ Software designs, builds, and operates GenAI agents and copilots on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting, with full governance, evaluation, and human-in-the-loop controls.",
+  ctaMailSubject = "Agentic AI & ML - MAQ Software",
+  visual,
+}: ServiceHeroProps = {}) {
   const s = useStyles();
+  const handleContactClick = useContactAction();
   return (
     <section className={s.wrap}>
       <div className={s.grid}>
         <div>
-          <span className={s.eyebrow}>Agentic AI &amp; Machine Learning</span>
-          <h1 className={s.h1}>
-            Automate and innovate with agentic AI &amp; machine learning
-          </h1>
-          <p className={s.sub}>
-            Uncover hidden patterns and automate processes with our agentic AI
-            and machine learning solutions, tailored for your business needs.
-          </p>
+          {/* <span className={s.eyebrow}>{eyebrow}</span> */}
+          <h1 className={s.h1}>{heading}</h1>
+          <p className={s.sub}>{subhead}</p>
           <div className={s.btns}>
-            <Button
-              appearance="primary"
+            <PrimaryButton
               size="large"
-              icon={<Mail24Regular />}
-              as="a"
-              href="mailto:customersuccess@maqsoftware.com?subject=Agentic%20AI%20%26%20ML%20-%20MAQ%20Software"
-            >
-              Contact us
-            </Button>
-            <Button
-              appearance="outline"
-              size="large"
-              icon={<ArrowRight20Regular />}
-              iconPosition="after"
               onClick={() =>
-                document
-                  .getElementById("ai-capabilities")
-                  ?.scrollIntoView({ behavior: "smooth" })
+                handleContactClick(ctaMailSubject)
               }
             >
-              Explore capabilities
-            </Button>
+              Contact Us
+            </PrimaryButton>
           </div>
         </div>
 
-        <div className={s.visual} aria-hidden="true">
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Bot20Filled /> Agent activity
-            </div>
-            <div className={s.pulseRow}>
-              <span className={s.dot} />
-              <span className={s.dot} />
-              <span className={s.dotMuted} />
-              <span className={s.pulseLabel}>3 agents online · 142 tasks/min</span>
-            </div>
-          </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <ChartMultiple20Filled /> Model performance
-            </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Accuracy</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "92%" }} />
+        {visual ?? (
+          <div className={s.visual} aria-hidden="true">
+            <div className={s.tile}>
+              <div className={s.tileTitle}>
+                <Bot20Filled /> Agent activity
+              </div>
+              <div className={s.pulseRow}>
+                <span className={s.dot} />
+                <span className={s.dot} />
+                <span className={s.dotMuted} />
+                <span className={s.pulseLabel}>3 agents online · 142 tasks/min</span>
               </div>
             </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Precision</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "88%" }} />
+            <div className={s.tile}>
+              <div className={s.tileTitle}>
+                <ChartMultiple20Filled /> Model performance
+              </div>
+              <div className={s.perfRow}>
+                <span className={s.perfLabel}>Accuracy</span>
+                <div className={s.perfTrack}>
+                  <div className={s.perfFill} style={{ width: "92%" }} />
+                </div>
+              </div>
+              <div className={s.perfRow}>
+                <span className={s.perfLabel}>Precision</span>
+                <div className={s.perfTrack}>
+                  <div className={s.perfFill} style={{ width: "88%" }} />
+                </div>
+              </div>
+              <div className={s.perfRow}>
+                <span className={s.perfLabel}>Recall</span>
+                <div className={s.perfTrack}>
+                  <div className={s.perfFill} style={{ width: "81%" }} />
+                </div>
               </div>
             </div>
-            <div className={s.perfRow}>
-              <span className={s.perfLabel}>Recall</span>
-              <div className={s.perfTrack}>
-                <div className={s.perfFill} style={{ width: "81%" }} />
+            <div className={s.tile}>
+              <div className={s.tileTitle}>
+                <Sparkle20Filled /> Today&apos;s automations
+              </div>
+              <div className={s.autoRow}>
+                <span>Invoices auto-classified</span>
+                <span>1,284</span>
+              </div>
+              <div className={s.autoRow}>
+                <span>Support tickets summarized</span>
+                <span>312</span>
               </div>
             </div>
           </div>
-          <div className={s.tile}>
-            <div className={s.tileTitle}>
-              <Sparkle20Filled /> Today&apos;s automations
-            </div>
-            <div className={s.autoRow}>
-              <span>Invoices auto-classified</span>
-              <span>1,284</span>
-            </div>
-            <div className={s.autoRow}>
-              <span>Support tickets summarized</span>
-              <span>312</span>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </section>
   );

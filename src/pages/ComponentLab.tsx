@@ -1,4 +1,4 @@
-import { makeStyles, tokens, Button, Badge } from "@fluentui/react-components";
+import { makeStyles, tokens } from "@fluentui/react-components";
 import {
   ArrowRight20Regular,
   Bot24Regular,
@@ -11,6 +11,7 @@ import {
   Sparkle24Regular,
 } from "@fluentui/react-icons";
 import type { FC, ReactNode } from "react";
+import { PrimaryButton, SecondaryButton, TextButton } from "../components/buttons";
 
 /* ------------------------------------------------------------------ */
 /*  Component Lab                                                      */
@@ -279,9 +280,9 @@ const useSvcCard = makeStyles({
 });
 
 const svcSample = [
-  { icon: <Bot24Regular />, name: "AI solutions & agentic automation", desc: "Production GenAI agents and copilots on Azure OpenAI — automating high-value workflows." },
-  { icon: <ChartMultiple24Regular />, name: "Reporting & business intelligence", desc: "Microsoft Power BI Partner of the Year — modernizing legacy BI to Fabric, up to 8× faster." },
-  { icon: <Cloud24Regular />, name: "Cloud infrastructure & modernization", desc: "Azure architecture, migration, and FinOps — 30–40% lower run cost on average." },
+  { icon: <Bot24Regular />, name: "AI Solutions & Agents", desc: "Production GenAI agents and copilots on Azure OpenAI — automating high-value workflows." },
+  { icon: <ChartMultiple24Regular />, name: "Insights & Analytics", desc: "Microsoft Power BI Partner of the Year — modernizing legacy BI to Fabric, up to 8× faster." },
+  { icon: <Cloud24Regular />, name: "Cloud Modernization", desc: "Azure architecture, migration, and FinOps — 30–40% lower run cost on average." },
 ];
 
 const ServiceCardLab: FC = () => {
@@ -512,13 +513,7 @@ const prodSample = [
 const ProductCardLab: FC = () => {
   const g = useCardShared();
   const c = useProdCard();
-  const renderTags = (tags: string[], appearance: "outline" | "filled" = "outline") => (
-    <div className={c.tagRow}>
-      {tags.map((t) => (
-        <Badge key={t} appearance={appearance} color="brand" size="small">{t}</Badge>
-      ))}
-    </div>
-  );
+  const renderTags = () => null;
   return (
     <>
       <Variant label="A · Gradient initials + tags + subtle CTA (current Products section)" notes="src/components/Products.tsx">
@@ -529,10 +524,10 @@ const ProductCardLab: FC = () => {
               <div className={c.tagline}>{p.tagline}</div>
               <div className={c.name}>{p.name}</div>
               <div className={c.desc}>{p.desc}</div>
-              {renderTags(p.tags)}
-              <Button appearance="subtle" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
+              {renderTags()}
+              <TextButton iconAfter={<ArrowRight20Regular />} size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
                 Learn more
-              </Button>
+              </TextButton>
             </article>
           ))}
         </div>
@@ -549,10 +544,10 @@ const ProductCardLab: FC = () => {
               <div className={c.bBody}>
                 <div className={c.name}>{p.name}</div>
                 <div className={c.desc}>{p.desc}</div>
-                {renderTags(p.tags)}
-                <Button appearance="primary" size="small" style={{ alignSelf: "flex-start" }}>
+                {renderTags()}
+                <PrimaryButton size="small" style={{ alignSelf: "flex-start" }}>
                   View product
-                </Button>
+                </PrimaryButton>
               </div>
             </article>
           ))}
@@ -566,10 +561,10 @@ const ProductCardLab: FC = () => {
               <div className={c.tagline}>{p.tagline}</div>
               <div className={c.name} style={{ fontSize: 22 }}>{p.name}</div>
               <div className={c.desc}>{p.desc}</div>
-              {renderTags(p.tags, "filled")}
-              <Button appearance="subtle" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
+              {renderTags()}
+              <TextButton iconAfter={<ArrowRight20Regular />} size="small" style={{ alignSelf: "flex-start", paddingLeft: 0 }}>
                 Learn more
-              </Button>
+              </TextButton>
             </article>
           ))}
         </div>
@@ -583,14 +578,9 @@ const ProductCardLab: FC = () => {
               <div className={c.taglineLight}>{p.tagline}</div>
               <div className={c.nameLight}>{p.name}</div>
               <div className={c.descLight}>{p.desc}</div>
-              <div className={c.tagRow}>
-                {p.tags.map((t) => (
-                  <Badge key={t} appearance="outline" color="brand" size="small" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>{t}</Badge>
-                ))}
-              </div>
-              <Button appearance="primary" icon={<ArrowRight20Regular />} iconPosition="after" size="small" style={{ alignSelf: "flex-start" }}>
+              <PrimaryButton iconAfter={<ArrowRight20Regular />} size="small" style={{ alignSelf: "flex-start" }}>
                 Learn more
-              </Button>
+              </PrimaryButton>
             </article>
           ))}
         </div>
@@ -605,7 +595,7 @@ const ProductCardLab: FC = () => {
                 <div className={c.tagline}>{p.tagline}</div>
                 <div className={c.name}>{p.name}</div>
                 <div className={c.desc}>{p.desc}</div>
-                {renderTags(p.tags)}
+                {renderTags()}
               </div>
             </article>
           ))}
@@ -733,20 +723,20 @@ const useCaseCard = makeStyles({
   teaser: { fontSize: "13px", color: "var(--maq-text-muted)", lineHeight: 1.55, flex: 1, marginBottom: "16px" },
   teaserLight: { fontSize: "13px", color: "rgba(255,255,255,0.75)", lineHeight: 1.55, flex: 1, marginBottom: "16px" },
   more: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    color: "var(--maq-blue)",
-    fontWeight: 500,
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
   },
   moreLight: {
-    display: "inline-flex",
-    alignItems: "center",
-    gap: "4px",
+    display: "inline-block",
     fontSize: "13px",
-    color: "#fff",
-    fontWeight: 500,
+    fontWeight: 700,
+    lineHeight: 1.4,
+    color: "var(--maq-red)",
+    textDecoration: "none",
   },
   tagAlign: { alignSelf: "flex-start", marginBottom: "16px" },
 });
@@ -766,11 +756,10 @@ const CaseCardLab: FC = () => {
         <div className={g.grid3}>
           {caseSample.map((x) => (
             <article key={x.title} className={c.a}>
-              <Badge appearance="tint" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
               <div className={c.aMetric}>{x.metric}</div>
               <div className={c.title}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+              <span className={c.more}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -781,10 +770,9 @@ const CaseCardLab: FC = () => {
           {caseSample.map((x) => (
             <article key={x.title} className={c.b}>
               <span className={c.bMetric}>{x.metric}</span>
-              <Badge appearance="tint" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
               <div className={c.title} style={{ fontSize: 17, marginTop: 8 }}>{x.title}</div>
               <div className={c.teaser}>{x.teaser}</div>
-              <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+              <span className={c.more}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -803,7 +791,7 @@ const CaseCardLab: FC = () => {
               <div className={c.cBody}>
                 <div className={c.title}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+                <span className={c.more}>Read full case study</span>
               </div>
             </article>
           ))}
@@ -814,11 +802,10 @@ const CaseCardLab: FC = () => {
         <div className={g.grid3}>
           {caseSample.map((x) => (
             <article key={x.title} className={c.d}>
-              <Badge appearance="filled" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
               <div className={c.dMetric}>{x.metric}</div>
               <div className={c.titleLight}>{x.title}</div>
               <div className={c.teaserLight}>{x.teaser}</div>
-              <span className={c.moreLight}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+              <span className={c.moreLight}>Read full case study</span>
             </article>
           ))}
         </div>
@@ -833,10 +820,9 @@ const CaseCardLab: FC = () => {
                 <div className={c.eMetricL}>Result</div>
               </div>
               <div>
-                <Badge appearance="tint" color={x.color} size="medium" className={c.tagAlign}>{x.industry}</Badge>
                 <div className={c.title} style={{ fontSize: 17 }}>{x.title}</div>
                 <div className={c.teaser}>{x.teaser}</div>
-                <span className={c.more}>Read full story <ArrowRight20Regular fontSize={14} /></span>
+                <span className={c.more}>Read full case study</span>
               </div>
             </article>
           ))}
@@ -1118,7 +1104,7 @@ const useCompCard = makeStyles({
     fontSize: "56px",
     color: "var(--maq-red)",
     lineHeight: 0.5,
-    fontFamily: "Georgia, serif",
+    fontFamily: "inherit",
     fontWeight: 700,
     marginBottom: "8px",
   },
@@ -1175,11 +1161,11 @@ const compPillars = [
 const compAvanade = [
   { tag: "Microsoft Solutions", title: "Modern Workplace with Copilot", desc: "Roll out Microsoft 365 Copilot with adoption, change management and security baked in.", stat: "92%", statL: "Adoption" },
   { tag: "AI & Innovation", title: "Azure OpenAI agentic platform", desc: "Production-ready agent platform on Azure OpenAI with full governance and observability.", stat: "3.5×", statL: "Faster" },
-  { tag: "Data & Analytics", title: "Microsoft Fabric for the enterprise", desc: "End-to-end Fabric implementation — OneLake, real-time analytics, Power BI.", stat: "60%", statL: "Saved" },
+  { tag: "Data & AI Platforms", title: "Microsoft Fabric for the enterprise", desc: "End-to-end Fabric implementation — OneLake, real-time analytics, Power BI.", stat: "60%", statL: "Saved" },
 ];
 
 const compQuote = [
-  { quote: "MAQ Software delivered our Fabric migration ahead of schedule and 30% under budget. Their AI-DataLens product is now used by every analyst in the bank.", initials: "SJ", name: "Sarah Johnson", role: "VP Data & Analytics, Top-3 US Bank" },
+  { quote: "MAQ Software delivered our Fabric migration ahead of schedule and 30% under budget. Their AI-DataLens product is now used by every analyst in the bank.", initials: "SJ", name: "Sarah Johnson", role: "VP Data & AI Platforms, Top-3 US Bank" },
   { quote: "We replaced 14 disconnected reporting tools with one Power BI estate. Refresh times went from minutes to sub-second.", initials: "MP", name: "Michael Park", role: "CIO, Fortune 100 Insurer" },
 ];
 
@@ -1213,7 +1199,7 @@ const CompetitorCardLab: FC = () => {
             <article key={x.title} className={c.acnStory}>
               <div data-acn-img="" className={c.acnImg} />
               <div className={c.acnStoryBody}>
-                <div className={c.acnEyebrow}>{x.eyebrow}</div>
+                {/* <div className={c.acnEyebrow}>{x.eyebrow}</div> */}
                 <div className={c.acnStoryTitle}>{x.title}</div>
               </div>
             </article>
@@ -1265,11 +1251,10 @@ const CompetitorCardLab: FC = () => {
           {compAvanade.map((x) => (
             <article key={x.title} className={c.ava}>
               <div>
-                <div className={c.avaTag}>{x.tag}</div>
                 <div className={c.avaTitle}>{x.title}</div>
                 <div className={c.avaDesc}>{x.desc}</div>
                 <span style={{ fontSize: 13, fontWeight: 600, color: "var(--maq-blue)", display: "inline-flex", alignItems: "center", gap: 4 }}>
-                  Learn more <ArrowRight20Regular fontSize={14} />
+                  Learn more
                 </span>
               </div>
               <div className={c.avaStat}>
@@ -1377,18 +1362,14 @@ const HeaderLab: FC = () => {
     <>
       <Variant label="A · Centered eyebrow + title + sub (current default)">
         <div className={h.base}>
-          <span className={h.eyebrow}>Our Services</span>
+          {/* <span className={h.eyebrow}>Our Services</span> */}
           <h3 className={h.title}>Engineered to deliver outcomes</h3>
           <p className={h.sub}>From AI agents to enterprise data platforms — we ship measurable business value.</p>
         </div>
       </Variant>
 
-      <Variant label="B · Pill eyebrow (badge style)" notes="Softer, more modern">
+      <Variant label="B · Minimal heading" notes="Softer, more modern">
         <div className={h.base}>
-          <span className={h.pillBrow}>
-            <Sparkle24Regular style={{ width: 14, height: 14 }} />
-            Our Services
-          </span>
           <h3 className={h.title}>Engineered to deliver outcomes</h3>
           <p className={h.sub}>From AI agents to enterprise data platforms — we ship measurable business value.</p>
         </div>
@@ -1415,7 +1396,7 @@ const HeaderLab: FC = () => {
       <Variant label="E · Split row — title left, description right" notes="Long marketing copy">
         <div className={h.splitRow}>
           <div>
-            <span className={h.eyebrow}>Our Services</span>
+            {/* <span className={h.eyebrow}>Our Services</span> */}
             <h3 className={h.title} style={{ margin: 0 }}>
               Engineered to deliver outcomes
             </h3>
@@ -1529,8 +1510,8 @@ const HeroLab: FC = () => {
             <h3 className={h.h}>Govern Fabric like an enterprise.</h3>
             <p className={h.s}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
             <div className={h.btns}>
-              <Button appearance="primary" size="large">Book a demo</Button>
-              <Button appearance="outline" size="large">Read docs</Button>
+              <PrimaryButton size="large">Book a demo</PrimaryButton>
+              <SecondaryButton size="large">Read docs</SecondaryButton>
             </div>
           </div>
           <div className={h.aImg} />
@@ -1545,8 +1526,8 @@ const HeroLab: FC = () => {
             Automated controls, policy and observability — purpose-built for Fabric admins.
           </p>
           <div className={h.btns} style={{ justifyContent: "center" }}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large">Read docs</Button>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large">Read docs</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1557,8 +1538,8 @@ const HeroLab: FC = () => {
           <h3 className={h.h}>Govern Fabric like an enterprise.</h3>
           <p className={h.s}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
           <div className={h.btns}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large">Read docs</Button>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large">Read docs</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1569,10 +1550,10 @@ const HeroLab: FC = () => {
           <h3 className={h.hLight}>Govern Fabric like an enterprise.</h3>
           <p className={h.sLight}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
           <div className={h.btns}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
               Read docs
-            </Button>
+            </SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1583,8 +1564,8 @@ const HeroLab: FC = () => {
           <h3 className={h.h}>Govern Fabric like an enterprise.</h3>
           <p className={h.s}>Automated controls, policy and observability — purpose-built for Fabric admins.</p>
           <div className={h.btns}>
-            <Button appearance="primary" size="large">Book a demo</Button>
-            <Button appearance="outline" size="large">Read docs</Button>
+            <PrimaryButton size="large">Book a demo</PrimaryButton>
+            <SecondaryButton size="large">Read docs</SecondaryButton>
           </div>
           <div className={h.statsRow}>
             <div>
@@ -1687,8 +1668,8 @@ const CtaLab: FC = () => {
           <h3 className={c.h}>Ready to start your modernization?</h3>
           <p className={c.s}>Talk to an engineer — no sales pitch.</p>
           <div className={c.btns}>
-            <Button appearance="primary" size="large">Book a meeting</Button>
-            <Button appearance="outline" size="large">Email us</Button>
+            <PrimaryButton size="large">Book a meeting</PrimaryButton>
+            <SecondaryButton size="large">Email us</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1700,8 +1681,8 @@ const CtaLab: FC = () => {
             <p className={c.s} style={{ marginTop: 6 }}>Talk to an engineer — no sales pitch.</p>
           </div>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <Button appearance="primary" size="large">Book a meeting</Button>
-            <Button appearance="outline" size="large">Email us</Button>
+            <PrimaryButton size="large">Book a meeting</PrimaryButton>
+            <SecondaryButton size="large">Email us</SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1711,10 +1692,10 @@ const CtaLab: FC = () => {
           <h3 className={c.hL}>Ready to start your modernization?</h3>
           <p className={c.sL}>Talk to an engineer — no sales pitch.</p>
           <div className={c.btns}>
-            <Button appearance="primary" size="large">Book a meeting</Button>
-            <Button appearance="outline" size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
+            <PrimaryButton size="large">Book a meeting</PrimaryButton>
+            <SecondaryButton size="large" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.3)" }}>
               Email us
-            </Button>
+            </SecondaryButton>
           </div>
         </div>
       </Variant>
@@ -1724,9 +1705,9 @@ const CtaLab: FC = () => {
           <h3 className={c.hL}>Ready to start your modernization?</h3>
           <p className={c.sL}>Talk to an engineer — no sales pitch.</p>
           <div className={c.btns}>
-            <Button appearance="primary" size="large" style={{ backgroundColor: "#fff", color: "var(--maq-blue)" }}>
+            <PrimaryButton size="large" style={{ backgroundColor: "#fff", color: "var(--maq-blue)" }}>
               Book a meeting <ArrowRight20Regular />
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
       </Variant>
@@ -1739,7 +1720,7 @@ const CtaLab: FC = () => {
           </div>
           <div className={c.inputRow}>
             <input className={c.input} placeholder="you@company.com" />
-            <Button appearance="primary" size="large">Subscribe</Button>
+            <PrimaryButton size="large">Subscribe</PrimaryButton>
           </div>
         </div>
       </Variant>
@@ -1972,21 +1953,16 @@ const PriceLab: FC = () => {
                   <li key={f} className={p.li}><Checkmark20Filled className={p.check} />{f}</li>
                 ))}
               </ul>
-              <Button appearance="outline" size="large" style={{ width: "100%" }}>Choose {t.name}</Button>
+              <SecondaryButton size="large" style={{ width: "100%" }}>Choose {t.name}</SecondaryButton>
             </div>
           ))}
         </div>
       </Variant>
 
-      <Variant label="B · Featured middle tier with badge">
+      <Variant label="B · Featured middle tier">
         <div className={p.grid}>
           {tiers.map((t, i) => (
             <div key={t.name} className={i === 1 ? p.b : p.a}>
-              {i === 1 && (
-                <div className={p.bBadge}>
-                  <Badge appearance="filled" color="brand">Most popular</Badge>
-                </div>
-              )}
               <div className={p.tier}>{t.name}</div>
               <div className={p.price}>{t.price}</div>
               <div className={p.per}>{t.per}</div>
@@ -1995,13 +1971,15 @@ const PriceLab: FC = () => {
                   <li key={f} className={p.li}><Checkmark20Filled className={p.check} />{f}</li>
                 ))}
               </ul>
-              <Button
-                appearance={i === 1 ? "primary" : "outline"}
-                size="large"
-                style={{ width: "100%" }}
-              >
-                Choose {t.name}
-              </Button>
+              {i === 1 ? (
+                <PrimaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </PrimaryButton>
+              ) : (
+                <SecondaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </SecondaryButton>
+              )}
             </div>
           ))}
         </div>
@@ -2022,13 +2000,15 @@ const PriceLab: FC = () => {
                   </li>
                 ))}
               </ul>
-              <Button
-                appearance={i === 2 ? "primary" : "outline"}
-                size="large"
-                style={{ width: "100%" }}
-              >
-                Choose {t.name}
-              </Button>
+              {i === 2 ? (
+                <PrimaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </PrimaryButton>
+              ) : (
+                <SecondaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </SecondaryButton>
+              )}
             </div>
           ))}
         </div>
@@ -2046,9 +2026,15 @@ const PriceLab: FC = () => {
                   <li key={f} className={p.li}><Checkmark20Filled className={p.check} />{f}</li>
                 ))}
               </ul>
-              <Button appearance={i === 1 ? "primary" : "outline"} size="large" style={{ width: "100%" }}>
-                Choose {t.name}
-              </Button>
+              {i === 1 ? (
+                <PrimaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </PrimaryButton>
+              ) : (
+                <SecondaryButton size="large" style={{ width: "100%" }}>
+                  Choose {t.name}
+                </SecondaryButton>
+              )}
             </div>
           ))}
         </div>
@@ -2075,7 +2061,7 @@ const PriceLab: FC = () => {
               </div>
             </div>
           ))}
-          <Button appearance="primary" size="large">Compare all</Button>
+          <PrimaryButton size="large">Compare all</PrimaryButton>
         </div>
       </Variant>
     </>
@@ -2147,11 +2133,11 @@ export function ComponentLab() {
   return (
     <div className={s.page}>
       <header className={s.hero}>
-        <span className={s.kicker}>Internal · Design Lab</span>
+        {/* <span className={s.kicker}>Internal · Design Lab</span> */}
         <h1 className={s.pageTitle}>Component playground</h1>
         <p className={s.pageSub}>
           Every recurring building block on the site, with 5–6 design variants each. Pick a winner per
-          component and we'll wire it through the production pages.
+          component and we will wire it through the production pages.
         </p>
         <nav className={s.toc}>
           {groups.map((g) => (

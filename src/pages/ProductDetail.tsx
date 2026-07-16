@@ -1,9 +1,8 @@
 import { useParams, Link, Navigate } from "react-router-dom";
+import { useContactAction } from "../lib/contact";
 import {
   makeStyles,
   tokens,
-  Badge,
-  Button,
 } from "@fluentui/react-components";
 import {
   ArrowLeft20Regular,
@@ -11,6 +10,7 @@ import {
   CheckmarkCircle20Filled,
 } from "@fluentui/react-icons";
 import { getProduct, products } from "../data/products";
+import { PrimaryButton } from "../components/buttons";
 
 const useStyles = makeStyles({
   hero: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     padding: "48px 32px 56px",
   },
   heroInner: {
-    maxWidth: "1240px",
+    maxWidth: "var(--maq-container-wide)",
     margin: "0 auto",
     display: "grid",
     gridTemplateColumns: "1.3fr 1fr",
@@ -46,7 +46,7 @@ const useStyles = makeStyles({
     display: "block",
   },
   h1: {
-    fontSize: "44px",
+    fontSize: "40px",
     fontWeight: 700,
     color: "var(--maq-black)",
     margin: "0 0 16px",
@@ -54,12 +54,11 @@ const useStyles = makeStyles({
     lineHeight: 1.12,
   },
   sub: {
-    fontSize: "16px",
+    fontSize: "15px",
     color: "var(--maq-gray-700)",
     lineHeight: 1.65,
     marginBottom: "24px",
   },
-  badges: { display: "flex", gap: "6px", marginBottom: "24px", flexWrap: "wrap" },
   btns: { display: "flex", gap: "12px", flexWrap: "wrap" },
 
   visual: {
@@ -98,7 +97,7 @@ const useStyles = makeStyles({
   visualSub: { fontSize: "12px", color: "var(--maq-red)", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: 600 },
 
   impact: { padding: "40px 32px", backgroundColor: "#fff", borderBottom: "1px solid var(--maq-border)" },
-  impactInner: { maxWidth: "1240px", margin: "0 auto" },
+  impactInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   impactGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
@@ -113,6 +112,10 @@ const useStyles = makeStyles({
     display: "flex",
     flexDirection: "column",
     gap: "6px",
+    transition: "border-color 0.16s ease, box-shadow 0.16s ease",
+    ":hover": {
+      border: "1px solid var(--maq-card-hover-border)",
+    },
   },
   impactValue: {
     fontSize: "38px",
@@ -125,7 +128,7 @@ const useStyles = makeStyles({
 
   section: { padding: "64px 32px", backgroundColor: "#fff" },
   sectionAlt: { padding: "64px 32px", backgroundColor: "var(--maq-off-white)" },
-  inner: { maxWidth: "1240px", margin: "0 auto" },
+  inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   eyebrow: {
     fontSize: "12px",
     fontWeight: 700,
@@ -136,11 +139,12 @@ const useStyles = makeStyles({
     display: "block",
   },
   h2: {
-    fontSize: "30px",
+    fontSize: "36px",
+    lineHeight: 1.15,
     fontWeight: 700,
-    color: "var(--maq-black)",
+    color: "var(--maq-navy)",
     margin: "0 0 28px",
-    letterSpacing: "-0.01em",
+    letterSpacing: "-0.02em",
   },
   featGrid: {
     display: "grid",
@@ -217,8 +221,9 @@ const useStyles = makeStyles({
     color: "inherit",
     transition: "all 0.2s",
     ":hover": {
-      border: `1px solid var(--maq-red)`,
-      boxShadow: "var(--maq-shadow-sm)",
+      border: "1px solid var(--maq-card-hover-border)",
+      boxShadow: "var(--maq-shadow-lift)",
+      transform: "translateY(-2px)",
     },
   },
   relatedName: { fontSize: "15px", fontWeight: 700, color: "var(--maq-black)" },
@@ -242,6 +247,7 @@ export function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
   const product = slug ? getProduct(slug) : undefined;
   const s = useStyles();
+  const handleContactClick = useContactAction();
 
   if (!product) {
     return <Navigate to="/products" replace />;
@@ -260,33 +266,15 @@ export function ProductDetail() {
             <span className={s.tagline}>{product.tagline}</span>
             <h1 className={s.h1}>{product.name}</h1>
             <p className={s.sub}>{product.longDesc}</p>
-            <div className={s.badges}>
-              {product.tags.map((t) => (
-                <Badge key={t} appearance="tint" color="danger">
-                  {t}
-                </Badge>
-              ))}
-            </div>
             <div className={s.btns}>
-              <Button
-                appearance="primary"
+              <PrimaryButton
                 size="large"
-                icon={<Mail24Regular />}
-                as="a"
-                href={`mailto:customersuccess@maqsoftware.com?subject=${encodeURIComponent(
-                  product.name + " - request a walkthrough"
-                )}`}
+                onClick={() =>
+                  handleContactClick(product.name + " - request a walkthrough")
+                }
               >
-                Request a walkthrough
-              </Button>
-              <Button
-                appearance="outline"
-                size="large"
-                as="a"
-                href="mailto:customersuccess@maqsoftware.com?subject=Pricing%20inquiry"
-              >
-                Talk to sales
-              </Button>
+                Contact Us
+              </PrimaryButton>
             </div>
           </div>
           <div className={s.visual}>
@@ -321,7 +309,7 @@ export function ProductDetail() {
 
       <section className={s.section}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>What it does</span>
+          {/* <span className={s.eyebrow}>What it does</span> */}
           <h2 className={s.h2}>Key capabilities</h2>
           <div className={s.featGrid}>
             {product.features.map((f) => (
@@ -339,7 +327,7 @@ export function ProductDetail() {
 
       <section className={s.sectionAlt}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>Where teams use it</span>
+          {/* <span className={s.eyebrow}>Where teams use it</span> */}
           <h2 className={s.h2}>Common use cases</h2>
           <div className={s.useGrid}>
             {product.useCases.map((u) => (
@@ -354,7 +342,7 @@ export function ProductDetail() {
 
       <section className={s.section}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>Built on</span>
+          {/* <span className={s.eyebrow}>Built on</span> */}
           <h2 className={s.h2}>Microsoft-aligned platforms</h2>
           <div className={s.platformsRow}>
             {product.platforms.map((p) => (
@@ -368,7 +356,7 @@ export function ProductDetail() {
 
       <section className={s.related}>
         <div className={s.inner}>
-          <span className={s.eyebrow}>More from MAQ Software</span>
+          {/* <span className={s.eyebrow}>More from MAQ Software</span> */}
           <h2 className={s.h2}>Related products</h2>
           <div className={s.relatedGrid}>
             {related.map((r) => (
