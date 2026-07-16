@@ -5,7 +5,6 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { HeaderV2 } from "./components/HeaderV2";
 import { Footer } from "./components/Footer";
 import { FooterV2 } from "./components/FooterV2";
-import { CTA } from "./components/CTA";
 import { Home } from "./pages/Home";
 import { HomeV3 } from "./pages/HomeV3";
 import { IndustryRetail } from "./pages/IndustryRetail";
@@ -288,147 +287,67 @@ export function App() {
         <Route path="/insights/best-practice-guides" element={<InsightsBestPracticeGuides />} />
         <Route
           path="/insights/databricks-best-practices"
-          element={
-            <>
-              <InsightsDatabricksBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsDatabricksBestPractices />}
         />
         <Route
           path="/insights/azure-databricks-best-practices"
-          element={
-            <>
-              <InsightsAzureDatabricksBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsAzureDatabricksBestPractices />}
         />
         <Route
           path="/insights/github-copilot-best-practices"
-          element={
-            <>
-              <InsightsGitHubCopilotBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsGitHubCopilotBestPractices />}
         />
         <Route
           path="/insights/power-bi-copilot-best-practices"
-          element={
-            <>
-              <InsightsPowerBICopilotBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsPowerBICopilotBestPractices />}
         />
         <Route
           path="/insights/power-bi-best-practices"
-          element={
-            <>
-              <InsightsPowerBIBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsPowerBIBestPractices />}
         />
         <Route
           path="/insights/snowflake-and-power-bi-best-practices"
-          element={
-            <>
-              <InsightsSnowflakePowerBIBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsSnowflakePowerBIBestPractices />}
         />
         <Route
           path="/insights/knowledge-bot-best-practices"
-          element={
-            <>
-              <InsightsKnowledgeBotBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsKnowledgeBotBestPractices />}
         />
         <Route
           path="/insights/dax-best-practices"
-          element={
-            <>
-              <InsightsDAXBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsDAXBestPractices />}
         />
         <Route
           path="/insights/azure-dev-ops-best-practices-guide"
-          element={
-            <>
-              <InsightsAzureDevOpsBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsAzureDevOpsBestPractices />}
         />
         <Route
           path="/insights/azure-architecture-best-practices"
-          element={
-            <>
-              <InsightsAzureArchitectureBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsAzureArchitectureBestPractices />}
         />
         <Route
           path="/insights/azure-security-best-practices"
-          element={
-            <>
-              <InsightsAzureSecurityBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsAzureSecurityBestPractices />}
         />
         <Route
           path="/insights/data-validation-best-practices"
-          element={
-            <>
-              <InsightsDataValidationBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsDataValidationBestPractices />}
         />
         <Route
           path="/insights/dynamics-365-development-best-practices"
-          element={
-            <>
-              <InsightsDynamics365DevelopmentBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsDynamics365DevelopmentBestPractices />}
         />
         <Route
           path="/insights/dynamics-365-deployment-best-practices"
-          element={
-            <>
-              <InsightsDynamics365DeploymentBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsDynamics365DeploymentBestPractices />}
         />
         <Route
           path="/insights/power-apps-best-practices"
-          element={
-            <>
-              <InsightsPowerAppsBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsPowerAppsBestPractices />}
         />
         <Route
           path="/insights/dataverse-security-best-practices"
-          element={
-            <>
-              <InsightsDataverseSecurityBestPractices />
-              <CTA />
-            </>
-          }
+          element={<InsightsDataverseSecurityBestPractices />}
         />
         <Route
           path="/partnerships/snowflake"
