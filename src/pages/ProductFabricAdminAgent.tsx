@@ -370,7 +370,7 @@ const useStyles = makeStyles({
 // Data
 // ---------------------------------------------------------------------------
 const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.fabricadminagent-preview?tab=Overview&flightCodes=f7b20ceffeeb4e1fab33185d0cd74d08";
-const FABRIC_ADMIN_AGENT_VIDEO_EMBED_URL = "https://www.youtube.com/embed/fVWr37LNvqM?si=_jqyhBZJzrNUCmBG";
+const FABRIC_ADMIN_AGENT_VIDEO_EMBED_URL = "https://www.youtube.com/embed/fVWr37LNvqM?si=_jqyhBZJzrNUCmBG&enablejsapi=1";
 
 const impact = [
   { metric: "60%", label: "Fewer capacity incidents after enabling autonomous monitoring", source: "Enterprise Fabric tenant" },
