@@ -79,14 +79,14 @@ const BUILD: BuildArea[] = [
 interface ProductItem { icon: ReactNode; name: string; impact: string; desc: string; to: string; img?: string }
 const PRODUCTS: ProductItem[] = [
   {
-    icon: <TopSpeed24Regular />, name: "Fabric Admin Agent", impact: "Lower Fabric capacity cost",
-    desc: "Forecast capacity demand, prevent throttling under peak load, and reduce Fabric costs without expanding the platform team. Continuous monitoring, anomaly detection, and demand forecasting run in the background so platform teams can act before throttling hits users.", to: "/products/fabric-admin-agent",
-    img: "/images/Product%20cards/Fabric-Admin-Agent.png"
-  },
-  {
     icon: <ArrowSwap24Regular />, name: "MigrateFAST", impact: "Migrate in weeks, not quarters",
     desc: "Migrate from Tableau, Cognos, Qlik, MicroStrategy, SAP BusinessObjects, Crystal Reports, Alteryx, or Informatica to Microsoft Fabric with automated conversion, validation, and cutover support. Every stage is automated and validated — from environment assessment through DAX generation — so enterprise teams move faster with report fidelity preserved.", to: "/products/migratefast",
     img: "/images/Product%20cards/MigrateFAST.png"
+  },
+  {
+    icon: <TopSpeed24Regular />, name: "Fabric Admin Agent", impact: "Lower Fabric capacity cost",
+    desc: "Forecast capacity demand, prevent throttling under peak load, and reduce Fabric costs without expanding the platform team. Continuous monitoring, anomaly detection, and demand forecasting run in the background so platform teams can act before throttling hits users.", to: "/products/fabric-admin-agent",
+    img: "/images/Product%20cards/Fabric-Admin-Agent.png"
   },
   {
     icon: <Chat24Regular />, name: "AI-DataLens", impact: "Answers in plain language, instantly",
@@ -116,7 +116,7 @@ const CASES = caseStudyItems.slice(0, 3);
 interface ResourceItem { title: string; desc: string; to: string; img: string }
 const RESOURCES: ResourceItem[] = [
   { title: "Power BI Custom Visuals", desc: "Custom Power BI visuals built and maintained by the team.", to: "/insights/power-bi-custom-visual-guide", img: "/images/power-bi-visuals.png" },
-  { title: "Best Practice Guides", desc: "Writing from MAQ software engineers on patterns, pitfalls, and platform decisions.", to: "/insights/best-practice-guides", img: "/images/best-practice-guides.png" },
+  { title: "Best Practice Guides", desc: "Writing from MAQ Software engineers on patterns, pitfalls, and platform decisions.", to: "/insights/best-practice-guides", img: "/images/best-practice-guides.png" },
   { title: "Webinars", desc: "Technical sessions on data platforms, AI, and the work itself.", to: "/events", img: "/images/webinar.png" },
 ];
 
