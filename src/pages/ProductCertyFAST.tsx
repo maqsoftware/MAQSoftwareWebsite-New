@@ -6,7 +6,7 @@ import { useProductPageStyles } from "./productPageStyles";
 import { useContactAction } from "../lib/contact";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
-const CERTYFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/KIiI16IKHIY?si=ohsb-fK3J1cylEi4";
+const CERTYFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/KIiI16IKHIY?si=ohsb-fK3J1cylEi4&enablejsapi=1";
 
 const benefits = [
   { title: "Automate the review process", desc: "Save time and effort by easily identifying errors, formatting DAX measures, and creating knowledge base documents." },

@@ -6,7 +6,7 @@ import { PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
-const AI_DATALENS_VIDEO_EMBED_URL = "https://www.youtube.com/embed/3NCRlbKKuC8?si=-HXXCu3lYAnlCNbG";
+const AI_DATALENS_VIDEO_EMBED_URL = "https://www.youtube.com/embed/3NCRlbKKuC8?si=-HXXCu3lYAnlCNbG&enablejsapi=1";
 
 const benefits = [
   { title: "Informed decisions", desc: "Move beyond guesswork — leverage data-backed insights to make informed decisions that reduce risk and accelerate growth." },

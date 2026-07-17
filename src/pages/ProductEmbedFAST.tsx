@@ -7,7 +7,7 @@ import { useContactAction } from "../lib/contact";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
 const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.embedfastpowerbi";
-const EMBEDFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/iwhMYf58SqE?si=aN-dOljFYtGTJBke";
+const EMBEDFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/iwhMYf58SqE?si=aN-dOljFYtGTJBke&enablejsapi=1";
 
 const benefits = [
   { icon: <PlugConnected24Regular />, title: "Seamless integration", desc: "Embed Power BI into any application via API without complex setup or development overhead." },
