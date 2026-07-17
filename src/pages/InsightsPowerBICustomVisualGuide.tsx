@@ -1,7 +1,7 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { PrimaryButton, SecondaryButton, TextButton } from "../components/buttons";
+import { SecondaryButton, TextButton } from "../components/buttons";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { visualGuideFilters, visualGuideItems, visualGuideSlug } from "../data/insights";
 
@@ -69,19 +69,6 @@ const useStyles = makeStyles({
     color: "var(--maq-red)",
     textDecoration: "none",
   },
-  support: {
-    marginTop: "22px",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "12px",
-    background: "#fff",
-    padding: "18px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    gap: "14px",
-    "@media (max-width: 760px)": { flexDirection: "column", alignItems: "flex-start" },
-  },
-  supportText: { fontSize: "14px", color: "var(--maq-gray-600)", margin: 0 },
   paginationControls: {
     marginTop: "20px",
     display: "flex",
@@ -172,12 +159,6 @@ export function InsightsPowerBICustomVisualGuide() {
               )}
             </div>
           )}
-          <div className={s.support}>
-            <p className={s.supportText}>If you have questions about our custom visuals, please visit our Power BI page on Zendesk.</p>
-            <PrimaryButton href="https://maqsoftware.zendesk.com/hc/en-us/community/topics" target="_blank" rel="noopener noreferrer">
-              Go to Zendesk
-            </PrimaryButton>
-          </div>
         </div>
       </section>
     </>
