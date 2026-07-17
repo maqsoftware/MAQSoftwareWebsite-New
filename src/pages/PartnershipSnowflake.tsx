@@ -192,10 +192,6 @@ const blogs = [
     title: "Enabling sales insights for global operations with Power BI and Snowflake",
     href: "https://blog.maqsoftware.com/2025/06/enabling-sales-insights-for-global.html",
   },
-  {
-    title: "Optimizing data refresh by integrating Snowflake iceberg tables with Microsoft Fabric",
-    href: "https://blog.maqsoftware.com/2025/08/optimizing-data-refresh-by-integrating.html",
-  },
 ];
 
 // ---------------------------------------------------------------------------
