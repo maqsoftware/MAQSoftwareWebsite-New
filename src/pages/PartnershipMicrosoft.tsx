@@ -235,10 +235,6 @@ const blogs = [
     title: "Improving event experience for thousands using AI Agents",
     href: "https://blog.maqsoftware.com/2024/08/streamlining-event-information-access.html",
   },
-  {
-    title: "Transforming customer support with AIOps-driven Power BI Embedding",
-    href: "https://blog.maqsoftware.com/2023/02/transforming-customer-support-with.html",
-  },
 ];
 
 // ---------------------------------------------------------------------------
