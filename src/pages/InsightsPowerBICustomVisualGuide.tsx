@@ -1,7 +1,8 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { ArrowRight16Regular, LightbulbFilament24Regular } from "@fluentui/react-icons";
 import { useMemo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { SecondaryButton, TextButton } from "../components/buttons";
+import { PrimaryButton, TextButton } from "../components/buttons";
 import { InsightsFilterBar } from "../components/insights/InsightsFilterBar";
 import { visualGuideFilters, visualGuideItems, visualGuideSlug } from "../data/insights";
 
@@ -11,6 +12,65 @@ const useStyles = makeStyles({
   section: { padding: "56px 32px", backgroundColor: "var(--maq-off-white)" },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 40px", letterSpacing: "-0.02em" },
+  filterRow: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: "12px",
+    flexWrap: "wrap",
+  },
+  chooserCallout: {
+    marginTop: "22px",
+    border: "1px solid var(--maq-border)",
+    borderRadius: "12px",
+    background: "linear-gradient(90deg, #fff 0%, var(--maq-red-pale) 100%)",
+    padding: "18px",
+    position: "relative",
+    display: "grid",
+    gridTemplateColumns: "1fr auto",
+    gap: "16px",
+    alignItems: "center",
+    "@media (max-width: 860px)": {
+      gridTemplateColumns: "1fr",
+    },
+  },
+  chooserMain: {
+    display: "flex",
+    alignItems: "center",
+    gap: "14px",
+    minWidth: 0,
+  },
+  chooserIconWrap: {
+    width: "56px",
+    height: "56px",
+    borderRadius: "50%",
+    backgroundColor: "var(--maq-red-pale)",
+    color: "var(--maq-red)",
+    display: "grid",
+    placeItems: "center",
+    flexShrink: 0,
+  },
+  chooserTextWrap: {
+    minWidth: 0,
+  },
+  chooserTitle: {
+    margin: "0 0 6px",
+    fontSize: "18px",
+    fontWeight: 700,
+    color: "var(--maq-black)",
+  },
+  chooserText: {
+    margin: 0,
+    fontSize: "16px",
+    lineHeight: 1.55,
+    color: "var(--maq-gray-700)",
+  },
+  chooserAction: {
+    justifySelf: "end",
+    "@media (max-width: 860px)": {
+      justifySelf: "start",
+    },
+  },
   grid: {
     marginTop: "44px",
     display: "grid",
@@ -120,11 +180,24 @@ export function InsightsPowerBICustomVisualGuide() {
       <section className={s.section} id="insights-content">
         <div className={s.inner}>
           <h2 className={s.title}>Power BI custom visuals</h2>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "12px" }}>
+          <div className={s.filterRow}>
             <InsightsFilterBar items={visualGuideFilters} active={activeFilter} onChange={setActiveFilter} />
-            <SecondaryButton size="small" href="/insights/visual-chooser">
-              Open visual chooser guide
-            </SecondaryButton>
+          </div>
+          <div className={s.chooserCallout}>
+            <div className={s.chooserMain}>
+              <div className={s.chooserIconWrap}>
+                <LightbulbFilament24Regular />
+              </div>
+              <div className={s.chooserTextWrap}>
+                <h3 className={s.chooserTitle}>New to Power BI visuals?</h3>
+                <p className={s.chooserText}>Find the perfect visual in seconds with our Visual Chooser Guide.</p>
+              </div>
+            </div>
+            <div className={s.chooserAction}>
+              <PrimaryButton href="/insights/visual-chooser" iconAfter={<ArrowRight16Regular />}>
+                Open visual chooser
+              </PrimaryButton>
+            </div>
           </div>
           <div className={s.grid}>
             {visibleItems.map((item) => (

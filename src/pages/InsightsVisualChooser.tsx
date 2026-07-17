@@ -2,10 +2,7 @@ import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowLeft16Regular } from "@fluentui/react-icons";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { CTA } from "../components/CTA";
 import { PrimaryButton, SecondaryButton } from "../components/buttons";
-import { InsightsHero } from "../components/insights/InsightsHero";
-import { InsightsResourceNav } from "../components/insights/InsightsResourceNav";
 import {
   visualGuideFilters,
   visualGuideItems,
@@ -182,12 +179,6 @@ export function InsightsVisualChooser() {
 
   return (
     <>
-      <InsightsHero
-        title="Visual chooser guide"
-        subhead="Pick the right Power BI custom visual for your story. Browse by intent — comparison, distribution, flow, ranking, and more — and jump straight to a detail page or get the visual on Microsoft AppSource."
-      />
-      <InsightsResourceNav active="power-bi-custom-visual-guide" />
-
       <section className={s.section} id="visual-chooser-content">
         <div className={s.inner}>
           <Link to="/insights/power-bi-custom-visual-guide" className={s.back}>
@@ -257,7 +248,6 @@ export function InsightsVisualChooser() {
           ))}
         </div>
       </section>
-      <CTA />
     </>
   );
 }
