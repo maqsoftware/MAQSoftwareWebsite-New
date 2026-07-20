@@ -194,8 +194,8 @@ a {
 }
 
 /* Mobile header overrides (hooks for Header.tsx) */
-/* Include 768px so common tablet portrait widths get the mobile header/hamburger */
-@media (max-width: 768px) {
+/* Include 940px so tablet/small-laptop widths get the mobile header/hamburger */
+@media (max-width: 940px) {
   .site-header { padding: 0 12px; }
   .site-header .site-nav-links { display: none !important; }
   .site-header .nav-toggle { display: inline-flex !important; }
