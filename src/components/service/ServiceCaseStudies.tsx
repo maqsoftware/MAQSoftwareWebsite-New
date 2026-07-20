@@ -99,7 +99,7 @@ const defaultStudies: Study[] = [
 ];
 
 export function ServiceCaseStudies({
-  title = "How clients are putting agentic AI to work",
+  title = "Agentic AI in production",
   studies = defaultStudies,
   footerLabel,
   footerHref,

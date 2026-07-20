@@ -113,12 +113,12 @@ const cols: FooterCol[] = [
   {
     title: "Services",
     items: [
-      { label: "Data & AI Platforms", to: "/services/data-and-analytics" },
-      { label: "AI Solutions & Agents", to: "/services/agentic-ai" },
-      { label: "Insights & Analytics", to: "/services/reporting-bi" },
-      { label: "Business Applications & Automation", to: "/services/business-apps" },
-      { label: "Cloud Modernization", to: "/services/cloud" },
-      { label: "Security & Governance", to: "/services/security-compliance" },
+      { label: "Data & AI platforms", to: "/services/data-and-analytics" },
+      { label: "AI solutions & agents", to: "/services/agentic-ai" },
+      { label: "Insights & analytics", to: "/services/reporting-bi" },
+      { label: "Business applications & automation", to: "/services/business-apps" },
+      { label: "Cloud modernization", to: "/services/cloud" },
+      { label: "Security & governance", to: "/services/security-compliance" },
     ],
   },
   {
@@ -154,8 +154,8 @@ const cols: FooterCol[] = [
   {
     title: "Support",
     items: [
-      { label: "Terms of Service", to: "/terms-of-service" },
-      { label: "Privacy Statement", to: "/privacystatement" },
+      { label: "Terms of service", to: "/terms-of-service" },
+      { label: "Privacy statement", to: "/privacystatement" },
     ],
   },
 ];
@@ -208,7 +208,7 @@ export function FooterV2() {
                 className={`maq-equal-cta ${s.contactCta}`}
                 onClick={() => handleContactClick()}
               >
-                Contact Us
+                Contact us
               </PrimaryButton>
             </div>
             {linkColumns.map((groups, ci) => (

@@ -9,28 +9,28 @@ import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlac
 const benefits = [
   {
     metric: "~80%",
-    title: "Migration Accuracy",
-    desc: "Automates report conversion, DAX generation, and inventory, cutting what takes months to weeks and reducing manual fixes.",
+    title: "Migration accuracy",
+    desc: "Automates report conversion, DAX generation, and inventory, cutting months of work to weeks with fewer manual fixes.",
   },
   {
     metric: "~40%",
-    title: "Cost Savings",
+    title: "Cost savings",
     desc: "Reduces manual effort and resource overhead across the full migration lifecycle.",
   },
   {
     metric: "500,000+ reports migrated",
-    title: "Proven at Scale",
-    desc: "AI-powered automation handles large, complex BI estates accurately at any volume, across any enterprise.",
+    title: "Proven at scale",
+    desc: "Automation handles large, complex BI estates accurately, at any volume and across any enterprise.",
   },
 ];
 
 const steps = [
-  { n: 1, title: "Inventory analysis", desc: "Extract metadata, analyze reports, and assess data compatibility for a structured migration plan." },
-  { n: 2, title: "Estimation and planning", desc: "Estimate costs, finalize architecture, identify risks, and define roles." },
-  { n: 3, title: "Semantic model and report creation", desc: "Build a Power BI semantic model, optimize data pipelines, convert calculations to DAX, and recreate report behavior to match the original experience." },
-  { n: 4, title: "Review", desc: "Optimize performance, ensure uniformity, verify data accuracy, and certify reports." },
-  { n: 5, title: "Governance", desc: "Track data lineage, maintain best practices, monitor performance, and set alerts." },
-  { n: 6, title: "Center of Excellence (CoE)", desc: "Ongoing support, user training, troubleshooting, and KPI tracking post-migration." },
+  { n: 1, title: "Inventory analysis", desc: "Extract metadata, analyze reports, and check data compatibility to build a structured migration plan." },
+  { n: 2, title: "Estimation and planning", desc: "Estimate cost, finalize architecture, flag risks, and define roles." },
+  { n: 3, title: "Semantic model and report creation", desc: "Build a Power BI semantic model, tune data pipelines, convert calculations to DAX, and recreate report behavior to match the original." },
+  { n: 4, title: "Review", desc: "Tune performance, standardize output, verify data accuracy, and certify reports." },
+  { n: 5, title: "Governance", desc: "Track data lineage, hold to standards, monitor performance, and set alerts." },
+  { n: 6, title: "Center of Excellence (CoE)", desc: "Support users after go-live with training, troubleshooting, and KPI tracking." },
 ];
 
 const MIGRATEFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/NKd92QYRrG4?si=JoLs_S7wMKCaRZFz&enablejsapi=1";
@@ -50,10 +50,10 @@ export function ProductMigrateFAST() {
             {/* <span className={s.eyebrow}>AI-powered Fabric migration accelerator</span> */}
             <h1 className={s.h1}>MigrateFAST</h1>
             <p className={s.heroSub}>
-              MigrateFAST automates the end-to-end migration process—from legacy environment assessment and dependency analysis to report conversion, DAX generation, and validation. Organizations can migrate from Tableau, Cognos, SAP BusinessObjects, SAP Crystal Reports, MicroStrategy, Qlik, Alteryx, and Informatica with greater speed, accuracy, and confidence—reducing migration costs and accelerating time to value on Microsoft Fabric.
+              Migrate from Tableau, Cognos, SAP BusinessObjects, Crystal Reports, MicroStrategy, Qlik, Alteryx, and Informatica to Microsoft Fabric with automated environment assessment, dependency analysis, report conversion, DAX generation, and validation. MigrateFAST runs the process end to end, so you cut migration cost and reach value faster.
             </p>
             <div className={s.btns}>
-              <PrimaryButton size="large" onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact Us</PrimaryButton>
+              <PrimaryButton size="large" onClick={() => handleContactClick("Contact Us - MigrateFAST")}>Contact us</PrimaryButton>
             </div>
           </div>
           <div className={s.heroImageWrap}>
@@ -94,7 +94,7 @@ export function ProductMigrateFAST() {
         <div className={s.inner}>
           <div className={s.headLeft}>
             {/* <span className={s.secEyebrow}>How it works</span> */}
-            <h2 className={s.titleLg}>Our 6-step migration process</h2>
+            <h2 className={s.titleLg}>The migration process, in 6 steps</h2>
           </div>
           <div className={s.stepGrid6}>
             {steps.map((st) => (
@@ -108,7 +108,7 @@ export function ProductMigrateFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><ProductCaseStudies heading="Migration success stories" studies={[
+      <section className={s.sectionAlt}><ProductCaseStudies heading="Migrations in production" studies={[
         { tag: "Tableau → Power BI", title: "Accelerate your Tableau to Power BI (Fabric) migration with MigrateFAST", teaser: "See how a highly automated 6-step approach reduces manual effort and accelerates Tableau to Power BI migration at enterprise scale.", href: "https://blog.maqsoftware.com/2025/03/accelerate-your-tableau-to-power-bi.html" },
         { tag: "SAP BOBJ → Power BI", title: "Improving sales insights with a migration from SAP BOBJ to Power BI", teaser: "Learn how migrating 120+ reports and 100M+ rows improved performance, mobile access, and decision-making for global sales teams.", href: "https://blog.maqsoftware.com/2025/06/improving-sales-insights-with-migration.html" },
         { tag: "MicroStrategy → Power BI", title: "Enhancing retail sales reporting by migrating from MicroStrategy to Power BI", teaser: "Explore how 150+ legacy reports were consolidated into streamlined Power BI reporting with better usability and lower licensing cost.", href: "https://blog.maqsoftware.com/2025/06/improving-retail-sales-reporting-by.html" },
@@ -119,7 +119,7 @@ export function ProductMigrateFAST() {
         <div className={s.inner}>
           <div className={s.headLeft}>
             {/* <span className={s.secEyebrow}>Insights</span> */}
-            <h2 className={s.titleLg}>Resources & Marketplace</h2>
+            <h2 className={s.titleLg}>Resources & marketplace</h2>
           </div>
           <div
             className={s.mktGrid}

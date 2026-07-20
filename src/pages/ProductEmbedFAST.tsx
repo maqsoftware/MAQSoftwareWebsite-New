@@ -10,12 +10,12 @@ const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.e
 const EMBEDFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/iwhMYf58SqE?si=aN-dOljFYtGTJBke&enablejsapi=1";
 
 const benefits = [
-  { icon: <PlugConnected24Regular />, title: "Seamless integration", desc: "Embed Power BI into any application via API without complex setup or development overhead." },
-  { icon: <Money24Regular />, title: "Cut licensing costs", desc: "No individual Power BI user licenses needed, only capacity licenses (F SKUs), saving costs at any scale." },
-  { icon: <CloudArrowUp24Regular />, title: "Scalable and secure", desc: "Onboard unlimited tenants and workspaces with privacy, security, and scalable growth built in." },
-  { icon: <Color24Regular />, title: "Fully customizable", desc: "Adapt EmbedFAST to your workflows and configure features to match your exact business requirements." },
-  { icon: <ShieldKeyhole24Regular />, title: "Simplified access control", desc: "Manage user permissions and secure data access with built-in role-based controls without extra configuration." },
-  { icon: <ArrowSync24Regular />, title: "Always up to date", desc: "Automatic updates ensure you are always on the latest version with no manual upgrades or maintenance required." },
+  { icon: <PlugConnected24Regular />, title: "Simple integration", desc: "Add Power BI to any application through an API, without complex setup or extra development." },
+  { icon: <Money24Regular />, title: "Cut licensing costs", desc: "Skip per-user Power BI licenses and pay only capacity licenses (F SKUs), keeping cost flat at any scale." },
+  { icon: <CloudArrowUp24Regular />, title: "Secure at any scale", desc: "Onboard unlimited tenants and workspaces with privacy and security built in." },
+  { icon: <Color24Regular />, title: "Fully customizable", desc: "Adapt EmbedFAST to your workflows and configure features to match your requirements." },
+  { icon: <ShieldKeyhole24Regular />, title: "Simplified access control", desc: "Manage permissions and secure data access with built-in role-based controls, no extra configuration." },
+  { icon: <ArrowSync24Regular />, title: "Always up to date", desc: "Stay on the latest version automatically, with no manual upgrades or maintenance." },
 ];
 
 const plans = [
@@ -50,10 +50,10 @@ export function ProductEmbedFAST() {
             {/* <span className={s.eyebrow}>Automated Power BI embedding accelerator</span> */}
             <h1 className={s.h1}>EmbedFAST</h1>
             <p className={s.heroSub}>
-              Delivering fast, secure, and scalable analytics inside enterprise applications often comes with complex integrations, licensing overhead, and heavy development effort. EmbedFAST simplifies Power BI embedding with built-in role-based access, unlimited tenant and workspace onboarding, and customizable features so your team delivers insights at scale with minimal development effort.
+              Embed Power BI in your applications without the usual integration work, per-user licensing, and heavy development. EmbedFAST adds role-based access, unlimited tenant and workspace onboarding, and configurable features, so your team ships analytics with minimal development effort.
             </p>
             <div className={s.btns}>
-              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact Us</PrimaryButton>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - EmbedFAST")}>Contact us</PrimaryButton>
               <Button variant="tertiary" size="large" className="maq-equal-cta" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
@@ -94,7 +94,7 @@ export function ProductEmbedFAST() {
         </div>
       </section>
 
-      <section className={s.sectionAlt}><ProductCaseStudies heading="Embedding success stories" studies={[
+      <section className={s.sectionAlt}><ProductCaseStudies heading="Embedding in production" studies={[
         { tag: "Power BI Embedded", title: "Delivering embedded Power BI reporting with EmbedFAST", teaser: "An ISV embeds Power BI into its SaaS product using the EmbedFAST accelerator — shipping multi-tenant analytics months faster.", href: "https://blog.maqsoftware.com/2025/07/delivering-embedded-power-bi-reporting.html" },
         { tag: "Self-service BI", title: "Empowering self-service using Custom Copilot agent with Power BI Embedded", teaser: "A custom Copilot agent over Power BI Embedded letting users ask data questions in plain English — reducing report request backlog.", href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html" },
         { tag: "Integration", title: "Simplifying Power BI integration for enterprise applications", teaser: "Learn how EmbedFAST streamlines integration with secure embedding, governance controls, and faster implementation timelines.", href: "https://blog.maqsoftware.com/2024/10/simplifying-power-bi-integration-for.html" },

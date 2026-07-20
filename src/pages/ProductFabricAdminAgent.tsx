@@ -373,7 +373,7 @@ const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.f
 const FABRIC_ADMIN_AGENT_VIDEO_EMBED_URL = "https://www.youtube.com/embed/fVWr37LNvqM?si=_jqyhBZJzrNUCmBG&enablejsapi=1";
 
 const impact = [
-  { metric: "60%", label: "Fewer capacity incidents after enabling autonomous monitoring", source: "Enterprise Fabric tenant" },
+  { metric: "60%", label: "Fewer capacity incidents after switching on autonomous monitoring", source: "Enterprise Fabric tenant" },
   { metric: "24/7", label: "Autonomous coverage across capacities, workspaces, and items", source: "Always-on agent" },
   { metric: "5 min", label: "Mean time to detect drift in permissions and SLAs", source: "MTTD benchmark" },
   { metric: "30+", label: "Fabric tenants monitored in production", source: "Deployment footprint" },
@@ -384,32 +384,32 @@ const benefits = [
   {
     icon: <Pulse24Regular />,
     title: "Always-on monitoring",
-    desc: "Continuously monitors utilization, refresh patterns, and workspace activity across all tenant capacities.",
+    desc: "Monitors utilization, refresh patterns, and workspace activity across every tenant capacity, continuously.",
   },
   {
     icon: <Warning24Regular />,
     title: "Anomaly and spike detection",
-    desc: "Automatically detects CU spikes, refresh storms, and anomalous workloads with workspace-level impact analysis.",
+    desc: "Detects CU spikes, refresh storms, and unusual workloads, with workspace-level impact analysis.",
   },
   {
     icon: <Wrench24Regular />,
-    title: "Actionable insight cards",
-    desc: "Every detection surfaces a specific recommended action, not just an alert. Throttle, shift, reassign, archive, or scale with one click.",
+    title: "Insight cards with a next action",
+    desc: "Every detection comes with a specific recommended action, not just an alert: throttle, shift, reassign, archive, or scale in one click.",
   },
   {
     icon: <Eye24Regular />,
     title: "SKU right-sizing",
-    desc: "Identifies over and under-provisioned capacities and recommends optimal SKU adjustments.",
+    desc: "Flags over- and under-provisioned capacities and recommends the right SKU.",
   },
   {
     icon: <Pulse24Regular />,
     title: "Idle capacity detection",
-    desc: "Surfaces underutilized capacities and recommends scheduling optimizations to recover spend.",
+    desc: "Surfaces idle capacities and recommends scheduling changes to recover spend.",
   },
   {
     icon: <Warning24Regular />,
     title: "Full audit trail",
-    desc: "All recommendations and actions are fully logged, governed, and traceable with no shadow changes.",
+    desc: "Logs and governs every recommendation and action, fully traceable with no shadow changes.",
   },
 ];
 
@@ -486,10 +486,10 @@ export function ProductFabricAdminAgent() {
           <div>
             {/* <span className={s.eyebrow}>Fabric Workload</span> */}
             <h1 className={s.h1}>
-              AI-powered capacity management for Microsoft Fabric
+              Automated capacity management for Microsoft Fabric
             </h1>
             <p className={s.heroSub}>
-            Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.
+            Manage Microsoft Fabric capacity before problems reach users, without adding to your platform team. Fabric Admin Agent detects anomalies, predicts demand, and recommends actions that prevent throttling, hold performance, and lower cost. Platform teams run it self-service to get more from Fabric with less operational overhead.
             </p>
             <div className={s.btns}>
               <PrimaryButton
@@ -498,7 +498,7 @@ export function ProductFabricAdminAgent() {
                   handleContactClick("Fabric Admin Agent - Walkthrough")
                 }
               >
-                Contact Us
+                Contact us
               </PrimaryButton>
               <Button variant="tertiary" href={APPSOURCE} target="_blank" rel="noopener noreferrer" size="large" className="maq-equal-cta">Marketplace</Button>
             </div>
@@ -549,7 +549,7 @@ export function ProductFabricAdminAgent() {
         <div className={s.inner}>
           <div className={s.headLeft}>
             {/* <span className={s.secEyebrow}>Proven outcomes</span> */}
-            <h2 className={s.titleLg}>Real impact for Microsoft Fabric platform owners</h2>
+            <h2 className={s.titleLg}>Impact for Microsoft Fabric platform owners</h2>
             {/* <p className={s.sub}>
               Numbers from MAQ Software Fabric Admin Agent deployments across
               enterprise tenants.

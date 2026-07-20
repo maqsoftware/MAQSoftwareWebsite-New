@@ -96,7 +96,7 @@ export function ServiceCaseStudiesData({
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Related case studies</span> */}
-          <h2 className={s.title}>How clients are putting data &amp; analytics to work</h2>
+          <h2 className={s.title}>Data and analytics in production</h2>
         </div>
         <div className={s.grid}>
           {studies.map((c) => (

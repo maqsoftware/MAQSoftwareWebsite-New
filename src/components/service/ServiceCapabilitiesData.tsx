@@ -154,7 +154,7 @@ const capabilities: Capability[] = [
     tagline: "Unified analytics for enterprise AI",
     icon: <Layer24Regular />,
     description:
-      "Build unified analytics platforms using Microsoft Fabric to integrate data engineering, warehousing, real-time analytics, and business intelligence in a single AI-ready environment.",
+      "Build a unified analytics platform on Microsoft Fabric that brings data engineering, warehousing, real-time analytics, and business intelligence into one AI-ready environment.",
     tags: ["Microsoft Fabric", "Analytics", "Enterprise AI"],
   },
   {
@@ -162,7 +162,7 @@ const capabilities: Capability[] = [
     tagline: "Scalable data engineering and AI",
     icon: <Database24Regular />,
     description:
-      "Develop scalable data engineering and AI solutions using Databricks for advanced analytics, machine learning, collaborative notebooks, and enterprise data processing.",
+      "Engineer data pipelines and AI on Databricks for analytics, machine learning, collaborative notebooks, and large-scale data processing.",
     tags: ["Databricks", "Data Engineering", "AI"],
   },
   {
@@ -170,7 +170,7 @@ const capabilities: Capability[] = [
     tagline: "Cloud-native data sharing and analytics",
     icon: <Cloud24Regular />,
     description:
-      "Modernize enterprise data ecosystems with Snowflake, enabling secure data sharing, scalable analytics, AI workloads, and cross-cloud collaboration.",
+      "Modernize enterprise data on Snowflake with secure data sharing, analytics, AI workloads, and cross-cloud collaboration.",
     tags: ["Snowflake", "Data Cloud", "Cross-cloud"],
   },
   {
@@ -178,7 +178,7 @@ const capabilities: Capability[] = [
     tagline: "Automated enterprise data integration",
     icon: <ArrowSwap24Regular />,
     description:
-      "Design and automate reliable data integration pipelines that ingest, transform, and orchestrate enterprise data across hybrid and cloud environments.",
+      "Automate data integration pipelines that ingest, transform, and orchestrate enterprise data across hybrid and cloud environments.",
     tags: ["Azure Data Factory", "Pipelines", "Integration"],
   },
   {
@@ -186,7 +186,7 @@ const capabilities: Capability[] = [
     tagline: "Modern data architectures for AI",
     icon: <DataPie24Regular />,
     description:
-      "Modernize legacy data platforms by implementing scalable lakehouse and warehouse architectures optimized for analytics, governance, and AI.",
+      "Replace legacy data platforms with lakehouse and warehouse architectures built for analytics, governance, and AI.",
     tags: ["Lakehouse", "Data Warehouse", "Modernization"],
   },
   {
@@ -194,7 +194,7 @@ const capabilities: Capability[] = [
     tagline: "Trusted enterprise data foundation",
     icon: <ShieldCheckmark24Regular />,
     description:
-      "Establish trusted enterprise data by centralizing, governing, and maintaining consistent master records across business systems.",
+      "Centralize and govern master records across business systems to keep enterprise data consistent and trusted.",
     tags: ["MDM", "Governance", "Master Data"],
   },
 ];
@@ -209,7 +209,7 @@ export function ServiceCapabilitiesData() {
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Our expertise</span> */}
-          <h2 className={s.title}>Our data &amp; AI platform capabilities</h2>
+          <h2 className={s.title}>What you can build on a modern data platform</h2>
           {/* <p className={s.sub}>
             Capabilities that turn data into reliable, scalable analytics and real-time decisioning.
           </p> */}

@@ -12,16 +12,16 @@ const MARKETPLACE_OVERVIEW = "https://marketplace.microsoft.com/en-us/product/ma
 const LOADFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/yAQm1giPHt0?si=zEG1RU_aJKICXGic&enablejsapi=1";
 
 const benefits = [
-  { icon: <Server24Regular />, title: "Evaluate Fabric Capacity", desc: "Simulate real-world concurrent user load to understand exactly how much Fabric capacity your reporting workloads need." },
-  { icon: <Money24Regular />, title: "Optimize Capacity Costs", desc: "Right-size your Fabric capacity based on actual performance data, preventing over-provisioning and reducing unnecessary spend." },
-  { icon: <ChartMultiple24Regular />, title: "Analyze Report Performance", desc: "Measure page load time at the report and visual level to surface bottlenecks before they impact your users." },
-  { icon: <Search24Regular />, title: "Identify Expensive Reports", desc: "Pinpoint resource-intensive reports and visuals that consume disproportionate capacity so you know exactly where to optimize." },
+  { icon: <Server24Regular />, title: "Evaluate Fabric capacity", desc: "Simulate concurrent user load to see exactly how much Fabric capacity your reporting workloads need." },
+  { icon: <Money24Regular />, title: "Optimize capacity costs", desc: "Right-size Fabric capacity from real performance data, preventing over-provisioning and cutting wasted spend." },
+  { icon: <ChartMultiple24Regular />, title: "Analyze report performance", desc: "Measure page load time by report and visual to surface bottlenecks before they reach users." },
+  { icon: <Search24Regular />, title: "Identify expensive reports", desc: "Pinpoint reports and visuals that consume outsized capacity, so you know exactly where to tune." },
 ];
 
 const steps = [
-  { n: 1, title: "Set Up Your Load Test", desc: "Select reports and pages from your workspaces, and specify the actions they will perform." },
-  { n: 2, title: "Run the Load Test", desc: "Set the number of simulated users and trigger the test to measure how your reports perform under real-world load." },
-  { n: 3, title: "Review Performance Results", desc: "Instantly access page load times, Fabric capacity utilization, and report-level insights to identify bottlenecks and optimize performance." },
+  { n: 1, title: "Set up your load test", desc: "Select reports and pages from your workspaces and specify the actions to run." },
+  { n: 2, title: "Run the load test", desc: "Choose the number of simulated users and start the test to see how reports perform under load." },
+  { n: 3, title: "Review performance results", desc: "Get page load times, Fabric capacity utilization, and report-level insights to find bottlenecks and tune performance." },
 ];
 
 const plans = [
@@ -45,10 +45,10 @@ export function ProductLoadFAST() {
             {/* <span className={s.eyebrow}>Automated Power BI load testing accelerator</span> */}
             <h1 className={s.h1}>LoadFAST</h1>
             <p className={s.heroSub}>
-              Microsoft Fabric adoption is growing fast, but estimating the right capacity for reporting workloads remains a challenge. LoadFAST automates Power BI load testing by simulating concurrent users, measuring page load time, and identifying slow reports and visuals so teams can validate performance and plan Fabric capacity with confidence.
+              Automate Power BI load testing, simulating concurrent users, measuring page load time, and flagging slow reports and visuals, so you validate performance and plan Fabric capacity before users feel it.
             </p>
             <div className={s.btns}>
-              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact Us</PrimaryButton>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - LoadFAST")}>Contact us</PrimaryButton>
               <Button variant="tertiary" size="large" className="maq-equal-cta" href={APPSOURCE} target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
@@ -93,7 +93,7 @@ export function ProductLoadFAST() {
         <div className={s.inner}>
           <div className={s.headLeft}>
             {/* <span className={s.secEyebrow}>How it works</span> */}
-            <h2 className={s.titleLg}>3 step process</h2>
+            <h2 className={s.titleLg}>How it works in 3 steps</h2>
           </div>
           <div className={s.stepGrid}>
             {steps.map((st) => (
@@ -107,7 +107,7 @@ export function ProductLoadFAST() {
         </div>
       </section>
 
-      <section className={s.section}><ProductCaseStudies heading="LoadFAST success stories" studies={[
+      <section className={s.section}><ProductCaseStudies heading="LoadFAST in production" studies={[
         { tag: "Blog", title: "Optimize your Power BI Reports and Usage with LoadFAST", teaser: "See how LoadFAST helps identify bottlenecks and right-size Fabric capacity for reporting workloads.", href: "https://blog.maqsoftware.com/2024/03/transform-your-power-bi.html" },
       ]} /></section>
 

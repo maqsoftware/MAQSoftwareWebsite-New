@@ -44,17 +44,17 @@ const outcomes: Outcome[] = [
   {
     icon: <Lightbulb24Regular />,
     title: "Optimized data usage",
-    desc: "Unlock the full potential of your data with tailored analytics strategies that drive informed decision-making and business growth.",
+    desc: "Get more from your data with analytics built around how your teams actually make decisions.",
   },
   {
     icon: <Settings24Regular />,
     title: "Boundless scalability",
-    desc: "Scale your data operations effortlessly, ensuring your analytics capabilities grow alongside your business demands.",
+    desc: "Scale data operations as demand grows, without re-architecting every time.",
   },
   {
     icon: <Rocket24Regular />,
     title: "Increase in efficiency",
-    desc: "Streamline processes and reduce manual efforts, resulting in increased productivity and faster time-to-insight.",
+    desc: "Cut manual work and speed up time to insight by streamlining data processes.",
   },
 ];
 

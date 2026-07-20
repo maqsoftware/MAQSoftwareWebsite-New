@@ -59,18 +59,18 @@ interface Outcome {
 const defaultOutcomes: Outcome[] = [
   {
     icon: <Lightbulb24Regular />,
-    title: "Enhanced decision-making",
-    desc: "Use AI-driven insights to make smarter, data-backed decisions that propel your business forward.",
+    title: "Sharper decisions",
+    desc: "Make data-backed decisions faster with grounded AI insights, so teams act on evidence instead of instinct.",
   },
   {
     icon: <Settings24Regular />,
-    title: "Automated efficiency",
-    desc: "Automate repetitive tasks with intelligent systems, freeing up resources for more strategic initiatives.",
+    title: "Less manual work",
+    desc: "Automate repetitive tasks and free your team for higher-value work.",
   },
   {
     icon: <Rocket24Regular />,
-    title: "Innovation acceleration",
-    desc: "Accelerate your innovation cycles by integrating cutting-edge AI and ML technologies into your business processes.",
+    title: "Faster delivery",
+    desc: "Ship new products faster by building AI and ML into the processes your teams already run.",
   },
 ];
 

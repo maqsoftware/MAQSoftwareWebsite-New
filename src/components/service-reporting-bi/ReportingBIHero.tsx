@@ -108,9 +108,7 @@ export function ReportingBIHero() {
           {/* <span className={s.eyebrow}>Insights &amp; Analytics</span> */}
           <h1 className={s.h1}>From legacy BI to real-time Power BI on Microsoft Fabric</h1>
           <p className={s.sub}>
-            We build, modernize, and migrate enterprise BI — moving Tableau, SAP BO, SAP Crystal,
-            Qlik, Cognos, and MicroStrategy estates to Power BI on Microsoft Fabric, with semantic
-            models, custom visuals, and a storytelling layer your business actually uses.
+            Migrate Tableau, SAP BusinessObjects, Crystal Reports, Qlik, Cognos, and MicroStrategy estates to Power BI on Microsoft Fabric, with semantic models, custom visuals, and real-time reporting your teams actually use.
           </p>
           <div className={s.btns}>
             <PrimaryButton
@@ -119,7 +117,7 @@ export function ReportingBIHero() {
                 handleContactClick("Reporting & BI - MAQ Software")
               }
             >
-              Contact Us
+              Contact us
             </PrimaryButton>
           </div>
         </div>

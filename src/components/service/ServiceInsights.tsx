@@ -68,7 +68,7 @@ const defaultInsights = [
 ];
 
 export function ServiceInsights({
-  title = "Our agentic AI insights",
+  title = "Agentic AI insights",
   subhead = "See our research that goes into shipping production agents on Microsoft Foundry.",
   insights = defaultInsights,
 }: ServiceInsightsProps = {}) {

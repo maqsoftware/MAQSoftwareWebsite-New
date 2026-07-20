@@ -172,7 +172,7 @@ const defaultCapabilities: CapabilityInternal[] = [
     tagline: "Production AI on Azure Foundry",
     icon: <Bot24Regular />,
     description:
-      "Design, build, and manage production-ready AI applications and intelligent agents using Azure AI Foundry with enterprise governance and scalability.",
+      "Build and run production-ready AI applications and agents on Azure AI Foundry, governed for enterprise scale.",
     tags: ["Azure AI Foundry", "Production AI", "Governance"],
   },
   {
@@ -180,7 +180,7 @@ const defaultCapabilities: CapabilityInternal[] = [
     tagline: "Enterprise generative AI applications",
     icon: <Sparkle24Regular />,
     description:
-      "Develop secure generative AI applications powered by OpenAI models with enterprise-grade security, compliance, and Azure integration.",
+      "Ship generative AI applications on OpenAI models in Azure OpenAI Service, with security, compliance, and native Azure integration.",
     tags: ["Azure OpenAI", "Generative AI", "Enterprise Security"],
   },
   {
@@ -188,7 +188,7 @@ const defaultCapabilities: CapabilityInternal[] = [
     tagline: "Custom copilots for business workflows",
     icon: <AppFolder24Regular />,
     description:
-      "Create custom copilots and AI assistants that automate business processes and deliver conversational experiences across enterprise applications.",
+      "Deploy custom copilots and assistants that automate business processes and answer questions across enterprise applications with Microsoft Copilot Studio.",
     tags: ["Copilot Studio", "Custom Copilots", "Workflow Automation"],
   },
   {
@@ -196,7 +196,7 @@ const defaultCapabilities: CapabilityInternal[] = [
     tagline: "Autonomous agents for complex workflows",
     icon: <BranchFork24Regular />,
     description:
-      "Build autonomous AI systems that coordinate specialized agents to execute complex workflows, make decisions, and accomplish business objectives.",
+      "Coordinate specialized agents into autonomous systems that run complex workflows, make decisions, and complete business objectives.",
     tags: ["Agentic AI", "Multi-Agent", "Autonomous Workflows"],
   },
   {
@@ -204,7 +204,7 @@ const defaultCapabilities: CapabilityInternal[] = [
     tagline: "Grounded AI with enterprise knowledge",
     icon: <ChartMultiple24Regular />,
     description:
-      "Enhance AI responses by grounding large language models with enterprise knowledge using secure retrieval from structured and unstructured data.",
+      "Ground large language models in your enterprise knowledge with secure retrieval across structured and unstructured data, so responses stay accurate.",
     tags: ["RAG", "Knowledge Grounding", "LLM"],
   },
   {
@@ -212,14 +212,14 @@ const defaultCapabilities: CapabilityInternal[] = [
     tagline: "Trusted, secure, and compliant AI",
     icon: <ShieldCheckmark24Regular />,
     description:
-      "Implement governance frameworks that ensure AI systems remain secure, compliant, transparent, explainable, and aligned with responsible AI principles.",
+      "Govern AI systems to stay secure, compliant, transparent, and explainable, aligned with responsible AI principles.",
     tags: ["Responsible AI", "AI Governance", "Compliance"],
   },
 ];
 
 export function ServiceCapabilities({
   sectionId = "ai-capabilities",
-  title = "Our agentic AI capabilities",
+  title = "What you can build with agentic AI",
   subhead = "Capabilities that help you design, deploy, and govern enterprise AI systems at scale.",
   capabilities = defaultCapabilities,
   footerLabel = "See agentic AI case studies",

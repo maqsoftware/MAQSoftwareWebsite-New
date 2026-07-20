@@ -106,9 +106,7 @@ export function ServiceHeroData() {
           {/* <span className={s.eyebrow}>Data &amp; AI Platforms</span> */}
           <h1 className={s.h1}>Medallion lakehouses, built for scale and trust</h1>
           <p className={s.sub}>
-            Modern data platforms on Microsoft Fabric, Snowflake, and Databricks — governed
-            lakehouses, semantic models, and real-time analytics that power Copilot, AI
-            agents, and decision-making across the enterprise.
+            Build governed lakehouses, semantic models, and real-time analytics across Microsoft Fabric, Snowflake, and Databricks, ready for Copilot, AI agents, and decision-making across the enterprise.
           </p>
           <div className={s.btns}>
             <PrimaryButton
@@ -117,7 +115,7 @@ export function ServiceHeroData() {
                 handleContactClick("Data & Analytics - MAQ Software")
               }
             >
-              Contact Us
+              Contact us
             </PrimaryButton>
           </div>
         </div>

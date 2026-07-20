@@ -61,7 +61,7 @@ export function ServiceCloudInsights() {
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Insights</span> */}
-          <h2 className={s.title}>Our cloud modernization insights</h2>
+          <h2 className={s.title}>Cloud modernization insights</h2>
           {/* <p className={s.sub}>
             See our research that goes into refining our cloud modernization service.
           </p> */}

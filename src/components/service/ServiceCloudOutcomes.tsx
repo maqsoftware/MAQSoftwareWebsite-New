@@ -48,17 +48,17 @@ const outcomes: Outcome[] = [
   {
     icon: <CurrencyDollarEuro24Regular />,
     title: "Lower run cost",
-    desc: "Cut cloud spend with FinOps discipline — 30–40% lower run cost on average across enterprise workloads we modernize on Azure.",
+    desc: "Cut cloud run cost 30–40% on average across enterprise workloads modernized on Azure, with FinOps discipline.",
   },
   {
     icon: <Shield24Regular />,
     title: "Enhanced security",
-    desc: "Protect your business with robust cloud security measures that safeguard data and ensure compliance.",
+    desc: "Protect data and meet compliance with cloud security built into every layer.",
   },
   {
     icon: <Beaker24Regular />,
     title: "Operational resilience",
-    desc: "Build a resilient infrastructure that can adapt to disruptions, ensuring continuous business operations.",
+    desc: "Build infrastructure that adapts to disruptions and keeps operations running.",
   },
 ];
 
