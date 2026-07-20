@@ -386,11 +386,11 @@ export function HomeV3() {
                 We help enterprises scale AI, modernize data platforms, and accelerate cloud transformation — delivered with speed, quality, and confidence.
               </motion.p>
               <motion.div className={s.heroCta} variants={heroItemV}>
-                <PrimaryButton size="large" onClick={() => handleContactClick()}>
-                  Contact Us
-                </PrimaryButton>
-                <SecondaryButton size="large" onClick={() => navigate("/insights/case-studies")}>
+                <PrimaryButton size="large" onClick={() => navigate("/insights/case-studies")}>
                   Case Studies
+                </PrimaryButton>
+                <SecondaryButton size="large" onClick={() => handleContactClick()}>
+                  Contact Us
                 </SecondaryButton>
               </motion.div>
             </motion.div>

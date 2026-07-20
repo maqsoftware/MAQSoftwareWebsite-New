@@ -124,8 +124,8 @@ const cols: FooterCol[] = [
   {
     title: "Products",
     items: [
-      { label: "Fabric Admin Agent", to: "/products/fabric-admin-agent" },
       { label: "MigrateFAST", to: "/products/migratefast" },
+      { label: "Fabric Admin Agent", to: "/products/fabric-admin-agent" },
       { label: "AI-DataLens", to: "/products/ai-datalens" },
       { label: "EmbedFAST", to: "/products/embedfast" },
       { label: "LoadFAST", to: "/products/loadfast" },

@@ -33,7 +33,7 @@ const steps = [
   { n: 6, title: "Center of Excellence (CoE)", desc: "Ongoing support, user training, troubleshooting, and KPI tracking post-migration." },
 ];
 
-const MIGRATEFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/NKd92QYRrG4?si=JoLs_S7wMKCaRZFz";
+const MIGRATEFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/NKd92QYRrG4?si=JoLs_S7wMKCaRZFz&enablejsapi=1";
 
 const resources = [
   { pill: "Marketplace offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse migration and Fabric marketplace offers.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
