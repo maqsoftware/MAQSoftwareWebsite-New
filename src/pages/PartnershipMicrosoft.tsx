@@ -160,37 +160,37 @@ const useStyles = makeStyles({
 // Data
 // ---------------------------------------------------------------------------
 const highlights = [
-  { metric: "9", label: "Microsoft Specializations" },
-  { metric: "5K+", label: "Microsoft Technical Certifications" },
-  { metric: "200+", label: "Microsoft Fabric Solutions Implemented" },
-  { metric: "43", label: "Certified Power BI Custom Visuals" },
+  { metric: "9", label: "Microsoft specializations" },
+  { metric: "5,000+", label: "Microsoft technical certifications" },
+  { metric: "200+", label: "Microsoft Fabric implementations" },
+  { metric: "43", label: "Certified Power BI custom visuals" },
 ];
 
 const offerings = [
   {
-    eyebrow: "Accelerate Your Data Journey",
+    eyebrow: "Build and tune your Fabric data platform",
     title: "Microsoft Fabric & Power BI",
-    desc: "We specialize in end-to-end Microsoft Fabric implementations, Power BI performance optimization, and enterprise-scale analytics. As a Fabric Featured Partner with 200+ implementations, we help organizations migrate to Fabric, optimize capacity utilization, and deliver near real-time insights through highly optimized data models and interactive dashboards.",
+    desc: "Migrate to Microsoft Fabric, optimize capacity, and deliver near real-time insights through tuned data models and interactive dashboards. As a Fabric Featured Partner with 200+ implementations, MAQ Software runs end-to-end Fabric builds, Power BI performance tuning, and enterprise-scale analytics.",
   },
   {
-    eyebrow: "Intelligent Automation at Scale",
+    eyebrow: "Automation at scale",
     title: "Agentic AI & Microsoft Copilot",
-    desc: "Leverage our expertise in Microsoft Copilot Studio, Azure AI, and agentic architectures to build enterprise-grade AI agents. From legal contract management to sales automation and event management, we design and deploy intelligent agents that transform business processes and drive measurable efficiency gains.",
+    desc: "Build AI agents on Microsoft Copilot Studio, Azure AI, and agentic architectures. From legal contract management to sales automation and event management, MAQ Software designs and deploys agents that automate business processes for measurable efficiency gains.",
   },
   {
-    eyebrow: "Modernize with Confidence",
+    eyebrow: "Modernize with confidence",
     title: "Cloud Infrastructure & Migration",
-    desc: "Simplify your cloud modernization journey with our proven migration frameworks for Azure. Whether migrating data warehouses, enterprise applications, or databases (Oracle, PostgreSQL, SQL Server to Azure), we ensure secure, high-performance transitions with minimal downtime and validated results.",
+    desc: "Modernize to Azure with proven migration frameworks. Move data warehouses, enterprise applications, or databases (Oracle, PostgreSQL, SQL Server) to Azure with secure transitions, minimal downtime, and validated results.",
   },
   {
-    eyebrow: "Empower Every Team",
+    eyebrow: "Equip every team",
     title: "Power Platform & Dynamics 365",
-    desc: "We enable organizations to streamline operations with low-code solutions on Power Platform—from custom app development and process automation to Center of Excellence implementations. Our Dynamics 365 expertise extends to security audits, unified interface migrations, and intelligent business process optimization.",
+    desc: "Streamline operations with low-code apps on Power Platform, from custom app development and process automation to Center of Excellence implementations. MAQ Software's Dynamics 365 work covers security audits, unified interface migrations, and business process optimization.",
   },
   {
-    eyebrow: "Protect & Govern",
+    eyebrow: "Protect and govern",
     title: "Security & Governance",
-    desc: "With specializations in Cloud Security and Threat Protection, we help organizations implement robust security postures across Azure, Microsoft 365, and hybrid environments. Our solutions span Microsoft Purview governance, identity management, and end-to-end data protection aligned with global compliance standards.",
+    desc: "Implement stronger security across Azure, Microsoft 365, and hybrid environments, backed by Cloud Security and Threat Protection specializations. Coverage spans Microsoft Purview governance, identity management, and end-to-end data protection aligned to global compliance standards.",
   },
 ];
 
@@ -246,15 +246,15 @@ export function PartnershipMicrosoft() {
     <>
       <PartnershipHero
         h1="MAQ Software and Microsoft"
-        subhead="As a Microsoft Fabric Featured Partner and Preferred Supplier since 2000, MAQ Software enables leading companies to accelerate their business intelligence, analytics, and AI initiatives. With 9 Microsoft specializations and 4 solution partner designations, we deliver enterprise-grade solutions across the Microsoft ecosystem—from Azure and Fabric to Power BI and Copilot."
-        ctaLabel="Contact Us"
+        subhead="A Microsoft Fabric Featured Partner and Preferred Supplier since 2000, MAQ Software builds business intelligence, analytics, and AI across the Microsoft stack, from Azure and Fabric to Power BI and Copilot, backed by 9 Microsoft specializations and 4 solution partner designations."
+        ctaLabel="Contact us"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20Microsoft%20Partnership&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
         imageUrl="/logos/Power_BI_Partner_Apr2023.png"
         imageAlt="MAQ Software and Microsoft"
       />
 
       <PartnershipHighlights
-        title="Partnership Highlights"
+        title="Partnership highlights"
         stats={highlights}
       />
 
@@ -263,16 +263,14 @@ export function PartnershipMicrosoft() {
         <div className={s.overviewInner}>
           <div>
             <p className={s.overviewText}>
-              As a Microsoft Fabric Featured Partner and Preferred Supplier since
-              2000, MAQ Software holds 4 Microsoft Solution Partner
-              designations—Data &amp; AI, Digital &amp; App Innovation,
-              Infrastructure, and Security—along with 9 advanced specializations.
-              Our 5,000+ Microsoft technical certifications and 200+ Fabric
-              implementations demonstrate our deep expertise across Azure, Power
-              BI, Microsoft Fabric, Copilot, and the broader Microsoft ecosystem.
-              From AI-driven analytics to enterprise cloud modernization, we
-              empower organizations to maximize their investment in Microsoft
-              technologies.
+              A Microsoft Fabric Featured Partner and Preferred Supplier since 2000,
+              MAQ Software holds 4 Microsoft Solution Partner designations (Data
+              &amp; AI, Digital &amp; App Innovation, Infrastructure, and Security)
+              and 9 advanced specializations. Its 5,000+ Microsoft technical
+              certifications and 200+ Fabric implementations back deep expertise
+              across Azure, Power BI, Microsoft Fabric, and Copilot. From analytics
+              to cloud modernization, organizations get more from their investment
+              in Microsoft technologies.
             </p>
           </div>
         </div>
@@ -280,7 +278,7 @@ export function PartnershipMicrosoft() {
 
       <PartnershipOfferings
         eyebrow="Our Offerings"
-        title="Accelerating Digital Transformation Through Our Microsoft Partnership"
+        title="What the Microsoft partnership delivers"
         sectionId="microsoft-offerings"
         offerings={offerings}
       />
@@ -295,7 +293,7 @@ export function PartnershipMicrosoft() {
       <section className={s.marketSection} id="microsoft-marketplace">
         <div className={s.marketInner}>
           <div className={s.marketHead}>
-            <h2 className={s.marketTitle}>Marketplace Offerings</h2>
+            <h2 className={s.marketTitle}>Marketplace offerings</h2>
           </div>
 
           <div className={s.panelGrid}>
@@ -307,26 +305,26 @@ export function PartnershipMicrosoft() {
             >
               <div className={s.panel}>
                 <div className={s.panelContent}>
-                  <h3 className={s.panelSubhead}>Power BI Custom Visuals</h3>
+                  <h3 className={s.panelSubhead}>Power BI custom visuals</h3>
                   <p className={s.panelDesc}>
-                    Expand your reporting capabilities with our 43 certified Power BI
-                    custom visuals—the largest 3rd party publisher of certified Power
-                    BI custom visuals worldwide. Our visuals have been downloaded
-                    millions of times and include multiple Microsoft Editor's Picks.
+                    Expand your reporting with 43 certified Power BI custom visuals.
+                    MAQ Software is the largest third-party publisher of certified
+                    Power BI custom visuals worldwide, with millions of downloads and
+                    multiple Microsoft Editor's Picks.
                   </p>
                   <ul className={s.bulletList}>
                     <li className={s.bulletItem}>
                       43 certified Power BI custom visuals
                     </li>
                     <li className={s.bulletItem}>
-                      Largest 3rd party publisher of certified Power BI custom visuals
+                      Largest third-party publisher of certified Power BI custom visuals
                     </li>
                     <li className={s.bulletItem}>
-                      Multiple Editor's Pick selections by Microsoft Power BI team
+                      Multiple Editor's Pick selections by the Microsoft Power BI team
                     </li>
                     <li className={s.bulletItem}>
-                      Categories: Change Over Time, Comparison, Distribution, KPI,
-                      Part-to-Whole, Ranking, and more
+                      Categories: change over time, comparison, distribution, KPI,
+                      part-to-whole, ranking, and more
                     </li>
                   </ul>
                 </div>
@@ -348,12 +346,12 @@ export function PartnershipMicrosoft() {
               <div className={s.panel}>
                 <div className={s.panelContent}>
                   <h3 className={s.panelSubhead}>
-                    Consulting Services on Azure Marketplace
+                    Consulting services on Azure Marketplace
                   </h3>
                   <p className={s.panelDesc}>
                     Access 100+ marketplace offers across Microsoft Fabric, Power BI,
-                    Azure AI, Copilot, Power Platform, and Dynamics 365—ranging from
-                    free assessments and briefings to full migration engagements.
+                    Azure AI, Copilot, Power Platform, and Dynamics 365, from free
+                    assessments and briefings to full migration engagements.
                   </p>
                   <table className={s.offerTable}>
                     <thead>

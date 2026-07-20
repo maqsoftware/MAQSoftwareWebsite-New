@@ -124,7 +124,7 @@ const technologyStats = [
   },
   {
     metric: "4×",
-    label: "Faster embedded analytics rollout — 12-month roadmap delivered in 3 months",
+    label: "Faster embedded analytics rollout, a 12-month roadmap delivered in 3 months",
     sourceLabel: "Delivering embedded Power BI reporting with EmbedFAST",
     sourceHref: "https://blog.maqsoftware.com/2025/07/delivering-embedded-power-bi-reporting.html",
   },
@@ -136,7 +136,7 @@ const technologyStats = [
   },
   {
     metric: "~50%",
-    label: "Test case creation time savings with AI-generated test suites",
+    label: "Test case creation time saved with AI-generated test suites",
     sourceLabel: "Modernizing the software development lifecycle with GitHub Copilot",
     sourceHref: "https://blog.maqsoftware.com/2025/11/modernizing-software-development.html",
   },
@@ -148,28 +148,28 @@ const technologyAgents = [
     tagline: "SDLC accelerator",
     icon: <Lightbulb24Regular />,
     description:
-      "SDLC accelerator that combines Azure OpenAI with Azure Search Services to intelligently interpret requirements and generate complete development artifacts. Fetches project context, code context, and wiki documentation to produce user stories, architecture recommendations, best practices, test cases, multiple approaches, pseudocode, and code files.",
+      "SDLC assistant that combines Azure OpenAI with Azure Search Services to interpret requirements and generate development artifacts. Pulls project context, code context, and wiki documentation to produce user stories, architecture recommendations, best practices, test cases, alternative approaches, pseudocode, and code files.",
   },
   {
     name: "Demomate (Video generator agent)",
     tagline: "Marketing demo video automation",
     icon: <ChartMultiple24Regular />,
     description:
-      "Multi-agent system that automates creation of marketing demo videos from user-provided scripts. Executes application workflows via Playwright, records the session, generates context-aware narration using vision models and TTS, and produces finalized synchronized video.",
+      "Multi-agent system that creates marketing demo videos from your scripts. Runs application workflows through Playwright, records the session, generates narration with vision models and TTS, and produces a finished, synchronized video.",
   },
   {
     name: "Test case generator",
     tagline: "AI-assisted test scenario recommendation",
     icon: <Bot24Regular />,
     description:
-      "Streamlines the software development process by recommending test cases. Uses AI to analyze code and suggest relevant test scenarios, improving coverage and reducing manual testing effort.",
+      "Recommends test cases to speed development. Analyzes code and suggests relevant test scenarios, improving coverage and cutting manual testing effort.",
   },
   {
     name: "Code reviewer agent",
     tagline: "Multi-agent Python code review",
     icon: <Search24Regular />,
     description:
-      "AI-powered code review platform that runs a three-stage multi-agent pipeline - Static Analyst, Remediation Specialist, and Senior Architect - to automatically detect issues, generate actionable fixes, and deliver architectural feedback on Python source code. Static analysis (ruff, bandit, radon) feeds findings to the Remediation and Senior Architect agents running in parallel via asyncio, with results surfaced through a React + Vite frontend featuring a real-time agent activity feed, health score ring, and tabbed results view.",
+      "Code review agent that runs a three-stage multi-agent pipeline (Static Analyst, Remediation Specialist, and Senior Architect) to detect issues, generate fixes, and give architectural feedback on Python source. Static analysis (ruff, bandit, radon) feeds findings to the Remediation and Senior Architect agents running in parallel via asyncio, with results shown in a React and Vite frontend: a real-time agent activity feed, a health score ring, and a tabbed results view.",
   },
 ];
 
@@ -195,8 +195,8 @@ export function IndustryTechnology() {
     <>
       <IndustryHero
         eyebrow="Technology & Software"
-        h1="Accelerate Software Delivery with AI-Powered Engineering"
-        subhead="AI is reshaping how technology organizations build, test, and ship software. At MAQ Software, we help ISVs, cloud-native teams, and enterprise software organizations embed intelligence across the SDLC — from agentic code review to embedded analytics — so engineering teams spend less time on rework and more time on innovation."
+        h1="Build, test, and ship software faster with AI"
+        subhead="ISVs, cloud-native teams, and enterprise software organizations embed AI across the SDLC, from agentic code review to embedded analytics. MAQ Software builds it, so engineering teams spend less time on rework and more on new features."
         mailSubject="Technology - MAQ Software"
         visual={<TechnologyHeroVisual />}
       />
@@ -210,7 +210,7 @@ export function IndustryTechnology() {
       <SolutionShowcase
         sectionId="technology-solutions"
         eyebrow="Agentic AI"
-        title="Make your engineering teams smarter with our Technology Agents"
+        title="Technology agents for your engineering teams"
         agents={technologyAgents}
         industryLabel="Technology"
       />

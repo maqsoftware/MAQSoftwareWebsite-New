@@ -81,7 +81,7 @@ export function IndustryHero({
               size="large"
               onClick={() => handleContactClick(mailSubject)}
             >
-              Contact Us
+              Contact us
             </PrimaryButton>
           </div>
         </div>

@@ -114,14 +114,14 @@ function FinancialHeroVisual() {
 const fsStats = [
   {
     chip: "Reporting & BI",
-    title: "Microsoft Fabric Modernization",
-    label: "Faster risk and finance reporting for finance controllers — replacing fragmented legacy BI with a unified data platform",
+    title: "Microsoft Fabric modernization",
+    label: "Faster risk and finance reporting for controllers, replacing fragmented legacy BI with one unified data platform.",
     sourceLabel: "Case study",
     sourceHref: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
   },
   {
     chip: "Financial Services AI",
-    title: "Finance Transformation with Agentic AI",
+    title: "Finance operations, run by agentic AI",
     label: "How financial organizations modernize invoice workflows, fraud monitoring, and month-end operations with agentic AI on Microsoft and cloud data platforms.",
     sourceLabel: "Case study",
     sourceHref: "https://blog.maqsoftware.com/2026/02/transforming-finance-with-agentic-ai.html",
@@ -134,28 +134,28 @@ const fsAgents = [
     tagline: "Automated credit decisioning",
     icon: <BuildingBank24Regular />,
     description:
-      "AI-powered loan underwriting platform built with Microsoft Agent Framework and Azure OpenAI. Uses a coordinated team of specialized underwriting agents to evaluate creditworthiness, verify income, assess collateral risk, enforce lending policies, calculate financial ratios, and generate final loan approval recommendations through an auditable multi-step workflow.",
+      "Underwriting agent built on Microsoft Agent Framework and Azure OpenAI. A coordinated team of agents evaluates creditworthiness, verifies income, assesses collateral risk, enforces lending policy, calculates financial ratios, and produces final approval recommendations through an auditable, multi-step workflow.",
   },
   {
     name: "Proof of Expense Scanner",
     tagline: "Expense document automation",
     icon: <ReceiptMoney24Regular />,
     description:
-      "AI-powered Proof of Expense (POE) document processor that automates receipt data extraction, validation, and categorization using a multi-agent Semantic Kernel pipeline. Accepts PDF uploads, file paths, or raw receipt text — running them through a configurable sequence of DocumentProcessor, FieldExtractor, DataValidator, and ResultFormatter agents backed by FAISS vector search for intelligent vendor recognition and expense categorization.",
+      "Proof of Expense (POE) processor that extracts, validates, and categorizes receipt data through a multi-agent Semantic Kernel pipeline. Takes PDF uploads, file paths, or raw receipt text and runs them through DocumentProcessor, FieldExtractor, DataValidator, and ResultFormatter agents, with FAISS vector search for vendor recognition and expense categorization.",
   },
   {
     name: "Invoice PO Matching Agent",
     tagline: "Procurement validation",
     icon: <DocumentBulletList24Regular />,
     description:
-      "AI-powered procurement validation solution that automatically matches supplier invoices against purchase orders to identify discrepancies, assess financial risk, and generate actionable recommendations. Built using a multi-agent workflow with Microsoft Agent Framework and Azure OpenAI, with a deterministic fallback engine for offline execution.",
+      "Matches supplier invoices against purchase orders to flag discrepancies, assess financial risk, and recommend next steps. Built on a multi-agent workflow with Microsoft Agent Framework and Azure OpenAI, with a deterministic fallback engine for offline runs.",
   },
   {
     name: "Expense Trend Analyzer",
     tagline: "Spending analytics & insights",
     icon: <ArrowTrendingLines24Regular />,
     description:
-      "AI-powered expense analytics platform built on Microsoft Agent Framework (MAF). Uses specialized agents for financial metrics computation, spending trend analysis, anomaly detection, category breakdowns, and recommendation generation. Combines statistical analysis with Azure OpenAI-powered insights through an interactive Streamlit dashboard.",
+      "Expense analytics built on Microsoft Agent Framework (MAF). Specialized agents compute financial metrics, analyze spending trends, detect anomalies, break down categories, and generate recommendations. Combines statistical analysis with Azure OpenAI insights in an interactive Streamlit dashboard.",
   },
 ];
 
@@ -226,8 +226,8 @@ export function IndustryFinancialServices() {
     <>
       <IndustryHero
         eyebrow="Financial Services"
-        h1="Deliver Smarter, Safer Financial Services with AI"
-        subhead="Massive datasets, tightening regulation, and rising fraud demand more than incremental fixes. Leading banks, insurers, and capital markets firms are deploying AI agents that underwrite credit, close the books, monitor transactions, and keep compliance audit-ready with all on a governed data foundation. At MAQ Software, we build and deploy those agents on Microsoft Fabric, Snowflake, and Databricks so your institution acts on decisions in hours, not days. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, we bring the partnerships, the platform expertise, and the production-grade delivery your finance transformation requires."
+        h1="AI agents for banking, insurance, and capital markets"
+        subhead="Growing datasets, tightening regulation, and rising fraud need more than incremental fixes. Banks, insurers, and capital markets firms deploy AI agents that underwrite credit, close the books, monitor transactions, and keep compliance audit-ready, all on a governed data foundation. MAQ Software builds and runs those agents on Microsoft Fabric, Snowflake, and Databricks, so your institution acts on decisions in hours, not days. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, MAQ Software brings the platform expertise and production-grade delivery your finance teams need."
         mailSubject="Financial Services - MAQ Software"
         visual={<FinancialHeroVisual />}
       />
@@ -241,7 +241,7 @@ export function IndustryFinancialServices() {
       <SolutionShowcase
         sectionId="fs-solutions"
         eyebrow="Industry Solutions"
-        title="Accelerate your financial operations with AI Agents"
+        title="Automate financial operations with AI agents"
         agents={fsAgents}
         industryLabel="Financial Services"
       />
@@ -253,6 +253,7 @@ export function IndustryFinancialServices() {
         seeAllHref="/insights/case-studies"
       />
       <MarketplaceOffers
+        title="Marketplace offers"
         sub="Accelerate financial outcomes with ready-to-deploy Microsoft Azure Marketplace offerings and MAQ Software products—spanning consulting services, real-time intelligence, AI analytics, and migration."
         offers={fsOffers}
       />

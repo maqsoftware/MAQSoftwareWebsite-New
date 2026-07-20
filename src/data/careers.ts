@@ -159,7 +159,7 @@ export const careerReasons: CareerReason[] = [
   {
     title: "Substantial responsibility, early",
     body:
-      "Take ownership from day one with exposure to every aspect of the delivery lifecycle and project management.",
+      "Take ownership from day one, across the full delivery lifecycle and project management.",
   },
   {
     title: "Continuous learning",
@@ -167,8 +167,8 @@ export const careerReasons: CareerReason[] = [
       "Work alongside Microsoft, Snowflake, and Databricks experts on the newest AI, data, and cloud technologies.",
   },
   {
-    title: "Global, high-impact projects",
+    title: "Global projects, real impact",
     body:
-      "Deliver solutions for Fortune 500 customers across Redmond, Plano, Hyderabad, Mumbai, and Noida.",
+      "Deliver for Fortune 500 customers across Redmond, Plano, Hyderabad, Mumbai, and Noida.",
   },
 ];

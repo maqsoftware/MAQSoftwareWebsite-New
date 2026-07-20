@@ -131,7 +131,7 @@ const manufacturingStats = [
   {
     metric: "40%",
     label:
-      "Faster data onboarding across ten disconnected manufacturing systems — Microsoft Fabric and OneLake unification for a global medical devices manufacturer",
+      "Faster data onboarding across ten disconnected manufacturing systems, unified on Microsoft Fabric and OneLake for a global medical devices manufacturer",
     sourceLabel: "Unifying disconnected data systems",
     sourceHref:
       "https://blog.maqsoftware.com/2026/01/unifying-disconnected-data-systems.html",
@@ -144,14 +144,14 @@ const manufacturingAgents = [
     tagline: "Conversational inventory management",
     icon: <BoxMultiple24Regular />,
     description:
-      "AI-powered multi-agent inventory management system built on the Microsoft Agent Framework (MAF). A top-level InventoryOrchestrator routes natural language queries to three specialized sub-agents — StockAgent, ProcurementAgent, and AnalyticsAgent — each equipped with tool-decorated functions that query a live Supabase PostgreSQL backend. Surfaced through a Streamlit chat UI with persistent in-session conversation memory.",
+      "Multi-agent inventory management built on the Microsoft Agent Framework (MAF). A top-level InventoryOrchestrator routes natural language queries to three sub-agents (StockAgent, ProcurementAgent, and AnalyticsAgent), each with tool-decorated functions that query a live Supabase PostgreSQL backend. Runs in a Streamlit chat UI with persistent in-session memory.",
   },
   {
     name: "Vendor Receipt Scanner",
     tagline: "Automated invoice & receipt processing",
     icon: <DocumentSearch24Regular />,
     description:
-      "AI-powered invoice and receipt processing pipeline built on the Microsoft Agent Framework. Implements a four-node typed workflow — ExtractNode, ParseNode, ValidateNode, StorageNode — where each node is a dedicated Microsoft Agent Framework(MAF) agent with registered tools. Processed receipts are persisted in SQLite and indexed in a FAISS vector store for semantic search, with a separate ProcurementValidationAgent cross-checking invoices against purchase order data. Surfaced through a FastAPI backend and a React + Vite frontend.",
+      "Invoice and receipt processing pipeline built on the Microsoft Agent Framework. A four-node typed workflow (ExtractNode, ParseNode, ValidateNode, StorageNode) runs each node as a dedicated MAF agent with registered tools. Processed receipts persist in SQLite and index into a FAISS vector store for semantic search, while a separate ProcurementValidationAgent cross-checks invoices against purchase order data. Runs on a FastAPI backend and a React and Vite frontend.",
   },
 ];
 
@@ -207,8 +207,8 @@ export function IndustryManufacturing() {
     <>
       <IndustryHero
         eyebrow="Manufacturing"
-        h1="Powering Smarter Manufacturing with AI-Driven Operations"
-        subhead="Supply chain disruptions and manual vendor receipt processing are costing manufacturers time and margin they cannot afford to lose. Leading industrial organizations are deploying AI agents that monitor inventory in real time and automate goods receipt processing from delivery to ERP entry, all on a governed data foundation. At MAQ Software, we build and deploy those agents on Microsoft Fabric, Snowflake, and Databricks to connect plant operations, supply chain, and procurement on a single platform. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, we take you from AI experimentation to enterprise-scale production with governance, security, and measurable ROI built in."
+        h1="AI agents for plant operations, supply chain, and procurement"
+        subhead="Supply chain disruptions and manual vendor receipt processing cost manufacturers time and margin they can't afford to lose. Industrial organizations deploy AI agents that monitor inventory in real time and automate goods receipt from delivery to ERP entry, all on a governed data foundation. MAQ Software builds and runs those agents on Microsoft Fabric, Snowflake, and Databricks, connecting plant operations, supply chain, and procurement on one platform. As a Top 25 Global Microsoft Partner and Microsoft Fabric Featured Partner, MAQ Software takes you from AI pilots to enterprise-scale production, with governance, security, and measurable ROI built in."
         mailSubject="Manufacturing - MAQ Software"
         visual={<ManufacturingHeroVisual />}
       />
@@ -222,7 +222,7 @@ export function IndustryManufacturing() {
       <SolutionShowcase
         sectionId="manufacturing-solutions"
         eyebrow="Agentic AI"
-        title="Make your manufacturing operations smarter with our Manufacturing Agents"
+        title="Manufacturing agents for your operations"
         agents={manufacturingAgents}
         industryLabel="Manufacturing"
       />
@@ -235,6 +235,7 @@ export function IndustryManufacturing() {
         uniformCardWidth
       />
       <MarketplaceOffers
+        title="Marketplace offers"
         sub="Accelerate manufacturing outcomes with ready-to-deploy Microsoft Azure Marketplace offerings \u2014 spanning AI strategy, real-time intelligence, and data platform modernization."
         offers={manufacturingOffers}
       />
