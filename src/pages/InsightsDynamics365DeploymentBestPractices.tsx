@@ -25,7 +25,7 @@ export function InsightsDynamics365DeploymentBestPractices() {
         },
       ]}
       references={[
-        { label: "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices", href: "/insights/dynamics-365-deployment-best-practices", source: "MAQ Software" },
+        { label: "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices", href: "/#/insights/dynamics-365-deployment-best-practices", source: "MAQ Software" },
         { label: "Invoke custom actions from a workflow", href: "https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/invoke-custom-actions-workflow-dialog", source: "Microsoft, last updated February 15, 2022" },
       ]}
       continueReading={{

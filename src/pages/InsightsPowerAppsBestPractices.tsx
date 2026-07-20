@@ -30,7 +30,7 @@ export function InsightsPowerAppsBestPractices() {
         },
       ]}
       references={[
-        { label: "11 best practices to optimize your canvas apps", href: "/insights/power-apps-best-practices", source: "MAQ Software" },
+        { label: "11 best practices to optimize your canvas apps", href: "/#/insights/power-apps-best-practices", source: "MAQ Software" },
         { label: "Use theming components", href: "https://learn.microsoft.com/en-us/power-platform/guidance/coe/theming-components", source: "Microsoft Docs, last updated February 14, 2022" },
         { label: "Understand delegation in a canvas app", href: "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/delegation-overview", source: "Microsoft Docs, last updated February 6, 2022" },
         { label: "Tips and best practices to improve performance of canvas apps", href: "https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/performance-tips", source: "Microsoft Docs, last updated January 13, 2022" },

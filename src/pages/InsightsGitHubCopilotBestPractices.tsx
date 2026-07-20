@@ -69,7 +69,7 @@ export function InsightsGitHubCopilotBestPractices() {
         },
       ]}
       references={[
-        { label: "Maximizing Developer Productivity with GitHub Copilot", href: "/insights/github-copilot-best-practices", source: "MAQ Software" },
+        { label: "Maximizing Developer Productivity with GitHub Copilot", href: "/#/insights/github-copilot-best-practices", source: "MAQ Software" },
         { label: "GitHub Copilot documentation", href: "https://docs.github.com/en/copilot", source: "GitHub" },
         { label: "GitHub Copilot Chat in your IDE", href: "https://docs.github.com/en/copilot/github-copilot-chat/copilot-chat-in-ides/about-github-copilot-chat-in-your-ide", source: "GitHub" },
       ]}
