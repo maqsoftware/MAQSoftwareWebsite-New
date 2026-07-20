@@ -24,7 +24,7 @@ export function InsightsDataValidationBestPractices() {
         },
       ]}
       references={[
-        { label: "Ensure quality data on demand with our 7 data validation best practices", href: "/insights/data-validation-best-practices", source: "MAQ Software" },
+        { label: "Ensure quality data on demand with our 7 data validation best practices", href: "/#/insights/data-validation-best-practices", source: "MAQ Software" },
         { label: "Case Study: Data Validation Framework reduced our client's support tickets", href: "https://blog.maqsoftware.com/2019/06/case-study-data-validation-framework.html", source: "MAQ Software Blog" },
       ]}
       continueReading={{

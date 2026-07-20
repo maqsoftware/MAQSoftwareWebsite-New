@@ -101,7 +101,7 @@ export function InsightsKnowledgeBotBestPractices() {
         },
       ]}
       references={[
-        { label: "Best practices for creating enterprise-wide knowledge bots", href: "/insights/knowledge-bot-best-practices", source: "MAQ Software" },
+        { label: "Best practices for creating enterprise-wide knowledge bots", href: "/#/insights/knowledge-bot-best-practices", source: "MAQ Software" },
         { label: "Microsoft Purview overview", href: "https://learn.microsoft.com/en-us/purview/", source: "Microsoft Corporation" },
         { label: "Retrieval-Augmented Generation (RAG) on Azure", href: "https://learn.microsoft.com/en-us/azure/search/retrieval-augmented-generation-overview", source: "Microsoft Corporation" },
         { label: "Azure App Service health checks", href: "https://learn.microsoft.com/en-us/azure/app-service/monitor-instances-health-check", source: "Microsoft Corporation" },
