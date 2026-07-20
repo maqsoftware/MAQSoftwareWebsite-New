@@ -461,6 +461,7 @@ function MobileSection({
 
 export function HeaderV2() {
   const s = useStyles();
+  const navigate = useNavigate();
   const handleContactClick = useContactAction();
   const [open, setOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
@@ -547,8 +548,9 @@ export function HeaderV2() {
       window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
-    window.location.href = href;
+    scrollPos.current = 0;
     closeMenu();
+    navigate(href);
   }
 
   return (

@@ -1510,112 +1510,112 @@ export const bestPracticeFilters = [
 export const bestPracticeItems: BestPracticeItem[] = [
   {
     "title": "Maximize developer productivity with GitHub Copilot",
-    "href": "/insights/github-copilot-best-practices",
+    "href": "/#/insights/github-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Maximize developer productivity with GitHub Copilot.",
     "imageUrl": "/images/case-studies/external/GitHub-Copilot-Best-Practices.webp"
   },
   {
     "title": "Build AI-ready semantic models with Power BI Copilot",
-    "href": "/insights/power-bi-copilot-best-practices",
+    "href": "/#/insights/power-bi-copilot-best-practices",
     "topic": "Copilot",
     "teaser": "Best practice guide: Build AI-ready semantic models with Power BI Copilot.",
     "imageUrl": "/images/case-studies/external/Power-BI-Copilot-best-practice-guide.webp"
   },
   {
     "title": "Improve your Power BI performance and security with our best practices",
-    "href": "/insights/power-bi-best-practices",
+    "href": "/#/insights/power-bi-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve your Power BI performance and security with our best practices.",
     "imageUrl": "/images/case-studies/external/BPG006-main.webp"
   },
   {
     "title": "Improve job speed and save storage with our 18 Databricks best practices",
-    "href": "/insights/azure-databricks-best-practices",
+    "href": "/#/insights/azure-databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Improve job speed and save storage with our 18 Databricks best practices.",
     "imageUrl": "/images/case-studies/external/BPG007-main.webp"
   },
   {
     "title": "Optimizing Performance, Collaboration, and Security on Databricks",
-    "href": "/insights/databricks-best-practices",
+    "href": "/#/insights/databricks-best-practices",
     "topic": "Databricks",
     "teaser": "Best practice guide: Optimizing Performance, Collaboration, and Security on Databricks.",
     "imageUrl": "/images/case-studies/external/databricks-best-practice-guide.webp"
   },
   {
     "title": "Optimize Snowflake storage for efficient Power BI data extraction",
-    "href": "/insights/snowflake-and-power-bi-best-practices",
+    "href": "/#/insights/snowflake-and-power-bi-best-practices",
     "topic": "Snowflake",
     "teaser": "Best practice guide: Optimize Snowflake storage for efficient Power BI data extraction.",
     "imageUrl": "/images/case-studies/external/snowflake-best-practices.webp"
   },
   {
     "title": "Explore best practices for creating enterprise-wide knowledge bots",
-    "href": "/insights/knowledge-bot-best-practices",
+    "href": "/#/insights/knowledge-bot-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Explore best practices for creating enterprise-wide knowledge bots.",
     "imageUrl": "/images/case-studies/external/BPG010-main.webp"
   },
   {
     "title": "Improve Power BI speed and functionality with our 22 DAX best practices",
-    "href": "/insights/dax-best-practices",
+    "href": "/#/insights/dax-best-practices",
     "topic": "Power BI",
     "teaser": "Best practice guide: Improve Power BI speed and functionality with our 22 DAX best practices.",
     "imageUrl": "/images/case-studies/external/BPG005-main.webp"
   },
   {
     "title": "Optimize your DevOps strategies with our 9 essential best practices",
-    "href": "/insights/azure-dev-ops-best-practices-guide",
+    "href": "/#/insights/azure-dev-ops-best-practices-guide",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize your DevOps strategies with our 9 essential best practices.",
     "imageUrl": "/images/case-studies/external/AzureDevOpsBestPracticeguide.webp"
   },
   {
     "title": "Optimize costs for your Azure platforms with our 10 best practices",
-    "href": "/insights/azure-architecture-best-practices",
+    "href": "/#/insights/azure-architecture-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Optimize costs for your Azure platforms with our 10 best practices.",
     "imageUrl": "/images/case-studies/external/BPG004-main.webp"
   },
   {
     "title": "Strengthen your cloud security and protect your assets with 19 security best practices",
-    "href": "/insights/azure-security-best-practices",
+    "href": "/#/insights/azure-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: Strengthen your cloud security and protect your assets with 19 security best practices.",
     "imageUrl": "/images/case-studies/external/BPG003-main.webp"
   },
   {
     "title": "Ensure quality data on demand with our 7 data validation best practices",
-    "href": "/insights/data-validation-best-practices",
+    "href": "/#/insights/data-validation-best-practices",
     "topic": "Azure",
     "teaser": "Best practice guide: Ensure quality data on demand with our 7 data validation best practices.",
     "imageUrl": "/images/case-studies/external/BPG002-main.webp"
   },
   {
     "title": "Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more",
-    "href": "/insights/dynamics-365-development-best-practices",
+    "href": "/#/insights/dynamics-365-development-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Optimize your Dynamics 365 environment with our 32 best practices on developing fields, views, and more.",
     "imageUrl": "/images/case-studies/external/BPG008-main.webp"
   },
   {
     "title": "Deploy Dynamics 365 faster with minimal downtime using our 8 best practices",
-    "href": "/insights/dynamics-365-deployment-best-practices",
+    "href": "/#/insights/dynamics-365-deployment-best-practices",
     "topic": "Dynamics 365",
     "teaser": "Best practice guide: Deploy Dynamics 365 faster with minimal downtime using our 8 best practices.",
     "imageUrl": "/images/case-studies/external/BPG001-main.webp"
   },
   {
     "title": "This guide covers the 11 best practices you need to optimize your canvas apps",
-    "href": "/insights/power-apps-best-practices",
+    "href": "/#/insights/power-apps-best-practices",
     "topic": "Power Apps",
     "teaser": "Best practice guide: This guide covers the 11 best practices you need to optimize your canvas apps.",
     "imageUrl": "/images/case-studies/external/BPG009-main.webp"
   },
   {
     "title": "This guide covers the 7 best practices you need to secure dataverse",
-    "href": "/insights/dataverse-security-best-practices",
+    "href": "/#/insights/dataverse-security-best-practices",
     "topic": "Security",
     "teaser": "Best practice guide: This guide covers the 7 best practices you need to secure dataverse.",
     "imageUrl": "/images/case-studies/external/dataverse-best-practices.webp"

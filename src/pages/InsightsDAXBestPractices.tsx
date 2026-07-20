@@ -68,7 +68,7 @@ export function InsightsDAXBestPractices() {
         },
       ]}
       references={[
-        { label: "Improve Power BI speed and functionality with our 22 DAX best practices", href: "/insights/dax-best-practices", source: "MAQ Software" },
+        { label: "Improve Power BI speed and functionality with our 22 DAX best practices", href: "/#/insights/dax-best-practices", source: "MAQ Software" },
         { label: "Visual calculations overview", href: "https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-visual-calculations-overview", source: "Microsoft Corporation" },
         { label: "DAX query view", href: "https://learn.microsoft.com/en-us/power-bi/transform-model/dax-query-view", source: "Microsoft Corporation" },
         { label: "Calculation groups", href: "https://learn.microsoft.com/en-us/analysis-services/tabular-models/calculation-groups", source: "Microsoft Corporation" },

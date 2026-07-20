@@ -6,7 +6,7 @@ import { PrimaryButton } from "../components/buttons";
 import { useProductPageStyles } from "./productPageStyles";
 import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlaceholders";
 
-const AI_DATALENS_VIDEO_EMBED_URL = "https://www.youtube.com/embed/3NCRlbKKuC8?si=-HXXCu3lYAnlCNbG";
+const AI_DATALENS_VIDEO_EMBED_URL = "https://www.youtube.com/embed/3NCRlbKKuC8?si=-HXXCu3lYAnlCNbG&enablejsapi=1";
 
 const benefits = [
   { title: "Informed decisions", desc: "Move beyond guesswork — leverage data-backed insights to make informed decisions that reduce risk and accelerate growth." },
@@ -25,8 +25,8 @@ const features = [
 
 const resources = [
   { pill: "Marketplace offers", title: "MAQ Software offers on Azure Marketplace", desc: "Browse all Azure Marketplace marketplace offers from MAQ Software.", href: "https://azuremarketplace.microsoft.com/en-us/marketplace/consulting-services?page=1&search=maq%20software" },
-  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "/insights/case-studies" },
-  { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "/insights/best-practice-guides" },
+  { pill: "Case studies", title: "AI-DataLens and analytics outcomes", desc: "Real customer stories on natural-language data interaction and AI-driven analytics.", href: "/#/insights/case-studies" },
+  { pill: "Best practices", title: "Data & AI best-practice guides", desc: "Patterns for natural-language data interaction, semantic modeling, and AI governance.", href: "/#/insights/best-practice-guides" },
 ];
 
 export function ProductAIDataLens() {

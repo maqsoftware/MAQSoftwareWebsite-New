@@ -1,7 +1,6 @@
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { ArrowLeft16Regular, Open16Regular } from "@fluentui/react-icons";
 import { Link, useParams } from "react-router-dom";
-import { CTA } from "../components/CTA";
 import { PrimaryButton, SecondaryButton } from "../components/buttons";
 import { VisualPbiEmbed } from "../components/insights/VisualPbiEmbed";
 import {
@@ -250,7 +249,6 @@ export function InsightsCustomVisualDetail() {
             <ArrowLeft16Regular /> Back to all visuals
           </Link>
         </section>
-        <CTA />
       </>
     );
   }
@@ -305,7 +303,7 @@ export function InsightsCustomVisualDetail() {
                 )}
                 <SecondaryButton
                   size="large"
-                  href="/insights/visual-chooser"
+                  href="/#/insights/visual-chooser"
                 >
                   Open visual chooser guide
                 </SecondaryButton>
@@ -393,17 +391,8 @@ export function InsightsCustomVisualDetail() {
 
               <div className={s.contact}>
                 <strong>Contact Us.</strong> Thank you for using {content.productName}. Have
-                questions about this or any of our other Power BI custom visuals? Visit our community
-                pages on{" "}
-                <a
-                  className={s.contactLink}
-                  href="https://maqsoftware.zendesk.com/hc/en-us/community/topics"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Zendesk
-                </a>
-                . For issues, contact{" "}
+                questions about this or any of our other Power BI custom visuals? For issues,
+                contact{" "}
                 <a
                   className={s.contactLink}
                   href={`mailto:support@maqsoftware.com?subject=${supportSubject}`}
@@ -446,8 +435,6 @@ export function InsightsCustomVisualDetail() {
           </div>
         </section>
       )}
-
-      <CTA />
     </>
   );
 }

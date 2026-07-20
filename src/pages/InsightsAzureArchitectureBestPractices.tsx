@@ -42,7 +42,7 @@ export function InsightsAzureArchitectureBestPractices() {
         },
       ]}
       references={[
-        { label: "Optimize costs for your Azure platforms with our 10 best practices", href: "/insights/azure-architecture-best-practices", source: "MAQ Software" },
+        { label: "Optimize costs for your Azure platforms with our 10 best practices", href: "/#/insights/azure-architecture-best-practices", source: "MAQ Software" },
         { label: "Azure Well-Architected Framework — Cost Optimization", href: "https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/", source: "Microsoft Corporation" },
         { label: "Azure Savings Plans for Compute", href: "https://learn.microsoft.com/en-us/azure/cost-management-billing/savings-plan/savings-plan-compute-overview", source: "Microsoft Corporation" },
         { label: "Azure Reservations", href: "https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations", source: "Microsoft Corporation" },
