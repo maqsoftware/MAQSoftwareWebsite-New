@@ -412,7 +412,7 @@ const capabilities: Capability[] = [
         tagline: "Intelligent applications for modern business",
         icon: <AppFolder24Regular />,
         description:
-            "Implement intelligent business applications that streamline customer engagement, finance, operations, sales, and service management.",
+            "Implement business applications that streamline customer engagement, finance, operations, sales, and service management.",
         tags: ["Dynamics 365", "Sales", "Service", "Operations"],
     },
     {
@@ -420,7 +420,7 @@ const capabilities: Capability[] = [
         tagline: "Low-code solutions for rapid innovation",
         icon: <Grid24Regular />,
         description:
-            "Accelerate digital transformation using low-code solutions for application development, workflow automation, analytics, and virtual agents.",
+            "Build low-code apps, automate workflows, and add analytics and virtual agents across Microsoft Power Platform.",
         tags: [
             "Power Platform",
             "Low-Code",
@@ -433,7 +433,7 @@ const capabilities: Capability[] = [
         tagline: "Build enterprise apps with low code",
         icon: <Code24Regular />,
         description:
-            "Develop secure low-code business applications that improve operational efficiency and connect seamlessly with enterprise data sources.",
+            "Ship secure low-code apps that improve day-to-day operations and connect to your enterprise data sources.",
         tags: [
             "Power Apps",
             "Low-Code Apps",
@@ -446,7 +446,7 @@ const capabilities: Capability[] = [
         tagline: "Intelligent workflow automation at scale",
         icon: <AppFolder24Regular />,
         description:
-            "Automate repetitive business processes through intelligent workflows that improve productivity and reduce manual effort.",
+            "Automate repetitive business processes with workflows that cut manual effort and free up your team.",
         tags: ["Power Automate", "Workflows", "Process Automation", "Productivity"],
     },
     {
@@ -454,7 +454,7 @@ const capabilities: Capability[] = [
         tagline: "Unified customer insights across channels",
         icon: <PeopleSearch24Regular />,
         description:
-            "Create unified customer profiles by integrating enterprise data to deliver personalized experiences and informed business decisions.",
+            "Unify customer data from across the enterprise into single profiles for personalized experiences and better decisions.",
         tags: ["Customer 360", "Unified Profiles", "Personalization", "Insights"],
     },
     {
@@ -462,7 +462,7 @@ const capabilities: Capability[] = [
         tagline: "Streamlined processes through automation",
         icon: <ArrowTrendingLines24Regular />,
         description:
-            "Optimize end-to-end business processes through intelligent automation, approvals, integrations, and operational efficiency improvements.",
+            "Streamline end-to-end processes with automation, approvals, and integrations that remove bottlenecks.",
         tags: ["Process Optimization", "Approvals", "Integrations", "Automation"],
     },
 ];
@@ -477,17 +477,17 @@ const outcomes: Outcome[] = [
     {
         icon: <ShieldTask24Regular />,
         title: "Future-proof technology",
-        desc: "Use AI-driven insights to make smarter, data-backed decisions that propel your business forward.",
+        desc: "Stay current on Microsoft platforms that add new AI and capabilities continuously, so your apps don't fall behind.",
     },
     {
         icon: <ArrowTrendingLines24Regular />,
         title: "Increased agility",
-        desc: "Improve your ability to adapt to market changes quickly with flexible, scalable application architectures.",
+        desc: "Adapt to market shifts faster with flexible app architectures you can change without a full rebuild.",
     },
     {
         icon: <PersonHeart24Regular />,
         title: "Improved user experience",
-        desc: "Deliver superior user experiences through modernized, intuitive applications that drive customer satisfaction.",
+        desc: "Give users modern, easy-to-use apps that make everyday work faster.",
     },
 ];
 
@@ -585,9 +585,9 @@ export function ServiceBusinessApps() {
                         {/* <span className={s.eyebrow}>Business Applications &amp; Automation</span> */}
                         <h1 className={s.h1}>AI-native business apps on Microsoft Power Platform</h1>
                         <p className={s.heroSub}>
-                            Low-code and pro-code apps built on Power Apps, Dynamics 365, and
-                            Microsoft 365 — paired with Copilot Studio agents and Power Automate
-                            flows that retire manual handoffs and embed AI into everyday operations.
+                            Build low-code and pro-code apps on Power Apps, Dynamics 365, and
+                            Microsoft 365, paired with Copilot Studio agents and Power Automate
+                            flows that retire manual handoffs and put AI into everyday operations.
                         </p>
                         <div className={s.btns}>
                             <PrimaryButton
@@ -598,7 +598,7 @@ export function ServiceBusinessApps() {
                                     )
                                 }
                             >
-                                Contact Us
+                                Contact us
                             </PrimaryButton>
                         </div>
                     </div>
@@ -620,7 +620,7 @@ export function ServiceBusinessApps() {
                 <div className={s.inner}>
                     <div className={s.head}>
                         {/* <span className={s.secEyebrow}>Our expertise</span> */}
-                        <h2 className={s.title}>Our business applications &amp; automation capabilities</h2>
+                        <h2 className={s.title}>What you can build with business apps and automation</h2>
                         {/* <p className={s.secSub}>
                             Four capability pillars that modernize legacy applications and automate
                             operations across the Microsoft business apps stack.
@@ -699,7 +699,7 @@ export function ServiceBusinessApps() {
                 <div className={s.inner}>
                     <div className={s.head}>
                         {/* <span className={s.secEyebrow}>Related case studies</span> */}
-                        <h2 className={s.titleSm}>How clients are modernizing their business apps</h2>
+                        <h2 className={s.titleSm}>Business apps, modernized</h2>
                     </div>
                     <div className={s.caseGrid}>
                         {caseStudies.map((c) => (
@@ -733,7 +733,7 @@ export function ServiceBusinessApps() {
                 <div className={s.inner}>
                     <div className={s.head}>
                         {/* <span className={s.secEyebrow}>Insights</span> */}
-                        <h2 className={s.titleSm}>Our business apps and process automation insights</h2>
+                        <h2 className={s.titleSm}>Business apps and process automation insights</h2>
                         {/* <p className={s.secSub}>
                             See our research that goes into optimizing our business apps and process
                             automation service.

@@ -34,43 +34,43 @@ interface BuildArea { tab: string; title: string; desc: string; to: string; img?
 const BUILD: BuildArea[] = [
   {
     tab: "Data & AI",
-    title: "Data & AI Platforms",
-    desc: "Build data foundations across Microsoft Fabric, Databricks, and Snowflake — lakehouses, warehouses, and pipelines designed to scale with the business.",
+    title: "Data & AI platforms",
+    desc: "Scale your business with one governed data foundation across Microsoft Fabric, Azure Databricks, and Snowflake, ready for AI workloads.",
     to: "/services/data-and-analytics",
     img: "/images/Service%20cards/Platforms.png"
   },
   {
     tab: "AI Agents",
-    title: "AI Solutions & Agents",
-    desc: "Deploy production-grade copilots and agents on Microsoft Foundry, Azure OpenAI, and Copilot Studio — grounded in your data, governed for compliance, and ready for production scale.",
+    title: "AI solutions & agents",
+    desc: "Automate decisions and reduce manual work with Copilots and agents on Microsoft Foundry, Azure OpenAI, and Copilot Studio, grounded in your data and governed for compliance.",
     to: "/services/agentic-ai",
     img: "/images/Service%20cards/Conversational AI.png"
   },
   {
     tab: "Insights",
-    title: "Insights & Analytics",
-    desc: "Design analytics across Power BI, Microsoft Fabric Real-Time Intelligence, and Databricks SQL — dashboards, self-service models, and predictive analytics that scale across the organization.",
+    title: "Insights & analytics",
+    desc: "Uncover insights on demand and prevent issues before they hit, with dashboards, self-service, and predictive analytics on Power BI, Microsoft Fabric Real-Time Intelligence, and Databricks SQL.",
     to: "/services/reporting-bi",
     img: "/images/Service%20cards/Visualization.png"
   },
   {
     tab: "Business Apps",
-    title: "Business Applications & Automation",
-    desc: "Modernize operations on Microsoft Power Platform, Dynamics 365, Power Apps, and Power Automate, with Copilot agents embedded in the workflows that warrant them.",
+    title: "Business applications & automation",
+    desc: "Streamline approvals, reports, and handoffs on Microsoft Power Platform, Dynamics 365, Power Apps, and Power Automate, with Copilots embedded where they matter.",
     to: "/services/business-apps",
     img: "/images/Service%20cards/Apps.png"
   },
   {
     tab: "Cloud",
-    title: "Cloud Modernization",
-    desc: "Migrate to Microsoft Azure with run costs typically 30-40% lower after deployment, across re-architecture, AKS, and FinOps optimization.",
+    title: "Cloud modernization",
+    desc: "Lower cloud costs, ship faster, and scale on demand with Microsoft Azure, with run costs typically 30-40% lower after deployment.",
     to: "/services/cloud",
     img: "/images/Service%20cards/Cloud.png"
   },
   {
     tab: "Security",
-    title: "Security & Governance",
-    desc: "Implement Zero Trust security on Microsoft Defender, Entra, Purview, and Unity Catalog — aligned to ISO 27001, 27701, and 27018, and built for audit from day one.",
+    title: "Security & governance",
+    desc: "Get audit-ready from day one with Zero Trust security on Microsoft Defender, Entra, Purview, and Unity Catalog, aligned to ISO 27001, 27701, and 27018.",
     to: "/services/security-compliance",
     img: "/images/Service%20cards/Security.png"
   },
@@ -80,32 +80,32 @@ interface ProductItem { icon: ReactNode; name: string; impact: string; desc: str
 const PRODUCTS: ProductItem[] = [
   {
     icon: <ArrowSwap24Regular />, name: "MigrateFAST", impact: "Migrate in weeks, not quarters",
-    desc: "Migrate from Tableau, Cognos, Qlik, MicroStrategy, SAP BusinessObjects, Crystal Reports, Alteryx, or Informatica to Microsoft Fabric with automated conversion, validation, and cutover support. Every stage is automated and validated — from environment assessment through DAX generation — so enterprise teams move faster with report fidelity preserved.", to: "/products/migratefast",
+    desc: "Move to Microsoft Fabric faster and more accurately from Tableau, Cognos, Qlik, MicroStrategy, SAP BusinessObjects, Crystal Reports, Alteryx, or Informatica, with automated conversion, DAX generation, and validated cutover at every stage.", to: "/products/migratefast",
     img: "/images/Product%20cards/MigrateFAST.png"
   },
   {
     icon: <TopSpeed24Regular />, name: "Fabric Admin Agent", impact: "Lower Fabric capacity cost",
-    desc: "Forecast capacity demand, prevent throttling under peak load, and reduce Fabric costs without expanding the platform team. Continuous monitoring, anomaly detection, and demand forecasting run in the background so platform teams can act before throttling hits users.", to: "/products/fabric-admin-agent",
+    desc: "Manage Fabric at enterprise scale without expanding your platform team. Continuous monitoring, anomaly detection, and demand forecasting run in the background so your team can act before throttling hits users.", to: "/products/fabric-admin-agent",
     img: "/images/Product%20cards/Fabric-Admin-Agent.png"
   },
   {
     icon: <Chat24Regular />, name: "AI-DataLens", impact: "Answers in plain language, instantly",
-    desc: "Ask questions of your enterprise data in natural language, with row-level security and audit logging preserved. Grounded in your semantic layer through RAG and enforced against existing security policies, AI-DataLens gives business users answers in seconds and governance teams the controls they already trust.", to: "/products/ai-datalens",
+    desc: "Give business users answers from your enterprise data in natural language, with row-level security and audit logging preserved through RAG-grounded queries against your semantic layer.", to: "/products/ai-datalens",
     img: "/images/Product%20cards/AI-datalens.png"
   },
   {
     icon: <Window24Regular />, name: "EmbedFAST", impact: "Embed analytics at any scale",
-    desc: "Embed Power BI in your application with multi-tenant access, role-based security, and white-label theming included out of the box. The hardest parts of embedded analytics — tenant isolation, RBAC, workspace onboarding, and theming — are handled at enterprise scale, so product teams ship analytics customers use directly in their apps.", to: "/products/embedfast",
+    desc: "Ship embedded analytics to your customers without months of custom integration, with tenant isolation, RBAC, unlimited workspace onboarding, and white-label theming handled at enterprise scale.", to: "/products/embedfast",
     img: "/images/Product%20cards/EmbedFAST.png"
   },
   {
     icon: <Pulse24Regular />, name: "LoadFAST", impact: "Launch with zero surprises",
-    desc: "Simulate real-world load on Power BI and Microsoft Fabric, validate capacity sizing, and prevent throttling under peak demand. Concurrent user simulation, load time measurement, and bottleneck identification let engineering teams optimize reports, size Fabric capacity accurately, and hold up under peak traffic.", to: "/products/loadfast",
+    desc: "Validate Power BI and Microsoft Fabric performance before your users find the bottlenecks, with concurrent user simulation, load time measurement, and capacity sizing recommendations.", to: "/products/loadfast",
     img: "/images/Product%20cards/LoadFAST.png"
   },
   {
     icon: <CheckmarkCircle24Regular />, name: "CertyFAST", impact: "Ship error-free models",
-    desc: "Detect DAX errors, enforce naming conventions, and document semantic models automatically for Power BI engineering teams. Automated checks, DAX standardization, and documentation keep models consistent across contributors and maintainable through team turnover.", to: "/products/certyfast",
+    desc: "Deliver Power BI semantic models that pass review the first time and stay maintainable across team turnover, with automated error detection, DAX standardization, and documentation.", to: "/products/certyfast",
     img: "/images/Product%20cards/CertyFAST.png"
   },
 ];
@@ -115,9 +115,9 @@ const CASES = caseStudyItems.slice(0, 3);
 
 interface ResourceItem { title: string; desc: string; to: string; img: string }
 const RESOURCES: ResourceItem[] = [
-  { title: "Power BI Custom Visuals", desc: "Custom Power BI visuals built and maintained by the team.", to: "/insights/power-bi-custom-visual-guide", img: "/images/power-bi-visuals.png" },
-  { title: "Best Practice Guides", desc: "Writing from MAQ Software engineers on patterns, pitfalls, and platform decisions.", to: "/insights/best-practice-guides", img: "/images/best-practice-guides.png" },
-  { title: "Webinars", desc: "Technical sessions on data platforms, AI, and the work itself.", to: "/events", img: "/images/webinar.png" },
+  { title: "Power BI custom visuals", desc: "Plug custom Power BI visuals directly into your reports.", to: "/insights/power-bi-custom-visual-guide", img: "/images/power-bi-visuals.png" },
+  { title: "Best practice guides", desc: "Learn patterns, pitfalls, and platform decisions from MAQ Software engineers who've shipped at enterprise scale.", to: "/insights/best-practice-guides", img: "/images/best-practice-guides.png" },
+  { title: "Webinars", desc: "Watch technical sessions on data platforms, AI, and the work itself.", to: "/events", img: "/images/webinar.png" },
 ];
 
 // "Industries we serve" data + icons are shared across the home explorations
@@ -380,17 +380,17 @@ export function HomeV3() {
           <div className={s.heroTop}>
             <motion.div className={s.heroText} variants={heroContainerV} initial="initial" animate="animate">
               <motion.h1 className={`maq-h1 ${s.heroH1}`} variants={heroItemV}>
-                Turn data into decisions faster with <em className={s.h1em}>AI-powered</em> analytics.
+                Modernize your data platform. Move faster with confidence.
               </motion.h1>
               <motion.p className={s.sub} variants={heroItemV}>
-                We help enterprises scale AI, modernize data platforms, and accelerate cloud transformation — delivered with speed, quality, and confidence.
+                From data foundation to production AI to cloud optimization — engineered by 1,800 experts across Microsoft, Snowflake, and Databricks.
               </motion.p>
               <motion.div className={s.heroCta} variants={heroItemV}>
-                <PrimaryButton size="large" onClick={() => handleContactClick()}>
-                  Contact Us
+                <PrimaryButton size="large" onClick={() => navigate("/insights/case-studies")}>
+                  See our work
                 </PrimaryButton>
-                <SecondaryButton size="large" onClick={() => navigate("/insights/case-studies")}>
-                  Case Studies
+                <SecondaryButton size="large" onClick={() => handleContactClick()}>
+                  Contact us
                 </SecondaryButton>
               </motion.div>
             </motion.div>
@@ -416,7 +416,7 @@ export function HomeV3() {
       <Section style={{ paddingTop: 80 }}>
         <motion.div {...fadeUp}>
           <SectionHeading
-            title="What we deliver"
+            title="What's possible"
             className={s.prodHead}
           />
         </motion.div>
@@ -447,10 +447,10 @@ export function HomeV3() {
           />
           <div className={s.featText}>
             <h2 className={s.featTitle}>{CASES[0].title}</h2>
-            <p className={s.featSub}>Replaced manual workflows across forecasting, pricing, targeting, and store operations with agentic AI that acts in real time.</p>
+            <p className={s.featSub}>How a global retailer moved from manual workflows to agentic AI, automating decisions across merchandising, pricing, operations, and customer engagement in real time.</p>
             <div className={s.featCta}>
               <SecondaryButton onClick={() => window.open(CASES[0].href, "_blank", "noopener,noreferrer")}>
-                Read the journey
+                Read the story
               </SecondaryButton>
             </div>
           </div>
@@ -490,7 +490,7 @@ export function HomeV3() {
       {/* INDUSTRIES */}
       <Section tone="gray">
         <motion.div {...fadeUp}>
-          <SectionHeading title="Industries we serve" align="left" className={s.indHead} />
+          <SectionHeading title="Industries" align="left" className={s.indHead} />
         </motion.div>
         <div className={s.industriesGrid}>
           {INDUSTRIES.map((ind, i) => (

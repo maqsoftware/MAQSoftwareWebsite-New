@@ -59,7 +59,7 @@ const capabilities: Capability[] = [
     tagline: "Unified governance across enterprise data",
     icon: <LockClosed24Regular />,
     description:
-      "Enable enterprise-wide data governance with comprehensive data cataloging, lineage, classification, and compliance management.",
+      "Govern data enterprise-wide with cataloging, lineage, classification, and compliance management.",
     tags: ["Microsoft Purview", "Data Catalog", "Lineage", "Compliance"],
   },
   {
@@ -67,7 +67,7 @@ const capabilities: Capability[] = [
     tagline: "Intelligent protection against cyber threats",
     icon: <Shield24Regular />,
     description:
-      "Protect enterprise environments with advanced threat detection, endpoint security, identity protection, and automated incident response.",
+      "Defend enterprise environments with threat detection, endpoint security, identity protection, and automated incident response.",
     tags: ["Microsoft Defender", "Threat Detection", "Endpoint Security", "Incident Response"],
   },
   {
@@ -75,7 +75,7 @@ const capabilities: Capability[] = [
     tagline: "Modern identity and access security",
     icon: <Globe24Regular />,
     description:
-      "Secure digital identities and access through modern identity management, authentication, and Zero Trust security practices.",
+      "Secure identities and access with identity management, authentication, and Zero Trust practices.",
     tags: ["Microsoft Entra", "Identity Management", "Authentication", "Zero Trust"],
   },
   {
@@ -83,7 +83,7 @@ const capabilities: Capability[] = [
     tagline: "Centralized governance for data and AI",
     icon: <ArrowSync24Regular />,
     description:
-      "Govern data and AI assets centrally with fine-grained access control, lineage tracking, and unified metadata management.",
+      "Control data and AI assets from one place with fine-grained access, lineage tracking, and unified metadata.",
     tags: ["Unity Catalog", "Databricks", "Access Control", "Metadata"],
   },
   {
@@ -91,7 +91,7 @@ const capabilities: Capability[] = [
     tagline: "Govern data with confidence",
     icon: <ArrowReset24Regular />,
     description:
-      "Establish governance frameworks that ensure enterprise data remains secure, compliant, discoverable, and trusted.",
+      "Establish governance frameworks that keep enterprise data secure, compliant, discoverable, and trusted.",
     tags: ["Data Governance", "Compliance", "Data Security", "Trust"],
   },
   {
@@ -99,7 +99,7 @@ const capabilities: Capability[] = [
     tagline: "Secure identities. Govern intelligent systems.",
     icon: <Shield24Regular />,
     description:
-      "Implement identity management and AI governance controls that safeguard enterprise assets while enabling responsible AI adoption.",
+      "Manage identity, access, and AI governance controls that protect enterprise assets while enabling responsible AI adoption.",
     tags: ["Identity", "Access Control", "AI Governance", "Responsible AI"],
   },
 ];
@@ -108,17 +108,17 @@ const outcomes: OutcomeItem[] = [
   {
     icon: <Shield24Regular />,
     title: "Increased threat protection",
-    desc: "Strengthen your defense against cyber threats. Reduce the risk of breaches and downtime.",
+    desc: "Harden defenses against cyber threats and reduce the risk of breaches and downtime.",
   },
   {
     icon: <LockClosed24Regular />,
     title: "Data integrity",
-    desc: "Ensure the confidentiality and integrity of your data. Safeguard your most valuable assets.",
+    desc: "Keep data confidential and intact, protecting your most valuable assets.",
   },
   {
     icon: <ArrowSync24Regular />,
     title: "Operational continuity",
-    desc: "Maintain business continuity with robust security measures that protect against disruptions and ensure ongoing operations, even in the face of cyber-attacks.",
+    desc: "Maintain business continuity with security controls that keep operations running through disruptions and attacks.",
   },
 ];
 
@@ -184,14 +184,14 @@ export function ServiceSecurityCompliance() {
       <ServiceHero
         eyebrow="Security & Governance"
         heading="Zero Trust security and AI governance, end to end"
-        subhead="ISO 27001 / 27701 / 27018 certified delivery. We implement Zero Trust, Defender, Sentinel, and Purview — including AI governance with Purview AI Hub — aligned to your regulatory landscape and Microsoft security stack."
+        subhead="ISO 27001, 27701, and 27018 certified delivery. Implement Zero Trust across Microsoft Defender, Sentinel, and Purview, including AI governance with Purview AI Hub, aligned to your regulatory requirements and Microsoft security stack."
         ctaMailSubject="Security & Compliance - MAQ Software"
         visual={<SecurityVisual />}
       />
 
       <ServiceCapabilities
         sectionId="security-capabilities"
-        title="Our security & governance capabilities"
+        title="What you can secure and govern"
         subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
         capabilities={capabilities}
         footerLabel="See security case studies"
@@ -204,14 +204,14 @@ export function ServiceSecurityCompliance() {
         outcomes={outcomes}
       />
       <ServiceCaseStudies
-        title="How clients are strengthening their security posture"
+        title="Security and governance in production"
         studies={caseStudies}
         serviceFilter="Security"
         allCasesLabel="See all case studies"
         serviceSpecificLabel="See security case studies"
       />
       <ServiceInsights
-        title="Our security insights"
+        title="Security insights"
         subhead="See our research that goes into optimizing our security service."
         insights={insights}
       />

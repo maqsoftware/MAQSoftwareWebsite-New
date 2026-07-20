@@ -9,15 +9,15 @@ import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlac
 const CERTYFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/KIiI16IKHIY?si=ohsb-fK3J1cylEi4";
 
 const benefits = [
-  { title: "Automate the review process", desc: "Save time and effort by easily identifying errors, formatting DAX measures, and creating knowledge base documents." },
-  { title: "Error free reporting", desc: "Ensure your report aligns with organizational standards. Identify discrepancies that impact the report's size, performance, or user experience." },
-  { title: "Accurate and uniform reports", desc: "Access detailed documentation of semantic models and report visuals, aiding developers in creating consistent knowledge documents." },
+  { title: "Automate the review process", desc: "Cut review time by catching errors, formatting DAX measures, and generating knowledge base documents in one pass." },
+  { title: "Error-free reporting", desc: "Align reports to your organizational standards and catch discrepancies that hurt report size, performance, or user experience." },
+  { title: "Accurate and uniform reports", desc: "Get detailed documentation of semantic models and visuals so developers produce consistent, uniform reports." },
 ];
 
 const steps = [
-  { n: 1, title: "Analyze your report", desc: "Automatically detect errors, discrepancies, and performance issues impacting report quality." },
+  { n: 1, title: "Analyze your report", desc: "Detect errors, discrepancies, and performance issues that hurt report quality." },
   { n: 2, title: "Review insights", desc: "Explore field lineage and generate detailed documentation of your Power BI models." },
-  { n: 3, title: "Optimize and deploy", desc: "Fix alignment issues and ensure adherence to best practices for seamless report delivery." },
+  { n: 3, title: "Optimize and deploy", desc: "Fix alignment issues and meet best practices, then deploy with confidence." },
 ];
 
 const resources = [
@@ -38,10 +38,10 @@ export function ProductCertyFAST() {
             {/* <span className={s.eyebrow}>Power BI quality control</span> */}
             <h1 className={s.h1}>CertyFAST</h1>
             <p className={s.heroSub}>
-              CertyFAST helps organizations build and maintain high-quality Power BI semantic models. By automating error detection, DAX standardization, and documentation, it improves consistency, reduces development effort, and ensures adherence to modeling best practices.
+              Build and maintain high-quality Power BI semantic models with less manual work. CertyFAST automates error detection, DAX standardization, and documentation, keeping models consistent and aligned to your modeling standards.
             </p>
             <div className={s.btns}>
-              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact Us</PrimaryButton>
+              <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick("Contact Us - CertyFAST")}>Contact us</PrimaryButton>
               <Button variant="tertiary" size="large" className="maq-equal-cta" href="https://github.com/maqsoftware/CertyFAST" target="_blank" rel="noopener noreferrer">Marketplace</Button>
             </div>
           </div>
@@ -97,7 +97,7 @@ export function ProductCertyFAST() {
         </div>
       </section>
 
-      <section className={s.section}><ProductCaseStudies heading="CertyFAST success stories" studies={[
+      <section className={s.section}><ProductCaseStudies heading="CertyFAST in production" studies={[
         { tag: "Cybersecurity", title: "Strengthening cybersecurity with Managed Identity and RBAC", teaser: "Eliminating credential sprawl with Azure Managed Identity and enforcing least-privilege access — the security backbone CertyFAST automates.", href: "https://blog.maqsoftware.com/2024/08/strengthening-cybersecurity.html" },
         { tag: "Secure Copilot", title: "Building a secure Copilot: Addressing key security challenges", teaser: "Reference design for shipping enterprise Copilots safely — patterns and guardrails CertyFAST helps you continuously enforce.", href: "https://blog.maqsoftware.com/2024/08/building-secure-copilot-addressing-key.html" },
         { tag: "Data governance", title: "Unifying data management with a centralized framework", teaser: "Centralized governance and access controls across distributed systems — a model CertyFAST helps certify on an ongoing basis.", href: "https://blog.maqsoftware.com/2024/08/unifying-data-management-with.html" },

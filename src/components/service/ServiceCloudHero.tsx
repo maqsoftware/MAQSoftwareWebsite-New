@@ -105,9 +105,9 @@ export function ServiceCloudHero() {
           {/* <span className={s.eyebrow}>Cloud Modernization</span> */}
           <h1 className={s.h1}>Modernize from on-premises to cloud-native on Azure</h1>
           <p className={s.sub}>
-            MAQ Software replatforms on-premises workloads to Azure — from lift-and-shift
-            through full cloud-native re-architecture — with FinOps discipline that delivers
-            30–40% lower run cost on average across enterprise workloads.
+            Replatform on-premises workloads to Azure, from lift-and-shift to full
+            cloud-native re-architecture, with FinOps discipline that cuts run cost 30–40%
+            on average across enterprise workloads.
           </p>
           <div className={s.btns}>
             <PrimaryButton
@@ -116,7 +116,7 @@ export function ServiceCloudHero() {
                 handleContactClick("Cloud Modernization")
               }
             >
-              Contact Us
+              Contact us
             </PrimaryButton>
           </div>
         </div>

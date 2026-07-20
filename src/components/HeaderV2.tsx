@@ -256,17 +256,24 @@ const industries: NavItem[] = [
 ];
 
 const services: NavItem[] = [
-  { label: "Data & AI Platforms", href: "/services/data-and-analytics" },
-  { label: "AI Solutions & Agents", href: "/services/agentic-ai" },
-  { label: "Insights & Analytics", href: "/services/reporting-bi" },
-  { label: "Business Applications & Automation", href: "/services/business-apps" },
-  { label: "Cloud Modernization", href: "/services/cloud" },
-  { label: "Security & Governance", href: "/services/security-compliance" },
+  { label: "Data & AI platforms", href: "/services/data-and-analytics" },
+  { label: "AI solutions & agents", href: "/services/agentic-ai" },
+  { label: "Insights & analytics", href: "/services/reporting-bi" },
+  { label: "Business applications & automation", href: "/services/business-apps" },
+  { label: "Cloud modernization", href: "/services/cloud" },
+  { label: "Security & governance", href: "/services/security-compliance" },
 ];
 
-const productNav: NavItem[] = [
-  ...products.map((p) => ({ label: p.name, href: `/products/${p.slug}` })),
-];
+// Menu leads with MigrateFAST, then Fabric Admin Agent; the rest keep their
+// order from the products data (the single source for product names + slugs).
+const productLeadOrder = ["migratefast", "fabric-admin-agent"];
+const productRank = (slug: string) => {
+  const i = productLeadOrder.indexOf(slug);
+  return i === -1 ? productLeadOrder.length : i;
+};
+const productNav: NavItem[] = [...products]
+  .sort((a, b) => productRank(a.slug) - productRank(b.slug))
+  .map((p) => ({ label: p.name, href: `/products/${p.slug}` }));
 
 const partnerships: NavItem[] = [
   { label: "Microsoft", href: "/partnerships/microsoft" },
@@ -287,7 +294,7 @@ const about: NavItem[] = [
   { label: "Careers", href: "/careers" },
   { label: "Social impact", href: "/resources/Social-Impact-Report.pdf.pdf" },
   { label: "Sustainability", href: "/sustainability" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact us", href: "/contact" },
 ];
 
 function shouldOpenInNewTab(href: string): boolean {
@@ -582,7 +589,7 @@ export function HeaderV2() {
         </div>
 
         <div className={`${s.navCta} header-right`}>
-          <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick()}>Contact Us</PrimaryButton>
+          <PrimaryButton size="large" className="maq-equal-cta" onClick={() => handleContactClick()}>Contact us</PrimaryButton>
         </div>
       </div>
 

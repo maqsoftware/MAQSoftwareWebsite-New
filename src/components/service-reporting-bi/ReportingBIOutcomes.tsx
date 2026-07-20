@@ -48,17 +48,17 @@ const outcomes: Outcome[] = [
   {
     icon: <Eye24Regular />,
     title: "Data clarity",
-    desc: "Achieve clear, actionable insights with powerful visualizations that simplify complex data for better understanding.",
+    desc: "Surface clear answers from complex data with visualizations teams can read at a glance.",
   },
   {
     icon: <Timer24Regular />,
     title: "Faster decision-making",
-    desc: "Enable quicker decision-making by providing stakeholders with real-time, easy-to-understand data visualizations.",
+    desc: "Cut time to decision by putting real-time, easy-to-read visuals in front of stakeholders.",
   },
   {
     icon: <People24Regular />,
     title: "Improved data accessibility",
-    desc: "Ensure that critical insights are easily accessible to everyone in your organization, fostering a data-driven culture.",
+    desc: "Open access to critical insights across your organization, so every team works from the same numbers.",
   },
 ];
 

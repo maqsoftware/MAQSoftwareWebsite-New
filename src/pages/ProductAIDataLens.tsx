@@ -9,18 +9,18 @@ import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlac
 const AI_DATALENS_VIDEO_EMBED_URL = "https://www.youtube.com/embed/3NCRlbKKuC8?si=-HXXCu3lYAnlCNbG";
 
 const benefits = [
-  { title: "Informed decisions", desc: "Move beyond guesswork — leverage data-backed insights to make informed decisions that reduce risk and accelerate growth." },
-  { title: "Streamlined operations", desc: "Automate processes and reduce manual effort with insights that keep your operations running smoothly." },
-  { title: "Plug-and-play extensibility", desc: "Quickly connect to your existing tools and systems with plug-and-play extensibility, so your data workflows stay seamless and scalable." },
+  { title: "Informed decisions", desc: "Make data-backed decisions instead of guessing, cutting risk as you grow." },
+  { title: "Streamlined operations", desc: "Automate processes and cut manual work with insights that keep operations moving." },
+  { title: "Plug-and-play extensibility", desc: "Connect to the tools and systems you already run, so data workflows keep flowing as you add more." },
 ];
 
 const features = [
-  { icon: <Chat24Regular />, title: "Chat with structured data", desc: "Interact with enterprise datasets using natural language. No SQL or DAX — just ask questions and get instant answers." },
-  { icon: <Person24Regular />, title: "User guidance", desc: "Intelligent question suggestions and personalized investigative recommendations help new users explore data from day one." },
-  { icon: <Search24Regular />, title: "Semantic relevance", desc: "Understands the true intent behind user questions by analyzing metadata and context for accurate, meaningful responses." },
-  { icon: <ChartMultiple24Regular />, title: "Automated visual generation", desc: "Automatically generates relevant charts and visuals from user queries — quick interpretation, zero manual effort." },
-  { icon: <Lightbulb24Regular />, title: "Insight generation", desc: "Beyond raw data — generates narratives, titles, summaries, and recommendations in a business-friendly format." },
-  { icon: <DatabaseSearch24Regular />, title: "Metadata agent & column pruning", desc: "Transforms raw data into an intelligent, indexed schema — faster, more accurate queries with minimal effort." },
+  { icon: <Chat24Regular />, title: "Chat with structured data", desc: "Query enterprise datasets in natural language, no SQL or DAX. Just ask and get instant answers." },
+  { icon: <Person24Regular />, title: "User guidance", desc: "Suggests questions and next steps so new users can explore data from day one." },
+  { icon: <Search24Regular />, title: "Semantic relevance", desc: "Reads the intent behind a question using metadata and context to return accurate, relevant answers." },
+  { icon: <ChartMultiple24Regular />, title: "Automated visual generation", desc: "Generates the right charts and visuals from a query, so results are quick to read with no manual work." },
+  { icon: <Lightbulb24Regular />, title: "Insight generation", desc: "Writes narratives, titles, summaries, and recommendations in plain business language, not just raw data." },
+  { icon: <DatabaseSearch24Regular />, title: "Metadata agent & column pruning", desc: "Turns raw data into an indexed schema for faster, more accurate queries with minimal setup." },
 ];
 
 const resources = [
@@ -40,11 +40,11 @@ export function ProductAIDataLens() {
             {/* <span className={s.eyebrow}>Intelligent data interaction</span> */}
             <h1 className={s.h1}>AI-DataLens</h1>
             <p className={s.heroSub}>
-             AI Data Lens - Accelerate data-driven decision-making with natural language access to enterprise datasets. Users can ask questions and receive instant answers without technical expertise, while preserving row-level security, governance, and audit compliance.
+             Ask questions of enterprise datasets in plain language and get instant answers, no technical skills required. AI-DataLens keeps row-level security, governance, and audit compliance intact on every query.
             </p>
             <div className={s.btns}>
               <PrimaryButton size="large" onClick={() => handleContactClick("AI-DataLens - MAQ Software")}>
-                Contact Us
+                Contact us
               </PrimaryButton>
             </div>
           </div>
@@ -102,7 +102,7 @@ export function ProductAIDataLens() {
         </div>
       </section>
 
-      <section className={s.section}><ProductCaseStudies heading="Real-world AI-DataLens wins" studies={[
+      <section className={s.section}><ProductCaseStudies heading="AI-DataLens in production" studies={[
         { tag: "Self-service BI", title: "Empowering self-service using Custom Copilot agent with Power BI Embedded", teaser: "A custom Copilot agent over Power BI Embedded letting business users ask data questions in plain English — reducing report request backlog.", href: "https://blog.maqsoftware.com/2025/03/empowering-self-service-using-custom.html" },
         { tag: "Fabric data agent", title: "Delivering accurate business intelligence insights with a Fabric data agent", teaser: "A Microsoft Fabric data agent answering business questions with citation-backed accuracy, replacing brittle hand-built dashboards.", href: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html" },
         { tag: "Information retrieval", title: "Streamlining information retrieval with AI Copilots", teaser: "Enterprise AI Copilots that ground answers in organizational content — dramatically improving knowledge worker productivity.", href: "https://blog.maqsoftware.com/2024/07/streamlining-information-retrieval-with.html" },

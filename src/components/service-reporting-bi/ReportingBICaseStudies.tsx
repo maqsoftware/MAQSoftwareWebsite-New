@@ -140,7 +140,7 @@ export function ReportingBICaseStudies({
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Related case studies</span> */}
-          <h2 className={s.title}>How clients are modernizing reporting &amp; BI</h2>
+          <h2 className={s.title}>Reporting and BI, modernized</h2>
         </div>
         <div className={s.grid}>
           {studies.map((c) => (

@@ -106,8 +106,8 @@ const useStyles = makeStyles({
 
 export function ServiceHero({
   eyebrow = "AI Solutions & Agents",
-  heading = "Build production-ready AI agents on Microsoft Foundry",
-  subhead = "MAQ Software designs, builds, and operates GenAI agents and copilots on Microsoft Foundry and the Microsoft Agent Framework — automating high-value workflows from contract review to demand forecasting, with full governance, evaluation, and human-in-the-loop controls.",
+  heading = "Run production-ready AI agents on Microsoft Foundry",
+  subhead = "Automate high-value workflows from contract review to demand forecasting with GenAI agents and copilots on Microsoft Foundry and the Microsoft Agent Framework, governed end-to-end with evaluation and human-in-the-loop controls.",
   ctaMailSubject = "Agentic AI & ML - MAQ Software",
   visual,
 }: ServiceHeroProps = {}) {
@@ -127,7 +127,7 @@ export function ServiceHero({
                 handleContactClick(ctaMailSubject)
               }
             >
-              Contact Us
+              Contact us
             </PrimaryButton>
           </div>
         </div>

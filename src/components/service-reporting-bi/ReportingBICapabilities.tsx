@@ -147,7 +147,7 @@ const capabilities: Capability[] = [
     tagline: "Interactive business intelligence dashboards",
     icon: <ChartMultiple24Regular />,
     description:
-      "Create interactive dashboards and business intelligence solutions that transform enterprise data into actionable insights and informed decisions.",
+      "Build interactive dashboards and reporting that turn enterprise data into decisions people act on.",
     tags: ["Power BI", "Dashboards", "Business Intelligence"],
   },
   {
@@ -155,7 +155,7 @@ const capabilities: Capability[] = [
     tagline: "Real-time insights from streaming data",
     icon: <Pulse24Regular />,
     description:
-      "Monitor streaming data and operational events in real time to enable faster business decisions and proactive responses.",
+      "Monitor streaming data and operational events as they happen, so teams decide and respond faster.",
     tags: ["Microsoft Fabric", "Real-Time", "Streaming Analytics"],
   },
   {
@@ -163,7 +163,7 @@ const capabilities: Capability[] = [
     tagline: "High-performance analytics with SQL",
     icon: <DataPie24Regular />,
     description:
-      "Deliver high-performance SQL analytics for enterprise reporting, dashboards, and collaborative data exploration on large-scale datasets.",
+      "Run SQL analytics on large datasets for enterprise reporting, dashboards, and collaborative data exploration.",
     tags: ["Databricks SQL", "Enterprise Reporting", "Large-Scale Analytics"],
   },
   {
@@ -171,7 +171,7 @@ const capabilities: Capability[] = [
     tagline: "Executive visibility into business performance",
     icon: <Gauge24Regular />,
     description:
-      "Design executive dashboards that provide clear visibility into business performance through meaningful KPIs and operational metrics.",
+      "Design executive dashboards that show business performance through clear KPIs and operational metrics.",
     tags: ["Executive Dashboards", "KPI Reporting", "Business Performance"],
   },
   {
@@ -179,7 +179,7 @@ const capabilities: Capability[] = [
     tagline: "Analytics accessible to every business user",
     icon: <People24Regular />,
     description:
-      "Empower business users with governed self-service analytics to explore data, build reports, and generate insights independently.",
+      "Give business users governed self-service analytics to explore data, build reports, and answer questions on their own.",
     tags: ["Self-Service", "Governed Analytics", "Business Users"],
   },
   {
@@ -187,7 +187,7 @@ const capabilities: Capability[] = [
     tagline: "Forecast outcomes. Optimize decisions.",
     icon: <Gauge24Regular />,
     description:
-      "Apply machine learning and statistical models to forecast outcomes, optimize decisions, and recommend business actions.",
+      "Forecast outcomes and recommend next actions with machine learning and statistical models.",
     tags: ["Predictive Analytics", "Prescriptive Analytics", "Optimization"],
   },
 ];
@@ -202,7 +202,7 @@ export function ReportingBICapabilities() {
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Our expertise</span> */}
-          <h2 className={s.title}>Our insights &amp; analytics capabilities</h2>
+          <h2 className={s.title}>What you can build with analytics</h2>
           {/* <p className={s.sub}>
             Four capability pillars that turn raw data into governed, high-performance Power BI and
             Microsoft Fabric reporting.
@@ -245,7 +245,7 @@ export function ReportingBICapabilities() {
           className={s.footerLink}
           to="/insights/case-studies?filter=Insights%20%26%20Analytics#insights-content"
         >
-          See Insights &amp; Analytics case studies <ArrowRight16Regular />
+          See insights &amp; analytics case studies <ArrowRight16Regular />
         </Link>
       </div>
     </section>

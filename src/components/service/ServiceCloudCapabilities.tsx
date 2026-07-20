@@ -154,7 +154,7 @@ const capabilities: Capability[] = [
     tagline: "Secure and scalable cloud infrastructure",
     icon: <CloudArrowUp24Regular />,
     description:
-      "Modernize enterprise infrastructure by leveraging Azure cloud services for scalable, secure, and resilient application deployment.",
+      "Modernize enterprise infrastructure on Azure for secure, resilient application deployment that scales with demand.",
     tags: ["Microsoft Azure", "Cloud Infrastructure", "Scalability"],
   },
   {
@@ -162,7 +162,7 @@ const capabilities: Capability[] = [
     tagline: "Kubernetes simplified for the enterprise",
     icon: <Cube24Regular />,
     description:
-      "Deploy and manage containerized applications using Kubernetes with enterprise-grade scalability, security, and operational efficiency.",
+      "Deploy and run containerized applications on Azure Kubernetes Service with the scaling, security, and operations enterprises need.",
     tags: ["AKS", "Kubernetes", "Containerization"],
   },
   {
@@ -170,7 +170,7 @@ const capabilities: Capability[] = [
     tagline: "Modern applications built for the cloud",
     icon: <Code24Regular />,
     description:
-      "Develop modern cloud-native applications using microservices, containers, APIs, and DevOps best practices.",
+      "Build cloud-native applications with microservices, containers, APIs, and DevOps practices.",
     tags: ["Microservices", "Containers", "APIs", "DevOps"],
   },
   {
@@ -178,7 +178,7 @@ const capabilities: Capability[] = [
     tagline: "Seamless migration to modern platforms",
     icon: <ArrowSwap24Regular />,
     description:
-      "Migrate enterprise applications and data platforms to the cloud with minimal disruption while improving performance and scalability.",
+      "Migrate enterprise applications and data platforms to the cloud with minimal disruption and better performance.",
     tags: ["Application Migration", "Data Migration", "Modern Platforms"],
   },
   {
@@ -186,7 +186,7 @@ const capabilities: Capability[] = [
     tagline: "Future-ready enterprise infrastructure",
     icon: <CloudArrowUp24Regular />,
     description:
-      "Transform legacy infrastructure into secure, scalable, cloud-first environments optimized for modern workloads.",
+      "Replace legacy infrastructure with secure, cloud-first environments built for modern workloads.",
     tags: ["Infrastructure Modernization", "Cloud-First", "Legacy Transformation"],
   },
   {
@@ -194,7 +194,7 @@ const capabilities: Capability[] = [
     tagline: "Maximize cloud value and efficiency",
     icon: <CurrencyDollarEuro24Regular />,
     description:
-      "Optimize cloud investments through governance, cost monitoring, resource optimization, and financial accountability.",
+      "Optimize cloud spend with governance, cost monitoring, right-sizing, and financial accountability.",
     tags: ["FinOps", "Cost Optimization", "Cloud Governance"],
   },
 ];
@@ -209,7 +209,7 @@ export function ServiceCloudCapabilities() {
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Our expertise</span> */}
-          <h2 className={s.title}>Our cloud modernization capabilities</h2>
+          <h2 className={s.title}>What you can modernize on Azure</h2>
           {/* <p className={s.sub}>
             Four capability pillars that replatform on-premises workloads to Azure with
             FinOps discipline — scalable, secure, and cost-controlled.
