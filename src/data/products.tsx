@@ -176,36 +176,6 @@ function illustration(motif: "chat" | "gauge" | "swap" | "embed" | "shield" | "i
 
 export const products: Product[] = [
   {
-    slug: "fabric-admin-agent",
-    initials: "FA",
-    name: "Fabric Admin Agent",
-    tagline: "Fabric Workload",
-    shortDesc:
-      "Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.",
-    longDesc:
-      "Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.",
-    heroIcon: <Settings24Regular />,
-    image: illustration("gauge"),
-    tags: ["Fabric Workload"],
-    features: [
-      { title: "24/7 health monitoring", desc: "Capacity utilization, refresh SLAs, and item failures tracked across every workspace." },
-      { title: "Proactive risk alerts", desc: "Surface issues before business users hit broken reports or throttled queries." },
-      { title: "One-click remediation", desc: "Suggested fixes (resize, reassign, archive) execute with full audit trail." },
-      { title: "Tenant-wide visibility", desc: "Single pane across capacities, domains, workspaces, lakehouses, and warehouses." },
-    ],
-    useCases: [
-      { industry: "Enterprise IT", scenario: "Platform owners prevent Friday-afternoon capacity outages." },
-      { industry: "FinOps", scenario: "Right-size F-SKUs based on observed peak workloads, not guesses." },
-      { industry: "Data governance", scenario: "Catch sprawl — orphaned workspaces, unused items, drifted permissions." },
-    ],
-    platforms: ["Microsoft Fabric", "Power BI", "Microsoft Purview"],
-    impact: [
-      { value: "60%", label: "Reduction in capacity incidents" },
-      { value: "24/7", label: "Autonomous monitoring coverage" },
-      { value: "5 min", label: "Mean time to detect drift" },
-    ],
-  },
-  {
     slug: "migratefast",
     initials: "MF",
     name: "MigrateFAST",
@@ -234,6 +204,36 @@ export const products: Product[] = [
       { value: "120+", label: "Enterprise migrations delivered" },
       { value: "70%", label: "Faster than manual rewrite" },
       { value: "$4M+", label: "Average legacy license retired" },
+    ],
+  },
+  {
+    slug: "fabric-admin-agent",
+    initials: "FA",
+    name: "Fabric Admin Agent",
+    tagline: "Fabric Workload",
+    shortDesc:
+      "Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.",
+    longDesc:
+      "Fabric Admin Agent transforms Microsoft Fabric capacity management from reactive monitoring to proactive optimization. Using AI-driven insights, it detects anomalies, predicts demand, and recommends actions to prevent throttling, improve performance, and reduce costs. The result is a self-service administrative experience that enables platform teams to maximize Fabric investments while minimizing operational overhead.",
+    heroIcon: <Settings24Regular />,
+    image: illustration("gauge"),
+    tags: ["Fabric Workload"],
+    features: [
+      { title: "24/7 health monitoring", desc: "Capacity utilization, refresh SLAs, and item failures tracked across every workspace." },
+      { title: "Proactive risk alerts", desc: "Surface issues before business users hit broken reports or throttled queries." },
+      { title: "One-click remediation", desc: "Suggested fixes (resize, reassign, archive) execute with full audit trail." },
+      { title: "Tenant-wide visibility", desc: "Single pane across capacities, domains, workspaces, lakehouses, and warehouses." },
+    ],
+    useCases: [
+      { industry: "Enterprise IT", scenario: "Platform owners prevent Friday-afternoon capacity outages." },
+      { industry: "FinOps", scenario: "Right-size F-SKUs based on observed peak workloads, not guesses." },
+      { industry: "Data governance", scenario: "Catch sprawl — orphaned workspaces, unused items, drifted permissions." },
+    ],
+    platforms: ["Microsoft Fabric", "Power BI", "Microsoft Purview"],
+    impact: [
+      { value: "60%", label: "Reduction in capacity incidents" },
+      { value: "24/7", label: "Autonomous monitoring coverage" },
+      { value: "5 min", label: "Mean time to detect drift" },
     ],
   },
   {

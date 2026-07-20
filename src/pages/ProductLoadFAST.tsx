@@ -9,7 +9,7 @@ import { ProductCaseStudies /*, TestimonialsPlaceholder */ } from "./productPlac
 const APPSOURCE = "https://azuremarketplace.microsoft.com/en/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=Overview";
 const APPSOURCE_PLANS = "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/maqsoftware.powerbiloadanalyzer?tab=PlansAndPrice";
 const MARKETPLACE_OVERVIEW = "https://marketplace.microsoft.com/en-us/product/maqsoftware.powerbiloadanalyzer?tab=Overview";
-const LOADFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/yAQm1giPHt0?si=zEG1RU_aJKICXGic";
+const LOADFAST_VIDEO_EMBED_URL = "https://www.youtube.com/embed/yAQm1giPHt0?si=zEG1RU_aJKICXGic&enablejsapi=1";
 
 const benefits = [
   { icon: <Server24Regular />, title: "Evaluate Fabric capacity", desc: "Simulate concurrent user load to see exactly how much Fabric capacity your reporting workloads need." },

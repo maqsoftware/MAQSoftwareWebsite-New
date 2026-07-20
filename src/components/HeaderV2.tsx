@@ -555,6 +555,7 @@ export function HeaderV2() {
       window.open(href, "_blank", "noopener,noreferrer");
       return;
     }
+    scrollPos.current = 0;
     closeMenu();
     navigate(href);
   }

@@ -392,6 +392,9 @@ export function HomeV3() {
                 <SecondaryButton size="large" onClick={() => handleContactClick()}>
                   Contact us
                 </SecondaryButton>
+                <PrimaryButton size="large" onClick={() => handleContactClick()}>
+                  Contact Us
+                </PrimaryButton>
               </motion.div>
             </motion.div>
             <motion.div className={s.heroImageCol} initial={{ opacity: 0, x: 44, scale: 0.96 }} animate={{ opacity: 1, x: 0, scale: 1 }} transition={{ duration: 0.8, ease: EASE, delay: 0.35 }}>
