@@ -22,9 +22,9 @@ const steps = [
 
 const resources = [
   { pill: "GitHub", title: "CertyFAST on GitHub", desc: "Download the tool from the official MAQ Software repository.", href: "https://github.com/maqsoftware/CertyFAST" },
-  { pill: "Docs", title: "Installation & user guide", desc: "Step-by-step integration, best practices, and troubleshooting.", href: "/products/certyfast/installation-and-usage-guide" },
-  { pill: "Best practices", title: "Power BI development standards", desc: "Authoritative guides from the MAQ Software community.", href: "/insights/best-practice-guides" },
-  { pill: "Case studies", title: "Quality-control case studies", desc: "Real-world Power BI quality wins.", href: "/insights/case-studies" },
+  { pill: "Docs", title: "Installation & user guide", desc: "Step-by-step integration, best practices, and troubleshooting.", href: "/#/products/certyfast/installation-and-usage-guide" },
+  { pill: "Best practices", title: "Power BI development standards", desc: "Authoritative guides from the MAQ Software community.", href: "/#/insights/best-practice-guides" },
+  { pill: "Case studies", title: "Quality-control case studies", desc: "Real-world Power BI quality wins.", href: "/#/insights/case-studies" },
 ];
 
 export function ProductCertyFAST() {
