@@ -303,7 +303,7 @@ export function InsightsCustomVisualDetail() {
                 )}
                 <SecondaryButton
                   size="large"
-                  href="/#/insights/visual-chooser"
+                  href="/insights/visual-chooser"
                 >
                   Open visual chooser guide
                 </SecondaryButton>

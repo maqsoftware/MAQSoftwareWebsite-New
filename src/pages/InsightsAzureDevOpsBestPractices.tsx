@@ -41,7 +41,7 @@ export function InsightsAzureDevOpsBestPractices() {
         },
       ]}
       references={[
-        { label: "Optimize your DevOps strategies with our 9 essential best practices", href: "/#/insights/azure-dev-ops-best-practices-guide", source: "MAQ Software" },
+        { label: "Optimize your DevOps strategies with our 9 essential best practices", href: "/insights/azure-dev-ops-best-practices-guide", source: "MAQ Software" },
         { label: "Overview of CI/CD data pipelines on Microsoft Azure", href: "https://learn.microsoft.com/en-us/azure/devops/pipelines/apps/cd/azure/cicd-data-overview?view=azure-devops", source: "Microsoft Corporation" },
         { label: "Configure CI/CD with Azure Pipelines", href: "https://learn.microsoft.com/en-us/azure/app-service/deploy-azure-pipelines?tabs=yaml", source: "Microsoft Corporation" },
         { label: "Plan and track work with Azure Boards", href: "https://learn.microsoft.com/en-us/azure/devops/boards/sprints/", source: "Microsoft Corporation" },
