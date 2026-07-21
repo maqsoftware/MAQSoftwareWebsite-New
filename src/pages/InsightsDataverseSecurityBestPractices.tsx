@@ -24,7 +24,7 @@ export function InsightsDataverseSecurityBestPractices() {
         },
       ]}
       references={[
-        { label: "7 best practices you need to secure Dataverse", href: "/#/insights/dataverse-security-best-practices", source: "MAQ Software" },
+        { label: "7 best practices you need to secure Dataverse", href: "/insights/dataverse-security-best-practices", source: "MAQ Software" },
         { label: "Copy a security role — Power Platform", href: "https://learn.microsoft.com/en-us/power-platform/admin/copy-security-role", source: "Microsoft, last updated February 15, 2022" },
         { label: "Create and manage environments in Dataverse", href: "https://learn.microsoft.com/en-us/training/modules/create-manage-environments/", source: "Microsoft, 2022" },
       ]}
