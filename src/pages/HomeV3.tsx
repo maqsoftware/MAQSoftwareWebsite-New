@@ -380,10 +380,10 @@ export function HomeV3() {
           <div className={s.heroTop}>
             <motion.div className={s.heroText} variants={heroContainerV} initial="initial" animate="animate">
               <motion.h1 className={`maq-h1 ${s.heroH1}`} variants={heroItemV}>
-                Modernize your data platform. Move faster with confidence.
+                Turn data into decisions faster with AI-powered analytics
               </motion.h1>
               <motion.p className={s.sub} variants={heroItemV}>
-                From data foundation to production AI to cloud optimization — engineered by 1,800 experts across Microsoft, Snowflake, and Databricks.
+                We help enterprises scale AI, modernize data platforms, and accelerate cloud transformation — delivered with speed, quality, and confidence.
               </motion.p>
               <motion.div className={s.heroCta} variants={heroItemV}>
                 <PrimaryButton size="large" onClick={() => navigate("/insights/case-studies")}>
@@ -416,7 +416,7 @@ export function HomeV3() {
       <Section style={{ paddingTop: 80 }}>
         <motion.div {...fadeUp}>
           <SectionHeading
-            title="What's possible"
+            title="What you can accomplish"
             className={s.prodHead}
           />
         </motion.div>
