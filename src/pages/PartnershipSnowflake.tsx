@@ -116,65 +116,64 @@ const whySnowflake = [
 ];
 
 const highlights = [
-  { metric: "150+", label: "SnowPro Core Certified Associates" },
-  { metric: "25+", label: "SnowPro Advanced Certified Associates" },
-  { metric: "10+", label: "Implementations for Enterprise Clients" },
-  { metric: "1", label: "Marketplace Offerings" },
+  { metric: "150+", label: "SnowPro Core certified associates" },
+  { metric: "25+", label: "SnowPro Advanced certified associates" },
+  { metric: "10+", label: "Implementations for enterprise clients" },
+  { metric: "1", label: "Marketplace offering" },
 ];
 
 const offerings = [
   {
-    eyebrow: "Fast, Secure, and Hassle-Free",
+    eyebrow: "Migrate without downtime",
     title: "Data Warehouse Migration to Snowflake",
-    desc: "Simplify your data migration journey with MAQ Software's end-to-end Snowflake migration solutions—ensuring a seamless, secure, and high-performance transition through automated frameworks, optimized ETL, and zero-downtime execution from on-prem, legacy, or cloud sources.",
+    desc: "Migrate to Snowflake from on-prem, legacy, or cloud sources with automated frameworks, optimized ETL, and zero-downtime execution, all secure end to end.",
   },
   {
-    eyebrow: "Faster Insights, Smarter Decisions",
+    eyebrow: "Faster queries, faster decisions",
     title: "Business Intelligence with Snowflake & Power BI",
-    desc: "We help organizations unlock the full potential of Power BI on Snowflake by delivering lightning-fast query execution and highly optimized data models. By leveraging Snowflake's intelligent caching and elastic compute scaling, we ensure seamless, real-time analytics and interactive dashboards—empowering swift data-driven decisions.",
+    desc: "Run Power BI on Snowflake with fast query execution and tuned data models. Snowflake's caching and elastic compute scaling deliver real-time analytics and interactive dashboards, so teams decide faster.",
   },
   {
-    eyebrow: "Transforming Data into Instant Insights",
+    eyebrow: "Act on streaming data as it lands",
     title: "Real-Time Analytics",
-    desc: "With real-time analytics in Snowflake, we help businesses ingest, process, and analyze streaming data for faster decision-making. Our expertise in Snowflake Stream, Tasks, and external integrations like Kafka and Azure Event Hubs ensures organizations can act on insights in real time.",
+    desc: "Ingest, process, and analyze streaming data in Snowflake for faster decisions. Built on Snowflake Streams, Tasks, and integrations like Kafka and Azure Event Hubs, so teams act on insights in real time.",
   },
   {
-    eyebrow: "Powering Intelligent Business Decisions",
+    eyebrow: "Predict, detect, and forecast",
     title: "Advanced Analytics and AI/ML",
-    desc: "We leverage Snowflake's AI/ML capabilities—integrating Snowpark, Python, and ML models—to drive predictive analytics, anomaly detection, and intelligent automation. From customer segmentation and fraud detection to demand forecasting, we turn raw data into actionable insights that enhance decision-making and operational efficiency.",
+    desc: "Build predictive analytics, anomaly detection, and automation on Snowflake AI/ML with Snowpark, Python, and ML models. From customer segmentation and fraud detection to demand forecasting, turn raw data into decisions and operational efficiency.",
   },
   {
-    eyebrow: "Turning Data into Revenue",
+    eyebrow: "Turn data into revenue",
     title: "Embedded Analytics and Data Monetization",
-    desc: "We enable organizations to monetize their data assets by embedding Snowflake-powered analytics into applications and customer portals. Our expertise in API-based data sharing, multi-tenant architectures, and white-labeled analytics solutions helps businesses create scalable, revenue-generating insights.",
+    desc: "Monetize data by embedding Snowflake analytics into applications and customer portals. With API-based data sharing, multi-tenant architectures, and white-labeled analytics, build revenue-generating insights.",
   },
 ];
 
 const dataValidatorBullets = [
   {
-    title: "Core Capabilities",
+    title: "Core capabilities",
     items: [
-      <><strong>Row Count Check:</strong> Validates if row counts between source and target tables are within a ±5% tolerance.</>,
-      <><strong>Grain Check:</strong> Ensures the uniqueness of primary keys across both source and destination tables.</>,
-      <><strong>KPI Check:</strong> Compares the results of custom KPI SQL logic or aggregated column values between the source and destination. Passes if the difference is within ±5%.</>,
+      <><strong>Row count check:</strong> validates that row counts between source and target tables are within a ±5% tolerance.</>,
+      <><strong>Grain check:</strong> ensures primary keys are unique across source and destination tables.</>,
+      <><strong>KPI check:</strong> compares custom KPI SQL logic or aggregated column values between source and destination, passing if the difference is within ±5%.</>,
     ],
   },
   {
-    title: "Scheduling Support",
+    title: "Scheduling support",
     items: [
-      "Test cases are scheduled using Snowflake tasks for automatic execution.",
-      "Offers full CRON-style configuration with time zone support.",
-      "Automatically log results, including comparison values, pass/fail status, and metadata for analysis in dashboards or the \"Show Test Cases\" view.",
+      "Schedule test cases with Snowflake Tasks for automatic execution, with full CRON-style configuration and time zone support.",
+      "Results log automatically, including comparison values, pass/fail status, and metadata, for analysis in dashboards or the Show test cases view.",
     ],
   },
   {
-    title: "User Interface Capabilities",
+    title: "User interface capabilities",
     items: [
-      <><strong>Add Test Case:</strong> Intuitive interface to define test parameters (e.g., databases, tables, columns, SQL queries).</>,
-      <><strong>Show Test Cases:</strong> Displays existing test cases based on selected filters like table type and test type.</>,
-      <><strong>Execute Test Case:</strong> On-demand Execution of test cases.</>,
-      <><strong>View Test Results:</strong> Offers detailed visibility into execution status, timestamps, result IDs, and pass/fail outcomes, enabling historical trend analysis.</>,
-      <><strong>Schedule Test Cases:</strong> Allows to setup a customized schedule to run the checks automatically.</>,
+      <><strong>Add test case:</strong> define test parameters such as databases, tables, columns, and SQL queries.</>,
+      <><strong>Show test cases:</strong> view existing test cases by filters like table type and test type.</>,
+      <><strong>Execute test case:</strong> run test cases on demand.</>,
+      <><strong>View test results:</strong> see execution status, timestamps, result IDs, and pass/fail outcomes, with historical trend analysis.</>,
+      <><strong>Schedule test cases:</strong> set a custom schedule to run checks automatically.</>,
     ],
   },
 ];
@@ -203,8 +202,8 @@ export function PartnershipSnowflake() {
     <>
       <PartnershipHero
         h1="MAQ Software and Snowflake"
-        subhead="Are you thinking about how to unify siloed data, scale analytics, and drive smarter decisions across your organization? At MAQ Software, we harness the power of Snowflake to help businesses mobilize data, enable secure collaboration, and unlock real-time, AI-powered insights across clouds and regions."
-        ctaLabel="Contact Us"
+        subhead="Unify siloed data, scale analytics, and make smarter decisions on Snowflake. MAQ Software mobilizes data, enables secure collaboration, and delivers real-time insights across clouds and regions."
+        ctaLabel="Contact us"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
         imageUrl="/logos/Snowflake-hero.png"
         imageAlt="MAQ Software and Snowflake"
@@ -215,17 +214,17 @@ export function PartnershipSnowflake() {
         items={whySnowflake}
       /> */}
       <PartnershipHighlights
-        title="Partnership Highlights"
+        title="Partnership highlights"
         stats={highlights}
       />
       <PartnershipOverview
         badgeUrl="/logos/Snowflake-Services-Select.png"
         badgeAlt="Snowflake Service Partner"
-        description="As a Snowflake Technology Partner, we specialize in end-to-end Snowflake implementations, performance and cost optimization, and AI-driven analytics for modern business needs. Our deep expertise enables organizations to unlock seamless data integration, transformation, reporting, and AI-powered insights, ensuring they stay ahead in an evolving digital landscape. From migration to advanced analytics integrated with Power BI, we empower businesses to maximize their data potential and achieve unparalleled success with Snowflake's industry-leading platform."
+        description="As a Snowflake Technology Partner, MAQ Software runs end-to-end Snowflake implementations, performance and cost optimization, and analytics. Organizations integrate, transform, and report on data, then extend it to advanced analytics with Power BI, getting more from every Snowflake investment."
       />
       <PartnershipOfferings
         eyebrow="Our Offerings"
-        title="Driving Data Strategy Excellence Through Our Global Snowflake Partnership"
+        title="What the Snowflake partnership delivers"
         sectionId="snowflake-offerings"
         offerings={offerings}
       />

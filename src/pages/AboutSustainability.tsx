@@ -225,32 +225,32 @@ const achievements = [
   {
     icon: <Building24Regular />,
     title: "LEED Gold Certification",
-    desc: "Our AI Engineering Center in Noida has earned LEED Gold Certification from the U.S. Green Building Council—a global recognition of our commitment to sustainable design and operations.",
+    desc: "MAQ Software's AI Engineering Center in Noida earned LEED Gold Certification from the U.S. Green Building Council, recognizing its sustainable design and operations.",
   },
   {
     icon: <LightbulbFilament24Regular />,
-    title: "598 KW Solar Energy System",
-    desc: "The Noida campus is powered by a 598 KW solar energy system, supplying nearly 50% of the building's energy needs.",
+    title: "598 KW solar energy system",
+    desc: "The Noida campus runs on a 598 KW solar energy system, supplying nearly 50% of the building's energy needs.",
   },
   {
     icon: <Globe24Regular />,
-    title: "100% Carbon-Free Electricity",
-    desc: "Our headquarters in Redmond, WA operates on 100% carbon-free electricity, further advancing our global sustainability goals.",
+    title: "100% carbon-free electricity",
+    desc: "MAQ Software's headquarters in Redmond, WA runs on 100% carbon-free electricity.",
   },
   {
     icon: <Drop24Regular />,
-    title: "Cut Water Use by 77%",
-    desc: "Zero water discharge facility with advanced rainwater harvesting, achieved a 77% reduction in water usage.",
+    title: "Water use cut 77%",
+    desc: "A zero-discharge facility with rainwater harvesting cut water use by 77%.",
   },
   {
     icon: <PlantGrass24Regular />,
-    title: "Optimized Building Designs to Save Energy",
-    desc: "High-performance façade design and heat-minimizing building materials to reduce energy consumption.",
+    title: "Building design that saves energy",
+    desc: "Façade design and heat-minimizing materials reduce energy consumption.",
   },
   {
     icon: <People24Regular />,
-    title: "Balancing Creativity and Sustainability",
-    desc: "Eco-friendly, collaborative workspaces that foster innovation while reducing environmental impact.",
+    title: "Creative, low-impact workspaces",
+    desc: "Eco-friendly, collaborative workspaces that support good work while reducing environmental impact.",
   },
 ];
 
@@ -263,13 +263,11 @@ export function AboutSustainability() {
       <section className={s.hero}>
         <div className={s.heroInner}>
           <div>
-            <h1 className={s.h1}>Sustainability is the Way Forward</h1>
+            <h1 className={s.h1}>Sustainability in how we build and operate</h1>
             <p className={s.heroSub}>
-              At MAQ Software, sustainability is at the heart of how we operate. As a global
-              leader in technology and AI engineering, we are committed to reducing our
-              environmental impact while helping clients achieve their sustainability goals.
-              Through innovation, transparency, and measurable progress, we are building a
-              future where technology and sustainability go hand in hand.
+              Sustainability shapes how MAQ Software operates. MAQ Software works to reduce
+              its environmental impact and help clients meet their own sustainability goals,
+              with transparency and measurable progress at each step.
             </p>
           </div>
           <img
@@ -283,31 +281,29 @@ export function AboutSustainability() {
       {/* Stats */}
       <section className={s.statsSection}>
         <div className={s.statsInner}>
-          <h2 className={s.sectionHeading}>
-            Discover our commitment to building a sustainable tomorrow
-          </h2>
+          <h2 className={s.sectionHeading}>Our sustainability commitments</h2>
           <div className={s.statsGrid}>
             <div className={s.statCard}>
-              <span className={s.statValue}>Carbon Net Zero</span>
-              <span className={s.statLabel}>for our headquarters by 2030</span>
+              <span className={s.statValue}>Carbon net zero</span>
+              <span className={s.statLabel}>for headquarters by 2030</span>
             </div>
             <div className={s.statCard}>
               <span className={s.statValue}>55% reduction</span>
               <span className={s.statLabel}>
-                in carbon emissions by 2030 (compared to a 2019 baseline year)
+                in carbon emissions by 2030, against a 2019 baseline
               </span>
             </div>
             <div className={s.statCard}>
               <span className={s.statValue}>Continuous investment</span>
               <span className={s.statLabel}>
-                in sustainable practices across all locations to build a more sustainable future
+                in sustainable practices across all locations
               </span>
             </div>
             <div className={s.statCard}>
               <span className={s.statValue}>Ongoing alignment</span>
               <span className={s.statLabel}>
-                with global standards including Microsoft's sustainable ecosystem to drive
-                consistent and responsible progress
+                with global standards, including Microsoft's sustainability program, for
+                consistent, responsible progress
               </span>
             </div>
           </div>
@@ -317,7 +313,7 @@ export function AboutSustainability() {
       {/* Achievements */}
       <section className={s.achievementsSection}>
         <div className={s.achievementsInner}>
-          <h2 className={s.sectionHeading}>Our Achievements</h2>
+          <h2 className={s.sectionHeading}>Our achievements</h2>
           <div className={s.achievementsGrid}>
             {achievements.map((a) => (
               <div key={a.title} className={s.achievementCard}>
@@ -341,7 +337,7 @@ export function AboutSustainability() {
             />
           </div>
           <div className={s.leadershipCopy}>
-            <h2 className={s.leadershipHeading}>A Message from our Leadership</h2>
+            <h2 className={s.leadershipHeading}>A message from our leadership</h2>
             <p className={s.quoteText}>
               "Achieving LEED Gold Certification is an important accomplishment. It reflects
               our commitment to sustainability and innovation, aligning with our clients' and

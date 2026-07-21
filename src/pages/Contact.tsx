@@ -264,12 +264,11 @@ export function Contact() {
               <span className={s.titleAccent}>together.</span>
             </h1>
             <p className={s.summary}>
-              MAQ Software helps organizations unlock the full potential of data
-              and AI to drive intelligent decisions and measurable business
-              outcomes.
+              MAQ Software builds data and AI that lead to better decisions and
+              measurable business outcomes.
             </p>
             <PrimaryButton size="large" className={s.cta} href={MAIL_TO}>
-              Contact Us
+              Contact us
             </PrimaryButton>
           </div>
         </div>
@@ -278,7 +277,7 @@ export function Contact() {
       <section className={s.officesSection} aria-labelledby="global-offices-heading">
         <div className={s.officesInner}>
           <h2 id="global-offices-heading" className={s.officesTitle}>
-            Our Global Offices
+            Our global offices
           </h2>
           <div className={s.officeGrid}>
             {offices.map((office) => (
@@ -304,7 +303,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Get Directions
+                    Get directions
                     <ArrowRight16Regular fontSize={12} />
                   </a>
                 </div>

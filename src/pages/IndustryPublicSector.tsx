@@ -117,8 +117,8 @@ function PublicSectorHeroVisual() {
 const publicSectorStats = [
   {
     metric: "Millions+",
-    label: "Citizens reaching state benefits with the help of an AI-powered chatbot for the Arizona government",
-    sourceLabel: "Arizona AI-powered citizen chatbot case study",
+    label: "Citizens reaching state benefits through an AI chatbot for the Arizona government",
+    sourceLabel: "Arizona citizen chatbot case study",
     sourceHref: "https://blog.maqsoftware.com/2021/05/chatbot-for-arizona-government.html",
   },
   {
@@ -147,28 +147,28 @@ const publicSectorAgents = [
     tagline: "Self-service for benefits, permits, and programs",
     icon: <PeopleCommunity24Regular />,
     description:
-      "Natural-language Copilot that helps citizens navigate state and federal programs — eligibility, benefits, permits, licensing — without waiting for a caseworker. Grounded in agency policy and program rules so answers are citation-backed and audit-ready. The pattern behind the Arizona deployment that reached millions of citizens.",
+      "Natural-language Copilot that helps citizens navigate state and federal programs (eligibility, benefits, permits, licensing) without waiting for a caseworker. Grounded in agency policy and program rules, so answers are citation-backed and audit-ready. It's the pattern behind the Arizona deployment that reached millions of citizens.",
   },
   {
     name: "Policy & Regulation Knowledge Agent",
     tagline: "Cited answers over policy, regulation, and guidance",
     icon: <BookInformation24Regular />,
     description:
-      "Citation-backed retrieval Copilot grounded in your policy library, statutes, federal and state regulations, and internal guidance. Caseworkers, analysts, and program staff ask plain-English questions and get linked, traceable answers in seconds — built on Azure OpenAI with role-based access controls.",
+      "Citation-backed retrieval Copilot grounded in your policy library, statutes, federal and state regulations, and internal guidance. Caseworkers, analysts, and program staff ask plain-English questions and get linked, traceable answers in seconds. Built on Azure OpenAI with role-based access controls.",
   },
   {
     name: "Mission Analytics Agent",
     tagline: "Program performance on live data, not stale reports",
     icon: <DataPie24Regular />,
     description:
-      "Operational analytics agent that runs on Microsoft Fabric or Databricks. Combines caseload, outcomes, eligibility, and equity-impact data to surface program performance and forecast demand — so program leadership and oversight teams act on live signals, not last quarter's report.",
+      "Operational analytics agent that runs on Microsoft Fabric or Databricks. Combines caseload, outcomes, eligibility, and equity-impact data to surface program performance and forecast demand, so program leadership and oversight teams act on live signals, not last quarter's report.",
   },
   {
     name: "Secure Modernization Agent",
     tagline: "FedRAMP-aligned modernization for legacy estates",
     icon: <ShieldCheckmark24Regular />,
     description:
-      "Reference architecture and rollout agent for modernizing legacy public-sector systems with secure-by-design Copilot and Microsoft Fabric patterns. Aligned to FedRAMP, CJIS, IRS Pub 1075, and agency-specific control frameworks — with Managed Identity, RBAC, and audit logging baked in from day one.",
+      "Reference architecture and rollout agent for modernizing legacy public-sector systems with secure-by-design Copilot and Microsoft Fabric patterns. Aligned to FedRAMP, CJIS, IRS Pub 1075, and agency-specific control frameworks, with Managed Identity, RBAC, and audit logging built in from day one.",
   },
 ];
 
@@ -201,8 +201,8 @@ export function IndustryPublicSector() {
     <>
       <IndustryHero
         eyebrow="Public Sector"
-        h1="Trusted AI for Citizen Services, Mission Outcomes, and Modern Government"
-        subhead="Federal, state, and local agencies face mounting pressure to deliver faster citizen services, modernize aging systems, and protect sensitive data — all under audit-grade accountability. At MAQ Software, we help public-sector organizations embed AI across the mission stack — from citizen-facing chatbots and policy-knowledge Copilots to program analytics on Microsoft Fabric — with secure-by-design patterns aligned to FedRAMP, CJIS, and agency compliance frameworks. Our solutions turn fragmented government data into faster decisions and better outcomes for the citizens you serve."
+        h1="AI for citizen services and mission outcomes"
+        subhead="Federal, state, and local agencies face pressure to deliver faster citizen services, modernize aging systems, and protect sensitive data, all under audit-grade accountability. Public-sector organizations embed AI across the mission stack, from citizen-facing chatbots and policy-knowledge Copilots to program analytics on Microsoft Fabric, with secure-by-design patterns aligned to FedRAMP, CJIS, and agency compliance frameworks. MAQ Software builds it, turning fragmented government data into faster decisions and better outcomes for the citizens you serve."
         mailSubject="Public Sector - MAQ Software"
         visual={<PublicSectorHeroVisual />}
       />
@@ -216,7 +216,7 @@ export function IndustryPublicSector() {
       <SolutionShowcase
         sectionId="public-sector-solutions"
         eyebrow="Agentic AI"
-        title="Bring trusted AI to the mission"
+        title="Bring AI to the mission"
         agents={publicSectorAgents}
         industryLabel="Public sector"
       />

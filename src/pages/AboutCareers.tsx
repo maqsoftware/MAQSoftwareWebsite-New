@@ -283,9 +283,9 @@ export function AboutCareers() {
         <div className={s.heroInner}>
           <h1 className={s.h1}>Careers</h1>
           <p className={s.heroSub}>
-            Build a career working on AI, data, and cloud solutions for Fortune
-            500 customers. Explore open roles across our offices in the United
-            States and India.
+            Build a career on AI, data, and cloud projects for Fortune 500
+            customers. Explore open roles across offices in the United States and
+            India.
           </p>
         </div>
       </section>

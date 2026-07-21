@@ -256,22 +256,22 @@ const whyItems = [
   {
     icon: <Checkmark24Regular />,
     title: "Continuous delivery",
-    desc: "Receive high-quality solutions through daily build and testing with frequent status updates.",
+    desc: "Get working software through daily build and test, with frequent status updates.",
   },
   {
     icon: <Clock24Regular />,
     title: "Faster implementation",
-    desc: "Implement solutions faster with 24/7 support from our globally integrated teams.",
+    desc: "Ship faster with 24/7 support from globally integrated teams.",
   },
   {
     icon: <Money24Regular />,
-    title: "Cost effective process",
-    desc: "Optimized solutions at every stage of development to ensure minimal cost at maximum efficiency.",
+    title: "Cost-effective process",
+    desc: "Optimize at every stage of development to keep costs low.",
   },
   {
     icon: <Chat24Regular />,
     title: "Immediate response",
-    desc: "Flexibility to adapt solutions to changing business needs through our daily delivery and feedback model.",
+    desc: "Adapt to changing business needs through daily delivery and feedback.",
   },
 ];
 
@@ -335,10 +335,9 @@ export function AboutWhoWeAre() {
         <div className={s.heroInner}>
           <h1 className={s.h1}>Who we are</h1>
           <p className={s.heroSub}>
-            We are a Microsoft Fabric Featured Partner who enables leading
-            companies to accelerate their business intelligence and analytics
-            initiatives. Our solutions enable our clients to improve their
-            operations, reduce costs, increase sales, and build stronger
+            MAQ Software is a Microsoft Fabric Featured Partner that builds
+            business intelligence and analytics for enterprise companies. Clients
+            improve operations, reduce costs, increase sales, and build stronger
             customer relationships.
           </p>
         </div>

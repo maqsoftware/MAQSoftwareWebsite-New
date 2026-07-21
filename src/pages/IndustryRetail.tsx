@@ -124,35 +124,35 @@ const retailAgents = [
     tagline: "Automated BI briefings",
     icon: <Clock24Regular />,
     description:
-      "Intelligent business intelligence agent that delivers automated weekly metric reports and real-time data insights to user inboxes. Enables executives and teams to subscribe to custom business questions, receive schedulable reports (daily, weekly, monthly) with professional formatting, and query metrics on-demand in plain English. Integrates with Microsoft 365 Copilot, Teams, and Outlook to provide instant data-driven insights without manual report preparation.",
+      "Delivers weekly metric reports and real-time insights straight to inboxes. Executives and teams subscribe to custom business questions, get scheduled reports (daily, weekly, monthly), and query metrics on demand in plain English. Works across Microsoft 365 Copilot, Teams, and Outlook, with no manual report prep.",
   },
   {
     name: "Smart Store Agent",
     tagline: "Supply chain intelligence",
     icon: <BuildingShop24Regular />,
     description:
-      "Multi-stage supply chain intelligence platform orchestrating shipment tracking, driver location intelligence, route optimization, and supplier performance analysis. Combines classification, data retrieval, and conversational response generation in a specialized graph architecture. Monitors real-time logistics operations, predicts delivery risks, and optimizes fleet efficiency.",
+      "Runs supply chain operations end to end: shipment tracking, driver location, route optimization, and supplier performance. Built on a graph architecture that combines classification, data retrieval, and conversational responses. Monitors logistics in real time, predicts delivery risks, and improves fleet efficiency.",
   },
   {
     name: "Automated Customer Service",
     tagline: "24/7 service automation",
     icon: <Chat24Regular />,
     description:
-      "Virtual assistant that answers customer queries and resolves common service requests (order status, return policy, store hours) automatically.",
+      "Answers customer questions and resolves common requests automatically, like order status, return policy, and store hours.",
   },
   {
     name: "Product Discovery Bot",
     tagline: "Guided product exploration",
     icon: <Search24Regular />,
     description:
-      "Website chatbot that helps customers explore products (ratings, reviews, launch dates, trending items).",
+      "Helps customers explore products on your site, including ratings, reviews, launch dates, and trending items.",
   },
   {
     name: "Automated Product Tag Generator",
     tagline: "Discoverability automation",
     icon: <Tag24Regular />,
     description:
-      "AI agent that auto-generates meaningful product tags (e.g., Organic, Gluten-Free, Vegan) from product descriptions to improve discoverability.",
+      "Generates product tags like Organic, Gluten-Free, and Vegan from product descriptions, so shoppers find items faster.",
   },
 ];
 
@@ -229,8 +229,8 @@ export function IndustryRetail() {
     <>
       <IndustryHero
         eyebrow="Retail & Consumer Goods"
-        h1="Powering the Next Era of Retail with AI-Driven Intelligence"
-        subhead="AI is redefining how retailers operate, compete, and grow. At MAQ Software, we help retail and CPG organizations embed intelligence across the enterprise, from real-time decision-making to autonomous operations. Backed by deep Microsoft expertise and advanced data platforms, we enable seamless customer experiences, resilient supply chains, and intelligent store ecosystems."
+        h1="Run retail on AI, from real-time decisions to autonomous operations"
+        subhead="Embed AI across retail and CPG operations, from real-time decisions to autonomous stores. MAQ Software builds it on Microsoft data platforms: better customer experiences, resilient supply chains, and connected stores."
         mailSubject="Retail - MAQ Software"
         visual={<RetailHeroVisual />}
       />
@@ -244,7 +244,7 @@ export function IndustryRetail() {
       <SolutionShowcase
         sectionId="retail-solutions"
         eyebrow="Agentic AI"
-        title="Make your retail operations smarter with our Retail Agents"
+        title="Retail agents for your operations"
         agents={retailAgents}
       />
       <IndustryCaseStudies
@@ -255,6 +255,7 @@ export function IndustryRetail() {
         seeAllHref="/insights/case-studies"
       />
       <MarketplaceOffers
+        title="Marketplace offers"
         sub="Accelerate retail outcomes with ready-to-deploy Microsoft Azure Marketplace offerings — spanning demand planning, customer experience, and real-time intelligence."
         offers={retailOffers}
       />
