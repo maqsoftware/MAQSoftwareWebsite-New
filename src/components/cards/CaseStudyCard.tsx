@@ -1,4 +1,6 @@
 import { makeStyles } from "@fluentui/react-components";
+import { Link } from "react-router-dom";
+import { isInternalPath } from "../../lib/links";
 
 const useStyles = makeStyles({
   card: {
@@ -112,18 +114,13 @@ export function CaseStudyCard({
   imageAlt,
   ctaLabel = "Read full story",
   className,
-  openInNewTab = true,
+  openInNewTab = !isInternalPath(href),
   eager = false,
 }: CaseStudyCardProps) {
   const s = useStyles();
-
-  return (
-    <a
-      className={`${s.card} ${s.clickable}${className ? ` ${className}` : ""}`}
-      href={href}
-      target={openInNewTab ? "_blank" : undefined}
-      rel={openInNewTab ? "noopener noreferrer" : undefined}
-    >
+  const cardClassName = `${s.card} ${s.clickable}${className ? ` ${className}` : ""}`;
+  const content = (
+    <>
       {imageUrl ? (
         <img
           className={s.image}
@@ -145,6 +142,30 @@ export function CaseStudyCard({
       <h3 className={s.title}>{title}</h3>
       {teaser ? <p className={s.teaser}>{teaser}</p> : null}
       <span className={s.cta}>{ctaLabel}</span>
+    </>
+  );
+
+  if (isInternalPath(href)) {
+    return (
+      <Link
+        className={cardClassName}
+        to={href}
+        target={openInNewTab ? "_blank" : undefined}
+        rel={openInNewTab ? "noopener noreferrer" : undefined}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <a
+      className={cardClassName}
+      href={href}
+      target={openInNewTab ? "_blank" : undefined}
+      rel={openInNewTab ? "noopener noreferrer" : undefined}
+    >
+      {content}
     </a>
   );
 }

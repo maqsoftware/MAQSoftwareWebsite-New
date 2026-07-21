@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
+import { Link } from "react-router-dom";
+import { isInternalPath } from "../../lib/links";
 
 const useStyles = makeStyles({
   card: {
@@ -130,6 +132,14 @@ export function EventCard({
   );
 
   if (href) {
+    if (isInternalPath(href)) {
+      return (
+        <Link to={href} className={s.card}>
+          {content}
+        </Link>
+      );
+    }
+
     return (
       <a
         href={href}
