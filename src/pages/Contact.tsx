@@ -1,8 +1,5 @@
 import { makeStyles } from "@fluentui/react-components";
-import {
-  ArrowRight16Regular,
-  Location24Regular,
-} from "@fluentui/react-icons";
+import { ArrowRight16Regular } from "@fluentui/react-icons";
 import { PrimaryButton } from "../components/buttons";
 
 const MAIL_TO =
@@ -128,22 +125,6 @@ const useStyles = makeStyles({
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    position: "relative",
-  },
-  locationPin: {
-    position: "absolute",
-    top: "7px",
-    left: "7px",
-    width: "20px",
-    height: "20px",
-    borderRadius: "50%",
-    backgroundColor: "#fff",
-    color: "var(--maq-red)",
-    border: "1px solid rgba(200, 16, 46, 0.18)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    boxShadow: "0 2px 5px rgba(15, 23, 42, 0.18)",
   },
   officeBody: {
     display: "flex",
@@ -185,17 +166,6 @@ const useStyles = makeStyles({
     ":hover": {
       color: "var(--maq-red-dark)",
     },
-  },
-  hiddenText: {
-    position: "absolute",
-    width: "1px",
-    height: "1px",
-    padding: 0,
-    margin: "-1px",
-    overflow: "hidden",
-    clip: "rect(0, 0, 0, 0)",
-    whiteSpace: "nowrap",
-    border: 0,
   },
 });
 
@@ -259,9 +229,8 @@ export function Contact() {
           <div className={s.heroContent}>
             {/* <p className={s.eyebrow}>Contact Us</p> */}
             <h1 className={s.title}>
-              Let&apos;s build what&apos;s next,
-              <br />
-              <span className={s.titleAccent}>together.</span>
+              Let&apos;s build what&apos;s next, 
+              <span className={s.titleAccent}> together.</span>
             </h1>
             <p className={s.summary}>
               MAQ Software builds data and AI that lead to better decisions and
@@ -286,12 +255,7 @@ export function Contact() {
                   className={s.officeMedia}
                   style={{ backgroundImage: `url('${office.image}')` }}
                   aria-hidden="true"
-                >
-                  <span className={s.locationPin}>
-                    <Location24Regular fontSize={13} />
-                    <span className={s.hiddenText}>Location</span>
-                  </span>
-                </div>
+                />
 
                 <div className={s.officeBody}>
                   <h3 className={s.officeCity}>{office.city}</h3>

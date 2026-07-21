@@ -18,10 +18,6 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
     // Consistent About-page hero padding; height scales with the content.
     padding: "40px 32px",
-    backgroundImage: "url('/logos/wave_dots.svg')",
-    backgroundPosition: "bottom left",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
   },
   heroInner: {
     maxWidth: "var(--maq-container-wide)",
@@ -283,7 +279,7 @@ const recognitions = [
     desc: "Inc. has honored MAQ Software on its prestigious Inc. 5000 list twelve times, a rare achievement. Since 2007, Inc. magazine has recognized more than 35,000 unique companies on its Inc. 5000 list based on the sales growth of the companies. Less than 0.5% of Inc. 5000 companies demonstrate sustained growth by appearing twelve or more times.",
   },
   {
-    imgSrc: "/logos/Power_BI_Partner_Apr2023.png" as string | null,
+    imgSrc: "/logos/Power_BI_Partner_Jul2026.webp" as string | null,
     title: "2021 Microsoft Power BI Partner of the Year — Global Award Winner",
     href: "https://news.maqsoftware.com/2021/07/maq-software-honored-as-winner-of-2021.html",
     desc: "The Microsoft Partner of the Year award recognizes Microsoft partners that deliver outstanding solutions and innovations using Microsoft technologies. Microsoft awarded MAQ Software this global award for delivering innovative business intelligence and analytics solutions using Microsoft Power BI.",
