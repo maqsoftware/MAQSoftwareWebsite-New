@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { FluentProvider } from "@fluentui/react-components";
-import { HashRouter, useLocation } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import { maqLightTheme } from "./theme";
 import { App } from "./App";
 import "./styles.css";
@@ -45,10 +45,10 @@ function AnalyticsPageView() {
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <FluentProvider theme={maqLightTheme}>
-      <HashRouter>
+      <BrowserRouter>
         <AnalyticsPageView />
         <App />
-      </HashRouter>
+      </BrowserRouter>
     </FluentProvider>
   </React.StrictMode>
 );
