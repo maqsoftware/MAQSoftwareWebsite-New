@@ -184,4 +184,4 @@
 - Hero CTA scrolls to `id="specializations"` (§3.4 wrapper).
 - Footer: "Who we are" → `<Link to="/who-we-are">`.
 - App.tsx: `<Route path="/who-we-are" element={<><AboutWhoWeAre /><CTA /></>} />`.
-- `_redirects`: `/who-we-are /who-we-are 200`.
+- Hosting redirect config (if required): ensure `/who-we-are` resolves to the SPA entry point.

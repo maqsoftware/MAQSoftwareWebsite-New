@@ -19,7 +19,7 @@
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
 | Self-contained sections | Hero, Why Microsoft, Partnership Highlights, Partnership Overview, Our Offerings, Marketplace Offerings, Blogs & Case Studies, Connect — all inlined in the page |
 | Header nav integration | Partnerships mega-menu "Microsoft" → `/partnerships/microsoft` |
-| Redirect (legacy) | Add `_redirects` entry: `/partnerships/microsoft /partnerships/microsoft 200` (SPA fallback) |
+| Redirect (legacy) | Add host-level rewrite/redirect rules for `/partnerships/microsoft` only if your active hosting platform requires explicit route mapping |
 
 **Design goal:** Match the density and structure of the Snowflake partnership page —
 section padding `48–56px`, h2 `28–30px`, body `14px`, multi-column layouts.
