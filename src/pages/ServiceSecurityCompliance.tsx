@@ -196,7 +196,7 @@ export function ServiceSecurityCompliance() {
         capabilities={capabilities}
         footerLabel="See security case studies"
         footerHref="/insights/case-studies?filter=Security#insights-content"
-        mailSubjectSuffix="Security & Governance"
+        ariaLabel="Security and governance capabilities"
       />
       <ServiceOutcomes
         title="Your business outcomes"
