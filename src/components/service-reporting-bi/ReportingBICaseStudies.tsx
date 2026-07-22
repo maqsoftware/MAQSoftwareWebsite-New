@@ -140,7 +140,7 @@ export function ReportingBICaseStudies({
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Related case studies</span> */}
-          <h2 className={s.title}>Reporting and BI, modernized</h2>
+          <h2 className={s.title}>Insights & analytics in production</h2>
         </div>
         <div className={s.grid}>
           {studies.map((c) => (
@@ -159,7 +159,7 @@ export function ReportingBICaseStudies({
         ) : (
           <Link
             className={s.footerLink}
-            to="/insights/case-studies?filter=Reporting%20%26%20visualization#insights-content"
+            to="/insights/case-studies?filter=Insights%20%26%20analytics#insights-content"
           >
             See all reporting &amp; BI case studies <ArrowRight16Regular />
           </Link>

@@ -8,7 +8,7 @@ import { ServiceInsights } from "../components/service/ServiceInsights";
 // import { ServiceTestimonials } from "../components/service/ServiceTestimonials";
 
 const SERVICE_CASE_STUDIES_CONFIG = {
-  serviceFilter: "Agentic AI & Machine Learning",
+  serviceFilter: "AI solutions & agents",
   allCasesLabel: "See all case studies",
   serviceSpecificLabel: "See agentic AI case studies",
 };

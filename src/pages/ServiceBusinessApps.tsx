@@ -473,10 +473,10 @@ export function ServiceBusinessApps() {
             {/* CAPABILITIES */}
             <ServiceCapabilities
                 sectionId="business-apps-capabilities"
-                title="What you can build with business apps and automation"
+                title="What you can build with business apps & automation"
                 capabilities={capabilities}
-                footerLabel="See business applications case studies"
-                footerHref="/insights/case-studies?filter=Application%20modernization#insights-content"
+                footerLabel="See business apps & automation case studies"
+                footerHref="/insights/case-studies?filter=Business%20apps%20%26%20automation#insights-content"
                 ariaLabel="Business applications and automation capabilities"
             />
 
@@ -488,7 +488,7 @@ export function ServiceBusinessApps() {
                 <div className={s.inner}>
                     <div className={s.head}>
                         {/* <span className={s.secEyebrow}>Related case studies</span> */}
-                        <h2 className={s.titleSm}>Business apps, modernized</h2>
+                        <h2 className={s.titleSm}>Business apps & automation in production</h2>
                     </div>
                     <div className={s.caseGrid}>
                         {caseStudies.map((c) => (
@@ -522,7 +522,7 @@ export function ServiceBusinessApps() {
                 <div className={s.inner}>
                     <div className={s.head}>
                         {/* <span className={s.secEyebrow}>Insights</span> */}
-                        <h2 className={s.titleSm}>Business apps and process automation insights</h2>
+                        <h2 className={s.titleSm}>Related insights</h2>
                         {/* <p className={s.secSub}>
                             See our research that goes into optimizing our business apps and process
                             automation service.

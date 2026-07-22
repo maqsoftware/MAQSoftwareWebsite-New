@@ -160,7 +160,7 @@ const useStyles = makeStyles({
 // Data
 // ---------------------------------------------------------------------------
 const highlights = [
-  { metric: "9", label: "Microsoft specializations" },
+  { metric: "11", label: "Microsoft specializations" },
   { metric: "5,000+", label: "Microsoft technical certifications" },
   { metric: "200+", label: "Microsoft Fabric implementations" },
   { metric: "43", label: "Certified Power BI custom visuals" },
@@ -246,7 +246,7 @@ export function PartnershipMicrosoft() {
     <>
       <PartnershipHero
         h1="MAQ Software and Microsoft"
-        subhead="A Microsoft Fabric Featured Partner and Preferred Supplier since 2000, MAQ Software builds business intelligence, analytics, and AI across the Microsoft stack, from Azure and Fabric to Power BI and Copilot, backed by 9 Microsoft specializations and 4 solution partner designations."
+        subhead="A Microsoft Fabric Featured Partner and Preferred Supplier since 2000, MAQ Software builds business intelligence, analytics, and AI across the Microsoft stack, from Azure and Fabric to Power BI and Copilot, backed by 11 Microsoft specializations and 4 solution partner designations."
         ctaLabel="Contact us"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20Microsoft%20Partnership&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
         imageUrl="/logos/Power_BI_Partner_Jul2026.webp"
@@ -266,7 +266,7 @@ export function PartnershipMicrosoft() {
               A Microsoft Fabric Featured Partner and Preferred Supplier since 2000,
               MAQ Software holds 4 Microsoft Solution Partner designations (Data
               &amp; AI, Digital &amp; App Innovation, Infrastructure, and Security)
-              and 9 advanced specializations. Its 5,000+ Microsoft technical
+              and 11 advanced specializations. Its 5,000+ Microsoft technical
               certifications and 200+ Fabric implementations back deep expertise
               across Azure, Power BI, Microsoft Fabric, and Copilot. From analytics
               to cloud modernization, organizations get more from their investment

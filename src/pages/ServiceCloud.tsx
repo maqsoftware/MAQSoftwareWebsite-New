@@ -19,7 +19,7 @@ import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
 
 const CLOUD_CASE_STUDIES_CONFIG = {
-  serviceFilter: "Cloud Modernization",
+  serviceFilter: "Cloud modernization",
   allCasesLabel: "See all case studies",
   serviceSpecificLabel: "See cloud modernization case studies",
 };
@@ -100,10 +100,10 @@ export function ServiceCloud() {
 
       <ServiceCapabilities
         sectionId="cloud-capabilities"
-        title="What you can modernize on Azure"
+        title="What you can achieve with cloud modernization"
         capabilities={capabilities}
-        footerLabel="See cloud case studies"
-        footerHref="/insights/case-studies?filter=Cloud%20Modernization#insights-content"
+        footerLabel="See cloud modernization case studies"
+        footerHref="/insights/case-studies?filter=Cloud%20modernization#insights-content"
         ariaLabel="Cloud modernization capabilities"
       />
       <ServiceOutcomes outcomes={outcomes} />

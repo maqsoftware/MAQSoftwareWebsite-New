@@ -40,9 +40,20 @@ export function InsightsCaseStudies() {
   const s = useStyles();
   const [searchParams] = useSearchParams();
   const rawFilterParam = searchParams.get("filter") || "All";
+  // Older service names that still live in bookmarks and outbound links; map them
+  // onto the current chip labels (which mirror the service nav) so those URLs
+  // don't land on an empty grid.
   const filterAliases: Record<string, string> = {
-    "Data & analytics": "Data & AI Platforms",
-    "Data & Analytics": "Data & AI Platforms",
+    "Data & analytics": "Data & AI platforms",
+    "Data & Analytics": "Data & AI platforms",
+    "Data & AI Platforms": "Data & AI platforms",
+    "Agentic AI & Machine Learning": "AI solutions & agents",
+    "Reporting & visualization": "Insights & analytics",
+    "Insights & Analytics": "Insights & analytics",
+    "Application modernization": "Business apps & automation",
+    "Cloud optimization": "Cloud modernization",
+    "Cloud Modernization": "Cloud modernization",
+    "Security": "Security & governance",
   };
   const filterParam = filterAliases[rawFilterParam] || rawFilterParam;
   const [activeFilter, setActiveFilter] = useState(filterParam);

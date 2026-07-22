@@ -116,7 +116,7 @@ const cols: FooterCol[] = [
       { label: "Data & AI platforms", to: "/services/data-and-analytics" },
       { label: "AI solutions & agents", to: "/services/agentic-ai" },
       { label: "Insights & analytics", to: "/services/reporting-bi" },
-      { label: "Business applications & automation", to: "/services/business-apps" },
+      { label: "Business apps & automation", to: "/services/business-apps" },
       { label: "Cloud modernization", to: "/services/cloud" },
       { label: "Security & governance", to: "/services/security-compliance" },
     ],

@@ -7,6 +7,7 @@ import {
   Star24Filled,
   ShieldCheckmark24Regular,
 } from "@fluentui/react-icons";
+import { AboutSpecializations } from "../components/about/AboutSpecializations";
 
 
 // ---------------------------------------------------------------------------
@@ -242,7 +243,7 @@ const useStyles = makeStyles({
 // Data
 // ---------------------------------------------------------------------------
 const heroStats = [
-  { metric: "9", label: "Microsoft specializations" },
+  { metric: "11", label: "Microsoft specializations" },
   { metric: "4", label: "Microsoft solution partner designations" },
   { metric: "5K+", label: "Microsoft technical certifications" },
   { metric: "200+", label: "Microsoft Fabric solutions implemented" },
@@ -356,6 +357,9 @@ export function AboutWhoWeAre() {
           </div>
         </div>
       </section>
+
+      {/* ── Microsoft specializations ── */}
+      <AboutSpecializations />
 
       {/* ── Recognitions ── */}
       <section className={s.sectionGray}>

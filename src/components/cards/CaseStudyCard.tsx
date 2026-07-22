@@ -49,7 +49,10 @@ const useStyles = makeStyles({
     gap: "8px",
     alignItems: "center",
   },
-  date: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 600 },
+  // Left-aligned so the date reads as a caption under the teaser, not a
+  // top-right badge. alignSelf keeps the box content-width in the card's flex
+  // column (the default `stretch` would span the full card width).
+  date: { fontSize: "12px", color: "var(--maq-gray-500)", fontWeight: 600, alignSelf: "flex-start" },
   tag: {
     fontSize: "12px",
     fontWeight: 700,
@@ -133,14 +136,17 @@ export function CaseStudyCard({
           height={675}
         />
       ) : null}
-      {tag || date ? (
+      {tag ? (
         <div className={s.meta}>
-          {tag ? <span className={s.tag}>{tag}</span> : <span />}
-          {date ? <span className={s.date}>{date}</span> : null}
+          <span className={s.tag}>{tag}</span>
         </div>
       ) : null}
       <h3 className={s.title}>{title}</h3>
       {teaser ? <p className={s.teaser}>{teaser}</p> : null}
+      {/* Date sits below the teaser and above the CTA. The teaser's flex:1
+          pushes both to the bottom of the card, keeping the CTA baseline
+          aligned across a row of uneven-length cards. */}
+      {date ? <span className={s.date}>{date}</span> : null}
       <span className={s.cta}>{ctaLabel}</span>
     </>
   );
