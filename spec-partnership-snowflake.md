@@ -1,6 +1,6 @@
 # Partnership Page Spec — Snowflake
 
-> Source: https://maqsoftware-beta.netlify.app/partnerships/snowflake
+> Source: https://maqsoftware.com/partnerships/snowflake
 > Sibling specs: spec-product-fabric-admin-agent.md, spec-industry-retail.md
 >
 > This is the **first** partnership page. Future partnership pages
@@ -21,7 +21,7 @@
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
 | Self-contained sections | Hero, Why Snowflake, Partnership Highlights, Offerings, Marketplace, Blogs & Case Studies — all inlined in the page |
 | Header nav integration | Partnerships mega-menu "Snowflake" → `/partnerships/snowflake` (already wired in `Header.tsx`) |
-| Redirect (legacy) | Add `_redirects` entry: `/partnerships/snowflake /partnerships/snowflake 200` (SPA fallback) |
+| Redirect (legacy) | Add host-level rewrite/redirect rules for `/partnerships/snowflake` only if your active hosting platform requires explicit route mapping |
 
 **Design goal:** match the density of the product / industry pages —
 section padding `48–56px`, h2 `28–30px`, body `14px`, multi-column layouts.
@@ -62,7 +62,7 @@ section padding `48–56px`, h2 `28–30px`, body `14px`, multi-column layouts.
 
 **Right column — hero image:**
 
-- Source: `https://maqsoftware-beta.netlify.app/images-new/Snowflake/Snowflake-hero.webp`
+- Source: `https://maqsoftware.com/images-new/Snowflake/Snowflake-hero.webp`
 - Rendered with `<img>` (decorative, `alt="MAQ Software and Snowflake"`, `loading="eager"`, `decoding="async"`).
 - Sizing: `width: 100%`, `max-width: 520px`, `height: auto`.
 
@@ -108,7 +108,7 @@ section padding `48–56px`, h2 `28–30px`, body `14px`, multi-column layouts.
 - **Padding:** `48px 32px`.
 
 **Badge image:**
-- Source: `https://maqsoftware-beta.netlify.app/images-new/Snowflake/Snowflake-Services-Select.png`
+- Source: `https://maqsoftware.com/images-new/Snowflake/Snowflake-Services-Select.png`
 - `alt="Snowflake Service Partner"`, `loading="lazy"`.
 
 **Copy (literal):**

@@ -221,9 +221,9 @@ export function Hero() {
             </div>
             <div className={s.statBody}>
               <div className={s.statNumber}>
-                12<span className={s.statAccent}>×</span>
+                13<span className={s.statAccent}>×</span>
               </div>
-              <div className={s.statLabel}>Inc. 5000 honoree</div>
+              <div className={s.statLabel}>Thirteen-Time Honoree, Inc. 5000,</div>
               <div className={s.statMeta}>2013 — 2025</div>
             </div>
           </div>

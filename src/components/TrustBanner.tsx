@@ -43,7 +43,7 @@ const items = [
   { label: "Top 25 Global Microsoft Partner" },
   { label: "Microsoft Fabric Featured Partner" },
   { label: "Power BI Partner of the Year — Global" },
-  { label: "Inc. 5000 — 12 Consecutive Times" },
+  { label: "Thirteen-Time Honoree, Inc. 5000," },
   { label: "ISO 27001 / 27701 / 27018 Certified" },
   { label: "Partners: Microsoft · Snowflake · Databricks" },
   { label: "Microsoft Preferred Supplier — 26 Years" },

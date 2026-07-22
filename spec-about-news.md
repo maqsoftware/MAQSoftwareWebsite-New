@@ -138,7 +138,7 @@ export function formatPublishedDate(iso: string): string;
    { label: "News", href: "/news" },
    ```
    Suggested order: Who we are · News · Sustainability · Contact Us.
-3. **`public/_redirects`** — append `/news /news 200` if other routes are listed there.
+3. **Hosting redirect config (if required)** — add or verify a route rewrite/redirect rule for `/news` in your active hosting platform.
 
 ---
 
