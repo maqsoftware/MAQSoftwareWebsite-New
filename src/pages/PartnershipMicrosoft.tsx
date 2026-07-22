@@ -249,7 +249,7 @@ export function PartnershipMicrosoft() {
         subhead="A Microsoft Fabric Featured Partner and Preferred Supplier since 2000, MAQ Software builds business intelligence, analytics, and AI across the Microsoft stack, from Azure and Fabric to Power BI and Copilot, backed by 9 Microsoft specializations and 4 solution partner designations."
         ctaLabel="Contact us"
         ctaHref="mailto:CustomerSuccess@MAQSoftware.com?subject=Contact%20Us%20-%20Microsoft%20Partnership&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you."
-        imageUrl="/logos/Power_BI_Partner_Apr2023.png"
+        imageUrl="/logos/Power_BI_Partner_Jul2026.webp"
         imageAlt="MAQ Software and Microsoft"
       />
 
