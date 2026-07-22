@@ -46,7 +46,7 @@ export function InsightsAzureSecurityBestPractices() {
         },
       ]}
       references={[
-        { label: "Strengthen your cloud security with 19 security best practices", href: "/#/insights/azure-security-best-practices", source: "MAQ Software" },
+        { label: "Strengthen your cloud security with 19 security best practices", href: "/insights/azure-security-best-practices", source: "MAQ Software" },
         { label: "Azure security best practices and patterns", href: "https://docs.microsoft.com/en-us/azure/security/security-best-practices-and-patterns", source: "Microsoft Corporation, published March 22, 2023" },
         { label: "Azure network security best practices", href: "https://docs.microsoft.com/en-us/azure/security/azure-security-network-security-best-practices", source: "Microsoft Corporation, published March 16, 2023" },
         { label: "Azure Identity Management and access control security best practices", href: "https://docs.microsoft.com/en-us/azure/security/azure-security-identity-management-best-practices", source: "Microsoft Corporation, published December 19, 2022" },

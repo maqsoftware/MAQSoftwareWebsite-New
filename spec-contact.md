@@ -101,7 +101,7 @@ Reuse the same makeStyles patterns as `AboutWhoWeAre.tsx` and `AboutSustainabili
    ```
    (Do not wrap with `<CTA />`.)
 2. **`src/components/Header.tsx`** — the About mega-menu already contains `{ label: "Contact Us", href: "/contact" }`. No change required.
-3. **`public/_redirects`** — append `/contact /contact 200` if other routes are listed there.
+3. **Hosting redirect config (if required)** — add or verify a route rewrite/redirect rule for `/contact` in your active hosting platform.
 
 ---
 

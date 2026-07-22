@@ -263,7 +263,7 @@ This section is the **source of truth for all rendered text** on the home page. 
   - ★ `Top 25 Global Microsoft Partner`
   - ★ `Microsoft Fabric Featured Partner`
   - ★ `Power BI Partner of the Year — Global`
-  - `Inc. 5000 — 12 Consecutive Times`
+  - `Thirteen-Time Honoree, Inc. 5000,`
   - `1,800+ Engineers Globally`
   - `ISO 27001 / 27701 / 27018 Certified`
   - `Partners: Microsoft · Snowflake · Databricks`

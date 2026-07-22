@@ -400,7 +400,7 @@ const insights: Insight[] = [
         title: "Explore Best Practices for Creating Enterprise-Wide Knowledge Bots",
         teaser:
             "Patterns for building enterprise knowledge bots that ground answers in your own content and stay maintainable at scale.",
-        href: "/#/insights/knowledge-bot-best-practices",
+        href: "/insights/knowledge-bot-best-practices",
         imageUrl: "/images/insights/service/knowledge-bot-best-practices.jpg",
     },
     {

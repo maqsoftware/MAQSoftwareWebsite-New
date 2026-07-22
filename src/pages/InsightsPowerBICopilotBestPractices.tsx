@@ -67,7 +67,7 @@ export function InsightsPowerBICopilotBestPractices() {
         },
       ]}
       references={[
-        { label: "Build AI-ready semantic models with Power BI Copilot", href: "/#/insights/power-bi-copilot-best-practices", source: "MAQ Software" },
+        { label: "Build AI-ready semantic models with Power BI Copilot", href: "/insights/power-bi-copilot-best-practices", source: "MAQ Software" },
         { label: "Power BI Copilot introduction", href: "https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction", source: "Microsoft Corporation" },
         { label: "Row-Level Security (RLS) with Power BI", href: "https://learn.microsoft.com/en-us/power-bi/enterprise/service-admin-rls", source: "Microsoft Corporation" },
         { label: "Object-Level Security in semantic models", href: "https://learn.microsoft.com/en-us/analysis-services/tabular-models/object-level-security", source: "Microsoft Corporation" },

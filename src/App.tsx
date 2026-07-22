@@ -66,6 +66,7 @@ import { TechCon365 } from "./pages/TechCon365";
 import { TechCon365Dallas } from "./pages/TechCon365Dallas";
 import { TechCon365Seattle } from "./pages/TechCon365Seattle";
 import { FabCon2027 } from "./pages/FabCon2027";
+import { NotFound } from "./pages/NotFound";
 
 const useStyles = makeStyles({
   root: {
@@ -429,6 +430,7 @@ export function App() {
         <Route path="/techcon" element={<Navigate to="/techcon365" replace />} />
         <Route path="/fabcon" element={<Navigate to="/fabcon-2027" replace />} />
         <Route path="/fabcon2027" element={<Navigate to="/fabcon-2027" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       </main>
       <SiteFooter />
