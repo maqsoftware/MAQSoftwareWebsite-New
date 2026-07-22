@@ -78,7 +78,9 @@ const useStyles = makeStyles({
     margin: "0 auto",
   },
   officesTitle: {
-    margin: "0 0 10px",
+    // 24px below the heading matches SectionHeading's margin in the shared
+    // layout primitive, so the gap above the cards reads the same as elsewhere.
+    margin: "0 0 24px",
     fontSize: "36px",
     lineHeight: 1.1,
     letterSpacing: "-0.02em",
@@ -86,16 +88,16 @@ const useStyles = makeStyles({
     color: "var(--maq-black)",
     "@media (max-width: 960px)": {
       fontSize: "28px",
-      marginBottom: "12px",
     },
   },
   officeGrid: {
     display: "grid",
     gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
-    gap: "10px",
+    // 16px matches the card spacing on the service pages (case-study grids and
+    // the capabilities carousel gutter) — keep these in step.
+    gap: "16px",
     "@media (max-width: 1100px)": {
       gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
-      gap: "12px",
     },
     "@media (max-width: 860px)": {
       gridTemplateColumns: "repeat(2, minmax(0, 1fr))",

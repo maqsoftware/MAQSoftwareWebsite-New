@@ -276,7 +276,7 @@ const recognitions = [
     imgSrc: "/logos/Inc5000-2.png" as string | null,
     title: "Thirteen-Time Honoree, Inc. 5000, Fastest Growing Companies in America",
     href: "https://www.inc.com/profile/maq-software",
-    desc: "Inc. has honored MAQ Software on its prestigious Inc. 5000 list twelve times, a rare achievement. Since 2007, Inc. magazine has recognized more than 35,000 unique companies on its Inc. 5000 list based on the sales growth of the companies. Less than 0.5% of Inc. 5000 companies demonstrate sustained growth by appearing twelve or more times.",
+    desc: "Inc. has honored MAQ Software on its prestigious Inc. 5000 list thirteen times, a rare achievement. Since 2007, Inc. magazine has recognized more than 35,000 unique companies on its Inc. 5000 list based on the sales growth of the companies. Less than 0.5% of Inc. 5000 companies demonstrate sustained growth by appearing thirteen or more times.",
   },
   {
     imgSrc: "/logos/Power_BI_Partner_Jul2026.webp" as string | null,

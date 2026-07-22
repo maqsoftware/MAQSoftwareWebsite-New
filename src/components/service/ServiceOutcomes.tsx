@@ -109,9 +109,10 @@ const useStyles = makeStyles({
     fontSize: "16px",
     lineHeight: 1.7,
     color: "var(--maq-gray-700)",
-    // Keeps the measure inside a comfortable reading range even though the
-    // column itself is wider.
-    maxWidth: "75ch",
+    // No measure cap here: these are one- to two-line descriptions, not running
+    // prose, and a `ch`-based cap clamped them to roughly 600px while the column
+    // itself is ~1020px at the 1440px container — so they wrapped with a wide
+    // empty gutter to their right. The grid column is the only width governor.
     margin: "0",
     "@media (max-width: 900px)": { gridColumn: "2", gridRow: "2" },
   },
