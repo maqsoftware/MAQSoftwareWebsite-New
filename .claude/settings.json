@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(if \\($?\\) { \"HEAD IS ancestor of origin/main \\(fast-forward possible\\)\" } else { \"HEAD is NOT ancestor\" })",
+      "PowerShell(git merge --ff-only origin/main)",
+      "PowerShell(git rev-list --left-right --count origin/main...HEAD)"
+    ]
+  }
+}
