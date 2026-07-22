@@ -68,7 +68,7 @@ export function InsightsSnowflakePowerBIBestPractices() {
         },
       ]}
       references={[
-        { label: "Optimize Snowflake storage for efficient Power BI data extraction", href: "/#/insights/snowflake-and-power-bi-best-practices", source: "MAQ Software" },
+        { label: "Optimize Snowflake storage for efficient Power BI data extraction", href: "/insights/snowflake-and-power-bi-best-practices", source: "MAQ Software" },
         { label: "Snowflake Connector for Power BI", href: "https://learn.microsoft.com/en-us/power-query/connectors/snowflake", source: "Microsoft Corporation" },
         { label: "Mirroring Snowflake in Microsoft Fabric", href: "https://learn.microsoft.com/en-us/fabric/mirroring/snowflake", source: "Microsoft Corporation" },
         { label: "Snowflake Dynamic Tables", href: "https://docs.snowflake.com/en/user-guide/dynamic-tables-about", source: "Snowflake Inc." },

@@ -19,7 +19,7 @@
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
 | Self-contained sections | Hero, Why Microsoft, Partnership Highlights, Partnership Overview, Our Offerings, Marketplace Offerings, Blogs & Case Studies, Connect — all inlined in the page |
 | Header nav integration | Partnerships mega-menu "Microsoft" → `/partnerships/microsoft` |
-| Redirect (legacy) | Add `_redirects` entry: `/partnerships/microsoft /partnerships/microsoft 200` (SPA fallback) |
+| Redirect (legacy) | Add host-level rewrite/redirect rules for `/partnerships/microsoft` only if your active hosting platform requires explicit route mapping |
 
 **Design goal:** Match the density and structure of the Snowflake partnership page —
 section padding `48–56px`, h2 `28–30px`, body `14px`, multi-column layouts.
@@ -296,7 +296,7 @@ A change to this spec is **done** when:
 | Microsoft Fabric Featured Partner | Current | Featured partner status for Microsoft Fabric ecosystem |
 | Microsoft Preferred Supplier | Since 2000 | 26-year preferred supplier relationship |
 | Frontier AI Organization | Current | Recognized by Microsoft as a Frontier AI organization |
-| Inc. 5000 Fastest Growing Companies | 12× honoree | Twelve-time Inc. 5000 honoree for sustained organic growth |
+| Thirteen-Time Honoree, Inc. 5000, Fastest Growing Companies | 13× honoree | Thirteen-time honoree for sustained organic growth |
 
 ---
 

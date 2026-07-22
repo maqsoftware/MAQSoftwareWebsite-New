@@ -380,7 +380,7 @@ export function HomeV3() {
           <div className={s.heroTop}>
             <motion.div className={s.heroText} variants={heroContainerV} initial="initial" animate="animate">
               <motion.h1 className={`maq-h1 ${s.heroH1}`} variants={heroItemV}>
-                Turn data into decisions faster with AI-powered analytics.
+                Turn data into decisions faster with AI-powered analytics
               </motion.h1>
               <motion.p className={s.sub} variants={heroItemV}>
                 We help enterprises scale AI, modernize data platforms, and accelerate cloud transformation — delivered with speed, quality, and confidence.

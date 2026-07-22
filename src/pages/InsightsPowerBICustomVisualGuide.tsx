@@ -194,7 +194,7 @@ export function InsightsPowerBICustomVisualGuide() {
               </div>
             </div>
             <div className={s.chooserAction}>
-              <PrimaryButton href="/#/insights/visual-chooser" iconAfter={<ArrowRight16Regular />}>
+              <PrimaryButton href="/insights/visual-chooser" iconAfter={<ArrowRight16Regular />}>
                 Open visual chooser
               </PrimaryButton>
             </div>

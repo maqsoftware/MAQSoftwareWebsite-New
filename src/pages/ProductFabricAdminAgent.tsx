@@ -462,13 +462,13 @@ const resources = [
     pill: "Case studies",
     title: "Fabric & analytics case studies",
     desc: "Real customer stories on Microsoft Fabric, Power BI modernization, governance, and FinOps.",
-    href: "/#/insights/case-studies",
+    href: "/insights/case-studies",
   },
   {
     pill: "Best practices",
     title: "Fabric & Power BI best-practice guides",
     desc: "Authoritative guides on Fabric capacity sizing, Power BI optimization, and governance — from the MAQ Software community.",
-    href: "/#/insights/best-practice-guides",
+    href: "/insights/best-practice-guides",
   },
 ];
 

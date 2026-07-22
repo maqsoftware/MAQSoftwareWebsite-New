@@ -36,20 +36,20 @@ const insights = [
   {
     title: "Optimize your DevOps strategies with our 9 essential best practices",
     teaser: "Essential DevOps practices for efficient cloud deployment and operations.",
-    href: "/#/insights/azure-dev-ops-best-practices-guide",
+    href: "/insights/azure-dev-ops-best-practices-guide",
     imageUrl: "/images/insights/service/azure-dev-ops-best-practices-guide.jpg",
   },
   {
     title: "Strengthen your cloud security and protect your assets with 19 security best practices",
     teaser: "Comprehensive security best practices for protecting your cloud infrastructure and data.",
-    href: "/#/insights/azure-security-best-practices",
+    href: "/insights/azure-security-best-practices",
     imageUrl: "/images/insights/service/azure-security-best-practices.jpg",
   },
   {
     title: "This guide covers the 7 best practices you need to secure Dataverse",
     teaser:
       "Essential security controls for protecting data in Microsoft Dataverse cloud environment.",
-    href: "/#/insights/dataverse-security-best-practices",
+    href: "/insights/dataverse-security-best-practices",
     imageUrl: "/images/insights/service/dataverse-security-best-practices.jpg",
   },
 ];
