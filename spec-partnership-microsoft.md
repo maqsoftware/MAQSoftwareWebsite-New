@@ -296,7 +296,7 @@ A change to this spec is **done** when:
 | Microsoft Fabric Featured Partner | Current | Featured partner status for Microsoft Fabric ecosystem |
 | Microsoft Preferred Supplier | Since 2000 | 26-year preferred supplier relationship |
 | Frontier AI Organization | Current | Recognized by Microsoft as a Frontier AI organization |
-| Inc. 5000 Fastest Growing Companies | 12× honoree | Twelve-time Inc. 5000 honoree for sustained organic growth |
+| Thirteen-Time Honoree, Inc. 5000, Fastest Growing Companies | 13× honoree | Thirteen-time honoree for sustained organic growth |
 
 ---
 

@@ -148,8 +148,8 @@
 - **Layout:** vertical stack of 3 cards (icon/number + award name + description paragraph).
 - **Background:** `--maq-off-white`. **Padding:** `48px 32px`.
 
-**Card 1 — Inc. 5000**
-- Award: `Twelve-Time Honoree, Inc. 5000, Fastest Growing Companies in America`
+**Card 1 — Thirteen-Time Honoree, Inc. 5000,**
+- Award: `Thirteen-Time Honoree, Inc. 5000, Fastest Growing Companies in America`
 - Link: http://www.inc.com/profile/maq-software
 
 **Card 2 — Microsoft Power BI Partner of the Year**
