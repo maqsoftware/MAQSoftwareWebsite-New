@@ -62,7 +62,6 @@ export function PartnershipOfferings({
           {offerings.map((o) => (
             <FeatureCard
               key={o.title}
-              heading={o.eyebrow}
               name={o.title}
               description={o.desc}
             />

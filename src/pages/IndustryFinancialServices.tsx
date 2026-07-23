@@ -113,14 +113,12 @@ function FinancialHeroVisual() {
 // --- Financial services content data ---
 const fsStats = [
   {
-    chip: "Reporting & BI",
     title: "Microsoft Fabric modernization",
     label: "Faster risk and finance reporting for controllers, replacing fragmented legacy BI with one unified data platform.",
     sourceLabel: "Case study",
     sourceHref: "https://blog.maqsoftware.com/2026/01/delivering-accurate-business.html",
   },
   {
-    chip: "Financial Services AI",
     title: "Finance operations, run by agentic AI",
     label: "How financial organizations modernize invoice workflows, fraud monitoring, and month-end operations with agentic AI on Microsoft and cloud data platforms.",
     sourceLabel: "Case study",

@@ -137,13 +137,6 @@ const useStyles = makeStyles({
     lineHeight: 1.4,
     marginBottom: "8px",
   },
-  impactSource: {
-    fontSize: "11px",
-    color: "var(--maq-gray-600)",
-    textTransform: "uppercase",
-    letterSpacing: "0.06em",
-  },
-
   // Features --------------------------------------------------------------
   featGrid: {
     display: "grid",
@@ -373,10 +366,10 @@ const APPSOURCE = "https://marketplace.microsoft.com/en-us/product/maqsoftware.f
 const FABRIC_ADMIN_AGENT_VIDEO_EMBED_URL = "https://www.youtube.com/embed/fVWr37LNvqM?si=_jqyhBZJzrNUCmBG&enablejsapi=1";
 
 const impact = [
-  { metric: "60%", label: "Fewer capacity incidents after switching on autonomous monitoring", source: "Enterprise Fabric tenant" },
-  { metric: "24/7", label: "Autonomous coverage across capacities, workspaces, and items", source: "Always-on agent" },
-  { metric: "5 min", label: "Mean time to detect drift in permissions and SLAs", source: "MTTD benchmark" },
-  { metric: "30+", label: "Fabric tenants monitored in production", source: "Deployment footprint" },
+  { metric: "60%", label: "Fewer capacity incidents after switching on autonomous monitoring" },
+  { metric: "24/7", label: "Autonomous coverage across capacities, workspaces, and items" },
+  { metric: "5 min", label: "Mean time to detect drift in permissions and SLAs" },
+  { metric: "30+", label: "Fabric tenants monitored in production" },
 ];
 
 
@@ -560,7 +553,6 @@ export function ProductFabricAdminAgent() {
                 <div key={i.label} className={s.impactCard}>
                   <div className={s.impactMetric}>{i.metric}</div>
                   <div className={s.impactLabel}>{i.label}</div>
-                  <span className={s.impactSource}>{i.source}</span>
                 </div>
               ))}
             </div>

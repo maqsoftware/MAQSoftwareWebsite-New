@@ -191,12 +191,12 @@ export function ServiceSecurityCompliance() {
 
       <ServiceCapabilities
         sectionId="security-capabilities"
-        title="What you can secure and govern"
+        title="What you can achieve with security & governance"
         subhead="Four capability pillars that protect your data, systems, and users — from threat detection to full incident recovery."
         capabilities={capabilities}
-        footerLabel="See security case studies"
-        footerHref="/insights/case-studies?filter=Security#insights-content"
-        mailSubjectSuffix="Security & Governance"
+        footerLabel="See security & governance case studies"
+        footerHref="/insights/case-studies?filter=Security%20%26%20governance#insights-content"
+        ariaLabel="Security and governance capabilities"
       />
       <ServiceOutcomes
         title="Your business outcomes"
@@ -204,14 +204,14 @@ export function ServiceSecurityCompliance() {
         outcomes={outcomes}
       />
       <ServiceCaseStudies
-        title="Security and governance in production"
+        title="Security & governance in production"
         studies={caseStudies}
-        serviceFilter="Security"
+        serviceFilter="Security & governance"
         allCasesLabel="See all case studies"
         serviceSpecificLabel="See security case studies"
       />
       <ServiceInsights
-        title="Security insights"
+        title="Related insights"
         subhead="See our research that goes into optimizing our security service."
         insights={insights}
       />

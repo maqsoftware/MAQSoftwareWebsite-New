@@ -7,6 +7,7 @@ import {
   Star24Filled,
   ShieldCheckmark24Regular,
 } from "@fluentui/react-icons";
+import { AboutSpecializations } from "../components/about/AboutSpecializations";
 
 
 // ---------------------------------------------------------------------------
@@ -18,10 +19,6 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
     // Consistent About-page hero padding; height scales with the content.
     padding: "40px 32px",
-    backgroundImage: "url('/logos/wave_dots.svg')",
-    backgroundPosition: "bottom left",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
   },
   heroInner: {
     maxWidth: "var(--maq-container-wide)",
@@ -246,7 +243,7 @@ const useStyles = makeStyles({
 // Data
 // ---------------------------------------------------------------------------
 const heroStats = [
-  { metric: "9", label: "Microsoft specializations" },
+  { metric: "11", label: "Microsoft specializations" },
   { metric: "4", label: "Microsoft solution partner designations" },
   { metric: "5K+", label: "Microsoft technical certifications" },
   { metric: "200+", label: "Microsoft Fabric solutions implemented" },
@@ -280,10 +277,10 @@ const recognitions = [
     imgSrc: "/logos/Inc5000-2.png" as string | null,
     title: "Thirteen-Time Honoree, Inc. 5000, Fastest Growing Companies in America",
     href: "https://www.inc.com/profile/maq-software",
-    desc: "Inc. has honored MAQ Software as a Thirteen-Time Honoree, Inc. 5000, Fastest Growing Companies in America. Since 2007, Inc. magazine has recognized more than 35,000 unique companies based on sales growth. Fewer than 0.5% of companies demonstrate sustained growth by appearing thirteen or more times.",
+    desc: "Inc. has honored MAQ Software on its prestigious Inc. 5000 list thirteen times, a rare achievement. Since 2007, Inc. magazine has recognized more than 35,000 unique companies on its Inc. 5000 list based on the sales growth of the companies. Less than 0.3% of Inc. 5000 companies demonstrate sustained growth by appearing thirteen or more times.",
   },
   {
-    imgSrc: "/logos/Power_BI_Partner_Apr2023.png" as string | null,
+    imgSrc: "/logos/Power_BI_Partner_Jul2026.webp" as string | null,
     title: "2021 Microsoft Power BI Partner of the Year — Global Award Winner",
     href: "https://news.maqsoftware.com/2021/07/maq-software-honored-as-winner-of-2021.html",
     desc: "The Microsoft Partner of the Year award recognizes Microsoft partners that deliver outstanding solutions and innovations using Microsoft technologies. Microsoft awarded MAQ Software this global award for delivering innovative business intelligence and analytics solutions using Microsoft Power BI.",
@@ -360,6 +357,9 @@ export function AboutWhoWeAre() {
           </div>
         </div>
       </section>
+
+      {/* ── Microsoft specializations ── */}
+      <AboutSpecializations />
 
       {/* ── Recognitions ── */}
       <section className={s.sectionGray}>
