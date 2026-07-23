@@ -112,6 +112,8 @@ const useStyles = makeStyles({
     border: "1px solid var(--maq-border)",
     borderRadius: "10px",
     boxShadow: "0 2px 8px rgba(15, 23, 42, 0.05)",
+    color: "inherit",
+    textDecoration: "none",
     overflow: "hidden",
     display: "flex",
     flexDirection: "column",
@@ -122,9 +124,13 @@ const useStyles = makeStyles({
       boxShadow: "var(--maq-shadow-lift)",
       transform: "translateY(-2px)",
     },
+    ":focus-visible": {
+      outline: "2px solid var(--maq-red)",
+      outlineOffset: "2px",
+    },
   },
   officeMedia: {
-    height: "74px",
+    aspectRatio: "2 / 1",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -281,33 +287,31 @@ export function Contact() {
           </h2>
           <div className={s.officeGrid}>
             {offices.map((office) => (
-              <article className={s.officeCard} key={office.city}>
+              <a
+                className={s.officeCard}
+                href={office.maps}
+                target="_blank"
+                rel="noopener noreferrer"
+                key={office.city}
+                aria-label={`Get directions to ${office.city}`}
+              >
                 <div
                   className={s.officeMedia}
                   style={{ backgroundImage: `url('${office.image}')` }}
                   aria-hidden="true"
                 >
-                  <span className={s.locationPin}>
-                    <Location24Regular fontSize={13} />
-                    <span className={s.hiddenText}>Location</span>
-                  </span>
                 </div>
 
                 <div className={s.officeBody}>
                   <h3 className={s.officeCity}>{office.city}</h3>
                   <p className={s.officeAddress}>{office.address}</p>
                   {office.phone && <p className={s.officePhone}>{office.phone}</p>}
-                  <a
-                    className={s.directionsLink}
-                    href={office.maps}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <span className={s.directionsLink}>
                     Get directions
                     <ArrowRight16Regular fontSize={12} />
-                  </a>
+                  </span>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>
