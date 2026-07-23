@@ -177,6 +177,8 @@ const useStyles = makeStyles({
     fontSize: "14px",
     lineHeight: 1.65,
     color: "var(--maq-gray-700)",
+  },
+  jobDescription: {
     "& a": { color: "var(--maq-red)" },
     "& ul, & ol": { paddingLeft: "20px" },
     "& p": { margin: "8px 0" },
@@ -186,6 +188,12 @@ const useStyles = makeStyles({
     gap: "8px",
     paddingTop: "12px",
     flexWrap: "wrap" as const,
+  },
+  jobApplyButton: {
+    color: "#fff",
+    ":hover": { color: "#fff" },
+    ":active": { color: "#fff" },
+    ":visited": { color: "#fff" },
   },
 
   centerState: {
@@ -217,26 +225,22 @@ function JobAccordionItem({ job }: { job: JobOpening }) {
       </button>
       {open && (
         <div className={s.jobBody}>
-          {/* Sanitized Blogger content HTML from src/data/careers.ts. */}
-          <div dangerouslySetInnerHTML={{ __html: job.contentHtml }} />
+          {/* Sanitized JobScore description HTML from src/data/careers.ts. */}
+          <div
+            className={s.jobDescription}
+            dangerouslySetInnerHTML={{ __html: job.contentHtml }}
+          />
           <div className={s.jobActions}>
             {job.applyUrl && (
               <PrimaryButton
                 href={job.applyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                iconAfter={<Open16Regular />}
+                className={s.jobApplyButton}
               >
-                Apply on JobScore
+                Apply to this job
               </PrimaryButton>
             )}
-            <TextButton
-              href={job.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View full posting
-            </TextButton>
           </div>
         </div>
       )}
@@ -301,7 +305,7 @@ export function AboutCareers() {
         </div>
       </section>
 
-      {/* Openings — fetched live from the Blogger feed used by the original site */}
+      {/* Openings — fetched live from the MAQ Software JobScore feed */}
       <section className={s.openingsSection}>
         <div className={s.openingsInner}>
           <h2 className={s.sectionHeading}>Open positions</h2>
