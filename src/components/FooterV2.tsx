@@ -116,7 +116,7 @@ const cols: FooterCol[] = [
       { label: "Data & AI platforms", to: "/services/data-and-analytics" },
       { label: "AI solutions & agents", to: "/services/agentic-ai" },
       { label: "Insights & analytics", to: "/services/reporting-bi" },
-      { label: "Business applications & automation", to: "/services/business-apps" },
+      { label: "Business apps & automation", to: "/services/business-apps" },
       { label: "Cloud modernization", to: "/services/cloud" },
       { label: "Security & governance", to: "/services/security-compliance" },
     ],
@@ -200,7 +200,7 @@ export function FooterV2() {
                 <img src="/logos/MAQ-Software-Logo.svg" alt="MAQ Software" className={s.logoImage} />
               </Link>
               <p className={s.about}>
-                We help enterprises transform data and AI into measurable impact.
+                Turn data into decisions faster with AI-powered analytics.
               </p>
               <p className={s.about}>2027 152nd Avenue NE, Redmond, WA 98052</p>
               <PrimaryButton

@@ -229,7 +229,7 @@ const services: NavItem[] = [
   { label: "Data & AI Platforms", href: "/services/data-and-analytics" },
   { label: "AI Solutions & Agents", href: "/services/agentic-ai" },
   { label: "Insights & Analytics", href: "/services/reporting-bi" },
-  { label: "Business Applications & Automation", href: "/services/business-apps" },
+  { label: "Business Apps & Automation", href: "/services/business-apps" },
   { label: "Cloud Modernization", href: "/services/cloud" },
   { label: "Security & Governance", href: "/services/security-compliance" },
   /* { label: "Workplace transformation & productivity", href: "/services/workplace-transformation" }, */

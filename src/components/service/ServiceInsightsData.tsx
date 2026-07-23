@@ -60,7 +60,7 @@ export function ServiceInsightsData() {
       <div className={s.inner}>
         <div className={s.head}>
           {/* <span className={s.eyebrow}>Insights</span> */}
-          <h2 className={s.title}>Data and analytics insights</h2>
+          <h2 className={s.title}>Related insights</h2>
           {/* <p className={s.sub}>See our research that goes into optimizing our data &amp; analytics service.</p> */}
         </div>
         <div className={s.grid}>
