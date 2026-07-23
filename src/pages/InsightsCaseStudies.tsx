@@ -132,11 +132,9 @@ useEffect(() => {
               <CaseStudyCard
                 key={item.href}
                 title={item.title}
-                teaser={item.teaser}
                 href={item.href}
                 imageUrl={item.imageUrl}
                 imageAlt={item.title}
-                date={item.date}
                 ctaLabel="Read full story"
                 eager={idx < 3}
               />
