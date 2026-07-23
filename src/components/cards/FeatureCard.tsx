@@ -10,6 +10,9 @@ const useStyles = makeStyles({
     border: "0.5px solid var(--maq-border)",
     borderRadius: "12px",
     padding: "24px",
+    // The card renders as an <a>/<Link> when given an href; without this the
+    // browser underlines every string inside it (title, description, CTA).
+    textDecoration: "none",
     transition: "box-shadow 0.16s ease, border-color 0.16s ease, background-color 0.16s ease",
     display: "flex",
     flexDirection: "column",
@@ -93,6 +96,10 @@ export interface FeatureCardProps {
   onClick?: () => void;
   className?: string;
   tone?: "red" | "blue";
+  /* Applied to external hrefs only (internal paths render a router <Link>).
+     Opt-in so existing call sites keep their same-tab behavior. */
+  target?: string;
+  rel?: string;
 }
 
 export function FeatureCard({
@@ -107,6 +114,8 @@ export function FeatureCard({
   onClick,
   className,
   tone = "red",
+  target,
+  rel,
 }: FeatureCardProps) {
   const s = useStyles();
   const interactive = Boolean(href || onClick);
@@ -169,7 +178,7 @@ export function FeatureCard({
     }
 
     return (
-      <a className={cardClass} href={href}>
+      <a className={cardClass} href={href} target={target} rel={rel}>
         {content}
       </a>
     );

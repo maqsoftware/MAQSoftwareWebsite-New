@@ -82,23 +82,33 @@ const useStyles = makeStyles({
     textAlign: "left",
   },
 
-  // Fluent puts `overflow-x: hidden` on the Carousel root, and the slider's
-  // -16px margin parks the first card's left border exactly on that clip edge.
-  // Slide widths are fractional (33.3333% of viewport+16px), so once Embla
-  // starts translating past the first page the transform lands on a sub-pixel
-  // and the rounding eats that border. Giving the root 1px of padding moves the
-  // clip edge 1px further left, and the matching -1px margin puts the root back
-  // where it was — so the cards still line up with the h2 above, but the clip
-  // boundary now sits inside the slide's own transparent 16px gutter.
+  // Why the gutter is compensated on the root and not on the slider:
+  //
+  // Fluent's Embla config sets `inViewThreshold: 0.99` (useEmblaCarousel.js),
+  // and CarouselCard marks any slide Embla reports as out-of-view with
+  // `element.inert = true` (useCarouselCard.js). `inert` kills clicks, hover,
+  // and focus. So a slide that is even 2% outside the viewport goes dead.
+  //
+  // Slide spacing lives in each slide's own left padding (see note above),
+  // which means the first slide carries a 16px gutter that has to be cancelled
+  // for card 1 to line up with the h2. Cancelling it on the SLIDER hangs that
+  // gutter outside the viewport, leaving slide 1 ~96% visible — under the 0.99
+  // threshold, so Embla calls it out-of-view and the first card in every page
+  // position is inert. It also parked card 1's left border on the root's
+  // `overflow-x: hidden` clip edge, where sub-pixel transforms could shave it.
+  //
+  // Pulling the whole carousel left by a gutter instead keeps every slide fully
+  // inside the viewport (all in view, none inert), moves card 1's border 16px
+  // clear of the clip edge, and still lands it on the container edge. The last
+  // visible card then ends flush with the viewport's right edge, so the next
+  // card stays hidden.
   carousel: {
-    paddingLeft: "1px",
-    marginLeft: "-1px",
+    marginLeft: "-16px",
   },
   slider: {
     // Spacing comes from each slide's padding-left (see note above), so the
-    // container gap is zeroed and the first slide's padding is cancelled out.
+    // container gap is zeroed.
     gap: 0,
-    marginLeft: "-16px",
   },
   slide: {
     flex: "0 0 33.3333%",
@@ -213,10 +223,10 @@ const defaultCapabilities: Capability[] = [
 
 export function ServiceCapabilities({
   sectionId = "ai-capabilities",
-  title = "What you can build with agentic AI",
+  title = "What you can build with AI solutions & agents",
   capabilities = defaultCapabilities,
-  footerLabel = "See agentic AI case studies",
-  footerHref = "/insights/case-studies?filter=Agentic%20AI%20%26%20Machine%20Learning#insights-content",
+  footerLabel = "See AI solutions & agents case studies",
+  footerHref = "/insights/case-studies?filter=AI%20solutions%20%26%20agents#insights-content",
   ariaLabel,
 }: ServiceCapabilitiesProps = {}) {
   const s = useStyles();

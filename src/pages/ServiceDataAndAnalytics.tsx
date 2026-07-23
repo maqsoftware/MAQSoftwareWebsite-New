@@ -21,7 +21,7 @@ import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
 
 const DATA_ANALYTICS_CASE_STUDIES_CONFIG = {
-  serviceFilter: "Data & AI Platforms",
+  serviceFilter: "Data & AI platforms",
   allCasesLabel: "See all case studies",
   serviceSpecificLabel: "See data & AI platforms case studies",
 };
@@ -90,10 +90,10 @@ export function ServiceDataAndAnalytics() {
 
       <ServiceCapabilities
         sectionId="data-analytics-capabilities"
-        title="What you can build on a modern data platform"
+        title="What you can build with data & AI platforms"
         capabilities={capabilities}
-        footerLabel="See data & analytics case studies"
-        footerHref="/insights/case-studies?filter=Data%20%26%20AI%20Platforms#insights-content"
+        footerLabel="See data & AI platforms case studies"
+        footerHref="/insights/case-studies?filter=Data%20%26%20AI%20platforms#insights-content"
         ariaLabel="Data and AI platform capabilities"
       />
       <ServiceOutcomes outcomes={outcomes} />

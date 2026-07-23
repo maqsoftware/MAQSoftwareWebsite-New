@@ -55,7 +55,7 @@ const BUILD: BuildArea[] = [
   },
   {
     tab: "Business Apps",
-    title: "Business applications & automation",
+    title: "Business apps & automation",
     desc: "Streamline approvals, reports, and handoffs on Microsoft Power Platform, Dynamics 365, Power Apps, and Power Automate, with Copilots embedded where they matter.",
     to: "/services/business-apps",
     img: "/images/Service%20cards/Apps.png"

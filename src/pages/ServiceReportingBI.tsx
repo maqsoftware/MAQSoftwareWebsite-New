@@ -19,7 +19,7 @@ import type { Capability } from "../components/service/ServiceCapabilities";
 import type { OutcomeItem } from "../components/service/ServiceOutcomes";
 
 const REPORTING_BI_CASE_STUDIES_CONFIG = {
-  serviceFilter: "Insights & Analytics",
+  serviceFilter: "Insights & analytics",
   allCasesLabel: "See all case studies",
   serviceSpecificLabel: "See insights & analytics case studies",
 };
@@ -100,10 +100,10 @@ export function ServiceReportingBI() {
 
       <ServiceCapabilities
         sectionId="bi-capabilities"
-        title="What you can build with analytics"
+        title="What you can build with insights & analytics"
         capabilities={capabilities}
         footerLabel="See insights & analytics case studies"
-        footerHref="/insights/case-studies?filter=Insights%20%26%20Analytics#insights-content"
+        footerHref="/insights/case-studies?filter=Insights%20%26%20analytics#insights-content"
         ariaLabel="Insights and analytics capabilities"
       />
       <ServiceOutcomes outcomes={outcomes} />
