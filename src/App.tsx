@@ -274,6 +274,8 @@ export function App() {
           element={<PartnershipMicrosoft />}
         />
         <Route path="/insights" element={<Navigate to="/insights/case-studies" replace />} />
+        <Route path="/case-studies" element={<Navigate to="/insights/case-studies" replace />} />
+        <Route path="/case-studies/*" element={<Navigate to="/insights/case-studies" replace />} />
         <Route path="/insights/case-studies" element={<InsightsCaseStudies />} />
         <Route path="/insights/consulting-offers" element={<InsightsConsultingOffers />} />
         <Route
