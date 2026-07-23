@@ -151,7 +151,7 @@ Off-white section, `padding: 40px 32px 64px`, max-width `1240px`.
    { label: "Careers", href: "/careers" },
    ```
    Order: Who we are · News · **Careers** · Sustainability · Contact Us (matches original).
-3. **`public/_redirects`** — append `/careers /careers 200` if other routes are listed there.
+3. **Hosting redirect config (if required)** — add or verify a route rewrite/redirect rule for `/careers` in your active hosting platform.
 
 ---
 

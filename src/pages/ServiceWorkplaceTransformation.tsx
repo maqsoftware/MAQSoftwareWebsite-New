@@ -1,10 +1,12 @@
-import { useState } from "react";
-import type { ReactNode } from "react";
 import { makeStyles, tokens } from "@fluentui/react-components";
 import { Link } from "react-router-dom";
 import { useContactAction } from "../lib/contact";
-import { PrimaryButton, SecondaryButton } from "../components/buttons";
+import { PrimaryButton } from "../components/buttons";
 import { CaseStudyCard } from "../components/cards/CaseStudyCard";
+import { ServiceCapabilities } from "../components/service/ServiceCapabilities";
+import { ServiceOutcomes } from "../components/service/ServiceOutcomes";
+import type { Capability } from "../components/service/ServiceCapabilities";
+import type { OutcomeItem } from "../components/service/ServiceOutcomes";
 import {
     Mail24Regular,
     ArrowRight16Regular,
@@ -22,8 +24,9 @@ import {
 // import { TrustBanner } from "../components/TrustBanner";
 
 // ---------------------------------------------------------------------------
-// Self-contained page — does not share components with /services/agentic-ai
-// so concurrent edits to src/components/service/* won't conflict here.
+// Hero, case studies, and insights are local to this page; the capabilities and
+// outcomes bands come from the shared src/components/service/* components that
+// every service page uses, so those two layouts stay consistent site-wide.
 // ---------------------------------------------------------------------------
 
 const useStyles = makeStyles({
@@ -127,7 +130,6 @@ const useStyles = makeStyles({
     sectionAlt: { padding: "48px 32px", backgroundColor: "var(--maq-off-white)" },
     inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
     head: { marginBottom: "20px", textAlign: "center" },
-    headCentered: { textAlign: "center", marginBottom: "28px" },
     secEyebrow: {
         fontSize: "12px",
         fontWeight: 700,
@@ -136,15 +138,6 @@ const useStyles = makeStyles({
         textTransform: "uppercase",
         display: "block",
         marginBottom: "6px",
-    },
-    title: {
-        fontSize: "36px",
-        lineHeight: 1.15,
-        fontWeight: 700,
-        color: "var(--maq-navy)",
-        margin: "0 0 6px",
-        letterSpacing: "-0.02em",
-        textAlign: "left",
     },
     titleSm: {
         fontSize: "36px",
@@ -157,93 +150,6 @@ const useStyles = makeStyles({
     },
     secSub: { fontSize: "14px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
-    // Capabilities — tabbed list + detail
-    panel: {
-        marginTop: "20px",
-        background: "#fff",
-        border: `1px solid ${tokens.colorNeutralStroke2}`,
-        borderRadius: "14px",
-        padding: "28px",
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "40px",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-        "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
-    },
-    iconBox: {
-        width: "48px",
-        height: "48px",
-        borderRadius: "10px",
-        background: "var(--maq-off-white)",
-        color: "var(--maq-red)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        marginBottom: "18px",
-    },
-    detailName: {
-        fontSize: "22px",
-        fontWeight: 700,
-        color: "var(--maq-black)",
-        marginBottom: "10px",
-    },
-    detailDesc: {
-        fontSize: "14px",
-        color: "var(--maq-gray-600)",
-        lineHeight: 1.65,
-        marginBottom: "16px",
-    },
-    tagRow: { display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "20px" },
-    tag: {
-        fontSize: "11px",
-        fontWeight: 600,
-        color: "var(--maq-red)",
-        background: "var(--maq-red-pale)",
-        padding: "4px 8px",
-        borderRadius: "4px",
-        letterSpacing: "0.02em",
-    },
-    knowMore: {
-        border: `1px solid var(--maq-red)`,
-        color: "var(--maq-red)",
-        background: "transparent",
-        ":hover": { background: "var(--maq-red-pale)", color: "var(--maq-red)" },
-    },
-    rail: { display: "flex", flexDirection: "column", gap: "10px" },
-    railBtn: {
-        display: "flex",
-        alignItems: "center",
-        gap: "14px",
-        width: "100%",
-        padding: "14px 16px",
-        background: "#fff",
-        border: `1px solid ${tokens.colorNeutralStroke2}`,
-        borderLeftWidth: "1px",
-        borderRadius: "8px",
-        cursor: "pointer",
-        textAlign: "left",
-        transition: "all 0.15s",
-        ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
-    },
-    railBtnActive: {
-        border: `1px solid var(--maq-red)`,
-        borderLeftWidth: "3px",
-        boxShadow: "0 1px 4px rgba(186,20,26,0.10)",
-    },
-    railIcon: {
-        width: "36px",
-        height: "36px",
-        borderRadius: "8px",
-        background: "var(--maq-off-white)",
-        color: "var(--maq-red)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-    },
-    railText: { display: "flex", flexDirection: "column", gap: "2px" },
-    railName: { fontSize: "14px", fontWeight: 700, color: "var(--maq-black)" },
-    railTagline: { fontSize: "12px", color: "var(--maq-gray-600)" },
     footerLink: {
         marginTop: "20px",
         display: "inline-flex",
@@ -262,42 +168,6 @@ const useStyles = makeStyles({
         flexWrap: "wrap",
         "@media (max-width: 640px)": { flexDirection: "column" },
     },
-
-    // Outcomes
-    outcomesGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "16px",
-        "@media (max-width: 700px)": { gridTemplateColumns: "1fr" },
-    },
-    outcomeCard: {
-        border: `1px solid ${tokens.colorNeutralStroke2}`,
-        borderRadius: "10px",
-        padding: "24px",
-        background: "#fff",
-        transition: "all 0.2s",
-        ":hover": {
-            border: "1px solid var(--maq-card-hover-border)",
-        },
-    },
-    outcomeIcon: {
-        width: "44px",
-        height: "44px",
-        borderRadius: "10px",
-        background: "var(--maq-red-pale)",
-        color: "var(--maq-red)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        marginBottom: "14px",
-    },
-    outcomeName: {
-        fontSize: "17px",
-        fontWeight: 700,
-        color: "var(--maq-black)",
-        marginBottom: "8px",
-    },
-    outcomeDesc: { fontSize: "14px", color: "var(--maq-gray-600)", lineHeight: 1.55, margin: 0 },
 
     // Products
     productsGrid: {
@@ -447,14 +317,6 @@ const useStyles = makeStyles({
 // Content
 // ---------------------------------------------------------------------------
 
-interface Capability {
-    name: string;
-    tagline: string;
-    description: string;
-    icon: ReactNode;
-    tags: string[];
-}
-
 const capabilities: Capability[] = [
     {
         name: "Microsoft Copilot adoption & governance",
@@ -490,13 +352,7 @@ const capabilities: Capability[] = [
     },
 ];
 
-interface Outcome {
-    icon: ReactNode;
-    title: string;
-    desc: string;
-}
-
-const outcomes: Outcome[] = [
+const outcomes: OutcomeItem[] = [
     {
         icon: <Rocket24Regular />,
         title: "Accelerated time to value",
@@ -583,8 +439,6 @@ const insights: Insight[] = [
 export function ServiceWorkplaceTransformation() {
     const s = useStyles();
     const handleContactClick = useContactAction();
-    const [activeCap, setActiveCap] = useState(0);
-    const sel = capabilities[activeCap];
 
     return (
         <>
@@ -662,84 +516,17 @@ export function ServiceWorkplaceTransformation() {
 
 
             {/* CAPABILITIES */}
-            <section className={s.section} id="workplace-capabilities">
-                <div className={s.inner}>
-                    <div className={s.head}>
-                        {/* <span className={s.secEyebrow}>Our expertise</span> */}
-                        <h2 className={s.title}>
-                            Our workplace transformation capabilities
-                        </h2>
-                        {/* <p className={s.secSub}>
-                            Four capability pillars that modernize employee experiences and unlock
-                            the full value of your Microsoft 365 investment.
-                        </p> */}
-                    </div>
-                    <div className={s.panel}>
-                        <div>
-                            <div className={s.iconBox}>{sel.icon}</div>
-                            <div className={s.detailName}>{sel.name}</div>
-                            <p className={s.detailDesc}>{sel.description}</p>
-                            {/* <SecondaryButton
-                                className={s.knowMore}
-                                onClick={() =>
-                                    handleContactClick(
-                                        "Workplace Transformation - MAQ Software"
-                                    )
-                                }
-                            >
-                                Know more
-                            </SecondaryButton> */}
-                        </div>
-                        <div className={s.rail}>
-                            {capabilities.map((c, i) => (
-                                <button
-                                    key={c.name}
-                                    type="button"
-                                    aria-current={i === activeCap}
-                                    onClick={() => setActiveCap(i)}
-                                    className={`${s.railBtn} ${i === activeCap ? s.railBtnActive : ""}`}
-                                >
-                                    <span className={s.railIcon}>{c.icon}</span>
-                                    <span className={s.railText}>
-                                        <span className={s.railName}>{c.name}</span>
-                                        <span className={s.railTagline}>{c.tagline}</span>
-                                    </span>
-                                </button>
-                            ))}
-                        </div>
-                    </div>
-                    <Link
-                        className={s.footerLink}
-                        to="/insights/case-studies"
-                    >
-                        See Workplace Transformation case studies
-                        <ArrowRight16Regular />
-                    </Link>
-                </div>
-            </section>
+            <ServiceCapabilities
+                sectionId="workplace-capabilities"
+                title="Our workplace transformation capabilities"
+                capabilities={capabilities}
+                footerLabel="See Workplace Transformation case studies"
+                footerHref="/insights/case-studies"
+                ariaLabel="Workplace transformation capabilities"
+            />
 
             {/* OUTCOMES */}
-            <section className={s.sectionAlt}>
-                <div className={s.inner}>
-                    <div className={s.headCentered}>
-                        {/* <span className={s.secEyebrow}>Business outcomes</span> */}
-                        <h2 className={s.titleSm}>Your business outcomes</h2>
-                        {/* <p className={s.secSub}>
-                            What organizations gain when workplace tools are deployed with
-                            adoption-first engineering discipline.
-                        </p> */}
-                    </div>
-                    <div className={s.outcomesGrid}>
-                        {outcomes.map((o) => (
-                            <div key={o.title} className={s.outcomeCard}>
-                                <div className={s.outcomeIcon}>{o.icon}</div>
-                                <div className={s.outcomeName}>{o.title}</div>
-                                <p className={s.outcomeDesc}>{o.desc}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            <ServiceOutcomes outcomes={outcomes} />
 
             {/* CASE STUDIES */}
             <section className={s.sectionAlt}>

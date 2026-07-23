@@ -259,7 +259,7 @@ const services: NavItem[] = [
   { label: "Data & AI platforms", href: "/services/data-and-analytics" },
   { label: "AI solutions & agents", href: "/services/agentic-ai" },
   { label: "Insights & analytics", href: "/services/reporting-bi" },
-  { label: "Business applications & automation", href: "/services/business-apps" },
+  { label: "Business apps & automation", href: "/services/business-apps" },
   { label: "Cloud modernization", href: "/services/cloud" },
   { label: "Security & governance", href: "/services/security-compliance" },
 ];

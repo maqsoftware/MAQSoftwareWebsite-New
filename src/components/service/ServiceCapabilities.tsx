@@ -1,152 +1,163 @@
-import { useState } from "react";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { makeStyles, tokens } from "@fluentui/react-components";
-import { useContactAction } from "../../lib/contact";
-import { SecondaryButton } from "../buttons";
 import {
+  makeStyles,
+  Carousel,
+  CarouselAutoplayButton,
+  CarouselCard,
+  CarouselNav,
+  CarouselNavButton,
+  CarouselNavContainer,
+  CarouselSlider,
+  CarouselViewport,
+} from "@fluentui/react-components";
+import {
+  ArrowRight16Regular,
   Bot24Regular,
   ChartMultiple24Regular,
   Sparkle24Regular,
   BranchFork24Regular,
   AppFolder24Regular,
   ShieldCheckmark24Regular,
-  ArrowRight16Regular,
 } from "@fluentui/react-icons";
+import { FeatureCard } from "../cards/FeatureCard";
+
+/* Service "capabilities" — Fluent 2 Carousel showing several capability cards
+   per view. Shared by every service page; each page passes its own
+   `capabilities` array plus the section title and case-studies link.
+
+   Cards: we reuse the shared <FeatureCard> so these match the outcomes section
+   below exactly (icon inline with the heading, description underneath, same
+   border/padding/hover). FeatureCard is width/height:100%, so it fills its
+   slide — and because slides stretch to the tallest in view, the cards stay
+   equal height.
+
+   Slide spacing (important):
+   The Fluent Carousel is powered by embla-carousel, and Embla does not carry a
+   container-level `gap` across the loop boundary — the spacing isn't part of a
+   slide's own box, so the wrap point renders flush and the slide offsets drift
+   (clipping the first card's edge). Embla's pattern is to make the spacing part
+   of each slide: zero the slider's gap, give every slide a left padding, and
+   cancel the first slide's padding with a negative margin on the slider. That
+   keeps a consistent gap all the way around the loop. 16px matches the row
+   rhythm in the section below (ServiceOutcomes).
+
+   `groupSize` is left at its default ('auto') so the nav regroups to match
+   however many cards are visible at each breakpoint. */
 
 export interface Capability {
   name: string;
-  tagline: string;
   description: string;
   icon: ReactNode;
-  tags: string[];
+  /* Retained for call sites that still describe their capabilities this way.
+     The carousel renders name + description + icon only. */
+  tagline?: string;
+  tags?: string[];
 }
 
 export interface ServiceCapabilitiesProps {
   sectionId?: string;
   title?: string;
+  /* Accepted but not rendered — the section leads with the title alone. */
   subhead?: string;
   capabilities?: Capability[];
   footerLabel?: string;
   footerHref?: string;
-  mailSubjectSuffix?: string;
+  /* Label for the carousel region; falls back to the section title. */
+  ariaLabel?: string;
 }
 
 const useStyles = makeStyles({
   section: { padding: "48px 32px", backgroundColor: "#fff" },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
-  head: { textAlign: "center", marginBottom: "20px" },
-  eyebrow: {
-    fontSize: "12px",
-    fontWeight: 700,
-    color: "var(--maq-red)",
-    letterSpacing: "0.08em",
-    textTransform: "uppercase",
-    display: "block",
-    marginBottom: "6px",
-  },
+
+  head: { marginBottom: "28px" },
   title: {
     fontSize: "36px",
     lineHeight: 1.15,
     fontWeight: 700,
     color: "var(--maq-navy)",
-    margin: "0 0 6px",
+    margin: 0,
     letterSpacing: "-0.02em",
     textAlign: "left",
   },
-  sub: { fontSize: "15px", color: "var(--maq-gray-600)", margin: "0 auto", maxWidth: "780px", textAlign: "center" },
 
-  panel: {
-    marginTop: "20px",
-    background: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderRadius: "14px",
-    padding: "28px",
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-    gap: "40px",
-    boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-    "@media (max-width: 960px)": { gridTemplateColumns: "1fr" },
+  // Why the gutter is compensated on the root and not on the slider:
+  //
+  // Fluent's Embla config sets `inViewThreshold: 0.99` (useEmblaCarousel.js),
+  // and CarouselCard marks any slide Embla reports as out-of-view with
+  // `element.inert = true` (useCarouselCard.js). `inert` kills clicks, hover,
+  // and focus. So a slide that is even 2% outside the viewport goes dead.
+  //
+  // Slide spacing lives in each slide's own left padding (see note above),
+  // which means the first slide carries a 16px gutter that has to be cancelled
+  // for card 1 to line up with the h2. Cancelling it on the SLIDER hangs that
+  // gutter outside the viewport, leaving slide 1 ~96% visible — under the 0.99
+  // threshold, so Embla calls it out-of-view and the first card in every page
+  // position is inert. It also parked card 1's left border on the root's
+  // `overflow-x: hidden` clip edge, where sub-pixel transforms could shave it.
+  //
+  // Pulling the whole carousel left by a gutter instead keeps every slide fully
+  // inside the viewport (all in view, none inert), moves card 1's border 16px
+  // clear of the clip edge, and still lands it on the container edge. The last
+  // visible card then ends flush with the viewport's right edge, so the next
+  // card stays hidden.
+  carousel: {
+    marginLeft: "-16px",
   },
-
-  iconBox: {
-    width: "48px",
-    height: "48px",
-    borderRadius: "10px",
-    background: "var(--maq-off-white)",
-    color: "var(--maq-red)",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "18px",
+  slider: {
+    // Spacing comes from each slide's padding-left (see note above), so the
+    // container gap is zeroed.
+    gap: 0,
   },
-  detailName: {
-    fontSize: "22px",
-    fontWeight: 700,
-    color: "var(--maq-black)",
-    marginBottom: "10px",
-  },
-  detailDesc: {
-    fontSize: "14px",
-    color: "var(--maq-gray-600)",
-    lineHeight: 1.65,
-    marginBottom: "16px",
-  },
-  tagRow: { display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "20px" },
-  tag: {
-    fontSize: "11px",
-    fontWeight: 600,
-    color: "var(--maq-red)",
-    background: "var(--maq-red-pale)",
-    padding: "4px 8px",
-    borderRadius: "4px",
-    letterSpacing: "0.02em",
-  },
-  knowMore: {
-    border: `1px solid var(--maq-red)`,
-    color: "var(--maq-red)",
-    background: "transparent",
-    ":hover": { background: "var(--maq-red-pale)", color: "var(--maq-red)" },
+  slide: {
+    flex: "0 0 33.3333%",
+    paddingLeft: "16px",
+    boxSizing: "border-box",
+    "@media (max-width: 1080px)": { flex: "0 0 50%" },
+    "@media (max-width: 640px)": { flex: "0 0 100%" },
   },
 
-  rail: { display: "flex", flexDirection: "column", gap: "10px" },
-  railBtn: {
+  // Nav (left) + case-studies link (right) on one row under the cards.
+  footerRow: {
     display: "flex",
     alignItems: "center",
-    gap: "14px",
-    width: "100%",
-    padding: "14px 16px",
-    background: "#fff",
-    border: `1px solid ${tokens.colorNeutralStroke2}`,
-    borderLeftWidth: "1px",
-    borderRadius: "8px",
-    cursor: "pointer",
-    textAlign: "left",
-    transition: "all 0.15s",
-    ":hover": { border: "1px solid var(--maq-card-hover-border)", boxShadow: "var(--maq-shadow-lift)", transform: "translateY(-2px)" },
+    justifyContent: "space-between",
+    gap: "24px",
+    marginTop: "24px",
+    "@media (max-width: 640px)": {
+      flexDirection: "column",
+      alignItems: "flex-start",
+      gap: "16px",
+    },
   },
-  railBtnActive: {
-    border: "1px solid var(--maq-card-hover-border)",
-    borderLeftWidth: "3px",
-    boxShadow: "var(--maq-shadow-sm)",
-  },
-  railIcon: {
-    width: "36px",
-    height: "36px",
-    borderRadius: "8px",
-    background: "var(--maq-off-white)",
-    color: "var(--maq-red)",
+  // Play/pause + dots travel together on the left of the footer row.
+  navGroup: {
     display: "flex",
     alignItems: "center",
-    justifyContent: "center",
+    gap: "4px",
     flexShrink: 0,
   },
-  railText: { display: "flex", flexDirection: "column", gap: "2px" },
-  railName: { fontSize: "14px", fontWeight: 700, color: "var(--maq-black)" },
-  railTagline: { fontSize: "12px", color: "var(--maq-gray-600)" },
-
+  autoplayButton: {
+    color: "var(--maq-navy)",
+    ":hover": { color: "var(--maq-red)" },
+  },
+  // Fluent's nav container is width:100% + justify-content:center; shrink it so
+  // it sits left in the footer row instead of stretching across it.
+  nav: {
+    width: "auto",
+    justifyContent: "flex-start",
+    marginTop: 0,
+    flexShrink: 0,
+  },
+  // The dot is the button's ::after; selected already renders as a wider pill,
+  // so we only recolor it to the brand red (matches the home page pills).
+  navButton: {
+    '&[aria-selected="true"]::after': {
+      backgroundColor: "var(--maq-red)",
+    },
+  },
   footerLink: {
-    marginTop: "20px",
     display: "inline-flex",
     alignItems: "center",
     gap: "6px",
@@ -154,19 +165,12 @@ const useStyles = makeStyles({
     fontWeight: 600,
     color: "var(--maq-red)",
     textDecoration: "none",
+    flexShrink: 0,
     ":hover": { textDecoration: "underline" },
   },
 });
 
-interface CapabilityInternal {
-  name: string;
-  tagline: string;
-  description: string;
-  icon: ReactNode;
-  tags: string[];
-}
-
-const defaultCapabilities: CapabilityInternal[] = [
+const defaultCapabilities: Capability[] = [
   {
     name: "Azure AI Foundry",
     tagline: "Production AI on Azure Foundry",
@@ -219,64 +223,95 @@ const defaultCapabilities: CapabilityInternal[] = [
 
 export function ServiceCapabilities({
   sectionId = "ai-capabilities",
-  title = "What you can build with agentic AI",
-  subhead = "Capabilities that help you design, deploy, and govern enterprise AI systems at scale.",
+  title = "What you can build with AI solutions & agents",
   capabilities = defaultCapabilities,
-  footerLabel = "See agentic AI case studies",
-  footerHref = "/insights/case-studies?filter=Agentic%20AI%20%26%20Machine%20Learning#insights-content",
-  mailSubjectSuffix = "Agentic AI & ML",
+  footerLabel = "See AI solutions & agents case studies",
+  footerHref = "/insights/case-studies?filter=AI%20solutions%20%26%20agents#insights-content",
+  ariaLabel,
 }: ServiceCapabilitiesProps = {}) {
   const s = useStyles();
-  const handleContactClick = useContactAction();
-  const [active, setActive] = useState(0);
-  const sel = capabilities[active];
+
+  // Two separate pieces of state, because "the user pressed pause" and "the
+  // pointer is over the cards" have to be distinguishable — otherwise moving
+  // the mouse away would silently undo an explicit pause.
+  const [autoplayEnabled, setAutoplayEnabled] = useState(true);
+  const [pointerOverCards, setPointerOverCards] = useState(false);
+
   return (
     <section className={s.section} id={sectionId}>
       <div className={s.inner}>
         <div className={s.head}>
-          {/* <span className={s.eyebrow}>Our expertise</span> */}
           <h2 className={s.title}>{title}</h2>
-          {/* <p className={s.sub}>{subhead}</p> */}
         </div>
-        <div className={s.panel}>
-          <div>
-            <div className={s.iconBox}>{sel.icon}</div>
-            <div className={s.detailName}>{sel.name}</div>
-            <p className={s.detailDesc}>{sel.description}</p>
-            {/* <SecondaryButton
-              size="large"
-              className="maq-secondary-btn maq-equal-cta"
-              onClick={() =>
-                handleContactClick(sel.name + " - " + mailSubjectSuffix)
-              }
-            >
-              Know more
-            </SecondaryButton> */}
-          </div>
-          <div className={s.rail}>
-            {capabilities.map((c, i) => (
-              <button
-                key={c.name}
-                type="button"
-                aria-current={i === active}
-                onClick={() => setActive(i)}
-                className={`${s.railBtn} ${i === active ? s.railBtnActive : ""}`}
-              >
-                <span className={s.railIcon}>{c.icon}</span>
-                <span className={s.railText}>
-                  <span className={s.railName}>{c.name}</span>
-                  <span className={s.railTagline}>{c.tagline}</span>
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-        <Link
-          className={s.footerLink}
-          to={footerHref}
+
+        <Carousel
+          className={s.carousel}
+          align="start"
+          circular
+          autoplayInterval={6000}
+          aria-label={ariaLabel ?? title}
+          announcement={(index, totalSlides) =>
+            `Capability ${index + 1} of ${totalSlides}`
+          }
         >
-          {footerLabel} <ArrowRight16Regular />
-        </Link>
+          {/* Hover pause is scoped to the viewport (the cards) rather than the
+              whole Carousel. If it covered the footer too, hovering the
+              play/pause button would itself pause autoplay and invert what the
+              button's next click means. */}
+          <CarouselViewport
+            onMouseEnter={() => setPointerOverCards(true)}
+            onMouseLeave={() => setPointerOverCards(false)}
+          >
+            <CarouselSlider className={s.slider}>
+              {capabilities.map((c) => (
+                <CarouselCard key={c.name} className={s.slide} aria-label={c.name}>
+                  <FeatureCard icon={c.icon} name={c.name} description={c.description} />
+                </CarouselCard>
+              ))}
+            </CarouselSlider>
+          </CarouselViewport>
+
+          <div className={s.footerRow}>
+            <div className={s.navGroup}>
+              <CarouselNavContainer
+                className={s.nav}
+                layout="inline"
+                next={{ "aria-label": "Next capabilities" }}
+                prev={{ "aria-label": "Previous capabilities" }}
+              >
+                <CarouselNav>
+                  {(index) => (
+                    <CarouselNavButton
+                      className={s.navButton}
+                      aria-label={`Go to capability group ${index + 1}`}
+                    />
+                  )}
+                </CarouselNav>
+              </CarouselNavContainer>
+
+              {/* Autoplay is only active while this button is mounted — Fluent
+                  gates it deliberately, which also satisfies WCAG 2.2.2: content
+                  that moves on its own needs a way to stop it. `checked` is
+                  controlled, so hovering the cards pauses without clearing the
+                  user's own play/pause choice. */}
+              <CarouselAutoplayButton
+                className={s.autoplayButton}
+                appearance="transparent"
+                checked={autoplayEnabled && !pointerOverCards}
+                onCheckedChange={(_, data) => setAutoplayEnabled(data.checked)}
+                aria-label={
+                  autoplayEnabled
+                    ? "Pause automatic rotation"
+                    : "Start automatic rotation"
+                }
+              />
+            </div>
+
+            <Link className={s.footerLink} to={footerHref}>
+              {footerLabel} <ArrowRight16Regular />
+            </Link>
+          </div>
+        </Carousel>
       </div>
     </section>
   );

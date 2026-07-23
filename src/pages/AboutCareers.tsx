@@ -20,10 +20,6 @@ const useStyles = makeStyles({
     backgroundColor: "var(--maq-off-white)",
     // Consistent About-page hero padding (see AboutWhoWeAre for the pattern).
     padding: "40px 32px",
-    backgroundImage: "url('/logos/wave_dots.svg')",
-    backgroundPosition: "bottom left",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
   },
   heroInner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   eyebrow: {

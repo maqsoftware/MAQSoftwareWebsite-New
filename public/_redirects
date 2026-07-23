@@ -1,4 +1,0 @@
-/news   /events      301
-/case-studies   /insights/case-studies   301
-/case-studies/*   /insights/case-studies   301
-/*      /index.html  200

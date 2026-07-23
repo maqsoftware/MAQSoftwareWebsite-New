@@ -18,7 +18,7 @@
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />`, `<TrustBanner />`, `<CTA />` |
 | Self-contained sections | Hero, Why Databricks, Partnership Highlights, Capabilities/Offerings, Guides & Marketplace, Blogs & Case Studies, Connect CTA |
 | Header nav integration | Partnerships mega-menu "Databricks" → `/partnerships/databricks` (ensure `Header.tsx` contains this href) |
-| Redirect (legacy) | Add `_redirects` entry example: `/partnerships/databricks /partnerships/databricks 200` (SPA fallback) |
+| Redirect (legacy) | Add host-level rewrite/redirect rules for `/partnerships/databricks` only if your active hosting platform requires explicit route mapping |
 
 **Design goal:** match density and spacing used on product/industry pages — section padding `48–56px`, h2 `28–30px`, body `14px`.
 
@@ -250,13 +250,9 @@ All inventoried blocks are mapped to spec sections. **Zero blocks dropped.**
 
 ---
 
-## 10. Example redirect (Netlify)
+## 10. Example redirect (hosting configuration)
 
-Add to `_redirects` for SPA fallback and legacy mapping:
-
-```
-/partnerships/databricks /partnerships/databricks 200
-```
+If your active hosting platform requires an explicit route rule, add an equivalent rewrite/redirect for `/partnerships/databricks`.
 
 ---
 

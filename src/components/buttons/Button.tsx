@@ -1,9 +1,13 @@
-import type { CSSProperties, MouseEventHandler, ReactElement, ReactNode } from "react";
+import type { AnchorHTMLAttributes, CSSProperties, MouseEventHandler, ReactElement, ReactNode } from "react";
 import {
   Button as FluentButton,
   makeStyles,
   mergeClasses,
+  useButtonStyles_unstable,
+  useButton_unstable,
 } from "@fluentui/react-components";
+import { Link } from "react-router-dom";
+import { isInternalPath } from "../../lib/links";
 import type { ButtonSize } from "./tokens";
 
 export type ButtonVariant = "primary" | "secondary" | "tertiary" | "text" | "icon" | "card";
@@ -43,6 +47,70 @@ const appearanceMap: Record<ButtonVariant, "primary" | "secondary" | "outline" |
   card: "secondary",
 };
 
+interface InternalLinkButtonProps {
+  children?: ReactNode;
+  to: string;
+  appearance: "primary" | "secondary" | "outline" | "subtle" | "transparent";
+  size: ButtonSize;
+  icon?: ReactElement;
+  iconPosition: "before" | "after";
+  disabled?: boolean;
+  target?: "_blank" | "_self";
+  rel?: string;
+  onClick?: MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  className?: string;
+  style?: CSSProperties;
+  ariaLabel?: string;
+}
+
+function InternalLinkButton({
+  children,
+  to,
+  appearance,
+  size,
+  icon,
+  iconPosition,
+  disabled,
+  target,
+  rel,
+  onClick,
+  className,
+  style,
+  ariaLabel,
+}: InternalLinkButtonProps) {
+  const state = useButton_unstable({
+    as: "a",
+    href: to,
+    appearance,
+    size,
+    icon,
+    iconPosition,
+    disabled,
+    target,
+    rel,
+    onClick,
+    className,
+    style,
+    "aria-label": ariaLabel,
+    children,
+  }, null);
+  useButtonStyles_unstable(state);
+  const { as: _as, href: _href, children: linkChildren, ...linkProps } = state.root as
+    AnchorHTMLAttributes<HTMLAnchorElement> & { as?: "a" };
+
+  return (
+    <Link {...linkProps} to={to}>
+      {iconPosition === "before" && state.icon ? (
+        <span className={state.icon.className}>{state.icon.children}</span>
+      ) : null}
+      {!state.iconOnly ? linkChildren : null}
+      {iconPosition === "after" && state.icon ? (
+        <span className={state.icon.className}>{state.icon.children}</span>
+      ) : null}
+    </Link>
+  );
+}
+
 export function Button({
   children,
   variant = "primary",
@@ -70,6 +138,27 @@ export function Button({
   );
 
   if (href) {
+    if (isInternalPath(href)) {
+      return (
+        <InternalLinkButton
+          to={href}
+          appearance={appearanceMap[variant]}
+          size={size}
+          icon={icon}
+          iconPosition={iconPosition}
+          disabled={disabled}
+          target={target}
+          rel={rel}
+          onClick={onClick}
+          className={resolvedClassName}
+          style={style}
+          ariaLabel={ariaLabel}
+        >
+          {children}
+        </InternalLinkButton>
+      );
+    }
+
     return (
       <FluentButton
         as="a"

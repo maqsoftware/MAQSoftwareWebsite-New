@@ -18,7 +18,7 @@
 | Shared layout | Reuse `<Announcement />`, `<Header />`, `<Footer />` from home |
 | Industry building blocks | Reuse `src/components/industry/IndustryHero.tsx`, `SolutionShowcase.tsx`, `ImpactStats.tsx`, `IndustryCaseStudies.tsx`, `MarketplaceOffers.tsx`, `Testimonials.tsx` |
 | Header nav integration | Industries mega-menu "Manufacturing" → `/industries/manufacturing` |
-| Redirect (legacy) | Add `/expertise/manufacturing/manufacturing /industries/manufacturing 301` to `public/_redirects` if a legacy URL exists |
+| Redirect (legacy) | Add a host-level redirect from `/expertise/manufacturing/manufacturing` to `/industries/manufacturing` if a legacy URL exists |
 
 **Design goal:** same dense, scannable layout used by Retail — tight section padding (`48–56px`), multi-column layouts, compact typography.
 
