@@ -10,10 +10,10 @@ import { caseStudyFilters, caseStudyItems } from "../data/insights";
 const INITIAL_VISIBLE = 9;
 
 const useStyles = makeStyles({
-  section: { padding: "56px 32px", backgroundColor: "var(--maq-off-white)" },
+  section: { padding: "56px 32px", backgroundColor: "var(--colorNeutralBackground1)" },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
   head: { textAlign: "left", marginBottom: "44px" },
-  title: { fontSize: "36px", lineHeight: 1.15, fontWeight: 700, color: "var(--maq-navy)", margin: "0 0 40px", letterSpacing: "-0.02em", textAlign: "left" },
+  title: { margin: "0 0 40px", textAlign: "left" },
   grid: {
     marginTop: "0",
     display: "grid",
@@ -124,7 +124,7 @@ useEffect(() => {
       <section className={s.section} id="insights-content">
         <div className={s.inner}>
           <div className={s.head}>
-            <h2 className={s.title}>Case studies</h2>
+            <h2 className={`maq-h2 ${s.title}`}>Case studies</h2>
             <InsightsFilterBar items={caseStudyFilters} active={activeFilter} onChange={setActiveFilter} />
           </div>
           <div className={s.grid}>
@@ -132,11 +132,9 @@ useEffect(() => {
               <CaseStudyCard
                 key={item.href}
                 title={item.title}
-                teaser={item.teaser}
                 href={item.href}
                 imageUrl={item.imageUrl}
                 imageAlt={item.title}
-                date={item.date}
                 ctaLabel="Read full story"
                 eager={idx < 3}
               />

@@ -10,7 +10,7 @@ const MAIL_TO =
 
 const useStyles = makeStyles({
   page: {
-    backgroundColor: "var(--maq-gray-50)",
+    backgroundColor: "var(--colorNeutralBackground3)",
   },
   hero: {
     backgroundColor: "#f7f8fb",
@@ -44,11 +44,6 @@ const useStyles = makeStyles({
   },
   title: {
     margin: "0 0 10px",
-    fontSize: "40px",
-    lineHeight: 1.03,
-    letterSpacing: "-0.02em",
-    fontWeight: 700,
-    color: "var(--maq-black)",
   },
   titleAccent: {
     color: "var(--maq-red)",
@@ -82,11 +77,6 @@ const useStyles = makeStyles({
   },
   officesTitle: {
     margin: "0 0 10px",
-    fontSize: "36px",
-    lineHeight: 1.1,
-    letterSpacing: "-0.02em",
-    fontWeight: 700,
-    color: "var(--maq-black)",
     "@media (max-width: 960px)": {
       fontSize: "28px",
       marginBottom: "12px",
@@ -264,7 +254,7 @@ export function Contact() {
         <div className={s.heroInner}>
           <div className={s.heroContent}>
             {/* <p className={s.eyebrow}>Contact Us</p> */}
-            <h1 className={s.title}>
+            <h1 className={`maq-h1 ${s.title}`}>
               Let&apos;s build what&apos;s next,
               <br />
               <span className={s.titleAccent}>together.</span>
@@ -282,7 +272,7 @@ export function Contact() {
 
       <section className={s.officesSection} aria-labelledby="global-offices-heading">
         <div className={s.officesInner}>
-          <h2 id="global-offices-heading" className={s.officesTitle}>
+          <h2 id="global-offices-heading" className={`maq-h2 ${s.officesTitle}`}>
             Our global offices
           </h2>
           <div className={s.officeGrid}>
