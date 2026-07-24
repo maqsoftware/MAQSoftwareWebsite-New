@@ -62,6 +62,7 @@ import { AboutCareers } from "./pages/AboutCareers";
 import { AboutPrivacyStatement } from "./pages/AboutPrivacyStatement";
 import { Contact } from "./pages/Contact";
 import { TermsOfService } from "./pages/TermsOfService";
+import { PowerBIVisualsEULA } from "./pages/PowerBIVisualsEULA";
 import { TechCon365 } from "./pages/TechCon365";
 import { TechCon365Dallas } from "./pages/TechCon365Dallas";
 import { TechCon365Seattle } from "./pages/TechCon365Seattle";
@@ -414,6 +415,8 @@ export function App() {
           path="/privacystatement"
           element={<AboutPrivacyStatement />}
         />
+        <Route path="/pbivisualeula" element={<PowerBIVisualsEULA />} />
+        <Route path="/pbivisualseula" element={<PowerBIVisualsEULA />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/events" element={<AboutEvents />} />
         <Route path="/news" element={<Navigate to="/events" replace />} />
