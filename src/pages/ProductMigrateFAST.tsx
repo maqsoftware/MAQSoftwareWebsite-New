@@ -94,7 +94,7 @@ export function ProductMigrateFAST() {
         <div className={s.inner}>
           <div className={s.headLeft}>
             {/* <span className={s.secEyebrow}>How it works</span> */}
-            <h2 className={`maq-h2 ${s.titleLg}`}>The migration process, in 6 steps</h2>
+            <h2 className={`maq-h2 ${s.titleLg}`}>The migration process</h2>
           </div>
           <div className={s.stepGrid6}>
             {steps.map((st) => (

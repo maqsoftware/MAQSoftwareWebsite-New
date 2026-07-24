@@ -7,9 +7,13 @@ import { makeStyles } from "@fluentui/react-components";
    ================================================================== */
 
 const useStyles = makeStyles({
-  section: { padding: "48px 32px", backgroundColor: "#fff" },
+  section: {
+    padding: "48px 32px",
+    backgroundColor: "#fff",
+    "@media (max-width: 720px)": { display: "none" },
+  },
   inner: { maxWidth: "var(--maq-container-wide)", margin: "0 auto" },
-  title: { margin: "0 0 40px", textAlign: "center" },
+  title: { margin: "0 0 40px", textAlign: "left" },
   image: { width: "100%", height: "auto", display: "block" },
 });
 
